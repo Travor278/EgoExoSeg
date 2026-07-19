@@ -1,0 +1,40 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+
+# ---- nested repo (has its own .git; manage separately) ----
+V2sam/
+
+# ---- annotation-review packages: Ego-Exo4D imagery, not redistributable ----
+ego_exo_review/
+
+# ---- unpublished research plan (repo is public; add deliberately if intended) ----
+V2-SAM to PAMI (20260613--).docx
+
+# ---- raw dataset payloads: exceed GitHub size limits / re-downloadable from source ----
+*.tar
+*.h5
+*.hdf5
+*.parquet
+*.npz
+*.mp4
+*.zip
+*.pkl
+*.mdb
+DROID/raw/
+RH20T/raw/
+RoboSet/raw/
+Galaxea/raw/
+AIRoA_MoMa/raw/
+RoboMIND/static/language_description_annotation_json/
+RoboInter-Data/videos/
+RoboInter-Data/data/
+RoboInter-Data/segmentation_npz/
+RoboInter-Data/sample_npz/
+
+# ---- large re-downloadable / regenerable metadata ----
+RoboInter-Data/VideoID_2_SegmentationNPZ.json
+RoboInter-Data/All_Keys_of_Primary.json
+RoboInter-Data/segzip_index.json
+RoboInter-Data/meta/lerobot_droid_anno/episodes.jsonl
+RoboInter-Data/meta/lerobot_rh20t_anno/episodes.jsonl
