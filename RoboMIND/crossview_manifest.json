@@ -1,0 +1,34 @@
+[
+  {
+    "file": "pick_apple_into_drawer_h5\\success_episodes\\0923_164719\\data\\trajectory.hdf5",
+    "status": "ok",
+    "cameras": [
+      "camera_left",
+      "camera_top",
+      "camera_right"
+    ],
+    "frames": 600,
+    "embodiment": "h5_franka_3rgb",
+    "samples": [
+      "samples\\0923_164719_frame_0000_cameras.jpg",
+      "samples\\0923_164719_frame_0300_cameras.jpg",
+      "samples\\0923_164719_frame_0599_cameras.jpg"
+    ]
+  },
+  {
+    "file": "pick_apple_into_drawer_h5\\success_episodes\\0923_164743\\data\\trajectory.hdf5",
+    "status": "ok",
+    "cameras": [
+      "camera_left",
+      "camera_top",
+      "camera_right"
+    ],
+    "frames": 600,
+    "embodiment": "h5_franka_3rgb",
+    "samples": [
+      "samples\\0923_164743_frame_0000_cameras.jpg",
+      "samples\\0923_164743_frame_0300_cameras.jpg",
+      "samples\\0923_164743_frame_0599_cameras.jpg"
+    ]
+  }
+]

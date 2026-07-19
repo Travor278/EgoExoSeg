@@ -1,0 +1,20 @@
+{
+  "dataset": "RH20T",
+  "source": "https://huggingface.co/datasets/hainh22/rh20t",
+  "official_site": "https://rh20t.github.io/",
+  "episode": 1,
+  "global_cameras_used": [
+    "cam_036422060909",
+    "cam_038522062288",
+    "cam_045322071843",
+    "cam_104122062295",
+    "cam_104122062823",
+    "cam_104122063550",
+    "cam_104422070011",
+    "cam_f0172289"
+  ],
+  "n_global": 8,
+  "frames": 283,
+  "mirror_caveat": "This mirror is internally inconsistent. The serial-numbered cameras (360x640) are one genuine RH20T scene from many global angles; cam_front_view/side_view/eye_in_hand (256x256) are a DIFFERENT source and are NOT the same take. Paper-verified config = 8-10 global RGBD + 1-2 in-hand cameras, all calibrated to the robot base frame + time-synchronized. For a benchmark, pull properly-aligned global+in-hand streams from the official RH20T release.",
+  "mask": "none in release"
+}

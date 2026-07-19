@@ -1,0 +1,56 @@
+{
+  "dataset": "DROID",
+  "source": "https://huggingface.co/datasets/lerobot/droid_100",
+  "camera_layout": "2 external ZED 2 (exterior_1/2) + 1 wrist ZED Mini",
+  "note": "LeRobot mirror = left eye of each stereo cam, 180x320, 15 fps. Full DROID is stereo + higher res. No mask.",
+  "episodes": [
+    {
+      "episode": 0,
+      "length": 166,
+      "global_indices": [
+        0,
+        55,
+        110,
+        165
+      ],
+      "cameras": [
+        "exterior_1",
+        "exterior_2",
+        "wrist"
+      ],
+      "montage": "samples\\episode_000_crossview.png"
+    },
+    {
+      "episode": 1,
+      "length": 238,
+      "global_indices": [
+        166,
+        245,
+        324,
+        403
+      ],
+      "cameras": [
+        "exterior_1",
+        "exterior_2",
+        "wrist"
+      ],
+      "montage": "samples\\episode_001_crossview.png"
+    },
+    {
+      "episode": 2,
+      "length": 142,
+      "global_indices": [
+        404,
+        451,
+        498,
+        545
+      ],
+      "cameras": [
+        "exterior_1",
+        "exterior_2",
+        "wrist"
+      ],
+      "montage": "samples\\episode_002_crossview.png"
+    }
+  ]
+}

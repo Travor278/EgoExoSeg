@@ -1,0 +1,78 @@
+{
+  "dataset": "RoboSet (RoboAgent)",
+  "source": "https://huggingface.co/datasets/jdvakil/RoboSet-Teleoperation",
+  "h5_file": "baking_slide_in_bowl_scene_2_20230329-102845.h5",
+  "camera_layout": "3 fixed external (top/left/right) + 1 wrist, RealSense D455",
+  "note": "HF mirror resolution 240x424; original RoboSet is higher. No segmentation mask in release.",
+  "trials": [
+    {
+      "trial": "Trial1",
+      "frames": 42,
+      "cameras": [
+        "top",
+        "left",
+        "right",
+        "wrist"
+      ],
+      "hdf5_keys": [
+        "rgb_top",
+        "rgb_left",
+        "rgb_right",
+        "rgb_wrist"
+      ],
+      "sampled_indices": [
+        0,
+        14,
+        27,
+        41
+      ],
+      "montage": "samples\\Trial1_crossview.png"
+    },
+    {
+      "trial": "Trial11",
+      "frames": 42,
+      "cameras": [
+        "top",
+        "left",
+        "right",
+        "wrist"
+      ],
+      "hdf5_keys": [
+        "rgb_top",
+        "rgb_left",
+        "rgb_right",
+        "rgb_wrist"
+      ],
+      "sampled_indices": [
+        0,
+        14,
+        27,
+        41
+      ],
+      "montage": "samples\\Trial11_crossview.png"
+    },
+    {
+      "trial": "Trial13",
+      "frames": 42,
+      "cameras": [
+        "top",
+        "left",
+        "right",
+        "wrist"
+      ],
+      "hdf5_keys": [
+        "rgb_top",
+        "rgb_left",
+        "rgb_right",
+        "rgb_wrist"
+      ],
+      "sampled_indices": [
+        0,
+        14,
+        27,
+        41
+      ],
+      "montage": "samples\\Trial13_crossview.png"
+    }
+  ]
+}
