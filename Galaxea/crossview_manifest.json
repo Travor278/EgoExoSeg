@@ -1,0 +1,43 @@
+{
+  "dataset": "Galaxea R1 (community stand-in for Galaxea Open-World)",
+  "official_dataset": "https://huggingface.co/datasets/OpenGalaxea/Galaxea-Open-World-Dataset (HF gated + ModelScope login-walled)",
+  "sample_source": "https://huggingface.co/datasets/s-tian/galaxea_r1_cup (ungated community R1 recording)",
+  "official_camera_layout": "head + head_right (external) + left_wrist + right_wrist (in-hand), 720x1280 AV1 @15fps, strict temporal sync",
+  "sample_camera_layout": "head (external) + left_wrist + right_wrist (in-hand), small-res, 30fps",
+  "caveat": "This is NOT the official Open-World Dataset; it is a community recording on the same R1 robot/rig used to VERIFY the wrist<->head cross-view structure and object co-visibility. No object masks in either.",
+  "episodes": [
+    {
+      "episode": 0,
+      "frames": 452,
+      "cameras": [
+        "head",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "resolution": "168x94",
+      "montage": "samples\\episode_000000_crossview.png"
+    },
+    {
+      "episode": 9,
+      "frames": 377,
+      "cameras": [
+        "head",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "resolution": "168x94",
+      "montage": "samples\\episode_000009_crossview.png"
+    },
+    {
+      "episode": 18,
+      "frames": 402,
+      "cameras": [
+        "head",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "resolution": "168x94",
+      "montage": "samples\\episode_000018_crossview.png"
+    }
+  ]
+}

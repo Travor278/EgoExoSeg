@@ -1,0 +1,32 @@
+{
+  "dataset": "AIRoA MoMa (via airoa-org ungated demo)",
+  "official_dataset": "https://huggingface.co/datasets/airoa-org/airoa-moma (HF gated)",
+  "sample_source": "https://huggingface.co/datasets/airoa-org/corl2025_demo (ungated, same org + same HSR rig)",
+  "camera_layout": "head (external/head-mounted) + hand (in-hand), 480x640 AV1 @10fps, time-synchronized",
+  "mask": "none in either release",
+  "note": "Demo is full-resolution and from the official org, so a strong stand-in for the gated MoMa. head is robot-head-mounted (egocentric-to-robot), not a fixed third-person rig.",
+  "samples": [
+    {
+      "task": "001",
+      "episode": 0,
+      "frames": 302,
+      "cameras": [
+        "head",
+        "hand"
+      ],
+      "resolution": "640x480",
+      "montage": "samples\\task001_ep000000_crossview.png"
+    },
+    {
+      "task": "010",
+      "episode": 0,
+      "frames": 572,
+      "cameras": [
+        "head",
+        "hand"
+      ],
+      "resolution": "640x480",
+      "montage": "samples\\task010_ep000000_crossview.png"
+    }
+  ]
+}
