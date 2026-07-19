@@ -1,0 +1,865 @@
+{
+  "source_files": {
+    "segmentation_map": "D:\\Code\\Work\\EgoExoSeg\\RoboInter-Data\\VideoID_2_SegmentationNPZ.json",
+    "validation_keys": "D:\\Code\\Work\\EgoExoSeg\\RoboInter-Data\\val_video.json",
+    "primary_quality_keys": "D:\\Code\\Work\\EgoExoSeg\\RoboInter-Data\\All_Keys_of_Primary.json"
+  },
+  "official_metadata": {
+    "droid": {
+      "total_episodes": 152986,
+      "total_frames": 46259014,
+      "fps": 10,
+      "codebase_version": "v2.1",
+      "features": {
+        "observation.images.primary": {
+          "dtype": "video",
+          "shape": [
+            180,
+            320,
+            3
+          ],
+          "names": [
+            "height",
+            "width",
+            "channel"
+          ],
+          "info": {
+            "video.height": 180,
+            "video.width": 320,
+            "video.codec": "h264",
+            "video.pix_fmt": "yuv420p",
+            "video.is_depth_map": false,
+            "video.fps": 10,
+            "video.channels": 3,
+            "has_audio": false
+          }
+        },
+        "observation.images.wrist": {
+          "dtype": "video",
+          "shape": [
+            180,
+            320,
+            3
+          ],
+          "names": [
+            "height",
+            "width",
+            "channel"
+          ],
+          "info": {
+            "video.height": 180,
+            "video.width": 320,
+            "video.codec": "h264",
+            "video.pix_fmt": "yuv420p",
+            "video.is_depth_map": false,
+            "video.fps": 10,
+            "video.channels": 3,
+            "has_audio": false
+          }
+        },
+        "annotation.segmentation": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "text"
+          ]
+        },
+        "Q_annotation.segmentation": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "quality"
+          ]
+        },
+        "annotation.origin_shape": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "json"
+          ]
+        },
+        "episode_name": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "id"
+          ]
+        },
+        "camera_view": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "view"
+          ]
+        }
+      }
+    },
+    "rh20t": {
+      "total_episodes": 82894,
+      "total_frames": 40755632,
+      "fps": 10,
+      "codebase_version": "v2.1",
+      "features": {
+        "observation.images.primary": {
+          "dtype": "video",
+          "shape": [
+            180,
+            320,
+            3
+          ],
+          "names": [
+            "height",
+            "width",
+            "channel"
+          ],
+          "info": {
+            "video.height": 180,
+            "video.width": 320,
+            "video.codec": "h264",
+            "video.pix_fmt": "yuv420p",
+            "video.is_depth_map": false,
+            "video.fps": 10,
+            "video.channels": 3,
+            "has_audio": false
+          }
+        },
+        "observation.images.wrist": {
+          "dtype": "video",
+          "shape": [
+            180,
+            320,
+            3
+          ],
+          "names": [
+            "height",
+            "width",
+            "channel"
+          ],
+          "info": {
+            "video.height": 180,
+            "video.width": 320,
+            "video.codec": "h264",
+            "video.pix_fmt": "yuv420p",
+            "video.is_depth_map": false,
+            "video.fps": 10,
+            "video.channels": 3,
+            "has_audio": false
+          }
+        },
+        "annotation.segmentation": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "text"
+          ]
+        },
+        "Q_annotation.segmentation": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "quality"
+          ]
+        },
+        "annotation.origin_shape": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "json"
+          ]
+        },
+        "episode_name": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "id"
+          ]
+        },
+        "camera_view": {
+          "dtype": "string",
+          "shape": [
+            1
+          ],
+          "names": [
+            "view"
+          ]
+        }
+      }
+    }
+  },
+  "segmentation_mapping": {
+    "total_keys": 235920,
+    "non_null_values": 198194,
+    "null_values": 37726,
+    "token_counts": {
+      "RH20T": 82920,
+      "exterior_image_1_left": 76500,
+      "exterior_image_2_left": 76500
+    }
+  },
+  "droid_exterior_pair_stats_all": {
+    "complete_exterior_pairs": 76500,
+    "both_views_mapped": 56566,
+    "one_view_only_mapped": 15734,
+    "neither_view_mapped": 4200,
+    "both_views_ratio": 0.7394,
+    "one_view_only_ratio": 0.2057,
+    "neither_view_ratio": 0.0549,
+    "examples": {
+      "one_mapped": {
+        "base": "60724",
+        "image_1": null,
+        "image_2": "/OXE_DROID/data/ann_human/0/sam_mask/60724_exterior_image_2_left.npz"
+      },
+      "both_mapped": {
+        "base": "22739",
+        "image_1": "/OXE_DROID/data/ann_human/0/sam_mask/22739_exterior_image_1_left.npz",
+        "image_2": "/OXE_DROID/data/ann_human/0/sam_mask/22739_exterior_image_2_left.npz"
+      },
+      "none_mapped": {
+        "base": "4489",
+        "image_1": null,
+        "image_2": null
+      }
+    }
+  },
+  "droid_exterior_pair_stats_validation": {
+    "complete_exterior_pairs": 1860,
+    "both_views_mapped": 1678,
+    "one_view_only_mapped": 175,
+    "neither_view_mapped": 7,
+    "both_views_ratio": 0.9022,
+    "one_view_only_ratio": 0.0941,
+    "neither_view_ratio": 0.0038,
+    "examples": {
+      "both_mapped": {
+        "base": "69884",
+        "image_1": "/OXE_DROID/data/ann_human/0/sam_mask/69884_exterior_image_1_left.npz",
+        "image_2": "/OXE_DROID/data/ann_human/0/sam_mask/69884_exterior_image_2_left.npz"
+      },
+      "one_mapped": {
+        "base": "60918",
+        "image_1": "/OXE_DROID/data/ann_human/0/sam_mask/60918_exterior_image_1_left.npz",
+        "image_2": null
+      },
+      "none_mapped": {
+        "base": "61723",
+        "image_1": null,
+        "image_2": null
+      }
+    }
+  },
+  "primary_quality_keys": {
+    "total_primary_quality_keys": 65515,
+    "keys_present_in_segmentation_map": 65515,
+    "keys_with_segmentation_npz": 65515,
+    "token_counts": {
+      "RH20T": 42400,
+      "exterior_image_2_left": 11851,
+      "exterior_image_1_left": 11264
+    },
+    "droid_primary_pair_stats": {
+      "primary_view_2|primary_has_True|other_has_True": 10737,
+      "primary_view_1|primary_has_True|other_has_True": 10119,
+      "primary_view_1|primary_has_True|other_has_False": 1145,
+      "primary_view_2|primary_has_True|other_has_False": 1114
+    },
+    "droid_primary_pair_examples": {
+      "primary_view_2|primary_has_True|other_has_True": {
+        "primary_key": "87487_exterior_image_2_left",
+        "other_key": "87487_exterior_image_1_left",
+        "primary_npz": "/OXE_DROID/data/ann_human/0/sam_mask/87487_exterior_image_2_left.npz",
+        "other_npz": "/OXE_DROID/data/ann_human/0/sam_mask/87487_exterior_image_1_left.npz"
+      },
+      "primary_view_1|primary_has_True|other_has_True": {
+        "primary_key": "81046_exterior_image_1_left",
+        "other_key": "81046_exterior_image_2_left",
+        "primary_npz": "/OXE_DROID/data/ann_human/0/sam_mask/81046_exterior_image_1_left.npz",
+        "other_npz": "/OXE_DROID/data/ann_human/0/sam_mask/81046_exterior_image_2_left.npz"
+      },
+      "primary_view_2|primary_has_True|other_has_False": {
+        "primary_key": "32313_exterior_image_2_left",
+        "other_key": "32313_exterior_image_1_left",
+        "primary_npz": "/OXE_DROID/data/ann_human/0/sam_mask/32313_exterior_image_2_left.npz",
+        "other_npz": null
+      },
+      "primary_view_1|primary_has_True|other_has_False": {
+        "primary_key": "64714_exterior_image_1_left",
+        "other_key": "64714_exterior_image_2_left",
+        "primary_npz": "/OXE_DROID/data/ann_human/0/sam_mask/64714_exterior_image_1_left.npz",
+        "other_npz": null
+      }
+    },
+    "sample_keys": [
+      "87487_exterior_image_2_left",
+      "81046_exterior_image_1_left",
+      "13132_exterior_image_2_left",
+      "77015_exterior_image_1_left",
+      "32313_exterior_image_2_left",
+      "64928_exterior_image_2_left",
+      "30529_exterior_image_2_left",
+      "50288_exterior_image_2_left",
+      "68035_exterior_image_2_left",
+      "61475_exterior_image_2_left",
+      "17495_exterior_image_1_left",
+      "40375_exterior_image_1_left",
+      "53176_exterior_image_2_left",
+      "48618_exterior_image_2_left",
+      "3136_exterior_image_1_left",
+      "65441_exterior_image_2_left",
+      "1593_exterior_image_2_left",
+      "81274_exterior_image_2_left",
+      "14211_exterior_image_2_left",
+      "76438_exterior_image_1_left"
+    ]
+  },
+  "sampled_parquet_chunks": {
+    "droid_chunk_000": {
+      "chunk_dir": "D:\\Code\\Work\\EgoExoSeg\\RoboInter-Data\\data\\lerobot_droid_chunk-000\\chunk-000",
+      "episode_count": 1000,
+      "camera_view_counts": {
+        "exterior_image_1_left": 500,
+        "exterior_image_2_left": 500
+      },
+      "origin_shape_counts": {
+        "[320, 180]": 1000
+      },
+      "inline_annotation_segmentation_nonempty_episodes": 0,
+      "inline_q_annotation_segmentation_nonempty_episodes": 0,
+      "segmentation_mapping_coverage": {
+        "mapped": 835,
+        "total": 1000,
+        "ratio": 0.835
+      },
+      "sample_mapped": [
+        {
+          "parquet": "episode_000000.parquet",
+          "episode_index": 0,
+          "episode_name": "0_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 240,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/0_exterior_image_1_left.npz"
+        },
+        {
+          "parquet": "episode_000001.parquet",
+          "episode_index": 1,
+          "episode_name": "10010_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 104,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10010_exterior_image_2_left.npz"
+        },
+        {
+          "parquet": "episode_000002.parquet",
+          "episode_index": 2,
+          "episode_name": "10020_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 113,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10020_exterior_image_1_left.npz"
+        },
+        {
+          "parquet": "episode_000003.parquet",
+          "episode_index": 3,
+          "episode_name": "10010_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 104,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10010_exterior_image_1_left.npz"
+        },
+        {
+          "parquet": "episode_000004.parquet",
+          "episode_index": 4,
+          "episode_name": "10020_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 113,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10020_exterior_image_2_left.npz"
+        },
+        {
+          "parquet": "episode_000005.parquet",
+          "episode_index": 5,
+          "episode_name": "10006_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 126,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10006_exterior_image_1_left.npz"
+        },
+        {
+          "parquet": "episode_000006.parquet",
+          "episode_index": 6,
+          "episode_name": "10006_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 126,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10006_exterior_image_2_left.npz"
+        },
+        {
+          "parquet": "episode_000007.parquet",
+          "episode_index": 7,
+          "episode_name": "10027_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 138,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10027_exterior_image_2_left.npz"
+        },
+        {
+          "parquet": "episode_000008.parquet",
+          "episode_index": 8,
+          "episode_name": "10027_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 138,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10027_exterior_image_1_left.npz"
+        },
+        {
+          "parquet": "episode_000009.parquet",
+          "episode_index": 9,
+          "episode_name": "10002_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 154,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/OXE_DROID/data/ann_human/0/sam_mask/10002_exterior_image_1_left.npz"
+        }
+      ],
+      "sample_unmapped": [
+        {
+          "parquet": "episode_000011.parquet",
+          "episode_index": 11,
+          "episode_name": "10017_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 165,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000016.parquet",
+          "episode_index": 16,
+          "episode_name": "10017_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 165,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000018.parquet",
+          "episode_index": 18,
+          "episode_name": "10009_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 174,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000026.parquet",
+          "episode_index": 26,
+          "episode_name": "10028_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 194,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000032.parquet",
+          "episode_index": 32,
+          "episode_name": "10023_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 277,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000036.parquet",
+          "episode_index": 36,
+          "episode_name": "10029_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 277,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000041.parquet",
+          "episode_index": 41,
+          "episode_name": "10025_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 290,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000046.parquet",
+          "episode_index": 46,
+          "episode_name": "1002_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 365,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000049.parquet",
+          "episode_index": 49,
+          "episode_name": "10005_exterior_image_2_left",
+          "camera_view": "exterior_image_2_left",
+          "frames": 419,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000050.parquet",
+          "episode_index": 50,
+          "episode_name": "10018_exterior_image_1_left",
+          "camera_view": "exterior_image_1_left",
+          "frames": 431,
+          "origin_shape": "[320, 180]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        }
+      ]
+    },
+    "rh20t_chunk_000": {
+      "chunk_dir": "D:\\Code\\Work\\EgoExoSeg\\RoboInter-Data\\data\\lerobot_rh20t_chunk-000\\chunk-000",
+      "episode_count": 1000,
+      "camera_view_counts": {
+        "750612070853": 126,
+        "038522063145": 126,
+        "750612070851": 126,
+        "819112071037": 126,
+        "035622060973": 125,
+        "819112070044": 125,
+        "038522062547": 125,
+        "039422060546": 121
+      },
+      "origin_shape_counts": {
+        "[640, 360]": 1000
+      },
+      "inline_annotation_segmentation_nonempty_episodes": 0,
+      "inline_q_annotation_segmentation_nonempty_episodes": 0,
+      "segmentation_mapping_coverage": {
+        "mapped": 887,
+        "total": 1000,
+        "ratio": 0.887
+      },
+      "sample_mapped": [
+        {
+          "parquet": "episode_000000.parquet",
+          "episode_index": 0,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0001_cfg_0001_035622060973",
+          "camera_view": "035622060973",
+          "frames": 287,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0001_cfg_0001_035622060973.npz"
+        },
+        {
+          "parquet": "episode_000001.parquet",
+          "episode_index": 1,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001_750612070853",
+          "camera_view": "750612070853",
+          "frames": 134,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001_750612070853.npz"
+        },
+        {
+          "parquet": "episode_000002.parquet",
+          "episode_index": 2,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0004_cfg_0001_750612070853",
+          "camera_view": "750612070853",
+          "frames": 156,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0004_cfg_0001_750612070853.npz"
+        },
+        {
+          "parquet": "episode_000003.parquet",
+          "episode_index": 3,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0006_cfg_0001_750612070853",
+          "camera_view": "750612070853",
+          "frames": 158,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0006_cfg_0001_750612070853.npz"
+        },
+        {
+          "parquet": "episode_000004.parquet",
+          "episode_index": 4,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0001_cfg_0001_750612070853",
+          "camera_view": "750612070853",
+          "frames": 173,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0001_cfg_0001_750612070853.npz"
+        },
+        {
+          "parquet": "episode_000005.parquet",
+          "episode_index": 5,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0005_cfg_0001_750612070853",
+          "camera_view": "750612070853",
+          "frames": 175,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0005_cfg_0001_750612070853.npz"
+        },
+        {
+          "parquet": "episode_000006.parquet",
+          "episode_index": 6,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0004_cfg_0001_039422060546",
+          "camera_view": "039422060546",
+          "frames": 173,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0004_cfg_0001_039422060546.npz"
+        },
+        {
+          "parquet": "episode_000007.parquet",
+          "episode_index": 7,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0008_cfg_0001_750612070853",
+          "camera_view": "750612070853",
+          "frames": 183,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0008_cfg_0001_750612070853.npz"
+        },
+        {
+          "parquet": "episode_000008.parquet",
+          "episode_index": 8,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001_039422060546",
+          "camera_view": "039422060546",
+          "frames": 193,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001_039422060546.npz"
+        },
+        {
+          "parquet": "episode_000009.parquet",
+          "episode_index": 9,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0007_cfg_0001_750612070853",
+          "camera_view": "750612070853",
+          "frames": 223,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": true,
+          "mapped_npz": "/RH20T/data/ann_human/0/sam_mask/RH20T_cfg1_task_0001_user_0001_scene_0007_cfg_0001_750612070853.npz"
+        }
+      ],
+      "sample_unmapped": [
+        {
+          "parquet": "episode_000016.parquet",
+          "episode_index": 16,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001_035622060973",
+          "camera_view": "035622060973",
+          "frames": 252,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000022.parquet",
+          "episode_index": 22,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001_819112071037",
+          "camera_view": "819112071037",
+          "frames": 260,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000028.parquet",
+          "episode_index": 28,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0004_cfg_0001_819112071037",
+          "camera_view": "819112071037",
+          "frames": 268,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000035.parquet",
+          "episode_index": 35,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0007_cfg_0001_819112071037",
+          "camera_view": "819112071037",
+          "frames": 286,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000044.parquet",
+          "episode_index": 44,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0008_cfg_0001_035622060973",
+          "camera_view": "035622060973",
+          "frames": 302,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000048.parquet",
+          "episode_index": 48,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0006_cfg_0001_819112071037",
+          "camera_view": "819112071037",
+          "frames": 316,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000050.parquet",
+          "episode_index": 50,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0001_cfg_0001_819112071037",
+          "camera_view": "819112071037",
+          "frames": 309,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000058.parquet",
+          "episode_index": 58,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0005_cfg_0001_819112071037",
+          "camera_view": "819112071037",
+          "frames": 369,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000064.parquet",
+          "episode_index": 64,
+          "episode_name": "RH20T_cfg1_task_0001_user_0001_scene_0002_cfg_0001_819112071037",
+          "camera_view": "819112071037",
+          "frames": 411,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        },
+        {
+          "parquet": "episode_000071.parquet",
+          "episode_index": 71,
+          "episode_name": "RH20T_cfg1_task_0001_user_0004_scene_0006_cfg_0001_035622060973",
+          "camera_view": "035622060973",
+          "frames": 149,
+          "origin_shape": "[640, 360]",
+          "inline_seg_nonempty": false,
+          "inline_qseg_nonempty": false,
+          "has_mapped_npz": false,
+          "mapped_npz": null
+        }
+      ]
+    }
+  }
+}

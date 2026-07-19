@@ -1,0 +1,600 @@
+{
+    "codebase_version": "v2.1",
+    "robot_type": "franka_robotiq",
+    "total_episodes": 152986,
+    "total_frames": 46259014,
+    "total_tasks": 43026,
+    "total_videos": 305972,
+    "total_chunks": 153,
+    "chunks_size": 1000,
+    "fps": 10,
+    "splits": {
+        "train": "0:152986"
+    },
+    "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+    "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
+    "features": {
+        "action": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "delta_x",
+                "delta_y",
+                "delta_z",
+                "delta_rx",
+                "delta_ry",
+                "delta_rz",
+                "gripper_command"
+            ]
+        },
+        "state": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "x",
+                "y",
+                "z",
+                "rx",
+                "ry",
+                "rz",
+                "gripper_state"
+            ]
+        },
+        "observation.images.primary": {
+            "dtype": "video",
+            "shape": [
+                180,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channel"
+            ],
+            "info": {
+                "video.height": 180,
+                "video.width": 320,
+                "video.codec": "h264",
+                "video.pix_fmt": "yuv420p",
+                "video.is_depth_map": false,
+                "video.fps": 10,
+                "video.channels": 3,
+                "has_audio": false
+            }
+        },
+        "observation.images.wrist": {
+            "dtype": "video",
+            "shape": [
+                180,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channel"
+            ],
+            "info": {
+                "video.height": 180,
+                "video.width": 320,
+                "video.codec": "h264",
+                "video.pix_fmt": "yuv420p",
+                "video.is_depth_map": false,
+                "video.fps": 10,
+                "video.channels": 3,
+                "has_audio": false
+            }
+        },
+        "episode_name": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "id"
+            ]
+        },
+        "camera_view": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "view"
+            ]
+        },
+        "other_information.language_instruction_2": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "text"
+            ]
+        },
+        "other_information.language_instruction_3": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "text"
+            ]
+        },
+        "other_information.action_delta_tcp_pose": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "delta_x",
+                "delta_y",
+                "delta_z",
+                "delta_rx",
+                "delta_ry",
+                "delta_rz",
+                "gripper"
+            ]
+        },
+        "other_information.action_delta_wrist_pose": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "delta_x",
+                "delta_y",
+                "delta_z",
+                "delta_rx",
+                "delta_ry",
+                "delta_rz",
+                "gripper"
+            ]
+        },
+        "other_information.action_tcp_pose": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "x",
+                "y",
+                "z",
+                "rx",
+                "ry",
+                "rz",
+                "gripper"
+            ]
+        },
+        "other_information.action_wrist_pose": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "x",
+                "y",
+                "z",
+                "rx",
+                "ry",
+                "rz",
+                "gripper"
+            ]
+        },
+        "other_information.action_gripper_velocity": {
+            "dtype": "float64",
+            "shape": [
+                1
+            ],
+            "names": [
+                "velocity"
+            ]
+        },
+        "other_information.action_joint_position": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "j1",
+                "j2",
+                "j3",
+                "j4",
+                "j5",
+                "j6",
+                "j7"
+            ]
+        },
+        "other_information.action_joint_velocity": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "j1",
+                "j2",
+                "j3",
+                "j4",
+                "j5",
+                "j6",
+                "j7"
+            ]
+        },
+        "other_information.action_cartesian_velocity": {
+            "dtype": "float64",
+            "shape": [
+                6
+            ],
+            "names": [
+                "vx",
+                "vy",
+                "vz",
+                "wx",
+                "wy",
+                "wz"
+            ]
+        },
+        "other_information.observation_joint_position": {
+            "dtype": "float64",
+            "shape": [
+                7
+            ],
+            "names": [
+                "j1",
+                "j2",
+                "j3",
+                "j4",
+                "j5",
+                "j6",
+                "j7"
+            ]
+        },
+        "other_information.observation_gripper_position": {
+            "dtype": "float64",
+            "shape": [
+                1
+            ],
+            "names": [
+                "position"
+            ]
+        },
+        "other_information.observation_gripper_open_state": {
+            "dtype": "float64",
+            "shape": [
+                1
+            ],
+            "names": [
+                "open_state"
+            ]
+        },
+        "other_information.observation_gripper_pose6d": {
+            "dtype": "float64",
+            "shape": [
+                6
+            ],
+            "names": [
+                "x",
+                "y",
+                "z",
+                "rx",
+                "ry",
+                "rz"
+            ]
+        },
+        "other_information.observation_tcp_pose6d": {
+            "dtype": "float64",
+            "shape": [
+                6
+            ],
+            "names": [
+                "x",
+                "y",
+                "z",
+                "rx",
+                "ry",
+                "rz"
+            ]
+        },
+        "other_information.is_first": {
+            "dtype": "bool",
+            "shape": [
+                1
+            ],
+            "names": [
+                "flag"
+            ]
+        },
+        "other_information.is_last": {
+            "dtype": "bool",
+            "shape": [
+                1
+            ],
+            "names": [
+                "flag"
+            ]
+        },
+        "other_information.is_terminal": {
+            "dtype": "bool",
+            "shape": [
+                1
+            ],
+            "names": [
+                "flag"
+            ]
+        },
+        "annotation.time_clip": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.instruction_add": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "text"
+            ]
+        },
+        "annotation.substask": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "text"
+            ]
+        },
+        "annotation.primitive_skill": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "text"
+            ]
+        },
+        "annotation.segmentation": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "text"
+            ]
+        },
+        "annotation.object_box": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.placement_proposal": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.trace": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.gripper_box": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.contact_frame": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.state_affordance": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.affordance_box": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.contact_points": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "annotation.origin_shape": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "json"
+            ]
+        },
+        "Q_annotation.instruction_add": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.substask": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.primitive_skill": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.segmentation": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.object_box": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.placement_proposal": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.trace": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.gripper_box": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.contact_frame": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.state_affordance": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.affordance_box": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "Q_annotation.contact_points": {
+            "dtype": "string",
+            "shape": [
+                1
+            ],
+            "names": [
+                "quality"
+            ]
+        },
+        "timestamp": {
+            "dtype": "float32",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "frame_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "episode_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "task_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        }
+    }
+}
