@@ -47,3 +47,6 @@ BehaviorPilot/bundle/
 # ---- annotation kit: extracted frames are regenerable; KEEP hand labels ----
 RoboInter-Data/manual_wrist_kit/frames/**/*.png
 !RoboInter-Data/manual_wrist_kit/manual_masks/*.npz
+
+# keep anchor-propagated wrist masks (small, derived from hand labels)
+!RoboInter-Data/manual_wrist_kit/propagated/*.npz
