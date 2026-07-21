@@ -1,0 +1,1879 @@
+[
+ {
+  "ds": "droid",
+  "base": "1027",
+  "instr": "turn off the heater",
+  "frames": 217,
+  "val": false,
+  "eps": [
+   529,
+   531
+  ],
+  "npz": [
+   "1027_exterior_image_1_left",
+   "1027_exterior_image_2_left"
+  ],
+  "fig": "1027_crossview_mask.png",
+  "scene_id": 3013903221,
+  "lab": "TRI",
+  "building": "640 Palo Alto Ave",
+  "task_category": "Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10292",
+  "instr": "take the lid from the pot and put it on the green pot mat",
+  "frames": 221,
+  "val": false,
+  "eps": [
+   535,
+   532
+  ],
+  "npz": [
+   "10292_exterior_image_1_left",
+   "10292_exterior_image_2_left"
+  ],
+  "fig": "10292_crossview_mask.png",
+  "lab": "IRIS",
+  "collect_date": "2023-06-30"
+ },
+ {
+  "ds": "droid",
+  "base": "10286",
+  "instr": "remove the keys from the nightstand and put them on the windowsill then place the keys back on the nightstand",
+  "frames": 507,
+  "val": true,
+  "eps": [
+   567,
+   568
+  ],
+  "npz": [
+   "10286_exterior_image_1_left",
+   "10286_exterior_image_2_left"
+  ],
+  "fig": "10286_crossview_mask.png",
+  "scene_id": 1058976383,
+  "lab": "ILIAD",
+  "building": "EVGR C",
+  "task_category": "Do any task, and then reset the scene.\n\nSuggested task:\n* Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10528",
+  "instr": "place the black tape on the white plate",
+  "frames": 106,
+  "val": false,
+  "eps": [
+   968,
+   967
+  ],
+  "npz": [
+   "10528_exterior_image_1_left",
+   "10528_exterior_image_2_left"
+  ],
+  "fig": "10528_crossview_mask.png",
+  "lab": "PennPAL",
+  "collect_date": "2023-04-29",
+  "scene_id": 9306310171,
+  "building": "PennPAL lab",
+  "task_category": "Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10428",
+  "instr": "close the box",
+  "frames": 190,
+  "val": false,
+  "eps": [
+   791,
+   793
+  ],
+  "npz": [
+   "10428_exterior_image_1_left",
+   "10428_exterior_image_2_left"
+  ],
+  "fig": "10428_crossview_mask.png",
+  "scene_id": 7711955171,
+  "lab": "TRI",
+  "building": "TRI",
+  "task_category": "Open or close hinged object (ex: hinged door, microwave, oven, book, dryer, toilet, box)"
+ },
+ {
+  "ds": "droid",
+  "base": "1026",
+  "instr": "Pour the content in the blue bowl into the yellow bowl",
+  "frames": 375,
+  "val": false,
+  "eps": [
+   555,
+   557
+  ],
+  "npz": [
+   "1026_exterior_image_1_left",
+   "1026_exterior_image_2_left"
+  ],
+  "fig": "1026_crossview_mask.png",
+  "scene_id": 915992852,
+  "lab": "TRI",
+  "building": "TRI",
+  "task_category": "Do any two tasks consecutively.\n\nSuggested tasks:\n* Hang or unhang object (ex: towel on hook, clothes over chair)\n* Hang or unhang object (ex: towel on hook, clothes over chair)"
+ },
+ {
+  "ds": "droid",
+  "base": "1004",
+  "instr": "uncover the pan and put the lid on the rack",
+  "frames": 107,
+  "val": false,
+  "eps": [
+   65,
+   67
+  ],
+  "npz": [
+   "1004_exterior_image_1_left",
+   "1004_exterior_image_2_left"
+  ],
+  "fig": "1004_crossview_mask.png",
+  "scene_id": 7612195610,
+  "lab": "RAIL",
+  "building": "RAIL",
+  "task_category": "Move lid on or off of container (ex: pot, cup, pill bottle)"
+ },
+ {
+  "ds": "droid",
+  "base": "10407",
+  "instr": "pick up the pen from the table and put it in the white cup",
+  "frames": 320,
+  "val": false,
+  "eps": [
+   813,
+   814
+  ],
+  "npz": [
+   "10407_exterior_image_1_left",
+   "10407_exterior_image_2_left"
+  ],
+  "fig": "10407_crossview_mask.png",
+  "lab": "IRIS",
+  "collect_date": "2023-04-25"
+ },
+ {
+  "ds": "droid",
+  "base": "10156",
+  "instr": "put some snacks on the white plate",
+  "frames": 307,
+  "val": false,
+  "eps": [
+   308,
+   307
+  ],
+  "npz": [
+   "10156_exterior_image_1_left",
+   "10156_exterior_image_2_left"
+  ],
+  "fig": "10156_crossview_mask.png",
+  "scene_id": 374237204,
+  "lab": "TRI",
+  "building": "TRI",
+  "task_category": "Fold, spread out, or clump object (ex: cloth, charging cord, clothes)"
+ },
+ {
+  "ds": "droid",
+  "base": "10211",
+  "instr": "press the keyboard key",
+  "frames": 272,
+  "val": false,
+  "eps": [
+   424,
+   420
+  ],
+  "npz": [
+   "10211_exterior_image_1_left",
+   "10211_exterior_image_2_left"
+  ],
+  "fig": "10211_crossview_mask.png",
+  "lab": "TRI",
+  "collect_date": "2024-02-14"
+ },
+ {
+  "ds": "droid",
+  "base": "1000",
+  "instr": "put the red object into the silver bowl",
+  "frames": 180,
+  "val": false,
+  "eps": [
+   21,
+   24
+  ],
+  "npz": [
+   "1000_exterior_image_1_left",
+   "1000_exterior_image_2_left"
+  ],
+  "fig": "1000_crossview_mask.png",
+  "scene_id": 8626796008,
+  "lab": "REAL",
+  "building": "Glen's office",
+  "task_category": "Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10450",
+  "instr": "take the marker from the cup and put it on the table",
+  "frames": 170,
+  "val": false,
+  "eps": [
+   850,
+   849
+  ],
+  "npz": [
+   "10450_exterior_image_1_left",
+   "10450_exterior_image_2_left"
+  ],
+  "fig": "10450_crossview_mask.png",
+  "scene_id": 1775582436,
+  "lab": "CLVR",
+  "building": "KAIST",
+  "task_category": "Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10076",
+  "instr": "take the cellar in the pot and put it on the table",
+  "frames": 131,
+  "val": false,
+  "eps": [
+   141,
+   140
+  ],
+  "npz": [
+   "10076_exterior_image_1_left",
+   "10076_exterior_image_2_left"
+  ],
+  "fig": "10076_crossview_mask.png",
+  "scene_id": 6545826744,
+  "lab": "RAIL",
+  "building": "RAIL",
+  "task_category": "Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10299",
+  "instr": "Move the towel to the right.",
+  "frames": 259,
+  "val": false,
+  "eps": [
+   539,
+   612
+  ],
+  "npz": [
+   "10299_exterior_image_1_left",
+   "10299_exterior_image_2_left"
+  ],
+  "fig": "10299_crossview_mask.png",
+  "scene_id": 7794003148,
+  "lab": "IPRL",
+  "building": "Wasabi Tempura",
+  "task_category": "Cover or uncover object with cloth"
+ },
+ {
+  "ds": "droid",
+  "base": "10289",
+  "instr": "remove the bolt from the hole",
+  "frames": 237,
+  "val": false,
+  "eps": [
+   537,
+   538
+  ],
+  "npz": [
+   "10289_exterior_image_1_left",
+   "10289_exterior_image_2_left"
+  ],
+  "fig": "10289_crossview_mask.png",
+  "lab": "ILIAD",
+  "collect_date": "2023-05-25"
+ },
+ {
+  "ds": "droid",
+  "base": "10358",
+  "instr": "move the clothes on the box and the table",
+  "frames": 505,
+  "val": false,
+  "eps": [
+   700,
+   699
+  ],
+  "npz": [
+   "10358_exterior_image_1_left",
+   "10358_exterior_image_2_left"
+  ],
+  "fig": "10358_crossview_mask.png",
+  "scene_id": 4925733834,
+  "lab": "AUTOLab",
+  "building": "BWW",
+  "task_category": "Fold, spread out, or clump object (ex: cloth, charging cord, clothes)"
+ },
+ {
+  "ds": "droid",
+  "base": "10413",
+  "instr": "close the open drawer",
+  "frames": 194,
+  "val": false,
+  "eps": [
+   790,
+   788
+  ],
+  "npz": [
+   "10413_exterior_image_1_left",
+   "10413_exterior_image_2_left"
+  ],
+  "fig": "10413_crossview_mask.png",
+  "scene_id": 8066802860,
+  "lab": "IRIS",
+  "building": "Kyle Hsu's Place",
+  "task_category": "Open or close slidable objects (ex: toaster, drawers, sliding doors, dressers)"
+ },
+ {
+  "ds": "droid",
+  "base": "10373",
+  "instr": "pick up the yellow block from the table and put it in the basin",
+  "frames": 112,
+  "val": false,
+  "eps": [
+   707,
+   705
+  ],
+  "npz": [
+   "10373_exterior_image_1_left",
+   "10373_exterior_image_2_left"
+  ],
+  "fig": "10373_crossview_mask.png",
+  "scene_id": 9271241598,
+  "lab": "RAIL",
+  "building": "RAIL",
+  "task_category": "Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10082",
+  "instr": "place the silver jar on the microwave",
+  "frames": 219,
+  "val": false,
+  "eps": [
+   160,
+   161
+  ],
+  "npz": [
+   "10082_exterior_image_1_left",
+   "10082_exterior_image_2_left"
+  ],
+  "fig": "10082_crossview_mask.png",
+  "scene_id": 8377395301,
+  "lab": "RAD",
+  "building": "Bayes - Kitchen Level 1",
+  "task_category": "Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10344",
+  "instr": "pick up the cloth from the table and put it in the box",
+  "frames": 282,
+  "val": false,
+  "eps": [
+   689,
+   686
+  ],
+  "npz": [
+   "10344_exterior_image_1_left",
+   "10344_exterior_image_2_left"
+  ],
+  "fig": "10344_crossview_mask.png",
+  "scene_id": 3774560981,
+  "lab": "AUTOLab",
+  "building": "AUTOLab",
+  "task_category": "pack towel in container"
+ },
+ {
+  "ds": "droid",
+  "base": "10329",
+  "instr": "close the top right drawer",
+  "frames": 290,
+  "val": false,
+  "eps": [
+   621,
+   620
+  ],
+  "npz": [
+   "10329_exterior_image_1_left",
+   "10329_exterior_image_2_left"
+  ],
+  "fig": "10329_crossview_mask.png",
+  "lab": "ILIAD",
+  "collect_date": "2023-07-17"
+ },
+ {
+  "ds": "droid",
+  "base": "10053",
+  "instr": "pick up the object and put it in the cup",
+  "frames": 253,
+  "val": false,
+  "eps": [
+   106,
+   105
+  ],
+  "npz": [
+   "10053_exterior_image_1_left",
+   "10053_exterior_image_2_left"
+  ],
+  "fig": "10053_crossview_mask.png",
+  "scene_id": 5024387521,
+  "lab": "CLVR",
+  "building": "KAIST",
+  "task_category": "Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10131",
+  "instr": "remove the marker and place it on the table",
+  "frames": 218,
+  "val": false,
+  "eps": [
+   291,
+   287
+  ],
+  "npz": [
+   "10131_exterior_image_1_left",
+   "10131_exterior_image_2_left"
+  ],
+  "fig": "10131_crossview_mask.png",
+  "scene_id": 8150285641,
+  "lab": "TRI",
+  "building": "TRI",
+  "task_category": "Do any two tasks consecutively.\n\nSuggested tasks:\n* Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)\n* Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10270",
+  "instr": "move the bell pepper",
+  "frames": 128,
+  "val": false,
+  "eps": [
+   514,
+   513
+  ],
+  "npz": [
+   "10270_exterior_image_1_left",
+   "10270_exterior_image_2_left"
+  ],
+  "fig": "10270_crossview_mask.png",
+  "scene_id": 711395935,
+  "lab": "RAIL",
+  "building": "RAIL",
+  "task_category": "Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10208",
+  "instr": "put the left and right books in the black box respectively",
+  "frames": 538,
+  "val": false,
+  "eps": [
+   440,
+   439
+  ],
+  "npz": [
+   "10208_exterior_image_1_left",
+   "10208_exterior_image_2_left"
+  ],
+  "fig": "10208_crossview_mask.png",
+  "scene_id": 7918506104,
+  "lab": "ILIAD",
+  "building": "Gates",
+  "task_category": "Move two objects into or out of a container"
+ },
+ {
+  "ds": "droid",
+  "base": "10492",
+  "instr": "remove the small green tape from the drawer and put it on top of the orange one",
+  "frames": 278,
+  "val": false,
+  "eps": [
+   933,
+   936
+  ],
+  "npz": [
+   "10492_exterior_image_1_left",
+   "10492_exterior_image_2_left"
+  ],
+  "fig": "10492_crossview_mask.png",
+  "lab": "IPRL",
+  "collect_date": "2023-05-13"
+ },
+ {
+  "ds": "droid",
+  "base": "10080",
+  "instr": "press the button on the wall",
+  "frames": 293,
+  "val": false,
+  "eps": [
+   175,
+   176
+  ],
+  "npz": [
+   "10080_exterior_image_1_left",
+   "10080_exterior_image_2_left"
+  ],
+  "fig": "10080_crossview_mask.png",
+  "scene_id": 9274920314,
+  "lab": "RAD",
+  "building": "Bayes - Lab 1",
+  "task_category": "Press button (ex: light switch, elevators, microwave button)"
+ },
+ {
+  "ds": "droid",
+  "base": "10160",
+  "instr": "put the yellow block in the blue cup",
+  "frames": 80,
+  "val": false,
+  "eps": [
+   260,
+   257
+  ],
+  "npz": [
+   "10160_exterior_image_1_left",
+   "10160_exterior_image_2_left"
+  ],
+  "fig": "10160_crossview_mask.png",
+  "scene_id": 8444908630,
+  "lab": "AUTOLab",
+  "building": "BAIR",
+  "task_category": "drop yellow block into blue cup"
+ },
+ {
+  "ds": "droid",
+  "base": "10427",
+  "instr": "put the green pen in the white mug cup",
+  "frames": 203,
+  "val": false,
+  "eps": [
+   792,
+   796
+  ],
+  "npz": [
+   "10427_exterior_image_1_left",
+   "10427_exterior_image_2_left"
+  ],
+  "fig": "10427_crossview_mask.png",
+  "scene_id": 3072971566,
+  "lab": "IRIS",
+  "building": "Gates",
+  "task_category": "Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10191",
+  "instr": "slide the door to the right",
+  "frames": 331,
+  "val": false,
+  "eps": [
+   368,
+   367
+  ],
+  "npz": [
+   "10191_exterior_image_1_left",
+   "10191_exterior_image_2_left"
+  ],
+  "fig": "10191_crossview_mask.png",
+  "lab": "IRIS",
+  "collect_date": "2023-07-21"
+ },
+ {
+  "ds": "droid",
+  "base": "10040",
+  "instr": "pick up the canned drink and put it on the shelf",
+  "frames": 401,
+  "val": false,
+  "eps": [
+   119,
+   121
+  ],
+  "npz": [
+   "10040_exterior_image_1_left",
+   "10040_exterior_image_2_left"
+  ],
+  "fig": "10040_crossview_mask.png",
+  "scene_id": 2828277154,
+  "lab": "RPL",
+  "building": "AHG kitchen floor 1",
+  "task_category": "pnp-table-to-cab-cans"
+ },
+ {
+  "ds": "droid",
+  "base": "10390",
+  "instr": "take the white and the blue cloths out of the basket and put them on the bed",
+  "frames": 456,
+  "val": false,
+  "eps": [
+   758,
+   763
+  ],
+  "npz": [
+   "10390_exterior_image_1_left",
+   "10390_exterior_image_2_left"
+  ],
+  "fig": "10390_crossview_mask.png",
+  "lab": "IPRL",
+  "collect_date": "2023-10-09"
+ },
+ {
+  "ds": "droid",
+  "base": "10036",
+  "instr": "move the small box to the upper left corner of the table",
+  "frames": 201,
+  "val": false,
+  "eps": [
+   97,
+   94
+  ],
+  "npz": [
+   "10036_exterior_image_1_left",
+   "10036_exterior_image_2_left"
+  ],
+  "fig": "10036_crossview_mask.png",
+  "lab": "BVL",
+  "collect_date": "2024-01-30"
+ },
+ {
+  "ds": "droid",
+  "base": "10508",
+  "instr": "move the rectangular block to the right",
+  "frames": 155,
+  "val": false,
+  "eps": [
+   974,
+   973
+  ],
+  "npz": [
+   "10508_exterior_image_1_left",
+   "10508_exterior_image_2_left"
+  ],
+  "fig": "10508_crossview_mask.png",
+  "scene_id": 4875567705,
+  "lab": "RAIL",
+  "building": "RAIL",
+  "task_category": "Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10099",
+  "instr": "press the button on the coffee machine",
+  "frames": 123,
+  "val": false,
+  "eps": [
+   193,
+   194
+  ],
+  "npz": [
+   "10099_exterior_image_1_left",
+   "10099_exterior_image_2_left"
+  ],
+  "fig": "10099_crossview_mask.png",
+  "scene_id": 3895077471,
+  "lab": "REAL",
+  "building": "UdeM AA 3248",
+  "task_category": "Press button (ex: light switch, elevators, microwave button)"
+ },
+ {
+  "ds": "droid",
+  "base": "1031",
+  "instr": "put the bottle on the bottom shelf of the open cabinet",
+  "frames": 282,
+  "val": false,
+  "eps": [
+   616,
+   615
+  ],
+  "npz": [
+   "1031_exterior_image_1_left",
+   "1031_exterior_image_2_left"
+  ],
+  "fig": "1031_crossview_mask.png",
+  "scene_id": 7767178249,
+  "lab": "IPRL",
+  "building": "Rabbit Hole",
+  "task_category": "Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10243",
+  "instr": "moving the black object from the right side of the table to the left side of the table",
+  "frames": 100,
+  "val": false,
+  "eps": [
+   452,
+   454
+  ],
+  "npz": [
+   "10243_exterior_image_1_left",
+   "10243_exterior_image_2_left"
+  ],
+  "fig": "10243_crossview_mask.png",
+  "lab": "ILIAD",
+  "collect_date": "2023-12-01"
+ },
+ {
+  "ds": "droid",
+  "base": "10262",
+  "instr": "move the object to the table",
+  "frames": 229,
+  "val": false,
+  "eps": [
+   483,
+   479
+  ],
+  "npz": [
+   "10262_exterior_image_1_left",
+   "10262_exterior_image_2_left"
+  ],
+  "fig": "10262_crossview_mask.png",
+  "lab": "BVL",
+  "collect_date": "2024-02-17"
+ },
+ {
+  "ds": "droid",
+  "base": "10125",
+  "instr": "move the glass jar inside the dishwasher to the left",
+  "frames": 165,
+  "val": false,
+  "eps": [
+   213,
+   218
+  ],
+  "npz": [
+   "10125_exterior_image_1_left",
+   "10125_exterior_image_2_left"
+  ],
+  "fig": "10125_crossview_mask.png",
+  "scene_id": 4385851547,
+  "lab": "IPRL",
+  "building": "Jimmy's Apartment",
+  "task_category": "Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10298",
+  "instr": "put the tissue on the table, put the white cup on the tissue",
+  "frames": 672,
+  "val": false,
+  "eps": [
+   572,
+   574
+  ],
+  "npz": [
+   "10298_exterior_image_1_left",
+   "10298_exterior_image_2_left"
+  ],
+  "fig": "10298_crossview_mask.png",
+  "scene_id": 737700315,
+  "lab": "RAD",
+  "building": "Bayes - Kitchen 1",
+  "task_category": "Do any two tasks consecutively.\n\nSuggested tasks:\n* Fold, spread out, or clump object (ex: cloth, charging cord, clothes)\n* Move object to a new position and orientation (ex: grasping, relocating, flipping)"
+ },
+ {
+  "ds": "droid",
+  "base": "10215",
+  "instr": "put the marker in the mug",
+  "frames": 190,
+  "val": false,
+  "eps": [
+   406,
+   403
+  ],
+  "npz": [
+   "10215_exterior_image_1_left",
+   "10215_exterior_image_2_left"
+  ],
+  "fig": "10215_crossview_mask.png",
+  "scene_id": 6654475112,
+  "lab": "IPRL",
+  "building": "Gates",
+  "task_category": "Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10268",
+  "instr": "put the green plush toy in the pink pot",
+  "frames": 150,
+  "val": false,
+  "eps": [
+   515,
+   516
+  ],
+  "npz": [
+   "10268_exterior_image_1_left",
+   "10268_exterior_image_2_left"
+  ],
+  "fig": "10268_crossview_mask.png",
+  "scene_id": 3545964828,
+  "lab": "RAIL",
+  "building": "RAIL",
+  "task_category": "Move object into or out of container (ex: drawer, clothes hamper, plate, trashcan, washer)"
+ },
+ {
+  "ds": "droid",
+  "base": "10159",
+  "instr": "place the cup on the object",
+  "frames": 208,
+  "val": false,
+  "eps": [
+   290,
+   286
+  ],
+  "npz": [
+   "10159_exterior_image_1_left",
+   "10159_exterior_image_2_left"
+  ],
+  "fig": "10159_crossview_mask.png",
+  "lab": "BVL",
+  "collect_date": "2024-02-16"
+ },
+ {
+  "ds": "droid",
+  "base": "10094",
+  "instr": "Press on the brown object",
+  "frames": 505,
+  "val": false,
+  "eps": [
+   191,
+   189
+  ],
+  "npz": [
+   "10094_exterior_image_1_left",
+   "10094_exterior_image_2_left"
+  ],
+  "fig": "10094_crossview_mask.png",
+  "scene_id": 8136792558,
+  "lab": "TRI",
+  "building": "TRI",
+  "task_category": "Fold, spread out, or clump object (ex: cloth, charging cord, clothes)"
+ },
+ {
+  "ds": "droid",
+  "base": "10202",
+  "instr": "pick up the green object and put it on the table",
+  "frames": 226,
+  "val": false,
+  "eps": [
+   411,
+   410
+  ],
+  "npz": [
+   "10202_exterior_image_1_left",
+   "10202_exterior_image_2_left"
+  ],
+  "fig": "10202_crossview_mask.png",
+  "scene_id": 818725642,
+  "lab": "AUTOLab",
+  "building": "Autolab",
+  "task_category": "Place block in space"
+ },
+ {
+  "ds": "droid",
+  "base": "10374",
+  "instr": "use a cloth to wipe the cabinet",
+  "frames": 280,
+  "val": false,
+  "eps": [
+   749,
+   748
+  ],
+  "npz": [
+   "10374_exterior_image_1_left",
+   "10374_exterior_image_2_left"
+  ],
+  "fig": "10374_crossview_mask.png",
+  "scene_id": 8077138943,
+  "lab": "TRI",
+  "building": "640 Palo Alto Ave",
+  "task_category": "Use cloth to clean something (ex: table, window, mirror, plate)"
+ },
+ {
+  "ds": "droid",
+  "base": "10327",
+  "instr": "put the pen on the table",
+  "frames": 203,
+  "val": false,
+  "eps": [
+   604,
+   607
+  ],
+  "npz": [
+   "10327_exterior_image_1_left",
+   "10327_exterior_image_2_left"
+  ],
+  "fig": "10327_crossview_mask.png",
+  "scene_id": 5059283044,
+  "lab": "AUTOLab",
+  "building": "Autolab",
+  "task_category": "Open or close slidable objects (ex: toaster, drawers, sliding doors, dressers)"
+ },
+ {
+  "ds": "droid",
+  "base": "10524",
+  "instr": "put the bag into the sink",
+  "frames": 226,
+  "val": false,
+  "eps": [
+   982,
+   980
+  ],
+  "npz": [
+   "10524_exterior_image_1_left",
+   "10524_exterior_image_2_left"
+  ],
+  "fig": "10524_crossview_mask.png",
+  "scene_id": 8295031081,
+  "lab": "RPL",
+  "building": "AHG kitchen floor 1",
+  "task_category": "pnp-table-to-sink-chips"
+ },
+ {
+  "ds": "droid",
+  "base": "10421",
+  "instr": "close the lid of the kettle",
+  "frames": 120,
+  "val": false,
+  "eps": [
+   771,
+   773
+  ],
+  "npz": [
+   "10421_exterior_image_1_left",
+   "10421_exterior_image_2_left"
+  ],
+  "fig": "10421_crossview_mask.png",
+  "scene_id": 9116663486,
+  "lab": "TRI",
+  "building": "394 Franklin",
+  "task_category": "Use object to pick up something (ex: spoon + almonds, spatula + bread, fork + banana)"
+ },
+ {
+  "ds": "droid",
+  "base": "1037",
+  "instr": "use the green brush to sweep the top of the machine on the left",
+  "frames": 455,
+  "val": false,
+  "eps": [
+   762,
+   764
+  ],
+  "npz": [
+   "1037_exterior_image_1_left",
+   "1037_exterior_image_2_left"
+  ],
+  "fig": "1037_crossview_mask.png",
+  "scene_id": 6511965378,
+  "lab": "TRI",
+  "building": "403 Fairmont",
+  "task_category": "Use cloth to clean something (ex: table, window, mirror, plate)"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0012_scene_0010_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0012_scene_0010_cfg_0001",
+  "instr": "press the red button on the black and white base",
+  "frames": 199,
+  "val": false,
+  "eps": [
+   466,
+   467
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0012_scene_0010_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0001_user_0012_scene_0010_cfg_0001_819112070044"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0012_scene_0010_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0005_scene_0002_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0005_scene_0002_cfg_0001",
+  "instr": "pull out a napkin from the box and place it on the table",
+  "frames": 191,
+  "val": false,
+  "eps": [
+   774,
+   775
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0005_scene_0002_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0002_user_0005_scene_0002_cfg_0001_039422060546"
+  ],
+  "n_cams": 6,
+  "fig": "task_0002_user_0005_scene_0002_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0004_scene_0003_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0004_scene_0003_cfg_0001",
+  "instr": "pick up a tissue and place it on the table",
+  "frames": 161,
+  "val": false,
+  "eps": [
+   707,
+   709
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0004_scene_0003_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0004_scene_0003_cfg_0001_819112070044"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0004_scene_0003_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0008_scene_0002_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0008_scene_0002_cfg_0001",
+  "instr": "press the red button on the orange base",
+  "frames": 129,
+  "val": false,
+  "eps": [
+   209,
+   215
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0008_scene_0002_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0001_user_0008_scene_0002_cfg_0001_819112070044"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0008_scene_0002_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0001_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0001_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 287,
+  "val": false,
+  "eps": [
+   0,
+   4
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0001_cfg_0001_035622060973",
+   "RH20T_cfg1_task_0001_user_0001_scene_0001_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0001_scene_0001_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0004_scene_0005_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0004_scene_0005_cfg_0001",
+  "instr": "put a napkin on the table",
+  "frames": 131,
+  "val": false,
+  "eps": [
+   705,
+   706
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0004_scene_0005_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0002_user_0004_scene_0005_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0004_scene_0005_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0014_scene_0003_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0014_scene_0003_cfg_0001",
+  "instr": "press the green button",
+  "frames": 154,
+  "val": false,
+  "eps": [
+   450,
+   453
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0014_scene_0003_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0001_user_0014_scene_0003_cfg_0001_819112070044"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0014_scene_0003_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0004_scene_0003_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0004_scene_0003_cfg_0001",
+  "instr": "press the button",
+  "frames": 182,
+  "val": false,
+  "eps": [
+   87,
+   93
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0004_scene_0003_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0001_user_0004_scene_0003_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0004_scene_0003_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0004_scene_0009_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0004_scene_0009_cfg_0001",
+  "instr": "press the red button",
+  "frames": 91,
+  "val": false,
+  "eps": [
+   129,
+   130
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0004_scene_0009_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0004_scene_0009_cfg_0001_819112070044"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0004_scene_0009_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0012_scene_0005_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0012_scene_0005_cfg_0001",
+  "instr": "press the green button on the yellow base repeatedly",
+  "frames": 161,
+  "val": false,
+  "eps": [
+   402,
+   403
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0012_scene_0005_cfg_0001_038522063145",
+   "RH20T_cfg1_task_0001_user_0012_scene_0005_cfg_0001_819112070044"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0012_scene_0005_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0005_scene_0006_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0005_scene_0006_cfg_0001",
+  "instr": "press the button of the orange base with the red button",
+  "frames": 121,
+  "val": false,
+  "eps": [
+   193,
+   195
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0005_scene_0006_cfg_0001_038522063145",
+   "RH20T_cfg1_task_0001_user_0005_scene_0006_cfg_0001_035622060973"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0005_scene_0006_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0008_scene_0007_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0008_scene_0007_cfg_0001",
+  "instr": "press the button on the white base of the red button",
+  "frames": 200,
+  "val": false,
+  "eps": [
+   283,
+   285
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0008_scene_0007_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0001_user_0008_scene_0007_cfg_0001_819112070044"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0008_scene_0007_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0005_scene_0004_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0005_scene_0004_cfg_0001",
+  "instr": "press the green button on the yellow base",
+  "frames": 140,
+  "val": false,
+  "eps": [
+   133,
+   135
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0005_scene_0004_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0001_user_0005_scene_0004_cfg_0001_819112070044"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0005_scene_0004_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0008_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0008_cfg_0001",
+  "instr": "take out a napkin, put it on the tablecloth",
+  "frames": 173,
+  "val": false,
+  "eps": [
+   641,
+   642
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0008_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0001_scene_0008_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0001_scene_0008_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0001_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0001_cfg_0001",
+  "instr": "",
+  "frames": 344,
+  "val": false,
+  "eps": [
+   614,
+   624
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0001_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0001_scene_0001_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0001_scene_0001_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0005_scene_0010_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0005_scene_0010_cfg_0001",
+  "instr": "pull out a napkin, place it on the table",
+  "frames": 169,
+  "val": false,
+  "eps": [
+   842,
+   845
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0005_scene_0010_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0002_user_0005_scene_0010_cfg_0001_819112070044"
+  ],
+  "n_cams": 8,
+  "fig": "task_0002_user_0005_scene_0010_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0002_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0002_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 581,
+  "val": false,
+  "eps": [
+   634,
+   639
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0002_cfg_0001_035622060973",
+   "RH20T_cfg1_task_0002_user_0001_scene_0002_cfg_0001_038522062547"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0001_scene_0002_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0004_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0004_cfg_0001",
+  "instr": "pull out a tissue",
+  "frames": 282,
+  "val": false,
+  "eps": [
+   652,
+   688
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0004_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0001_scene_0004_cfg_0001_819112070044"
+  ],
+  "n_cams": 6,
+  "fig": "task_0002_user_0001_scene_0004_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0009_scene_0010_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0009_scene_0010_cfg_0001",
+  "instr": "press the button on the orange base with the red button",
+  "frames": 111,
+  "val": false,
+  "eps": [
+   385,
+   386
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0009_scene_0010_cfg_0001_750612070851",
+   "RH20T_cfg1_task_0001_user_0009_scene_0010_cfg_0001_039422060546"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0009_scene_0010_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0005_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0005_cfg_0001",
+  "instr": "press the red button on the white base from top to bottom",
+  "frames": 175,
+  "val": false,
+  "eps": [
+   5,
+   27
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0005_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0001_scene_0005_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0001_scene_0005_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0015_scene_0005_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0015_scene_0005_cfg_0001",
+  "instr": "press the button on the yellow base with the green button",
+  "frames": 270,
+  "val": false,
+  "eps": [
+   593,
+   599
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0015_scene_0005_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0001_user_0015_scene_0005_cfg_0001_039422060546"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0015_scene_0005_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0014_scene_0007_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0014_scene_0007_cfg_0001",
+  "instr": "press the button on the white base with the red key",
+  "frames": 369,
+  "val": false,
+  "eps": [
+   555,
+   563
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0014_scene_0007_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0001_user_0014_scene_0007_cfg_0001_750612070851"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0014_scene_0007_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0002_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0002_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 254,
+  "val": true,
+  "eps": [
+   19,
+   52
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0002_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0001_scene_0002_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0001_scene_0002_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0014_scene_0004_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0014_scene_0004_cfg_0001",
+  "instr": "press the button",
+  "frames": 219,
+  "val": false,
+  "eps": [
+   477,
+   492
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0014_scene_0004_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0001_user_0014_scene_0004_cfg_0001_819112070044"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0014_scene_0004_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0009_scene_0009_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0009_scene_0009_cfg_0001",
+  "instr": "press the red button",
+  "frames": 171,
+  "val": false,
+  "eps": [
+   383,
+   384
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0009_scene_0009_cfg_0001_035622060973",
+   "RH20T_cfg1_task_0001_user_0009_scene_0009_cfg_0001_038522062547"
+  ],
+  "n_cams": 8,
+  "fig": "task_0001_user_0009_scene_0009_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0008_scene_0009_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0008_scene_0009_cfg_0001",
+  "instr": "",
+  "frames": 278,
+  "val": false,
+  "eps": [
+   928,
+   933
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0008_scene_0009_cfg_0001_039422060546",
+   "RH20T_cfg1_task_0002_user_0008_scene_0009_cfg_0001_038522063145"
+  ],
+  "n_cams": 6,
+  "fig": "task_0002_user_0008_scene_0009_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0003_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0003_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 256,
+  "val": false,
+  "eps": [
+   646,
+   656
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0003_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0001_scene_0003_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0001_scene_0003_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0003_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 134,
+  "val": false,
+  "eps": [
+   1,
+   8
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0001_scene_0003_cfg_0001_039422060546"
+  ],
+  "n_cams": 6,
+  "fig": "task_0001_user_0001_scene_0003_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0015_scene_0004_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0015_scene_0004_cfg_0001",
+  "instr": "press the red button",
+  "frames": 247,
+  "val": false,
+  "eps": [
+   515,
+   517
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0015_scene_0004_cfg_0001_035622060973",
+   "RH20T_cfg1_task_0001_user_0015_scene_0004_cfg_0001_038522062547"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0015_scene_0004_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0005_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0005_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 248,
+  "val": false,
+  "eps": [
+   645,
+   670
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0005_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0001_scene_0005_cfg_0001_819112070044"
+  ],
+  "n_cams": 6,
+  "fig": "task_0002_user_0001_scene_0005_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0004_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0004_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 156,
+  "val": false,
+  "eps": [
+   2,
+   6
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0004_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0001_scene_0004_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0001_scene_0004_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0006_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0006_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 235,
+  "val": true,
+  "eps": [
+   644,
+   661
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0006_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0001_scene_0006_cfg_0001_039422060546"
+  ],
+  "n_cams": 8,
+  "fig": "task_0002_user_0001_scene_0006_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0006_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0006_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 158,
+  "val": false,
+  "eps": [
+   3,
+   11
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0006_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0001_scene_0006_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0001_scene_0006_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0007_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0007_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 338,
+  "val": false,
+  "eps": [
+   657,
+   687
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0007_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0001_scene_0007_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0001_scene_0007_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0007_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0007_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 223,
+  "val": false,
+  "eps": [
+   9,
+   23
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0007_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0001_scene_0007_cfg_0001_819112070044"
+  ],
+  "n_cams": 6,
+  "fig": "task_0001_user_0001_scene_0007_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0009_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0009_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 227,
+  "val": false,
+  "eps": [
+   643,
+   651
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0009_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0001_scene_0009_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0001_scene_0009_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0008_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0008_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 183,
+  "val": false,
+  "eps": [
+   7,
+   10
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0008_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0001_scene_0008_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0001_scene_0008_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0001_scene_0010_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0001_scene_0010_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 363,
+  "val": false,
+  "eps": [
+   659,
+   663
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0001_scene_0010_cfg_0001_035622060973",
+   "RH20T_cfg1_task_0002_user_0001_scene_0010_cfg_0001_038522063145"
+  ],
+  "n_cams": 6,
+  "fig": "task_0002_user_0001_scene_0010_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0009_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0009_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 282,
+  "val": false,
+  "eps": [
+   32,
+   33
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0009_cfg_0001_038522062547",
+   "RH20T_cfg1_task_0001_user_0001_scene_0009_cfg_0001_035622060973"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0001_scene_0009_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0004_scene_0001_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0004_scene_0001_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 493,
+  "val": false,
+  "eps": [
+   737,
+   750
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0004_scene_0001_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0004_scene_0001_cfg_0001_750612070851"
+  ],
+  "n_cams": 6,
+  "fig": "task_0002_user_0004_scene_0001_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0001_scene_0010_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0001_scene_0010_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 244,
+  "val": false,
+  "eps": [
+   99,
+   103
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0001_scene_0010_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0001_user_0001_scene_0010_cfg_0001_039422060546"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0001_scene_0010_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0004_scene_0002_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0004_scene_0002_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 1180,
+  "val": false,
+  "eps": [
+   762,
+   763
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0004_scene_0002_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0004_scene_0002_cfg_0001_035622060973"
+  ],
+  "n_cams": 6,
+  "fig": "task_0002_user_0004_scene_0002_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0004_scene_0001_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0004_scene_0001_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 88,
+  "val": false,
+  "eps": [
+   67,
+   69
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0004_scene_0001_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0001_user_0004_scene_0001_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0004_scene_0001_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0004_scene_0004_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0004_scene_0004_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 167,
+  "val": false,
+  "eps": [
+   710,
+   713
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0004_scene_0004_cfg_0001_750612070853",
+   "RH20T_cfg1_task_0002_user_0004_scene_0004_cfg_0001_750612070851"
+  ],
+  "n_cams": 5,
+  "fig": "task_0002_user_0004_scene_0004_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0004_scene_0002_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0004_scene_0002_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 196,
+  "val": false,
+  "eps": [
+   90,
+   92
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0004_scene_0002_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0001_user_0004_scene_0002_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0004_scene_0002_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0004_scene_0006_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0004_scene_0006_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 289,
+  "val": false,
+  "eps": [
+   719,
+   721
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0004_scene_0006_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0002_user_0004_scene_0006_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0004_scene_0006_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0004_scene_0004_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0004_scene_0004_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 80,
+  "val": false,
+  "eps": [
+   66,
+   70
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0004_scene_0004_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0001_user_0004_scene_0004_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0004_scene_0004_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0004_scene_0007_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0004_scene_0007_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 162,
+  "val": false,
+  "eps": [
+   708,
+   712
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0004_scene_0007_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0002_user_0004_scene_0007_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0002_user_0004_scene_0007_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0001_user_0004_scene_0005_cfg_0001",
+  "take": "RH20T_cfg1_task_0001_user_0004_scene_0005_cfg_0001",
+  "instr": "press the button from top to bottom",
+  "frames": 227,
+  "val": false,
+  "eps": [
+   96,
+   97
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0001_user_0004_scene_0005_cfg_0001_819112070044",
+   "RH20T_cfg1_task_0001_user_0004_scene_0005_cfg_0001_750612070853"
+  ],
+  "n_cams": 7,
+  "fig": "task_0001_user_0004_scene_0005_cfg_0001_crossview_mask.png"
+ },
+ {
+  "ds": "rh20t",
+  "base": "task_0002_user_0004_scene_0008_cfg_0001",
+  "take": "RH20T_cfg1_task_0002_user_0004_scene_0008_cfg_0001",
+  "instr": "pull out a napkin",
+  "frames": 795,
+  "val": false,
+  "eps": [
+   758,
+   759
+  ],
+  "npz": [
+   "RH20T_cfg1_task_0002_user_0004_scene_0008_cfg_0001_038522063145",
+   "RH20T_cfg1_task_0002_user_0004_scene_0008_cfg_0001_038522062547"
+  ],
+  "n_cams": 2,
+  "fig": "task_0002_user_0004_scene_0008_cfg_0001_crossview_mask.png"
+ }
+]

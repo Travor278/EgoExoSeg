@@ -99,8 +99,6 @@ AgileX 的 2 个 hand-eye 相机随左右臂**独立运动** → wrist↔wrist �
 
 ## 0.7 RoboInter mask 实测可视化与语义确认(2026-07-18)
 
-动机:docx/0708 提出"mask 标注是干嘛用的、为什么只标 exo↔exo、能否可视化到物体上"。本次直接抽取真 npz + 对应视频叠加渲染,全部落地。
-
 ### mask 的语义(抽 12 个 npz 实测,DROID×11 + RH20T×1)
 
 - **每条 camera-video 恰好 1 个物体** —— npz 键仅 `masks`,shape `(1, T, 1, H, W)`,二值(bool 或 float64 0/1)。这个物体就是语言指令里**被操作的目标物体**(与逐帧 `annotation.object_box` 同一目标,如 10020 = "take the black lid…" 的黑色瓶盖)。**不是全景/多物体分割** → 对我们意味着每对 query/target 天然只有 1 个 GT 对象,格式对齐 ego2exo json 最简单,但没有 distractor 级多物体标注。
@@ -129,6 +127,46 @@ RoboInter-Data 数据卡(README front-matter)明确声明 **全部数据/代码 
 - 已渲染 3 组(`10020` 瓶盖小目标/val 集、`10010` 碗-两路 exo 尺度差大、`0` in-the-wild 卧室织物),见 `RoboInter-Data/samples/README.md`;三组均视觉确认 **ext1/ext2 的 mask 是同一物体身份**,且 wrist 画面里目标物体清晰可见(共视成立)但零标注。
 - 质量抽查印象与 §6 预期一致:SAM2+人工复核的 mask 边界在 180×320 下贴合;终版 benchmark 仍按 §5 路径映射回高清帧后 refine。
 - 二次核验:zip 中央目录 198,194 个成员 = `exterior_image_1` 64,368 + `exterior_image_2` 64,498 + RH20T 全局 serial 69,328,**wrist/in-hand = 0**(与 `VideoID_2_SegmentationNPZ.json` 非空值计数 198,194 一致,两个独立来源互证)。
+
+### exo↔exo pair 计数(2026-07-19,本地 mapping 全量统计)
+
+| 来源 | pair 定义 | 全量(无序对) | val 集 | 备注 |
+|---|---|---|---|---|
+| DROID | 同 `video_id` 的 ext1+ext2 两路都有 npz | **56,566**(/76,500 完整双视角) | **1,678** | 只一路有 npz 15,734、两路都无 4,200 |
+| RH20T | 同 take(去掉相机 serial 后缀)任取 2 路有 npz 的全局相机,C(k,2) | **178,620**(12,191 takes × 峰值 6 路/take,最多 8 路) | 7,725 | 每 take 标注相机数分布:1×204 / 2×385 / 3×663 / 4×1,280 / 5×2,327 / **6×3,322** / 7×2,402 / 8×1,608 |
+
+- 合计 ~235k 无序对;按 query→target 双向构造则 ×2。均为"两路都有 npz"的原始对,尚未做 Qsheet 质量过滤与共视帧(两路非空帧交集)过滤,有效可用数会略降。
+- ⚠️ **修正旧表述**:§0.6/§2.2/§3.4 等处"RoboInter 给 RH20T **82,920 个 mask**"不准确 —— 82,920 是 RH20T 的 **key 总数**(含 13,592 个 null),真正有 npz 的是 **69,328**(与 zip 中央目录成员数一致)。DROID 同理:2×76,500 key 中非空 64,368+64,498。
+- ⚠️ RH20T "同 take 各相机标的是同一物体"尚未做视觉抽查(DROID 已抽 3 组确认同一物体身份);RH20T 多相机全标定 + 178k 对 → 夹角分桶的原料比预期更充裕。
+  - → 2026-07-19 已补 1 组视觉抽查(scene_0004 两路全局相机,`samples/task_0001_..._crossview_mask.png`):**同一物体身份确认**;且本地 chunk 里单 take 就有 6–7 路已标注相机,C(k,2) 产能属实。
+
+### wrist 侧 SAM2 预演 + 本机算力结论(2026-07-19)
+
+**RH20T mask 已同样可视化**(脚本 `--rh20t auto` 模式):GT 360×640 边缘明显比 DROID 的 180×320 更利;所选 take("press the button")wrist(in-hand)相机全程正对目标物体 → RH20T 的 wrist↔exo 共视性(至少该类任务)良好。
+
+**用 SAM2 给 wrist 视角补预测 mask 已跑通**(`RoboInter-Data/sam2_wrist_preview.py`,输出橙色叠加进 crossview 图,与绿色 GT 明确区分):
+
+- 算力:本机 `py312` 环境(torch 2.10+cu128)可用 **RTX 5070 GPU** → SAM2 hiera-**b+** 全视频传播(百余帧/条仅数秒);CPU 路径(base Anaconda 环境,torch cpu 版)退化为 tiny+4 帧稀疏模式也能跑。4 条(DROID×3 + RH20T×1)全部产出。
+- 质量印象:1–4 次点击即可得到贴合的 wrist mask;b+ 全程传播在物体出画帧**正确输出空 mask**(与 GT 可见性语义一致,tiny 稀疏版会幻觉假阳性)。
+- **两个实证的失败模式**(已留档在脚本注释):① 点击偏 10px 选错物体(10010 首点命中碗内搅拌棒,SAM2 全程跟踪了棒);② 正点落在目标边缘外(RH20T 落桌布)→ mask 传播爆帧。→ 佐证 §6 结论:**auto-seg 必须人工复核**,且"点该点谁"本身就是跨视角身份对齐问题(V²-SAM 的任务)。
+- 由此,wrist GT 构建管线定型:**外部相机 GT 定身份 → wrist 帧少量人工点击 → SAM2(-L)全程传播 → 人工复核可见性与边界**;本机 GPU 即可承担 hundred-level 的传播计算。
+
+### 腕部手工标注实测(2026-07-21,labelme,6 集 33 帧)—— 混合管线定型
+
+用户用 labelme 手标 6 条 DROID episode 的腕部关键帧(`manual_wrist_kit/`),与 SAM2 结果逐帧 IoU 对比(`samples/*_manual_vs_sam2.png`):
+
+| episode | 目标 | SAM2 来源 | mean IoU(手工 vs SAM2) | 判读 |
+|---|---|---|---|---|
+| 10020 瓶盖 | 小刚体 | 人工点击 prompt | **0.93** | prompt 对了,SAM2≈人工质量 |
+| 10010 碗 | 含干扰棒 | 人工点击(修正版) | **0.87** | 同上 |
+| 0 织物 | 大形变 | 人工点击 | 0.36(单帧 0.00–0.97) | 形变+边界歧义,时序漂移 |
+| 10082 银罐 | 小刚体 | **自动 prompt** | 0.41(后期 0.04) | 传播后期丢失 |
+| 1000 红物 | 小刚体 | 自动 prompt | **0.00**(零重叠) | **选错物体**(身份错误) |
+| 10427 绿笔 | 细长小物 | 自动 prompt | **0.00**(SAM2 全空) | 自动提示彻底失败;手工连 261px 远景都精准 |
+
+**结论(管线定型)**:①人工在"身份判断 + 可见性判断"上碾压(自动 prompt 4 例中 2 例身份级失败);②**prompt 正确时 SAM2 达人工质量(IoU 0.87–0.93)**;③形变物体与长程传播仍需人工纠偏。→ wrist 真值管线最终形态:**人工稀疏关键帧(定身份+可见性,~30–60s/帧)→ SAM2 以人工帧为 prompt 密集传播 → 人工抽查漂移**。hundred-level 成本估计(修正):**150 集 × 5 关键帧 × 45s ≈ 9.4 人时;300 集 × 6 帧 ≈ 22.5 人时**(若实测每帧仅 ~15–20s 则减半;可按 docx 分工拆给多人)。
+
+**V²-SAM 本机可行性(修订)**:此前"无 CUDA"判断作废——`py311/py312` 均有 cu128 torch,RTX 5070 8GB 可用。V²-SAM 权重在 HF `jaychempan/V2-SAM`,但需另下 SAM2-L + **DINOv3(Meta gated,需 HF 账号过 license)**;8GB 显存 bf16 单帧推理估计可塞下(偏紧),小规模 demo 可本机试,**成批 ZSL 评测仍建议 A6000**。
 
 ---
 
@@ -480,6 +518,62 @@ goal 中这半句在**严格意义上无对应数据**:不同机器人无法同�
    - 其余(RoboMIND 2.0 / VTouch…)同类风险仍未测。**这条实测直接改变了新候选排序:AIRoA > Galaxea。**
 3. **这些的"external"多是机器人头部相机**(Galaxea head、AIRoA head、VTouch head,随平台移动的 robot-egocentric),**不是固定第三人称机位** —— 对"按视角夹角分桶做 geometric-ambiguity"不如 RH20T 的固定全局相机;Galaxea 的 head+head_right 疑为近立体对,作"两个不同 exo"很弱。
 4. 净判断:**这批新数据不改变首选("DROID exo↔exo 免标注"仍是成本最低的起点)**;但若我们本就要自建 wrist mask 走 wrist↔exo,**Galaxea / AIRoA MoMa 是 DROID/RoboMIND 之外最值得加入的、当下可下载的 wrist↔head 同步新源**,而 **CCMP(CVPR 2026)+ SegMASt3R** 是方法侧最该跟进的两篇。
+
+---
+
+## 10. 仿真 cross-view:BEHAVIOR-1K 路线评估(2026-07-19)
+
+动机:真实数据侧 wrist mask 必须自建(§0.7);仿真里 **GT mask 是渲染器免费送的**,且视角可任意加。评估"BEHAVIOR-1K 场景 + exo/ego/wrist mask"的可行性。
+
+### 核实到的事实(一手来源)
+
+- **传感器**:OmniGibson 的 [VisionSensor](https://behavior.stanford.edu/reference/sensors/vision_sensor.html) 原生支持 rgb / depth(linear) / **seg_semantic / seg_instance** / normals / optical flow / 2D+3D bbox —— 任意相机、逐帧、像素级实例分割,**零标注成本、零 SAM2、零人工复核**。
+- **数据**:[BEHAVIOR Challenge 数据页](https://behavior.stanford.edu/challenge/dataset.html) —— NeurIPS 2025 挑战 10,000 条人类遥操作 demo(50 任务×200 条,>1,200h);**2026 挑战已扩到 20,000 条 / 100 任务 / 3.27TB,LeRobot V3 格式**;另发 raw HDF5(1.44TB)。观测:头部 720×720 + 双腕 480×480 的 RGB+depth。
+- **重放**:官方脚本 `OmniGibson/scripts/learning/replay_obs.py` 按录制的 state+action **逐步重放 raw HDF5 并重新渲染观测**(modalities 与相机由 `robot_sensor_config` 配置;逐步 load state 规避物理漂移)。先例:PointWorld(arXiv 2601.03782)重放时**外挂 3 个虚拟相机**(left/right shoulder + head)采数据 → 加任意 exo 机位 + seg_instance 是配置层面的事。
+- **场景复杂度**:50 个全交互真实感住宅场景 / 10k+ 物体模型 / 1,000 activities,Omniverse RTX 渲染(含流体/布料/透明)—— 视觉丰富度远超 RLBench/MetaWorld 一类"仿真太简单"的量级。
+
+### 判断:难度中低,瓶颈在工程不在标注
+
+| 步骤 | 内容 | 估计 |
+|---|---|---|
+| 1 | 装 BEHAVIOR-1K/OmniGibson(需 Isaac Sim,RTX GPU;本机 5070 8GB 达最低线,WSL2 可用) | 1–2 天 |
+| 2 | 改重放管线:`robot_sensor_config` 加 `seg_instance`,场景里加 2–3 个固定 exo VisionSensor(位姿自定) | 2–4 天 |
+| 3 | 抽 hundred-level episode 子集重放渲染(全量 20k 无必要),导出 wrist/head/exo 各路 RGB+instance mask → 组 pair json | 1–2 天 + GPU 渲染时 |
+
+- **一次重放同时得到全部三类 pair**:wrist↔exo(=ego↔exo 同构)、head↔exo、exo↔exo,且**每路都有 GT mask**(目标物体 instance id 已知,直接按 id 提 mask,连"哪一个是被操作物体"都由 task 定义给出)。
+- **可控轴红利**:exo 相机位姿完全可控 → 视角夹角/距离/遮挡可以做成系统变量,与 RH20T 的"真实但固定机位"互补,是 docx "A. Geometric ambiguity" 的第二个可控实验场;域差(sim2real)本身也可作 diagnostic 维度而非缺陷。
+- **风险/注意**:① Isaac Sim 环境安装在 Windows/WSL 上偶有坑,留 buffer;② 8GB 显存跑重放渲染可行但慢,大批量建议放 A6000;③ demo license 待核(挑战页未标,商用性存疑,benchmark 再分发前查);④ 头部相机随机器人动,"固定第三人称 exo"必须靠自加的虚拟相机,不能只用释出的三路。
+- **与 §9.2 NVIDIA PhysicalAI(唯一带 GT mask 的仿真候选)的关系**:BEHAVIOR-1K 在规模(20k vs 1k)、场景真实感、任务多样性上全面超过,且经重放可補 wrist mask —— 若走 sim 轨道,**直接以 BEHAVIOR-1K 为主**,PhysicalAI 降为快速 pilot。
+
+**结论:值得立项**。"BEHAVIOR-1K 场景 + exo/ego/wrist 三路 GT mask"约 1–2 周可出初版(hundred-level),是全家族里唯一"三路皆真值、视角可控、零标注"的 track;真实(DROID/RH20T)+ 仿真(BEHAVIOR)双轨正好构成 PAMI 的 real↔sim 对照轴。
+
+### pilot 工序定稿(2026-07-19,读官方 replay 源码后)
+
+目标形态对齐 RoboInter:每 (episode × 相机) 一路 RGB 视频 + 被操作物体逐帧二值 mask;视角 = **2–3 个自摆固定 exo VisionSensor + head(ego) + 双 wrist**。关键事实(读 `OmniGibson/scripts/learning/replay_obs.py` 确认):
+
+1. **重放入口现成**:`HDF5PlaybackWrapper`(omnigibson.envs)按录制逐步重放;raw 路径 `2026-challenge-rawdata/task-{id:04d}/episode_{demo:08d}.hdf5`,`task_id = demo_id // 10000`;机器人 **R1Pro**;仓库自带 `download_gcs_rawdata.py`(GCS 公开桶,天然续传)。
+2. **mask = 改一行模态**:`robot_obs_modalities=["proprio","rgb","depth_linear"]` → 追加 `"seg_instance"`;robot 侧传感器配置在 `robot_sensor_config`(wrist VisionSensor 480² + head zed_link 720²)。
+3. **exo 机位注入**:OmniGibson env config 的 `external_sensors`(静态 VisionSensor,自定位姿)—— 位姿完全可控 = 视角差可做成实验变量。
+4. **"哪个物体"由任务定义给出**:env.task 的 object scope 即任务相关物体清单,按 instance id 直接从 seg_instance 提取,无需任何判断。
+5. **前置资产**:除 og_dataset 外还需 `2026-challenge-task-instances`(任务元数据+场景 json,`gm.DATA_PATH` 下);选简单桌面型任务从 `metadata/available_tasks.yaml` 挑。
+
+工序:env 就绪 → 拉 task-instances + 1 个简单任务的 1–2 条 raw episode → 改 replay(seg_instance + external_sensors ×2–3)→ 导出 RoboInter 式打包(mp4 + masks npz + manifest)→ 复用本地 montage/画廊管线出图。估 1–2 天(env 落地后)。
+
+### pilot 首跑结果(2026-07-20,turning_on_radio demo 1550)✅ 跑通
+
+- **产出**:5 路同步视角(3 自摆 exo + ego head + left wrist)× 1,942 步,每路 `rgb.mp4 + seg.npz`(GT instance mask + id→物体名 + 任务物体清单);卡片 `BehaviorPilot/samples/task0000_demo1550_crossview_gt.png`。可见性:exo2/head **100%**、left_wrist 77%(近景大 mask)、exo0/exo1 0%(盲摆没对准,见下)。
+- **两个关键工程结论(都已留档在脚本)**:
+  1. **机器人相机的 seg_instance 在此 Isaac 5.1 栈必崩**(闭源 bug,[OG#2312](https://github.com/StanfordVL/OmniGibson/issues/2312) 已 root-cause:instance 映射表不建 + -7 越界)→ 采用 issue 验证过的 **viewer 相机多趟重放**(每趟一个机位;ego/wrist 趟逐步吸附到对应传感器位姿,移动后补渲染再采集),外部 VisionSensor 同样中招、不可用;
+  2. 自建 playback env 必须带 **`gm.ENABLE_TRANSITION_RULES=False`**(vanilla replay 内部设置;漏掉则 env 构建段错误,与 seg 无关——探针梯 A/B/C 定位)。
+- **下轮迭代**(小改动):exo 机位改为瞄准**目标物体运行时位置**(radio_89 可从 scene 查询)而非机器人起始位;mask 目标限定 radio(现为 radio+coffee_table 并集)或双色分别渲;5 趟 ≈ 每 demo ~15 分钟(4090),hundred-level 可行。
+- 脚本:mint2027 `~/behavior_pilot/pilot_viewercam.py` + `~/pilot_views_run.sh`;本地渲染 `BehaviorPilot/render_sim_cards.py`。
+
+### v2.2 多任务批跑(2026-07-21):4 任务 3 场景 18/20 趟,单目标环形机位
+
+- **产物**:1550 收音机 / 50220 捕鼠夹 / 71020 玩具 / 42750 罐头,共 4 卡(`BehaviorPilot/samples/*_crossview_gt.png`);流式写盘版(mp4 逐帧编码 + seg 写 gzip 分块 h5)内存 O(1),5,994–16,662 步长 demo 无压力;viewer 实际渲 **720×1280**(gm 尺寸覆盖无效,惰性建流适配)。
+- **机位结论**:环形三机位瞄准目标物体后,radio 卡 **3/3 exo 全程 100% 可见**;但杂乱室内平均每 demo 只有 ~1/3 环位命中(其余撞墙)→ 下一步用 **seg 可见性反馈自动筛机位**(采样候选位姿→按目标可见帧率打分取 top-K)。
+- **ego/wrist 可见率 14–37% 是任务的真实时序稀疏**(导航段出画、交互段近景大 mask)——正好是"消失-重现/共视窗口"难度轴的天然来源;出卡采样帧应偏向共视窗口。
+- 遗留:42750 的 head/wrist 两趟可复现段错误(原因未查,exo 三路正常);打包走"远端抽帧+统计、只回传 ~70MB bundle"模式(`make_card_bundle.py`),不再整包回传 GB 级 h5。
 
 ---
 
