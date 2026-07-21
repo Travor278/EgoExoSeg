@@ -38,3 +38,12 @@ RoboInter-Data/All_Keys_of_Primary.json
 RoboInter-Data/segzip_index.json
 RoboInter-Data/meta/lerobot_droid_anno/episodes.jsonl
 RoboInter-Data/meta/lerobot_rh20t_anno/episodes.jsonl
+RoboInter-Data/RoboInter_Data_RawPath_Qmapping.json
+
+# ---- BEHAVIOR sim pilot bulky outputs (regenerable via remote replay) ----
+BehaviorPilot/views/
+BehaviorPilot/bundle/
+
+# ---- annotation kit: extracted frames are regenerable; KEEP hand labels ----
+RoboInter-Data/manual_wrist_kit/frames/**/*.png
+!RoboInter-Data/manual_wrist_kit/manual_masks/*.npz
