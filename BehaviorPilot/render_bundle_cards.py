@@ -20,7 +20,9 @@ sys.path.insert(0, str(ROOT.parent / "RoboInter-Data"))
 from visualize_robointer_masks import overlay_mask  # noqa: E402
 
 DEMO_TASK = {"1550": "turning_on_radio", "50220": "setting_mousetraps",
-             "71020": "picking_up_toys", "42750": "can_meat"}
+             "71020": "picking_up_toys", "42750": "can_meat",
+             "720270": "cook_a_frozen_pie", "822240": "store_batteries",
+             "942050": "dispose_of_batteries", "761590": "dispose_of_glass"}
 VIEW_ORDER = ["exo0", "exo1", "exo2", "head", "head_gaze", "left_wrist", "right_wrist"]
 LABEL = {"exo0": "exo0 (auto)", "exo1": "exo1 (auto)", "exo2": "exo2 (auto)",
          "head": "ego head", "head_gaze": "ego head (gaze)",
@@ -33,6 +35,10 @@ def render_demo(demo_dir: Path) -> None:
     if not views:
         return
     metas = {v: json.loads((demo_dir / v / "meta.json").read_text()) for v in views}
+    # drop dead columns (target basically never visible) unless that leaves too few
+    live = [v for v in views if metas[v]["visible_frac"] >= 0.05]
+    if len(live) >= 2:
+        views = live
     idxs = metas[views[0]]["idxs"]
     target = metas[views[0]]["target"].get("name", "?")
 
@@ -54,7 +60,7 @@ def render_demo(demo_dir: Path) -> None:
         names.append(f"{LABEL[v]} · vis {m['visible_frac']:.0%}")
     rows = [(f"step {t}", f"t={t / 60:.1f}s", [cols[c][k] for c in range(len(views))])
             for k, t in enumerate(idxs)]
-    task = DEMO_TASK.get(demo, "?")
+    task = DEMO_TASK.get(demo, "task")
     out = ROOT / "samples" / f"{demo}_{task}_crossview_gt.png"
     build_montage(
         out,
