@@ -1,0 +1,15 @@
+{
+ "base": "0",
+ "episode_index": 0,
+ "frames": [
+  0,
+  48,
+  96,
+  143,
+  191,
+  239
+ ],
+ "scale": 2,
+ "instruction": "pulling the fabric to the left",
+ "total_frames": 240
+}

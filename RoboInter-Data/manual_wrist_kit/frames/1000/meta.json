@@ -1,0 +1,15 @@
+{
+ "base": "1000",
+ "episode_index": 21,
+ "frames": [
+  0,
+  36,
+  72,
+  107,
+  143,
+  179
+ ],
+ "scale": 2,
+ "instruction": "put the red object into the silver bowl",
+ "total_frames": 180
+}

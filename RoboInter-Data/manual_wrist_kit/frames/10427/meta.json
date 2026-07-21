@@ -1,0 +1,15 @@
+{
+ "base": "10427",
+ "episode_index": 792,
+ "frames": [
+  0,
+  40,
+  81,
+  121,
+  162,
+  202
+ ],
+ "scale": 2,
+ "instruction": "put the green pen in the white mug cup",
+ "total_frames": 203
+}

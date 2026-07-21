@@ -1,0 +1,15 @@
+{
+ "base": "10020",
+ "episode_index": 2,
+ "frames": [
+  0,
+  22,
+  45,
+  67,
+  90,
+  112
+ ],
+ "scale": 2,
+ "instruction": "take the black lid from the top of the can and put it on the table",
+ "total_frames": 113
+}

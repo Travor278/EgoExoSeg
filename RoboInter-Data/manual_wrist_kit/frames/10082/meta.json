@@ -1,0 +1,15 @@
+{
+ "base": "10082",
+ "episode_index": 160,
+ "frames": [
+  0,
+  44,
+  87,
+  131,
+  174,
+  218
+ ],
+ "scale": 2,
+ "instruction": "place the silver jar on the microwave",
+ "total_frames": 219
+}
