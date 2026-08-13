@@ -441,5 +441,3 @@ DROID B run root 为 `/home/dell/codex_runs/crossview-zero-shot/formal/droid-B-s
 7. 明确 `valid / invalid / diagnostic / oracle / in-progress`，不得只凭 loss 正常宣布成功。
 
 机器账本当前含 30 条已验证记录；本文会随着 corrected init、iter 500、iter 2000、epoch 1/2/3 和官方 VAL/PCCS 结果及时更新。
-
-

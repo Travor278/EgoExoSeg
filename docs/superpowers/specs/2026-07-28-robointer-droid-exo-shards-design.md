@@ -265,4 +265,3 @@ The output is a derivative of RoboInter-Data and retains its
 CC BY-NC-SA 4.0 terms. `dataset.json` records the upstream repository,
 revision, license, construction code revision, creation time, and all encoding
 parameters.
-
