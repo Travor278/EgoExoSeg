@@ -2,11 +2,31 @@
 __pycache__/
 *.pyc
 
+# ---- local agent / browser scratch data ----
+.codex*/
+.codex-*
+.codex_*
+.tmp*/
+.playwright-cli/
+
+# ---- logs, transfer state and packaged artifacts ----
+*.log
+*.pid
+*.status
+*.partial
+*.tgz
+*.tar.gz
+*.tar.gz.sha256
+*.bundle
+*.bundle.sha256
+sftp-reget-fixture*
+
 # ---- nested repo (has its own .git; manage separately) ----
 V2sam/
 
 # ---- annotation-review packages: Ego-Exo4D imagery, not redistributable ----
 ego_exo_review/
+ego_exo_labelstudio/
 
 # ---- unpublished research plan (repo is public; add deliberately if intended) ----
 V2-SAM to PAMI (20260613--).docx
@@ -21,6 +41,9 @@ V2-SAM to PAMI (20260613--).docx
 *.zip
 *.pkl
 *.mdb
+*.pth
+*.pt
+*.ckpt
 DROID/raw/
 RH20T/raw/
 RoboSet/raw/
@@ -43,6 +66,7 @@ RoboInter-Data/RoboInter_Data_RawPath_Qmapping.json
 # ---- BEHAVIOR sim pilot bulky outputs (regenerable via remote replay) ----
 BehaviorPilot/views/
 BehaviorPilot/bundle/
+BehaviorPilot/review_page.html
 
 # ---- annotation kit: extracted frames are regenerable; KEEP hand labels ----
 RoboInter-Data/manual_wrist_kit/frames/**/*.png
@@ -50,3 +74,31 @@ RoboInter-Data/manual_wrist_kit/frames/**/*.png
 
 # keep anchor-propagated wrist masks (small, derived from hand labels)
 !RoboInter-Data/manual_wrist_kit/propagated/*.npz
+
+# v5 run outputs: rendered frames, per-view seg buffers and the review page's
+# mask overlays. Hundreds of MB of regenerable imagery, not source.
+BehaviorPilot/run_v5/
+BehaviorPilot/autodl_run40/
+
+# ---- local staging, downloads and generated reports ----
+controller_staging/
+deliverables/
+output/
+remote_edit/
+v2sam_offline_assets/
+epoch2_receipt_review_ssh_bundle.txt
+
+# One-off remote transfer, receipt and recovery helpers. Canonical reusable
+# tooling lives under BehaviorPilot/, scripts/ or a dedicated package.
+agent_forward_*.sh
+audit_dinov3_repos.sh
+audit_source_*.sh
+collect_failed_*.sh
+launch_droid_*.sh
+preflight_validate_plan_*.py
+prelaunch_gate_*.sh
+prepare_droid_snapshot_transfer_source.sh
+red_*.patch
+repro_anchor_dinov3_path.py
+sample_*_gpu_and_scp.sh
+snapshot_tree_audit.py
