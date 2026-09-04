@@ -1,11 +1,9 @@
-# V2-SAM 双向复现实验日记（精简审计版）
+# V2-SAM Ego2Exo 复现实验日记与下一阶段计划
 
-> 快照日期：2026-09-05（Asia/Shanghai）<br>
-> 远端实验日期：2026-08-18 至 2026-09-04<br>
-> 范围：Ego2Exo/Exo2Ego 数据、训练、权重、Visual/Fusion/Anchor/PCCS 与新 frame/object 指标<br>
-> 原则：机器产物、哈希和完整日志优先于聊天记录；本文中的“作者参考”“本次实测”“历史旧口径”和“待办”严格分开。
->
-> 精简前全文归档：`docs/archive/V2SAM_EGO2EXO_EXPERIMENT_DIARY_PRE_CLEANUP_20260905.md`，SHA256=`28ca65c7e8b79810fad74d00f435f34364d6193bdb207fbcce1a4728a5d3ed91`。归档仅用于追溯已删除的轮询、ETA 和旧计划；当前结论以 §16 为准。
+> 快照日期：2026-08-30（Asia/Shanghai）<br>
+> 远端实验日期：2026-08-18 至 2026-08-30（UTC）<br>
+> 范围：Ego2Exo/Exo2Ego 数据、权重、官方推理、从头训练、NewMatcher、Visual/Fusion 与 PCCS 收尾实验<br>
+> 原则：机器产物、哈希和完整日志优先于聊天记录；本文中的“论文值”“本次实测”“推断”和“待验证假设”严格分开。
 
 ## 1. 一页结论
 
@@ -155,17 +153,19 @@ DINO 二次初始化有两个直接后果：
 
 仍未直接证明的是修复后的完整 2-epoch 终点会逐位等于 v10 的 `0.36248 / 0.40940`。如果目标只是确认根因，无需再完整复现两轮；如果目标是给“修复 Public 的 epoch-2 最终指标”建立独立数值 receipt，才需要再跑完整 2 epoch。
 
-### 1.5 双向复现最终状态（2026-09-05）
+### 1.5 双向复现最终状态（2026-08-30）
 
-双向新标准评测已经闭环：Ego2Exo 与 Exo2Ego 均完成 PCCS、Visual、Anchor、Fusion 的 object-level 与 frame-level 全量统计，分别覆盖 `40,517 pairs / 100,223 objects` 和 `46,515 pairs / 109,253 objects`，最终任务均为 zero skipped、fatal scan passed、exit 0。Exo2Ego 选择 corrected Visual e19 与 Fusion e20；Fusion e21→e24 严格续训已完成，但 e24 未刷新八项指标。
+本轮 V2-SAM 双向复现已经闭环。Ego2Exo 侧，公开 Visual、Strict NewMatcher Fresh24 和 WRZ 旧 PCCS 文件下的候选评测均已完成；Exo2Ego 侧，公开 Visual 12e 与公开 Fusion 24e 均已完成官方训练配置内置的 `SegMetric` 全量验证。关键最终结果为：
 
-为避免旧口径和最终口径重复，本节不再复制数值：
+| 方向 / 模型 | 最佳 checkpoint | 指标口径 | IoU | Dice | 状态 |
+| --- | --- | --- | ---: | ---: | --- |
+| Ego2Exo Visual AdamW+EMA Fresh24 | epoch 18 | 全量 `SegMetric` | 0.3702 | 0.4300 | 完成 |
+| Ego2Exo Strict NewMatcher Fresh24 | epoch 16 | 全对象 / 作者 frame-level | 0.405197 / 0.450898 | 0.462907 / 0.509557 | 完成 |
+| Ego2Exo PCCS（WRZ 旧指标文件） | epoch 16 配对 | Fusion-first triple decoder | 0.4635 | 0.5242 | 候选闭环 |
+| Exo2Ego Visual | epoch 11 | 官方配置内置 `SegMetric` | 0.4426 | 0.5013 | 完成 |
+| Exo2Ego Fusion | epoch 24 | 官方配置内置 `SegMetric` | **0.4820** | **0.5378** | 完成、exit code 0 |
 
-- **最终八方法矩阵：** §16.1.1；
-- **官方/重训八个 expert checkpoint 控制矩阵：** §16.1.2；
-- **作者截图差值：** §16.2；
-- **完整日志、配置、job、SHA 与失败回执：** §16.3–§16.4；
-- **机读结果：** `docs/V2SAM_NEW_METRICS_20260830.json`。
+作者在本轮结束时说明正在整理新的指标文件。因此，WRZ 现有 `seg_metric_fusionfirst_tripledecoder_newmetric.py` 的历史 PCCS 数值继续作为复现 receipt 保存，但不再被强行冻结成“作者最终新口径”。待新文件正式提供后，可在不重训 Visual/Fusion 的前提下直接加载已完成 checkpoint 重评；这属于后续 evaluator 对齐，不影响本轮训练与官方配置内置验证已经复现完成的结论。
 
 ## 2. 证据等级与指标口径
 
@@ -179,17 +179,16 @@ DINO 二次初始化有两个直接后果：
 | `FALSIFIED` | 已被实验否定的假设 |
 | `OPEN` | 尚待实验回答 |
 
-### 2.2 指标口径必须分列
+### 2.2 指标必须分列
 
-| 口径 | 聚合方式 | 当前用途 |
+| 指标 | 聚合方式 | 备注 |
 | --- | --- | --- |
-| object-level | 所有对象实例等权 | 新标准正式指标 |
-| frame-level | 先在每个 image pair/frame 内平均对象，再对 pair 等权 | 新标准正式指标、作者截图对照 |
-| stock / legacy | 历史公开 evaluator 的原始聚合 | 仅保留历史复现，不与新标准混写 |
-| legacy last-object / WRZ old PCCS | 只取每 pair 最后对象，或旧 Triple Decoder evaluator | 已被最终标准替代，仅作故障与候选筛选证据 |
-| paper mIoU | 论文协议主表 | 仅在协议完全一致时比较 |
+| stock / legacy | 公开 evaluator 的原始聚合 | 最接近本次官方 checkpoint 的历史 headline |
+| per-object | 所有对象等权 | 多对象 pair 权重更大 |
+| per-pair | 先在 pair 内平均对象，再让 pair 等权 | 不能与 stock 混写 |
+| paper mIoU | 论文协议主表 | 只有协议完全一致时才能直接比较 |
 
-新标准每个层级同时报告 `IoU / Dice / Cont.A / Loc.E`；`Cont.A` 越高越好，`Loc.E` 越低越好。所有小数均为 `[0,1]`，百分数需乘 100。
+本文所有小数均为 `[0, 1]` 范围；换算为百分数时乘以 100。
 
 ## 3. 关键身份与不可变产物
 
@@ -615,11 +614,24 @@ NewMatcher 相对早期私有分支已经修复/验证的关键合同包括：SA
 
 正确做法是：以 commit `7b88c299...` 的实现为代码根，以 checkpoint 内嵌 cfg 为训练合同，重构一份冻结的 runtime config。
 
-### 5.3 路径标签混淆已经解决
+### 5.3 已解决的路径标签混淆
 
-早期同一 Fusion 权重曾在三条被错误混称的运行时中得到 `0.446970/0.509795` 与约 `0.172x/0.213x`。最终 trace 证明：高分路径实际是 NewMatcher-compatible；低分 public 路径触发了 §1.3 的 DINO 顶层二次初始化，另一个低分 overlay 还存在 runtime 未对齐。checkpoint 的 1,335/1,335 state 结构兼容只说明 key/shape 能加载，不能替代 forward 与初始化语义审计。
+同一官方 Fusion 权重曾产生以下表面矛盾：
 
-根因闭环依赖：Aug17 源码归档、checkpoint DINO tensor 哈希、4 卡短复现、12 个中间边界 trace 和“仅删除顶层 DINO alias”的单变量反事实。后续 Fresh24 已使用审计后的 NewMatcher 合同完成 24 epoch；旧 P0/P1 推测和待验证列表已从正文移入精简前归档。
+- 被误标为公开 `V2SAM` 的 NewMatcher-compatible reference 得到 `0.4469 / 0.5097`；
+- 当前 NewMatcher overlay forward 得到稳定的 `0.172x / 0.213x`；
+- NewMatcher state structure 又与 checkpoint 1,335/1,335 完全兼容；
+- checkpoint meta 明确声称训练类是 NewMatcher。
+
+后续 pipeline trace 已确认高分 reference 的活跃 matcher 本身就是 NewMatcher 语义；作者使用原生 public Fusion 的结果也与本次低 public 基线同量级。故“public Fusion 高、NewMatcher 低”这一前提不成立。真正需要解释的是：早期低分 NewMatcher overlay 与正确 NewMatcher-compatible runtime 之间至少有一项未对齐：
+
+1. checkout/commit 并非真正生成 checkpoint 的源码状态；
+2. runtime config 中 prompt、matcher 或 decoder 参数未按嵌入 cfg 构造；
+3. checkpoint key 虽全加载，但两个类对相同子模块的 forward 解释不同；
+4. test pipeline/template/data mapping 不同；
+5. 某个类变量或非 state-dict 状态没有保存在 checkpoint 中。
+
+这是下一轮严格复现的 P0 问题。
 
 ## 6. 作者 H20 复现反思与代码风险点
 
@@ -631,7 +643,7 @@ NewMatcher 相对早期私有分支已经修复/验证的关键合同包括：SA
 - Transformer dropout、loss 点采样、对象采样、随机初始化仍会引入随机性；
 - 同 seed 不等于绝对 bitwise deterministic，CUDA kernel、BF16/TF32 和 argmax 邻近值仍可能分叉。
 
-本轮正式 run 已固定 `seed=530358027` 和 `PYTHONHASHSEED`。若未来要求 bitwise 复现，还应记录每个 rank 的 sampler、首批 sample IDs 和 sparse point digest。
+当前 run 已固定 `seed=530358027` 和 `PYTHONHASHSEED`，但仍需记录每个 rank 的 sampler、首批 sample IDs 和 sparse point digest。
 
 ### 6.2 对比学习不是真正跨卡全局 batch
 
@@ -667,7 +679,7 @@ NewMatcher 相对早期私有分支已经修复/验证的关键合同包括：SA
 - 空间去重/最小距离；
 - 固定缓存 sparse points，将 anchor 随机性与可训练网络随机性分离。
 
-## 7. 已排除、已确认与当前开放项
+## 7. 已排除、已确认与仍待回答的问题
 
 ### 7.1 已排除
 
@@ -700,16 +712,158 @@ NewMatcher 相对早期私有分支已经修复/验证的关键合同包括：SA
 | NewMatcher v11 共 28 项静态/运行时回归门禁 | `PASS` |
 | 数据 union 引用闭包经修复后 missing=0、bad_jpeg=0 | `VERIFIED` |
 
-### 7.3 当前开放项
+### 7.3 待回答
 
-训练与新标准矩阵均已闭环，当前只剩发布维护事项：
+1. 产生官方 checkpoint 的精确 NewMatcher source tree 是否就是 `7b88c299...`？
+2. checkpoint 内嵌 cfg 中是否还有未被当前 runtime config 恢复的字段？
+3. 第二次独立全对象 NewMatcher 评测能否逐对象、逐指标复现首轮结果？
+4. 24-epoch 正式训练的 checkpoint cadence 如何兼顾严格续训与存储开销？
+5. batch 1 与 batch 16 的推理逐样本数值是否还需扩展到完整随机子集逐值比较？
+6. stock MMEngine 的 epoch 中途 resume 是否还需额外保存 sampler/cursor，避免非 accumulation-boundary 的 replay 或样本偏移？
+8. Visual 的后续非 LR 消融能否稳定超过当前 IoU 主榜最佳 Fresh24 epoch 18 `0.3702 / 0.4300`，并同时追平或超过 EMA800 的 Dice `0.4311`？
+9. HF repack 已完整上传、README/SHA256SUMS 已同步更新并通过远端回读验证；仍可选做一次从空目录回下载后的全载荷逐 SHA 验证。
 
-1. Hugging Face `Travor278/V2-SAM` 的 README 仍需更新为 Exo2Ego Visual e19/Fusion e20、最终新标准指标和不可变代码提交；可选新增 `MODEL_MANIFEST.json`。
-2. 曾在私有 Terminal 2 回显的 Hugging Face token 应轮换，并在用户确认后清理/关闭该终端。
-3. 可选做一次从空目录回下载后的全部 LFS SHA 校验；现有服务端与 API 回读已经通过。
-4. `projects/v2sam_fusion_flops/models/v2sam.py` 仍保留历史 DINO 顶层 alias，但正式训练、PCCS 与本次评测均未导入该旁支；若未来使用 FLOPs 变体，应先同步主 Fusion 的两行所有权修复。
+## 8. 下一阶段实验计划
 
-旧 P0–P4 计划、资源顺序、开机清单和在线 ETA 已被完成结果覆盖，保留在精简前归档，不再作为当前待办。
+### P0：恢复严格 NewMatcher 合同
+
+目标不是立刻跑 24 epoch，而是先证明“官方 checkpoint + 精确 NewMatcher runtime”可以复现高分 NewMatcher-compatible reference 的预测。
+
+#### P0.1 冻结来源
+
+- 固定 `V2-SAM-O@7b88c29999e7ab180d0303f3d05914afe700a992`；
+- 保存完整 source manifest、每个 Python 文件 SHA 和工作树状态；
+- 从官方 checkpoint 的 `meta.cfg` 生成 runtime config；
+- 禁止使用分支当前的 DualDecoder/SmallTrain 活动配置；
+- 固定 MMEngine、PyTorch、CUDA、NCCL 和 DINO/SAM2 SHA。
+
+#### P0.2 推理等价 gate
+
+在相同的 8、32、256 个 records 上同时运行：
+
+1. 已复现 `0.4469` 的 NewMatcher-compatible reference；
+2. 精确重构的 NewMatcher。
+
+对每个 sample 保存：
+
+- 输入 sample ID、query/target 路径；
+- prompt mask 摘要；
+- DINO sparse point 坐标、置信度与 SHA；
+- matcher 输出摘要；
+- decoder logits/pred mask SHA；
+- 每对象 IoU/Dice。
+
+从第一个不一致的节点定位根因。没有通过小样本 forward parity 前，不启动 24 epoch。
+
+**Go 条件：** 32-record prediction 在预设容差内等价，且 checkpoint strict load 无 missing/unexpected。
+**Stop 条件：** 同一输入在 sparse point 之前已经分叉；先定位 config/source，不再扩大数据集。
+
+### P1：严格 NewMatcher 两 epoch 诊断训练
+
+通过 P0 后运行 4-GPU gate：
+
+- seed `530358027`；
+- batch 16 / GPU；
+- accumulation 4；
+- AdamW LR `4e-5`；
+- 24-epoch scheduler horizon，即使 gate 只先跑 2 epoch；
+- 不修复原始采样、contrastive 或 pooling 行为。
+
+必须额外导出：
+
+| 类别 | 字段 |
+| --- | --- |
+| 优化 | optimizer step、micro step、LR、grad norm、loss scale |
+| loss | `loss_mask`、`loss_dice`、`small_loss_*`、contrastive raw/scaled/weight |
+| 状态 | `_constr_step`、4000-step 切换时刻、rank/world size |
+| 数据 | sample IDs、对象数、重复对象率、每 rank batch digest |
+| prompt | soft-mask min/max/mean、非零率、sparse point 数/置信度/hash |
+
+总 loss 单独一条曲线不够，必须拆出 raw contrastive 与乘权后的 contrastive。
+
+### P2：Visual 低 LR 短程续训
+
+这是刷榜分支，不是严格复现分支。
+
+基线方案：
+
+- 初始化：Visual epoch-12 最佳权重；
+- optimizer：新 AdamW；
+- LR：`2e-6`；
+- 新 warmup + cosine，2 至 4 epoch；
+- 其余数据、seed、batch 和增强保持不变；
+- 用独立 held-out validation 选点，test 只做最终一次确认。
+
+建议 stop/go：
+
+- 1 epoch 后 held-out IoU 提升至少 `0.003`：继续；
+- 下降超过 `0.005` 或 loss/grad 异常：停止；
+- 连续两次 validation 提升小于 `0.001`：停止；
+- 不以反复查看 test set 来调 LR。
+
+备选 LR 消融只做单变量：`1e-6`、`2e-6`、`5e-6`。先跑短 gate，再把最优一条延长。
+
+### P3：训练稳定性改进消融
+
+严格复现完成后，按以下顺序一次只改一个因素：
+
+| 编号 | 改动 | 主要问题 | 优先级 |
+| --- | --- | --- | --- |
+| S1 | 记录并缓存 DINO sparse points | 分离 anchor 与网络随机性 | 高 |
+| S2 | 对象采样 `replace=False` | 重复对象/false negatives | 高 |
+| S3 | 多正样本 contrastive labels | 同对象重复被当负样本 | 高 |
+| S4 | 跨 rank all-gather | 单卡负样本池不等价 | 高，但通信风险较大 |
+| S5 | 100→1 平滑 schedule | loss 硬切换 | 高 |
+| S6 | mask-weighted RegionPooling | soft mask `nonzero()` 近似全图 | 高 |
+| S7 | top-k / mutual sparse points | top-1 argmax 脆弱 | 中高 |
+| S8 | 更严格 deterministic 设置 | 定位重复性 | 诊断用途 |
+
+每个改动都保留：基础 checkpoint、训练步数、样本序列、指标口径和 seed，仅改变目标因素。
+
+### P4：Muon 可行性实验
+
+Muon 不作为当前首选，原因：
+
+- 当前 PyTorch `2.3.1` 没有可直接使用的原生 Muon；
+- Muon 通常只适用于二维 hidden weight；
+- bias、norm、embedding、卷积权重仍需要 AdamW 或明确 reshape/排除策略；
+- 当前最大不确定性来自模型谱系和训练目标，而不是 AdamW 收敛速度。
+
+如果 P0/P1 完成后仍要试 Muon，应采用 hybrid optimizer：二维线性层用 Muon，其余参数保持 AdamW，并先在固定 1,000 optimizer steps 的小实验比较：
+
+- wall-clock；
+- 显存；
+- grad norm；
+- 各分量 loss；
+- held-out IoU；
+- 是否产生 NaN/发散。
+
+Muon 实验不得与采样、pooling 或 loss schedule 修复同时进行。
+
+## 9. 资源与执行顺序
+
+考虑 H100 成本，推荐顺序：
+
+1. **CPU：** 完成 source/config diff、HF 远端闭包复核、loss 导出补丁和小样本 manifest；
+2. **1 GPU：** 8/32-record 中间张量 trace；
+3. **4 GPU：** NewMatcher 256-record parity 和 2-epoch gate；
+4. **另 4 GPU（有预算时）：** Visual 低 LR 短程续训；
+5. 只有 P0/P1 通过后才考虑完整 24 epoch；
+6. Muon 和算法修复在严格基线之后排队。
+
+## 10. 下一次开机前检查表
+
+- [x] private HF repack 上传已结束，状态为 `complete` 且上传脚本输出 `HF_PRIVATE_UPLOAD=PASS`；
+- [x] 远端 metadata/manifest 与载荷文件列表已核对，`missing=[]`、`unexpected=[]`；完整 tar 回下载逐 SHA 仍为可选的高成本复核；
+- [ ] Ego2Exo/Exo2Ego union closure 再次得到 `249642 / missing=0 / bad_jpeg=0`；
+- [ ] 固定 `7b88c299...` source tree，工作树无漂移；
+- [ ] 从 checkpoint `meta.cfg` 生成配置，不引用活动 branch config；
+- [ ] 记录 4 GPU、batch 16、accumulation 4 的真实 effective batch；
+- [x] 官方 checkpoint 在 NewMatcher-compatible reference 路径复现 `0.4469 / 0.5097`；不得再标为原生 public V2SAM；
+- [ ] NewMatcher 32-record trace 完成并定位首个分叉节点；
+- [ ] loss 日志包含 raw/scaled contrastive 和 `_constr_step`；
+- [ ] 训练支持在 optimizer accumulation 边界保存可恢复 checkpoint；
+- [ ] Visual 续训使用独立 held-out validation，不反复调试 test。
 
 ## 11. 当前实验矩阵
 
@@ -723,41 +877,50 @@ NewMatcher 相对早期私有分支已经修复/验证的关键合同包括：SA
 | NewMatcher overlay, safetensors | same Fusion tensors | 40,517 | 0.172481 | 0.213013 | — | — | `MEASURED`, runtime mismatch |
 | NewMatcher overlay, safetensors, fixed seed | same Fusion tensors | 40,517 | 0.172692 | 0.213208 | — | — | `MEASURED`, runtime mismatch |
 
-### 11.2 训练与消融结果（历史口径，压缩索引）
+### 11.2 从头训练
 
-本节只回答“跑过什么、结果是多少、为何晋升/淘汰”；最终四指标比较统一看 §16。
+| 实验 | 模型类 | epoch | IoU | Dice | 判断 |
+| --- | --- | ---: | ---: | ---: | --- |
+| Fusion baseline | public `V2SAM` | 2 | 0.1468 | 0.1845 | 有效基线，但不是官方 NewMatcher 复现 |
+| Fusion baseline（同一历史轨迹） | public `V2SAM` | 4 | 0.2937 | 0.3513 | 训练内 validation；证明 epoch 2 不是上界，但后续 LR/恢复合同异常，不能外推为干净 24e 结果 |
+| Visual baseline | public Visual | 12 | 0.3468 | 0.4057 | 有效基线，仍低于官方约 0.020 IoU |
+| Visual low-LR continuation | public Visual | 12 | 0.3469 | 0.4059 | 已完成，无提升 |
+| Visual resumable from-scratch, best | public Visual | `iter_27600` | **0.3683** | **0.4305** | 从头训练轨迹最佳；较官方公开 checkpoint 分别约 `+0.001265 IoU / +0.002473 Dice` |
+| Visual resumable from-scratch, final | public Visual | 24 | 0.3650 | 0.4260 | 后段回落，不是最佳 checkpoint |
+| Visual hybrid Muon screen | public Visual + allowlisted Muon | `400 iter` | 0.3623 | 0.4226 | 从 `iter_27600` 启动；仅 17 个 matcher/prompt 二维隐藏矩阵用 Muon，其余 166 个训练参数仍用 AdamW；`iter_400` 严格续训审计通过，但完整评测低于当前最佳，不晋升 |
+| Visual frozen-decoder screen | public Visual + frozen SAM2 decoder | `400 iter` | 0.3644 | 0.4260 | 修正双重加载后完整评测；低于 EMA800，不晋升 |
+| Visual EMA screen | public Visual + AdamW + EMA | `800 iter` | 0.3690 | **0.4311** | 当前 Dice 最高、IoU 次优的 Pareto checkpoint；完整 40,517-pair 评测，精确值为 `0.368991317952 / 0.431145035264`，较官方约 `+0.001965 / +0.003073`，但 IoU 未超过 Fresh24 epoch 18。最佳点已以双硬链接固化为 `runs/train-visual-best27600-ema800-seed530358027-20260822-v1/best_checkpoints/iter_800_val_iou_0.3690_dice_0.4311_strict_resume.pth`，与原 `iter_800.pth` 同 inode（link count=`2`）。2026-08-24 复核为 `epoch=0, iter=800, contrast=32399`，optimizer、scheduler、message hub、顶层 `ema_state_dict` 均存在且位于 `accum=8` 边界，`STRICT_RESUME=PASS`；文件 SHA256=`abd6447dd179b67b0f105ffa8875d42dc9d7a7d74d9cfb3eb6defacc90778556`。 |
+| Visual Hybrid Muon Fresh24 | public Visual + hybrid Muon/AdamW | 2 | 0.0956 | 0.1235 | 真正从头、完整同口径验证；显著落后 AdamW+EMA，epoch-2 checkpoint 严格续跑审计通过后停止，不继续占用 4 卡 |
+| Visual AdamW+EMA Fresh24 | public Visual + AdamW + EMA | 2 / 4 / 6 / 8 / 10 / 12 / 14 / 16 / 18 / 20 / 22 / 24（已完成） | 0.2251 / 0.3107 / 0.3301 / 0.3507 / 0.3585 / 0.3631 / 0.3659 / 0.3667 / **0.3702** / 0.3672 / 0.3698 / 0.3688 | 0.2800 / 0.3707 / 0.3905 / 0.4115 / 0.4192 / 0.4230 / 0.4265 / 0.4267 / **0.4300** / 0.4271 / 0.4295 / 0.4282 | 真正从头、完整同口径验证；epoch 18 为全轨迹最佳。最佳点已以双硬链接固化为 `runs/train-visual-fromscratch24-adamw-ema-seed530358027-20260822-v1/best_checkpoints/epoch_18_val_iou_0.3702_dice_0.4300_strict_resume.pth`，与原 `epoch_18.pth` 同 inode（link count=`2`）。2026-08-24 复核为 `epoch=18, iter=62064, contrast=66063`，optimizer、两段 scheduler、message hub、EMA 均存在且位于 `accum=8` 边界，`STRICT_RESUME=PASS`；文件 SHA256=`5db7e0d6cfcdea1a4d413d53926160df22df988237c5f22dc6a8978a311b11ad`。最终 `epoch_24.pth`（`epoch=24, iter=82752, contrast=86751`）同样通过严格续跑审计，但指标未刷新，因此不晋升。 |
+| Visual autoresearch AdamW+EMA control | public Visual + 原始对比损失 | `800 iter` | 0.0382 | 0.0583 | 从头 800-iter 同预算健康筛选；checkpoint 已生成，作为 Contrast-MP 的严格对照，不作为完整 24-epoch 排名点 |
+| Visual autoresearch Contrast-MP v2 | public Visual + 按 `(video_id, object_id)` 合并同对象多正样本 | `800 iter` | 0.0382 | 0.0583 | 旧标签实验因实际仍调用 `get_contr_loss(..., idx=None)` 作废；v2 补齐 dataset→collate→实际 `projects.v2sam_visual.models.V2SAM`→loss 的 ID 传递，并通过 9 项功能/来源回归、4 项 contrast schedule 回归、真实 batch 数据门和四卡一迭代 checkpoint 门。真正 800-iter 任务完成完整 10,130-batch EMA 验证，结果与同预算原始 AdamW+EMA control `0.0382/0.0583` 完全持平，因此不续到 epoch 2。`iter_800.pth` 为 `meta.iter=800, contrast=4799`，optimizer、两段 scheduler、message hub、EMA 齐全，SHA256=`90d078a674e4993a94927dfc64871cb8b7bccb1675d849349ed402e77a810c85` |
+| Visual autoresearch Raw-logit | public Visual + 辅助 small-mask 分支 raw-logit 修正 | `800 iter` | 0.0381 | 0.0583 | 修正 `vp_matcher` 概率再次进入 `use_sigmoid=True` loss 的双重 sigmoid 合同；40,517-pair 全对象评测已完成，结果与 control 的 `0.0382/0.0583` 实质持平，说明该修正单独使用不能带来可测增益，本轮不晋升 |
+| Visual autoresearch Aux-off | public Visual + 关闭辅助 small-mask/small-dice 目标 | `800 iter` | 0.0381 | 0.0583 | 保持 AdamW、EMA、seed、初始化、batch、调度和 800-iter 预算不变；四卡 DDP 与严格续训 checkpoint 门通过，完整验证与 control/Raw-logit 持平，说明该辅助分支在此阶段既不是主要增益来源，也不是可单独消除的主要伤害源，不晋升；不再引用旧误标的 Contrast-MP 结果作比较 |
+| Visual autoresearch Dense-mask | public Visual + 主 SAM2 BCE/Dice 全分辨率计算 | `800 iter` / epoch 2 / epoch 6（`iter 20688`，已完成） | 0.0512 / 0.2450 / **0.3310** | 0.0769 / 0.3049 / **0.3912** | 仅把主 SAM2 BCE/Dice 从随机点采样改为全分辨率计算；从 `iter_800.pth` 精确恢复到 epoch 2，再从完整 `iter_6896.pth` 精确恢复到 epoch 6，AdamW、EMA、seed、batch/accumulation 与 scheduler 均不变。epoch 2 较同进度 Fresh24 e2 提升 `+0.0199/+0.0249`，但 epoch 6 全量 10,130-batch 验证仅为 `0.3310/0.3912`，较 Fresh24 e6 `0.3301/0.3905` 只高 `+0.0009/+0.0007`，且远低于主榜最佳 Fresh24 e18 `0.3702/0.4300`，说明早期增益未在长程保持，路线不再延长。`iter_20688.pth` 稳定大小 `1,891,240,666` bytes，SHA256=`23fc9645f3e6ed6882170cde3f916e4e7757526c1d2ad0bab5267a16e9eb7c6a`；optimizer、scheduler、message hub、独立 EMA、`contrast_schedule.step=24687` 与累计梯度边界均通过严格续跑审计 |
+| Visual autoresearch Dense-loss Anneal | Dense-mask epoch 6 完整状态 → 逐步降低 Dense 主损失权重 | `iter 20688→21488`（800 iter，已完成） | **0.3314** | **0.3917** | 从已审计 Dense-mask `iter_20688.pth` 以游标对齐 loop 精确恢复，不回放 epoch；Dense 权重按 forward `24688→38480` 从 `1→0` 线性退火，本段末约为 `0.9426`，其余 optimizer、EMA、seed、batch/accumulation 与 scheduler 不变。`iter_21488.pth` 为 `meta.iter=21488`、`contrast_schedule.step=25487`，optimizer、两段 scheduler、message hub 与 EMA 齐全，SHA256=`bfcafd0f5deb17617c1fc001eca4aa69db59f28d97aea06ab27e9211170673be`。显式剥离 MMEngine EMA 的 `steps`/`module.` 后导出 965-key 推理 checkpoint（SHA256=`7e14c3924d82c9eee0924bb2e71c19ced95d26e466b4b6f20418c5a850fd0347`），任务 `job-324a6545-83f4-44ba-b15d-1f502928df41` 完成 EMA 的 10,130-batch 全量评测，结果为 `0.3311/0.3913`；配对任务 `job-43ad9d3f-96ec-48a2-aff3-b9b352772188` 对原始 `state_dict` 完成同口径全量评测，结果为 `0.3314/0.3917`。raw 仅比 EMA 高 `+0.0003/+0.0004`、比 Dense e6 高 `+0.0004/+0.0005`，仍显著低于 Fresh24 e18 `0.3702/0.4300`，排除“EMA 短程滞后掩盖有效增益”，不晋升、不继续退火 |
+| Visual autoresearch Dense→Sample curriculum | Dense-mask epoch 2 完整状态 → 瞬时恢复原始 sampled BCE/Dice | epoch 2→6（已完成） | **0.3233** | **0.3825** | 从已审计 Dense-mask `iter_6896.pth` 严格恢复，只把 `loss_sample_points` 切回 `True`；AdamW、EMA、seed、batch/accumulation 和 scheduler 不变。任务 `job-41189cb1-1952-43aa-8acd-b8d974393e33` 完成 10,130-batch 全量验证，较同进度 Fresh24 e6 `0.3301/0.3905` 低 `-0.0068/-0.0080`，也低于持续 Dense 的 `0.3310/0.3912`，路线淘汰、不再延长。最终 `iter_20688.pth` 稳定大小 `1,891,238,938` bytes，SHA256=`9e2813c86cddff1d508c56ec384cd1c1b622509a104702ab987121f755cc329f`；`meta.iter=20688`、`contrast_schedule.step=24687`，optimizer、两段 scheduler、message hub、顶层 EMA 与累计梯度边界均通过严格续跑门，故失败归因于方法本身而非恢复或保存故障。切换初期的目标冲击虽然后续消退，但没有保留 Dense e2 的早期收益 |
+| Visual autoresearch Lovász | public Visual + per-mask binary Lovász hinge | `800 iter` | 0.0404 | 0.0652 | 保持 AdamW+EMA、seed、有效 batch 与调度不变，Lovász weight=`1.0`；9/9 回归、真实四卡两迭代、`iter_800.pth` 严格状态、800 条有限 loss 历史和 40,517-pair 全量验证均通过。仅略高于 control、低于 Dense-mask，远低于完整 Fresh24，不晋升 |
+| Visual autoresearch Muon-v2 | public Visual + 扩展 Hybrid Muon + EMA | `800 iter` | 0.0364 | 0.0579 | 相对旧 Muon 补齐 EMA，并把 Muon 从 17 个 matcher/prompt 二维矩阵扩展到经 allowlist 审计的 68 个隐藏矩阵与中间卷积；其余 115 个 bias/norm/token/input-output head 参数仍由 AdamW 更新。真实四卡训练与完整 10,130-batch 验证完成；`iter_800.pth` 中两组 68/115 参数均有 100 次有限 optimizer 状态，scheduler、EMA、message hub 与 contrast counter 全部通过。结果低于同预算 AdamW+EMA control `0.0382/0.0583`，不晋升，也不延长到 epoch 2 |
+| Visual AdamW+EMA 分层 LR Fresh24 | public Visual + AdamW + EMA；SAM2 可训练部分 LR 降为 `1e-5` | 2 | 0.1802 | 0.2211 | 真正从头；比同期统一 LR 主线低 `0.0449 / 0.0589`，epoch-2 checkpoint 严格恢复状态齐全后停止，不继续占用 GPU |
+| Visual AdamW+EMA Fresh24 seed 2 | public Visual + AdamW + EMA；仅 seed=`530358028` | 2 / 4 / 6 / 8 / 10 / 12 / 14 / 16 / 18 / 20 / 21 / 22 / 23 / 24（已完成） | 0.2338 / 0.3251 / 0.3412 / 0.3576 / **0.3671** / 0.3625 / 0.3597 / 0.3588 / 0.3581 / 0.3566 / 0.3590 / 0.3558 / 0.3584 / 0.3585 | 0.2893 / 0.3876 / 0.4031 / 0.4197 / **0.4297** / 0.4248 / 0.4200 / 0.4192 / 0.4185 / 0.4162 / 0.4188 / 0.4156 / 0.4183 / 0.4184 | 与主线保持相同数据、模型、优化器、调度、batch/accumulation 和 EMA，只改变 seed；epoch 20→24 已从 `epoch_20.pth` 精确恢复并完成，尾部四点均未刷新，最佳仍为 epoch 10。epoch 22 的 optimizer、两段 scheduler、message hub、独立 `ema_state_dict`、累计梯度边界与游标门均已通过；分布式 wrapper 的最终非零退出不改变四个完整评测结果 |
+| Visual cross-seed soup | 主 seed e18/e22 与 seed 2 e10 的权重平均 | `75/25`、`50/50`、`25/75`、三点 `50/25/25` | 0.1219 / 0.0725 / **0.1518** / 0.1222 | 0.1498 / 0.0917 / **0.1851** / 0.1500 | 四路均完成 40,517-pair 全量评测，全部远低于主 seed e18 `0.3702/0.4300`，不晋升。独立 seed 的可训练头不在可直接线性插值的同一参数盆地；跨 seed 参数平均会破坏已学习表示，路线关闭 |
+| NewMatcher v10 diagnostic（全对象，repeat 1） | `V2SAM_NEWMATCHER` | 2 | 0.362474 | 0.409393 | 40,517 pairs / 100,223 objects；完整计数通过 |
+| NewMatcher v10 diagnostic（全对象，repeat 2） | `V2SAM_NEWMATCHER` | 2 | 0.362487 | 0.409403 | 独立复测；聚合差约 1e-5 |
+| NewMatcher v10 diagnostic（legacy） | `V2SAM_NEWMATCHER` | 2 | 0.3834 | 0.4327 | 只取每 pair 最后对象，非论文可比，非严格续训 |
+| Strict NewMatcher v11 | `V2SAM_NEWMATCHER` | `iter_4000` | 0.349390 | 0.395382 | 全对象口径；虽从头启动，但误用 24-epoch Linear warmup，轨迹作废、不续跑 |
+| Strict NewMatcher Fresh24 | `V2SAM_NEWMATCHER` | 2 / 6 / 8 / 10 / 12 / 14 / 16 / 18 / 20 / 22 / 24（训练与独立评测均已完成） | 0.359630 / 0.382618 / 0.384223 / 0.381855 / 0.397240 / 0.401126 / **`0.405197`** / 0.394619 / 0.397792 / 0.398107 / 0.397958 | 0.406739 / 0.438121 / 0.440600 / 0.438381 / 0.453889 / 0.459220 / **`0.462907`** / 0.451620 / 0.455131 / 0.455471 / 0.455139 | 真正从头；独立 4×H100 分布式任务。epoch 16 为最终最佳，独立复算精确均值 `0.405197334183/0.462906654638`。epoch 18、20、22、24 分别回落到 `0.394619303449/0.451619830646`、`0.397792125659/0.455130562513`、`0.398107312407/0.455471255935`、`0.397957776288/0.455138922929`，均不晋升。epoch 24 的作者 frame-level / per-pair 为 `0.446263857157/0.504549730257`，也低于 e16 的 `0.450898164298/0.509557001338`。e24 raw 通过 40,517 pairs / 100,223 objects、完整字段和有限值门，SHA256=`e0124b076cf4f7f14192a100dcd392366eed5495715f4141938002dacee4340f` |
 
-#### 11.2.1 主训练轨迹
+2026-08-24 14:39（北京时间），Fresh24 已稳定生成 `epoch_18.pth`。独立 CPU watcher 审计得到 `meta.epoch=18, meta.iter=31032, contrast_schedule.step=31032`，optimizer、两段 scheduler、message hub 均存在，且处于 `accumulative_counts=4` 边界；SHA256=`4457de3c28682c5d7aac52f78ce1241e2c98cbc4a3d5b31ee9fd901cfba77d12`，`STRICT_RESUME=PASS`。4×H100 全对象评测任务 `v2sam-newmatcher-v12-e18-fullobject-ddp4-v1` 已提交并排队，评测与正式训练解耦，epoch 18 指标在完整 40,517-pair 输出通过独立复算前不提前填写。
 
-| 实验 | epoch / iter | IoU / Dice 轨迹或最终点 | 结论 / receipt |
-| --- | --- | --- | --- |
-| historical public Fusion | e2 / e4 | `0.1468/0.1845`；`0.2937/0.3513` | e2 独立 test 与训练验证一致；DINO 被二次初始化，后续恢复 LR/contrast 不可靠 |
-| Visual 12e baseline / low-LR | e12 | `0.3468/0.4057`；low-LR `0.3469/0.4059` | 低 LR 无提升 |
-| Visual resumable 24e | best `iter_27600` / final | `0.3683/0.4305`；`0.3650/0.4260` | 最后点回落；发布权重使用 best |
-| Visual EMA800 | `iter_800` | `0.368991317952/0.431145035264` | Dice 向 Pareto；SHA256=`abd6447dd179b67b0f105ffa8875d42dc9d7a7d74d9cfb3eb6defacc90778556` |
-| Visual AdamW+EMA Fresh24 | e2/4/6/8/10/12/14/16/18/20/22/24 | IoU `0.2251/0.3107/0.3301/0.3507/0.3585/0.3631/0.3659/0.3667/0.3702/0.3672/0.3698/0.3688`；Dice `0.2800/0.3707/0.3905/0.4115/0.4192/0.4230/0.4265/0.4267/0.4300/0.4271/0.4295/0.4282` | e18 最佳；checkpoint SHA256=`5db7e0d6cfcdea1a4d413d53926160df22df988237c5f22dc6a8978a311b11ad` |
-| Visual seed2 | e2/4/6/8/10/12/14/16/18/20/21/22/23/24 | IoU `0.2338/0.3251/0.3412/0.3576/0.3671/0.3625/0.3597/0.3588/0.3581/0.3566/0.3590/0.3558/0.3584/0.3585`；Dice `0.2893/0.3876/0.4031/0.4197/0.4297/0.4248/0.4200/0.4192/0.4185/0.4162/0.4188/0.4156/0.4183/0.4184` | 仅 seed 改为 `530358028`；e10 最佳 |
-| NewMatcher v10 diagnostic | e2，repeat 1/2 | object `0.362473582955/0.409392593508`；`0.362487187750/0.409403154414` | `40,517/100,223`；聚合差约 `1e-5`；legacy last-object=`0.3834/0.4327` |
-| NewMatcher v11 | `iter_4000` | `0.349390/0.395382` | Linear warmup 误延长到 24e，轨迹作废 |
-| Strict NewMatcher Fresh24 | e2/6/8/10/12/14/16/18/20/22/24 | object IoU `0.359630/0.382618/0.384223/0.381855/0.397240/0.401126/0.405197/0.394619/0.397792/0.398107/0.397958`；Dice `0.406739/0.438121/0.440600/0.438381/0.453889/0.459220/0.462907/0.451620/0.455131/0.455471/0.455139` | e16 最佳；frame=`0.450898164298/0.509557001338`；e24 checkpoint/raw SHA256=`5ffa5b...`/`e0124b...` |
+该 e18 评测随后完整结束并由独立 CPU watcher 复算通过：40,517 pairs / 100,223 objects；全对象等权 `0.394619303449/0.451619830646`，作者 frame-level / per-pair `0.443412291779/0.501695669026`，legacy-last-object `0.434724880931/0.493986925142`；raw SHA256=`a1ba0ea7e5d5ef06cdf374d1d9f5db0f0541d403aa73352de9e3324266b80b26`。相对 e16，frame-level 同样回落 `-0.007485872519/-0.007861332312`；e18 frame-level IoU 也比论文 C / Fusion `0.445` 低 `0.001587708221`。因此只能保留 e16 为当前最佳，不能用 e18 替换或平均掩盖回落。
 
-#### 11.2.2 负结果与关闭路线
+2026-08-25 05:43（北京时间），Fresh24 训练完整到达 epoch 24 并稳定保存 `epoch_24.pth`。独立 CPU watcher 审计得到 `meta.epoch=24, meta.iter=41376, contrast_schedule.step=41376`；optimizer、两段 scheduler、message hub 均存在且处于 `accumulative_counts=4` 边界，文件大小 `2,194,727,917` bytes，SHA256=`5ffa5b296cd7f6938bc8d039d13b3ce9bbffe727010459ae4e41836dbb9a7de6`，`STRICT_RESUME=PASS`。训练任务随后进入 10,130-batch 的内置 stock `SegMetric` 验证；该 evaluator 不写 `raw_per_pair.json`，不能冒充全对象审计。e24 独立 `SegMetricFull` 任务 `job-2b3fd445-e8a4-4c73-a488-20772634fabb` 已提交排队；在它的 raw 完整写盘和独立三口径复算完成前，不把 e24 晋升为最佳。
 
-| 路线 | 预算 / 结果 IoU / Dice | 结论 |
-| --- | --- | --- |
-| Hybrid Muon400 / frozen decoder400 | `0.3623/0.4226`；`0.3644/0.4260` | 均低于 Visual best |
-| Hybrid Muon Fresh24 / 分层 LR Fresh24 | e2 `0.0956/0.1235`；`0.1802/0.2211` | 显著低于同期 AdamW+EMA |
-| 800-iter control / Contrast-MP v2 / Raw-logit / Aux-off | `0.0382/0.0583`；`0.0382/0.0583`；`0.0381/0.0583`；`0.0381/0.0583` | 无可测增益；旧 Contrast-MP 因实际 `idx=None` 作废，v2 receipt SHA256=`90d078...` |
-| Dense-mask | 800 iter/e2/e6：`0.0512/0.0769`、`0.2450/0.3049`、`0.3310/0.3912` | 早期增益到 e6 只剩 `+0.0009/+0.0007`；e6 SHA256=`23fc964...` |
-| Dense→Sample / Dense-loss Anneal | e6 `0.3233/0.3825`；raw `0.3314/0.3917`、EMA `0.3311/0.3913` | abrupt switch 退化；退火未排除主榜差距，raw/EMA 排除 EMA 滞后 |
-| Lovász / Muon-v2 | 800 iter `0.0404/0.0652`；`0.0364/0.0579` | 不晋升 |
-| cross-seed soup | 75/25=`0.1219/0.1498`；50/50=`0.0725/0.0917`；25/75=`0.1518/0.1851`；三点=`0.1222/0.1500` | 四路全量均显著退化，路线关闭 |
-
-EMA checkpoint 语义已按 MMEngine `EMAHook` 源码验证：保存时 EMA 进入主 `state_dict`、即时权重进入 `ema_state_dict`；strict resume 会交换回正确状态，独立 test 直接加载 EMA。其他 checkpoint/job/逐阶段状态详见精简前归档，关键运行目录见 §12。
+Visual EMA checkpoint 的含义已按实际 MMEngine `EMAHook` 源码复核：保存时 EMA 权重进入主 `state_dict`，即时训练权重进入 `ema_state_dict`；严格 resume 时 hook 会交换回正确的两套状态，普通独立 test 则直接加载主 `state_dict` 中的 EMA 权重。因此训练内 EMA validation、独立 test 与可续跑 checkpoint 三者的语义一致。
 
 ### 11.3 论文数值参考
 
-这些是论文/作者历史报告，不是本文重新计算值：
+这些是论文/作者报告参考值，不是本文重新计算值：
 
 | 组合 | Ego2Exo mIoU | Exo2Ego mIoU |
 | --- | ---: | ---: |
@@ -767,7 +930,9 @@ EMA checkpoint 语义已按 MMEngine `EMAHook` 源码验证：保存时 EMA 进�
 | A+B / PCCS | 0.427 | 0.482 |
 | A+B+C / PCCS | 0.463 | 0.496 |
 
-作者的新标准八方法已经全部完成，见 §16。旧 NewMatcher Fresh24 e16 的同一 `raw_per_pair.json` 按 object-level 聚合为 `0.405197334183/0.462906654638`，按 frame-level 聚合为 `0.450898164298/0.509557001338`；差异来自对象数不同的 frame 权重，不是复现矛盾。与论文 C/Fusion `0.445` 作有限的 frame IoU 对照时高 `0.005898`（约 0.59 点），但论文未给出可直接对齐的 Dice，且不能替代 §16 的四指标标准。
+当前只严格完成了 B 的公开 Visual 单专家推理，以及 C 的 NewMatcher-compatible 单专家推理。A、A+B 和 A+B+C 仍缺经过审计的 GT-free Anchor/PCCS 运行合同，不能用 oracle selector 冒充。
+
+口径必须分开记录：上方 11.2 的 Strict NewMatcher Fresh24 主表采用**逐对象逐帧实例等权**聚合，因此 epoch 16 为 `0.405197334183/0.462906654638`；对同一个 `raw_per_pair.json` 先在每个 frame/pair 内平均对象、再让 40,517 个 frame/pair 等权，得到作者采用的 **frame-level** 聚合 `0.450898164298/0.509557001338`。2026-08-25 结合作者结果展示最终对齐：`0.405197` 是 per-object，较高的 `0.450898` 是 frame-level；两者只是对象数不同的 frame 权重不同，不是复现矛盾。与论文 C / Fusion `0.445` 的 frame-level IoU 同口径比较，epoch 16 高 `0.005898`（约 **0.59 IoU 点**）。per-object 数值继续作为 100,223 个对象完整覆盖的审计指标并列保留，不与 frame-level 混写。论文表没有给出可直接对齐的 Dice。
 
 ## 12. 关键路径索引
 
@@ -804,18 +969,95 @@ HDD=/inspire/hdd/project/luojianlan/zhubingwen-253108120125
 - `docs/superpowers/plans/2026-08-19-v2sam-ego2exo-remaining-reproduction.md`：上一阶段单专家推理计划；
 - `V2SAM_O_WRZ_TRIPLE_DECODER_QUICKSTART.md`：内部多专家/TripleDecoder 代码入口说明。
 
-## 13. 已完成交付与历史材料边界
+## 13. 最终判断
 
-- 数据集 `Travor278/V2SAM-EgoExo-Train-Mini-Complete` 已公开；11 个载荷文件闭环，README/SHA256SUMS revision=`de7daed32c0a6db3317ba2ff54ceeaf62c0b6a98`。
-- Ego2Exo 模型包最初在 `Travor278/V2-SAM@07ee27c5...` 替换 Visual/Fusion；Exo2Ego Visual e19/Fusion e20 后续在 `main@8b8310e9ee13023cb8711c2417e18cc7361dc3aa` 完成替换。当前文件级 SHA 见 §16.4.3。
-- NewMatcher/Exo2Ego 修复代码最终以 `jaychempan/V2-SAM-O/travor@27e28e71a1bc8276deb306efc86c958c12168bf3` 发布；旧 `bd7ba863` 是 Ego2Exo 阶段历史提交，不再作为当前分支头。
-- 训练、评测和在线资源均已结束；旧 watcher、ETA、排队状态、候选实验设计和“待启动”描述已从正文删除。完整原文仍可在文首归档按 SHA 回读。
+目前不是“指标复现不出来”，而是已经把问题拆成了两部分：
 
-历史 stock/legacy 结果用于解释根因，不得覆盖 §16 的 `v2sam-pccs@0e3bc33` 新标准矩阵。
+1. **推理复现成功但实现标签已纠正：** 官方 Fusion 权重在 NewMatcher-compatible 路径、Visual 权重在公开 Visual 路径得到合理且稳定的结果；原先把 Fusion `0.446970 / 0.509795` 标成 public `V2SAM` 是错误的，因为 checkpoint meta 指向 `V2SAM_NEWMATCHER`，且该 overlay 的活跃 matcher 实现实际等价于 `vp_matcher_new.py`。作者侧使用原生 public Fusion 的结果也与我们的低 public 基线同量级，进一步排除了“原生 public Fusion 本来就能得到 0.446970”的解释。
+2. **Visual 训练已达到并略超官方公开 checkpoint 的量级：** 旧 24-epoch 轨迹最佳 `iter_27600` 为 `0.3683 / 0.4305`；真正从头 AdamW+EMA Fresh24 在 epoch 18 达到当前 IoU 主榜最佳 `0.3702 / 0.4300`，EMA800 则保留当前最高 Dice `0.4311`。两条轨迹最后 checkpoint 均有回落，说明后续刷榜要加强 checkpoint 选择而不是只延长训练。
+3. **NewMatcher 的预测/评测审计已在当前声明范围内通过，正式 Fresh24 已从头启动并完成 epoch 2 全对象门：** 两次 v10 诊断 checkpoint 全对象结果为 `0.362474 / 0.409393` 和 `0.362487 / 0.409403`；旧 `0.3834 / 0.4327` 已证实是 last-object evaluator 口径。GT-free、六层数据泄漏、strict load、batch16、完整 evaluator 和回归门均未发现作弊证据。v11 的低轨迹已经定位为 Linear warmup 被错误延长到 24 epoch，不能续跑或用于评价作者调度。Fresh24 使用 `load_from=None, resume=False` 和作者原始 1.2-epoch warmup；epoch 2 checkpoint 的完整评测为 per-object `0.359630 / 0.406739`、per-frame/per-pair `0.391043 / 0.440002`、legacy-last-object `0.380095 / 0.429172`，40,517 frame/pairs / 100,223 objects、有限值和聚合均独立复算通过，训练保持连续运行。作者另一次标为 frame-level 的 epoch-2 结果 `0.3936 / 0.4439` 与我们的 per-frame/per-pair 口径仅差 `+0.002557 / +0.003898`，而不是相对 per-object 口径表面上的 `+0.033970 / +0.037161`；因此两者已基本对齐，后续比较必须明确写出聚合口径。作者结果还报告 Location/Shape，说明其 evaluator 并非当前公开 `SegMetric` 的逐字同一实现；在取得其 evaluator/raw 文件前，不把剩余约 `0.26/0.39` 个百分点归因于训练配置。
 
-## 15. 2026-08-26 至 2026-08-30 历史旧口径收尾
+交互式 Visual 主 seed 已完成全部 24 epoch，epoch 24 为 `0.3688/0.4282`，未超过 epoch 18 的 `0.3702/0.4300`；第二 seed 也已完成至 epoch 24，最佳仍为 epoch 10 的 `0.3671/0.4297`。四个跨 seed averaging checkpoint 全部显著退化，证明独立 seed 参数不可直接平均，该路线关闭。Hybrid Muon、分层学习率、Muon400、freeze-decoder400、同轨迹 soup、多档 LR continuation、EMA1200、Lovász、Muon-v2、Dense-mask 长程、Dense→Sample 与 Dense-loss Anneal 均已有完整负结果，不再重复；Dense-loss Anneal 从 Dense e6 精确续 800 iter 的显式 EMA/原始权重配对全量结果分别为 `0.3311/0.3913` 与 `0.3314/0.3917`，排除 EMA 滞后解释，不晋升。Visual 主榜最佳仍是 Fresh24 epoch 18 `0.3702/0.4300`，EMA800 `0.3690/0.4311` 只作为 Dice 向 Pareto 点。
 
-本节还原作者新标准发布前的历史状态，只保留有完整日志、checkpoint 或独立汇总文件的结果；它们不覆盖 §16 的最终矩阵。
+首轮 autoresearch 的原始 AdamW+EMA control、Raw-logit 与 Aux-off 已完成 800-iter 全量筛选，分别为 `0.0382/0.0583`、`0.0381/0.0583`、`0.0381/0.0583`。此前标为 Contrast-MP 的 `0.0381/0.0583` 经源码复核证实仍调用 `get_contr_loss(..., idx=None)`，dataset/collate/model 与 Visual v5 相同，因此只是误标的原始 loss 重复实验。真正 Contrast-MP v2 补齐 `(video_id, object_id)` 从 dataset、collate、实际 Visual model 到 loss 的完整传递；修正一次“补丁落在 `projects/v2sam`、配置实际加载 `projects/v2sam_visual`”的运行时来源错误后，9 项功能/来源回归、4 项 contrast schedule 回归、真实 batch 数据门和实际 Visual 四卡一迭代 smoke 全部通过。候选已在 SHA 与 checkpoint 门后发布为 `$BASE/v2sam-visual-contrast-mp-overlay-v2`。真正 800-iter 任务 `job-39e31b00-5171-4f9a-bb3d-da63d768c888` 完成训练、严格状态审计和 10,130-batch EMA 验证，结果为 `0.0382/0.0583`，与严格同预算 control 完全持平；因此该方法在当前预算没有可测增益，不续到 epoch 2。`iter_800.pth` 为 `meta.iter=800, contrast=4799`，optimizer、两段 scheduler、message hub、EMA 齐全，SHA256=`90d078a674e4993a94927dfc64871cb8b7bccb1675d849349ed402e77a810c85`。
+
+正式 NewMatcher Fresh24 的 24 epoch 训练与所有计划中的独立全对象评测均已完成；epoch 16 全对象 `0.405197/0.462907`、作者 frame-level `0.450898/0.509557` 为最终最佳。epoch 20、22、24 全对象分别为 `0.397792/0.455131`、`0.398107/0.455471`、`0.397958/0.455139`，frame-level 分别为 `0.446678/0.505285`、`0.446318/0.504745`、`0.446264/0.504550`，均不替换 e16。e24 checkpoint 严格状态门与 raw 的 40,517 pairs / 100,223 objects、完整字段、有限值及 SHA 门均通过。
+
+## 14. 2026-08-22 交付与运行状态
+
+### 14.1 审计代码交付
+
+- 已将审计后的 NewMatcher 最小改动集推送到私有仓库 `jaychempan/V2-SAM-O` 的 `travor` 分支；
+- GitHub `travor` 远端当前提交固定为 `bd7ba86314b8a2916e4af0d55eba1ed1b37c271e`，本地与远端 SHA 已交叉核验一致；该提交在原审计提交 `c7de25ff` 上补齐旧 checkpoint 缺失 `contrast_schedule.step` 时的严格兼容加载，已有该键的 checkpoint 不会被覆盖，其他无关 missing key 仍然报错；
+- 提交包含严格 checkpoint 加载、完整对象 evaluator、持久化 contrast schedule、稀疏 prompt 修复、batch-16 聚合修复、稀疏点分层性能修复、可移植 24-epoch 配置和审计回归测试；
+- 提交不包含训练数据、checkpoint、日志、token、服务器绝对路径或未完成的 safetensors 实验产物；
+- 本地最终门禁为 19 项通过、6 项因缺少本地训练依赖而跳过；远端 CPU 动态回归为 37/37 通过。GPU 门禁随后确认 first-32 与 NewMatcher-compatible 参考逐值完全一致（46 个 IoU/Dice 值最大差为 0），真实 4 卡 batch-16 完成一次前反向并保存 `iter_1.pth`：`meta.iter=1`、`contrast_schedule.step=1`，optimizer、scheduler、message hub 均存在且日志无异常。门禁自动进入的完整验证不属于门禁合同，审计 checkpoint 后已终止并归还 GPU。
+
+### 14.2 Mini 数据集与 Hugging Face dataset card
+
+- 正确且闭包完整的 Mini 数据集已经上传至 Hugging Face 仓库 `Travor278/V2SAM-EgoExo-Train-Mini-Complete`；
+- 上传状态为 `complete`；仓库当前按用户决定设为 public（`private=false`）；
+- 本地 11 个载荷文件均已在远端闭环核验，`missing=[]`、`unexpected=[]`；远端另含 Hugging Face 自动生成的 `.gitattributes`；
+- 数据包包含 4 个 tar 分片、Ego2Exo/Exo2Ego JSON、SHA256 清单和 provenance 闭包记录。
+
+### 14.3 Ego2Exo checkpoint 模型包
+
+- 已将 `wangzeze/V2-SAM@50fd5a9a7e67d3fdaadab1cd0726b82896f89e02` 服务端复制为私密模型仓库 `Travor278/V2-SAM`，保留原仓库 8 个顶层文件的布局；
+- 仅替换 Ego2Exo 的两个同名权重：`fusion_ego2exo_full.pth` 为 Strict NewMatcher Fresh24 epoch 16，`vp_ego2exo_full.pth` 为 Visual resumable from-scratch `iter_27600`；
+- README 并列标注 NewMatcher per-object `0.405197334183/0.462906654638` 与作者 frame-level `0.450898164298/0.509557001338`，以及 Visual `0.3683/0.4305`，避免聚合口径混写；
+- 最终 revision 为 `07ee27c5b227a6e7a0fdaa2100d2b617773a50a6`。Windows 端独立回读确认仓库保持 private、文件集合精确为 8 项，6 个 LFS 对象的大小与 SHA256 全部通过。
+- HF README 已写清原 Mini 提取在修复前缺 6,431 条引用、修复后缺失/坏 JPEG 均为 0、两个方向的记录与唯一图像规模、四分片布局、下载/校验/解压命令及授权提示；README 与 `SHA256SUMS` 在提交 `de7daed32c0a6db3317ba2ff54ceeaf62c0b6a98` 中原子更新并通过远端回读哈希校验。
+
+### 14.3 当前状态（精简快照）
+
+> 本节只记录会变化的在线状态；已完成实验的配置、结果和失败原因统一保留在第 4、7、11 节，避免把进程日志当实验结论。
+
+| 工作流 | 当前状态 | 固定合同 / 下一门 |
+| --- | --- | --- |
+| Visual Hybrid Muon Fresh24 | epoch 2 完整验证后已停止 | `0.0956 / 0.1235`，同期 AdamW+EMA 为 `0.2251 / 0.2800`；epoch-2 checkpoint 严格续跑状态完整，但该优化器路线不晋升 |
+| Visual AdamW+EMA Fresh24 | 主 seed 已完成 24 epoch | epoch 2/4/6/8/10/12/14/16/18/20/22/24 为 `0.2251/0.2800`、`0.3107/0.3707`、`0.3301/0.3905`、`0.3507/0.4115`、`0.3585/0.4192`、`0.3631/0.4230`、`0.3659/0.4265`、`0.3667/0.4267`、`0.3702/0.4300`、`0.3672/0.4271`、`0.3698/0.4295`、`0.3688/0.4282`；`epoch_24.pth` 严格审计通过，最佳仍为已固化的 `epoch_18.pth` |
+| Visual cross-seed soup | 四路 40,517-pair 全量评测均完成并淘汰 | 主 e18/seed2 e10 的 `75/25`、`50/50`、`25/75` 为 `0.1219/0.1498`、`0.0725/0.0917`、`0.1518/0.1851`；主 e18/e22/seed2 e10 的 `50/25/25` 为 `0.1222/0.1500`。均远低于 e18 `0.3702/0.4300`，不晋升、不再续跑 |
+| Visual autoresearch | Contrast-MP v2、Dense-mask、Dense→Sample、Lovász、Muon-v2 与 Dense-loss Anneal 均已闭环且未晋升 | 旧“Contrast-MP 800”实际仍为 `idx=None` 原始 loss，结果作废；最终 v2 修正版通过 9 项功能/来源回归、4 项 contrast schedule 回归、8 sample / 40 object slots / 15 unique IDs / 25 duplicate slots 的 ID-mask 对齐门和实际 Visual 四卡一迭代 checkpoint 门。真正 800 配置 `visual_autoresearch_contrast_mp_genuine_v2_800_seed530358027_20260825_v1.py`（SHA256=`8f951a190778e7fe630db9830e7e286a993f155ec087e3bf1344ca08f2ccceed`）保持 batch8/accum8/AdamW `4e-5`/seed/EMA 与 control 一致，最终 `0.0382/0.0583` 与 control 持平，故不续到 epoch 2；严格 checkpoint SHA256=`90d078a674e4993a94927dfc64871cb8b7bccb1675d849349ed402e77a810c85`。Dense-mask epoch 6 为 `0.3310/0.3912`，Dense→Sample epoch 6 为 `0.3233/0.3825`，Lovász=`0.0404/0.0652`、Muon-v2=`0.0364/0.0579`，均不晋升；Dense-loss Anneal 的 EMA/raw 配对全量结果为 `0.3311/0.3913` 与 `0.3314/0.3917`，证明渐退火未带来可测增益且并非 EMA 滞后。Visual IoU 主榜最佳仍为 Fresh24 epoch 18 `0.3702/0.4300`，下一候选必须进入未覆盖的 GT-free 推理集成或其他新轴，不能重复既有负路线 |
+| Visual AdamW+EMA 分层 LR Fresh24 | epoch 2 完整验证后已停止，GPU 0–3 已归还 | `0.1802 / 0.2211`，显著低于同期统一 LR 主线；稳定 epoch-2 checkpoint 含 optimizer/scheduler/message hub/EMA 与 183 个 optimizer groups，保留为负结果但路线不晋升 |
+| Visual AdamW+EMA Fresh24 seed 2 | 已完成至 epoch 24 | 除 seed=`530358028` 外与主线合同相同；最佳仍为 epoch 10 `0.3671/0.4297`。尾部 epoch 21/22/23/24 为 `0.3590/0.4188`、`0.3558/0.4156`、`0.3584/0.4183`、`0.3585/0.4184`，均未晋升；任务从 `epoch_20.pth` 精确恢复，恢复状态与游标门已通过 |
+| NewMatcher Fresh24 | 24 epoch 训练与 e24 独立全对象评测均已完成 | `load_from=None, resume=False`；AdamW `4e-5`；Linear `0→1.2 epoch`、Cosine `1.2→24`。epoch 16 全对象 `0.405197334183/0.462906654638`、作者 frame-level `0.450898164298/0.509557001338` 为最终最佳。e24 全对象 `0.397957776288/0.455138922929`、frame-level `0.446263857157/0.504549730257`、legacy `0.438106250775/0.497298368520`，没有刷新。e24 checkpoint 为 `epoch=24, iter=41376, contrast=41376`，optimizer、scheduler、message hub 与累计梯度边界完整，SHA256=`5ffa5b296cd7f6938bc8d039d13b3ce9bbffe727010459ae4e41836dbb9a7de6`；raw SHA256=`e0124b076cf4f7f14192a100dcd392366eed5495715f4141938002dacee4340f` |
+| NewMatcher 源码放行 | GitHub 远端已更新并核验为 `travor@bd7ba863` | CPU 回归 37/37、first-32 逐值 parity、真实 4 卡 batch-16 与完整 checkpoint 状态门均通过；正式 Fresh24 继续使用已冻结的 v12 源码/配置，不在运行中热替换 |
+| CPU/4090 sidecar | epoch 8/10/12/14/16/18/20/22/24 全对象评测及独立复算均已完成 | epoch 24 三口径为：全对象 `0.397957776288/0.455138922929`、作者 frame-level `0.446263857157/0.504549730257`、legacy `0.438106250775/0.497298368520`；40,517 pairs / 100,223 objects、有限值与 raw SHA256=`e0124b076cf4f7f14192a100dcd392366eed5495715f4141938002dacee4340f` 均通过。NewMatcher 尾部评测闭环完成，最佳保持 e16 |
+
+已冻结的运行/评测配置：
+
+- Visual AdamW+EMA 分层 LR：`$REPRO/frozen_configs/visual_fromscratch24_adamw_ema_discriminative_lr_seed530358027_20260822_v1.py`，SHA256 `9c9ddedbddb276842789e68338fd31ba1c414bf7ab9c8cfc99af872caa2daa57`；`grounding_encoder=1e-5`，matcher/prompt 与其他任务层维持 `4e-5`；epoch-2 负结果后已停止；
+- Visual AdamW+EMA seed 2：`$REPRO/frozen_configs/visual_fromscratch24_adamw_ema_seed530358028_20260822_v1.py`，SHA256 `e3159659b4a6e547078968f53ef378fb49bc33425e4efe3ab244f87b4215f2f2`；仅 seed 与主线不同，现使用 GPU 0–3 从头运行；
+- NewMatcher Fresh24 epoch-2 独立全对象评测：`$REPRO/frozen_configs/newmatcher_v12_fresh24_epoch2_fullobject_eval_seed530358027_20260822_v1.py`，SHA256 `4717a215cd21da51518e58eb79d9b6a668de70c6e5f993df0a71caf1e428f7fd`；输出 `raw_per_pair.json`，并同时报告 per-object、per-pair 与 legacy-last-object。
+- NewMatcher Fresh24 epoch-6 独立全对象评测：`$REPRO/frozen_configs/newmatcher_v12_fresh24_epoch6_fullobject_eval_seed530358027_20260823_v1.py`，SHA256 `6c3c3ec0a72818743f0ba0ab57987927be09983bff4b61c61452782ecec67025`；使用独立 4090 sidecar，不占用或停止正式训练。
+
+新增了严格的仅评测 checkpoint averaging/SWA 工具 `$REPRO/tools/average_model_checkpoints.py`（SHA256 `6843f4c87944f2c70f30fadb1413f207842b1502ed8a34f128f2cf9b1bb458f5`）及回归测试 `$REPRO/tests/test_average_model_checkpoints.py`（SHA256 `f58ba8ddf2dbf667176a242a59cfdb288ba9ec0771a447c872be9d579d028ecc`）。工具要求所有输入 `state_dict` 的 key、shape、dtype 严格相同；浮点/复数张量用 float64/complex128 累加后恢复原 dtype，计数器等非浮点张量取最新 checkpoint；原子输出只含 `meta/state_dict`，写入输入/output SHA256 清单并明确 `resume_supported=false`，不可误作训练续跑点。测试按 RED→GREEN 执行，2/2 通过。
+
+当前资源原则：
+
+- 训练资源保持解耦：Strict NewMatcher Fresh24 使用独立 4×H100 分布式任务；Visual seed 2 的 epoch 20→24 使用另一条独立 4×H100 分布式任务。交互式 8×H100 实例重启排队期间不承载正式训练，恢复后优先补跑主 seed 奇数 epoch 与 cross-seed soup 的完整评测；Muon 与分层 LR 路线均已基于完整结果淘汰；
+- NewMatcher 使用独立分布式训练资源持续运行；epoch 2 checkpoint 到达后，优先由共享存储的 CPU/4090 sidecar 另起全对象 test；只有 4090 不满足运行合同或 ETA 明显不可接受时，才使用经 Visual epoch-2 筛选释放出的 4 张交互式 GPU，正式训练进程始终不停机；
+- 任一 Visual 试验结束后立即核验完整指标、checkpoint 状态与日志，再决定释放 GPU 或继续下一项非 LR 消融；
+- 正式 NewMatcher 的 epoch-2 全量结果必须使用 `40,517 pairs / 100,223 objects` 的全对象口径，同时另列 legacy-last-object，禁止混写。
+
+### 14.4 下一条 Visual 候选（仅冻结设计，尚未获批、未实现、未占 GPU）
+
+Dense→Sample abrupt switch 已在 epoch 6 得到 `0.3233/0.3825`，低于 Fresh24 e6 `0.3301/0.3905`，没有形成晋升。下一候选因此冻结为 **Dense loss 逐步退火到 sampled loss**，避免再次瞬时切换目标：
+
+- 唯一合法起点是已审计的 Dense epoch-2 `iter_6896.pth`；不得从当前 abrupt-switch 轨迹继续；
+- `iter=6896` 时权重为 `dense=1, sampled=0`；在 `iter 6896→13792`（epoch 2→4）之间线性退火到 `dense=0, sampled=1`；`iter 13792→20688`（epoch 4→6）保持纯 sampled；
+- 权重只由 checkpoint 已保存的 `runner.iter` 推导，不增加新的可丢失计数器；恢复到任一 iteration 后必须得到相同权重；
+- 两个端点必须短路未使用分支，既保持与现有 Dense/sampled loss 数值逐位一致，也避免无意义的双倍计算；中间点才同时计算两支并按权重相加；
+- optimizer、EMA、seed、batch、accumulation、scheduler、数据顺序和其他 loss 全部不变，确保只检验 loss curriculum；
+- RED/GREEN 门包括：Dense 端点等价、sampled 端点等价、中点加权等式、有限梯度、state-dict key 不增加、恢复前后权重一致和真实四卡 DDP smoke；
+- epoch-6 全对象 gate：相对 Fresh24 epoch 6 的 `0.3301/0.3905` 至少提升 `+0.003/+0.003` 才延长；若只重复 Dense epoch 6 的约 `+0.001` 微弱增益，立即停止，不消耗完整 24 epoch；
+- 即使通过短门，最终晋升仍必须超过 Visual IoU 主榜 `0.3702/0.4300`，或在 IoU 不低于 `0.3690` 时刷新 Dice `0.4311`。
+
+本节只是为了冻结单变量实验合同；在用户明确批准前不修改训练源码、不生成运行配置、不启动任务。
+
+## 15. 2026-08-26 Exo2Ego 与 PCCS 收尾
+
+本节只保留已经由完整日志、checkpoint 或独立汇总文件证明的结果；仍在运行的 Fusion 不提前写成最终结论。
 
 ### 15.1 Ego2Exo PCCS（Fusion-first Triple Decoder）
 
@@ -882,15 +1124,19 @@ Fusion 使用公开 24-epoch 训练合同和 4×H100 分布式任务：AdamW `4e
 | 11 | 0.4628 | 0.5161 | 0.0832 | 0.5400 | 16,405 / 15,296 / 14,814 | 0.4420 / 0.4159 / 0.3777 | 21,520 |
 | 12 | 0.4631 | **0.5166** | **0.0830** | **0.5403** | 16,429 / 15,291 / 14,795 | 0.4416 / 0.4157 / 0.3781 | 21,446 |
 
-按预先冻结的 `(mean_IoU, mean_Dice)` 字典序选择规则，e9 以 IoU `0.4635` 成为这组 Visual 候选的临时最佳；它相对 e12 的 IoU 高 `0.0004`，但 Dice 低 `0.0001`。四个候选之间差距很小，因此这里只冻结“固定 Fusion e4 时的 Visual checkpoint 候选筛选”这一历史事实。作者当时正在整理新指标文件，因此没有用旧 evaluator 追加名义上的“最终 PCCS”。新分支发布后的正式重评已经完成，见 §16。
+按预先冻结的 `(mean_IoU, mean_Dice)` 字典序选择规则，e9 以 IoU `0.4635` 成为这组 Visual 候选的临时最佳；它相对 e12 的 IoU 高 `0.0004`，但 Dice 低 `0.0001`。四个候选之间差距很小，因此这里只冻结“固定 Fusion e4 时的 Visual checkpoint 候选筛选”这一历史事实。作者随后说明正在整理新的指标文件，所以本轮不再用旧 evaluator 对 Visual e9 与 Fusion e24 追加一次名义上的“最终 PCCS”并把它误写为新口径；新文件发布后可直接复用已完成权重重评，无需重训。
 
-### 15.5 历史收尾结论
+### 15.5 收尾结论
 
-截至 2026-08-30，旧 WRZ evaluator 下的候选筛选与公开训练轨迹已经闭环。其后作者发布 `v2sam-pccs@0e3bc33`，并完成了 Exo2Ego corrected Visual/Fusion 24e 与双向新标准重评；因此本节所有 PCCS/stock 数值只保留为历史证据，当前发布结论统一以 §16 为准。
+- Ego2Exo Visual、Strict NewMatcher、三种聚合口径和 WRZ 旧 PCCS 候选已经闭环；
+- Exo2Ego Visual 12e 与 Fusion 24e 均使用公开训练合同完成，最终完整验证与任务退出状态已经落证；
+- Exo2Ego 最佳单专家 checkpoint 为 Visual `epoch_11.pth` 与 Fusion `epoch_24.pth`；
+- 旧 PCCS 实现的历史结果保留，但作者的新指标文件尚未发布，因此不再新增可能混淆口径的旧 evaluator 结果；
+- 当前没有仍需监督的 V2-SAM 训练或评测任务。本轮复现目标于 2026-08-30 完成；后续只在作者新 evaluator 发布时另开指标对齐任务。
 
-## 16. 作者新 Frame/Object 与 PCCS 标准最终整理（更新至 2026-09-05）
+## 16. 作者新 Frame/Object 与 PCCS 标准最终整理（2026-09-02）
 
-本节是后续发布与对比的唯一权威入口。最终标准固定为 `jaychempan/V2-SAM-O:v2sam-pccs@0e3bc33dec3e202ffbb86cec01038e60b18c162a`；该分支已于 2026-09-04 合并到 `main@6516232b15110829e9d5536bae225dd41b61d6e8`。评测仍以不可变的 `0e3bc33` 身份记账：
+本节是后续发布与对比的唯一权威入口。最终标准固定为私有/公开分支 `jaychempan/V2-SAM-O:v2sam-pccs`、提交 `0e3bc33dec3e202ffbb86cec01038e60b18c162a`：
 
 - object-level：所有对象等权聚合；
 - frame-level：先在每个 image pair 内平均对象，再对 pair 等权聚合；
@@ -905,7 +1151,7 @@ Fusion 使用公开 24-epoch 训练合同和 4×H100 分布式任务：AdamW `4e
 
 #### 16.1.1 新标准四方法最终矩阵（两个方向 × PCCS/Visual/Anchor/Fusion）
 
-以下八项均已完成；阶段值和旧 evaluator 值不得替代本表。
+`—` 表示尚无可发布的完整结果。阶段值可用于监督，但不得冒充最终 checkpoint。
 
 | Direction | Method / Weight | 来源 / epoch | Pairs | Objects | object IoU / Dice / Cont.A / Loc.E | frame IoU / Dice / Cont.A / Loc.E | 状态 |
 | --- | --- | --- | ---: | ---: | --- | --- | --- |
@@ -1037,18 +1283,23 @@ self.sparse_correspondence = SparseCorrespondenceMatcher(
 
 ##### 16.4.1.5 当前公开性边界
 
-public `V2-SAM@50e7c05`、私密 `v2sam-pccs@0e3bc33` 与最新私密 `main@6516232` 的 `projects/v2sam_fusion/models/v2sam.py` 是同一 Git blob `536f74f85e0e65b4f4a211959f05ed7cfd9213fe`：三者都以局部变量加载 DINO，只经 `SparseCorrespondenceMatcher` 持有。Ego2Exo/Exo2Ego 配置实例化同一个 `V2SAM`，因此该所有权修复对两个方向都生效；`projects/v2sam_fusion_flops/` 的旧 alias 不在正式 import 链。`V2-SAM-O/travor@27e28e71a1bc8276deb306efc86c958c12168bf3` 另外交付持久 contrast、严格旧权重兼容、冻结 Exo2Ego config/launch/tests；`EXO2EGO_FIXES/` patch 以 public `50e7c05` 为基线，SHA256=`758cb8d25a1d700a346ac85cbf5adc17b205fa9b392f3a5a99bceaf56dde0cbe`，已通过干净 worktree `git apply --check`。
+public `V2-SAM` 的 `50e7c05` 已含最小 DINO 所有权修复，但不含本轮持久 contrast、严格旧权重兼容、冻结 Exo2Ego 配置和回归门。2026-09-03 已把完整 Exo2Ego 审计包推到私密仓库 `jaychempan/V2-SAM-O` 的 `travor@27e28e71a1bc8276deb306efc86c958c12168bf3`：`EXO2EGO_FIXES/` 内的 91 KB patch 以 public `50e7c05` 为精确基线，SHA256=`758cb8d25a1d700a346ac85cbf5adc17b205fa9b392f3a5a99bceaf56dde0cbe`，已在干净 detached worktree 通过正向 `git apply --check`。它独立交付 source/config/launch/tests，没有覆盖现有 Ego2Exo `projects/v2sam`。Hugging Face README 仍需改为指向该不可变 commit。
 
-#### 16.4.2 失败回执（不进入最终矩阵）
+#### 16.4.2 有效结果与失败回执
 
-| 尝试 | 失败点 | 处理 |
-| --- | --- | --- |
-| Exo 官方补评 attempt 1 | 裸 `python` 不在 PATH，exit 127；未进入推理 | 不计结果，资源已释放 |
-| Exo 官方补评 attempt 2 | 主体推理后 launcher 第 121 行未闭合引号，exit 2 | 不计结果，失败保留资源已释放 |
-| Ego 4090 首次尝试 | PID 376259 在 `36040/40517` 后随交互实例消失，production JSONL 未提交 | 拒绝聚合；由 H100 完整任务替代 |
-| Exo PCCS/Anchor v1 | rank 尾部差触发 600 秒 `ALLGATHER` timeout | 局部内存不可续跑；仅把 process-group timeout 改为 7200 秒的 v6 完整重跑通过 |
+| 项目 | 结果 |
+| --- | --- |
+| Ego2Exo 官方四方法 | 完成；frame PCCS/Visual/Anchor/Fusion 分别为 `0.4867/0.5435`、`0.3770/0.4341`、`0.4034/0.4482`、`0.4511/0.5106`；完整四指标见 §16.1 |
+| Exo2Ego Visual24 | e19 训练验证 object/frame `0.4533/0.5081/0.5361/0.0880`、`0.5023/0.5554/0.5779/0.0864`；最终 PCCS wrapper 同次全量为 `0.4505/0.5057/0.5347/0.0880`、`0.4994/0.5529/0.5765/0.0864` |
+| Exo2Ego Fusion24 | e24 已完成；最终选 e20；PCCS wrapper 同次全量 object/frame `0.4805/0.5338/0.5684/0.0749`、`0.5274/0.5793/0.6104/0.0738` |
+| Hugging Face Exo2Ego 发布 | `main@8b8310e9ee13023cb8711c2417e18cc7361dc3aa`；`vp_exo2ego_full.pth`=Visual e19，`fusion_exo2ego_full.pth`=Fusion e20；远端大小和 LFS SHA256 均通过独立复核；token 轮换/Terminal 2 清理待用户确认 |
+| Exo2Ego 修复代码发布 | `jaychempan/V2-SAM-O/travor@27e28e71a1bc8276deb306efc86c958c12168bf3`；不覆盖 Ego2Exo tree；精确 patch/config/launch/tests/audit 已推送并通过远端 SHA 回读 |
+| Visual EMA screen | Ego2Exo object/frame `0.3324/0.3890/0.4856/0.0945`、`0.3816/0.4394/0.5310/0.0896`；保留为 Pareto 控制点，不进入八方法主表 |
+| Exo 官方补评 attempt 1 | 裸 `python` 不在 PATH，exit 127；未进入正式推理 |
+| Exo 官方补评 attempt 2 | 主体推理后 launcher 第 121 行未闭合引号，exit 2；不作为重训矩阵输入，失败保留资源已释放 |
+| Ego 4090 首次尝试 | PID 376259 在 `36040/40517` 后随交互实例消失；production JSONL 未提交，拒绝聚合；后由 H100 完整替代 |
 
-完整有效结果不在此重复，统一见 §16.1；job、计数、配置/launcher SHA 和发布回执见 §16.3。
+早期逐 epoch 进度、重复 ETA 与临时排队状态已从主日记移除；完整机器日志、阶段 receipt 和远端 audit 文件仍保留，因此精简不影响可追溯性。
 
 #### 16.4.3 Hugging Face `Travor278/V2-SAM` 文件审计（2026-09-03）
 
@@ -1068,7 +1319,7 @@ public `V2-SAM@50e7c05`、私密 `v2sam-pccs@0e3bc33` 与最新私密 `main@6516
 README 下一版至少应写明：
 
 1. 四个 expert 分别来自哪个方向、实现和选中 epoch/iter；
-2. 两个方向 PCCS/Visual/Anchor/Fusion 的 object/frame 四指标、作者参考和 `ours − author`；明确 `Cont.A↑/Loc.E↓`；
+2. Exo2Ego Visual e19/Fusion e20 的 object/frame 四指标及与作者值差异；PCCS/Anchor 在最终全量任务完成前留空，不提前填阶段值；
 3. 新发布文件的大小、LFS SHA256、optimizer 已剥离但 `state_dict` 保持不变；
 4. 公开 `V2-SAM@50e7c05` 已修 DINO 顶层所有权，但仍缺本轮持久 contrast、冻结配置、严格兼容和完整回归门，不能单独代表这两个新 Exo2Ego 权重的训练闭包；
 5. 指向 corrected Exo2Ego 审计包 `V2-SAM-O/travor@27e28e71`，以及 `v2sam-pccs@0e3bc33` 的评测入口；
@@ -1076,10 +1327,9 @@ README 下一版至少应写明：
 
 建议但非立即必需的新增文件是一个小型 `MODEL_MANIFEST.json`（记录四权重 SHA、来源、epoch、对应代码 commit 和指标口径）以及 Exo2Ego Visual/Fusion 的 frozen config/加载示例。它们应新增而不是覆盖 `json.tar.gz`。本节只是审计结论；除已授权的两个 Exo2Ego checkpoint 外，本轮未修改其他 Hugging Face 文件。
 
-#### 16.4.4 当前剩余工作
+#### 16.4.4 剩余工作
 
-1. 更新 Hugging Face README，并可选新增 `MODEL_MANIFEST.json`；不得覆盖 `json.tar.gz`，不得虚构 Anchor/PCCS 独立权重。
-2. 轮换曾回显的 Hugging Face token，并在用户确认后清理/关闭私有 Terminal 2。
-3. 可选从空目录回下载并复核全部 LFS SHA；不影响现有矩阵闭环。
-
-训练、续训、双向 PCCS/Anchor 全量补评、aggregation 导入、机读 JSON 和八方法矩阵均已完成，无待监督 GPU 任务。
+1. Fusion e21→e24 四卡严格续训已完成并释放资源；最终 Fusion 选 e20，Visual 选 e19。
+2. Exo2Ego timeout7200 v6 已完成并回填 §16.1.1/§16.2；释放成功保留资源，并把最终值同步到 Hugging Face README/manifest（需用户授权修改 README）。
+3. Ego2Exo 重训专家 aggregation 已导入 §16.1.2 和机读 JSON。
+4. 当前实验矩阵已闭环；仅 Hugging Face README/manifest 更新和已回显 token 的轮换/Terminal 2 清理仍需用户授权。
