@@ -1,0 +1,165 @@
+{
+  "files": [
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/AUDIT_REPORT.md",
+      "sha256": "75a11f3cbfea27c00c2c1e430079c6b540e2d2c92ce8409b8bd83603fced8f1e",
+      "bytes": 6275
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/ast_identity.py",
+      "sha256": "3720f7680ab0c989184c2dcf05ae95db4f2e16e46d5d55db2d9fbdb980d9868e",
+      "bytes": 893
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/build_upstream_identity.py",
+      "sha256": "e9e1749f6e2b28cd21cb7a0b8430fa12ae01c453185a25159b5269875a1c42e5",
+      "bytes": 1334
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/upstream_identity.json",
+      "sha256": "51615da0fc71e7a4057d3e957a246604da279380d0ed117788869fe9b1702d2b",
+      "bytes": 3640
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/remote_audit.py",
+      "sha256": "c8b7b562ca257b6ab9f4d80fbc0a5189506abbac50cf8f6237b0e95003197634",
+      "bytes": 6002
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/runtime_probe.py",
+      "sha256": "9c2ea2b66a830f54c0a4716a90c6bacf0b6ca5bf505487a54f50ac57bbec2f6f",
+      "bytes": 6756
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/run_runtime_probe.sh",
+      "sha256": "479c80868836171fac437ed245e4e034e4022cca3b1cdcccf3a4bde22fda8164",
+      "bytes": 571
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/metric_regression.py",
+      "sha256": "2d5f9e3a8b396814813903ef73343996457a618380553719e1e08a96d4442e65",
+      "bytes": 1780
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/run_metric_regression.sh",
+      "sha256": "c2e845161a8b95dae0254c27b8ca745c87160499108bb99a50e76889560eea7f",
+      "bytes": 368
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/locate_corrected_weights.py",
+      "sha256": "828888c7a24af0c9bcd8d472e0a9097cc5b1c853e11492717be06a8ce17519b3",
+      "bytes": 1899
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/read_only_audit.json",
+      "sha256": "e8e86365d41d7402ca66eb63c18060def3372e9644d384c0f88383a1c1dd3bb2",
+      "bytes": 17505
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/read_only_audit.log",
+      "sha256": "172d75fd4e89d0f915bae2662032795717db392bb5dcd6b35416ed13bce86251",
+      "bytes": 114
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/runtime_probe.json",
+      "sha256": "6081a9198d31399f5d4763acf059e07308476aca9ad26cf8963c80bb5d2cba28",
+      "bytes": 245637
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/runtime_probe.log",
+      "sha256": "f1d6a484808c32b24bc34e6cc3196b9f103e3b085e3e84b31308c5466271da36",
+      "bytes": 49273
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/metric_regression.json",
+      "sha256": "0501e532e2616a763be6a5ea32a24d973fe73f05be0381bde96796d5bbd8c621",
+      "bytes": 473
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/metric_regression.log",
+      "sha256": "859fba8babfd2262127e24a4264d20967b48bfa4dcb1184ca8a04bfbe218ed58",
+      "bytes": 3909
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/corrected_weights.json",
+      "sha256": "d3319800f784e84a4a4260bd7cacb695f155fcc79a1f0544c4b04c7f2c6cea62",
+      "bytes": 2255
+    },
+    {
+      "path": "codex_remote_ops/pccs_pipeline_audit_20260916/resource_release.json",
+      "sha256": "d167e6521654b9f9469ce3a24c6b18678ecdf6d6e5ad42c839aa163b3bf63819",
+      "bytes": 319
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/PLAN.md",
+      "sha256": "a4d6dc6a1a58922b864a1d3e1eb423265b49beffb1d8d8e048e3f807d606df52",
+      "bytes": 1441
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/prepare.py",
+      "sha256": "3b182a6e8d03e0a5c4a724a90403ab11bd8f3db9e5987cfe9c5597916ee7ede0",
+      "bytes": 3317
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/score.py",
+      "sha256": "dd17d7ca8603159e8b0d2774f94ada8943dbc74688824c4bf13beb36ee147be6",
+      "bytes": 5653
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/summarize.py",
+      "sha256": "5fec2b5ea6da86d1624cbb67e76bf7613edf14e2e0aefe9cbfa849246ae3f35e",
+      "bytes": 4721
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/cache.py",
+      "sha256": "f3c5f2f0d0b1b937f6018fe3a1522f8db67bc2234e15af5651b46664bb4dc9b7",
+      "bytes": 995
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/run_stage.py",
+      "sha256": "f2fac48753733eed492596d551c9ee1bdec90bd52067c8d8288beb5a363c33c9",
+      "bytes": 5125
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/launch_h100.sh",
+      "sha256": "246c5cbab58c5d8b52a4b1823fa15c4db1e3803d46266c604ebfc5a0bc9de7c6",
+      "bytes": 538
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/job_receipt.json",
+      "sha256": "af864f7f52740de0a2adfddd10839b4f7c59177bac1a0f50fc439cb90b205768",
+      "bytes": 753
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/manifest.json",
+      "sha256": "e8fd6d301d5bac098c1d4ee714365502d551f06771da4cd0479ae870bf38f111",
+      "bytes": 16894
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/status.json",
+      "sha256": "7d3d9952dfed6b85f098398af5c675a04ce7b4b3d8425a03ca9789d9bc871b80",
+      "bytes": 268
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/prepare.log",
+      "sha256": "846c8adec74743f6188ab827d9a7f1043abfc9407b7dc34d728f0f4aa75dc256",
+      "bytes": 24
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/smokeH100/results.json",
+      "sha256": "a1fa02edac2150ae2b77de5ffaef197d2d62afa9152da45cbded754f2f97c3e0",
+      "bytes": 19478
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/smokeH100/candidate_receipts.json",
+      "sha256": "942c7f66ac246880e70e13235931fcf34bc4d6c960ecf789c14d11854cf8487d",
+      "bytes": 127
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "sha256": "994fc98c9eb080f838a22be2d2d336d04b94f180be81c542f0b829cd6433f2f7",
+      "bytes": 21243
+    }
+  ],
+  "source_diary_not_copied": true
+}

@@ -1,0 +1,37 @@
+09/15 17:14:40 - mmengine - WARNING - The prefix is not set in metric class PCCSFrameLevelMetric.
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+09/15 17:14:40 - mmengine - INFO - ========================================================================================
+09/15 17:14:40 - mmengine - INFO - PCCS evaluation results (frame-level means; pairs=2, evaluated_frames=2, objects=3)
+09/15 17:14:40 - mmengine - INFO - Cont.A is boundary F-score; Loc.E is normalized centroid error.
+09/15 17:14:40 - mmengine - INFO - ========================================================================================
+09/15 17:14:40 - mmengine - INFO - Method                 IoU      Dice    Cont.A     Loc.E      Raw route
+09/15 17:14:40 - mmengine - INFO - PCCS                0.3500    0.3500    0.3500    0.6500      3/3     
+09/15 17:14:40 - mmengine - INFO - visual              0.3500    0.3500    0.3500    0.6500      0/3     
+09/15 17:14:40 - mmengine - INFO - anchor              0.3500    0.3500    0.3500    0.6500      0/3     
+09/15 17:14:40 - mmengine - INFO - fusion              0.3500    0.3500    0.3500    0.6500      3/3     
+09/15 17:14:40 - mmengine - INFO - ----------------------------------------------------------------------------------------
+09/15 17:14:40 - mmengine - INFO - Oracle diagnostics: IoU=0.0000; Dice=0.0000; gap=-0.3500; match rate=0.0%; counts (visual/anchor/fusion)=0/0/0
+09/15 17:14:40 - mmengine - INFO - Fusion quality gate pass/fail: 0/3
+09/15 17:14:40 - mmengine - INFO - Cyclic consistency used: 0/3 (0.0%)
+09/15 17:14:40 - mmengine - INFO - Mean cycle distance: visual=n/a; anchor=n/a; fusion=n/a
+09/15 17:14:40 - mmengine - INFO - ========================================================================================
+09/15 17:14:40 - mmengine - WARNING - The prefix is not set in metric class PCCSMetric.
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+09/15 17:14:40 - mmengine - INFO - ========================================================================================
+09/15 17:14:40 - mmengine - INFO - PCCS evaluation results (object-level means; pairs=2, evaluated_frames=2, objects=3)
+09/15 17:14:40 - mmengine - INFO - Cont.A is boundary F-score; Loc.E is normalized centroid error.
+09/15 17:14:40 - mmengine - INFO - ========================================================================================
+09/15 17:14:40 - mmengine - INFO - Method                 IoU      Dice    Cont.A     Loc.E      Raw route
+09/15 17:14:40 - mmengine - INFO - PCCS                0.4000    0.4000    0.4000    0.6000      3/3     
+09/15 17:14:40 - mmengine - INFO - visual              0.4000    0.4000    0.4000    0.6000      0/3     
+09/15 17:14:40 - mmengine - INFO - anchor              0.4000    0.4000    0.4000    0.6000      0/3     
+09/15 17:14:40 - mmengine - INFO - fusion              0.4000    0.4000    0.4000    0.6000      3/3     
+09/15 17:14:40 - mmengine - INFO - ----------------------------------------------------------------------------------------
+09/15 17:14:40 - mmengine - INFO - Oracle diagnostics: IoU=0.0000; Dice=0.0000; gap=-0.4000; match rate=0.0%; counts (visual/anchor/fusion)=0/0/0
+09/15 17:14:40 - mmengine - INFO - Fusion quality gate pass/fail: 0/3
+09/15 17:14:40 - mmengine - INFO - Cyclic consistency used: 0/3 (0.0%)
+09/15 17:14:40 - mmengine - INFO - Mean cycle distance: visual=n/a; anchor=n/a; fusion=n/a
+09/15 17:14:40 - mmengine - INFO - ========================================================================================
+METRIC_REGRESSION_PASS

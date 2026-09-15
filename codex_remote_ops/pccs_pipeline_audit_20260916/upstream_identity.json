@@ -1,0 +1,39 @@
+{
+  "revision": "0e3bc33dec3e202ffbb86cec01038e60b18c162a",
+  "files": {
+    "projects/v2sam_pccs/models/pccs_fusion_expert.py": "e283bcfc890161c705446fe187c1f9c53461e81b4386278279da9b84884035d2",
+    "projects/v2sam_pccs/models/pccs_visual_anchor_expert.py": "9161d6abbc528e84ca93fd4f0cd40bdb69c370d299175b8acebd1910caae78dd",
+    "projects/v2sam_pccs/models/pccs_components/region_sampler.py": "f59cebb66ade313061f5f019b66846fdb7772a72db0f696952a2185f1c111fbb",
+    "projects/v2sam_pccs/models/pccs_components/visual_prompt_matcher.py": "e6051b508af5f6346c98fa712f9020d00f5076f48ef13d0a480d1472536c10a9",
+    "projects/v2sam_pccs/models/pccs_components/forward_correspondence.py": "8ca57790625826f3cc1446cf2628a2f11f081b29a6d8757bfb2124f146f8afcd",
+    "projects/v2sam_pccs/models/pccs_components/backward_correspondence.py": "64572d2a1d10027881b77d90c9f5c15855ab3adf0c21fe677f382b4744bfb845",
+    "projects/v2sam_pccs/models/sam2_train.py": "ccc45a178a1b9496e01f34884140a22bbccb6d7650c5843a5acb5dfa542db0f7",
+    "projects/v2sam_pccs/models/pccs_components/fusion_encoder.py": "79ef86447aa8253041349b1117744ff2b3eef48445f7d8f74d7a54d30dc7fc6e",
+    "projects/v2sam_pccs/datasets/adapter.py": "10f7be5d73dc2f7e261941a920dd5c909d1af5e4de19567eb273ef693148f688",
+    "projects/v2sam_fusion/datasets/ReObjectRelator_Dataset.py": "2b39a994ab25c6602ea655751b1a0cdb2cd77a83c62929cc67e06cf1b6d1e9f0",
+    "projects/v2sam_fusion/datasets/collect_fns.py": "0d6920919c05f9dada1057f3e40e82d6c0ca216e854800ba69cc53f4222b5371"
+  },
+  "file_ast_sha256": {
+    "projects/v2sam_pccs/models/pccs_fusion_expert.py": "3c13a1b56619d1ae445698b93c24278ec501e289a168b89e9a06ff86609ca18e",
+    "projects/v2sam_pccs/models/pccs_visual_anchor_expert.py": "24422c37d721c17ad58391674ae2c0528ca884b184e131f86c3c1f1c99db8f02",
+    "projects/v2sam_pccs/models/pccs_components/region_sampler.py": "d1a5db863fd0c46e73c3180a9a0574f8c5df6a8cce2733a2c88c240ea5411844",
+    "projects/v2sam_pccs/models/pccs_components/visual_prompt_matcher.py": "34cf70f1fb1c8a4e24d784cce7d22c6281a9154e125a43b1045e01242752499c",
+    "projects/v2sam_pccs/models/pccs_components/forward_correspondence.py": "0c2198dde05a87156ec7439a8c3898b3fd8fb135f16cdb9678e73e935407f463",
+    "projects/v2sam_pccs/models/pccs_components/backward_correspondence.py": "731c3e98f908dc973f1d11b9c4b12a6b8640c87f9c1f8d3054f3289c9f0d63d1",
+    "projects/v2sam_pccs/models/sam2_train.py": "6702e51a5bf3457f40a835a24f513e7917e1d099676426727979b1a60f0b7625",
+    "projects/v2sam_pccs/models/pccs_components/fusion_encoder.py": "9edab319a70899ce16a9c35dbb3149db9fd5bac53ccc14f8040706909824df9f",
+    "projects/v2sam_pccs/datasets/adapter.py": "bc5bf7d6412f0e841da5205f3afe46d360a5916bd3cdefc89b315410fe7e9b3a",
+    "projects/v2sam_fusion/datasets/ReObjectRelator_Dataset.py": "e61cb12066dc098d8bf403bd088f3b52943dc4e0053d34d6ba948fde309377ec",
+    "projects/v2sam_fusion/datasets/collect_fns.py": "c52c888adfb9ab4443673b8ecd14858584bc1d5ed1263bb6e7cece14c1d8c171"
+  },
+  "metric_functions": {
+    "compute_metrics": "2a3e12cc96b2a293d314641a1e97895ad7ab327e1478c8d4dbf40b389fd25bf1",
+    "compute_boundary_f_measure": "5433b76784f51d5fa17ebba7704c145a5c54ac2f9b3bf826933176d60b9608f1",
+    "compute_location_score": "95bdf181311bc5c10c991ace243ee96c13d0fdb0f013aa57629195340f46b11b",
+    "_seg2bmap": "b1c81a4460b0533cb65614bfea79c72f95a7440c8fab848042eef57bfac82867"
+  },
+  "diary_source": {
+    "path": "D:\\Code\\Work\\EgoExoSeg\\docs\\V2SAM_EGO2EXO_EXPERIMENT_DIARY_AND_PLAN_20260820.md",
+    "sha256": "86865c0e43d8b464d8353a795d4d889185b9d3c94ccaf3e0845b4f7d669d655f"
+  }
+}

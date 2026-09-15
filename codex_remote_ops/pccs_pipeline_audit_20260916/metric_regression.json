@@ -1,0 +1,13 @@
+{
+  "state": "passed",
+  "actual_evaluator_frame_iou": 0.35,
+  "actual_evaluator_object_iou": 0.39999999999999997,
+  "last_object_wrong_result": 0.6,
+  "positive_only_wrong_result": 0.6,
+  "pairs": 2,
+  "objects": 3,
+  "zero_iou_retained": true,
+  "identical_mask_boundary": 1,
+  "identical_mask_location_error": 0,
+  "location_definition": "mean coordinates on largest external contour, normalized by image diagonal; not mask-area centroid; follows upstream"
+}

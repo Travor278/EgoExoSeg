@@ -1,0 +1,55 @@
+{
+  "started_at": 1789491471.0003207,
+  "expected_from_diary": {
+    "vp_exo2ego_full.pth": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+    "fusion_exo2ego_full.pth": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1"
+  },
+  "local_candidates": [
+    {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    },
+    {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 920070698,
+      "sha256": "55761ff44fb4fbeba219664a6677e6f745bb87d280d9fc75187134c3f0e13375",
+      "matches_diary": false
+    },
+    {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2132087187,
+      "sha256": "a4a09371d80ba1096bec4407eefaf3a286a422a25f4e83f99925c4502a681cf1",
+      "matches_diary": false
+    }
+  ],
+  "huggingface": {
+    "revision": "8b8310e9ee13023cb8711c2417e18cc7361dc3aa",
+    "files": [
+      {
+        "name": "fusion_exo2ego_full.pth",
+        "size": 2136421714,
+        "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+        "matches_diary": true
+      },
+      {
+        "name": "vp_exo2ego_full.pth",
+        "size": 926619220,
+        "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+        "matches_diary": true
+      }
+    ]
+  },
+  "state": "complete"
+}

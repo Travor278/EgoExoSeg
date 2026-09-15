@@ -1,0 +1,359 @@
+{
+  "upstream_revision": "0e3bc33dec3e202ffbb86cec01038e60b18c162a",
+  "sources": {
+    "projects/v2sam_pccs/models/pccs_fusion_expert.py": {
+      "upstream_sha256": "e283bcfc890161c705446fe187c1f9c53461e81b4386278279da9b84884035d2",
+      "full_sha256": "1650db2f0953030f5fecf0afec7a79e23eaf9fb12b40b3f40365c7b68e6f0b52",
+      "exoexo_sha256": "1650db2f0953030f5fecf0afec7a79e23eaf9fb12b40b3f40365c7b68e6f0b52",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "3c13a1b56619d1ae445698b93c24278ec501e289a168b89e9a06ff86609ca18e",
+        "pccs_exoexo_transfer_20260916": "3c13a1b56619d1ae445698b93c24278ec501e289a168b89e9a06ff86609ca18e"
+      },
+      "upstream_ast_sha256": "3c13a1b56619d1ae445698b93c24278ec501e289a168b89e9a06ff86609ca18e"
+    },
+    "projects/v2sam_pccs/models/pccs_visual_anchor_expert.py": {
+      "upstream_sha256": "9161d6abbc528e84ca93fd4f0cd40bdb69c370d299175b8acebd1910caae78dd",
+      "full_sha256": "74c2fdc4c5bdd5b0c8cabbd73af6a7e457d24c62e41f48c5b7dc5c419d53994a",
+      "exoexo_sha256": "74c2fdc4c5bdd5b0c8cabbd73af6a7e457d24c62e41f48c5b7dc5c419d53994a",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "24422c37d721c17ad58391674ae2c0528ca884b184e131f86c3c1f1c99db8f02",
+        "pccs_exoexo_transfer_20260916": "24422c37d721c17ad58391674ae2c0528ca884b184e131f86c3c1f1c99db8f02"
+      },
+      "upstream_ast_sha256": "24422c37d721c17ad58391674ae2c0528ca884b184e131f86c3c1f1c99db8f02"
+    },
+    "projects/v2sam_pccs/models/pccs_components/region_sampler.py": {
+      "upstream_sha256": "f59cebb66ade313061f5f019b66846fdb7772a72db0f696952a2185f1c111fbb",
+      "full_sha256": "5347d7176aa1774de965f0f74239ec12163743016513cc65b406c4cdf7bf76b9",
+      "exoexo_sha256": "5347d7176aa1774de965f0f74239ec12163743016513cc65b406c4cdf7bf76b9",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "d1a5db863fd0c46e73c3180a9a0574f8c5df6a8cce2733a2c88c240ea5411844",
+        "pccs_exoexo_transfer_20260916": "d1a5db863fd0c46e73c3180a9a0574f8c5df6a8cce2733a2c88c240ea5411844"
+      },
+      "upstream_ast_sha256": "d1a5db863fd0c46e73c3180a9a0574f8c5df6a8cce2733a2c88c240ea5411844"
+    },
+    "projects/v2sam_pccs/models/pccs_components/visual_prompt_matcher.py": {
+      "upstream_sha256": "e6051b508af5f6346c98fa712f9020d00f5076f48ef13d0a480d1472536c10a9",
+      "full_sha256": "c5400f927baa4ef56329dacaa19fb2cbfae3f7d3b737333a6529a4235bcf3c86",
+      "exoexo_sha256": "c5400f927baa4ef56329dacaa19fb2cbfae3f7d3b737333a6529a4235bcf3c86",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "34cf70f1fb1c8a4e24d784cce7d22c6281a9154e125a43b1045e01242752499c",
+        "pccs_exoexo_transfer_20260916": "34cf70f1fb1c8a4e24d784cce7d22c6281a9154e125a43b1045e01242752499c"
+      },
+      "upstream_ast_sha256": "34cf70f1fb1c8a4e24d784cce7d22c6281a9154e125a43b1045e01242752499c"
+    },
+    "projects/v2sam_pccs/models/pccs_components/forward_correspondence.py": {
+      "upstream_sha256": "8ca57790625826f3cc1446cf2628a2f11f081b29a6d8757bfb2124f146f8afcd",
+      "full_sha256": "75c9ede69d95afb1fb32dc53af85fb6b0d6a6708183df21b3322fe04eb19a892",
+      "exoexo_sha256": "75c9ede69d95afb1fb32dc53af85fb6b0d6a6708183df21b3322fe04eb19a892",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "0c2198dde05a87156ec7439a8c3898b3fd8fb135f16cdb9678e73e935407f463",
+        "pccs_exoexo_transfer_20260916": "0c2198dde05a87156ec7439a8c3898b3fd8fb135f16cdb9678e73e935407f463"
+      },
+      "upstream_ast_sha256": "0c2198dde05a87156ec7439a8c3898b3fd8fb135f16cdb9678e73e935407f463"
+    },
+    "projects/v2sam_pccs/models/pccs_components/backward_correspondence.py": {
+      "upstream_sha256": "64572d2a1d10027881b77d90c9f5c15855ab3adf0c21fe677f382b4744bfb845",
+      "full_sha256": "d64b6bf2ee099dde8e357f61210169262cab3c938b9125540946675601be7b1e",
+      "exoexo_sha256": "d64b6bf2ee099dde8e357f61210169262cab3c938b9125540946675601be7b1e",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "731c3e98f908dc973f1d11b9c4b12a6b8640c87f9c1f8d3054f3289c9f0d63d1",
+        "pccs_exoexo_transfer_20260916": "731c3e98f908dc973f1d11b9c4b12a6b8640c87f9c1f8d3054f3289c9f0d63d1"
+      },
+      "upstream_ast_sha256": "731c3e98f908dc973f1d11b9c4b12a6b8640c87f9c1f8d3054f3289c9f0d63d1"
+    },
+    "projects/v2sam_pccs/models/sam2_train.py": {
+      "upstream_sha256": "ccc45a178a1b9496e01f34884140a22bbccb6d7650c5843a5acb5dfa542db0f7",
+      "full_sha256": "f94cb05efec106ce7411f93131476cd57a2019fa0fc45b52ca90fc869a094b26",
+      "exoexo_sha256": "f94cb05efec106ce7411f93131476cd57a2019fa0fc45b52ca90fc869a094b26",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "6702e51a5bf3457f40a835a24f513e7917e1d099676426727979b1a60f0b7625",
+        "pccs_exoexo_transfer_20260916": "6702e51a5bf3457f40a835a24f513e7917e1d099676426727979b1a60f0b7625"
+      },
+      "upstream_ast_sha256": "6702e51a5bf3457f40a835a24f513e7917e1d099676426727979b1a60f0b7625"
+    },
+    "projects/v2sam_pccs/models/pccs_components/fusion_encoder.py": {
+      "upstream_sha256": "79ef86447aa8253041349b1117744ff2b3eef48445f7d8f74d7a54d30dc7fc6e",
+      "full_sha256": "f3e6b3d0d52e7c4a95b4b55f537e032967c3fb0ff0112c50c6ff498a464b2e34",
+      "exoexo_sha256": "f3e6b3d0d52e7c4a95b4b55f537e032967c3fb0ff0112c50c6ff498a464b2e34",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "9edab319a70899ce16a9c35dbb3149db9fd5bac53ccc14f8040706909824df9f",
+        "pccs_exoexo_transfer_20260916": "9edab319a70899ce16a9c35dbb3149db9fd5bac53ccc14f8040706909824df9f"
+      },
+      "upstream_ast_sha256": "9edab319a70899ce16a9c35dbb3149db9fd5bac53ccc14f8040706909824df9f"
+    },
+    "projects/v2sam_pccs/datasets/adapter.py": {
+      "upstream_sha256": "10f7be5d73dc2f7e261941a920dd5c909d1af5e4de19567eb273ef693148f688",
+      "full_sha256": "af62f2d13f2090240bf0f677d583dd66fca27b9b75e2d816d0b9072bed1223f0",
+      "exoexo_sha256": "af62f2d13f2090240bf0f677d583dd66fca27b9b75e2d816d0b9072bed1223f0",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "bc5bf7d6412f0e841da5205f3afe46d360a5916bd3cdefc89b315410fe7e9b3a",
+        "pccs_exoexo_transfer_20260916": "bc5bf7d6412f0e841da5205f3afe46d360a5916bd3cdefc89b315410fe7e9b3a"
+      },
+      "upstream_ast_sha256": "bc5bf7d6412f0e841da5205f3afe46d360a5916bd3cdefc89b315410fe7e9b3a"
+    },
+    "projects/v2sam_fusion/datasets/ReObjectRelator_Dataset.py": {
+      "upstream_sha256": "2b39a994ab25c6602ea655751b1a0cdb2cd77a83c62929cc67e06cf1b6d1e9f0",
+      "full_sha256": "ed599e08318b56930a89918de4d148fbdba0c8c433f98be991a96aa12ae0cff2",
+      "exoexo_sha256": "ed599e08318b56930a89918de4d148fbdba0c8c433f98be991a96aa12ae0cff2",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "e61cb12066dc098d8bf403bd088f3b52943dc4e0053d34d6ba948fde309377ec",
+        "pccs_exoexo_transfer_20260916": "e61cb12066dc098d8bf403bd088f3b52943dc4e0053d34d6ba948fde309377ec"
+      },
+      "upstream_ast_sha256": "e61cb12066dc098d8bf403bd088f3b52943dc4e0053d34d6ba948fde309377ec"
+    },
+    "projects/v2sam_fusion/datasets/collect_fns.py": {
+      "upstream_sha256": "0d6920919c05f9dada1057f3e40e82d6c0ca216e854800ba69cc53f4222b5371",
+      "full_sha256": "bb2a38e999efc222f26a5c6e229d440aa037f3bca5ded9deadd04e51cbbcff25",
+      "exoexo_sha256": "bb2a38e999efc222f26a5c6e229d440aa037f3bca5ded9deadd04e51cbbcff25",
+      "ast_sha256": {
+        "pccs_gain_full_20260915": "c52c888adfb9ab4443673b8ecd14858584bc1d5ed1263bb6e7cece14c1d8c171",
+        "pccs_exoexo_transfer_20260916": "c52c888adfb9ab4443673b8ecd14858584bc1d5ed1263bb6e7cece14c1d8c171"
+      },
+      "upstream_ast_sha256": "c52c888adfb9ab4443673b8ecd14858584bc1d5ed1263bb6e7cece14c1d8c171"
+    }
+  },
+  "records": {
+    "pccs_gain_full_20260915": {
+      "annotation_sha256": "b05faed68c0bea40df02d3fd81b0b25af9e3fbb6e4eb8e7e2b8cb9349de34b96",
+      "expected_annotation_sha256": "b05faed68c0bea40df02d3fd81b0b25af9e3fbb6e4eb8e7e2b8cb9349de34b96",
+      "aggregation": "independent math.fsum; objects within pair then equal pair mean; no positive-IoU filter",
+      "raw_candidates": {
+        "pairs": 46515,
+        "objects": 109253,
+        "nonempty_pairs": true,
+        "source_files": [
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_full_20260915/runs/full/candidates/exo2ego/per_object.jsonl",
+            "sha256": "fc079d3b2f0199f73115e43681eecb3da9268df0969f3db1918a49f2aeccf669"
+          }
+        ],
+        "metrics": {
+          "baseline": {
+            "object": [
+              0.4870244785299369,
+              0.5355656677993607,
+              0.5685088237120938,
+              0.08339781786935868
+            ],
+            "frame": [
+              0.5361189155282741,
+              0.5842148549020197,
+              0.612772465217914,
+              0.07955719016636133
+            ],
+            "zero_iou_objects_included": 32033,
+            "max_report_error": 3.3306690738754696e-15
+          }
+        }
+      },
+      "scored": {
+        "pairs": 46515,
+        "objects": 109253,
+        "nonempty_pairs": true,
+        "source_files": [
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_full_20260915/runs/full/scored/rank0.jsonl",
+            "sha256": "d249e2f02256c9eaf8feeab2964fa11121750458be1e57eec561380dca738c8e"
+          },
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_full_20260915/runs/full/scored/rank1.jsonl",
+            "sha256": "feb5f2d49a8bbcb73e57fdb36ebca2ad2c4fc2330205c488e4ce52d6e2959322"
+          },
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_full_20260915/runs/full/scored/rank2.jsonl",
+            "sha256": "d0c03aa528765fa68acf49aeaf8094e432d0f780375f66708072d6af4edf0694"
+          },
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_full_20260915/runs/full/scored/rank3.jsonl",
+            "sha256": "1bc581152c2511eeb183c7f097f83a2c1d313d4fb982dcec3fadf36d4da65df1"
+          }
+        ],
+        "metrics": {
+          "baseline": {
+            "object": [
+              0.4870244785299369,
+              0.5355656677993607,
+              0.5685088237120938,
+              0.08339781786935868
+            ],
+            "frame": [
+              0.5361189155282741,
+              0.5842148549020197,
+              0.612772465217914,
+              0.07955719016636133
+            ],
+            "zero_iou_objects_included": 32033,
+            "max_report_error": 3.3306690738754696e-15
+          },
+          "learned_gate": {
+            "object": [
+              0.526129516996122,
+              0.5806746859367133,
+              0.6133658310059656,
+              0.06561069630119004
+            ],
+            "frame": [
+              0.5727720535920882,
+              0.6259955182591567,
+              0.6547335479365767,
+              0.06322499123479391
+            ],
+            "zero_iou_objects_included": 24964,
+            "max_report_error": 1.1102230246251565e-15
+          },
+          "omama_margin005": {
+            "object": [
+              0.5168215401791935,
+              0.5755947231335815,
+              0.6072909211019363,
+              0.06518990846376022
+            ],
+            "frame": [
+              0.5634180996892664,
+              0.6206996014017419,
+              0.6484222411039139,
+              0.06211857386405359
+            ],
+            "zero_iou_objects_included": 23076,
+            "max_report_error": 3.774758283725532e-15
+          }
+        }
+      }
+    },
+    "pccs_exoexo_transfer_20260916": {
+      "annotation_sha256": "e59f0ba0d8ec08df58ed4f74bfff34bbf3dabbb9c73164958069bb10c3cd793a",
+      "expected_annotation_sha256": "e59f0ba0d8ec08df58ed4f74bfff34bbf3dabbb9c73164958069bb10c3cd793a",
+      "aggregation": "independent math.fsum; objects within pair then equal pair mean; no positive-IoU filter",
+      "raw_candidates": {
+        "pairs": 1094,
+        "objects": 1094,
+        "nonempty_pairs": true,
+        "source_files": [
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/runs/full/candidates/exo2ego/per_object.jsonl",
+            "sha256": "7cf2a0b66d4f7725f4aab7cdc99686c991f80f33deaf775c642cad8b20b17e4a"
+          }
+        ],
+        "metrics": {
+          "baseline": {
+            "object": [
+              0.3843427175014081,
+              0.43060109451899675,
+              0.49373034622449835,
+              0.11104627781073591
+            ],
+            "frame": [
+              0.3843427175014081,
+              0.43060109451899675,
+              0.49373034622449835,
+              0.11104627781073591
+            ],
+            "zero_iou_objects_included": 455,
+            "max_report_error": 2.7755575615628914e-17
+          }
+        }
+      },
+      "scored": {
+        "pairs": 1094,
+        "objects": 1094,
+        "nonempty_pairs": true,
+        "source_files": [
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/runs/full/scored/rank0.jsonl",
+            "sha256": "a449427474299b1aff4084058a41adac5bb88611319b205a997488d17f75bb76"
+          },
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/runs/full/scored/rank1.jsonl",
+            "sha256": "e8bea3f619329a0f4683083cf87a899130911940f00ec8bc57268aa8dd6f88cf"
+          },
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/runs/full/scored/rank2.jsonl",
+            "sha256": "f3d50934289a73412d9663f75c743a0eb7bb5a78e7a488c9b737fcef3720235d"
+          },
+          {
+            "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/runs/full/scored/rank3.jsonl",
+            "sha256": "96c9ac92f94fcd76116c8428e33acb9f516c4cc3f630d36650d72d8aca0186d0"
+          }
+        ],
+        "metrics": {
+          "baseline": {
+            "object": [
+              0.3843427175014081,
+              0.43060109451899675,
+              0.49373034622449835,
+              0.11104627781073591
+            ],
+            "frame": [
+              0.3843427175014081,
+              0.43060109451899675,
+              0.49373034622449835,
+              0.11104627781073591
+            ],
+            "zero_iou_objects_included": 455,
+            "max_report_error": 2.7755575615628914e-17
+          },
+          "learned_gate": {
+            "object": [
+              0.39819401369125357,
+              0.44468765347617994,
+              0.5078423638618699,
+              0.1123049330265306
+            ],
+            "frame": [
+              0.39819401369125357,
+              0.44468765347617994,
+              0.5078423638618699,
+              0.1123049330265306
+            ],
+            "zero_iou_objects_included": 431,
+            "max_report_error": 1.942890293094024e-16
+          },
+          "omama_margin005": {
+            "object": [
+              0.4009355863618943,
+              0.4515085308035747,
+              0.5175003949217659,
+              0.11054921705807201
+            ],
+            "frame": [
+              0.4009355863618943,
+              0.4515085308035747,
+              0.5175003949217659,
+              0.11054921705807201
+            ],
+            "zero_iou_objects_included": 412,
+            "max_report_error": 1.1102230246251565e-16
+          }
+        }
+      }
+    }
+  },
+  "runtime": {
+    "gpu": "index, name, memory.used [MiB], utilization.gpu [%]\n0, NVIDIA GeForce RTX 4090, 16662 MiB, 88 %\n",
+    "gpu_processes": "pid, process_name, used_gpu_memory [MiB]\n2491973, [Not Found], 8644 MiB\n2543293, [Not Found], 1974 MiB\n2547677, [Not Found], 1974 MiB\n2552603, [Not Found], 1974 MiB\n2562282, [Not Found], 1974 MiB\n",
+    "python": "Python 3.10.21"
+  },
+  "metric_function_ast_equal": {
+    "compute_metrics": true,
+    "compute_boundary_f_measure": true,
+    "compute_location_score": true,
+    "_seg2bmap": true
+  },
+  "weights": {
+    "visual": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/vp_exo2ego_full.pth",
+      "bytes": 920070698,
+      "sha256": "55761ff44fb4fbeba219664a6677e6f745bb87d280d9fc75187134c3f0e13375"
+    },
+    "fusion": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/fusion_exo2ego_full.pth",
+      "bytes": 2132087187,
+      "sha256": "a4a09371d80ba1096bec4407eefaf3a286a422a25f4e83f99925c4502a681cf1"
+    },
+    "dinov3": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth",
+      "bytes": 1213050671,
+      "sha256": "8aa4cbddda325040fc78db2c272754af6ebe8ff2c55f6ec4f1964d8890f66035"
+    }
+  }
+}
