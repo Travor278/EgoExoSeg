@@ -13,6 +13,9 @@ parts=['# V2-SAM PCCS／O-MaMa 实验总报告','','> 唯一总报告；具体�
 '- 修复版权重Exo→Exo的预先指定主方案native-margin已获得正的95%序列bootstrap区间；几何一致方案点估计更高，但它是次要对照，未证明显著优于其他改进方法。',
 '- “稳定”在这里指当前基准上主比较的统计证据，不是保证每个对象、每个随机种子或所有新场景都涨点。',
 '','### 1.1 全量 frame-level 指标','','IoU／Dice／ContA 为百分数，LocE 为原始归一化距离（越低越好）。置信区间对应 **IoU 增益，单位百分点**。']
+if sources[-1][1].exists():
+ latest=load(sources[-1][1]);primary=latest['paired_comparison']['geometry_consensus'];ci=primary['paired_take_bootstrap_95ci_pp']
+ parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 修复版权重Exo→Ego全量已完成：预先指定的几何一致性主方案IoU {latest['methods']['baseline']['frame']['IoU']*100:.4f}→{latest['methods']['geometry_consensus']['frame']['IoU']*100:.4f}，+{primary['delta_frame_iou_pp']:.4f}点，95%区间[{ci[0]:.4f}, {ci[1]:.4f}]。这轮canonical/native的数值非常接近，不应当成两份独立重复证据。")
 completed={}
 for title,p in sources:
  parts+=['',f'#### {title}','']
@@ -105,5 +108,11 @@ parts+=['','独立确认：作者权重下的512对／965对象／64序列holdou
 '| `../pccs_method/v2sam_pccs_gain.patch`（Git分支中） | 相对固定上游的可审阅候选生成补丁 |',
 '','GitHub：[Travor278/EgoExoSeg，pccs-omama-gain-20260916](https://github.com/Travor278/EgoExoSeg/tree/pccs-omama-gain-20260916)。代码、原始日志和哈希记录同步该分支；大型权重、图像和mask bank不入Git。O-MaMa相关适配保留AGPL-3.0来源与许可；DINOv2遵循其原许可。',
 '','运行沿用已审计的Python3.10.21／PyTorch2.3.1+cu121及任务专用依赖。四卡预检通过才跑全量；成功后核验平台状态和占用节点0。监督间隔按当前有效ETA的4/5动态调整，阶段切换或无可信ETA用5分钟。新结果只在覆盖和回执通过后更新§1；不得覆盖详细原理或改写历史基线。']
+parts+=['','### 7.1 运行收尾记录','','| 任务 | 结束时间（北京时间） | 占用节点 |','|---|---|---:|']
+for folder in ('pccs_gain_full_20260915','pccs_exoexo_transfer_20260916','pccs_corrected_exoexo_20260916','pccs_corrected_exoego_20260916'):
+ p=O/folder/'resource_release.json'
+ if not p.exists():continue
+ rr=load(p);cells=rr.get('cells',[])
+ if len(cells)>9:parts.append(f"| {cells[0]} | {cells[9]} | {cells[7]} |")
 report.write_text('\n'.join(parts)+'\n',encoding='utf8');assert report.read_text(encoding='utf8').count('```')%2==0
 print(json.dumps({'report':str(report),'characters':len(report.read_text(encoding='utf8')),'completed_sections':list(completed),'sha256':hashlib.sha256(report.read_bytes()).hexdigest()},ensure_ascii=False))

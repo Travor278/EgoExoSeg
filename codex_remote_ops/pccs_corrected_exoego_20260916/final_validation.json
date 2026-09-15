@@ -1,0 +1,17 @@
+{
+  "state": "passed",
+  "pairs": 46515,
+  "objects": 109253,
+  "takes": 295,
+  "primary_method": "geometry_consensus",
+  "primary_comparison": {
+    "delta_frame_iou_pp": 2.738791657560696,
+    "paired_take_bootstrap_95ci_pp": [
+      1.9555938636055405,
+      3.6699759293045227
+    ]
+  },
+  "maximum_cache_iou_error": 3.2203452016155154e-08,
+  "occupied_nodes": 0,
+  "results_sha256": "3044551d52bc67075e541c0817390ca0723c1a23f7338a86a4c9bf77c0096554"
+}

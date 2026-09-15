@@ -1,16 +1,14 @@
 {
-  "state": "running",
-  "phase": "candidate_generation",
-  "rank0_batches_done": 130,
-  "rank0_batches_total": 11629,
+  "state": "complete",
+  "phase": "complete",
+  "eta_seconds": 0,
   "gpus": [
     0,
     1,
     2,
     3
   ],
-  "eta_seconds": 19011,
   "stage": "full",
-  "updated_at": 1789496142.9344096,
+  "updated_at": 1789515770.724739,
   "pid": 3504
 }

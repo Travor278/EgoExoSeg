@@ -47,13 +47,13 @@
     },
     {
       "file": "codex_remote_ops/pccs_corrected_exoego_20260916/job_receipt.json",
-      "sha256": "599b66eb2e2131ef73f2699f5e7ea74156ec6b1218334ba247dd866b054b630f",
-      "bytes": 779
+      "sha256": "e08fdc7267de14c1b0c073e67f45227c505c2ee30335c47577a8bc2ac1432ecd",
+      "bytes": 1031
     },
     {
       "file": "codex_remote_ops/pccs_corrected_exoego_20260916/status.json",
-      "sha256": "ebde57a8df14deb2811128a74184927e7f6c98a838e09ca9a9dfc6647b216c0e",
-      "bytes": 273
+      "sha256": "62979e01a9c0da766cf8fdff80c135a1d7da1f887a7d3d0f7970d4fd900b1569",
+      "bytes": 181
     },
     {
       "file": "codex_remote_ops/pccs_corrected_exoego_20260916/finalize.py",
@@ -66,9 +66,69 @@
       "bytes": 1385
     },
     {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/final_validation.json",
+      "sha256": "94a080629d5025d74c600b9c4f10536bd279e0d98f45608fecca3dd5884888d8",
+      "bytes": 472
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/resource_release.json",
+      "sha256": "fb85404e9060f3678dafbb1180b7f1ff890a164f1c0ade6460614aa25dfe7627",
+      "bytes": 516
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/candidate_receipts.json",
+      "sha256": "1b72f1904e67c6ddc74c42b5d918dd6fe0c5ce47abc414389fef008107b6769c",
+      "bytes": 126
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/results.json",
+      "sha256": "3044551d52bc67075e541c0817390ca0723c1a23f7338a86a4c9bf77c0096554",
+      "bytes": 19152
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/REPORT.md",
+      "sha256": "957b899fc92e60585ce2f6b68d41cf33f53af09c54fa09f11998c2ff05386ec5",
+      "bytes": 1003
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/gpu_after.txt",
+      "sha256": "cae79969ce448872401f5d9bcd1d52bbefa1a5450cf3a5658f62f068ab59294b",
+      "bytes": 41
+    },
+    {
       "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/preflight_resources.txt",
       "sha256": "931fae26f8a85b6dc1be739c47b74a80613713e692b051ebc423c6ee8f2e3888",
       "bytes": 269
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/candidate_generation.log",
+      "sha256": "62256c8a8e9009e5b655ebc702d143f339367779989cd6ce4a8d7e84bc448789",
+      "bytes": 214636
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/scoring_rank0.log",
+      "sha256": "16843c4f036695fe3b3e1677f5f6a25254be09676e53bdfda1a8919a64f2d706",
+      "bytes": 763
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/scoring_rank1.log",
+      "sha256": "16843c4f036695fe3b3e1677f5f6a25254be09676e53bdfda1a8919a64f2d706",
+      "bytes": 763
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/scoring_rank2.log",
+      "sha256": "16843c4f036695fe3b3e1677f5f6a25254be09676e53bdfda1a8919a64f2d706",
+      "bytes": 763
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/scoring_rank3.log",
+      "sha256": "16843c4f036695fe3b3e1677f5f6a25254be09676e53bdfda1a8919a64f2d706",
+      "bytes": 763
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/summarize.log",
+      "sha256": "43b8ff3e1162e12e0886ed15140566bd57306bf9a1b295bc30a8f22de508ed7a",
+      "bytes": 642
     },
     {
       "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/smokeH100/candidate_receipts.json",
@@ -82,13 +142,13 @@
     },
     {
       "file": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "b5dce317798b61c4362090bc8e1016c7e622439fc6cdf051d3199c8d75fc598e",
-      "bytes": 18549
+      "sha256": "493c6813f0da3fc3afd65b87db414ceda69d0575174f27f258f86421c58447ba",
+      "bytes": 20174
     },
     {
       "file": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
-      "sha256": "35764c0f7be515432808887035a5229b765c6cb8f0e09a44b8747275e29a0e29",
-      "bytes": 19577
+      "sha256": "fc7504b0c897b9fa6133c7b21cd92ef6017222dcd37cd912d682b4b0672e767a",
+      "bytes": 20623
     }
   ]
 }

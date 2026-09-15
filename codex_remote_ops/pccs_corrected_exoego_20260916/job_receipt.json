@@ -14,9 +14,18 @@
   "success_retention_minutes": 1,
   "failure_retention_minutes": 1,
   "image": "ngc-pytorch:25.02-cuda12.8.0-py3",
-  "status": "full_running_after_four_rank_smoke",
+  "status": "succeeded",
   "pairs": 46515,
   "objects": 109253,
   "primary": "geometry_consensus",
-  "summary_report": "../pccs_gain_full_20260915/FINAL_REPORT.md"
+  "summary_report": "../pccs_gain_full_20260915/FINAL_REPORT.md",
+  "finished_at": "2026-09-16 07:43:55",
+  "occupied_nodes_after_completion": 0,
+  "primary_result": {
+    "delta_frame_iou_pp": 2.738791657560696,
+    "paired_take_bootstrap_95ci_pp": [
+      1.9555938636055405,
+      3.6699759293045227
+    ]
+  }
 }
