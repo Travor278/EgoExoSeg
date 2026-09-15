@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/run_stage.py", line 54, in <module>
+    if __name__=='__main__':main()
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/run_stage.py", line 18, in main
+    if gpu.strip():raise RuntimeError('GPU compute processes already active; do not interfere')
+RuntimeError: GPU compute processes already active; do not interfere

@@ -1,0 +1,22 @@
+{
+  "state": "complete",
+  "rank": 1,
+  "objects": 27313,
+  "cache_metric_max_error": 3.1305085634869556e-08,
+  "output_sha256": "feb5f2d49a8bbcb73e57fdb36ebca2ad2c4fc2330205c488e4ce52d6e2959322",
+  "checkpoint_sha256": "f79543baa14e81ebc83fa3bb7458e0940e405afe31a556fb612281c6aa0d2678",
+  "load_receipts": {
+    "exo2ego": {
+      "missing": [],
+      "unexpected": [],
+      "loaded_keys": 32,
+      "position_tables_swapped": false
+    },
+    "ego2exo": {
+      "missing": [],
+      "unexpected": [],
+      "loaded_keys": 32,
+      "position_tables_swapped": true
+    }
+  }
+}

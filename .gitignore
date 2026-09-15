@@ -11,6 +11,10 @@ __pycache__/
 
 # ---- logs, transfer state and packaged artifacts ----
 *.log
+# Reviewed PCCS experiment logs are intentionally versioned.
+!codex_remote_ops/pccs_gain_full_20260915/runs/**/*.log
+!codex_remote_ops/pccs_gain_20260915/gate_training/**/*.log
+!codex_remote_ops/pccs_exoexo_transfer_20260916/**/*.log
 *.pid
 *.status
 *.partial

@@ -1,0 +1,1292 @@
+{
+  "primary": {
+    "exo2ego": {
+      "dataset": "exo2ego",
+      "scope": "exploratory fixed 64-pair V2-SAM candidate bank; not a FastSAM/full O-MaMa benchmark reproduction",
+      "pretrained_head_direction": "exo2ego",
+      "direction_transfer": false,
+      "position_tables_swapped": false,
+      "pairs": 64,
+      "objects": 132,
+      "coverage": "exact",
+      "candidate_bank_frozen": true,
+      "test_label_fitting": false,
+      "modes": {
+        "canonical": "Resize into original learned positional grids",
+        "native_interp": "Keep aspect ratio, max side1024/floor14; bilinear interpolation of learned position tables"
+      },
+      "methods": {
+        "baseline": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4483282670079544,
+            "Dice": 0.49283747435412917,
+            "ContA": 0.5362357421023293,
+            "LocE": 0.09640845291993742
+          },
+          "frame": {
+            "IoU": 0.46297268147403725,
+            "Dice": 0.5048274264029342,
+            "ContA": 0.5442077478502001,
+            "LocE": 0.10439184314027397
+          },
+          "changed": 0,
+          "improved": 0,
+          "harmed": 0,
+          "iou_unchanged_after_switch": 0,
+          "reasons": {
+            "baseline": 132
+          }
+        },
+        "canonical/dino2_object": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4293042229934751,
+            "Dice": 0.4821166248099568,
+            "ContA": 0.5168434729789507,
+            "LocE": 0.08727678839514841
+          },
+          "frame": {
+            "IoU": 0.45301444011595543,
+            "Dice": 0.5008639927829349,
+            "ContA": 0.5326035414837517,
+            "LocE": 0.09327596706866954
+          },
+          "changed": 76,
+          "improved": 26,
+          "harmed": 36,
+          "iou_unchanged_after_switch": 14,
+          "reasons": {
+            "baseline_retained": 56,
+            "learned_or_descriptor_selection": 76
+          }
+        },
+        "canonical/dino2_object_context": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.43782904257166205,
+            "Dice": 0.4932177145405369,
+            "ContA": 0.5295224384011394,
+            "LocE": 0.08760065444500324
+          },
+          "frame": {
+            "IoU": 0.4608467475836299,
+            "Dice": 0.5134075021437956,
+            "ContA": 0.5481052367202729,
+            "LocE": 0.09233390283480591
+          },
+          "changed": 82,
+          "improved": 28,
+          "harmed": 39,
+          "iou_unchanged_after_switch": 15,
+          "reasons": {
+            "baseline_retained": 50,
+            "learned_or_descriptor_selection": 82
+          }
+        },
+        "canonical/omama_top1": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4878952061320006,
+            "Dice": 0.549707335873267,
+            "ContA": 0.5841681163866151,
+            "LocE": 0.07604255832982836
+          },
+          "frame": {
+            "IoU": 0.518777261699385,
+            "Dice": 0.5795463256538576,
+            "ContA": 0.6113260754792004,
+            "LocE": 0.07231971524842684
+          },
+          "changed": 87,
+          "improved": 34,
+          "harmed": 39,
+          "iou_unchanged_after_switch": 14,
+          "reasons": {
+            "baseline_retained": 45,
+            "learned_or_descriptor_selection": 87
+          }
+        },
+        "canonical/omama_quality_top1": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4893675997639851,
+            "Dice": 0.5358801182133682,
+            "ContA": 0.5756513318523601,
+            "LocE": 0.08523309232100133
+          },
+          "frame": {
+            "IoU": 0.5237012847696777,
+            "Dice": 0.5688244921530097,
+            "ContA": 0.6035318200449226,
+            "LocE": 0.0841685408466137
+          },
+          "changed": 52,
+          "improved": 21,
+          "harmed": 22,
+          "iou_unchanged_after_switch": 9,
+          "reasons": {
+            "baseline_retained": 80,
+            "learned_or_descriptor_selection": 52
+          }
+        },
+        "canonical/omama_margin005": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.48770760969615146,
+            "Dice": 0.5485327557067979,
+            "ContA": 0.585969078932765,
+            "LocE": 0.07619142174430187
+          },
+          "frame": {
+            "IoU": 0.525162250955691,
+            "Dice": 0.5842685890920675,
+            "ContA": 0.6178806944938399,
+            "LocE": 0.0718902522532206
+          },
+          "changed": 50,
+          "improved": 22,
+          "harmed": 18,
+          "iou_unchanged_after_switch": 10,
+          "reasons": {
+            "baseline_retained": 82,
+            "learned_or_descriptor_selection": 50
+          }
+        },
+        "canonical/omama_quality_margin005": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.47933339717829687,
+            "Dice": 0.5260116244934386,
+            "ContA": 0.5665533991937372,
+            "LocE": 0.08724729169302615
+          },
+          "frame": {
+            "IoU": 0.5127071406514225,
+            "Dice": 0.5587301073509894,
+            "ContA": 0.5944682730102406,
+            "LocE": 0.08680228317796704
+          },
+          "changed": 18,
+          "improved": 8,
+          "harmed": 6,
+          "iou_unchanged_after_switch": 4,
+          "reasons": {
+            "baseline_retained": 114,
+            "learned_or_descriptor_selection": 18
+          }
+        },
+        "native_interp/dino2_object": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4293042229934751,
+            "Dice": 0.4821166248099568,
+            "ContA": 0.5168434729789507,
+            "LocE": 0.08621732248245881
+          },
+          "frame": {
+            "IoU": 0.45301444011595543,
+            "Dice": 0.5008639927829349,
+            "ContA": 0.5326035414837517,
+            "LocE": 0.09254758425369544
+          },
+          "changed": 77,
+          "improved": 26,
+          "harmed": 36,
+          "iou_unchanged_after_switch": 15,
+          "reasons": {
+            "baseline_retained": 55,
+            "learned_or_descriptor_selection": 77
+          }
+        },
+        "native_interp/dino2_object_context": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.43782904257166205,
+            "Dice": 0.4932177145405369,
+            "ContA": 0.5295224384011394,
+            "LocE": 0.08654118853231364
+          },
+          "frame": {
+            "IoU": 0.4608467475836299,
+            "Dice": 0.5134075021437956,
+            "ContA": 0.5481052367202729,
+            "LocE": 0.09160552001983181
+          },
+          "changed": 83,
+          "improved": 28,
+          "harmed": 39,
+          "iou_unchanged_after_switch": 16,
+          "reasons": {
+            "baseline_retained": 49,
+            "learned_or_descriptor_selection": 83
+          }
+        },
+        "native_interp/omama_top1": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4878952061320006,
+            "Dice": 0.549707335873267,
+            "ContA": 0.5841681163866151,
+            "LocE": 0.07604255832982836
+          },
+          "frame": {
+            "IoU": 0.518777261699385,
+            "Dice": 0.5795463256538576,
+            "ContA": 0.6113260754792004,
+            "LocE": 0.07231971524842684
+          },
+          "changed": 87,
+          "improved": 34,
+          "harmed": 39,
+          "iou_unchanged_after_switch": 14,
+          "reasons": {
+            "baseline_retained": 45,
+            "learned_or_descriptor_selection": 87
+          }
+        },
+        "native_interp/omama_quality_top1": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4893675997639851,
+            "Dice": 0.5358801182133682,
+            "ContA": 0.5756513318523601,
+            "LocE": 0.08523309232100133
+          },
+          "frame": {
+            "IoU": 0.5237012847696777,
+            "Dice": 0.5688244921530097,
+            "ContA": 0.6035318200449226,
+            "LocE": 0.0841685408466137
+          },
+          "changed": 52,
+          "improved": 21,
+          "harmed": 22,
+          "iou_unchanged_after_switch": 9,
+          "reasons": {
+            "baseline_retained": 80,
+            "learned_or_descriptor_selection": 52
+          }
+        },
+        "native_interp/omama_margin005": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.48770760969615146,
+            "Dice": 0.5485327557067979,
+            "ContA": 0.585969078932765,
+            "LocE": 0.07619142174430187
+          },
+          "frame": {
+            "IoU": 0.525162250955691,
+            "Dice": 0.5842685890920675,
+            "ContA": 0.6178806944938399,
+            "LocE": 0.0718902522532206
+          },
+          "changed": 50,
+          "improved": 22,
+          "harmed": 18,
+          "iou_unchanged_after_switch": 10,
+          "reasons": {
+            "baseline_retained": 82,
+            "learned_or_descriptor_selection": 50
+          }
+        },
+        "native_interp/omama_quality_margin005": {
+          "objects": 132,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.47933339717829687,
+            "Dice": 0.5260116244934386,
+            "ContA": 0.5665533991937372,
+            "LocE": 0.08724729169302615
+          },
+          "frame": {
+            "IoU": 0.5127071406514225,
+            "Dice": 0.5587301073509894,
+            "ContA": 0.5944682730102406,
+            "LocE": 0.08680228317796704
+          },
+          "changed": 18,
+          "improved": 8,
+          "harmed": 6,
+          "iou_unchanged_after_switch": 4,
+          "reasons": {
+            "baseline_retained": 114,
+            "learned_or_descriptor_selection": 18
+          }
+        }
+      },
+      "per_object_sha256": "2a600b8351b50d830aecee5875a039758bb86f604f1e9fd2458ed948f79e7920"
+    },
+    "exo2exo": {
+      "dataset": "exo2exo",
+      "scope": "exploratory fixed 64-pair V2-SAM candidate bank; not a FastSAM/full O-MaMa benchmark reproduction",
+      "pretrained_head_direction": "exo2ego",
+      "direction_transfer": true,
+      "position_tables_swapped": false,
+      "pairs": 64,
+      "objects": 64,
+      "coverage": "exact",
+      "candidate_bank_frozen": true,
+      "test_label_fitting": false,
+      "modes": {
+        "canonical": "Resize into original learned positional grids",
+        "native_interp": "Keep aspect ratio, max side1024/floor14; bilinear interpolation of learned position tables"
+      },
+      "methods": {
+        "baseline": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.35461637373737176,
+            "Dice": 0.4021715832859627,
+            "ContA": 0.4490637819092575,
+            "LocE": 0.11295582223964133
+          },
+          "frame": {
+            "IoU": 0.35461637373737176,
+            "Dice": 0.4021715832859627,
+            "ContA": 0.4490637819092575,
+            "LocE": 0.11295582223964133
+          },
+          "changed": 0,
+          "improved": 0,
+          "harmed": 0,
+          "iou_unchanged_after_switch": 0,
+          "reasons": {
+            "baseline": 64
+          }
+        },
+        "canonical/dino2_object": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.35406985060399165,
+            "Dice": 0.39929450507770525,
+            "ContA": 0.4426916069348563,
+            "LocE": 0.1138994219589258
+          },
+          "frame": {
+            "IoU": 0.35406985060399165,
+            "Dice": 0.39929450507770525,
+            "ContA": 0.4426916069348563,
+            "LocE": 0.1138994219589258
+          },
+          "changed": 35,
+          "improved": 11,
+          "harmed": 10,
+          "iou_unchanged_after_switch": 14,
+          "reasons": {
+            "learned_or_descriptor_selection": 35,
+            "baseline_retained": 29
+          }
+        },
+        "canonical/dino2_object_context": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.35234973506157985,
+            "Dice": 0.3980616388798808,
+            "ContA": 0.44540090724478654,
+            "LocE": 0.114968831767608
+          },
+          "frame": {
+            "IoU": 0.35234973506157985,
+            "Dice": 0.3980616388798808,
+            "ContA": 0.44540090724478654,
+            "LocE": 0.114968831767608
+          },
+          "changed": 37,
+          "improved": 12,
+          "harmed": 11,
+          "iou_unchanged_after_switch": 14,
+          "reasons": {
+            "learned_or_descriptor_selection": 37,
+            "baseline_retained": 27
+          }
+        },
+        "canonical/omama_top1": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.3105249252439535,
+            "Dice": 0.35565725056585507,
+            "ContA": 0.41073237804394835,
+            "LocE": 0.12384235752146494
+          },
+          "frame": {
+            "IoU": 0.3105249252439535,
+            "Dice": 0.35565725056585507,
+            "ContA": 0.41073237804394835,
+            "LocE": 0.12384235752146494
+          },
+          "changed": 35,
+          "improved": 7,
+          "harmed": 11,
+          "iou_unchanged_after_switch": 17,
+          "reasons": {
+            "learned_or_descriptor_selection": 35,
+            "baseline_retained": 29
+          }
+        },
+        "canonical/omama_quality_top1": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.3407528916904994,
+            "Dice": 0.3887775767580024,
+            "ContA": 0.4355520560258467,
+            "LocE": 0.11683230665376403
+          },
+          "frame": {
+            "IoU": 0.3407528916904994,
+            "Dice": 0.3887775767580024,
+            "ContA": 0.4355520560258467,
+            "LocE": 0.11683230665376403
+          },
+          "changed": 19,
+          "improved": 4,
+          "harmed": 7,
+          "iou_unchanged_after_switch": 8,
+          "reasons": {
+            "learned_or_descriptor_selection": 19,
+            "baseline_retained": 45
+          }
+        },
+        "canonical/omama_margin005": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.3145333658940217,
+            "Dice": 0.35654701776002184,
+            "ContA": 0.40503045719539477,
+            "LocE": 0.11627111353955469
+          },
+          "frame": {
+            "IoU": 0.3145333658940217,
+            "Dice": 0.35654701776002184,
+            "ContA": 0.40503045719539477,
+            "LocE": 0.11627111353955469
+          },
+          "changed": 23,
+          "improved": 4,
+          "harmed": 5,
+          "iou_unchanged_after_switch": 14,
+          "reasons": {
+            "baseline_retained": 41,
+            "learned_or_descriptor_selection": 23
+          }
+        },
+        "canonical/omama_quality_margin005": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.3443255205238529,
+            "Dice": 0.3908129543051473,
+            "ContA": 0.43687068574984544,
+            "LocE": 0.11685983825180966
+          },
+          "frame": {
+            "IoU": 0.3443255205238529,
+            "Dice": 0.3908129543051473,
+            "ContA": 0.43687068574984544,
+            "LocE": 0.11685983825180966
+          },
+          "changed": 9,
+          "improved": 1,
+          "harmed": 1,
+          "iou_unchanged_after_switch": 7,
+          "reasons": {
+            "baseline_retained": 55,
+            "learned_or_descriptor_selection": 9
+          }
+        },
+        "native_interp/dino2_object": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.33168422990638646,
+            "Dice": 0.37510739333811216,
+            "ContA": 0.4207391757811219,
+            "LocE": 0.11478416300574584
+          },
+          "frame": {
+            "IoU": 0.33168422990638646,
+            "Dice": 0.37510739333811216,
+            "ContA": 0.4207391757811219,
+            "LocE": 0.11478416300574584
+          },
+          "changed": 34,
+          "improved": 10,
+          "harmed": 9,
+          "iou_unchanged_after_switch": 15,
+          "reasons": {
+            "learned_or_descriptor_selection": 34,
+            "baseline_retained": 30
+          }
+        },
+        "native_interp/dino2_object_context": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.3313403017928067,
+            "Dice": 0.37265341679449193,
+            "ContA": 0.421149959857321,
+            "LocE": 0.1234690081792698
+          },
+          "frame": {
+            "IoU": 0.3313403017928067,
+            "Dice": 0.37265341679449193,
+            "ContA": 0.421149959857321,
+            "LocE": 0.1234690081792698
+          },
+          "changed": 34,
+          "improved": 10,
+          "harmed": 10,
+          "iou_unchanged_after_switch": 14,
+          "reasons": {
+            "learned_or_descriptor_selection": 34,
+            "baseline_retained": 30
+          }
+        },
+        "native_interp/omama_top1": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.32014801378682023,
+            "Dice": 0.3618124817403441,
+            "ContA": 0.41026600480418884,
+            "LocE": 0.10742674715220082
+          },
+          "frame": {
+            "IoU": 0.32014801378682023,
+            "Dice": 0.3618124817403441,
+            "ContA": 0.41026600480418884,
+            "LocE": 0.10742674715220082
+          },
+          "changed": 31,
+          "improved": 10,
+          "harmed": 7,
+          "iou_unchanged_after_switch": 14,
+          "reasons": {
+            "learned_or_descriptor_selection": 31,
+            "baseline_retained": 33
+          }
+        },
+        "native_interp/omama_quality_top1": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.34487994523442467,
+            "Dice": 0.39111223202053225,
+            "ContA": 0.4375111675286003,
+            "LocE": 0.10905260207055674
+          },
+          "frame": {
+            "IoU": 0.34487994523442467,
+            "Dice": 0.39111223202053225,
+            "ContA": 0.4375111675286003,
+            "LocE": 0.10905260207055674
+          },
+          "changed": 17,
+          "improved": 6,
+          "harmed": 3,
+          "iou_unchanged_after_switch": 8,
+          "reasons": {
+            "learned_or_descriptor_selection": 17,
+            "baseline_retained": 47
+          }
+        },
+        "native_interp/omama_margin005": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.3044001746966387,
+            "Dice": 0.3442997052006831,
+            "ContA": 0.39403102804981005,
+            "LocE": 0.11280154183874955
+          },
+          "frame": {
+            "IoU": 0.3044001746966387,
+            "Dice": 0.3442997052006831,
+            "ContA": 0.39403102804981005,
+            "LocE": 0.11280154183874955
+          },
+          "changed": 20,
+          "improved": 3,
+          "harmed": 5,
+          "iou_unchanged_after_switch": 12,
+          "reasons": {
+            "baseline_retained": 44,
+            "learned_or_descriptor_selection": 20
+          }
+        },
+        "native_interp/omama_quality_margin005": {
+          "objects": 64,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.3443255205238529,
+            "Dice": 0.3908129543051473,
+            "ContA": 0.4390479398482061,
+            "LocE": 0.10912644494147423
+          },
+          "frame": {
+            "IoU": 0.3443255205238529,
+            "Dice": 0.3908129543051473,
+            "ContA": 0.4390479398482061,
+            "LocE": 0.10912644494147423
+          },
+          "changed": 7,
+          "improved": 1,
+          "harmed": 1,
+          "iou_unchanged_after_switch": 5,
+          "reasons": {
+            "baseline_retained": 57,
+            "learned_or_descriptor_selection": 7
+          }
+        }
+      },
+      "per_object_sha256": "5052def185cb13dea792164ef0016787c8a34305e97955e6f9e242376a50220e"
+    },
+    "ego2exo": {
+      "dataset": "ego2exo",
+      "scope": "exploratory fixed 64-pair V2-SAM candidate bank; not a FastSAM/full O-MaMa benchmark reproduction",
+      "pretrained_head_direction": "exo2ego",
+      "direction_transfer": true,
+      "position_tables_swapped": true,
+      "pairs": 64,
+      "objects": 150,
+      "coverage": "exact",
+      "candidate_bank_frozen": true,
+      "test_label_fitting": false,
+      "modes": {
+        "canonical": "Resize into original learned positional grids",
+        "native_interp": "Keep aspect ratio, max side1024/floor14; bilinear interpolation of learned position tables"
+      },
+      "methods": {
+        "baseline": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4822366079570687,
+            "Dice": 0.5353490393154788,
+            "ContA": 0.5917432717466613,
+            "LocE": 0.07916682737445119
+          },
+          "frame": {
+            "IoU": 0.5409758210008603,
+            "Dice": 0.598833838192312,
+            "ContA": 0.6551548343282342,
+            "LocE": 0.07033681421811791
+          },
+          "changed": 0,
+          "improved": 0,
+          "harmed": 0,
+          "iou_unchanged_after_switch": 0,
+          "reasons": {
+            "baseline": 150
+          }
+        },
+        "canonical/dino2_object": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4673731508812246,
+            "Dice": 0.522906601295496,
+            "ContA": 0.5914792174866528,
+            "LocE": 0.08458018555663044
+          },
+          "frame": {
+            "IoU": 0.5187647434544361,
+            "Dice": 0.5772459012006987,
+            "ContA": 0.6460466937235235,
+            "LocE": 0.07652004777178618
+          },
+          "changed": 87,
+          "improved": 28,
+          "harmed": 40,
+          "iou_unchanged_after_switch": 19,
+          "reasons": {
+            "learned_or_descriptor_selection": 87,
+            "baseline_retained": 63
+          }
+        },
+        "canonical/dino2_object_context": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4503814825376806,
+            "Dice": 0.5026933247502893,
+            "ContA": 0.5693783279424302,
+            "LocE": 0.09256979370490864
+          },
+          "frame": {
+            "IoU": 0.5056980931249679,
+            "Dice": 0.5600399483011682,
+            "ContA": 0.6246817981011253,
+            "LocE": 0.08227372629783632
+          },
+          "changed": 85,
+          "improved": 26,
+          "harmed": 42,
+          "iou_unchanged_after_switch": 17,
+          "reasons": {
+            "learned_or_descriptor_selection": 85,
+            "baseline_retained": 65
+          }
+        },
+        "canonical/omama_top1": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.47483323320435983,
+            "Dice": 0.5345781283072817,
+            "ContA": 0.6126928408598541,
+            "LocE": 0.06713405003958169
+          },
+          "frame": {
+            "IoU": 0.5092487409306454,
+            "Dice": 0.5725393723817311,
+            "ContA": 0.6516114370702112,
+            "LocE": 0.06060791562473971
+          },
+          "changed": 88,
+          "improved": 31,
+          "harmed": 34,
+          "iou_unchanged_after_switch": 23,
+          "reasons": {
+            "learned_or_descriptor_selection": 88,
+            "baseline_retained": 62
+          }
+        },
+        "canonical/omama_quality_top1": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.49172041851949566,
+            "Dice": 0.5491797922862073,
+            "ContA": 0.6133406357715395,
+            "LocE": 0.06810279779442635
+          },
+          "frame": {
+            "IoU": 0.5330340731693677,
+            "Dice": 0.5946058727483223,
+            "ContA": 0.6554848587919746,
+            "LocE": 0.06415610945194351
+          },
+          "changed": 73,
+          "improved": 24,
+          "harmed": 27,
+          "iou_unchanged_after_switch": 22,
+          "reasons": {
+            "baseline_retained": 77,
+            "learned_or_descriptor_selection": 73
+          }
+        },
+        "canonical/omama_margin005": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4922938007492727,
+            "Dice": 0.5502556227015641,
+            "ContA": 0.6221120056546158,
+            "LocE": 0.06701545307493091
+          },
+          "frame": {
+            "IoU": 0.5395706641055023,
+            "Dice": 0.6004391886259508,
+            "ContA": 0.6679959340645697,
+            "LocE": 0.06284636176167462
+          },
+          "changed": 38,
+          "improved": 13,
+          "harmed": 6,
+          "iou_unchanged_after_switch": 19,
+          "reasons": {
+            "baseline_retained": 112,
+            "learned_or_descriptor_selection": 38
+          }
+        },
+        "canonical/omama_quality_margin005": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.49299428081683194,
+            "Dice": 0.5487319570655624,
+            "ContA": 0.6144148578905919,
+            "LocE": 0.0682024984456522
+          },
+          "frame": {
+            "IoU": 0.5383358646240759,
+            "Dice": 0.5971318455382242,
+            "ContA": 0.6589703553632856,
+            "LocE": 0.064256491928887
+          },
+          "changed": 32,
+          "improved": 9,
+          "harmed": 5,
+          "iou_unchanged_after_switch": 18,
+          "reasons": {
+            "baseline_retained": 118,
+            "learned_or_descriptor_selection": 32
+          }
+        },
+        "native_interp/dino2_object": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4673731508812246,
+            "Dice": 0.522906601295496,
+            "ContA": 0.5914792174866528,
+            "LocE": 0.08458018555663044
+          },
+          "frame": {
+            "IoU": 0.5187647434544361,
+            "Dice": 0.5772459012006987,
+            "ContA": 0.6460466937235235,
+            "LocE": 0.07652004777178618
+          },
+          "changed": 87,
+          "improved": 28,
+          "harmed": 40,
+          "iou_unchanged_after_switch": 19,
+          "reasons": {
+            "learned_or_descriptor_selection": 87,
+            "baseline_retained": 63
+          }
+        },
+        "native_interp/dino2_object_context": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4503814825376806,
+            "Dice": 0.5026933247502893,
+            "ContA": 0.5693783279424302,
+            "LocE": 0.09256979370490864
+          },
+          "frame": {
+            "IoU": 0.5056980931249679,
+            "Dice": 0.5600399483011682,
+            "ContA": 0.6246817981011253,
+            "LocE": 0.08227372629783632
+          },
+          "changed": 85,
+          "improved": 26,
+          "harmed": 42,
+          "iou_unchanged_after_switch": 17,
+          "reasons": {
+            "learned_or_descriptor_selection": 85,
+            "baseline_retained": 65
+          }
+        },
+        "native_interp/omama_top1": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.47483323320435983,
+            "Dice": 0.5345781283072817,
+            "ContA": 0.6126928408598541,
+            "LocE": 0.06713405003958169
+          },
+          "frame": {
+            "IoU": 0.5092487409306454,
+            "Dice": 0.5725393723817311,
+            "ContA": 0.6516114370702112,
+            "LocE": 0.06060791562473971
+          },
+          "changed": 88,
+          "improved": 31,
+          "harmed": 34,
+          "iou_unchanged_after_switch": 23,
+          "reasons": {
+            "learned_or_descriptor_selection": 88,
+            "baseline_retained": 62
+          }
+        },
+        "native_interp/omama_quality_top1": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.49172041851949566,
+            "Dice": 0.5491797922862073,
+            "ContA": 0.6133406357715395,
+            "LocE": 0.06810279779442635
+          },
+          "frame": {
+            "IoU": 0.5330340731693677,
+            "Dice": 0.5946058727483223,
+            "ContA": 0.6554848587919746,
+            "LocE": 0.06415610945194351
+          },
+          "changed": 73,
+          "improved": 24,
+          "harmed": 27,
+          "iou_unchanged_after_switch": 22,
+          "reasons": {
+            "baseline_retained": 77,
+            "learned_or_descriptor_selection": 73
+          }
+        },
+        "native_interp/omama_margin005": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.4922938007492727,
+            "Dice": 0.5502556227015641,
+            "ContA": 0.6221120056546158,
+            "LocE": 0.06701545307493091
+          },
+          "frame": {
+            "IoU": 0.5395706641055023,
+            "Dice": 0.6004391886259508,
+            "ContA": 0.6679959340645697,
+            "LocE": 0.06284636176167462
+          },
+          "changed": 38,
+          "improved": 13,
+          "harmed": 6,
+          "iou_unchanged_after_switch": 19,
+          "reasons": {
+            "baseline_retained": 112,
+            "learned_or_descriptor_selection": 38
+          }
+        },
+        "native_interp/omama_quality_margin005": {
+          "objects": 150,
+          "pairs": 64,
+          "object": {
+            "IoU": 0.49299428081683194,
+            "Dice": 0.5487319570655624,
+            "ContA": 0.6144148578905919,
+            "LocE": 0.0682024984456522
+          },
+          "frame": {
+            "IoU": 0.5383358646240759,
+            "Dice": 0.5971318455382242,
+            "ContA": 0.6589703553632856,
+            "LocE": 0.064256491928887
+          },
+          "changed": 32,
+          "improved": 9,
+          "harmed": 5,
+          "iou_unchanged_after_switch": 18,
+          "reasons": {
+            "baseline_retained": 118,
+            "learned_or_descriptor_selection": 32
+          }
+        }
+      },
+      "per_object_sha256": "246509c5d22d127c55ae968bc74234a1963c629860ef0123cd3bc12c81e3ef48"
+    }
+  },
+  "components": {
+    "dataset": "exo2ego",
+    "scope": "exploratory fixed 64-pair V2-SAM candidate bank; not a FastSAM/full O-MaMa benchmark reproduction",
+    "pretrained_head_direction": "exo2ego",
+    "direction_transfer": false,
+    "position_tables_swapped": false,
+    "pairs": 64,
+    "objects": 132,
+    "coverage": "exact",
+    "candidate_bank_frozen": true,
+    "test_label_fitting": false,
+    "modes": {
+      "canonical": "Resize into original learned positional grids",
+      "native_interp": "Keep aspect ratio, max side1024/floor14; bilinear interpolation of learned position tables"
+    },
+    "methods": {
+      "baseline": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.4483282670079544,
+          "Dice": 0.49283747435412917,
+          "ContA": 0.5362357421023293,
+          "LocE": 0.09640845291993742
+        },
+        "frame": {
+          "IoU": 0.46297268147403725,
+          "Dice": 0.5048274264029342,
+          "ContA": 0.5442077478502001,
+          "LocE": 0.10439184314027397
+        },
+        "changed": 0,
+        "improved": 0,
+        "harmed": 0,
+        "iou_unchanged_after_switch": 0,
+        "reasons": {
+          "baseline": 132
+        }
+      },
+      "canonical/dino2_object": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.4293042229934751,
+          "Dice": 0.4821166248099568,
+          "ContA": 0.5168434729789507,
+          "LocE": 0.08727678839514841
+        },
+        "frame": {
+          "IoU": 0.45301444011595543,
+          "Dice": 0.5008639927829349,
+          "ContA": 0.5326035414837517,
+          "LocE": 0.09327596706866954
+        },
+        "changed": 76,
+        "improved": 26,
+        "harmed": 36,
+        "iou_unchanged_after_switch": 14,
+        "reasons": {
+          "baseline_retained": 56,
+          "learned_or_descriptor_selection": 76
+        }
+      },
+      "canonical/dino2_object_context": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.43782904257166205,
+          "Dice": 0.4932177145405369,
+          "ContA": 0.5295224384011394,
+          "LocE": 0.08760065444500324
+        },
+        "frame": {
+          "IoU": 0.4608467475836299,
+          "Dice": 0.5134075021437956,
+          "ContA": 0.5481052367202729,
+          "LocE": 0.09233390283480591
+        },
+        "changed": 82,
+        "improved": 28,
+        "harmed": 39,
+        "iou_unchanged_after_switch": 15,
+        "reasons": {
+          "baseline_retained": 50,
+          "learned_or_descriptor_selection": 82
+        }
+      },
+      "canonical/omama_top1": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.4878952061320006,
+          "Dice": 0.549707335873267,
+          "ContA": 0.5841681163866151,
+          "LocE": 0.07604255832982836
+        },
+        "frame": {
+          "IoU": 0.518777261699385,
+          "Dice": 0.5795463256538576,
+          "ContA": 0.6113260754792004,
+          "LocE": 0.07231971524842684
+        },
+        "changed": 87,
+        "improved": 34,
+        "harmed": 39,
+        "iou_unchanged_after_switch": 14,
+        "reasons": {
+          "baseline_retained": 45,
+          "learned_or_descriptor_selection": 87
+        }
+      },
+      "canonical/omama_quality_top1": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.4893675997639851,
+          "Dice": 0.5358801182133682,
+          "ContA": 0.5756513318523601,
+          "LocE": 0.08523309232100133
+        },
+        "frame": {
+          "IoU": 0.5237012847696777,
+          "Dice": 0.5688244921530097,
+          "ContA": 0.6035318200449226,
+          "LocE": 0.0841685408466137
+        },
+        "changed": 52,
+        "improved": 21,
+        "harmed": 22,
+        "iou_unchanged_after_switch": 9,
+        "reasons": {
+          "baseline_retained": 80,
+          "learned_or_descriptor_selection": 52
+        }
+      },
+      "canonical/omama_margin005": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.48770760969615146,
+          "Dice": 0.5485327557067979,
+          "ContA": 0.585969078932765,
+          "LocE": 0.07619142174430187
+        },
+        "frame": {
+          "IoU": 0.525162250955691,
+          "Dice": 0.5842685890920675,
+          "ContA": 0.6178806944938399,
+          "LocE": 0.0718902522532206
+        },
+        "changed": 50,
+        "improved": 22,
+        "harmed": 18,
+        "iou_unchanged_after_switch": 10,
+        "reasons": {
+          "baseline_retained": 82,
+          "learned_or_descriptor_selection": 50
+        }
+      },
+      "canonical/omama_quality_margin005": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.47933339717829687,
+          "Dice": 0.5260116244934386,
+          "ContA": 0.5665533991937372,
+          "LocE": 0.08724729169302615
+        },
+        "frame": {
+          "IoU": 0.5127071406514225,
+          "Dice": 0.5587301073509894,
+          "ContA": 0.5944682730102406,
+          "LocE": 0.08680228317796704
+        },
+        "changed": 18,
+        "improved": 8,
+        "harmed": 6,
+        "iou_unchanged_after_switch": 4,
+        "reasons": {
+          "baseline_retained": 114,
+          "learned_or_descriptor_selection": 18
+        }
+      },
+      "canonical/omama_context_zero": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.49708146508165746,
+          "Dice": 0.5577635597331788,
+          "ContA": 0.5938979092799724,
+          "LocE": 0.07488832108616643
+        },
+        "frame": {
+          "IoU": 0.5257124097645526,
+          "Dice": 0.5834571104887856,
+          "ContA": 0.6173359334584734,
+          "LocE": 0.07130300459733532
+        },
+        "changed": 83,
+        "improved": 38,
+        "harmed": 31,
+        "iou_unchanged_after_switch": 14,
+        "reasons": {
+          "baseline_retained": 49,
+          "learned_or_descriptor_selection": 83
+        }
+      },
+      "canonical/omama_cross_zero": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.4940418196404635,
+          "Dice": 0.5559577761292034,
+          "ContA": 0.5828812500706623,
+          "LocE": 0.07833042392469813
+        },
+        "frame": {
+          "IoU": 0.5222785039880061,
+          "Dice": 0.5823381442975061,
+          "ContA": 0.607772894106075,
+          "LocE": 0.07798532156181678
+        },
+        "changed": 82,
+        "improved": 31,
+        "harmed": 37,
+        "iou_unchanged_after_switch": 14,
+        "reasons": {
+          "baseline_retained": 50,
+          "learned_or_descriptor_selection": 82
+        }
+      },
+      "canonical/omama_context_cross_zero": {
+        "objects": 132,
+        "pairs": 64,
+        "object": {
+          "IoU": 0.4989962568647708,
+          "Dice": 0.5567937742400152,
+          "ContA": 0.588972356220227,
+          "LocE": 0.08064083563940452
+        },
+        "frame": {
+          "IoU": 0.5344779811063773,
+          "Dice": 0.588718918028793,
+          "ContA": 0.6148603177499722,
+          "LocE": 0.08454877797642897
+        },
+        "changed": 83,
+        "improved": 36,
+        "harmed": 30,
+        "iou_unchanged_after_switch": 17,
+        "reasons": {
+          "baseline_retained": 49,
+          "learned_or_descriptor_selection": 83
+        }
+      }
+    },
+    "per_object_sha256": "4be76a7dca7be52b913dac59805eb3c7047299d112ff350275d1eab2ceb55c93",
+    "run_name": "component_ablation",
+    "test_time_cue_zeroing": true
+  },
+  "validation": {
+    "previous_production_unchanged": true,
+    "datasets": {
+      "exo2ego": {
+        "pairs": 64,
+        "objects": 132,
+        "coverage": "exact",
+        "cached_baseline_metrics": "exact",
+        "canonical_forward_parity_checked_objects": 132,
+        "identical_geometry_between_modes": 128
+      },
+      "exo2exo": {
+        "pairs": 64,
+        "objects": 64,
+        "coverage": "exact",
+        "cached_baseline_metrics": "exact",
+        "canonical_forward_parity_checked_objects": 64,
+        "identical_geometry_between_modes": 0
+      },
+      "ego2exo": {
+        "pairs": 64,
+        "objects": 150,
+        "coverage": "exact",
+        "cached_baseline_metrics": "exact",
+        "canonical_forward_parity_checked_objects": 150,
+        "identical_geometry_between_modes": 149
+      }
+    },
+    "component_repeat_normal_score_max_abs": 0.0,
+    "script_sha256": {
+      "evaluate_cached_bank.py": "8c83b9e690ffb952e66b865fc95b731b0e0ca6ded9ff28d482ad15936b309cb3",
+      "remote_read.py": "b8abbf640b667b13317b128d4a089d95b648d007f4242ab8e4afcf39930729f8",
+      "aligned_model.py": "68da9a643cc8cafa975044da75c1196e677ff582a1b7ace1b245644e33c3e1e3",
+      "download_weights.py": "e653d92a91a1346b7c337175ed7767120d014d3ed177a3540c5dc642d2316881",
+      "test_alignment.py": "9776d48650cef0eb29535f4d8b335e9d8c3dd22e9cdae034bbab4641089ac806",
+      "finalize.py": "f9ee349685aa5270c9623a55aa780d64fb97d2aa247be6b9f0bf7109a906029b"
+    }
+  }
+}

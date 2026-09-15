@@ -1,0 +1,78 @@
+{
+  "candidate_oracle_frame_headroom_pp": 6.111633880760543,
+  "margin005_routes": [
+    {
+      "from": "fusion",
+      "to": "fusion",
+      "objects": 499,
+      "improved": 0,
+      "harmed": 0,
+      "mean_object_delta_pp": 0.0
+    },
+    {
+      "from": "fusion",
+      "to": "anchor",
+      "objects": 19,
+      "improved": 7,
+      "harmed": 11,
+      "mean_object_delta_pp": -8.470668784100685
+    },
+    {
+      "from": "anchor",
+      "to": "fusion",
+      "objects": 30,
+      "improved": 16,
+      "harmed": 6,
+      "mean_object_delta_pp": 10.837775550074486
+    },
+    {
+      "from": "visual",
+      "to": "visual",
+      "objects": 129,
+      "improved": 0,
+      "harmed": 0,
+      "mean_object_delta_pp": 0.0
+    },
+    {
+      "from": "anchor",
+      "to": "visual",
+      "objects": 37,
+      "improved": 25,
+      "harmed": 4,
+      "mean_object_delta_pp": 30.2176525156569
+    },
+    {
+      "from": "fusion",
+      "to": "visual",
+      "objects": 64,
+      "improved": 25,
+      "harmed": 34,
+      "mean_object_delta_pp": -3.179134409447215
+    },
+    {
+      "from": "anchor",
+      "to": "anchor",
+      "objects": 46,
+      "improved": 0,
+      "harmed": 0,
+      "mean_object_delta_pp": 0.0
+    },
+    {
+      "from": "visual",
+      "to": "fusion",
+      "objects": 31,
+      "improved": 7,
+      "harmed": 15,
+      "mean_object_delta_pp": -11.596073484942018
+    },
+    {
+      "from": "visual",
+      "to": "anchor",
+      "objects": 16,
+      "improved": 5,
+      "harmed": 9,
+      "mean_object_delta_pp": 3.3967446630867926
+    }
+  ],
+  "decision": "Complete learned head + margin has positive point estimate but CI crosses zero; raw top1 over-switches. Next fit a small gain gate combining O-MaMa scores with existing prediction-only SAM confidence/agreement/geometry, on official train labels and disjoint gate calibration takes. Do not tune on this confirmation cohort."
+}

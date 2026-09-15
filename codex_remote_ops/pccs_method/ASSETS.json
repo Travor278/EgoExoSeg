@@ -1,0 +1,7 @@
+{
+  "v2sam": {"repository":"https://github.com/jaychempan/V2-SAM-O","revision":"0e3bc33dec3e202ffbb86cec01038e60b18c162a","patch":"v2sam_pccs_gain.patch"},
+  "omama": {"repository":"https://github.com/Maria-SanVil/O-MaMa","revision":"0f187c65cb9d8f8df1d8b5f445edbb0485956d88","checkpoint_file":"weights/omama_exo2ego.pt","bytes":43663233,"sha256":"d66ffcb350c8154aa7ab9c7265ce38453a88b74908ac94db8c5740422c9f8b42"},
+  "dinov2": {"repository":"https://github.com/facebookresearch/dinov2","revision":"7764ea0f912e53c92e82eb78a2a1631e92725fc8","checkpoint_file":"weights/dinov2_vitb14_reg4_pretrain.pth","bytes":346393545,"sha256":"73182a088cf94833c94b1666d1c99e02fe87e2007bff57b564fb6206e25dba71"},
+  "gain_gate": {"checkpoint_file":"frozen_gate.joblib","sha256":"f79543baa14e81ebc83fa3bb7458e0940e405afe31a556fb612281c6aa0d2678","rebuild":"../pccs_gain_20260915/fit_gain_gate.py","training_records":"../pccs_gain_20260915/gate_training/training_records.jsonl","threshold":0.03},
+  "large_artifacts":"Foundation weights, expert weights, raw images/annotations and mask banks are not committed; original experiment manifests retain site-specific paths. Respect dataset access terms."
+}

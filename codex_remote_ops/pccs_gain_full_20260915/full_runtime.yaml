@@ -1,0 +1,31 @@
+version: 1
+data:
+  root: /inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test
+  images: /inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test
+  annotations:
+    ego2exo: /inspire/ssd/project/luojianlan/zhubingwen-253108120125/v2sam-repro/eval_inputs/ego2exo_test_fusion/ego2exo_test_framelevel.json
+    exo2ego: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_full_20260915/full_annotation.json
+models:
+  sam2_root: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets
+  dinov3:
+    repo: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_full_20260915/code/third_parts/dinov3
+    weights: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth
+  experts:
+    ego2exo:
+      visual: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/vp_ego2exo_full.pth
+      fusion: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/fusion_ego2exo_full.pth
+      selector: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/context_pccs_20260914/code/projects/v2sam_pccs/assets/pccs_selector_ego2exo.json
+    exo2ego:
+      visual: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/vp_exo2ego_full.pth
+      fusion: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/fusion_exo2ego_full.pth
+output:
+  root: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/context_pccs_20260914/runs
+runtime:
+  gpus:
+  - 0
+  ports:
+    ego2exo: 29761
+    exo2ego: 29933
+  max_points: 1
+  point_strategy: highest_similarity
+  cublas_workspace_config: :4096:8

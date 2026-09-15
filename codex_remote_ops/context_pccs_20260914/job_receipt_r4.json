@@ -1,0 +1,20 @@
+{
+  "job_id": "job-c2f96fbc-051d-4231-9cf6-4480638e45e2",
+  "name": "v2sam-context-pccs-egoexo-exoexo-20260915-r4",
+  "url": "https://qz.sii.edu.cn/jobs/distributedTrainingDetail/job-c2f96fbc-051d-4231-9cf6-4480638e45e2?spaceId=ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+  "gpu_count": 4,
+  "gpu_model": "NVIDIA H100 80GB",
+  "priority": 4,
+  "max_runtime_minutes": 2880,
+  "image": "ngc-pytorch:25.02-cuda12.8.0-py3",
+  "code_commit": "6d381db",
+  "runtime": "runtime_env Python 3.10.21, shared torch 2.3.1+cu121, experiment-local OpenCV system libraries",
+  "previous_attempt": "job-64950673-d9bb-4648-be81-da0d536bfae4",
+  "previous_attempt_note": "Four-rank inference completed 32 exact-covered pairs successfully, but the driver incorrectly required MMLogger completion lines from non-main ranks. Fixed with explicit per-rank receipts; inference outputs archived and independently validated.",
+  "status_at_20260915_001520": "Four-rank 32-pair preflight passed; entered full 1094-pair Exo2Exo evaluation",
+  "status_at_20260915_001835": "Full Exo2Exo progressing, rank-0 iteration 100/274; four GPUs in use, 9539-10245 MiB each",
+  "final_status": "succeeded",
+  "platform_finished_at": "2026-09-15T13:50:42+08:00",
+  "occupied_nodes_after_completion": 0,
+  "all_full_evaluations_and_offline_ablations": "exact coverage and replay passed"
+}

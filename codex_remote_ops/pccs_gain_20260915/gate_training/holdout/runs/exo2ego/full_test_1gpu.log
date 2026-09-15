@@ -1,0 +1,502 @@
+[2026-09-15 09:06:40,358] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+[93m [WARNING] [0m using untested triton version (2.3.1), only 1.0.0 is known to be compatible
+[DEBUG] Importing modules from custom_imports: ['projects.v2sam_pccs.evaluation', 'projects.v2sam_pccs.engine']
+[DEBUG] Importing modules from custom_imports: ['projects.v2sam_pccs.evaluation', 'projects.v2sam_pccs.engine']
+09/15 09:06:44 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.21 (main, Sep  1 2026, 14:16:49) [Clang 22.1.3 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 0
+    GPU 0: NVIDIA GeForce RTX 4090
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 12.8, V12.8.61
+    GCC: cc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+    PyTorch: 2.3.1+cu121
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.3.6 (Git Hash 86e6af5974177e513fd3fee58425e1063e7f1361)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 12.1
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.9.2
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.1, CUDNN_VERSION=8.9.2, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.3.1, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=1, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, 
+
+    TorchVision: 0.18.1+cu121
+    OpenCV: 4.10.0
+    MMEngine: 0.11.0rc0
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 0
+    deterministic: False
+    Distributed launcher: pytorch
+    Distributed training: True
+    GPU number: 1
+------------------------------------------------------------
+
+09/15 09:06:49 - mmengine - INFO - Config:
+annotation_file = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/annotation.json'
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'projects.v2sam_pccs.evaluation',
+        'projects.v2sam_pccs.engine',
+    ])
+default_hooks = dict(
+    logger=dict(
+        interval=10,
+        log_metric_by_epoch=False,
+        type='mmengine.hooks.LoggerHook'),
+    sampler_seed=dict(type='mmengine.hooks.DistSamplerSeedHook'),
+    timer=dict(type='mmengine.hooks.IterTimerHook'))
+dinov3_cfg = dict(
+    model_name='dinov3_vitl16',
+    repo_path=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3',
+    weights_path=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+)
+dinov3_repo = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3'
+dinov3_weights = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+direction = 'exo2ego'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+evaluation_dataloader = dict(
+    batch_size=1,
+    collate_fn=dict(
+        type='projects.v2sam_pccs.datasets.pccs_video_lisa_collate_fn'),
+    dataset=dict(
+        datasets=[
+            dict(
+                expression_file=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/annotation.json',
+                extra_image_processor=dict(
+                    target_length=1024,
+                    type=
+                    'projects.v2sam_fusion.models.preprocess.image_resize.DirectResize'
+                ),
+                lazy=True,
+                max_length=8192,
+                mode='short',
+                sam2_folder=
+                '/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test',
+                sampled_frames=None,
+                select_number=None,
+                template_map_fn=dict(
+                    template='xtuner.utils.PROMPT_TEMPLATE.phi3_chat',
+                    type='xtuner.dataset.map_fns.template_map_fn_factory'),
+                type=
+                'projects.v2sam_pccs.datasets.PCCSVideoObjectRelatorDataset'),
+        ],
+        type='xtuner.dataset.ConcatDataset'),
+    num_workers=4,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+evaluation_dataset = dict(
+    expression_file=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/annotation.json',
+    extra_image_processor=dict(
+        target_length=1024,
+        type='projects.v2sam_fusion.models.preprocess.image_resize.DirectResize'
+    ),
+    lazy=True,
+    max_length=8192,
+    mode='short',
+    sam2_folder=
+    '/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test',
+    sampled_frames=None,
+    select_number=None,
+    template_map_fn=dict(
+        template='xtuner.utils.PROMPT_TEMPLATE.phi3_chat',
+        type='xtuner.dataset.map_fns.template_map_fn_factory'),
+    type='projects.v2sam_pccs.datasets.PCCSVideoObjectRelatorDataset')
+extra_image_processor = dict(
+    target_length=1024,
+    type='projects.v2sam_fusion.models.preprocess.image_resize.DirectResize')
+fusion_checkpoint = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/fusion_exo2ego_full.pth'
+image_root = '/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test'
+launcher = 'pytorch'
+load_from = None
+log_level = 'INFO'
+log_processor = dict(by_epoch=False)
+model = dict(
+    context_cfg=None,
+    dinov3_cfg=dict(
+        model_name='dinov3_vitl16',
+        repo_path=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3',
+        weights_path=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+    ),
+    fusion_expert=dict(
+        dinov3_cfg=dict(
+            model_name='dinov3_vitl16',
+            repo_path=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3',
+            weights_path=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+        ),
+        grounding_encoder=dict(
+            base_dir=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets',
+            type='projects.v2sam_pccs.models.PCCSFusionEncoder'),
+        pretrained_pth=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/fusion_exo2ego_full.pth',
+        sparse_corr_cfg=dict(
+            image_size=768,
+            mask_fg_threshold=0.6,
+            max_points_per_object=1,
+            n_layers=24,
+            outlier_removal_ratio=0.25,
+            patch_size=16,
+            point_selection_strategy='highest_similarity',
+            stratify_distance_threshold=150.0),
+        type='projects.v2sam_pccs.models.PCCSFusionExpert'),
+    sparse_corr_cfg=dict(
+        image_size=768,
+        mask_fg_threshold=0.6,
+        max_points_per_object=1,
+        n_layers=24,
+        outlier_removal_ratio=0.25,
+        patch_size=16,
+        point_selection_strategy='highest_similarity',
+        stratify_distance_threshold=150.0),
+    type='projects.v2sam_pccs.models.V2SAMPCCS',
+    visual_anchor_expert=dict(
+        dinov3_cfg=dict(
+            model_name='dinov3_vitl16',
+            repo_path=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3',
+            weights_path=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+        ),
+        grounding_encoder=dict(
+            base_dir=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets',
+            type='projects.v2sam_pccs.models.SAM2TrainRunner'),
+        pretrained_pth=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/vp_exo2ego_full.pth',
+        sam2_base_dir=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets',
+        sparse_corr_cfg=dict(
+            image_size=768,
+            mask_fg_threshold=0.6,
+            max_points_per_object=1,
+            n_layers=24,
+            outlier_removal_ratio=0.25,
+            patch_size=16,
+            point_selection_strategy='highest_similarity',
+            stratify_distance_threshold=150.0),
+        type='projects.v2sam_pccs.models.PCCSVisualAnchorExpert'))
+optim_wrapper = None
+output_dir = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/runs/exo2ego'
+param_scheduler = None
+pccs_evaluator = dict(
+    collect_device='gpu',
+    diagnostic_output=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/runs/exo2ego/per_object.jsonl',
+    enable_vis=False,
+    fusion_max_area_ratio=0.6,
+    fusion_max_components=4,
+    fusion_min_area_ratio=1e-05,
+    iou_metrics=[
+        'IoU',
+        'Dice',
+    ],
+    type='PCCSFrameLevelMetric')
+randomness = dict(deterministic=False, seed=0)
+resume = False
+sam2_root = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets'
+sparse_corr_cfg = dict(
+    image_size=768,
+    mask_fg_threshold=0.6,
+    max_points_per_object=1,
+    n_layers=24,
+    outlier_removal_ratio=0.25,
+    patch_size=16,
+    point_selection_strategy='highest_similarity',
+    stratify_distance_threshold=150.0)
+test_cfg = dict(raise_on_error=True, type='FaultTolerantTestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    collate_fn=dict(
+        type='projects.v2sam_pccs.datasets.pccs_video_lisa_collate_fn'),
+    dataset=dict(
+        datasets=[
+            dict(
+                expression_file=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/annotation.json',
+                extra_image_processor=dict(
+                    target_length=1024,
+                    type=
+                    'projects.v2sam_fusion.models.preprocess.image_resize.DirectResize'
+                ),
+                lazy=True,
+                max_length=8192,
+                mode='short',
+                sam2_folder=
+                '/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test',
+                sampled_frames=None,
+                select_number=None,
+                template_map_fn=dict(
+                    template='xtuner.utils.PROMPT_TEMPLATE.phi3_chat',
+                    type='xtuner.dataset.map_fns.template_map_fn_factory'),
+                type=
+                'projects.v2sam_pccs.datasets.PCCSVideoObjectRelatorDataset'),
+        ],
+        type='xtuner.dataset.ConcatDataset'),
+    num_workers=4,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(
+    collect_device='gpu',
+    diagnostic_output=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/runs/exo2ego/per_object.jsonl',
+    enable_vis=False,
+    fusion_max_area_ratio=0.6,
+    fusion_max_components=4,
+    fusion_min_area_ratio=1e-05,
+    iou_metrics=[
+        'IoU',
+        'Dice',
+    ],
+    routing_policy='fusion_first',
+    selector_model_path=None,
+    type='PCCSFrameLevelMetric')
+train_cfg = None
+train_dataloader = None
+val_cfg = dict(type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    collate_fn=dict(
+        type='projects.v2sam_pccs.datasets.pccs_video_lisa_collate_fn'),
+    dataset=dict(
+        datasets=[
+            dict(
+                expression_file=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/annotation.json',
+                extra_image_processor=dict(
+                    target_length=1024,
+                    type=
+                    'projects.v2sam_fusion.models.preprocess.image_resize.DirectResize'
+                ),
+                lazy=True,
+                max_length=8192,
+                mode='short',
+                sam2_folder=
+                '/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test',
+                sampled_frames=None,
+                select_number=None,
+                template_map_fn=dict(
+                    template='xtuner.utils.PROMPT_TEMPLATE.phi3_chat',
+                    type='xtuner.dataset.map_fns.template_map_fn_factory'),
+                type=
+                'projects.v2sam_pccs.datasets.PCCSVideoObjectRelatorDataset'),
+        ],
+        type='xtuner.dataset.ConcatDataset'),
+    num_workers=4,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    collect_device='gpu',
+    diagnostic_output=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/runs/exo2ego/per_object.jsonl',
+    enable_vis=False,
+    fusion_max_area_ratio=0.6,
+    fusion_max_components=4,
+    fusion_min_area_ratio=1e-05,
+    iou_metrics=[
+        'IoU',
+        'Dice',
+    ],
+    routing_policy='fusion_first',
+    selector_model_path=None,
+    type='PCCSFrameLevelMetric')
+visual_checkpoint = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/vp_exo2ego_full.pth'
+visualizer = None
+work_dir = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/runs/exo2ego'
+
+09/15 09:06:55 - mmengine - WARNING - Failed to search registry with scope "mmengine" in the "builder" registry tree. As a workaround, the current "builder" registry in "xtuner" is used to build instance. This may cause unexpected failure when running the built modules. Please check whether "mmengine" is a correct scope, or whether the registry is initialized.
+09/15 09:06:57 - mmengine - INFO - Loads checkpoint by local backend from path: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/sam2_hiera_large.pt
+09/15 09:07:02 - mmengine - INFO - Loaded checkpoint successfully
+09/15 09:07:03 - mmengine - INFO - Loads checkpoint by local backend from path: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/sam2_hiera_large.pt
+09/15 09:07:04 - mmengine - INFO - Loaded checkpoint successfully
+PCCS visual-anchor expert: DINOv3 loaded
+PCCS visual-anchor expert loaded checkpoint /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/vp_exo2ego_full.pth; matched=964, missing=1271, unexpected=0
+09/15 09:07:15 - mmengine - INFO - Loads checkpoint by local backend from path: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/sam2_hiera_large.pt
+09/15 09:07:16 - mmengine - INFO - Loaded checkpoint successfully
+PCCS fusion expert: DINOv3 loaded
+PCCS fusion expert loaded checkpoint /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/fusion_exo2ego_full.pth; matched=1335, remapped=371, missing=0, unexpected=0
+[PCCS] Forward DINOv3 matcher loaded
+09/15 09:07:34 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Video res dataset (ref-sam2), include 512 items.
+09/15 09:07:41 - mmengine - WARNING - The prefix is not set in metric class PCCSFrameLevelMetric.
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/runs/exo2ego/per_object.jsonl; routing_policy=fusion_first; selector_model_path=None
+09/15 09:07:41 - mmengine - WARNING - Dataset ConcatDataset has no metainfo. ``dataset_meta`` in evaluator, metric and visualizer will be None.
+09/15 09:08:06 - mmengine - INFO - Iter(test) [ 10/512]    eta: 0:17:19  time: 2.0706  data_time: 0.0911  memory: 7220  
+09/15 09:08:31 - mmengine - INFO - Iter(test) [ 20/512]    eta: 0:18:43  time: 2.4976  data_time: 0.0102  memory: 7266  
+09/15 09:08:58 - mmengine - INFO - Iter(test) [ 30/512]    eta: 0:19:16  time: 2.6307  data_time: 0.0118  memory: 7241  
+09/15 09:09:20 - mmengine - INFO - Iter(test) [ 40/512]    eta: 0:18:36  time: 2.2637  data_time: 0.0100  memory: 7241  
+09/15 09:09:49 - mmengine - INFO - Iter(test) [ 50/512]    eta: 0:18:57  time: 2.8443  data_time: 0.0117  memory: 7220  
+09/15 09:10:05 - mmengine - INFO - Iter(test) [ 60/512]    eta: 0:17:32  time: 1.6607  data_time: 0.0101  memory: 7177  
+09/15 09:10:22 - mmengine - INFO - Iter(test) [ 70/512]    eta: 0:16:28  time: 1.6814  data_time: 0.0112  memory: 7177  
+09/15 09:11:35 - mmengine - INFO - Iter(test) [ 80/512]    eta: 0:20:38  time: 7.2954  data_time: 0.0101  memory: 7241  
+09/15 09:11:56 - mmengine - INFO - Iter(test) [ 90/512]    eta: 0:19:33  time: 2.0930  data_time: 0.0113  memory: 7220  
+09/15 09:12:25 - mmengine - INFO - Iter(test) [100/512]    eta: 0:19:09  time: 2.8521  data_time: 0.0108  memory: 7241  
+09/15 09:12:59 - mmengine - INFO - Iter(test) [110/512]    eta: 0:19:04  time: 3.4152  data_time: 0.0130  memory: 7571  
+09/15 09:13:20 - mmengine - INFO - Iter(test) [120/512]    eta: 0:18:12  time: 2.1451  data_time: 0.0106  memory: 7394  
+09/15 09:13:44 - mmengine - INFO - Iter(test) [130/512]    eta: 0:17:33  time: 2.3989  data_time: 0.0126  memory: 7394  
+09/15 09:14:01 - mmengine - INFO - Iter(test) [140/512]    eta: 0:16:37  time: 1.6973  data_time: 0.0099  memory: 7198  
+09/15 09:14:19 - mmengine - INFO - Iter(test) [150/512]    eta: 0:15:48  time: 1.7736  data_time: 0.0114  memory: 7177  
+09/15 09:14:36 - mmengine - INFO - Iter(test) [160/512]    eta: 0:15:03  time: 1.7344  data_time: 0.0094  memory: 7177  
+09/15 09:14:57 - mmengine - INFO - Iter(test) [170/512]    eta: 0:14:27  time: 2.0616  data_time: 0.0109  memory: 7241  
+09/15 09:15:15 - mmengine - INFO - Iter(test) [180/512]    eta: 0:13:49  time: 1.8412  data_time: 0.0098  memory: 7198  
+09/15 09:15:46 - mmengine - INFO - Iter(test) [190/512]    eta: 0:13:34  time: 3.0801  data_time: 0.0129  memory: 7241  
+09/15 09:16:09 - mmengine - INFO - Iter(test) [200/512]    eta: 0:13:05  time: 2.3226  data_time: 0.0101  memory: 7241  
+09/15 09:16:33 - mmengine - INFO - Iter(test) [210/512]    eta: 0:12:38  time: 2.3649  data_time: 0.0115  memory: 7198  
+09/15 09:16:53 - mmengine - INFO - Iter(test) [220/512]    eta: 0:12:06  time: 2.0223  data_time: 0.0098  memory: 7198  
+09/15 09:17:12 - mmengine - INFO - Iter(test) [230/512]    eta: 0:11:33  time: 1.8557  data_time: 0.0111  memory: 7198  
+09/15 09:17:30 - mmengine - INFO - Iter(test) [240/512]    eta: 0:11:02  time: 1.8763  data_time: 0.0096  memory: 7198  
+09/15 09:17:55 - mmengine - INFO - Iter(test) [250/512]    eta: 0:10:38  time: 2.4878  data_time: 0.0118  memory: 7241  
+09/15 09:18:13 - mmengine - INFO - Iter(test) [260/512]    eta: 0:10:07  time: 1.7339  data_time: 0.0097  memory: 7198  
+09/15 09:18:33 - mmengine - INFO - Iter(test) [270/512]    eta: 0:09:40  time: 2.0372  data_time: 0.0110  memory: 7198  
+09/15 09:18:52 - mmengine - INFO - Iter(test) [280/512]    eta: 0:09:11  time: 1.8557  data_time: 0.0096  memory: 7198  
+09/15 09:19:09 - mmengine - INFO - Iter(test) [290/512]    eta: 0:08:42  time: 1.7179  data_time: 0.0111  memory: 7177  
+09/15 09:19:28 - mmengine - INFO - Iter(test) [300/512]    eta: 0:08:16  time: 1.9451  data_time: 0.0097  memory: 7241  
+09/15 09:19:50 - mmengine - INFO - Iter(test) [310/512]    eta: 0:07:52  time: 2.1986  data_time: 0.0116  memory: 7220  
+09/15 09:20:11 - mmengine - INFO - Iter(test) [320/512]    eta: 0:07:27  time: 2.0866  data_time: 0.0103  memory: 7198  
+09/15 09:20:31 - mmengine - INFO - Iter(test) [330/512]    eta: 0:07:02  time: 1.9938  data_time: 0.0111  memory: 7198  
+09/15 09:20:49 - mmengine - INFO - Iter(test) [340/512]    eta: 0:06:36  time: 1.8479  data_time: 0.0098  memory: 7220  
+09/15 09:21:06 - mmengine - INFO - Iter(test) [350/512]    eta: 0:06:10  time: 1.6669  data_time: 0.0114  memory: 7177  
+09/15 09:21:25 - mmengine - INFO - Iter(test) [360/512]    eta: 0:05:45  time: 1.8389  data_time: 0.0097  memory: 7177  
+09/15 09:21:44 - mmengine - INFO - Iter(test) [370/512]    eta: 0:05:21  time: 1.9934  data_time: 0.0111  memory: 7198  
+09/15 09:22:06 - mmengine - INFO - Iter(test) [380/512]    eta: 0:04:58  time: 2.1325  data_time: 0.0100  memory: 7198  
+09/15 09:22:25 - mmengine - INFO - Iter(test) [390/512]    eta: 0:04:35  time: 1.9160  data_time: 0.0108  memory: 7198  
+09/15 09:22:55 - mmengine - INFO - Iter(test) [400/512]    eta: 0:04:14  time: 3.0337  data_time: 0.0112  memory: 7394  
+09/15 09:23:22 - mmengine - INFO - Iter(test) [410/512]    eta: 0:03:52  time: 2.6410  data_time: 0.0124  memory: 7241  
+09/15 09:23:41 - mmengine - INFO - Iter(test) [420/512]    eta: 0:03:29  time: 1.9658  data_time: 0.0097  memory: 7177  
+09/15 09:23:59 - mmengine - INFO - Iter(test) [430/512]    eta: 0:03:05  time: 1.8070  data_time: 0.0108  memory: 7177  
+09/15 09:24:16 - mmengine - INFO - Iter(test) [440/512]    eta: 0:02:42  time: 1.6451  data_time: 0.0093  memory: 7177  
+09/15 09:24:33 - mmengine - INFO - Iter(test) [450/512]    eta: 0:02:18  time: 1.7182  data_time: 0.0108  memory: 7198  
+09/15 09:24:51 - mmengine - INFO - Iter(test) [460/512]    eta: 0:01:55  time: 1.7837  data_time: 0.0101  memory: 7177  
+09/15 09:25:17 - mmengine - INFO - Iter(test) [470/512]    eta: 0:01:33  time: 2.6348  data_time: 0.0120  memory: 7241  
+09/15 09:25:43 - mmengine - INFO - Iter(test) [480/512]    eta: 0:01:11  time: 2.6201  data_time: 0.0107  memory: 7241  
+09/15 09:26:02 - mmengine - INFO - Iter(test) [490/512]    eta: 0:00:49  time: 1.8037  data_time: 0.0109  memory: 7241  
+09/15 09:26:23 - mmengine - INFO - Iter(test) [500/512]    eta: 0:00:26  time: 2.1275  data_time: 0.0103  memory: 7241  
+09/15 09:26:54 - mmengine - INFO - Iter(test) [510/512]    eta: 0:00:04  time: 3.0779  data_time: 0.0122  memory: 7749  
+09/15 09:27:04 - mmengine - INFO - Per-object diagnostics saved to: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/holdout/runs/exo2ego/per_object.jsonl
+09/15 09:27:04 - mmengine - INFO - ========================================================================================
+09/15 09:27:04 - mmengine - INFO - PCCS evaluation results (frame-level means; pairs=512, evaluated_frames=512, objects=965)
+09/15 09:27:04 - mmengine - INFO - Cont.A is boundary F-score; Loc.E is normalized centroid error.
+09/15 09:27:04 - mmengine - INFO - ========================================================================================
+09/15 09:27:04 - mmengine - INFO - Method                 IoU      Dice    Cont.A     Loc.E      Raw route
+09/15 09:27:04 - mmengine - INFO - PCCS                0.7095    0.7596    0.7665    0.0443    965/965   
+09/15 09:27:04 - mmengine - INFO - visual              0.6992    0.7549    0.7514    0.0463    204/965   
+09/15 09:27:04 - mmengine - INFO - anchor              0.5799    0.6219    0.6199    0.0977    160/965   
+09/15 09:27:04 - mmengine - INFO - fusion              0.7165    0.7699    0.7660    0.0440    601/965   
+09/15 09:27:04 - mmengine - INFO - ----------------------------------------------------------------------------------------
+09/15 09:27:04 - mmengine - INFO - Oracle diagnostics: IoU=0.7842; Dice=0.8377; gap=0.0747; match rate=46.7%; counts (visual/anchor/fusion)=336/201/428
+09/15 09:27:04 - mmengine - INFO - Fusion quality gate pass/fail: 601/364
+09/15 09:27:04 - mmengine - INFO - Cyclic consistency used: 246/965 (25.5%)
+09/15 09:27:04 - mmengine - INFO - Mean cycle distance: visual=152.95px; anchor=180.53px; fusion=n/a
+09/15 09:27:04 - mmengine - INFO - ========================================================================================
+09/15 09:27:04 - mmengine - INFO - Iter(test) [512/512]    num_image_pairs: 512  num_frames: 512  num_evaluated_frames: 512  num_objects: 965  PCCS_IoU: 0.7095  PCCS_Dice: 0.7596  PCCS_ContA: 0.7665  PCCS_LocE: 0.0443  visual_IoU: 0.6992  visual_Dice: 0.7549  visual_ContA: 0.7514  visual_LocE: 0.0463  anchor_IoU: 0.5799  anchor_Dice: 0.6219  anchor_ContA: 0.6199  anchor_LocE: 0.0977  fusion_IoU: 0.7165  fusion_Dice: 0.7699  fusion_ContA: 0.7660  fusion_LocE: 0.0440  mean_IoU: 0.7095  mean_Dice: 0.7596  oracle_mean_IoU: 0.7842  oracle_mean_Dice: 0.8377  oracle_gap_IoU: 0.0747  selector_oracle_match_count: 444  selector_oracle_match_rate: 0.4666  oracle_visual_selected: 336  oracle_anchor_selected: 201  oracle_fusion_selected: 428  fusion_quality_pass_count: 601  fusion_quality_fail_count: 364  evaluated_object_count: 965  mean_location_score: 0.0443  mean_shape_acc: 0.7665  visual_expert_selected: 204  anchor_expert_selected: 160  fusion_expert_selected: 601  visual_expert_avg_iou: 0.6992  visual_expert_avg_dice: 0.7549  anchor_expert_avg_iou: 0.5799  anchor_expert_avg_dice: 0.6219  fusion_expert_avg_iou: 0.7165  fusion_expert_avg_dice: 0.7699  visual_expert_avg_location_score: 0.0463  anchor_expert_avg_location_score: 0.0977  fusion_expert_avg_location_score: 0.0440  visual_expert_avg_shape_acc: 0.7514  anchor_expert_avg_shape_acc: 0.6199  fusion_expert_avg_shape_acc: 0.7660  cycle_consistency_used_count: 246  visual_expert_avg_cycle_distance: 152.9492  anchor_expert_avg_cycle_distance: 180.5295  fusion_expert_avg_cycle_distance: -1.0000  frame_PCCS_IoU: 0.7095  frame_PCCS_Dice: 0.7596  frame_PCCS_ContA: 0.7665  frame_PCCS_LocE: 0.0443  frame_visual_IoU: 0.6992  frame_visual_Dice: 0.7549  frame_visual_ContA: 0.7514  frame_visual_LocE: 0.0463  frame_anchor_IoU: 0.5799  frame_anchor_Dice: 0.6219  frame_anchor_ContA: 0.6199  frame_anchor_LocE: 0.0977  frame_fusion_IoU: 0.7165  frame_fusion_Dice: 0.7699  frame_fusion_ContA: 0.7660  frame_fusion_LocE: 0.0440  frame_mean_IoU: 0.7095  frame_mean_Dice: 0.7596  frame_Cont.A: 0.7665  frame_Loc.E: 0.0443  data_time: 0.0124  time: 2.2615
+PCCS_RANK_RECEIPT rank=0 total=512 skipped=0
+09/15 09:27:04 - mmengine - INFO - [FaultTolerantTestLoop] rank=0 finished cleanly (512 batches, 0 skipped).

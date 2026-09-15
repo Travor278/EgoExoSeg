@@ -1,0 +1,1 @@
+{"stage": "full", "coverage": "exact", "pairs": 46515, "objects": 109253, "paired_comparison": {"learned_gate": {"delta_frame_iou_pp": 3.6653138063814006, "paired_take_bootstrap_95ci_pp": [2.6848649125606374, 4.884601729247951]}, "omama_margin005": {"delta_frame_iou_pp": 2.7299184160992307, "paired_take_bootstrap_95ci_pp": [1.8716373836524278, 3.7992474576010684]}}}

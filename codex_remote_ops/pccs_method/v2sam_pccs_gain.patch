@@ -1,0 +1,436 @@
+diff --git a/projects/v2sam_pccs/configs/pccs_common.py b/projects/v2sam_pccs/configs/pccs_common.py
+--- a/projects/v2sam_pccs/configs/pccs_common.py
++++ b/projects/v2sam_pccs/configs/pccs_common.py
+@@ -28,6 +28,13 @@
+ 
+ with read_base():
+     from .pccs_base import *
++
++# Long inference shards have unequal object counts. Match the previously
++# validated two-hour collective timeout when explicitly requested by a launcher.
++if _os.environ.get("PCCS_DIST_TIMEOUT"):
++    env_cfg = env_cfg.copy()
++    env_cfg["dist_cfg"] = env_cfg["dist_cfg"].copy()
++    env_cfg["dist_cfg"]["timeout"] = int(_os.environ["PCCS_DIST_TIMEOUT"])
+ 
+ 
+ def _required_env(name, _module=_os):
+@@ -73,6 +80,8 @@
+     type=V2SAMPCCS,
+     dinov3_cfg=dinov3_cfg,
+     sparse_corr_cfg=sparse_corr_cfg,
++    context_cfg=(dict(expansions=(1.5, 2.0), min_patches=4.0)
++                 if _os.environ.get("PCCS_CONTEXT", "0") == "1" else None),
+     visual_anchor_expert=dict(
+         type=PCCSVisualAnchorExpert,
+         grounding_encoder=dict(type=SAM2TrainRunner, base_dir=sam2_root),
+diff --git a/projects/v2sam_pccs/context_consistency.py b/projects/v2sam_pccs/context_consistency.py
+new file mode 100644
+--- /dev/null
++++ b/projects/v2sam_pccs/context_consistency.py
+@@ -0,0 +1,103 @@
++"""Frozen-feature context diagnostics and prediction-only PCCS rerouting.
++
++No target annotations, fitted parameters, or additional encoder passes are used.
++Scores are signed cosine similarities. Invalid evidence preserves the baseline.
++"""
++import math
++
++import torch
++import torch.nn.functional as F
++
++EXPERTS = ("visual", "anchor", "fusion")
++
++
++def context_descriptor(features, mask, expansion=2.0, min_patches=4.0):
++    """Pool an expanded bounding box minus foreground in DINO patch space.
++
++    Fractional region coverage is pooled at native mask resolution. Patches
++    touching foreground are excluded to keep this cue separate from identity.
++    The box scales with the object independently in each view; no assumption
++    that left/right relations survive a viewpoint change is made.
++    """
++    if expansion <= 1 or min_patches <= 0:
++        raise ValueError("expansion must exceed 1 and min_patches must be positive")
++    if features.ndim != 3 or mask.squeeze().ndim != 2:
++        raise ValueError("Expected features [C,H,W] and a 2D mask")
++    mask = (mask.squeeze().to(features.device) > 0).float()
++    ys, xs = torch.where(mask > 0)
++    if not len(xs):
++        return None, 0.0
++    h, w = mask.shape
++    x0, x1 = int(xs.min()), int(xs.max()) + 1
++    y0, y1 = int(ys.min()), int(ys.max()) + 1
++    dx = max(1, math.ceil((x1-x0)*(expansion-1)/2))
++    dy = max(1, math.ceil((y1-y0)*(expansion-1)/2))
++    ring = torch.zeros_like(mask)
++    ring[max(0,y0-dy):min(h,y1+dy), max(0,x0-dx):min(w,x1+dx)] = 1
++    ring *= 1-mask
++    size = features.shape[-2:]
++    weights = F.interpolate(ring[None,None], size=size, mode="area")[0,0]
++    foreground = F.interpolate(mask[None,None], size=size, mode="area")[0,0]
++    weights = weights * (foreground <= 0.05)
++    mass = float(weights.sum())
++    if mass < min_patches:
++        return None, mass
++    pooled = (features.float()*weights).sum(dim=(-2,-1))/mass
++    norm = torch.linalg.vector_norm(pooled)
++    if not torch.isfinite(pooled).all() or norm <= 1e-8:
++        return None, mass
++    return pooled/norm, mass
++
++
++@torch.no_grad()
++def score_context(features_query, features_target, query_masks, candidates,
++                  expansions=(1.5, 2.0), min_patches=4.0):
++    """Return serializable per-object evidence; candidates contain predictions."""
++    out = []
++    for j, mask in enumerate(query_masks):
++        row = {"scores": {}, "scales": {}, "patch_mass": {}}
++        for expansion in expansions:
++            key = str(expansion)
++            q, qm = context_descriptor(features_query, mask, expansion, min_patches)
++            row["scales"][key], row["patch_mass"][key] = {}, {"query": qm}
++            for name in EXPERTS:
++                masks = candidates.get(name)
++                t, tm = (None, 0.0) if masks is None else context_descriptor(
++                    features_target, masks[j], expansion, min_patches)
++                row["patch_mass"][key][name] = tm
++                row["scales"][key][name] = (
++                    float(torch.dot(q,t).clamp(-1,1)) if q is not None and t is not None else None)
++        # All candidates use the same scale set. Missing evidence never receives
++        # a zero score, which could unfairly beat a legitimate negative cosine.
++        for name in EXPERTS:
++            vals = [row["scales"][str(s)][name] for s in expansions]
++            row["scores"][name] = sum(vals)/len(vals) if vals and all(v is not None for v in vals) else None
++        out.append(row)
++    return out
++
++
++def select_context(baseline, evidence, valid_candidates, weight=1.0, margin=0.05):
++    """Conservative residual reranker with a baseline preference margin.
++
++    Maximize weight * (context(candidate)-context(baseline)) - margin for
++    alternatives; baseline residual is zero. This preserves both original
++    direction-specific routers at weight=0. It does not pretend their learned
++    and rule-based scores have a common numerical scale.
++    """
++    if not math.isfinite(weight) or weight < 0 or not math.isfinite(margin) or margin < 0:
++        raise ValueError("weight and margin must be finite and nonnegative")
++    if weight == 0:
++        return baseline, "disabled"
++    scores = evidence.get("scores", {})
++    base = scores.get(baseline)
++    if base is None or not math.isfinite(base):
++        return baseline, "invalid_baseline_context"
++    best, gain = baseline, 0.0
++    for name in EXPERTS:
++        value = scores.get(name)
++        if name == baseline or name not in valid_candidates or value is None or not math.isfinite(value):
++            continue
++        residual = weight*(value-base)-margin
++        if residual > gain:
++            best, gain = name, residual
++    return best, "context_override" if best != baseline else "baseline_retained"
+diff --git a/projects/v2sam_pccs/engine/loops.py b/projects/v2sam_pccs/engine/loops.py
+--- a/projects/v2sam_pccs/engine/loops.py
++++ b/projects/v2sam_pccs/engine/loops.py
+@@ -90,6 +90,10 @@
+         """Launch test, then summarise how many batches were skipped."""
+         metrics = super().run()
+         rank = _safe_get_rank()
++        # MMLogger suppresses non-main rank messages. Emit an explicit receipt
++        # on every rank so launchers can audit successful distributed inference.
++        print(f'PCCS_RANK_RECEIPT rank={rank} total={self._n_total} '
++              f'skipped={self._n_skipped}', flush=True)
+         if self._n_skipped > 0:
+             print_log(
+                 f'[FaultTolerantTestLoop] rank={rank} finished with '
+diff --git a/projects/v2sam_pccs/evaluation/pccs_metric.py b/projects/v2sam_pccs/evaluation/pccs_metric.py
+--- a/projects/v2sam_pccs/evaluation/pccs_metric.py
++++ b/projects/v2sam_pccs/evaluation/pccs_metric.py
+@@ -4,6 +4,8 @@
+ import matplotlib
+ import numpy as np
+ import torch
++from ..context_consistency import select_context
++from ..candidate_bank import save_bank
+ from mmengine.evaluator import BaseMetric
+ from mmengine.logging import MMLogger, print_log
+ from mmengine.registry import METRICS
+@@ -232,10 +234,14 @@
+         routing_policy=None,
+         selector_model_path=None,
+         aggregation_level="object",
++        context_weight=1.0,
++        context_margin=0.05,
+         **kwargs,
+     ):
+         super().__init__(collect_device=collect_device, **kwargs)
+         self.iou_metrics = iou_metrics or ["IoU", "Dice"]
++        self.context_weight = float(context_weight)
++        self.context_margin = float(context_margin)
+         self.results = []
+         self.selection_info = []  #  新增，用于收集每个样本的expert选择信息
+         self.vis_dir = vis_dir  #  可视化结果保存目录
+@@ -1098,6 +1104,33 @@
+                 best_dice = candidate_dices[best_expert]
+                 best_pred_mask = candidate_masks[best_expert]
+ 
++                bank_file = save_bank(raw_prompt_mask_j, {k:candidate_masks[k] for k in ('visual','anchor','fusion')}, best_pred_mask, video_id, object_ids[j] if object_ids is not None else str(j))
++                context_fields = {}
++                context_evidence = data_samples[i].get("context_evidence")
++                if context_evidence is not None:
++                    evidence = context_evidence[j]
++                    valid = []
++                    for name, mask in candidate_masks.items():
++                        if mask is not None and self._check_mask_quality(mask):
++                            valid.append(name)
++                    ctx_expert, ctx_reason = select_context(
++                        best_expert, evidence, valid,
++                        self.context_weight, self.context_margin)
++                    ctx_mask = candidate_masks[ctx_expert]
++                    context_fields = dict(
++                        context_evidence=evidence,
++                        context_valid_candidates=valid,
++                        context_expert=ctx_expert,
++                        context_reason=ctx_reason,
++                        context_weight=self.context_weight,
++                        context_margin=self.context_margin,
++                        context_changed=ctx_expert != best_expert,
++                        iou_context=candidate_ious[ctx_expert],
++                        dice_context=candidate_dices[ctx_expert],
++                        location_score_context=compute_location_score(ctx_mask, gt_mask_j),
++                        shape_acc_context=compute_boundary_f_measure(ctx_mask, gt_mask_j),
++                    )
++
+                 #  计算额外指标 - location_score 和 shape_acc (boundary F-measure)
+                 location_score_val = None
+                 shape_acc_val = None
+@@ -1141,6 +1174,8 @@
+                 object_results.append(
+                     dict(
+                         IoU=best_iou,
++                        **context_fields,
++                        bank_file=bank_file,
+                         Dice=best_dice,
+                         best_expert=best_expert,
+                         selection_reason=selection_reason,
+diff --git a/projects/v2sam_pccs/models/pccs.py b/projects/v2sam_pccs/models/pccs.py
+--- a/projects/v2sam_pccs/models/pccs.py
++++ b/projects/v2sam_pccs/models/pccs.py
+@@ -5,6 +5,7 @@
+ from mmengine.model import BaseModel
+ from PIL import Image
+ from xtuner.registry import BUILDER
++from ..context_consistency import score_context
+ 
+ from .pccs_components.forward_correspondence import (
+     ForwardCorrespondenceMatcher,
+@@ -26,8 +27,10 @@
+         fusion_expert,
+         dinov3_cfg,
+         sparse_corr_cfg=None,
++        context_cfg=None,
+     ):
+         super(V2SAMPCCS, self).__init__()
++        self.context_cfg = dict(context_cfg or {})
+         self.visual_anchor_expert = BUILDER.build(visual_anchor_expert)
+         self.fusion_expert = BUILDER.build(fusion_expert)
+         # load dinov3 model for sparse correspondence
+@@ -225,7 +228,7 @@
+                     image_exo=image_target,
+                     mask_ego=mask_query,  # [n_obj, H, W] 或 [H, W]
+                     mask_exo=None,
+-                    return_features=False,
++                    return_features=bool(self.context_cfg),
+                 )
+             # 处理返回结果
+             points_target = corr_result["points_exo"]  # list of [N_i, 2] arrays
+@@ -362,4 +365,12 @@
+             )
+         ]
+ 
++        if self.context_cfg:
++            results[0]["context_evidence"] = score_context(
++                corr_result["features_ego"], corr_result["features_exo"],
++                raw_prompt_masks,
++                {name: results[0]["pred_masks_" + name]
++                 for name in ("visual", "anchor", "fusion")},
++                **self.context_cfg,
++            )
+         return results
+diff --git a/tests/test_context_consistency.py b/tests/test_context_consistency.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_context_consistency.py
+@@ -0,0 +1,65 @@
++"""Numerical and routing contracts; runnable without MMEngine/SAM weights."""
++import importlib.util
++from pathlib import Path
++import unittest
++import torch
++
++spec = importlib.util.spec_from_file_location('context', Path(__file__).parents[1] /
++    'projects/v2sam_pccs/context_consistency.py')
++c = importlib.util.module_from_spec(spec)
++spec.loader.exec_module(c)
++
++
++class ContextTests(unittest.TestCase):
++    def setUp(self):
++        self.f = torch.zeros(3,16,24)
++        self.f[0] = 1
++        self.m = torch.zeros(160,240)
++        self.m[60:100,80:120] = 1
++
++    def test_empty_full_and_nonfinite_are_invalid(self):
++        for m in (torch.zeros_like(self.m), torch.ones_like(self.m)):
++            self.assertIsNone(c.context_descriptor(self.f,m)[0])
++        self.assertIsNone(c.context_descriptor(self.f*float('nan'),self.m)[0])
++
++    def test_constant_and_opposite_context(self):
++        row = c.score_context(self.f, -self.f, self.m[None], {'visual':self.m[None]})[0]
++        self.assertAlmostEqual(row['scores']['visual'], -1, places=6)
++        self.assertIsNone(row['scores']['anchor'])
++
++    def test_foreground_does_not_contaminate_ring(self):
++        a,_ = c.context_descriptor(self.f,self.m)
++        changed = self.f.clone()
++        changed[:,6:10,8:12] = 100
++        b,_ = c.context_descriptor(changed,self.m)
++        torch.testing.assert_close(a,b)
++
++    def test_normalized_coordinates_on_different_mask_resolution(self):
++        a,_ = c.context_descriptor(self.f,self.m)
++        b,_ = c.context_descriptor(self.f,self.m.repeat_interleave(2,0).repeat_interleave(2,1))
++        torch.testing.assert_close(a,b)
++
++    def test_baseline_and_missing_evidence(self):
++        e={'scores':{'fusion':0.1,'visual':0.9,'anchor':None}}
++        self.assertEqual(c.select_context('fusion',e,c.EXPERTS,weight=0)[0],'fusion')
++        self.assertEqual(c.select_context('anchor',e,c.EXPERTS)[0],'anchor')
++        self.assertEqual(c.select_context('fusion',e,['fusion'])[0],'fusion')
++        self.assertEqual(c.select_context('fusion',e,c.EXPERTS)[0],'visual')
++
++    def test_ties_negative_cosines_and_nonfinite(self):
++        e={'scores':{'fusion':-0.8,'visual':-0.8,'anchor':float('nan')}}
++        self.assertEqual(c.select_context('fusion',e,c.EXPERTS,margin=0)[0],'fusion')
++        e['scores']['visual']=-0.5
++        self.assertEqual(c.select_context('fusion',e,c.EXPERTS)[0],'visual')
++
++    def test_invalid_parameters(self):
++        for w in (-1,float('nan'),float('inf')):
++            with self.assertRaises(ValueError): c.select_context('fusion',{},[],weight=w)
++
++    def test_no_annotation_argument(self):
++        import inspect
++        self.assertNotIn('gt',str(inspect.signature(c.score_context)))
++        self.assertNotIn('gt',str(inspect.signature(c.select_context)))
++
++
++if __name__ == '__main__': unittest.main()
+diff --git a/tools/aggregate_context_pccs.py b/tools/aggregate_context_pccs.py
+new file mode 100644
+--- /dev/null
++++ b/tools/aggregate_context_pccs.py
+@@ -0,0 +1,74 @@
++"""Audit and summarize paired context PCCS evaluation without fitting on labels."""
++import argparse
++from collections import Counter, defaultdict
++import hashlib
++import json
++import math
++from pathlib import Path
++
++
++def summarize(rows):
++    pairs=defaultdict(list)
++    for r in rows: pairs[r['video_id']].append(r)
++    fields={'PCCS':('IoU','Dice','shape_acc','location_score'),
++            'Context':('iou_context','dice_context','shape_acc_context','location_score_context')}
++    for e in ('visual','anchor','fusion'):
++        fields[e]=(f'iou_{e}',f'dice_{e}',f'shape_acc_{e}',f'location_score_{e}')
++    out={'pairs':len(pairs),'objects':len(rows),'object':{},'frame':{}}
++    for method,keys in fields.items():
++        out['object'][method]={m:sum(float(r[k]) for r in rows)/len(rows) for m,k in zip(('IoU','Dice','ContA','LocE'),keys)}
++        out['frame'][method]={m:sum(sum(float(r[k]) for r in rr)/len(rr) for rr in pairs.values())/len(pairs) for m,k in zip(('IoU','Dice','ContA','LocE'),keys)}
++    diffs=[r['iou_context']-r['IoU'] for r in rows]
++    out.update(changed=sum(r['context_changed'] for r in rows),
++        improved=sum(d>1e-8 for d in diffs),harmed=sum(d< -1e-8 for d in diffs),
++        reasons=dict(Counter(r['context_reason'] for r in rows)),
++        mean_oracle_gap_before=sum(r['oracle_iou']-r['IoU'] for r in rows)/len(rows),
++        mean_oracle_gap_after=sum(r['oracle_iou']-r['iou_context'] for r in rows)/len(rows))
++    return out
++
++
++def main():
++    p=argparse.ArgumentParser()
++    p.add_argument('jsonl',type=Path)
++    p.add_argument('--annotation',type=Path,required=True)
++    p.add_argument('--output',type=Path,required=True)
++    p.add_argument('--limit',type=int)
++    p.add_argument('--baseline-jsonl',type=Path)
++    args=p.parse_args()
++    anno=json.loads(args.annotation.read_text())
++    if args.limit: anno=dict(list(anno.items())[:args.limit])
++    expected={(str(vid),str(obj)) for vid,v in anno.items() for obj in v['objects']}
++    rows=[json.loads(s) for s in args.jsonl.read_text().splitlines() if s]
++    actual=[(str(r['video_id']),str(r['obj_id'])) for r in rows]
++    assert len(actual)==len(set(actual)), 'Duplicate object identities'
++    assert set(actual)==expected,(len(actual),len(expected),'missing or extra objects')
++    for r in rows:
++        for k in ('IoU','Dice','iou_context','dice_context','shape_acc_context','location_score_context'):
++            assert math.isfinite(r[k]) and 0<=r[k]<=1,(k,r[k])
++        chosen=r['context_expert']
++        assert abs(r['iou_context']-r['iou_'+chosen])<1e-7
++        assert r['context_changed']==(chosen!=r['best_expert'])
++    baseline_check=None
++    if args.baseline_jsonl:
++        base={(r['video_id'],r['obj_id']):r for r in map(json.loads,args.baseline_jsonl.read_text().splitlines())}
++        assert set(base)==set(actual)
++        for r in rows:
++            b=base[(r['video_id'],r['obj_id'])]
++            for k in ('best_expert','IoU','Dice','iou_visual','iou_anchor','iou_fusion'):
++                assert r[k]==b[k],(r['video_id'],k,r[k],b[k])
++        baseline_check='exact'
++    result={'annotation':str(args.annotation),'annotation_sha256':hashlib.sha256(args.annotation.read_bytes()).hexdigest(),
++            'jsonl_sha256':hashlib.sha256(args.jsonl.read_bytes()).hexdigest(),
++            'coverage':'exact','baseline_parity':baseline_check,'overall':summarize(rows),'groups':{}}
++    groups=defaultdict(list)
++    for r in rows:
++        mode=anno[r['video_id']].get('candidate_meta',{}).get('temporal_mode')
++        if mode: groups[mode].append(r)
++    result['groups']={k:summarize(v) for k,v in groups.items()}
++    result['largest_changes']=[{k:r[k] for k in ('video_id','obj_id','best_expert','context_expert','IoU','iou_context','context_evidence')} for r in sorted(rows,key=lambda r:abs(r['iou_context']-r['IoU']),reverse=True)[:20]]
++    args.output.parent.mkdir(parents=True,exist_ok=True)
++    args.output.write_text(json.dumps(result,indent=2,allow_nan=False))
++    print(json.dumps({k:v for k,v in result.items() if k!='largest_changes'},indent=2))
++
++
++if __name__=='__main__': main()
+diff --git a/projects/v2sam_pccs/candidate_bank.py b/projects/v2sam_pccs/candidate_bank.py
+new file mode 100644
+--- /dev/null
++++ b/projects/v2sam_pccs/candidate_bank.py
+@@ -0,0 +1,20 @@
++"""Freeze prediction masks once, without receiving target annotations."""
++from pathlib import Path
++import hashlib,os
++import numpy as np
++
++def save_bank(query_mask,candidates,baseline,video_id,object_id):
++    rank=os.environ.get('RANK','0')
++    root=Path(os.environ['PCCS_GAIN_BANK'])/('rank'+rank)
++    root.mkdir(parents=True,exist_ok=True)
++    stem=hashlib.sha256(str(video_id).encode()).hexdigest()[:20]+'_'+hashlib.sha256(str(object_id).encode()).hexdigest()[:10]
++    p=root/(stem+'.npz')
++    if p.exists():raise RuntimeError('Refusing to overwrite frozen candidate '+str(p))
++    arrays={}
++    for name,mask in {'query':query_mask,'baseline':baseline,**candidates}.items():
++        if mask is None:raise ValueError('Missing candidate '+name)
++        a=(mask.detach().cpu().numpy().squeeze()>0)
++        if a.ndim!=2:raise ValueError('Expected H W mask')
++        arrays[name]=np.packbits(a);arrays[name+'_shape']=np.asarray(a.shape)
++    tmp=p.with_suffix('.tmp.npz');np.savez_compressed(tmp,**arrays);tmp.replace(p)
++    return str(p)

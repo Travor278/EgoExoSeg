@@ -1,0 +1,20 @@
+{
+  "coverage": "exact",
+  "objects": 901,
+  "max_cache_metric_iou_error": 3.1108671749713324e-08,
+  "load_receipts": {
+    "exo2ego": {
+      "missing": [],
+      "unexpected": [],
+      "loaded_keys": 32,
+      "position_tables_swapped": false
+    },
+    "ego2exo": {
+      "missing": [],
+      "unexpected": [],
+      "loaded_keys": 32,
+      "position_tables_swapped": true
+    }
+  },
+  "records_sha256": "b05dface666107efbc059ed48b08c19ec6ce18b62406c141a6b7e72a9878ebe1"
+}

@@ -1,0 +1,38 @@
+{
+  "previous_production_unchanged": true,
+  "datasets": {
+    "exo2ego": {
+      "pairs": 64,
+      "objects": 132,
+      "coverage": "exact",
+      "cached_baseline_metrics": "exact",
+      "canonical_forward_parity_checked_objects": 132,
+      "identical_geometry_between_modes": 128
+    },
+    "exo2exo": {
+      "pairs": 64,
+      "objects": 64,
+      "coverage": "exact",
+      "cached_baseline_metrics": "exact",
+      "canonical_forward_parity_checked_objects": 64,
+      "identical_geometry_between_modes": 0
+    },
+    "ego2exo": {
+      "pairs": 64,
+      "objects": 150,
+      "coverage": "exact",
+      "cached_baseline_metrics": "exact",
+      "canonical_forward_parity_checked_objects": 150,
+      "identical_geometry_between_modes": 149
+    }
+  },
+  "component_repeat_normal_score_max_abs": 0.0,
+  "script_sha256": {
+    "evaluate_cached_bank.py": "8c83b9e690ffb952e66b865fc95b731b0e0ca6ded9ff28d482ad15936b309cb3",
+    "remote_read.py": "b8abbf640b667b13317b128d4a089d95b648d007f4242ab8e4afcf39930729f8",
+    "aligned_model.py": "68da9a643cc8cafa975044da75c1196e677ff582a1b7ace1b245644e33c3e1e3",
+    "download_weights.py": "e653d92a91a1346b7c337175ed7767120d014d3ed177a3540c5dc642d2316881",
+    "test_alignment.py": "9776d48650cef0eb29535f4d8b335e9d8c3dd22e9cdae034bbab4641089ac806",
+    "finalize.py": "f9ee349685aa5270c9623a55aa780d64fb97d2aa247be6b9f0bf7109a906029b"
+  }
+}

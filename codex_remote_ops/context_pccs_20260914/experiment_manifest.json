@@ -1,0 +1,53 @@
+{
+  "upstream_commit": "0e3bc33dec3e202ffbb86cec01038e60b18c162a",
+  "context": {
+    "expansions": [
+      1.5,
+      2.0
+    ],
+    "min_patches": 4,
+    "weight": 1,
+    "margin": 0.05,
+    "trained_parameters": 0,
+    "tuned_on_test": false
+  },
+  "datasets": {
+    "ego2exo": {
+      "annotation": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/v2sam-repro/eval_inputs/ego2exo_test_fusion/ego2exo_test_framelevel.json",
+      "sha256": "86f5803758b3c8da16e0c1f373f001a1cd14633497b05a7ce33ae6ddfcc490de",
+      "pairs": 40517,
+      "objects": 100223,
+      "expert_direction": "ego2exo",
+      "weights": {
+        "visual": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/vp_ego2exo_full.pth",
+        "fusion": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/fusion_ego2exo_full.pth",
+        "selector": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/context_pccs_20260914/code/projects/v2sam_pccs/assets/pccs_selector_ego2exo.json"
+      },
+      "transfer": false
+    },
+    "exo2ego": {
+      "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Exo2Ego_20260825/datasets/egoexo_json/exo2ego_test_framelevel.json",
+      "sha256": "b05faed68c0bea40df02d3fd81b0b25af9e3fbb6e4eb8e7e2b8cb9349de34b96",
+      "pairs": 46515,
+      "objects": 109253,
+      "expert_direction": "exo2ego",
+      "weights": {
+        "visual": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/vp_exo2ego_full.pth",
+        "fusion": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/fusion_exo2ego_full.pth"
+      },
+      "transfer": false
+    },
+    "exo2exo": {
+      "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/context_pccs_20260914/datasets/egoexo4d-exo2exo-23b8f17b76aa/annotations/v2sam/exo2exo_selected_sam2_prompt_pair_same_random.json",
+      "sha256": "e59f0ba0d8ec08df58ed4f74bfff34bbf3dabbb9c73164958069bb10c3cd793a",
+      "pairs": 1094,
+      "objects": 1094,
+      "expert_direction": "exo2ego",
+      "weights": {
+        "visual": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/vp_exo2ego_full.pth",
+        "fusion": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_NewMetrics_20260830/official_weights_wangzeze/fusion_exo2ego_full.pth"
+      },
+      "transfer": true
+    }
+  }
+}

@@ -1,0 +1,577 @@
+{
+  "target_branch": "pccs-omama-gain-20260916",
+  "v2sam_base_commit": "0e3bc33dec3e202ffbb86cec01038e60b18c162a",
+  "source_files": [
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/README.md",
+      "bytes": 2194,
+      "sha256": "070e1b9929188f3c928ebc4791e8c8431adc8547df2605c997fac6fb83e49f98"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "bytes": 19189,
+      "sha256": "c0bd9f7664db05726030cc0a2d1d80db769f8cb3adabc900ec936626a98e54cf"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/final_validation.json",
+      "bytes": 550,
+      "sha256": "48b967f7476164e356fb6c212f6c7a465c05f9393231d4d0e0749ab622751b6b"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/manifest.json",
+      "bytes": 16195,
+      "sha256": "4e3006a625294a67376005136bf96e0fbf3de9253eaf666bd073429cddf813fc"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/job_receipt.json",
+      "bytes": 2286,
+      "sha256": "c5d47a0e852459f36b30b25237bf32e9f241e3ee8021302a2c8a0b5702ddf610"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/resource_release.json",
+      "bytes": 660,
+      "sha256": "cdc211ac9e1b93c351ad923a8f4442b4edf90347059777d45817f467fd3b6b15"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/full_runtime.yaml",
+      "bytes": 2128,
+      "sha256": "551d97fa23b7286599e3525ac3b640858d6dece31632357068c0394ae3e4a1b6"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/aligned_model.py",
+      "bytes": 6590,
+      "sha256": "dde769866b0c3990d388420fbc92be7ec84359ce4ad764773b25a9a520341f6a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/gain_features.py",
+      "bytes": 2108,
+      "sha256": "831842d97e85e73eb4d82b39c0ca82a08c1f52c610298a350cfb14e88c7ebadd"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/cache.py",
+      "bytes": 976,
+      "sha256": "879a51531cba3663d90a8818368b8b12fbf1a37824fcc484ef5a074f279f6130"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/score.py",
+      "bytes": 5067,
+      "sha256": "2a9016354a1f883e19eeeab20e94bd2e0163bb3557c3bf32f4d19191a54ede6a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/summarize.py",
+      "bytes": 4512,
+      "sha256": "838a5655b73c5474fb5731db0dd805e5d5f54ceab5c7065d657db65139a3ce80"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/run_stage.py",
+      "bytes": 5071,
+      "sha256": "32ddc36cb635de9ce238bece95c65a0d84e83557d78458187994be720caac056"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/prepare.py",
+      "bytes": 2695,
+      "sha256": "23aeb95c39686e1be8cb4307ac2681c6e43daac84b4091a340e1990b72d69dd9"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/launch_4090.sh",
+      "bytes": 437,
+      "sha256": "9507b6c687f39bd5224f7f02fed46bf9199eb220cfd098a55ed091be62348dfd"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/launch_h100.sh",
+      "bytes": 451,
+      "sha256": "2255d1adcfb3a75af6c8cba4d0b07e6d79a0aa78784db4213ead3dc83672c8cd"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/test_aggregation.py",
+      "bytes": 727,
+      "sha256": "961ba111e3789d5f71d703c9b0b14bfc642aab986f8192953c85abe21723902a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/record_summary_fix.py",
+      "bytes": 667,
+      "sha256": "8e2c03461f36f19cc1ac36206f7fef0221be3d38f529bfdf226cdb866d7edd82"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/README.md",
+      "bytes": 2675,
+      "sha256": "f3e878bc490711fccff8932879d6ec59c9c68a07b6e6356f79dd97bf2aff7c99"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/REPORT.md",
+      "bytes": 888,
+      "sha256": "6e8c1bd0cec829e8c0cbd6ccc3a17f7edac95ff965b34ba726f542e22b37f46e"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/NEXT_EXPERIMENT.md",
+      "bytes": 2017,
+      "sha256": "e15bd1e994e95c080155784e47195651286118fd53559992e1f60efb74cffa26"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/confirmation_results.json",
+      "bytes": 10794,
+      "sha256": "4f9660a9510de7b8b0ecf0653b8382474766b2a3020d048ac6b70d03a802ce60"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/confirmation_plan.json",
+      "bytes": 6813,
+      "sha256": "77be2ef71639db6fbc94898eeef12d4b93741bacee4d411989ac8294410fb182"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/failure_diagnostics.json",
+      "bytes": 1989,
+      "sha256": "1e5b8cd8e9787fbd607cc02db161a9206c3c56d6c3e4ebb1b5197b8204f36647"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/prepare_confirmation.py",
+      "bytes": 3898,
+      "sha256": "38b26d670111ce154b7ac33cf5aefcc80e84e1cafd9e4aff2e2df51bcab02991"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/candidate_bank.py",
+      "bytes": 1034,
+      "sha256": "c57ba53e458b0db80d7b36a79fc46233547789be4306d366fd657b3e69b0d92b"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/evaluate_confirmation.py",
+      "bytes": 7747,
+      "sha256": "a38c22e0376d098f40b658979a05df30d64afbc2b0c9af65d312484b40f7bb1f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/run_confirmation.py",
+      "bytes": 2394,
+      "sha256": "bd384f8e3f1a69c26c431ff723cddb47cb7fca61fbf6002d8d2b80f9dedd9a2d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/launch_confirmation.sh",
+      "bytes": 335,
+      "sha256": "1479738462701ce7f4da31b09968b1d724aa45a97da5875ca336755c16f5daa8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/prepare_gate_training.py",
+      "bytes": 4120,
+      "sha256": "2671bf833a796b07b00f90fa344d0398cf58004ea94e43f7d8bc9b61e460588f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/score_gate_training.py",
+      "bytes": 3489,
+      "sha256": "42235fff99a4cd65e02ff2feeedc4e49bbce54d36867553d13d3ad8da227a12b"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gain_features.py",
+      "bytes": 2074,
+      "sha256": "2b649dcac7209d5ef43a60deb47f874805d7708ab1f41e443309315c68c9e0d7"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/fit_gain_gate.py",
+      "bytes": 3976,
+      "sha256": "53f9d6d9ebfb5af615a666f552ab7f05e60d48fb73993c67a9350f7998e3cb36"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/run_gate_training.py",
+      "bytes": 2664,
+      "sha256": "71d0f52d2904f2fa15a1fc24dce1aaab6777afbbaefb5dbc62701bceab61eb4e"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/launch_gate_training.sh",
+      "bytes": 364,
+      "sha256": "6c17d96f28b352d39cb425cdec72c0149b5c2bc54c9b4251d19dcee3679b09e9"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/setup_gate_dependencies.sh",
+      "bytes": 908,
+      "sha256": "be2e5d4814e6572cde9cd493b1973e0dd67a6f6894f11068b20b5238d33dd1f4"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/test_gain_features.py",
+      "bytes": 1138,
+      "sha256": "0620a976e12db751952eed6057c2f4aa82a8eede3ceaf639cad0487f9822c903"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/test_selection.py",
+      "bytes": 975,
+      "sha256": "9dcf29e593f94bb46b93ad418abd69b2e04c197ce71f1e2579785ea587b433fc"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/prepare_gate_holdout.py",
+      "bytes": 2095,
+      "sha256": "abecd561c3808f735300bcce75ece58980db34d15cb06d54ca29cd6a207738a3"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/prepare_holdout_run.py",
+      "bytes": 1915,
+      "sha256": "2e9af2fa807924c03b80f01c4c633f1d13e14a913b3bb8fe57754bbea5bc9aba"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/score_holdout.py",
+      "bytes": 6877,
+      "sha256": "32c33c35d3c034e6c227de8483057dfa4cb6ddffd60fc3443c1501b7812f90e7"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/run_holdout.py",
+      "bytes": 2492,
+      "sha256": "626ecd43a8e916f7156cbb4652e1bfc711fb366bfd9d3e1f8d4815f7285c3bf2"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/launch_holdout.sh",
+      "bytes": 480,
+      "sha256": "eb734639003c5e5fe99a9e12224194b5ad8713b161f2903d82759ba9f2a23f59"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/verify_frozen_gate.py",
+      "bytes": 1711,
+      "sha256": "817bceceebb934351650a43a79c159300a06f36cc6ab58a8a45135324168e6f4"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/README.md",
+      "bytes": 2081,
+      "sha256": "7efaa51acee04c3db49886c868ff33d2100b7a46154e6cd472b1f1e238a4e383"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/prepare.py",
+      "bytes": 3828,
+      "sha256": "bcffaefd130ef0a6f382a2af1fcdbccf42b8877fa5e7ef766c98b80dfcf5c1bd"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/prepare_h100.py",
+      "bytes": 476,
+      "sha256": "fe4542f26b1aa949d8c4e09e4b40425e675290e75824daecc69d5346cff2e2a8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/run_stage.py",
+      "bytes": 5125,
+      "sha256": "f2fac48753733eed492596d551c9ee1bdec90bd52067c8d8288beb5a363c33c9"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/score.py",
+      "bytes": 5124,
+      "sha256": "2006f2407b46e0940b2b84572e7e3e883e95e8bfddb3703d399e74f772591248"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/summarize.py",
+      "bytes": 4639,
+      "sha256": "6b805fd732b7f7c878174ed8f2663c8bf3e6c7535531403dbdc8943027dd8f22"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/cache.py",
+      "bytes": 995,
+      "sha256": "f3c5f2f0d0b1b937f6018fe3a1522f8db67bc2234e15af5651b46664bb4dc9b7"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/launch.sh",
+      "bytes": 524,
+      "sha256": "27ac009a2b678250154b40aec9e8ea780bff067d9b00f74ac16cfd3cbc1a3932"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/launch_h100.sh",
+      "bytes": 468,
+      "sha256": "253d237a0fd58b5948c525b2ffd098ab6da5f03e8f5e405a1e5543680f433d29"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/job_receipt.json",
+      "bytes": 909,
+      "sha256": "7119fb7a8d555e6bb3fe7f24277e5f0f1dbfcc70e00ecd4eb802fea8714b2630"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/manifest.json",
+      "bytes": 17455,
+      "sha256": "4115ab34a9ca8c0f2f10d1e506ef8fb5491ed96c37a09d0bbe65e79cc5f45256"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/status.json",
+      "bytes": 269,
+      "sha256": "af57c9a34032af20b57d7e7a0e5823559f08d23d3d1f917783b2d38f942878a1"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/prepare.log",
+      "bytes": 26,
+      "sha256": "4c98a3d9fc69bd492b92ac4439c23eadbf5100d624927f354847f5c472e440d6"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/pipeline.log",
+      "bytes": 531,
+      "sha256": "a703d54dc7ad8d85dd791e719b1b428e76e3c2eaec6d858f506fb75705449ec5"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/aligned_model.py",
+      "bytes": 6590,
+      "sha256": "dde769866b0c3990d388420fbc92be7ec84359ce4ad764773b25a9a520341f6a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/candidate_receipts.json",
+      "bytes": 143,
+      "sha256": "a9bb42429d106a8377d6820ff5c1c1329d110682cd7f9d22c407e7847797b4d7"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/results.json",
+      "bytes": 18218,
+      "sha256": "9a89af04844da9c1d78787a000e5600d4199a04e1e30d3bf3b45020be295ceab"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/REPORT.md",
+      "bytes": 752,
+      "sha256": "c5df7f08dca87c79c61dcbeb13f70afabb0f57c72a7e6e4b35bd42cdf454a1b3"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/candidate_generation.log",
+      "bytes": 216722,
+      "sha256": "0738b57f33c8c0cf2ef93dd1316ea6622dc22c2060f1b1c40a3aace24065f9d0"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/scoring_rank0.log",
+      "bytes": 748,
+      "sha256": "62e7ab992454b5091a6b76eab4ccf27bd5cdf5642988bfbe2a169433a8484267"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/scoring_rank1.log",
+      "bytes": 748,
+      "sha256": "62e7ab992454b5091a6b76eab4ccf27bd5cdf5642988bfbe2a169433a8484267"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/scoring_rank2.log",
+      "bytes": 748,
+      "sha256": "62e7ab992454b5091a6b76eab4ccf27bd5cdf5642988bfbe2a169433a8484267"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/scoring_rank3.log",
+      "bytes": 748,
+      "sha256": "62e7ab992454b5091a6b76eab4ccf27bd5cdf5642988bfbe2a169433a8484267"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/summarize.log",
+      "bytes": 370,
+      "sha256": "fb3b9a29343c57ad4aa231a719b30a0554a0242f6c1a28f8da13aef79c1398f7"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/gpu_after.txt",
+      "bytes": 42,
+      "sha256": "2c32930470b6a3db67e49701bd6a5459f4f8eb5b3e9461d7a466d12ade4e457d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/scored/rank0_receipt.json",
+      "bytes": 598,
+      "sha256": "b8229cca4857a5a6f7d92361383c608f3e20a09d5b4b6b02fd2b24c427cf0ee9"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/scored/rank1_receipt.json",
+      "bytes": 599,
+      "sha256": "7e8cbd206ccca65a9d1e23daed75ea5545ce56a21507737f611d30e9885dbd62"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/scored/rank2_receipt.json",
+      "bytes": 598,
+      "sha256": "0bec678bb4c401dd010d408bc01713a518a0a5a211ff45960b61bb0dd94f6cf2"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/full/scored/rank3_receipt.json",
+      "bytes": 599,
+      "sha256": "9940741c1850e6dc496ff0a3c6935f61f5e695d5813c9f5e4b4004d5ed0ac56f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/smoke4/candidate_receipts.json",
+      "bytes": 127,
+      "sha256": "6340aee1e4c5404f8901e3b1f9edff4c6761dec8050613593256810ab0ba8448"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/smoke4/results.json",
+      "bytes": 18151,
+      "sha256": "d75bbbf420fcd648b76144ead7687de6fd0110d49acbf7e360394102c0795c7c"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/smoke4/preflight_resources.txt",
+      "bytes": 269,
+      "sha256": "931fae26f8a85b6dc1be739c47b74a80613713e692b051ebc423c6ee8f2e3888"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/smoke4090/results.json",
+      "bytes": 16091,
+      "sha256": "a60167ff7202c697cc6e9b77898e428fe0118f72eb462154fa223456ab28be01"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/runs/smoke4090/gpu_after.txt",
+      "bytes": 42,
+      "sha256": "2c32930470b6a3db67e49701bd6a5459f4f8eb5b3e9461d7a466d12ade4e457d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/fit_results.json",
+      "bytes": 6749,
+      "sha256": "26316b33f0c6be7074ad34d13e7a6b4757836fbb4b17d79e1f6902c30148414e"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout_plan.json",
+      "bytes": 9324,
+      "sha256": "bbba136eceb94246bc79d1902022318123bfe192689a941500be9cdd88a4fb7f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/plan.json",
+      "bytes": 31900,
+      "sha256": "d89d073280b307411241fc507e2bb0b093741de0eda881ee39ee569e76e3c671"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/prepare_status.json",
+      "bytes": 159,
+      "sha256": "59b0e05fe925da9f7cef698914fa8e6c21119f5d33bd73451fc6fd660437ee11"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/scoring_receipt.json",
+      "bytes": 496,
+      "sha256": "c4fdb47c675db4b60f42e8d771cc0b60690da81f35d25dbbef168b54d834c6d6"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/status.json",
+      "bytes": 127,
+      "sha256": "e17e904f54d94ba2b7a9afa851e5839b0b67a8e7a74bc8614804c2fb84cd69ba"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/candidate_generation.log",
+      "bytes": 34327,
+      "sha256": "5f65ad0dd6b744f7c772b69f21e22cd4f5ba38d46da207f3d3ec6a245fa6fdbb"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/gate_fit.log",
+      "bytes": 556,
+      "sha256": "956c3adbb5e4d925c601e30f78edcf2a79136976e6be103563a70acbf6b5df50"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/omama_scoring.log",
+      "bytes": 733,
+      "sha256": "239c47ef066d649f7e77de56f984c3838ab37bcdf507105e59b6e1cfa670ee21"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/prepare_holdout.log",
+      "bytes": 24,
+      "sha256": "013b9c560a283caad924c0fe3abde41b9a16456fc1a4f64cd5345fa65519324c"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/prepare_holdout_run.log",
+      "bytes": 54,
+      "sha256": "2b68f612bb4d00f2b3cc95ab13c295405a9423677b7f9a1ff25941fb165da17d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/setup_dependencies.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/dependency_receipt.txt",
+      "bytes": 27,
+      "sha256": "ef5e86b3e62a5bef1a0fc7788265d6f37a3ba0cca9a7e25f5074fb57e53c9418"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/gpu_after.txt",
+      "bytes": 42,
+      "sha256": "2c32930470b6a3db67e49701bd6a5459f4f8eb5b3e9461d7a466d12ade4e457d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/checkpoint_validation.json",
+      "bytes": 226,
+      "sha256": "0c6b9fca6a0aed783c99c0a884fbe04ca71b1b79a8193a3b4ec31f90f27b939a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/frozen_manifest.json",
+      "bytes": 12562,
+      "sha256": "b9cd1c012af1f8d9d849484f775c7b5cc1de8bb576c241c7ae87e1e269b90473"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/results.json",
+      "bytes": 16062,
+      "sha256": "4d157628a043821bdd159717c0ac768b2e56f95a9aab6cf21bf1c3c38a154d6a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/scoring_status.json",
+      "bytes": 54,
+      "sha256": "cb52f6b5e9459ec481881f693492571e3b31c53ac275f221c8484e41bc00cdb8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/status.json",
+      "bytes": 127,
+      "sha256": "f069685e98dd23008d11fba0551e41f1eb1bfb3047189b39d262601c7ad40e3a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/REPORT.md",
+      "bytes": 774,
+      "sha256": "89e71c91c253c8f51d9a175604fbf23e376a1c6c7af1327654e877811b86ed09"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/scoring.log",
+      "bytes": 733,
+      "sha256": "239c47ef066d649f7e77de56f984c3838ab37bcdf507105e59b6e1cfa670ee21"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/verify_checkpoint.log",
+      "bytes": 204,
+      "sha256": "3e790fd77d6e514fdb8d2d7b26f117db6d9d4a9b4dfd7dc6ad84af8fa3a485d0"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/gpu_after.txt",
+      "bytes": 42,
+      "sha256": "2c32930470b6a3db67e49701bd6a5459f4f8eb5b3e9461d7a466d12ade4e457d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/holdout/runs/exo2ego/full_test_1gpu.log",
+      "bytes": 33104,
+      "sha256": "6b06d03e30f1e48dc63f5b3978287d9352080ad8584fe8fdfcdedaa5f6bd310e"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_20260915/gate_training/training_records.jsonl",
+      "bytes": 2409342,
+      "sha256": "40c68364f1a3cb88e0298e0eca49bdb881e19f6ca1c872d32661b302e6a64a9c"
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_transfer_20260916/runs/smoke4090/preflight_gpu_processes.txt",
+      "bytes": 156,
+      "sha256": "9368954b7fa4aeed7954b6ee009fb6629b7a69ab64282cbffde1e6ed7881129c"
+    },
+    {
+      "path": "codex_remote_ops/context_pccs_20260914/experiment_manifest.json",
+      "bytes": 2709,
+      "sha256": "7ca58b5a00482e023448b03e0743f93f91bda15beaf8905c11e2c69acca9b398"
+    },
+    {
+      "path": "codex_remote_ops/context_pccs_20260914/code_manifest.json",
+      "bytes": 1467,
+      "sha256": "a9cf31a04d7877663823321aac8623e7a226286d87e24ae55656fbdb5197c3bb"
+    },
+    {
+      "path": "codex_remote_ops/context_pccs_20260914/job_receipt_r4.json",
+      "bytes": 1345,
+      "sha256": "f0e5ab406f7f36148909abf886b1a367dd379f96f38f30cfd543c0349d701ab6"
+    },
+    {
+      "path": "codex_remote_ops/context_pccs_20260914/ablations_20260915/FINAL_RESULTS.md",
+      "bytes": 4473,
+      "sha256": "025ed09db6ad490958bb230c602efd2dc434da91959432173e4b4b218cb0aa76"
+    },
+    {
+      "path": "codex_remote_ops/context_pccs_20260914/ablations_20260915/FINAL_RESULTS.json",
+      "bytes": 46523,
+      "sha256": "9cb0eb9086e6dedb275446bbe0e2bf5fc28568539e8503112d878f70fd654fb7"
+    },
+    {
+      "path": "codex_remote_ops/omama_aligned_20260915/REPORT.md",
+      "bytes": 5191,
+      "sha256": "63ddd2b517090586a1610766d6cb958224460bdc2eb648f8c8453dad23b03aae"
+    },
+    {
+      "path": "codex_remote_ops/omama_aligned_20260915/REPORT.json",
+      "bytes": 39631,
+      "sha256": "9707e61f7ea958f715143e641c0fdf12f641555040e53384c96f2912ea0f94b0"
+    },
+    {
+      "path": "codex_remote_ops/omama_aligned_20260915/validation.json",
+      "bytes": 1393,
+      "sha256": "1d98c7e9527d467d06fa21bd25fa94a0230a3a94a176e7fcacb0f42186ec3e6c"
+    },
+    {
+      "path": "codex_remote_ops/omama_aligned_20260915/aligned_model.py",
+      "bytes": 6472,
+      "sha256": "68da9a643cc8cafa975044da75c1196e677ff582a1b7ace1b245644e33c3e1e3"
+    },
+    {
+      "path": "codex_remote_ops/pccs_method/third_party/O-MaMa/LICENSE",
+      "bytes": 35184,
+      "sha256": "6f1e622c82a380075843bb084a7ec3b1f1d12a4a02526d75e78b0924a860aa75"
+    }
+  ],
+  "excluded": "browser state/cookies, credentials, raw images/masks/full object caches, large weights, user research documents; historical absolute paths retained in experiment logs"
+}

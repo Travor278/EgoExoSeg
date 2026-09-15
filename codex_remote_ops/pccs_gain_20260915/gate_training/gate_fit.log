@@ -1,0 +1,21 @@
+{
+  "fit_pairs": 384,
+  "calibration_pairs": 128,
+  "regression_examples": 1352,
+  "baseline": {
+    "frame_iou": 0.7711395438967781,
+    "changed_objects": 0,
+    "objects": 225,
+    "pairs": 128
+  },
+  "selected": {
+    "model": "hist_gradient_boosting",
+    "threshold": 0.03,
+    "frame_iou": 0.8108970390923786,
+    "changed_objects": 42,
+    "objects": 225,
+    "pairs": 128,
+    "delta_pp": 3.9757495195600567
+  },
+  "next_step": "Freeze selected gate and evaluate on unused test takes; calibration gains are not test gains."
+}

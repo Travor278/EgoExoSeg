@@ -1,0 +1,5 @@
+# Preserve evaluated source/artifact bytes and recorded SHA256 values.
+codex_remote_ops/** -text whitespace=cr-at-eol
+# Raw logs and unified patch context intentionally retain original whitespace.
+codex_remote_ops/**/*.log -whitespace
+codex_remote_ops/**/*.patch -whitespace
