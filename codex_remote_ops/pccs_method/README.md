@@ -8,9 +8,9 @@ This branch records the evaluated implementation and experiment evidence. The pr
 |---|---:|---:|---:|---|
 | Exo→Ego independent 512-pair holdout | 70.9472% | 74.9235% | +3.9762pp | Complete; 95% take-bootstrap CI [+2.5743,+5.4232] |
 | Exo→Ego full 46,515 pairs / 109,253 objects | 53.6119% | 57.2772% | +3.6653pp | Complete; CI [+2.6849,+4.8846] |
-| Exo→Exo 1,094 pairs / 20 takes, using Exo→Ego weights | Pending | Pending | Pending | Four-H100 smoke passed; full evaluation running |
+| Exo→Exo 1,094 pairs / 20 takes, using Exo→Ego weights | 38.4343% | 39.8194% | +1.3851pp | Complete; CI [−0.0288,+2.7435], crosses zero |
 
-The full Exo→Ego benchmark includes earlier exploratory/confirmation test samples. It is a frozen full-benchmark evaluation, not an entirely unseen cohort. Do not infer Exo→Exo gains from these Exo→Ego numbers. Fixed O-MaMa cosine-margin0.05 is also recorded as a comparator. There is no Ego→Exo result for the newly learned gate yet.
+The full Exo→Ego benchmark includes earlier exploratory/confirmation test samples. It is a frozen full-benchmark evaluation, not an entirely unseen cohort. Exo→Exo was evaluated separately: fixed O-MaMa cosine-margin0.05 achieves40.0936% (+1.6593pp; CI [−0.4837,+3.6114]). Both transfer estimates are positive but intervals cross zero; the learned gate does not outperform the fixed gate on this benchmark. No Ego→Exo result exists for the newly learned gate yet.
 
 Detailed Chinese method description, equations, feature table, data boundaries and all metrics: [FINAL_REPORT.md](../pccs_gain_full_20260915/FINAL_REPORT.md).
 

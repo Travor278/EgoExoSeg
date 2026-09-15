@@ -1,0 +1,6 @@
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/reference/dinov2/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/reference/dinov2/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_transfer_20260916/reference/dinov2/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")

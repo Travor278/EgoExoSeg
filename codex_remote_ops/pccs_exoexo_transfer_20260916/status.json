@@ -1,16 +1,14 @@
 {
-  "state": "running",
-  "phase": "candidate_generation",
-  "rank0_batches_done": 0,
-  "rank0_batches_total": 8,
+  "state": "complete",
+  "phase": "complete",
+  "eta_seconds": 0,
   "gpus": [
     0,
     1,
     2,
     3
   ],
-  "eta_seconds": null,
-  "stage": "smokeH100",
-  "updated_at": 1789489148.5213387,
-  "pid": 72
+  "stage": "full",
+  "updated_at": 1789489710.177753,
+  "pid": 3143
 }
