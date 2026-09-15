@@ -16,4 +16,8 @@ Times refer to Asia/Shanghai unless the original log explicitly uses UTC. Raw tr
 
 Implementation checks: Python syntax compilation; four-way aggregation parity against965 real holdout objects; feature invariance under target/oracle metric corruption on128 candidates; exact baseline candidate parity; all foundation/checkpoint loads and full-rank receipts recorded. Scoring checks every cached mask against recorded IoU with tolerance1e-5; full maximum observed error3.29e-8. These checks establish arithmetic and coverage, not cross-dataset generalization.
 
+2026-09-16 pipeline audit: updated frame/object arithmetic independently recomputed; original and corrected weights both pass actual initialization and GT-content counterfactual probes. Corrected e19/e20 assets match the user's Hub revision. Full evidence: `../pccs_pipeline_audit_20260916/AUDIT_REPORT.md`.
+
+2026-09-16 01:19–01:30 corrected-weight Exo→Exo: baseline38.5257%, prespecified native-margin primary42.2665% (+3.7409pp,95%CI[1.5792,5.7901]); canonical-margin42.3595%, geometric-consensus42.5829%, old learned-gate transfer41.1004%. Secondary comparisons remain exploratory.1094 pairs exact,4ranks zero skipped, taskjob-0572f367-dcd4-48c9-9cf8-0996c502b5eb succeeded, occupied nodes0. Code and raw logs are in `../pccs_corrected_exoexo_20260916/`.
+
 The source code's random region sampler can change candidates across reruns/sharding. All reported deltas use the same frozen bank within the comparison. Never subtract a new run's method score from an unrelated prior-run baseline.

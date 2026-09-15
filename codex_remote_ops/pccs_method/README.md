@@ -9,10 +9,13 @@ This branch records the evaluated implementation and experiment evidence. The pr
 | Exo→Ego independent 512-pair holdout | 70.9472% | 74.9235% | +3.9762pp | Complete; 95% take-bootstrap CI [+2.5743,+5.4232] |
 | Exo→Ego full 46,515 pairs / 109,253 objects | 53.6119% | 57.2772% | +3.6653pp | Complete; CI [+2.6849,+4.8846] |
 | Exo→Exo 1,094 pairs / 20 takes, using Exo→Ego weights | 38.4343% | 39.8194% | +1.3851pp | Complete; CI [−0.0288,+2.7435], crosses zero |
+| Exo→Exo, corrected e19/e20 weights; primary native O-MaMa | 38.5257% | 42.2665% | +3.7409pp | Complete; CI [+1.5792,+5.7901] |
 
 The full Exo→Ego benchmark includes earlier exploratory/confirmation test samples. It is a frozen full-benchmark evaluation, not an entirely unseen cohort. Exo→Exo was evaluated separately: fixed O-MaMa cosine-margin0.05 achieves40.0936% (+1.6593pp; CI [−0.4837,+3.6114]). Both transfer estimates are positive but intervals cross zero; the learned gate does not outperform the fixed gate on this benchmark. No Ego→Exo result exists for the newly learned gate yet.
 
 Detailed Chinese method description, equations, feature table, data boundaries and all metrics: [FINAL_REPORT.md](../pccs_gain_full_20260915/FINAL_REPORT.md).
+
+The latest corrected-weight experiment has a prespecified primary comparison: native-aspect O-MaMa with cosine margin0.05. Its positive CI supports gain on this20-take benchmark. Geometric consensus is a secondary exploration (42.5829%, +4.0572pp); superiority over the other methods has not been independently established. See the [pipeline audit](../pccs_pipeline_audit_20260916/AUDIT_REPORT.md) and [corrected-weight results](../pccs_corrected_exoexo_20260916/FINAL_REPORT.md). The earlier rows retain author-checkpoint controls and must not be mixed with this baseline.
 
 ## Code layout
 

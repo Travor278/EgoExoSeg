@@ -15,5 +15,16 @@
   "success_retention_minutes": 1,
   "failure_retention_minutes": 1,
   "state_at_submission": "queued",
-  "scope": "Exo2Exo1094 pairs; corrected Visuale19 Fusione20; native geometry and consensus matching; no target fitting"
+  "scope": "Exo2Exo1094 pairs; corrected Visuale19 Fusione20; native geometry and consensus matching; no target fitting",
+  "final_state": "succeeded",
+  "finished_at": "2026-09-16T01:30:53+08:00",
+  "occupied_nodes_after_completion": 0,
+  "primary_method": "native_margin005",
+  "primary_result": {
+    "delta_frame_iou_pp": 3.7408805933660965,
+    "paired_take_bootstrap_95ci_pp": [
+      1.579173028333684,
+      5.79007904615121
+    ]
+  }
 }

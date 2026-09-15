@@ -96,6 +96,21 @@
       "bytes": 1441
     },
     {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/FINAL_REPORT.md",
+      "sha256": "283315294d2af60055f3b527a1d5df3977e4bf4b376dbdf346ce68f1814118ef",
+      "bytes": 3914
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/final_validation.json",
+      "sha256": "20f88eac2ba7191b4e2b586def5d064c2044e7ec5f6e43f2bea89ddb0b84fb44",
+      "bytes": 332
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/resource_release.json",
+      "sha256": "a86e98ecbc2cb67fadc714bdc28291217abfe3b018e342f590454095cbd9191b",
+      "bytes": 513
+    },
+    {
       "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/prepare.py",
       "sha256": "3b182a6e8d03e0a5c4a724a90403ab11bd8f3db9e5987cfe9c5597916ee7ede0",
       "bytes": 3317
@@ -127,8 +142,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/job_receipt.json",
-      "sha256": "af864f7f52740de0a2adfddd10839b4f7c59177bac1a0f50fc439cb90b205768",
-      "bytes": 753
+      "sha256": "9c5b6d0ee771173aff6b10a66154b57469b3857d0623f4db760c6e284542f419",
+      "bytes": 1103
     },
     {
       "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/manifest.json",
@@ -137,8 +152,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/status.json",
-      "sha256": "7d3d9952dfed6b85f098398af5c675a04ce7b4b3d8425a03ca9789d9bc871b80",
-      "bytes": 268
+      "sha256": "385392a88e52e31605c9ca083292c08e14cebb940179798bac255f8326706ee0",
+      "bytes": 195
     },
     {
       "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/prepare.log",
@@ -156,9 +171,59 @@
       "bytes": 127
     },
     {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/candidate_receipts.json",
+      "sha256": "2e539ff3c3109db77da593fc5a10186c93c1b3b476bd622a44e4507730545812",
+      "bytes": 135
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/results.json",
+      "sha256": "308d378bdb33165b0a493180f9ff8dcfef7f0886bd3a40a394840ef60e4311e1",
+      "bytes": 19621
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/REPORT.md",
+      "sha256": "7a2aea7ab5121ea8a0def209edb67d47bcdd7229a7bf2a0e7a47b5992468dfcf",
+      "bytes": 1040
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/candidate_generation.log",
+      "sha256": "646e801b1071ac593f4ebaf0f42a376a6acfc7bbd3eae5ac930c9dd45b7a768d",
+      "bytes": 73500
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/scoring_rank0.log",
+      "sha256": "8e15d24d44ee6b8ee5951211e7ece24108456202a695b5c95870ddc2d072122e",
+      "bytes": 769
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/scoring_rank1.log",
+      "sha256": "8e15d24d44ee6b8ee5951211e7ece24108456202a695b5c95870ddc2d072122e",
+      "bytes": 769
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/scoring_rank2.log",
+      "sha256": "8e15d24d44ee6b8ee5951211e7ece24108456202a695b5c95870ddc2d072122e",
+      "bytes": 769
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/scoring_rank3.log",
+      "sha256": "8e15d24d44ee6b8ee5951211e7ece24108456202a695b5c95870ddc2d072122e",
+      "bytes": 769
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/summarize.log",
+      "sha256": "44931ed2ed4565f06576e4f23ae76d6c2df3d33e2b59b6fd2eafab43c8cc324d",
+      "bytes": 640
+    },
+    {
+      "path": "codex_remote_ops/pccs_corrected_exoexo_20260916/runs/full/gpu_after.txt",
+      "sha256": "2c32930470b6a3db67e49701bd6a5459f4f8eb5b3e9461d7a466d12ade4e457d",
+      "bytes": 42
+    },
+    {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "994fc98c9eb080f838a22be2d2d336d04b94f180be81c542f0b829cd6433f2f7",
-      "bytes": 21243
+      "sha256": "65cd012ff583fa4ce57ad4f30d13461ba9530638eac0ec557a44e3794bde928b",
+      "bytes": 23111
     }
   ],
   "source_diary_not_copied": true
