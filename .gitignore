@@ -17,6 +17,7 @@ __pycache__/
 !codex_remote_ops/pccs_exoexo_transfer_20260916/**/*.log
 !codex_remote_ops/pccs_pipeline_audit_20260916/*.log
 !codex_remote_ops/pccs_corrected_exoexo_20260916/**/*.log
+!codex_remote_ops/pccs_corrected_exoego_20260916/**/*.log
 *.pid
 *.status
 *.partial

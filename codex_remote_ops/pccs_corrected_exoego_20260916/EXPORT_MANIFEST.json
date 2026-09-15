@@ -1,0 +1,94 @@
+{
+  "files": [
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/prepare.py",
+      "sha256": "b91382496d5ea5d9d445781b9ea4f779edc327b20e736fd53feb4e1f2b1084f8",
+      "bytes": 3226
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/score.py",
+      "sha256": "dd17d7ca8603159e8b0d2774f94ada8943dbc74688824c4bf13beb36ee147be6",
+      "bytes": 5653
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/cache.py",
+      "sha256": "f3c5f2f0d0b1b937f6018fe3a1522f8db67bc2234e15af5651b46664bb4dc9b7",
+      "bytes": 995
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/summarize.py",
+      "sha256": "852b2b3d853fd013bb166bcaf221c40ea5967ad909fda3c021ccf0899c7f9513",
+      "bytes": 4692
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/run_stage.py",
+      "sha256": "f2fac48753733eed492596d551c9ee1bdec90bd52067c8d8288beb5a363c33c9",
+      "bytes": 5125
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/launch_h100.sh",
+      "sha256": "be9ac901dff26cd5842a82d66044a4b704f2165dc582a2d1a6cc79939ee88fb4",
+      "bytes": 538
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/PLAN.md",
+      "sha256": "de4bd39d36782dfc14cae4ae6336bc607b1bcd82e7f404a67643c1e219420f59",
+      "bytes": 1585
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/EXPLORATION_PLAN.md",
+      "sha256": "59a6e1e54cd6f1b64c10c6e4f3c52b88d037883abdcecb437d2eb581e8bb1266",
+      "bytes": 3510
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/manifest.json",
+      "sha256": "167d7d15389f530679cce7871ca231169cfa0969ac7808100233a96820ef15f4",
+      "bytes": 17042
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/job_receipt.json",
+      "sha256": "599b66eb2e2131ef73f2699f5e7ea74156ec6b1218334ba247dd866b054b630f",
+      "bytes": 779
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/status.json",
+      "sha256": "ebde57a8df14deb2811128a74184927e7f6c98a838e09ca9a9dfc6647b216c0e",
+      "bytes": 273
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/finalize.py",
+      "sha256": "29cd817ed4e9b31a06e4750482e8437e7c14d613dc61bcd1765d8f2b9d04ca0e",
+      "bytes": 1917
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/publish.py",
+      "sha256": "a159d8a203afb1d08438c2673b9cfbd4aead612184760503231dac973cbaefa7",
+      "bytes": 1385
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/full/preflight_resources.txt",
+      "sha256": "931fae26f8a85b6dc1be739c47b74a80613713e692b051ebc423c6ee8f2e3888",
+      "bytes": 269
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/smokeH100/candidate_receipts.json",
+      "sha256": "942c7f66ac246880e70e13235931fcf34bc4d6c960ecf789c14d11854cf8487d",
+      "bytes": 127
+    },
+    {
+      "file": "codex_remote_ops/pccs_corrected_exoego_20260916/runs/smokeH100/results.json",
+      "sha256": "0442f0d3b873bf7f18e3c10b45828f75dfd9989299c7fddcc261d52ea3017a9a",
+      "bytes": 19518
+    },
+    {
+      "file": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "sha256": "b5dce317798b61c4362090bc8e1016c7e622439fc6cdf051d3199c8d75fc598e",
+      "bytes": 18549
+    },
+    {
+      "file": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
+      "sha256": "35764c0f7be515432808887035a5229b765c6cb8f0e09a44b8747275e29a0e29",
+      "bytes": 19577
+    }
+  ]
+}
