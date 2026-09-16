@@ -20,8 +20,20 @@ def main():
     add_phase(m,'train',train,cfg,Q,'screen');add_phase(m,'calibration',cal,cfg,Q,'calibration')
     confirm=json.loads((G/'holdout512.json').read_text());assert len(confirm)==512 and sum(len(v['objects']) for v in confirm.values())==965
     assert takes(confirm).isdisjoint(takes(train)|takes(cal))
-    add_phase(m,'exo2ego',confirm,cfg,Q,'smoke')
+    testcfg=yaml.safe_load((R.parent/'pccs_corrected_exoego_20260916/full_runtime.yaml').read_text())
+    assert testcfg['models']['experts']['exo2ego']==cfg['models']['experts']['exo2ego']
+    validate_images(confirm,testcfg)
+    add_phase(m,'exo2ego',confirm,testcfg,Q,'smoke')
     m['test_scope']='Previously evaluated fixed 512-pair/965-object/64-take Exo2Ego holdout; never used for this fitting; not a new blind test or full test.'
     m['frozen_cycle']=json.loads((R.parent/'pccs_dense_context_20260917/selection.json').read_text())['selected']
     m['code_sha256']={n:hashlib.sha256((R/n).read_bytes()).hexdigest() for n in ('fixed_context.py','dense_context.py','worker.py','randomness.py','native_bridge.py','policies.py','code/projects/v2sam_pccs/evaluation/pccs_metric.py')};(R/'manifest.json').write_text(json.dumps(m,indent=2));print('DENSE_PREPARED',flush=True)
+def validate_images(ann,cfg):
+    root=Path(cfg['data']['images']);paths=set()
+    for row in ann.values():
+        for field in (row['prompt']['first_frame_image'],row['video_path']):
+            paths.update(field if isinstance(field,list) else [field])
+    missing=[p for p in paths if not (root/p).is_file()]
+    assert not missing,('Missing experiment images',str(root),missing[:5])
+    return {'image_root':str(root),'checked_images':len(paths),'missing':0}
+
 if __name__=='__main__':main()

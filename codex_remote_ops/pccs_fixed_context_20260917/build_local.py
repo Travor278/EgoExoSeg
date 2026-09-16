@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 R=Path(__file__).parent;D=R.parent/'pccs_dense_context_20260917'
+assert not (R/'job_receipt.json').exists(), 'Historical bootstrap: never overwrite an already submitted experiment; edit its reviewed source files directly.'
 for n in ('randomness.py','native_bridge.py','data_utils.py','prepare.py','worker.py','controller.py','fetch_artifacts.py','read_monitor.js','build_capsule.py'):
     (R/n).write_text((D/n).read_text(encoding='utf8').replace('pccs_dense_context_20260917','pccs_fixed_context_20260917'),encoding='utf8')
 s=(D/'dense_context.py').read_text();needle='        assert all(np.isfinite(v) for v in base.values());out.append(base)'

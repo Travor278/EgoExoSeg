@@ -22,5 +22,6 @@ def append_fixed(parts,root):
             ci=v['ci95_pp'];parts.append(f"| {name} | {v['frame'][0]*100:.4f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
         v=data['vs_frozen_cycle']['primary'];ci=v['ci95_pp'];parts += ['',f"本轮主方案相对上一轮冻结cycle额外变化：{v['delta_pp']:+.4f}点，区间[{ci[0]:.4f}, {ci[1]:.4f}]。区分总增益和context的额外贡献，不能将原cycle本已有收益算作新增context收益。"]
     if not (r/'exo2ego_results.json').exists():parts += ['当前状态：任务已提交，尚无本轮目标结果；100像素优于倍率环是待验证假设。']
+    if (r/'resource_release_r1.json').exists():parts += ['', '运行记录：R1完成8对Capture开关/strength0回退检查、384对TRAIN及128对校准，原生特征/候选/路由一致性通过。Exo→Ego首次误用TRAIN-only图片根目录，四个分片均在第一条预测前发生空图像列表错误；该次没有目标指标。失败日志已保留，节点归零。R2仅修复测试图片根目录，采用此前全量成功配置并逐文件预检；不重拟合、不改选已冻结模型或阈值。']
     if (r/'resource_release.json').exists():parts += ['资源释放证据已存于本实验resource_release.json。']
     parts += ['', 'ROI裁图重编码属于另一机制，暂缓，优先完成用户明确要求的固定像素区域池化。']

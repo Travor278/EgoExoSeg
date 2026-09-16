@@ -1,0 +1,16 @@
+{
+  "job_id": "job-5fc7aaaa-8fd6-43b9-9c7b-c14eace2678d",
+  "name": "v2sam-fixed100-pccs-20260917-r2",
+  "submitted_at_local": "2026-09-17 02:59:49",
+  "space_id": "ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+  "nodes": 1,
+  "gpus": 4,
+  "gpu_type": "H100 80GB",
+  "priority": 4,
+  "maximum_minutes": 120,
+  "success_retention_minutes": 1,
+  "failure_retention_minutes": 1,
+  "command_equality_verified": true,
+  "initial_state": "queued",
+  "recovery": "Correct Exo2Ego test image root; preserve source fit/selection and archive first-attempt errors; per-file preflight"
+}
