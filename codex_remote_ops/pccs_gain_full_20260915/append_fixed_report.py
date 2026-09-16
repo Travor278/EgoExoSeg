@@ -8,6 +8,11 @@ def append_fixed(parts,root):
       '设置50/100/150原生像素整框与纯背景环、1.5/2倍整框与纯背景环、O-MaMa canonical图像坐标的100像素整框与环，共12种。原生坐标指DINOv3输入高768/宽保持比例；canonical范围按source532×952、target700×700归一化映射。后者仅区域范围对齐，仍用原生DINOv3特征，并非复现O-MaMa的DINOv2四分之一尺寸插值池化。bbox采用像素外边界，相比其xmax/ymax最多差一个像素，已记录。', '',
       '区域权重为连续bbox对每个token格子的面积占比；背景环再扣除前景覆盖率。相同六项上下文证据加入原生软循环置信特征，保持原候选、对应点、cycle-dominance准入和回退。比较原cycle、历史ring15/ring20和12个区域组，Ridge10/100、阈值.03/.05共60个源域配置，固定四折take列表，按48个TRAIN takes的OOF及16个校准takes冻结。目标上报告匹配容量对照与错位邻域控制，不按目标结果选型。', '',
       'Exo→Ego先验证既有512对/965对象/64 takes holdout，包括上一轮冻结cycle_ridge10_t0.03及本轮源域预选方案；它与拟合/校准takes互斥，但历史被评估过，不能称全新盲测，也不是46515对全量。Exo→Exo继续1094对全量。实际PCCS接口选择与缓存回放逐对象核对；source原生特征、候选SHA和原路由对照上一轮，确保比较不是由候选变化造成。详细协议见[固定像素实验计划](../pccs_fixed_context_20260917/PLAN.md)。', '']
+    if (r/'selection.json').exists():
+        selection=json.loads((r/'selection.json').read_text(encoding='utf-8-sig'));s=selection['selected']
+        parts += [f"源域选型已完成，主方案冻结为`{s['name']}`，OOF {s['train_oof']['delta_pp']:+.4f}点、校准{s['calibration']['delta_pp']:+.4f}点；两个源域区间均跨零，不能由此宣称稳定增益。原cycle各配置的OOF/校准精确复现上一轮，未按目标集改选。", '', '| 同正则/阈值的区域对照 | TRAIN OOF增益（点） | 校准增益（点） |', '|---|---:|---:|']
+        for c in selection['matched_controls']:parts.append(f"| {c['group']} | {c['train_oof']['delta_pp']:+.4f} | {c['calibration']['delta_pp']:+.4f} |")
+        parts += ['', '100像素整框与环均保留为预先声明对照，150像素主方案只由源域规则选中；后续不能把目标集上最好的某一行追认成预选主方案。', '']
     for phase,label in [('exo2ego','Exo→Ego 512对 holdout'),('exo2exo','Exo→Exo 全量')]:
         p=r/(phase+'_results.json')
         if not p.exists():continue
