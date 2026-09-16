@@ -1,0 +1,64 @@
+{
+  "smoke": {
+    "objects": 8,
+    "pairs": 8,
+    "takes": 1,
+    "max_metric_error": 0.0,
+    "bootstrap_recomputed": true,
+    "lambda_zero_parity": true,
+    "capture_on_off_pairs": 8,
+    "prior_candidate_hash_checks": true,
+    "zero_iou_objects_preserved": 0,
+    "original_fallback_objects": 2,
+    "fallback_with_reliable_visual_or_anchor": 0,
+    "review_triggered_objects": 0,
+    "triggered_original_mean_object_iou": null,
+    "triggered_review_mean_object_iou": null,
+    "fallback_reasons": {
+      "cycle_distance": 1,
+      "in_mask_count": 1
+    }
+  },
+  "screen": {
+    "objects": 243,
+    "pairs": 128,
+    "takes": 16,
+    "max_metric_error": 0.0,
+    "bootstrap_recomputed": true,
+    "lambda_zero_parity": true,
+    "capture_on_off_pairs": 0,
+    "prior_candidate_hash_checks": true,
+    "zero_iou_objects_preserved": 25,
+    "original_fallback_objects": 64,
+    "fallback_with_reliable_visual_or_anchor": 17,
+    "review_triggered_objects": 11,
+    "triggered_original_mean_object_iou": 0.718496089631861,
+    "triggered_review_mean_object_iou": 0.5128210972655903,
+    "fallback_reasons": {
+      "cycle_distance": 53,
+      "in_mask_count": 7,
+      "only_expert_with_points": 4
+    }
+  },
+  "calibration": {
+    "objects": 225,
+    "pairs": 128,
+    "takes": 16,
+    "max_metric_error": 0.0,
+    "bootstrap_recomputed": true,
+    "lambda_zero_parity": true,
+    "capture_on_off_pairs": 0,
+    "prior_candidate_hash_checks": true,
+    "zero_iou_objects_preserved": 13,
+    "original_fallback_objects": 37,
+    "fallback_with_reliable_visual_or_anchor": 5,
+    "review_triggered_objects": 5,
+    "triggered_original_mean_object_iou": 0.8852651476860046,
+    "triggered_review_mean_object_iou": 0.6794827699661254,
+    "fallback_reasons": {
+      "cycle_distance": 25,
+      "in_mask_count": 8,
+      "only_expert_with_points": 4
+    }
+  }
+}

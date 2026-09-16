@@ -52,8 +52,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_native_context_20260916/PLAN.md",
-      "sha256": "7903ef7c46465e7560de7b3dce49e38e84eed8bcac62939a64f36c63c6e32009",
-      "bytes": 6793
+      "sha256": "60ef81aa53b94767f8fca2c47f2133889cbed93269b7d0e151777652ad62f04f",
+      "bytes": 6926
     },
     {
       "path": "codex_remote_ops/pccs_native_context_20260916/job_receipt.json",
@@ -72,8 +72,13 @@
     },
     {
       "path": "codex_remote_ops/pccs_native_context_20260916/status.json",
-      "sha256": "5bc56ccc9cf078b73a925917a360d3b83894924b0554550bd2b694a82c0fc46b",
-      "bytes": 628
+      "sha256": "dcfa846647335329e98811854076e9c5d21c92112427242c4b0d2e797570992f",
+      "bytes": 322
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/selection.json",
+      "sha256": "05e2a9a8eec94854e8d39b72e274e22cd858faaac53da1b71ec91be871c4cfae",
+      "bytes": 226
     },
     {
       "path": "codex_remote_ops/pccs_native_context_20260916/smoke_results.json",
@@ -81,14 +86,84 @@
       "bytes": 2171
     },
     {
+      "path": "codex_remote_ops/pccs_native_context_20260916/screen_results.json",
+      "sha256": "6d5eb241051ef877379650f588bcdbf0513aace2f4ead1de22dd5d30c11ef28b",
+      "bytes": 2277
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/calibration_results.json",
+      "sha256": "83a5231a0512d188f7099f6f3ec25e6e50914d9028f2078b923e0bd317d86568",
+      "bytes": 2313
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/gpu_after.txt",
+      "sha256": "cae79969ce448872401f5d9bcd1d52bbefa1a5450cf3a5658f62f068ab59294b",
+      "bytes": 41
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/resource_release.json",
+      "sha256": "2912f18fbf20376d8e6dd30998851b80c8e11ee6498e3e4932d1a8b67911b9f2",
+      "bytes": 279
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/verify_final.py",
+      "sha256": "de7e3c944538906883bb4ccdadbf0667263bffbc3a4708b9c547bd66af015447",
+      "bytes": 3209
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/final_validation.json",
+      "sha256": "4ec640628fc668865b2c44ef037545906fa037c7c8a2efe59c94783eee4d1a20",
+      "bytes": 1930
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/calibration_rank0.log",
+      "sha256": "78bb8264934686db4a007224b5924368d87f818fdc89983643aaeb564af0b823",
+      "bytes": 62286
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/calibration_rank1.log",
+      "sha256": "f3784f1ad3389389d0d0057887fed6e415d61ee1971c0894aa521c797e8aa131",
+      "bytes": 62286
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/calibration_rank2.log",
+      "sha256": "adda25fc36566d5c77df24937ad5bd101c1f8ee82d8e3d5d10cfa8136f7aa08e",
+      "bytes": 62286
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/calibration_rank3.log",
+      "sha256": "f3e21de7f9f985ac68302ef58ea050c1d8c15351bbc6fa732e20db387e4d44b4",
+      "bytes": 62286
+    },
+    {
       "path": "codex_remote_ops/pccs_native_context_20260916/controller.log",
-      "sha256": "8a8be50ad4f14d1a775f9b82e62e96b504b4a04592630f7e6f041382e75cd093",
-      "bytes": 28
+      "sha256": "ba0dc6532cf3c2fe48614e7bf89ff454c7e3f421d22d77841e3baaa1ba2f10b3",
+      "bytes": 117
     },
     {
       "path": "codex_remote_ops/pccs_native_context_20260916/prepare.py.log",
       "sha256": "817a54d8929c8c8f27a5198cb306bf2dfa5403503435e5f10af7cf485f07fe13",
       "bytes": 16
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/screen_rank0.log",
+      "sha256": "3d06ae0a9b8b47deae46a2dc18749040f3ce391d94bcefe574fca3cc8a7206a4",
+      "bytes": 62226
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/screen_rank1.log",
+      "sha256": "ecf86c9613413b0b5a70f655c25a5351ac151152edb6e59657ea4c01f5ce3b1d",
+      "bytes": 62226
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/screen_rank2.log",
+      "sha256": "3a8b4cceae5fce0c3fe0736b1d6800740157950c2d001bab09e76596f601ea32",
+      "bytes": 62226
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/screen_rank3.log",
+      "sha256": "6b855b62adf5454a84c7cba55f984706c3ee7f0012f34f3a20d18a049d9334a7",
+      "bytes": 62226
     },
     {
       "path": "codex_remote_ops/pccs_native_context_20260916/smoke_rank0.log",
@@ -116,19 +191,139 @@
       "bytes": 25
     },
     {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank0/receipt.json",
+      "sha256": "26ee9d95e22dfea59b8ac9621a96a01aa3482a37ab701bcd4d924c0ddd78d89b",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank1/receipt.json",
+      "sha256": "b62a7430a47101af32dc0339899ed539778fdb715a4949282761171efbabb504",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank2/receipt.json",
+      "sha256": "d0491c98839a2a5348cc0f8c1597ffcd51ea35b526f1664466921c711e7aee8f",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank3/receipt.json",
+      "sha256": "6c5e227f1b1d51b322de9c90657e76f04958771f907cbb71f2e9ba52386cd91e",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/screen/rank0/receipt.json",
+      "sha256": "0e2ff327e5e182f34ee3c01577d589eec18ed63f804dbc36b51dd75d539041f7",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/screen/rank1/receipt.json",
+      "sha256": "be9c62e7cbab84c7a6fbe892611a5dc0b22e12433f25f3df1daf30bae5e50f5d",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/screen/rank2/receipt.json",
+      "sha256": "8cbfef3461c795236491142d9c4ebfd599c665740c877424844280e9891f475c",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/screen/rank3/receipt.json",
+      "sha256": "3c0e16da4a1362f0f941009e8dcea97bf2e5d2377f48179ab34b032a28be8b72",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/smoke/rank0/receipt.json",
+      "sha256": "f3f49876243ff540feefae24c8bcdf0c69ecae39bd9fa0a014a0fa01ebc05473",
+      "bytes": 263
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/smoke/rank1/receipt.json",
+      "sha256": "ad0fd9bb23cd4bb1d8cdd32213abfe0ed45b5186a458b9eaa711f59ea2ab364f",
+      "bytes": 263
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/smoke/rank2/receipt.json",
+      "sha256": "b14748353c42e29bec31d77fff523fcf059f72b3909793337db10cba5f02469d",
+      "bytes": 263
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/smoke/rank3/receipt.json",
+      "sha256": "f3ed3c0f3f783a6ce0b56c57978493439bd3624703b9676144ef6e9dd7e6e5da",
+      "bytes": 263
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank0/records.jsonl",
+      "sha256": "47083853ef94c5ef93a3d12e1b006f5312f9caace671ba62e245fdb54f04288b",
+      "bytes": 150394
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank1/records.jsonl",
+      "sha256": "948f260efce117abc4f4bf0e99ad4bedc9d95c4ef515fccbde089b4cdc4ed378",
+      "bytes": 135311
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank2/records.jsonl",
+      "sha256": "cb6bdeeb2643dfcf138793ab75e00bb9cead4d93263457bd23d29ee01af3cef3",
+      "bytes": 136567
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank3/records.jsonl",
+      "sha256": "f995ac89f1829595865e9e75c284061063bb36b9f65a09f1cac776bfa471dc27",
+      "bytes": 128832
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/screen/rank0/records.jsonl",
+      "sha256": "4658af7dbe683168a49d74a637e391464b96afd2c85f0fcc388322c37f111c30",
+      "bytes": 144251
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/screen/rank1/records.jsonl",
+      "sha256": "16434cb22d44b30b35dcfa1a09d3cf62821d7e221ee1dfb3e4ac5c589c5b6ac2",
+      "bytes": 170063
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/screen/rank2/records.jsonl",
+      "sha256": "e0432d40d35b31f964549ea2ba2685d8ffa52d180014c9cf433071636573bf8e",
+      "bytes": 141107
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/screen/rank3/records.jsonl",
+      "sha256": "8e24ec13259890bba5487f1c14d6a4add4070b11138c4deb59f772cdae2e7b98",
+      "bytes": 143037
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/smoke/rank0/records.jsonl",
+      "sha256": "dfae3e2438f09523d56b6327f73799cef26719e4acbb36f2d8678e6474330060",
+      "bytes": 4983
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/smoke/rank1/records.jsonl",
+      "sha256": "8b20263fcbbd701761d897f10c0522b90f8a809705c798734bf7b4653b7586e1",
+      "bytes": 4959
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/smoke/rank2/records.jsonl",
+      "sha256": "cb7be926107f3fe4beb1c8d93328e9d1e891d8b2adbf5e06b2e6a454aec0de7b",
+      "bytes": 4892
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/runs/smoke/rank3/records.jsonl",
+      "sha256": "49b45506dd149040483651b5782a8375d97dc2995b4ea7a4361edd5c5b0207af",
+      "bytes": 4930
+    },
+    {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "b18292a3d3813760e942aeb808eef4bc46bcea6fc7b6f9cc7cba514dcd6f9248",
-      "bytes": 33468
+      "sha256": "feaf63e38455b69c2e2e5cb86719b50437e86d934492ea14e4256f68a81f76b7",
+      "bytes": 36932
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
-      "sha256": "54df1f30c7569a92355f8e50b00dcf42212b05704f996fdfca61afe471943784",
-      "bytes": 27108
+      "sha256": "4542e41951b3bec03785d101a3e14ae558ac757b8f624c07968097c4fb415553",
+      "bytes": 27635
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_native_report.py",
-      "sha256": "3b8faaaaa11fbb424b16d057d0941c3be16a086bb5a02ef0803b7a5f09735a1d",
-      "bytes": 2991
+      "sha256": "ce9eaf53e4801c37364581c623673bb9cd5b5cabeaee2b0895769797f8b66bee",
+      "bytes": 4960
     }
   ],
   "excludes": "raw images, tensors, browser state, credentials and command transport"

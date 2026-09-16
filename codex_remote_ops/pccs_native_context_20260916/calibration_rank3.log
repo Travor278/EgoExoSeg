@@ -1,0 +1,818 @@
+[2026-09-16 15:49:58,897] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m async_io requires the dev libaio .so object and headers but these were not found.
+[93m [WARNING] [0m async_io: please install the libaio-dev package with apt
+[93m [WARNING] [0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3
+[93m [WARNING] [0m using untested triton version (2.3.1), only 1.0.0 is known to be compatible
+[DEBUG] Importing modules from custom_imports: ['projects.v2sam_pccs.evaluation', 'projects.v2sam_pccs.engine']
+09/16 15:49:59 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.21 (main, Sep  1 2026, 14:16:49) [Clang 22.1.3 ]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 0
+    GPU 0: NVIDIA H100 80GB HBM3
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 12.8, V12.8.61
+    GCC: cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+    PyTorch: 2.3.1+cu121
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2022.2-Product Build 20220804 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.3.6 (Git Hash 86e6af5974177e513fd3fee58425e1063e7f1361)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 12.1
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.9.2
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.1, CUDNN_VERSION=8.9.2, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.3.1, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=1, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, 
+
+    TorchVision: 0.18.1+cu121
+    OpenCV: 4.10.0
+    MMEngine: 0.11.0rc0
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 0
+    deterministic: False
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+09/16 15:50:02 - mmengine - INFO - Config:
+annotation_file = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank3.json'
+custom_imports = dict(
+    allow_failed_imports=False,
+    imports=[
+        'projects.v2sam_pccs.evaluation',
+        'projects.v2sam_pccs.engine',
+    ])
+default_hooks = dict(
+    logger=dict(
+        interval=10,
+        log_metric_by_epoch=False,
+        type='mmengine.hooks.LoggerHook'),
+    sampler_seed=dict(type='mmengine.hooks.DistSamplerSeedHook'),
+    timer=dict(type='mmengine.hooks.IterTimerHook'))
+dinov3_cfg = dict(
+    model_name='dinov3_vitl16',
+    repo_path=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3',
+    weights_path=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+)
+dinov3_repo = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3'
+dinov3_weights = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+direction = 'exo2ego'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+evaluation_dataloader = dict(
+    batch_size=1,
+    collate_fn=dict(
+        type='projects.v2sam_pccs.datasets.pccs_video_lisa_collate_fn'),
+    dataset=dict(
+        datasets=[
+            dict(
+                expression_file=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank3.json',
+                extra_image_processor=dict(
+                    target_length=1024,
+                    type=
+                    'projects.v2sam_fusion.models.preprocess.image_resize.DirectResize'
+                ),
+                lazy=True,
+                max_length=8192,
+                mode='short',
+                sam2_folder=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/images',
+                sampled_frames=None,
+                select_number=None,
+                template_map_fn=dict(
+                    template='xtuner.utils.PROMPT_TEMPLATE.phi3_chat',
+                    type='xtuner.dataset.map_fns.template_map_fn_factory'),
+                type=
+                'projects.v2sam_pccs.datasets.PCCSVideoObjectRelatorDataset'),
+        ],
+        type='xtuner.dataset.ConcatDataset'),
+    num_workers=4,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+evaluation_dataset = dict(
+    expression_file=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank3.json',
+    extra_image_processor=dict(
+        target_length=1024,
+        type='projects.v2sam_fusion.models.preprocess.image_resize.DirectResize'
+    ),
+    lazy=True,
+    max_length=8192,
+    mode='short',
+    sam2_folder=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/images',
+    sampled_frames=None,
+    select_number=None,
+    template_map_fn=dict(
+        template='xtuner.utils.PROMPT_TEMPLATE.phi3_chat',
+        type='xtuner.dataset.map_fns.template_map_fn_factory'),
+    type='projects.v2sam_pccs.datasets.PCCSVideoObjectRelatorDataset')
+extra_image_processor = dict(
+    target_length=1024,
+    type='projects.v2sam_fusion.models.preprocess.image_resize.DirectResize')
+fusion_checkpoint = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth'
+image_root = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/images'
+launcher = 'none'
+load_from = None
+log_level = 'INFO'
+log_processor = dict(by_epoch=False)
+model = dict(
+    context_cfg=None,
+    dinov3_cfg=dict(
+        model_name='dinov3_vitl16',
+        repo_path=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3',
+        weights_path=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+    ),
+    fusion_expert=dict(
+        dinov3_cfg=dict(
+            model_name='dinov3_vitl16',
+            repo_path=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3',
+            weights_path=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+        ),
+        grounding_encoder=dict(
+            base_dir=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets',
+            type='projects.v2sam_pccs.models.PCCSFusionEncoder'),
+        pretrained_pth=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth',
+        sparse_corr_cfg=dict(
+            image_size=768,
+            mask_fg_threshold=0.6,
+            max_points_per_object=1,
+            n_layers=24,
+            outlier_removal_ratio=0.25,
+            patch_size=16,
+            point_selection_strategy='highest_similarity',
+            stratify_distance_threshold=150.0),
+        type='projects.v2sam_pccs.models.PCCSFusionExpert'),
+    sparse_corr_cfg=dict(
+        image_size=768,
+        mask_fg_threshold=0.6,
+        max_points_per_object=1,
+        n_layers=24,
+        outlier_removal_ratio=0.25,
+        patch_size=16,
+        point_selection_strategy='highest_similarity',
+        stratify_distance_threshold=150.0),
+    type='projects.v2sam_pccs.models.V2SAMPCCS',
+    visual_anchor_expert=dict(
+        dinov3_cfg=dict(
+            model_name='dinov3_vitl16',
+            repo_path=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Bidirectional_Refresh_20260831/code/public-main/third_parts/dinov3',
+            weights_path=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+        ),
+        grounding_encoder=dict(
+            base_dir=
+            '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets',
+            type='projects.v2sam_pccs.models.SAM2TrainRunner'),
+        pretrained_pth=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth',
+        sam2_base_dir=
+        '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets',
+        sparse_corr_cfg=dict(
+            image_size=768,
+            mask_fg_threshold=0.6,
+            max_points_per_object=1,
+            n_layers=24,
+            outlier_removal_ratio=0.25,
+            patch_size=16,
+            point_selection_strategy='highest_similarity',
+            stratify_distance_threshold=150.0),
+        type='projects.v2sam_pccs.models.PCCSVisualAnchorExpert'))
+optim_wrapper = None
+output_dir = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank3/runner/exo2ego'
+param_scheduler = None
+pccs_evaluator = dict(
+    collect_device='gpu',
+    diagnostic_output=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank3/runner/exo2ego/per_object.jsonl',
+    enable_vis=False,
+    fusion_max_area_ratio=0.6,
+    fusion_max_components=4,
+    fusion_min_area_ratio=1e-05,
+    iou_metrics=[
+        'IoU',
+        'Dice',
+    ],
+    type='PCCSFrameLevelMetric')
+randomness = dict(deterministic=False, seed=0)
+resume = False
+sam2_root = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets'
+sparse_corr_cfg = dict(
+    image_size=768,
+    mask_fg_threshold=0.6,
+    max_points_per_object=1,
+    n_layers=24,
+    outlier_removal_ratio=0.25,
+    patch_size=16,
+    point_selection_strategy='highest_similarity',
+    stratify_distance_threshold=150.0)
+test_cfg = dict(raise_on_error=True, type='FaultTolerantTestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    collate_fn=dict(
+        type='projects.v2sam_pccs.datasets.pccs_video_lisa_collate_fn'),
+    dataset=dict(
+        datasets=[
+            dict(
+                expression_file=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank3.json',
+                extra_image_processor=dict(
+                    target_length=1024,
+                    type=
+                    'projects.v2sam_fusion.models.preprocess.image_resize.DirectResize'
+                ),
+                lazy=True,
+                max_length=8192,
+                mode='short',
+                sam2_folder=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/images',
+                sampled_frames=None,
+                select_number=None,
+                template_map_fn=dict(
+                    template='xtuner.utils.PROMPT_TEMPLATE.phi3_chat',
+                    type='xtuner.dataset.map_fns.template_map_fn_factory'),
+                type=
+                'projects.v2sam_pccs.datasets.PCCSVideoObjectRelatorDataset'),
+        ],
+        type='xtuner.dataset.ConcatDataset'),
+    num_workers=0,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(
+    collect_device='gpu',
+    diagnostic_output=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank3/runner/exo2ego/per_object.jsonl',
+    enable_vis=False,
+    fusion_max_area_ratio=0.6,
+    fusion_max_components=4,
+    fusion_min_area_ratio=1e-05,
+    iou_metrics=[
+        'IoU',
+        'Dice',
+    ],
+    routing_policy='fusion_first',
+    selector_model_path=None,
+    type='PCCSFrameLevelMetric')
+train_cfg = None
+train_dataloader = None
+val_cfg = dict(type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    collate_fn=dict(
+        type='projects.v2sam_pccs.datasets.pccs_video_lisa_collate_fn'),
+    dataset=dict(
+        datasets=[
+            dict(
+                expression_file=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank3.json',
+                extra_image_processor=dict(
+                    target_length=1024,
+                    type=
+                    'projects.v2sam_fusion.models.preprocess.image_resize.DirectResize'
+                ),
+                lazy=True,
+                max_length=8192,
+                mode='short',
+                sam2_folder=
+                '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_gain_20260915/gate_training/images',
+                sampled_frames=None,
+                select_number=None,
+                template_map_fn=dict(
+                    template='xtuner.utils.PROMPT_TEMPLATE.phi3_chat',
+                    type='xtuner.dataset.map_fns.template_map_fn_factory'),
+                type=
+                'projects.v2sam_pccs.datasets.PCCSVideoObjectRelatorDataset'),
+        ],
+        type='xtuner.dataset.ConcatDataset'),
+    num_workers=4,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    collect_device='gpu',
+    diagnostic_output=
+    '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank3/runner/exo2ego/per_object.jsonl',
+    enable_vis=False,
+    fusion_max_area_ratio=0.6,
+    fusion_max_components=4,
+    fusion_min_area_ratio=1e-05,
+    iou_metrics=[
+        'IoU',
+        'Dice',
+    ],
+    routing_policy='fusion_first',
+    selector_model_path=None,
+    type='PCCSFrameLevelMetric')
+visual_checkpoint = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth'
+visualizer = None
+work_dir = '/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank3/runner'
+
+09/16 15:50:05 - mmengine - WARNING - Failed to search registry with scope "mmengine" in the "builder" registry tree. As a workaround, the current "builder" registry in "xtuner" is used to build instance. This may cause unexpected failure when running the built modules. Please check whether "mmengine" is a correct scope, or whether the registry is initialized.
+09/16 15:50:06 - mmengine - INFO - Loads checkpoint by local backend from path: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/sam2_hiera_large.pt
+09/16 15:50:07 - mmengine - INFO - Loaded checkpoint successfully
+09/16 15:50:08 - mmengine - INFO - Loads checkpoint by local backend from path: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/sam2_hiera_large.pt
+09/16 15:50:08 - mmengine - INFO - Loaded checkpoint successfully
+PCCS visual-anchor expert: DINOv3 loaded
+PCCS visual-anchor expert loaded checkpoint /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth; matched=964, missing=1271, unexpected=1
+09/16 15:50:12 - mmengine - INFO - Loads checkpoint by local backend from path: /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/V2SAM_Ego2Exo_202608/assets/offline_assets/sam2_hiera_large.pt
+09/16 15:50:12 - mmengine - INFO - Loaded checkpoint successfully
+PCCS fusion expert: DINOv3 loaded
+PCCS fusion expert loaded checkpoint /inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth; matched=1335, remapped=371, missing=0, unexpected=1
+[PCCS] Forward DINOv3 matcher loaded
+09/16 15:50:18 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+09/16 15:50:18 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Video res dataset (ref-sam2), include 32 items.
+09/16 15:50:22 - mmengine - WARNING - The prefix is not set in metric class PCCSFrameLevelMetric.
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/runs/calibration/rank3/runner/exo2ego/per_object.jsonl; routing_policy=fusion_first; selector_model_path=None
+09/16 15:50:22 - mmengine - WARNING - Dataset ConcatDataset has no metainfo. ``dataset_meta`` in evaluator, metric and visualizer will be None.
+09/16 15:50:23 - mmengine - WARNING - The prefix is not set in metric class PCCSMetric.
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+[PCCS] Metric initialized for visual, anchor, and fusion experts
+[PCCS] Fusion quality gate: area=[1e-05, 0.6], max_components=4; diagnostic_output=None; routing_policy=fusion_first; selector_model_path=None
+NATIVE_WORKER_COMPLETE calibration 3

@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "coverage": "exact",
+  "pairs": 2,
+  "objects": 2,
+  "capture_on_off_pairs": 2,
+  "lambda_zero_parity": true,
+  "all_prior_candidates_exact": true,
+  "records_sha256": "49b45506dd149040483651b5782a8375d97dc2995b4ea7a4361edd5c5b0207af"
+}

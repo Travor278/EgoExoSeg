@@ -1,0 +1,116 @@
+{
+  "phase": "calibration",
+  "coverage": "exact",
+  "pairs": 128,
+  "objects": 225,
+  "takes": 16,
+  "methods": {
+    "baseline": {
+      "frame": [
+        0.8122856192087055,
+        0.8603431045477918,
+        0.8824540673859884,
+        0.03000240077118933
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "zero": {
+      "frame": [
+        0.8122856192087055,
+        0.8603431045477918,
+        0.8824540673859884,
+        0.03000240077118933
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "cycle": {
+      "frame": [
+        0.8122856192087055,
+        0.8603431045477918,
+        0.8824540673859884,
+        0.03000240077118933
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "review": {
+      "frame": [
+        0.808454731365782,
+        0.8564353930698416,
+        0.8780786447071994,
+        0.03158423354698472
+      ],
+      "delta_pp": -0.3830887842923403,
+      "ci95_pp": [
+        -1.2101635336875916,
+        0.06866184994578362
+      ],
+      "changed": 5,
+      "improved": 1,
+      "harmed": 4
+    },
+    "both": {
+      "frame": [
+        0.8076716520910848,
+        0.85559148641114,
+        0.8778322501691763,
+        0.0316292924374422
+      ],
+      "delta_pp": -0.4613967117620632,
+      "ci95_pp": [
+        -1.353496260708198,
+        0.06866184994578362
+      ],
+      "changed": 5,
+      "improved": 1,
+      "harmed": 4
+    },
+    "wrong_context": {
+      "frame": [
+        0.8118979524617315,
+        0.8601396981095604,
+        0.8822580334516804,
+        0.030001656344288752
+      ],
+      "delta_pp": -0.03876667469739914,
+      "ci95_pp": [
+        -0.11630002409219742,
+        0.0
+      ],
+      "changed": 2,
+      "improved": 0,
+      "harmed": 2
+    }
+  },
+  "capture_on_off_pairs": 0,
+  "all_prior_candidates_exact": true,
+  "lambda_zero_parity": true,
+  "fusion_accepted_objects": 188,
+  "fusion_recheck_objects": 5,
+  "reliable_objects_by_expert": {
+    "visual": 21,
+    "anchor": 21,
+    "fusion": 25
+  },
+  "pretrained_omama_used": false
+}

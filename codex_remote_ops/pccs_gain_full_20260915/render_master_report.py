@@ -19,6 +19,9 @@ if sources[-1][1].exists():
 up=O/'pccs_candidate_union_20260916/exo2exo_results.json'
 if up.exists():
  u=load(up);ci=u['primary_95ci_pp'];parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 最新候选合并／质量适配探索已完成（§9）：Exo→Exo原一致性IoU {u['methods']['original_consensus']['frame'][0]*100:.4f}→{u['methods']['selected_union']['frame'][0]*100:.4f}，新增{u['primary_delta_vs_original_consensus_pp']:+.4f}点，95%区间[{ci[0]:.4f}, {ci[1]:.4f}]跨0；**未获得额外稳定增益**。小比例池化、可靠多点与rank-8 O-MaMa适配的负结果也完整记录。")
+np_result=O/'pccs_native_context_20260916/calibration_results.json'
+if np_result.exists():
+ n=load(np_result);parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- PCCS内部context首版已实现并完成训练内消融（§10），未使用O-MaMa网络。仅循环加权ΔIoU为0；仅Fusion复核/两项结合在校准分别为{n['methods']['review']['delta_pp']:+.4f}/{n['methods']['both']['delta_pp']:+.4f}点，均未晋级，未启动新目标测试。实现完整不等于已证明增益或创新性。")
 completed={}
 for title,p in sources:
  parts+=['',f'#### {title}','']

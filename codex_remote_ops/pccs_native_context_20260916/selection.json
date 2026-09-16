@@ -1,0 +1,7 @@
+{
+  "selected": "baseline",
+  "config": {},
+  "eligible": [],
+  "rule": "positive native-PCCS gain in both TRAIN screen/cal; maximum calibration; fixed before target; wrong-context excluded",
+  "pretrained_omama_used": false
+}

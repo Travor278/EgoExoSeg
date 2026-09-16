@@ -1,0 +1,116 @@
+{
+  "phase": "screen",
+  "coverage": "exact",
+  "pairs": 128,
+  "objects": 243,
+  "takes": 16,
+  "methods": {
+    "baseline": {
+      "frame": [
+        0.756245912317546,
+        0.8032064062954102,
+        0.8303089964660624,
+        0.03277334283195305
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "zero": {
+      "frame": [
+        0.756245912317546,
+        0.8032064062954102,
+        0.8303089964660624,
+        0.03277334283195305
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "cycle": {
+      "frame": [
+        0.756245912317546,
+        0.8032064062954102,
+        0.8303089964660624,
+        0.03277334283195305
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "review": {
+      "frame": [
+        0.7520117459932004,
+        0.800186980768942,
+        0.8279464164941295,
+        0.03413608921499271
+      ],
+      "delta_pp": -0.4234166324345602,
+      "ci95_pp": [
+        -0.9310855297371745,
+        -0.04590814933180809
+      ],
+      "changed": 11,
+      "improved": 3,
+      "harmed": 8
+    },
+    "both": {
+      "frame": [
+        0.7520117459932004,
+        0.800186980768942,
+        0.8279464164941295,
+        0.03413608921499271
+      ],
+      "delta_pp": -0.4234166324345602,
+      "ci95_pp": [
+        -0.9310855297371745,
+        -0.04590814933180809
+      ],
+      "changed": 11,
+      "improved": 3,
+      "harmed": 8
+    },
+    "wrong_context": {
+      "frame": [
+        0.756245912317546,
+        0.8032064062954102,
+        0.8303089964660624,
+        0.03277334283195305
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    }
+  },
+  "capture_on_off_pairs": 0,
+  "all_prior_candidates_exact": true,
+  "lambda_zero_parity": true,
+  "fusion_accepted_objects": 179,
+  "fusion_recheck_objects": 11,
+  "reliable_objects_by_expert": {
+    "visual": 45,
+    "anchor": 38,
+    "fusion": 48
+  },
+  "pretrained_omama_used": false
+}
