@@ -6,7 +6,7 @@ def append_fixed(parts,root):
     parts += ['', '## 12. 固定 100 像素上下文与 Exo→Ego 原生验证（2026-09-17）','',
       '用户提出固定100像素范围可能优于1.5/2倍bbox。核对O-MaMa官方DescriptorExtractor：bbox每边各扩100，边界裁剪，池化包含前景的整框；100定义在预处理后的图像坐标。此前倍率纯背景环不是这一实现。此次只借鉴区域构造，将证据加入原PCCS挑战候选判断，不导入O-MaMa网络或替换PCCS。', '',
       '设置50/100/150原生像素整框与纯背景环、1.5/2倍整框与纯背景环、O-MaMa canonical图像坐标的100像素整框与环，共12种。原生坐标指DINOv3输入高768/宽保持比例；canonical范围按source532×952、target700×700归一化映射。后者仅区域范围对齐，仍用原生DINOv3特征，并非复现O-MaMa的DINOv2四分之一尺寸插值池化。bbox采用像素外边界，相比其xmax/ymax最多差一个像素，已记录。', '',
-      '区域权重为连续bbox对每个token格子的面积占比；背景环再扣除前景覆盖率。相同六项上下文证据加入原生软循环置信特征，保持原候选、对应点、cycle-dominance准入和回退。比较原cycle、历史ring15/ring20和12个区域组，Ridge10/100、阈值.03/.05共60个源域配置，固定四折take列表，按48个TRAIN takes的OOF及16个校准takes冻结。目标上报告匹配容量对照与错位邻域控制，不按目标结果选型。', '',
+      '区域权重为连续bbox对每个token格子的面积占比；背景环再扣除前景覆盖率。相同六项上下文证据加入原生软循环置信特征，保持原候选、对应点、cycle-dominance准入和回退。比较原cycle、历史ring15/ring20和12个区域组，Ridge10/100、阈值.03/.05共60个源域配置，固定四折take列表，按48个TRAIN takes的OOF及16个校准takes冻结。目标上报告匹配容量对照与错位邻域控制，不按目标结果选型。本轮不重训分割专家和DINOv3，但Ridge判断器使用TRAIN标签拟合，因此不能称整个增强方法完全training-free。', '',
       'Exo→Ego先验证既有512对/965对象/64 takes holdout，包括上一轮冻结cycle_ridge10_t0.03及本轮源域预选方案；它与拟合/校准takes互斥，但历史被评估过，不能称全新盲测，也不是46515对全量。Exo→Exo继续1094对全量。实际PCCS接口选择与缓存回放逐对象核对；source原生特征、候选SHA和原路由对照上一轮，确保比较不是由候选变化造成。详细协议见[固定像素实验计划](../pccs_fixed_context_20260917/PLAN.md)。', '']
     if (r/'selection.json').exists():
         selection=json.loads((r/'selection.json').read_text(encoding='utf-8-sig'));s=selection['selected']
@@ -34,5 +34,13 @@ def append_fixed(parts,root):
     if (r/'resource_release_r2.json').exists():parts += ['', 'R2完成Exo→Ego后，在Exo→Exo同一knife对象的历史候选一致性检查处停止。这是上一轮已验证原始推理本身可能重复变动的对象；本轮断言前未保存差异mask，不能推断本次差异也是25像素。R3保留已完成记录，改用已记录的同当前bank协议：所有方法共享当前候选，必要时在独立参考进程重算有差异对象的冻结O-MaMa外部比较，并用未变对象检查参考分数复现。模型与阈值不变，不能将不同候选bank指标混用。']
     if (r/'reference_updates.json').exists():
         updates=json.loads((r/'reference_updates.json').read_text());parts += [f"最终外部参考重算对象数：{updates['count']}。"]
-    if (r/'resource_release.json').exists():parts += ['资源释放证据已存于本实验resource_release.json。']
-    parts += ['', 'ROI裁图重编码属于另一机制，暂缓，优先完成用户明确要求的固定像素区域池化。']
+    if (r/'exo2exo_results.json').exists():
+        parts += ['', '### 12.3 本轮结论与下一步', '',
+          '**固定像素整框比此前倍率外环更有希望，但新增context尚未证明稳定贡献。** Exo→Exo原生100px整框41.3748，高于历史1.5/2倍环41.0306/40.9672；与历史2倍环的描述性配对差为+0.4076点，95%区间[0.0622,0.7598]，未作多重比较校正。与重新对齐定义的1.5/2倍整框相比也略高，但区间跨零。100px纯背景环没有优于2倍纯背景环，不能简单归结为所有固定像素范围都更好。', '',
+          '源域预选150px整框Exo→Exo为41.3759（相对原PCCS+2.3568点，[0.7711,4.0441]），相对原先冻结cycle41.3354只额外+0.0404点，区间[-0.7534,0.9370]。同正则同阈值的cycle控制为41.1143，预选方案额外+0.2616点，区间[-0.5111,1.0984]。Exo→Ego原cycle+0.8293点获得支持，但固定context对同阈值cycle的额外变化仍跨零。因此“原生增强整体有效”和“邻域context带来稳定额外收益”必须分开表述。', '',
+          '错位邻域主方案Exo→Exo为41.5845，反而高于真实邻域41.3759；Exo→Ego真实对错位的差也跨零。这削弱了“池化邻域提供跨视角语义一致性”的解释，不能忽略这一负对照。当前最强证据仍支持原生soft-cycle置信增强，尚不支持邻域机制解释。相对同bank O-MaMa42.3980，预选主方案仍低1.0222点（[-2.6649,0.7471]），区间跨零也不构成等效或非劣证明。', '',
+          '验证收尾：Exo→Ego512对/965对象、Exo→Exo1094对/1094对象均完整；实际PCCS接入选择与冻结策略回放逐对象相同，frame指标本地独立聚合一致，分别保留128/440个零IoU对象。最终1094对候选与历史bank全部相同，参考重算数0，恢复阶段未加载O-MaMa网络。源域选型SHA在恢复前后不变。详细核验见final_validation.json。', '',
+          '后续优先测试原生DINOv3局部视图循环：检验小物体细节是否在全图patch中被背景混合，比较同分辨率有背景与前景-only裁图。将局部对应证据接入原PCCS，不导入O-MaMa学习头；通过对照区分物体放大收益与上下文本身收益。该方向此前已准备几何模块，完整实验仍待启动。']
+    else:parts += ['', 'ROI裁图重编码属于另一机制，暂缓，优先完成用户明确要求的固定像素区域池化。']
+    if (r/'resource_release.json').exists():
+        c=json.loads((r/'resource_release.json').read_text(encoding='utf-8-sig'))['cells'];parts += [f"资源已释放：{c[5]}，占用节点{c[7]}，结束{c[9]}（北京时间）；gpu_after无残留计算进程。"]

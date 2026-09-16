@@ -334,5 +334,12 @@
       }
     ],
     "frozen_selection_sha256": "a75017d84388821a1b76c7e0f5c85202e1dd84b5c9d49ef170f948f2d92a3bc7"
+  },
+  "within_bank_reference_repair": true,
+  "reference_recovery": {
+    "trigger": "Same knife pair at rank2 index100 as earlier DINOv3 native-context repeat-variation probe; old candidate identity check failed",
+    "protocol": "Keep completed records. Freeze one current bank, preserve all historical deltas, separately recompute external O-MaMa reference for any changed masks only. No test fitting or changed thresholds.",
+    "prior_diagnostic": "../pccs_dense_context_20260917/failure_probe.json",
+    "frozen_selection_sha256": "a75017d84388821a1b76c7e0f5c85202e1dd84b5c9d49ef170f948f2d92a3bc7"
   }
 }

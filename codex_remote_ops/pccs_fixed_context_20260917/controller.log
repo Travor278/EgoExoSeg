@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/resume_controller.py", line 48, in <module>
-    phase_run('exo2exo');read('exo2exo');run('evaluate.py')
-  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/resume_controller.py", line 18, in phase_run
-    if any(p.poll() not in (None,0) for p in children):raise RuntimeError(phase+' worker failed')
-RuntimeError: exo2exo worker failed

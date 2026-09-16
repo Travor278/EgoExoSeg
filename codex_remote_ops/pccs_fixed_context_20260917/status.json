@@ -1,1 +1,1 @@
-{"state": "failed", "error": "RuntimeError('exo2exo worker failed')", "updated_at": 1789586033.1450458}
+{"state": "complete", "phase": "complete", "eta_seconds": 0, "updated_at": 1789587177.4923868}
