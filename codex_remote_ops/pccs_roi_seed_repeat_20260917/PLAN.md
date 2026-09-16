@@ -1,6 +1,6 @@
 # Frozen native PCCS ROI robustness check — 2026-09-17
 
-Status: protocol written after the first ROI batch, before any new-seed outputs. No job submitted yet. This is a randomness robustness study on previously observed benchmarks, not a fresh blind test and not a new source hyperparameter search.
+Status: protocol written before new-seed outputs; job-3aa01e16-4967-4a6f-8e59-2a3215868277 submitted2026-09-17 05:00:37. New-seed smoke and four historical O-MaMa witness checks passed; full Exo2Exo inference is running. This is a randomness robustness study on previously observed benchmarks, not a fresh blind test and not a new source hyperparameter search.
 
 Motivation: the source-selected local1.5 primary reached Exo2Exo41.7688; the declared local2 secondary reached42.3292, near frozen O-MaMa42.3980 on the same original candidate bank. The latter remains a secondary/exploratory finding in the first experiment. We must not relabel it as that experiment's original primary or optimize another threshold on those target labels.
 

@@ -58,4 +58,5 @@ def append_roi(parts,root):
     if (r/'final_validation.json').exists():parts += ['', '最终核验：1094对Exo→Exo、512对/965对象Exo→Ego覆盖完整，实际接口选择与冻结回放一致，原始候选/全图特征保持，frame聚合复算一致，保留440/128个零IoU对象。参数和模型来源见manifest、encoder_receipt及final_validation。']
     if (r/'resource_release.json').exists():
         c=json.loads((r/'resource_release.json').read_text(encoding='utf-8-sig'))['cells'];parts += [f"本轮任务{c[5]}，占用节点{c[7]}，于{c[9]}结束（北京时间），运行{c[10]}；gpu_after无残留计算进程。"]
-    if (root/'pccs_roi_seed_repeat_20260917/PLAN.md').exists():parts += ['', '下一步先冻结已有1.5/2倍模型做一次新的候选随机种子复验，避免继续在已观察目标上选参数。新种子命名已预先声明，只改变候选生成随机性，所有比较共享同一新bank，并重新计算对应的外部参考；不能将种子当独立拍摄序列增加样本量。该复验尚未提交，见[冻结复验协议](../pccs_roi_seed_repeat_20260917/PLAN.md)。']
+    if (r/'metadata_errata.json').exists():parts += ['', '元数据勘误：ROI运行manifest中沿用了全图实验的new_encoder_passes=0，该未使用的顶层字段不代表实际执行；真实额外视图数已记录在每对象roi_metadata.encoded_views和cost汇总中。保留原运行manifest，并以metadata_errata.json明确更正，代码/模型/预测/指标均不变。']
+    if (root/'pccs_roi_seed_repeat_20260917/PLAN.md').exists():parts += ['', '随后冻结已有1.5/2倍模型做一次新的候选随机种子复验，避免继续在已观察目标上选参数。只改变候选生成随机性，所有比较共享同一新bank，并重新计算对应的外部参考；不能将种子当独立拍摄序列增加样本量。当前进展见§14与[冻结复验协议](../pccs_roi_seed_repeat_20260917/PLAN.md)。']

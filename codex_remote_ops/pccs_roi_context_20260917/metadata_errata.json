@@ -1,0 +1,9 @@
+{
+  "affected_artifact": "manifest.json",
+  "field": "new_encoder_passes",
+  "recorded_value": 0,
+  "correction": "This unused top-level field was inherited from the earlier global-feature-only study. ROI does add encoder views. Exact per-object counts are in roi_metadata.encoded_views and measured summaries in each direction's results.json/cost.",
+  "runtime_manifest_preserved": true,
+  "method_code_models_predictions_metrics_unchanged": true,
+  "report_already_describes_additional_encoding_cost": true
+}
