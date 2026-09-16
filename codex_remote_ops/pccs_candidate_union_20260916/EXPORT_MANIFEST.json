@@ -477,13 +477,13 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "bytes": 31039,
-      "sha256": "5afa500cc3749b99b2263e8a91faf84538da93038e8b79be4a6d350a87e1e99f"
+      "bytes": 32149,
+      "sha256": "643c215f46b63b62c95d7f99528768c351d76d976e4a3b3b79576ca0b6898625"
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
-      "bytes": 25816,
-      "sha256": "ca6e803759ec557cf4363e3fa84ad495abeb85a6e5c84e0935010fb3babec5fb"
+      "bytes": 27026,
+      "sha256": "fe622716cfae00c612b9a16615321baa0b338cfb98586c4dfba4b568744d837d"
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_union_report.py",
