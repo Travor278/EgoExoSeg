@@ -1,0 +1,20 @@
+{
+  "remote_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916",
+  "command_characters": 31263,
+  "files": {
+    "candidate_ops.py": "14c5be675a0a9ccf4e637e1238103a9cd2783bab9fa2a12cc77baaaef17fcedb",
+    "union_core.py": "b2b6d792c8b613b80efcdfbd2ff07e7f1b579125127938e5520ea9e986f56206",
+    "test_union.py": "f6d561ea56f35c4833779d0f37846fad62081e8da7b3e3a96993474472d2f54b",
+    "residual_pool.py": "3882c61daa97efac918a63bb815e7f2708416838d28cda32df6a97705a0c9e93",
+    "test_residual.py": "8740619f5306c04c3bd37fc43ef932689a319d3e7693afdebd76872230e30d61",
+    "metric_adapter.py": "7c8d884bd528460471575700dc44497622ecc91cf8e029d223a305a3aa112e6d",
+    "prepare.py": "5dcbdf2ecd5db3775ea57243c90ace70f4974ac7db81721f3856d459edf48c36",
+    "worker.py": "b3e5b4bb41c99da1813a9fe066c972c9ececd9d6498292177c1b8b79dbc625d6",
+    "offline_union.py": "0bfe4ee18d0739cfd0bfef15af5b4acf9f0f1bfa533e4a1c049f65ec4ce4ecab",
+    "build_dataset.py": "ea993641bcfc1724e8d4dd7cd19c576363215dc5d81b172be945aa50a1347ac6",
+    "fit_models.py": "245e4723a6f3937c0a02024dac775befbaaa819555d06259844be62f68632bc8",
+    "evaluate_selected.py": "641d743ec4fecb88eafcb49ebbd086a79e3284513fded731413e8347dda8e299",
+    "controller.py": "95949d7e6ce4a89fe6b75fe5769d676513ecbf5619269a487f0296d80b68da3e",
+    "PLAN.md": "7a97f9650369db32f3a29bd44fbae9c5258a2a3e3abcac1d27b730c9bf72b1b1"
+  }
+}

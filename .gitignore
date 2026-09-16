@@ -19,6 +19,7 @@ __pycache__/
 !codex_remote_ops/pccs_corrected_exoexo_20260916/**/*.log
 !codex_remote_ops/pccs_corrected_exoego_20260916/**/*.log
 !codex_remote_ops/pccs_candidate_quality_20260916/*.log
+!codex_remote_ops/pccs_candidate_union_20260916/*.log
 *.pid
 *.status
 *.partial

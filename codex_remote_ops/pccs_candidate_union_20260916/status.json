@@ -1,0 +1,18 @@
+{
+  "state": "running",
+  "phase": "candidates_screen",
+  "arms": {
+    "residual005": {
+      "state": "initializing"
+    },
+    "residual010": {
+      "state": "initializing"
+    },
+    "residual025": {
+      "state": "initializing"
+    }
+  },
+  "eta_seconds": null,
+  "updated_at": 1789545267.213206,
+  "pid": 55
+}

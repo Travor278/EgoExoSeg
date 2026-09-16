@@ -1,0 +1,165 @@
+{
+  "files": [
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/candidate_ops.py",
+      "bytes": 6048,
+      "sha256": "14c5be675a0a9ccf4e637e1238103a9cd2783bab9fa2a12cc77baaaef17fcedb"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/union_core.py",
+      "bytes": 3028,
+      "sha256": "b2b6d792c8b613b80efcdfbd2ff07e7f1b579125127938e5520ea9e986f56206"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/test_union.py",
+      "bytes": 448,
+      "sha256": "f6d561ea56f35c4833779d0f37846fad62081e8da7b3e3a96993474472d2f54b"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/residual_pool.py",
+      "bytes": 710,
+      "sha256": "3882c61daa97efac918a63bb815e7f2708416838d28cda32df6a97705a0c9e93"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/test_residual.py",
+      "bytes": 1425,
+      "sha256": "8740619f5306c04c3bd37fc43ef932689a319d3e7693afdebd76872230e30d61"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/metric_adapter.py",
+      "bytes": 454,
+      "sha256": "7c8d884bd528460471575700dc44497622ecc91cf8e029d223a305a3aa112e6d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/prepare.py",
+      "bytes": 2535,
+      "sha256": "5dcbdf2ecd5db3775ea57243c90ace70f4974ac7db81721f3856d459edf48c36"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/worker.py",
+      "bytes": 6186,
+      "sha256": "b3e5b4bb41c99da1813a9fe066c972c9ececd9d6498292177c1b8b79dbc625d6"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/offline_union.py",
+      "bytes": 1845,
+      "sha256": "0bfe4ee18d0739cfd0bfef15af5b4acf9f0f1bfa533e4a1c049f65ec4ce4ecab"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/build_dataset.py",
+      "bytes": 6819,
+      "sha256": "ea993641bcfc1724e8d4dd7cd19c576363215dc5d81b172be945aa50a1347ac6"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/fit_models.py",
+      "bytes": 8377,
+      "sha256": "245e4723a6f3937c0a02024dac775befbaaa819555d06259844be62f68632bc8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/evaluate_selected.py",
+      "bytes": 3943,
+      "sha256": "641d743ec4fecb88eafcb49ebbd086a79e3284513fded731413e8347dda8e299"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/controller.py",
+      "bytes": 5701,
+      "sha256": "95949d7e6ce4a89fe6b75fe5769d676513ecbf5619269a487f0296d80b68da3e"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/PLAN.md",
+      "bytes": 4180,
+      "sha256": "7a97f9650369db32f3a29bd44fbae9c5258a2a3e3abcac1d27b730c9bf72b1b1"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/job_receipt.json",
+      "bytes": 364,
+      "sha256": "9fb5bcb32c9002e8830fda94ba0f54c909d426ab48637feb5e1d379fc12b637d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/capsule_manifest.json",
+      "bytes": 1451,
+      "sha256": "40d04affa3f5d566e273138899ebb007e95c71a6b8a065a8e04cbf3e6cc5bcae"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/manifest.json",
+      "bytes": 5769,
+      "sha256": "5d72bdd8df2bda4fb648bb0fc4a8ca72c9f39db6789ea66b661700aa0e6c2c53"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/status.json",
+      "bytes": 317,
+      "sha256": "3891da13a30cef6d3c756cfd94b413b8c5a087a0603e41179ef22692f6a11fa1"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/stage1_results.json",
+      "bytes": 1045,
+      "sha256": "b1f5838de0f80f111c6b4dd9298efeb2a34c69d4e5e311e7682410ff2daed5de"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/gpu_preflight.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/controller.log",
+      "bytes": 30,
+      "sha256": "3a29958705744e1e47d1efcfe65a222f03368e8688bcbdee29f783f5ce639126"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/smoke_isolation.json",
+      "bytes": 209,
+      "sha256": "40414ca6e118f5cace864253eb31248d981a82249515bbd3edfc00506faa617b"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/controller.log",
+      "bytes": 30,
+      "sha256": "3a29958705744e1e47d1efcfe65a222f03368e8688bcbdee29f783f5ce639126"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/prepare.log",
+      "bytes": 15,
+      "sha256": "1623e50f21da10b9e833014c414e95bac16dee26314bcb1d72b20289b9b65f9a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/smoke_residual005.log",
+      "bytes": 25647,
+      "sha256": "196fce84d0b1e04eee2cbd35db0224363ad20edcbf8f1a526f38df65258e2ef8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/smoke_residual010.log",
+      "bytes": 25647,
+      "sha256": "0e94d91b63f5ae904027041d53daf59e504b916659087df53d8dec75cd931a1e"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/smoke_residual025.log",
+      "bytes": 25715,
+      "sha256": "c4f0803852e7b813e481c8db1cff49a0bca5b1e8a0ca8b9e777af3710e520710"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/unit_residual.log",
+      "bytes": 41,
+      "sha256": "3afa77815ecbbca59bb8de3a309e77ee8974baaa8f2667c3d04ffa9dfec07d34"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/unit_union.log",
+      "bytes": 17,
+      "sha256": "8d12d79999c81ad52bbc82ad8c5b564adabc853efac22e0c6958642417fe86d3"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "bytes": 26423,
+      "sha256": "6bd1b13538e6bbef95f99a86b63a95abb8cab08d13675978d63218f39d728871"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
+      "bytes": 25115,
+      "sha256": "708d77cbd5652790cc1d6ba935f5a09df933eed9208cc4e0534c45221104724d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/append_union_report.py",
+      "bytes": 3623,
+      "sha256": "d009e096eb5e2fb82feac67b3e26c5384de29bb52613156a9e5d1cb258161a43"
+    }
+  ],
+  "excludes": "raw masks/images, browser state, credentials, encoded bootstrap transport"
+}

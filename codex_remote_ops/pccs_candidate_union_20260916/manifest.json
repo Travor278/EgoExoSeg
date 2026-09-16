@@ -1,0 +1,116 @@
+{
+  "created_at": 1789545144.3830485,
+  "arms": [
+    "baseline",
+    "reliable_points",
+    "residual005",
+    "residual010",
+    "residual025"
+  ],
+  "phases": {
+    "smoke": {
+      "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/smoke.json",
+      "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/smoke_runtime.yaml",
+      "pairs": 8,
+      "objects": 8,
+      "takes": [
+        "783505c4-4ca5-4bee-a572-9e214115e035"
+      ],
+      "annotation_sha256": "5779e70be7bf38a84197023dea65ac968ab56ae562fb4d15556c5ee725a559f3"
+    },
+    "screen": {
+      "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/screen.json",
+      "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/screen_runtime.yaml",
+      "pairs": 128,
+      "objects": 243,
+      "takes": [
+        "15a055d2-a5e1-4ba9-9e2b-5a6282fc7f32",
+        "23d1dc00-55f7-454e-b388-264ee6240527",
+        "23ff1c48-01ea-4d34-a38b-bc96e767b9b9",
+        "35823fca-da54-49a2-8d4c-365046031e2c",
+        "42e4f58c-bdc8-4294-966a-240a6367428a",
+        "58004f8a-fd60-4db6-8145-5125a4cd346f",
+        "5e4d0439-eaea-463b-963b-e6ae2459f874",
+        "6b90b173-de80-4a88-b52c-7eec42fd372b",
+        "783505c4-4ca5-4bee-a572-9e214115e035",
+        "975b2d0f-fcf7-4521-b129-7c65a3268609",
+        "aceb9ba2-bcd0-4249-baaf-12cd03e14aaa",
+        "adb82b37-8e0c-423a-9016-4a17ae673b75",
+        "b2db39d4-cc06-4821-8545-e22c3ab67eab",
+        "b4b83178-90f5-4ca8-9862-224d5044b0c4",
+        "bf53c470-f60b-4f93-bb97-9b2a61a5ab89",
+        "ed83020f-c9cd-4d9d-8420-c69c74b1643e"
+      ],
+      "annotation_sha256": "bc17ad30a84fc30eadd90d3cbbcd7d45d54057f7ed67a3d7799b86dc53c3f8dc"
+    },
+    "calibration": {
+      "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/calibration.json",
+      "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/calibration_runtime.yaml",
+      "pairs": 128,
+      "objects": 225,
+      "takes": [
+        "03167c74-f240-488c-bc6c-39ea803ec943",
+        "0efd9fc1-0f49-403d-9252-93f119a3ea3c",
+        "1b755d8c-7351-4ad3-aff3-affe95fb1737",
+        "1b8601c0-ca65-4b4a-9ed4-0248d9539257",
+        "21e09276-debf-49dc-8e6b-da8660308766",
+        "6badc0af-4a97-4dd4-b89d-b540f6f34002",
+        "77cd56fc-6b68-4c7f-814b-81545484dd2d",
+        "783c918b-1473-4b72-b106-cb2718c46af8",
+        "7d33f6b7-46c0-4087-97e5-100c369ffe45",
+        "7ec264c5-0029-4b84-81ea-c3b24a059ae4",
+        "828f456b-54af-4a84-aea5-a8071fd1cae8",
+        "83783976-189a-460f-9068-7ad5b17dd815",
+        "8634c58a-95ee-4aed-aa80-9392073815cf",
+        "87a63705-c609-49cd-9605-0117ad0b0526",
+        "e257e982-fb75-4d98-9e15-228bd18c33f4",
+        "f01b21c4-8023-4800-b3b2-3326a3c164f2"
+      ],
+      "annotation_sha256": "dff5cfd66d54bc995bc1d4eecc63343793612ee809441dcd418db337c5bb7240"
+    }
+  },
+  "source_bank": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
+  "assets": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "immutable_original_candidates": true,
+  "residual_alphas": [
+    0.05,
+    0.1,
+    0.25
+  ],
+  "screen_calibration_reused": true,
+  "stages": [
+    "cached_multipoint_union",
+    "residual_pool_union",
+    "quality_gain_ranker",
+    "low_rank_OMaMa_embedding_adapter"
+  ],
+  "adapter_scope": "Train a small residual metric projection on frozen published O-MaMa embeddings; do not finetune V2SAM prompt projection in this run.",
+  "selection_rule": "Retain original baseline unless a candidate method improves fixed-consensus final frame IoU on BOTH screen and calibration. Select maximum calibration IoU among qualified methods, tie favor simpler. Freeze winner before Exo2Exo; no target fitting.",
+  "scientific_scope": "TRAIN screen/cal reused in previous explorations; not an unseen validation set. Exo2Exo benchmark also observed previously. Report conditional transfer confirmation, not blind discovery.",
+  "code_sha256": {
+    "worker.py": "5774d77229f78955b999f333be00a75a765146689f541afb3813903135738f99",
+    "candidate_ops.py": "c9d6da4ee47c5f4e67c74d204bc9dace7162b2bda4d95e3db564249ffab7ad9d",
+    "residual_pool.py": "3882c61daa97efac918a63bb815e7f2708416838d28cda32df6a97705a0c9e93",
+    "union_core.py": "b2b6d792c8b613b80efcdfbd2ff07e7f1b579125127938e5520ea9e986f56206",
+    "build_dataset.py": "ea993641bcfc1724e8d4dd7cd19c576363215dc5d81b172be945aa50a1347ac6",
+    "fit_models.py": "245e4723a6f3937c0a02024dac775befbaaa819555d06259844be62f68632bc8",
+    "metric_adapter.py": "7c8d884bd528460471575700dc44497622ecc91cf8e029d223a305a3aa112e6d",
+    "evaluate_selected.py": "641d743ec4fecb88eafcb49ebbd086a79e3284513fded731413e8347dda8e299",
+    "controller.py": "95949d7e6ce4a89fe6b75fe5769d676513ecbf5619269a487f0296d80b68da3e"
+  }
+}

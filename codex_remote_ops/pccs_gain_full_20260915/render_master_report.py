@@ -139,5 +139,7 @@ if (Q/'PLAN.md').exists():
     ci=values['consensus']['take_bootstrap_95ci_pp'];parts.append(f"| {armnames[arm]} | {values['oracle']['delta_iou_pp']:.4f} | {values['consensus']['delta_iou_pp']:.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
    parts+=['','下一步如继续，应优先做较小的分布适配：保留原池化并加入小比例加权分量，在训练／校准上选择混合强度；或只微调prompt投影。多点可改成保留原单点、谨慎追加额外点并做质量检查。以上仅为基于负结果的新假设，**尚未测试**，不在本轮追加搜索或用目标测试标签选参数。']
  parts+=['','本节候选质量实验使用5000次序列bootstrap；前面的选择器实验使用10000次。实现与完整回执：[候选质量实验计划](../pccs_candidate_quality_20260916/PLAN.md)。早期选择器实验的涨点不能归因于本节新增候选改动。']
+from append_union_report import append
+append(parts,O)
 report.write_text('\n'.join(parts)+'\n',encoding='utf8');assert report.read_text(encoding='utf8').count('```')%2==0
 print(json.dumps({'report':str(report),'characters':len(report.read_text(encoding='utf8')),'completed_sections':list(completed),'sha256':hashlib.sha256(report.read_bytes()).hexdigest()},ensure_ascii=False))

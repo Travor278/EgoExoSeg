@@ -1,0 +1,36 @@
+{
+  "stage": "1_cached_multipoint_union",
+  "threshold": 0.05,
+  "refitting": false,
+  "baseline": "previous baseline-arm geometry-consensus output, retained exactly",
+  "phases": {
+    "screen": {
+      "pairs": 128,
+      "objects": 243,
+      "frame_iou_percent": {
+        "baseline": 78.52318053684422,
+        "union": 78.20050916577189,
+        "old_oracle": 81.14115360311997,
+        "union_oracle": 81.17970523446478
+      },
+      "delta_final_pp": -0.3226713710723317,
+      "delta_oracle_pp": 0.03855163134480222,
+      "changed": 10,
+      "duplicate_score_max_error": 0
+    },
+    "calibration": {
+      "pairs": 128,
+      "objects": 225,
+      "frame_iou_percent": {
+        "baseline": 82.62839860573877,
+        "union": 82.39741343597416,
+        "old_oracle": 84.57399747587866,
+        "union_oracle": 84.6777622108857
+      },
+      "delta_final_pp": -0.23098516976460814,
+      "delta_oracle_pp": 0.10376473500704719,
+      "changed": 7,
+      "duplicate_score_max_error": 0
+    }
+  }
+}
