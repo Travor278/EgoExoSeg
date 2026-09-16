@@ -1,1 +1,1 @@
-{"state": "running", "phase": "exo2ego", "ranks": [{"state": "initializing"}, {"state": "initializing"}, {"state": "initializing"}, {"state": "initializing"}], "eta_seconds": null, "updated_at": 1789589712.1892247}
+{"state": "complete", "phase": "complete", "selected": "local15_ridge100_present_t0.05", "eta_seconds": 0, "updated_at": 1789590278.0510323}

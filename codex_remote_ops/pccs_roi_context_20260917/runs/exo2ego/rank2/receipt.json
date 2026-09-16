@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "coverage": "exact",
+  "pairs": 128,
+  "objects": 238,
+  "reference_objects_verified": 0,
+  "historical_drift_objects": 0,
+  "capture_on_off_pairs": 0,
+  "records_sha256": "f0cb51704dd31bc106d10276c2bda295634b4426a1d2f22b49f14bd4f2ed4b78"
+}

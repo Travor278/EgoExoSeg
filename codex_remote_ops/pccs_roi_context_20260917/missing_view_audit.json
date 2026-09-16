@@ -1,0 +1,33 @@
+{
+  "scope": "Implementation audit: absent ROI is zero-imputed plus validity; original measurements may still trigger switching. Forced fallback is a post hoc diagnostic only.",
+  "phases": {
+    "exo2exo": {
+      "primary": {
+        "changed_to_missing_roi_objects": 5,
+        "all_candidate_roi_missing_objects": 4,
+        "forced_fallback_iou": 0.4176511984562399,
+        "original_minus_forced_pp": 0.0036913220766654486
+      },
+      "local20_matched": {
+        "changed_to_missing_roi_objects": 1,
+        "all_candidate_roi_missing_objects": 4,
+        "forced_fallback_iou": 0.4232657826816758,
+        "original_minus_forced_pp": 0.0025821378083434876
+      }
+    },
+    "exo2ego": {
+      "primary": {
+        "changed_to_missing_roi_objects": 0,
+        "all_candidate_roi_missing_objects": 17,
+        "forced_fallback_iou": 0.720801133411757,
+        "original_minus_forced_pp": 0.0
+      },
+      "local20_matched": {
+        "changed_to_missing_roi_objects": 0,
+        "all_candidate_roi_missing_objects": 17,
+        "forced_fallback_iou": 0.7217060400725563,
+        "original_minus_forced_pp": 0.0
+      }
+    }
+  }
+}

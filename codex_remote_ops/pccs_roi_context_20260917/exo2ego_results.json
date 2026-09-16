@@ -1,0 +1,372 @@
+{
+  "phase": "exo2ego",
+  "coverage": "exact",
+  "selected": {
+    "name": "local15_ridge100_present_t0.05",
+    "family": "roi",
+    "group": "local15",
+    "kind": "ridge100",
+    "gate": "present",
+    "threshold": 0.05,
+    "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/fitted/local15_ridge100.joblib",
+    "sha256": "3680d76241ce11eeacc22b85ad60721413d09a92b786244ad70d51ee70fbadf5",
+    "train_oof": {
+      "frame": [
+        0.7900793088162569,
+        0.8401722227815714,
+        0.8637856573805971,
+        0.02663700624571999
+      ],
+      "delta_pp": 0.943007025287149,
+      "ci95_pp": [
+        -0.22501327329910542,
+        2.0303177685967224
+      ],
+      "changed": 108,
+      "improved": 50,
+      "harmed": 57,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8187015873273291,
+        0.8674245088722575,
+        0.8917155767373355,
+        0.022192941262285708
+      ],
+      "delta_pp": 0.641596811862352,
+      "ci95_pp": [
+        0.14561074203811586,
+        1.2675473193521607
+      ],
+      "changed": 17,
+      "improved": 11,
+      "harmed": 6,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    }
+  },
+  "methods": {
+    "baseline": {
+      "frame": [
+        0.7097475930270954,
+        0.7578500680041208,
+        0.7683999647380199,
+        0.04735565421921471
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "primary": {
+      "frame": [
+        0.720801133411757,
+        0.7698151941492801,
+        0.7783214028708656,
+        0.04398398765852366
+      ],
+      "delta_pp": 1.1053540384661649,
+      "ci95_pp": [
+        0.41944049307778175,
+        1.867909497732147
+      ],
+      "changed": 100,
+      "improved": 50,
+      "harmed": 38,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "frozen_cycle": {
+      "frame": [
+        0.7180408330744767,
+        0.7666384318103731,
+        0.7761616557783911,
+        0.04554629629400267
+      ],
+      "delta_pp": 0.829324004738131,
+      "ci95_pp": [
+        0.285334173854532,
+        1.4973282677951072
+      ],
+      "changed": 32,
+      "improved": 20,
+      "harmed": 10,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_matched": {
+      "frame": [
+        0.7183983629618722,
+        0.767250085939572,
+        0.7770398580642792,
+        0.04466172514795937
+      ],
+      "delta_pp": 0.8650769934776765,
+      "ci95_pp": [
+        0.3186737866560208,
+        1.5220010710134013
+      ],
+      "changed": 149,
+      "improved": 53,
+      "harmed": 87,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "local15_matched": {
+      "frame": [
+        0.720801133411757,
+        0.7698151941492801,
+        0.7783214028708656,
+        0.04398398765852366
+      ],
+      "delta_pp": 1.1053540384661649,
+      "ci95_pp": [
+        0.41944049307778175,
+        1.867909497732147
+      ],
+      "changed": 100,
+      "improved": 50,
+      "harmed": 38,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "local20_matched": {
+      "frame": [
+        0.7217060400725563,
+        0.7708048164149066,
+        0.7792030214823995,
+        0.043901143502946174
+      ],
+      "delta_pp": 1.1958447045460845,
+      "ci95_pp": [
+        0.5651791455844468,
+        1.9089817707615888
+      ],
+      "changed": 112,
+      "improved": 59,
+      "harmed": 41,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "object20_matched": {
+      "frame": [
+        0.72039373701296,
+        0.7692861965559387,
+        0.7774251190569799,
+        0.0439083189627508
+      ],
+      "delta_pp": 1.064614398586438,
+      "ci95_pp": [
+        0.4975248863656816,
+        1.7388578263876389
+      ],
+      "changed": 147,
+      "improved": 66,
+      "harmed": 76,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_local20_matched": {
+      "frame": [
+        0.7223947621266781,
+        0.7715171589740545,
+        0.7793814576868419,
+        0.04392044703372541
+      ],
+      "delta_pp": 1.2647169099582654,
+      "ci95_pp": [
+        0.6319645354784854,
+        1.9745042769521337
+      ],
+      "changed": 111,
+      "improved": 59,
+      "harmed": 42,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_object20_matched": {
+      "frame": [
+        0.7202647368552988,
+        0.7691236576388243,
+        0.7770587934806126,
+        0.044297896786570645
+      ],
+      "delta_pp": 1.0517143828203264,
+      "ci95_pp": [
+        0.4720298993197787,
+        1.729392177874544
+      ],
+      "changed": 154,
+      "improved": 65,
+      "harmed": 83,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_multiscale_matched": {
+      "frame": [
+        0.7221619087794595,
+        0.7713885595973603,
+        0.7795333733893962,
+        0.04381692893582345
+      ],
+      "delta_pp": 1.2414315752364127,
+      "ci95_pp": [
+        0.6016602206949814,
+        1.9640702305755102
+      ],
+      "changed": 111,
+      "improved": 62,
+      "harmed": 40,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "frozen_fixed_context": {
+      "frame": [
+        0.7184849242470164,
+        0.7669366879958608,
+        0.7763641968120443,
+        0.04553547400733501
+      ],
+      "delta_pp": 0.8737331219920939,
+      "ci95_pp": [
+        0.33189262807165204,
+        1.5337101250471885
+      ],
+      "changed": 29,
+      "improved": 20,
+      "harmed": 7,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    }
+  },
+  "paired_comparisons": {
+    "primary minus frozen_cycle": {
+      "frame": [
+        0.720801133411757,
+        0.7698151941492801,
+        0.7783214028708656,
+        0.04398398765852366
+      ],
+      "delta_pp": 0.2760300337280342,
+      "ci95_pp": [
+        -0.11940455347867858,
+        0.6359456354316487
+      ],
+      "changed": 90,
+      "improved": 41,
+      "harmed": 39,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "primary minus global_matched": {
+      "frame": [
+        0.720801133411757,
+        0.7698151941492801,
+        0.7783214028708656,
+        0.04398398765852366
+      ],
+      "delta_pp": 0.24027704498848834,
+      "ci95_pp": [
+        -0.18640221426941628,
+        0.6429501218444215
+      ],
+      "changed": 138,
+      "improved": 88,
+      "harmed": 43,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_local20_matched minus global_object20_matched": {
+      "frame": [
+        0.7223947621266781,
+        0.7715171589740545,
+        0.7793814576868419,
+        0.04392044703372541
+      ],
+      "delta_pp": 0.21300252713793894,
+      "ci95_pp": [
+        -0.13850622001688684,
+        0.5463887042669013
+      ],
+      "changed": 108,
+      "improved": 67,
+      "harmed": 33,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "local20_matched minus object20_matched": {
+      "frame": [
+        0.7217060400725563,
+        0.7708048164149066,
+        0.7792030214823995,
+        0.043901143502946174
+      ],
+      "delta_pp": 0.1312303059596467,
+      "ci95_pp": [
+        -0.20641686749549337,
+        0.4314230323199832
+      ],
+      "changed": 105,
+      "improved": 62,
+      "harmed": 34,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "primary minus frozen_fixed_context": {
+      "frame": [
+        0.720801133411757,
+        0.7698151941492801,
+        0.7783214028708656,
+        0.04398398765852366
+      ],
+      "delta_pp": 0.23162091647407124,
+      "ci95_pp": [
+        -0.15925358230737646,
+        0.5828353534577766
+      ],
+      "changed": 88,
+      "improved": 38,
+      "harmed": 40,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    }
+  },
+  "no_target_fitting": true,
+  "actual_bridge_replay_exact": true,
+  "pretrained_omama_used_in_method": false,
+  "fixed_context_reference_complete": true,
+  "cost": {
+    "roi_seconds_per_object_mean": 0.4401048806894069,
+    "roi_seconds_per_pair_mean": 0.8294945505181204,
+    "encoder_views_per_object_mean": 11.769948186528497,
+    "gpu_peak_bytes_max": 8710377472,
+    "cached_candidate_evaluation": false,
+    "note": "ROI collection cost includes all three ablation views, excludes model initialization; not single-selected-method end-to-end latency."
+  }
+}

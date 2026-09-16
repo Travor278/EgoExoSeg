@@ -92,8 +92,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/PLAN.md",
-      "sha256": "17ff62af57a2456cbc051c7cf85924234c63dc4bf334eee9d12d0ee949718130",
-      "bytes": 6625
+      "sha256": "ea800ef0f6db1d2c30e98faea56714ebec1e0d23c693fb4e13d504cd4bc1b615",
+      "bytes": 7436
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/job_receipt.json",
@@ -112,8 +112,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/status.json",
-      "sha256": "22d20ecf93bb5ae9fa546203c19e4bbf0ffad0c26a822c54fc4384f246c35a21",
-      "bytes": 214
+      "sha256": "7c99bf457c73d069d2f85f463e71eca6a6fbb06880308aba2e40da1a49de7360",
+      "bytes": 140
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/search.json",
@@ -136,9 +136,79 @@
       "bytes": 9421
     },
     {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2ego_results.json",
+      "sha256": "1a903f24cc8f92a96827122ec70705924e9ceec220725e7c5ef5edeee724ff9e",
+      "bytes": 8599
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_context_20260917/exo2exo_predictions.jsonl",
       "sha256": "84a6e4a4bb6db83573af8b36ab933fa0c93d71f8dd8807e2d30b3067876fa330",
       "bytes": 570013
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2ego_predictions.jsonl",
+      "sha256": "00c19cf70542d3740ee0ef8895279531243c9b2cfedfe643b3292de684d100db",
+      "bytes": 402060
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/gpu_preflight.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/gpu_after.txt",
+      "sha256": "cae79969ce448872401f5d9bcd1d52bbefa1a5450cf3a5658f62f068ab59294b",
+      "bytes": 41
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/resource_release.json",
+      "sha256": "c572d83d80baee6cc13bf86bdac12beb0979a2658da0094ed2aa6eb0d121898e",
+      "bytes": 274
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/final_validation.json",
+      "sha256": "2a0e6ff5ccab3a01afda9a16b30d2bd5c3542a268152d8ce02e013ac5ea0f893",
+      "bytes": 989
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/cache_smoke_rank0.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/cache_smoke_rank1.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/cache_smoke_rank2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/cache_smoke_rank3.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/calibration_rank0.log",
+      "sha256": "af30eafe1992da61529e79523b58157df78f742c9387244173b84f9249a44073",
+      "bytes": 28972
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/calibration_rank1.log",
+      "sha256": "5cd9a5701331c8909dedffbc0b3187be6f06e4b33ede27a8463fe12c32a6b2cc",
+      "bytes": 28972
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/calibration_rank2.log",
+      "sha256": "d4920a3e525de3ba395e8461b4e467b15c5bbf74b38018f9c89307995ce32938",
+      "bytes": 28972
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/calibration_rank3.log",
+      "sha256": "b1208a2f07dc9fc31c490669cf5f26e224f3c3f742747604753f71fb7e73d479",
+      "bytes": 28972
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/controller.log",
@@ -151,9 +221,109 @@
       "bytes": 47
     },
     {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/evaluate_exoego.py.log",
+      "sha256": "6420b1bc6bc1ca22e0125a2c8b8f7d3f93e814a232e57dcb862fb57f625dfb32",
+      "bytes": 47
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank0.log",
+      "sha256": "5475d38defa841ffecec3355298daf2592373247a739e187fa5c010c950bdb93",
+      "bytes": 102206
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank1.log",
+      "sha256": "5d59c6e4aa2a53d8d4a92312dec619764f47121ba729276ba58018a37ebe8107",
+      "bytes": 102206
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank2.log",
+      "sha256": "dad2fe75bcdfea845b44c48654fafaed9696679bb44fefc65a7db08cdd0b9071",
+      "bytes": 102206
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank3.log",
+      "sha256": "38bfbcf6137f835d6915a7845c1e22a62e64e3f5922eaf8fae58e373e8fbbb70",
+      "bytes": 102206
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank0.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank1.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank3.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_context_20260917/fit_roi.py.log",
       "sha256": "2dd618dedb279a33d9e74b16db0d4ac43884f2db156ea1003b95a93e3718c7b7",
       "bytes": 764
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/prepare.py.log",
+      "sha256": "f796f5bf8ef7fac71e38d99e64ced3b8bcd195358a0b43ac20b002e4a540151b",
+      "bytes": 15
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/smoke_rank0.log",
+      "sha256": "fa5a23c43266763783df27c8aac3bf6e5e4c41f7f8ae01d791ef6b48797e217e",
+      "bytes": 24006
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/smoke_rank1.log",
+      "sha256": "9436f8cd10f591a73b70297ed4ec3fe325fe20d65a02e949a7ae354ce2685330",
+      "bytes": 24006
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/smoke_rank2.log",
+      "sha256": "a8e117d56cdc397f527cfd4af59c2443fd63c4b211e2398dd804e159367e5b8f",
+      "bytes": 24006
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/smoke_rank3.log",
+      "sha256": "d06966a9c6472088305daf2cfc992264ae10bf33e9ab88240fbfeac24151100b",
+      "bytes": 24018
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/test_roi.py.log",
+      "sha256": "2d609f95fd21cc8a360d68f4fda071535077793510ea9e1cf1a1a7f7f9068c13",
+      "bytes": 53
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/test_roi_policy.py.log",
+      "sha256": "c88dbb55cdef129a75750d633a31ebd5c7bc00f0c5ee5a152b9207f12ab6486c",
+      "bytes": 39
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/train_rank0.log",
+      "sha256": "41faa8acfe88ea20c702d5ffd55ff96a5e602b57104066747eb5d2d44ffb6a26",
+      "bytes": 42212
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/train_rank1.log",
+      "sha256": "14192004939b079e2e64eb5eef9b3e8b503616db6b2861b22e2fa3588974002d",
+      "bytes": 42212
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/train_rank2.log",
+      "sha256": "638d44398bb65cf07cebd5021efcb0aa1cd144bf8e8412e1752e4adaf7bd9f5b",
+      "bytes": 42212
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/train_rank3.log",
+      "sha256": "3c993debce9dbfd5b5041adc78b23f51c22e4392b81b616dcf7c6831ad72564b",
+      "bytes": 42212
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/runs/cache_smoke/rank0/records.jsonl",
@@ -194,6 +364,26 @@
       "path": "codex_remote_ops/pccs_roi_context_20260917/runs/calibration/rank3/records.jsonl",
       "sha256": "280f6ee99645b172a6860bb9c185d9b7404c1baedb580008610f4711566fc24e",
       "bytes": 376331
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank0/records.jsonl",
+      "sha256": "8782f706ab6b6ba0f9dc2507f303417738d086ffa14e502ec8569baaeceb83f3",
+      "bytes": 1751579
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank1/records.jsonl",
+      "sha256": "486f4021c6d589d6b662878b8eb83719760bf76c2a1f7ae42c71ac826445973e",
+      "bytes": 1837054
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank2/records.jsonl",
+      "sha256": "f0cb51704dd31bc106d10276c2bda295634b4426a1d2f22b49f14bd4f2ed4b78",
+      "bytes": 1747651
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank3/records.jsonl",
+      "sha256": "2f5dd5a4e951db5ab8b1c17c4296c678f12da14648a51f3d0bb37251212d0a30",
+      "bytes": 1760791
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2exo/rank0/records.jsonl",
@@ -296,6 +486,26 @@
       "bytes": 266
     },
     {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank0/receipt.json",
+      "sha256": "30f1f9134c8d2c81eea4b69466e78293e4b429cf00943bb2c7dc2baf269361a9",
+      "bytes": 267
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank1/receipt.json",
+      "sha256": "68f6ad59e1b9e7f8a650aa1724aac46570b854b04a6b61e7219513ef60395e94",
+      "bytes": 267
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank2/receipt.json",
+      "sha256": "47691fab437d001f1ebe77d0398f909b26adcb56b29db7a834b66f3ae8c55f53",
+      "bytes": 267
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank3/receipt.json",
+      "sha256": "65d3d7839790a7be22de1f10038e66b30b4fb97eca8733dfaa53c98fc2a425d6",
+      "bytes": 267
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2exo/rank0/receipt.json",
       "sha256": "bc374a29f3adcb758ab844ba2a5c519e01065c2759222daa82d27fa452ec15ad",
       "bytes": 326
@@ -396,6 +606,46 @@
       "bytes": 606
     },
     {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank0/encoder_receipt.json",
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
+      "bytes": 606
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank1/encoder_receipt.json",
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
+      "bytes": 606
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank2/encoder_receipt.json",
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
+      "bytes": 606
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2ego/rank3/encoder_receipt.json",
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
+      "bytes": 606
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2exo/rank0/encoder_receipt.json",
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
+      "bytes": 606
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2exo/rank1/encoder_receipt.json",
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
+      "bytes": 606
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2exo/rank2/encoder_receipt.json",
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
+      "bytes": 606
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/runs/exo2exo/rank3/encoder_receipt.json",
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
+      "bytes": 606
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_context_20260917/runs/smoke/rank0/encoder_receipt.json",
       "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143",
       "bytes": 606
@@ -487,23 +737,38 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/secondary_contrasts.json",
-      "sha256": "abc6a955d8aa93543a096ec077a2b7c6f5024c8d30ab59ea3d7781ee809dbab1",
-      "bytes": 2145
+      "sha256": "8ba68422512974d463394ae5d1a613764070e4a97d412287a60b2476e7de8c74",
+      "bytes": 3653
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/missing_view_audit.py",
+      "sha256": "a4b5c0990d3ae5c36dd6d231be5b9dbd7e28d9f1289bea2f35293a752ef008e5",
+      "bytes": 1398
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/missing_view_audit.json",
+      "sha256": "e71fc224995186844e2334edcaf3318834277306815f95608ec4579047392a16",
+      "bytes": 1175
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "3ecd0f7efa1b13ad7e1ca0f898a2e4e20c04238d1f4ebf49baece56a935bf297",
-      "bytes": 61966
+      "sha256": "777283d580b7cc79486fa75ef0d29e83dd153e56cac6b83596e3716d5cbe9369",
+      "bytes": 69084
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
-      "sha256": "c6cdf3036f3333f976a03ed093f0cd504a082e7d968b7f3de8176536c8d93e70",
-      "bytes": 29227
+      "sha256": "b9d7ee600a3c7a45f62011b39efdfeedc9dae549d5d06fdb2747a4d7d43b0afb",
+      "bytes": 30115
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_roi_report.py",
-      "sha256": "c7d269538d57ddbabffcbaeeb23f10e88d1c082780fe5d0c0fa8e66e156bc881",
-      "bytes": 6287
+      "sha256": "cdd6b51895ca2f1686483f0bdd68bfb84e74f65c1cffc6b7dc7f2f91e6a8dc07",
+      "bytes": 10951
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/PLAN.md",
+      "sha256": "bcba05d580c9fb052afb689641c6e7f978ea3f0df829c8a1dd2cbf606801f253",
+      "bytes": 4044
     }
   ],
   "excludes": "credentials/browser state/command transport/dependencies/raw annotations/images/masks/dense feature tensors"

@@ -29,6 +29,9 @@ if dr.exists():
 fixed=O/'pccs_fixed_context_20260917/exo2exo_results.json'
 if fixed.exists():
  f=load(fixed);v=f['methods']['px100_box_matched'];s=f['methods']['primary'];e=load(fixed.parent/'exo2ego_results.json');parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 固定像素消融与原生Exo→Ego验证已完成（§12）：100px整框Exo→Exo IoU {v['frame'][0]*100:.4f}，优于此前倍率外环；源域预选150px为{s['frame'][0]*100:.4f}。但相对原生cycle的额外变化仅约0.04点且区间跨零，错位邻域对照没有变差，**尚未证明context自身的稳定贡献**。冻结原生cycle在Exo→Ego既有512对holdout增益{e['methods']['frozen_cycle']['delta_pp']:+.4f}点；此处不是Exo→Ego全量。候选/指标/实际路由复核通过，四卡已释放。")
+roi=O/'pccs_roi_context_20260917/exo2ego_results.json'
+if roi.exists():
+ re=load(roi);rx=load(roi.parent/'exo2exo_results.json');parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 最新原生局部视图循环已完成（§13）：源域预选1.5倍方案Exo→Exo {rx['methods']['primary']['frame'][0]*100:.4f}（{rx['methods']['primary']['delta_pp']:+.4f}点），Exo→Ego512对{re['methods']['primary']['frame'][0]*100:.4f}（{re['methods']['primary']['delta_pp']:+.4f}点）。预设2倍次要对照分别为{rx['methods']['local20_matched']['frame'][0]*100:.4f}/{re['methods']['local20_matched']['frame'][0]*100:.4f}；Exo→Exo点估计接近O-MaMa42.3980，但不是事前主方案或统计等效证明。真实背景相对前景-only的优势在Exo→Exo更清晰，Exo→Ego区间跨零。原PCCS候选/权重与实际接口复核通过，四卡已释放。")
 for title,p in sources:
  parts+=['',f'#### {title}','']
  if not p.exists():
