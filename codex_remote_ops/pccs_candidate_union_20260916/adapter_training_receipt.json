@@ -1,0 +1,6 @@
+{
+  "steps": 640,
+  "losses_finite": true,
+  "last_loss": 0.9756758213043213,
+  "zero_adapter_parity": "passed"
+}

@@ -1,15 +1,21 @@
 {
   "state": "running",
-  "phase": "dataset_calibration",
-  "eta_seconds": 60.37340559542645,
-  "detail": {
-    "state": "running",
-    "phase": "calibration",
-    "done": 40,
-    "total": 225,
-    "eta_seconds": 60.37340559542645
+  "phase": "candidates_exo2exo",
+  "arms": {
+    "baseline": {
+      "state": "initializing"
+    },
+    "reliable_points": {
+      "state": "initializing"
+    },
+    "residual005": {
+      "state": "initializing"
+    },
+    "residual010": {
+      "state": "initializing"
+    }
   },
-  "log": "dataset_calibration.log",
-  "updated_at": 1789547056.2834475,
+  "eta_seconds": null,
+  "updated_at": 1789547211.5154366,
   "pid": 55
 }

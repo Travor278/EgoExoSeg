@@ -1,0 +1,520 @@
+{
+  "baseline": {
+    "screen": {
+      "frame_iou": 0.7852318053684422,
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0,
+      "pairs": 128,
+      "objects": 243
+    },
+    "calibration": {
+      "frame_iou": 0.8262839860573876,
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0,
+      "pairs": 128,
+      "objects": 225
+    }
+  },
+  "candidates": [
+    {
+      "name": "union_margin_0.05",
+      "family": "fixed_union",
+      "parameter": 0.05,
+      "screen": {
+        "frame_iou": 0.7721259727764529,
+        "changed": 24,
+        "improved": 8,
+        "harmed": 16,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": -1.3105832591989275
+      },
+      "calibration": {
+        "frame_iou": 0.8202713693686139,
+        "changed": 18,
+        "improved": 3,
+        "harmed": 14,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.6012616688773731
+      },
+      "checkpoint": null
+    },
+    {
+      "name": "union_margin_0.1",
+      "family": "fixed_union",
+      "parameter": 0.1,
+      "screen": {
+        "frame_iou": 0.7775375005738259,
+        "changed": 10,
+        "improved": 5,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": -0.7694304794616302
+      },
+      "calibration": {
+        "frame_iou": 0.8243944077577907,
+        "changed": 5,
+        "improved": 0,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.18895782995969057
+      },
+      "checkpoint": null
+    },
+    {
+      "name": "ridge10_t0.01",
+      "family": "quality_ranker",
+      "parameter": 0.01,
+      "screen": {
+        "frame_iou": 0.7861930120290999,
+        "changed": 197,
+        "improved": 100,
+        "harmed": 96,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.09612066606576875
+      },
+      "calibration": {
+        "frame_iou": 0.8265598229501241,
+        "changed": 190,
+        "improved": 96,
+        "harmed": 90,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": 0.02758368927364696
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge10.joblib",
+      "checkpoint_sha256": "75519f829dc7f34e55f55a8942cf3907bca83cee79293f9e9abe2bba9c4a8b10"
+    },
+    {
+      "name": "ridge10_t0.03",
+      "family": "quality_ranker",
+      "parameter": 0.03,
+      "screen": {
+        "frame_iou": 0.7853724296276785,
+        "changed": 85,
+        "improved": 49,
+        "harmed": 36,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.01406242592363327
+      },
+      "calibration": {
+        "frame_iou": 0.8266232116419512,
+        "changed": 69,
+        "improved": 39,
+        "harmed": 29,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": 0.03392255845635628
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge10.joblib",
+      "checkpoint_sha256": "75519f829dc7f34e55f55a8942cf3907bca83cee79293f9e9abe2bba9c4a8b10"
+    },
+    {
+      "name": "ridge10_t0.05",
+      "family": "quality_ranker",
+      "parameter": 0.05,
+      "screen": {
+        "frame_iou": 0.7875793996972877,
+        "changed": 28,
+        "improved": 22,
+        "harmed": 6,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.23475943288455703
+      },
+      "calibration": {
+        "frame_iou": 0.828362361205897,
+        "changed": 24,
+        "improved": 16,
+        "harmed": 8,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": 0.20783751485093926
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge10.joblib",
+      "checkpoint_sha256": "75519f829dc7f34e55f55a8942cf3907bca83cee79293f9e9abe2bba9c4a8b10"
+    },
+    {
+      "name": "ridge100_t0.01",
+      "family": "quality_ranker",
+      "parameter": 0.01,
+      "screen": {
+        "frame_iou": 0.7857983006624523,
+        "changed": 194,
+        "improved": 95,
+        "harmed": 98,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.056649529401009424
+      },
+      "calibration": {
+        "frame_iou": 0.8263005188802102,
+        "changed": 189,
+        "improved": 95,
+        "harmed": 90,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": 0.0016532822822545867
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge100.joblib",
+      "checkpoint_sha256": "7d3ff8d65c6ad8bb681f09bacfa35f0ddae8d1a439c147b8757f39e6b98c23c7"
+    },
+    {
+      "name": "ridge100_t0.03",
+      "family": "quality_ranker",
+      "parameter": 0.03,
+      "screen": {
+        "frame_iou": 0.7872202110290131,
+        "changed": 75,
+        "improved": 43,
+        "harmed": 32,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.19884056605709022
+      },
+      "calibration": {
+        "frame_iou": 0.8245588198459397,
+        "changed": 57,
+        "improved": 30,
+        "harmed": 26,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.1725166211447915
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge100.joblib",
+      "checkpoint_sha256": "7d3ff8d65c6ad8bb681f09bacfa35f0ddae8d1a439c147b8757f39e6b98c23c7"
+    },
+    {
+      "name": "ridge100_t0.05",
+      "family": "quality_ranker",
+      "parameter": 0.05,
+      "screen": {
+        "frame_iou": 0.7865898866019747,
+        "changed": 15,
+        "improved": 13,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.13580812335325376
+      },
+      "calibration": {
+        "frame_iou": 0.8255869230759951,
+        "changed": 19,
+        "improved": 11,
+        "harmed": 8,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.06970629813924933
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge100.joblib",
+      "checkpoint_sha256": "7d3ff8d65c6ad8bb681f09bacfa35f0ddae8d1a439c147b8757f39e6b98c23c7"
+    },
+    {
+      "name": "tree_t0.01",
+      "family": "quality_ranker",
+      "parameter": 0.01,
+      "screen": {
+        "frame_iou": 0.7911524711876748,
+        "changed": 16,
+        "improved": 8,
+        "harmed": 7,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.5920665819232673
+      },
+      "calibration": {
+        "frame_iou": 0.8223760930394444,
+        "changed": 20,
+        "improved": 5,
+        "harmed": 13,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.39078930179432536
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/tree.joblib",
+      "checkpoint_sha256": "c70baca3d3ba85870158b6ef8b0f4237a623b5a902e33234f24b560c200decd6"
+    },
+    {
+      "name": "tree_t0.03",
+      "family": "quality_ranker",
+      "parameter": 0.03,
+      "screen": {
+        "frame_iou": 0.7911588801697678,
+        "changed": 13,
+        "improved": 7,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.5927074801325594
+      },
+      "calibration": {
+        "frame_iou": 0.8249437146179843,
+        "changed": 9,
+        "improved": 3,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.13402714394032955
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/tree.joblib",
+      "checkpoint_sha256": "c70baca3d3ba85870158b6ef8b0f4237a623b5a902e33234f24b560c200decd6"
+    },
+    {
+      "name": "tree_t0.05",
+      "family": "quality_ranker",
+      "parameter": 0.05,
+      "screen": {
+        "frame_iou": 0.7911172613203323,
+        "changed": 9,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.5885455951890162
+      },
+      "calibration": {
+        "frame_iou": 0.8256958965192704,
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.05880895381171758
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/tree.joblib",
+      "checkpoint_sha256": "c70baca3d3ba85870158b6ef8b0f4237a623b5a902e33234f24b560c200decd6"
+    },
+    {
+      "name": "omama_adapter_e5_m0.02",
+      "family": "omama_metric_adapter",
+      "parameter": 0.02,
+      "screen": {
+        "frame_iou": 0.7797124625092376,
+        "changed": 53,
+        "improved": 22,
+        "harmed": 29,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": -0.5519342859204523
+      },
+      "calibration": {
+        "frame_iou": 0.8055945136828693,
+        "changed": 42,
+        "improved": 14,
+        "harmed": 27,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -2.0689472374518347
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e5.pt",
+      "checkpoint_sha256": "376a7c95d1e4f6515b87d55dd9b9b7d1127074bf1a5d75722f774d3731ed8a80"
+    },
+    {
+      "name": "omama_adapter_e5_m0.05",
+      "family": "omama_metric_adapter",
+      "parameter": 0.05,
+      "screen": {
+        "frame_iou": 0.7857538901871812,
+        "changed": 14,
+        "improved": 9,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.05220848187390548
+      },
+      "calibration": {
+        "frame_iou": 0.8181584441510494,
+        "changed": 13,
+        "improved": 2,
+        "harmed": 10,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.8125541906338185
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e5.pt",
+      "checkpoint_sha256": "376a7c95d1e4f6515b87d55dd9b9b7d1127074bf1a5d75722f774d3731ed8a80"
+    },
+    {
+      "name": "omama_adapter_e5_m0.1",
+      "family": "omama_metric_adapter",
+      "parameter": 0.1,
+      "screen": {
+        "frame_iou": 0.7870430676403266,
+        "changed": 5,
+        "improved": 5,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.18112622718844396
+      },
+      "calibration": {
+        "frame_iou": 0.8218099787074606,
+        "changed": 4,
+        "improved": 0,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.44740073499269783
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e5.pt",
+      "checkpoint_sha256": "376a7c95d1e4f6515b87d55dd9b9b7d1127074bf1a5d75722f774d3731ed8a80"
+    },
+    {
+      "name": "omama_adapter_e15_m0.02",
+      "family": "omama_metric_adapter",
+      "parameter": 0.02,
+      "screen": {
+        "frame_iou": 0.8002337086296798,
+        "changed": 47,
+        "improved": 33,
+        "harmed": 12,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 1.5001903261237626
+      },
+      "calibration": {
+        "frame_iou": 0.8072505900286462,
+        "changed": 46,
+        "improved": 14,
+        "harmed": 31,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -1.9033396028741434
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e15.pt",
+      "checkpoint_sha256": "36f677aa5b50690e7252a90c6049a9d34e5b4508c930c189b74763f5a78c371e"
+    },
+    {
+      "name": "omama_adapter_e15_m0.05",
+      "family": "omama_metric_adapter",
+      "parameter": 0.05,
+      "screen": {
+        "frame_iou": 0.7958677946908614,
+        "changed": 18,
+        "improved": 16,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 1.063598932241927
+      },
+      "calibration": {
+        "frame_iou": 0.816505503814551,
+        "changed": 15,
+        "improved": 3,
+        "harmed": 11,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.9778482242836617
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e15.pt",
+      "checkpoint_sha256": "36f677aa5b50690e7252a90c6049a9d34e5b4508c930c189b74763f5a78c371e"
+    },
+    {
+      "name": "omama_adapter_e15_m0.1",
+      "family": "omama_metric_adapter",
+      "parameter": 0.1,
+      "screen": {
+        "frame_iou": 0.7929399969982923,
+        "changed": 9,
+        "improved": 8,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 0.7708191629850147
+      },
+      "calibration": {
+        "frame_iou": 0.8247847625345457,
+        "changed": 2,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.14992235228419304
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e15.pt",
+      "checkpoint_sha256": "36f677aa5b50690e7252a90c6049a9d34e5b4508c930c189b74763f5a78c371e"
+    },
+    {
+      "name": "omama_adapter_e40_m0.02",
+      "family": "omama_metric_adapter",
+      "parameter": 0.02,
+      "screen": {
+        "frame_iou": 0.8060433416599254,
+        "changed": 46,
+        "improved": 39,
+        "harmed": 7,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 2.0811536291483246
+      },
+      "calibration": {
+        "frame_iou": 0.8032159688944982,
+        "changed": 56,
+        "improved": 14,
+        "harmed": 41,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -2.306801716288942
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e40.pt",
+      "checkpoint_sha256": "b10554a15bf85661668405023029f7a63e42a0e9bbeee249598137fc991ac07b"
+    },
+    {
+      "name": "omama_adapter_e40_m0.05",
+      "family": "omama_metric_adapter",
+      "parameter": 0.05,
+      "screen": {
+        "frame_iou": 0.8027803056093439,
+        "changed": 24,
+        "improved": 24,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 1.754850024090171
+      },
+      "calibration": {
+        "frame_iou": 0.8124925903277471,
+        "changed": 24,
+        "improved": 5,
+        "harmed": 18,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -1.3791395729640499
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e40.pt",
+      "checkpoint_sha256": "b10554a15bf85661668405023029f7a63e42a0e9bbeee249598137fc991ac07b"
+    },
+    {
+      "name": "omama_adapter_e40_m0.1",
+      "family": "omama_metric_adapter",
+      "parameter": 0.1,
+      "screen": {
+        "frame_iou": 0.7991728644753595,
+        "changed": 14,
+        "improved": 14,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 243,
+        "delta_pp": 1.3941059106917342
+      },
+      "calibration": {
+        "frame_iou": 0.8184694253703735,
+        "changed": 6,
+        "improved": 0,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 225,
+        "delta_pp": -0.7814560687014138
+      },
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/omama_adapter_e40.pt",
+      "checkpoint_sha256": "b10554a15bf85661668405023029f7a63e42a0e9bbeee249598137fc991ac07b"
+    }
+  ]
+}

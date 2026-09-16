@@ -29,6 +29,15 @@ def append(parts,root):
     p=r/'selection.json'
     if p.exists():
         a=json.loads(p.read_text());parts.append('训练内冻结选择：`'+a['selected']['name']+'`。')
+        selected=a['selected']
+        if selected.get('family')!='baseline':parts.append(f"筛查相对原一致性输出{selected['screen']['delta_pp']:+.4f}点，校准{selected['calibration']['delta_pp']:+.4f}点；校准替换{selected['calibration']['changed']}个对象，其中改善{selected['calibration']['improved']}、变差{selected['calibration']['harmed']}。这是训练内选择结果，不能据此宣称目标集稳定涨点。")
+    p=r/'model_search.json'
+    if p.exists():
+        search=json.loads(p.read_text())['candidates'];parts+=['','| 配置 | 筛查Δ最终 | 校准Δ最终 |','|---|---:|---:|']
+        wanted=('ridge10_t0.05','ridge100_t0.01','tree_t0.05','omama_adapter_e5_m0.1','omama_adapter_e15_m0.1','omama_adapter_e40_m0.1')
+        for v in search:
+            if v['name'] in wanted:parts.append(f"| {v['name']} | {v['screen']['delta_pp']:+.4f} | {v['calibration']['delta_pp']:+.4f} |")
+        parts+=['','完整配置均在[model_search.json](../pccs_candidate_union_20260916/model_search.json)记录，以上是紧凑摘录。O-MaMa残差投影共640个优化步，loss有限、零初始化恒等检查通过，但所有预设投影配置在校准集均下降；筛查上涨、校准下降呈现过拟合信号。因此本轮不将该投影送入目标测试。选中的ridge质量排序器也未经过目标集重新拟合。']
     p=r/'exo2exo_results.json'
     if p.exists():
         a=json.loads(p.read_text());parts += ['', '| Exo→Exo方法 | Frame IoU |', '|---|---:|']

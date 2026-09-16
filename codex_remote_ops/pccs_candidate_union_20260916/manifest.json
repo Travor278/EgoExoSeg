@@ -67,6 +67,12 @@
         "f01b21c4-8023-4800-b3b2-3326a3c164f2"
       ],
       "annotation_sha256": "dff5cfd66d54bc995bc1d4eecc63343793612ee809441dcd418db337c5bb7240"
+    },
+    "exo2exo": {
+      "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_corrected_exoexo_20260916/full_annotation.json",
+      "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/exo2exo_runtime.yaml",
+      "pairs": 1094,
+      "objects": 1094
     }
   },
   "source_bank": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",

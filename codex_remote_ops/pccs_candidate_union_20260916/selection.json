@@ -1,0 +1,60 @@
+{
+  "selected": {
+    "name": "ridge10_t0.05",
+    "family": "quality_ranker",
+    "parameter": 0.05,
+    "screen": {
+      "frame_iou": 0.7875793996972877,
+      "changed": 28,
+      "improved": 22,
+      "harmed": 6,
+      "pairs": 128,
+      "objects": 243,
+      "delta_pp": 0.23475943288455703
+    },
+    "calibration": {
+      "frame_iou": 0.828362361205897,
+      "changed": 24,
+      "improved": 16,
+      "harmed": 8,
+      "pairs": 128,
+      "objects": 225,
+      "delta_pp": 0.20783751485093926
+    },
+    "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge10.joblib",
+    "checkpoint_sha256": "75519f829dc7f34e55f55a8942cf3907bca83cee79293f9e9abe2bba9c4a8b10"
+  },
+  "eligible_names": [
+    "ridge10_t0.01",
+    "ridge10_t0.03",
+    "ridge10_t0.05",
+    "ridge100_t0.01"
+  ],
+  "baseline": {
+    "screen": {
+      "frame_iou": 0.7852318053684422,
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0,
+      "pairs": 128,
+      "objects": 243
+    },
+    "calibration": {
+      "frame_iou": 0.8262839860573876,
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0,
+      "pairs": 128,
+      "objects": 225
+    }
+  },
+  "rule": "positive final frameIoU on screen and calibration; maximize calibration; no target labels used",
+  "adapter_rank": 8,
+  "adapter_epochs": [
+    5,
+    15,
+    40
+  ],
+  "V2SAM_prompt_projection_finetuned": false,
+  "test_fitting": false
+}

@@ -132,18 +132,33 @@
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/manifest.json",
-      "bytes": 5888,
-      "sha256": "d97b13fb8c9ce685b93377c5bd584e16d5afbc795b1eac77f4564ca22f6872e6"
+      "bytes": 6246,
+      "sha256": "582fb8c2b28082c754fa0485d3d9f259aa3690ac1ee74993c84db2f667e1256f"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/status.json",
-      "bytes": 321,
-      "sha256": "70a735b7a5af533623d3a1769e5e80571f4bcb54a6c6c00fc5c9f01fa80b0c6d"
+      "bytes": 378,
+      "sha256": "9513cc81750ecc9bcaefadb5f39ab23db93e39c90e783c0960d968cecb45ba2c"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/stage1_results.json",
       "bytes": 1045,
       "sha256": "b1f5838de0f80f111c6b4dd9298efeb2a34c69d4e5e311e7682410ff2daed5de"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/selection.json",
+      "bytes": 1468,
+      "sha256": "7bfa319e7f0345d067abfa561c92a70b7a49f7a9008ad3a04b54de634429782f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/model_search.json",
+      "bytes": 15987,
+      "sha256": "a55b68e4d7f58fac9598f220d0900e95e7eddea68c18872d1e4cda635087931e"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/adapter_training_receipt.json",
+      "bytes": 113,
+      "sha256": "86eec91599b4121b42a64f187603f8f2eb5df3bd3c9d5c2c14fa4324227ed963"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/gpu_preflight.txt",
@@ -152,8 +167,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/controller.log",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 31,
+      "sha256": "bda54eae2ca22c3e48e3c3e023ca4307960a5ef5c5e4951e1a82fc71f0d1decf"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/smoke_isolation.json",
@@ -172,8 +187,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/controller.log",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 31,
+      "sha256": "bda54eae2ca22c3e48e3c3e023ca4307960a5ef5c5e4951e1a82fc71f0d1decf"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/dataset_calibration.log",
@@ -184,6 +199,11 @@
       "path": "codex_remote_ops/pccs_candidate_union_20260916/dataset_screen.log",
       "bytes": 790,
       "sha256": "c69920ff67b45732c40188fa0e4878b94f2fbfe69b7f14d5bf9367293a7247ad"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/fit_quality_and_omama.log",
+      "bytes": 217,
+      "sha256": "8ac86a6a40ade442fa8974935422c0ca72853056870d65dbf67143b7534002a5"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/precision_probe.log",
@@ -301,14 +321,19 @@
       "sha256": "a1abd1ded44b146e9018bafa98711af5d8c178132e692a80bb869adb8e214123"
     },
     {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/datasets/calibration/receipt.json",
+      "bytes": 199,
+      "sha256": "26f7d1ff8e67c8f69da3afde1c414cc9e053fdacc92a2c5136ca9be711641826"
+    },
+    {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/datasets/screen/receipt.json",
       "bytes": 199,
       "sha256": "61fec778a9b032d1fd77f38f9a35127e22e3cb3994b8025ca8f42956d84c00e1"
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "bytes": 27796,
-      "sha256": "d8451ca0ccfdd898dcb4a39760382c88ad9f1f611b4f7c64fab4ad373069c744"
+      "bytes": 28777,
+      "sha256": "b3878a5174da61ee6fe0da3acef66d22d32ae723c08080c4c4530b4ef7cd3384"
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
@@ -317,8 +342,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_union_report.py",
-      "bytes": 5344,
-      "sha256": "46240484ff63950c5e66906ae347dd952619316d1cd4fc7eacd8ba1bb79a934d"
+      "bytes": 6719,
+      "sha256": "1de46111ae3e66a05b38bc75f12dd0f142ad226b4b3e99af2be0dc276407e966"
     }
   ],
   "excludes": "raw masks/images, browser state, credentials, encoded bootstrap transport"
