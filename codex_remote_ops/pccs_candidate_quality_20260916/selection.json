@@ -1,0 +1,7 @@
+{
+  "selected": "baseline",
+  "eligible": [],
+  "rule": "positive oracle on screen+calibration and positive calibration consensus; maximize calibration consensus",
+  "test_labels_used": false,
+  "new_expert_training": false
+}

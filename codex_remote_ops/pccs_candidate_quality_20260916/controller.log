@@ -2,3 +2,6 @@ NUMPY_TESTS_PASS
 TORCH_WEIGHTED_POOL_TESTS_PASS
 PREPARE_OK
 PHASE_COMPLETE smoke
+PHASE_COMPLETE screen
+PHASE_COMPLETE calibration
+CALIBRATION_SELECTED {"selected": "baseline", "eligible": [], "rule": "positive oracle on screen+calibration and positive calibration consensus; maximize calibration consensus", "test_labels_used": false, "new_expert_training": false}

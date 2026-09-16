@@ -121,13 +121,23 @@ if (Q/'PLAN.md').exists():
  '','分支隔离门要求：只改池化时Anchor不变；只改点时Visual不变；组合方案的对应分支与单项方案一致。不通过即停止。每个arm使用自己的新候选，并比较arm之间的同名最终选择方法；不能把某arm的新方法分数减去异次旧基线。']
  armnames={'baseline':'原始候选','weighted_pool':'概率加权池化','reliable_points':'可靠多点','both':'两者结合'}
  found=False
- for phase,title in [('screen','训练内筛查'),('calibration','训练内校准'),('exo2exo','预选方案 Exo→Exo 确认')]:
+ for section_index,(phase,title) in enumerate([('screen','训练内筛查'),('calibration','训练内校准'),('exo2exo','预选方案 Exo→Exo 确认')],1):
   p=Q/(phase+'_summary.json')
   if not p.exists():continue
-  a=load(p);found=True;parts+=['',f'### 8.{phase} {title}','', '| 候选方案 | Oracle IoU | 原PCCS IoU | 几何一致性 IoU | 多点对象数 |','|---|---:|---:|---:|---:|']
+  a=load(p);found=True;parts+=['',f'### 8.{section_index} {title}','', '| 候选方案 | Oracle IoU | 原PCCS IoU | 几何一致性 IoU | 多点对象数 |','|---|---:|---:|---:|---:|']
   for arm,v in a['arms'].items():parts.append(f"| {armnames[arm]} | {v['frame']['oracle'][0]*100:.4f} | {v['frame']['pccs'][0]*100:.4f} | {v['frame']['consensus'][0]*100:.4f} | {v['multipoint_objects']} |")
  if not found:parts+=['','**当前结果待定，尚不宣称这两项改动产生收益。**']
- if (Q/'selection.json').exists():parts+=['','训练内选择结果：`'+load(Q/'selection.json')['selected']+'`；规则按预注册计划执行。']
+ if (Q/'selection.json').exists():
+  selection=load(Q/'selection.json');parts+=['','训练内选择结果：`'+selection['selected']+'`；规则按预注册计划执行。']
+  if selection['selected']=='baseline':
+   parts+=['','**本轮三个改动方案均未通过晋级条件，保留原始候选，未启动Exo→Exo目标测试。** 这是冻结权重下的直接替换实验负结果，不是任务运行失败，也不代表已证明所有概率池化或多点方法无效。',
+    '','在筛查／校准两个阶段，池化、点及组合的候选oracle均下降；因此损失已经出现在候选生成，而不只是最终选择器没有选好。直接把原随机非零区域采样替换为稠密概率平均，同时改变了特征聚合分布；原训练网络可能已经适应旧分布，但该解释尚需描述符分析或轻量适配验证。',
+    '','多点实际在筛查55/243对象、校准55/225对象启用，最多3点，其余回退单点。双向最近邻和间隔筛选并未在本轮转化成更好的候选；不能把特征匹配的“可靠”直接等同于正确的分割提示。所有跨arm隔离门mismatch=0。',
+    '','### 8.3 校准集相对原始候选的变化','', '| 改动 | ΔOracle IoU（点） | Δ最终一致性 IoU（点） | 最终变化95%序列区间 |','|---|---:|---:|---|']
+   c=load(Q/'calibration_summary.json')
+   for arm,values in c['comparisons'].items():
+    ci=values['consensus']['take_bootstrap_95ci_pp'];parts.append(f"| {armnames[arm]} | {values['oracle']['delta_iou_pp']:.4f} | {values['consensus']['delta_iou_pp']:.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
+   parts+=['','下一步如继续，应优先做较小的分布适配：保留原池化并加入小比例加权分量，在训练／校准上选择混合强度；或只微调prompt投影。多点可改成保留原单点、谨慎追加额外点并做质量检查。以上仅为基于负结果的新假设，**尚未测试**，不在本轮追加搜索或用目标测试标签选参数。']
  parts+=['','本节候选质量实验使用5000次序列bootstrap；前面的选择器实验使用10000次。实现与完整回执：[候选质量实验计划](../pccs_candidate_quality_20260916/PLAN.md)。早期选择器实验的涨点不能归因于本节新增候选改动。']
 report.write_text('\n'.join(parts)+'\n',encoding='utf8');assert report.read_text(encoding='utf8').count('```')%2==0
 print(json.dumps({'report':str(report),'characters':len(report.read_text(encoding='utf8')),'completed_sections':list(completed),'sha256':hashlib.sha256(report.read_bytes()).hexdigest()},ensure_ascii=False))

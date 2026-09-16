@@ -16,6 +16,8 @@ The full Exo→Ego benchmark includes earlier exploratory/confirmation test samp
 
 Detailed Chinese method description, equations, feature table, data boundaries and all metrics: [FINAL_REPORT.md](../pccs_gain_full_20260915/FINAL_REPORT.md).
 
+Latest candidate-generation ablation: direct probability-weighted pooling, reliable multipoint prompting and their combination all failed the training-internal screening/calibration criterion. No Exo2Exo test was launched for these new arms. Preserve the positive results of the earlier frozen selection methods separately from this negative finding. [Plan and code](../pccs_candidate_quality_20260916/PLAN.md); [master report§8](../pccs_gain_full_20260915/FINAL_REPORT.md).
+
 The latest corrected-weight experiment has a prespecified primary comparison: native-aspect O-MaMa with cosine margin0.05. Its positive CI supports gain on this20-take benchmark. Geometric consensus is a secondary exploration (42.5829%, +4.0572pp); superiority over the other methods has not been independently established. See the [pipeline audit](../pccs_pipeline_audit_20260916/AUDIT_REPORT.md) and [corrected-weight results](../pccs_corrected_exoexo_20260916/FINAL_REPORT.md). The earlier rows retain author-checkpoint controls and must not be mixed with this baseline.
 
 The corrected-weight Exo→Ego rerun is also complete:46,515 pairs109,253 objects295 takes, all ranks zero skipped. Its prespecified primary consensus rule gains2.7388pp; the old learned-gate transfer control gains3.2018pp (57.1015%). All five methods and both directions are consolidated in the **single [master report](../pccs_gain_full_20260915/FINAL_REPORT.md)**. H100 resources have been released. Do not interpret secondary comparisons as independently validated winners.

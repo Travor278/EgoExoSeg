@@ -1,0 +1,18 @@
+{
+  "state": "passed",
+  "outcome": "no_candidate_passed_preregistered_training_selection",
+  "target_exo2exo_run": false,
+  "screen_pairs": 128,
+  "screen_objects": 243,
+  "calibration_pairs": 128,
+  "calibration_objects": 225,
+  "all_isolation_checks_passed": true,
+  "multipoint_screen_objects": 55,
+  "multipoint_calibration_objects": 55,
+  "occupied_nodes": 0,
+  "summary_sha256": {
+    "smoke": "88b429316df11c01b4c4e134f1333854b532a51cb0da0c3a19e05cff9d1ff005",
+    "screen": "4b03abef9fcc186857cca56733f539c8a8a9d06297f5d04be6b5241285893a89",
+    "calibration": "662fb6df7b0c22ff7c625cddc59f80a0e8abc62ce4e32d6a95bbd569f122f6a7"
+  }
+}
