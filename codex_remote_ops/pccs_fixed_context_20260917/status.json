@@ -1,1 +1,1 @@
-{"state": "failed", "error": "AssertionError()", "updated_at": 1789584939.8082993}
+{"state": "running", "phase": "exo2exo", "ranks": [{"state": "initializing"}, {"state": "initializing"}, {"state": "initializing"}, {"state": "initializing"}], "eta_seconds": null, "updated_at": 1789585806.7181823}

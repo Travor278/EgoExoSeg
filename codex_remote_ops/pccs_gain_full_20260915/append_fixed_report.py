@@ -21,6 +21,14 @@ def append_fixed(parts,root):
         for name,v in data['methods'].items():
             ci=v['ci95_pp'];parts.append(f"| {name} | {v['frame'][0]*100:.4f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
         v=data['vs_frozen_cycle']['primary'];ci=v['ci95_pp'];parts += ['',f"本轮主方案相对上一轮冻结cycle额外变化：{v['delta_pp']:+.4f}点，区间[{ci[0]:.4f}, {ci[1]:.4f}]。区分总增益和context的额外贡献，不能将原cycle本已有收益算作新增context收益。"]
+        comparisons=r/'context_comparisons.json'
+        if comparisons.exists():
+            c=json.loads(comparisons.read_text())['phases'].get(phase,{})
+            parts += ['', '| 配对的额外贡献/几何比较 | IoU变化（点） | 95%区间 |', '|---|---:|---|']
+            for a,b,label in [('px100_box_matched','cycle_matched','原生100px整框 − 同阈值cycle'),('om100_box_matched','cycle_matched','canonical100px整框 − 同阈值cycle'),('primary','cycle_matched','预选150px整框 − 同阈值cycle'),('primary','wrong_context_primary','预选方案 − 错位邻域'),('px100_box_matched','px100_ring_matched','100px整框 − 100px环'),('px100_box_matched','scale15_box_matched','100px整框 − 1.5倍整框'),('px100_box_matched','scale20_box_matched','100px整框 − 2倍整框'),('px100_ring_matched','scale20_ring_matched','100px环 − 2倍环')]:
+                if a+' minus '+b in c:
+                    v=c[a+' minus '+b];ci=v['ci95_pp'];parts.append(f"| {label} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
+            parts += ['', '这些是描述性配对比较，不按目标数值重新选择模型。IoU点估计略高但区间跨零时，不能声称该区域定义已带来稳定额外收益。']
     if not (r/'exo2ego_results.json').exists():parts += ['当前状态：任务已提交，尚无本轮目标结果；100像素优于倍率环是待验证假设。']
     if (r/'resource_release_r1.json').exists():parts += ['', '运行记录：R1完成8对Capture开关/strength0回退检查、384对TRAIN及128对校准，原生特征/候选/路由一致性通过。Exo→Ego首次误用TRAIN-only图片根目录，四个分片均在第一条预测前发生空图像列表错误；该次没有目标指标。失败日志已保留，节点归零。R2仅修复测试图片根目录，采用此前全量成功配置并逐文件预检；不重拟合、不改选已冻结模型或阈值。']
     if (r/'resource_release.json').exists():parts += ['资源释放证据已存于本实验resource_release.json。']

@@ -1,9 +1,0 @@
-DENSE_PHASE_COMPLETE smoke
-DENSE_PHASE_COMPLETE train
-DENSE_PHASE_COMPLETE calibration
-Traceback (most recent call last):
-  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/controller.py", line 39, in <module>
-    phase_run('exo2ego');read('exo2ego');run('evaluate_exoego.py')
-  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/controller.py", line 23, in phase_run
-    assert all(p.returncode==0 for p in children)
-AssertionError

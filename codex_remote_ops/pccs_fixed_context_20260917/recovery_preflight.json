@@ -1,0 +1,27 @@
+{
+  "cause": "Exo2Ego reused TRAIN-only images root; all ranks failed before first prediction",
+  "change": "Only test image-root corrected to previously successful full-test configuration; assert all files exist before model initialization",
+  "checks": [
+    {
+      "image_root": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test",
+      "checked_images": 256,
+      "missing": 0
+    },
+    {
+      "image_root": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test",
+      "checked_images": 256,
+      "missing": 0
+    },
+    {
+      "image_root": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test",
+      "checked_images": 256,
+      "missing": 0
+    },
+    {
+      "image_root": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test",
+      "checked_images": 256,
+      "missing": 0
+    }
+  ],
+  "frozen_selection_sha256": "a75017d84388821a1b76c7e0f5c85202e1dd84b5c9d49ef170f948f2d92a3bc7"
+}

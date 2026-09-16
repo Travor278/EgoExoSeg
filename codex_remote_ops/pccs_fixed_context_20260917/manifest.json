@@ -128,6 +128,38 @@
       ],
       "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
       "reference_phase": "smoke"
+    },
+    "exo2exo": {
+      "pairs": 1094,
+      "objects": 1094,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/exo2exo_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/exo2exo_rank0.yaml",
+          "pairs": 274,
+          "objects": 274
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/exo2exo_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/exo2exo_rank1.yaml",
+          "pairs": 274,
+          "objects": 274
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/exo2exo_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/exo2exo_rank2.yaml",
+          "pairs": 273,
+          "objects": 273
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/exo2exo_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917/exo2exo_rank3.yaml",
+          "pairs": 273,
+          "objects": 273
+        }
+      ],
+      "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916",
+      "reference_phase": "exo2exo"
     }
   },
   "assets": {
@@ -275,5 +307,32 @@
     "native_bridge.py": "19fee16a7f0ce7a59352e8c4e2e7f6df52a5765632d6a7b2ab691c79f0353929",
     "policies.py": "68abadcd7855b025fe6bc7f3cf3812eae13438f9f5da6325fcf0ccbf2f13af56",
     "code/projects/v2sam_pccs/evaluation/pccs_metric.py": "b83884ec4660e1a5ddad1be11640b3cf8dabe454759fecac7e2b096dd35f4edd"
+  },
+  "recovery": {
+    "cause": "Exo2Ego reused TRAIN-only images root; all ranks failed before first prediction",
+    "change": "Only test image-root corrected to previously successful full-test configuration; assert all files exist before model initialization",
+    "checks": [
+      {
+        "image_root": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test",
+        "checked_images": 256,
+        "missing": 0
+      },
+      {
+        "image_root": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test",
+        "checked_images": 256,
+        "missing": 0
+      },
+      {
+        "image_root": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test",
+        "checked_images": 256,
+        "missing": 0
+      },
+      {
+        "image_root": "/inspire/ssd/project/luojianlan/zhubingwen-253108120125/datasets/Ego-Exo4D-Relation-Test/work/yuqian_fu/Ego/data_segswap_test",
+        "checked_images": 256,
+        "missing": 0
+      }
+    ],
+    "frozen_selection_sha256": "a75017d84388821a1b76c7e0f5c85202e1dd84b5c9d49ef170f948f2d92a3bc7"
   }
 }
