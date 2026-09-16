@@ -1,0 +1,11 @@
+{
+  "state": "complete",
+  "coverage": "exact",
+  "pairs": 2,
+  "objects": 2,
+  "records_sha256": "2522ea3ffee9b5f3e2ac1c331bfbf073c69904f4a9dd8039e9ed5d5f3dc24ba8",
+  "cached_candidates": true,
+  "source_encoder_state_parity": true,
+  "source_roi_feature_parity": true,
+  "actual_bridge_and_label_counterfactual": false
+}

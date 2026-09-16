@@ -1,0 +1,32 @@
+{
+  "smoke": {
+    "objects": 8,
+    "pairs": 8,
+    "receipt_sha_and_coverage": "passed"
+  },
+  "cache_smoke": {
+    "objects": 8,
+    "pairs": 8,
+    "receipt_sha_and_coverage": "passed"
+  },
+  "train": {
+    "objects": 676,
+    "pairs": 384,
+    "receipt_sha_and_coverage": "passed",
+    "global_evidence_and_candidate_parity": true
+  },
+  "calibration": {
+    "objects": 225,
+    "pairs": 128,
+    "receipt_sha_and_coverage": "passed",
+    "global_evidence_and_candidate_parity": true
+  },
+  "selection_sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+  "exo2exo": {
+    "objects": 1094,
+    "pairs": 1094,
+    "baseline_zero_iou_objects": 440,
+    "actual_interface_and_frame_aggregation": "passed",
+    "cached_candidates": true
+  }
+}

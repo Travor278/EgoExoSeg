@@ -1,0 +1,83 @@
+{
+  "scope": "Declared secondary variants; descriptive comparisons, no target selection or equivalence claim",
+  "phases": {
+    "exo2exo": {
+      "local20_matched minus frozen_cycle": {
+        "frame": [
+          0.42329160405975924,
+          0.4706955499742473,
+          0.5365703958421137,
+          0.09606601046640623
+        ],
+        "delta_pp": 0.993751592744345,
+        "ci95_pp": [
+          0.005595292387713738,
+          1.8593858517527095
+        ],
+        "changed": 108,
+        "improved": 53,
+        "harmed": 25,
+        "pairs": 1094,
+        "objects": 1094,
+        "takes": 20
+      },
+      "local20_matched minus primary": {
+        "frame": [
+          0.42329160405975924,
+          0.4706955499742473,
+          0.5365703958421137,
+          0.09606601046640623
+        ],
+        "delta_pp": 0.5603492382752719,
+        "ci95_pp": [
+          0.22993718616954473,
+          0.9479546654801589
+        ],
+        "changed": 56,
+        "improved": 18,
+        "harmed": 21,
+        "pairs": 1094,
+        "objects": 1094,
+        "takes": 20
+      },
+      "local20_matched minus omama_reference": {
+        "frame": [
+          0.42329160405975924,
+          0.4706955499742473,
+          0.5365703958421137,
+          0.09606601046640623
+        ],
+        "delta_pp": -0.06887928387135005,
+        "ci95_pp": [
+          -1.5764621433844974,
+          1.5526064361718064
+        ],
+        "changed": 279,
+        "improved": 67,
+        "harmed": 86,
+        "pairs": 1094,
+        "objects": 1094,
+        "takes": 20
+      },
+      "global_multiscale_matched minus frozen_cycle": {
+        "frame": [
+          0.4221164098914832,
+          0.468829515982234,
+          0.5339813415453324,
+          0.09752484687298137
+        ],
+        "delta_pp": 0.8762321759167385,
+        "ci95_pp": [
+          -0.4017784070308453,
+          1.8667199651344797
+        ],
+        "changed": 105,
+        "improved": 57,
+        "harmed": 23,
+        "pairs": 1094,
+        "objects": 1094,
+        "takes": 20
+      }
+    }
+  }
+}

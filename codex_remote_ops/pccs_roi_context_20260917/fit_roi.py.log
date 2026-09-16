@@ -1,0 +1,22 @@
+ROI_CALIBRATED global ridge10
+ROI_CALIBRATED global ridge100
+ROI_CALIBRATED global tree
+ROI_CALIBRATED local15 ridge10
+ROI_CALIBRATED local15 ridge100
+ROI_CALIBRATED local15 tree
+ROI_CALIBRATED local20 ridge10
+ROI_CALIBRATED local20 ridge100
+ROI_CALIBRATED local20 tree
+ROI_CALIBRATED object20 ridge10
+ROI_CALIBRATED object20 ridge100
+ROI_CALIBRATED object20 tree
+ROI_CALIBRATED global_local20 ridge10
+ROI_CALIBRATED global_local20 ridge100
+ROI_CALIBRATED global_local20 tree
+ROI_CALIBRATED global_object20 ridge10
+ROI_CALIBRATED global_object20 ridge100
+ROI_CALIBRATED global_object20 tree
+ROI_CALIBRATED global_multiscale ridge10
+ROI_CALIBRATED global_multiscale ridge100
+ROI_CALIBRATED global_multiscale tree
+ROI_SELECTION_FROZEN local15_ridge100_present_t0.05
