@@ -1,0 +1,25 @@
+{
+  "remote_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917",
+  "command_characters": 36987,
+  "files": {
+    "encoder_contract.py": "b40f18aa0f0d7391da6628003329bc3cf1436172817fdfd0b8cfcd45599facf8",
+    "roi_views.py": "8b04263f969b71187ded43c689b74dbb643021e803aaa64cd339385385f9cb8d",
+    "roi_evidence.py": "2322ab47bbb0c13d359d327d800dae63bf26433fd10425799f43279253f0b829",
+    "roi_policy.py": "53ce89220aff993e4e61790c332f89fa0ec2748488f753187fad1753198ae2d0",
+    "test_roi.py": "9177a1e263c71145f0534633c32fbee10f0fe8efd4e74047a823023fa7cdf1be",
+    "test_roi_policy.py": "2a9d31d13a1dd48426da11749b7d372b245b637a0342608a2b770849fdd236fc",
+    "dense_context.py": "5100a00155d9d2ca78693447a7f68d2dfe85fd2fbd7f837d0120e255eaf7492d",
+    "policies.py": "7c79f2bd3f97c92d0028d2c80af0b463943628629218c98735b30f9b02abf6c0",
+    "native_bridge.py": "7f868c7ddf3f2a7c1379a37de1534be89f2539230988a1c98e6cea1d0e9e771a",
+    "randomness.py": "5a03320b0a0de30fff180ebf0a5ceb5ab5de49f0d57609e4fd5ac49686676367",
+    "prepare.py": "d12da77e163528c5074ab2211cc2c7bf583e8f9c34588811cfb355f1d4124973",
+    "worker.py": "bcae7bdeb2b475361dedfb1d9d1b6b0e631e755c34ac32c00c731e855cdfba3d",
+    "cached_worker.py": "6b124bfe64490a1f6be168f2aadf4023e8aff7c92d184fcb19becbe41fc16a50",
+    "data_utils.py": "a4c6cdb2986d6630a77337cedd401ddbd3953c963cca0f5646d72c0be0cbfcf4",
+    "fit_roi.py": "c4fdbb4a8713eea5ebc24553d4ca7635d1f3eaf1c0e44c73b1b228b896201850",
+    "evaluate.py": "6d1e739eb752c41cd81b762b5bde4b648ecce4f4ab3e8337364a5367de0bc746",
+    "evaluate_exoego.py": "56b7069ffe7df5534ed7f2563b0a0fa2533fd9b2228a92416bd0f1f0dd4623c4",
+    "controller.py": "9c77200ab582ee6b5c5243428ffd6e2473a1847ce59a9f98bfb5687f83bd7783",
+    "PLAN.md": "17ff62af57a2456cbc051c7cf85924234c63dc4bf334eee9d12d0ee949718130"
+  }
+}

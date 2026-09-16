@@ -15,7 +15,7 @@ def crop_view(image,mask,scale=2.,object_only=False):
     cm=m[top:top+side,left:left+side].copy();assert int(cm.sum())==int(m.sum()),'Crop truncated foreground'
     view=image.crop(box)
     if object_only:
-        pixels=np.asarray(view).copy();pixels[cm==0]=np.asarray([123,116,103],dtype=np.uint8);view=Image.fromarray(pixels)
+        pixels=np.asarray(view).copy();pixels[cm==0]=np.asarray([124,116,104],dtype=np.uint8);view=Image.fromarray(pixels)
     return {'image':view,'mask':cm,'box':box,'effective_scale':side/extent,'object_only':object_only,'original_hw':(h,w)}
 
 def encode_views(matcher,views,batch_size=4):

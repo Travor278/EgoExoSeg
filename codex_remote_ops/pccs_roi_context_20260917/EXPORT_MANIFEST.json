@@ -1,0 +1,125 @@
+{
+  "files": [
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/encoder_contract.py",
+      "sha256": "b40f18aa0f0d7391da6628003329bc3cf1436172817fdfd0b8cfcd45599facf8",
+      "bytes": 730
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/roi_views.py",
+      "sha256": "8b04263f969b71187ded43c689b74dbb643021e803aaa64cd339385385f9cb8d",
+      "bytes": 1851
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/roi_evidence.py",
+      "sha256": "2322ab47bbb0c13d359d327d800dae63bf26433fd10425799f43279253f0b829",
+      "bytes": 3194
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/roi_policy.py",
+      "sha256": "53ce89220aff993e4e61790c332f89fa0ec2748488f753187fad1753198ae2d0",
+      "bytes": 1518
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/test_roi.py",
+      "sha256": "9177a1e263c71145f0534633c32fbee10f0fe8efd4e74047a823023fa7cdf1be",
+      "bytes": 698
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/test_roi_policy.py",
+      "sha256": "2a9d31d13a1dd48426da11749b7d372b245b637a0342608a2b770849fdd236fc",
+      "bytes": 948
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/dense_context.py",
+      "sha256": "5100a00155d9d2ca78693447a7f68d2dfe85fd2fbd7f837d0120e255eaf7492d",
+      "bytes": 4635
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/policies.py",
+      "sha256": "7c79f2bd3f97c92d0028d2c80af0b463943628629218c98735b30f9b02abf6c0",
+      "bytes": 3007
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/native_bridge.py",
+      "sha256": "7f868c7ddf3f2a7c1379a37de1534be89f2539230988a1c98e6cea1d0e9e771a",
+      "bytes": 1945
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/randomness.py",
+      "sha256": "5a03320b0a0de30fff180ebf0a5ceb5ab5de49f0d57609e4fd5ac49686676367",
+      "bytes": 249
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/prepare.py",
+      "sha256": "d12da77e163528c5074ab2211cc2c7bf583e8f9c34588811cfb355f1d4124973",
+      "bytes": 4496
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/worker.py",
+      "sha256": "bcae7bdeb2b475361dedfb1d9d1b6b0e631e755c34ac32c00c731e855cdfba3d",
+      "bytes": 14762
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/cached_worker.py",
+      "sha256": "6b124bfe64490a1f6be168f2aadf4023e8aff7c92d184fcb19becbe41fc16a50",
+      "bytes": 7112
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/data_utils.py",
+      "sha256": "a4c6cdb2986d6630a77337cedd401ddbd3953c963cca0f5646d72c0be0cbfcf4",
+      "bytes": 2188
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/fit_roi.py",
+      "sha256": "c4fdbb4a8713eea5ebc24553d4ca7635d1f3eaf1c0e44c73b1b228b896201850",
+      "bytes": 4429
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/evaluate.py",
+      "sha256": "6d1e739eb752c41cd81b762b5bde4b648ecce4f4ab3e8337364a5367de0bc746",
+      "bytes": 3627
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/evaluate_exoego.py",
+      "sha256": "56b7069ffe7df5534ed7f2563b0a0fa2533fd9b2228a92416bd0f1f0dd4623c4",
+      "bytes": 66
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/controller.py",
+      "sha256": "9c77200ab582ee6b5c5243428ffd6e2473a1847ce59a9f98bfb5687f83bd7783",
+      "bytes": 3744
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/PLAN.md",
+      "sha256": "17ff62af57a2456cbc051c7cf85924234c63dc4bf334eee9d12d0ee949718130",
+      "bytes": 6625
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/job_receipt.json",
+      "sha256": "d19bda8df1640838a726004b591aafd8ac965840020258b4056864ab9ac3d14b",
+      "bytes": 440
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/capsule_manifest.json",
+      "sha256": "3998c627d4fd33d531a1f2d5d6804b639d00a9cf34f71ab6455621ca76bd4606",
+      "bytes": 1888
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "sha256": "3e76de8af584f08c5cd93835d03fb733ed9887ee5721f35ec3982611222baa49",
+      "bytes": 58661
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
+      "sha256": "c6cdf3036f3333f976a03ed093f0cd504a082e7d968b7f3de8176536c8d93e70",
+      "bytes": 29227
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/append_roi_report.py",
+      "sha256": "2086b750ce9e7763583b4e34fd8b5d53ebd86349d92be0545560a5a4ff369cbb",
+      "bytes": 3999
+    }
+  ],
+  "excludes": "credentials/browser state/command transport/dependencies/raw annotations/images/masks/dense feature tensors"
+}

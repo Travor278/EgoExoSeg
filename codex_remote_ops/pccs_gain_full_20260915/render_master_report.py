@@ -162,5 +162,7 @@ from append_dense_report import append_dense
 append_dense(parts,O)
 from append_fixed_report import append_fixed
 append_fixed(parts,O)
+from append_roi_report import append_roi
+append_roi(parts,O)
 report.write_text('\n'.join(parts)+'\n',encoding='utf8');assert report.read_text(encoding='utf8').count('```')%2==0
 print(json.dumps({'report':str(report),'characters':len(report.read_text(encoding='utf8')),'completed_sections':list(completed),'sha256':hashlib.sha256(report.read_bytes()).hexdigest()},ensure_ascii=False))
