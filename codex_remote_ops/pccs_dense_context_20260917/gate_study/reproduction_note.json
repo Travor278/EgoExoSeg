@@ -1,0 +1,5 @@
+{
+  "first_attempt": "Stopped before selection; all calibration scores reproduced, OOF differed because freshly generated GroupKFold assignments differed across local/remote environments",
+  "correction": "Replay exact persisted R1 take folds rather than regenerate splits",
+  "tolerance_unchanged_pp": 1e-06
+}

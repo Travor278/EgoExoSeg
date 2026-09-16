@@ -1,0 +1,2542 @@
+{
+  "candidates": [
+    {
+      "name": "dominance_cycle_control_ridge10_t0.03",
+      "gate": "dominance",
+      "group": "cycle_control",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7832195317623198,
+          0.832790926211028,
+          0.8568083294546404,
+          0.028465393389526496
+        ],
+        "delta_pp": 0.2570293198934653,
+        "ci95_pp": [
+          -0.652034959592533,
+          1.0612768960757721
+        ],
+        "changed": 27,
+        "improved": 18,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158496616825384,
+          0.8640009544103425,
+          0.8861918452724675,
+          0.029085715446148904
+        ],
+        "delta_pp": 0.35640424738327664,
+        "ci95_pp": [
+          -0.048433500342071056,
+          0.9336435021832576
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_control_ridge10_t0.05",
+      "gate": "dominance",
+      "group": "cycle_control",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7831830220547498,
+          0.8327715006459616,
+          0.8569576480588975,
+          0.02843445131586735
+        ],
+        "delta_pp": 0.2533783491364577,
+        "ci95_pp": [
+          -0.6575390907366656,
+          1.0578262817968302
+        ],
+        "changed": 24,
+        "improved": 16,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8156836049582731,
+          0.8634713114484232,
+          0.8857079507661441,
+          0.02909003315388305
+        ],
+        "delta_pp": 0.3397985749567548,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9012532187625766
+        ],
+        "changed": 5,
+        "improved": 4,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_cycle_control_ridge10_t0.03",
+      "gate": "positive_lift",
+      "group": "cycle_control",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7884612035032369,
+          0.8393088509342229,
+          0.8624928522182321,
+          0.025652265143031414
+        ],
+        "delta_pp": 0.7811964939851763,
+        "ci95_pp": [
+          -0.29201203463423436,
+          1.8046317886489645
+        ],
+        "changed": 187,
+        "improved": 63,
+        "harmed": 123,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8156013246286117,
+          0.8655975550696894,
+          0.8902202190303553,
+          0.022329071874892838
+        ],
+        "delta_pp": 0.3315705419906105,
+        "ci95_pp": [
+          -0.2018805655146328,
+          0.9509624882921344
+        ],
+        "changed": 61,
+        "improved": 17,
+        "harmed": 44,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_cycle_control_ridge10_t0.05",
+      "gate": "positive_lift",
+      "group": "cycle_control",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7888257585379104,
+          0.8395375408022354,
+          0.8632948203411136,
+          0.02558885024160115
+        ],
+        "delta_pp": 0.817651997452534,
+        "ci95_pp": [
+          -0.2603717302379463,
+          1.8472025660735703
+        ],
+        "changed": 149,
+        "improved": 51,
+        "harmed": 97,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8161372559038379,
+          0.8654323512040719,
+          0.890170822114911,
+          0.022316700202873862
+        ],
+        "delta_pp": 0.38516366951322795,
+        "ci95_pp": [
+          -0.0678334756133457,
+          0.9129345114342864
+        ],
+        "changed": 47,
+        "improved": 15,
+        "harmed": 32,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_cycle_control_ridge10_t0.03",
+      "gate": "relative_lift",
+      "group": "cycle_control",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7878014182623906,
+          0.8379112721183479,
+          0.8619109948621634,
+          0.02639482194704465
+        ],
+        "delta_pp": 0.7152179699005501,
+        "ci95_pp": [
+          -0.2870087023721783,
+          1.66734369833067
+        ],
+        "changed": 18,
+        "improved": 12,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8166042281673678,
+          0.8648198054067809,
+          0.8887010131677686,
+          0.023246467037392197
+        ],
+        "delta_pp": 0.43186089586621773,
+        "ci95_pp": [
+          0.01712522633897619,
+          1.0065261961426586
+        ],
+        "changed": 7,
+        "improved": 6,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_cycle_control_ridge10_t0.05",
+      "gate": "relative_lift",
+      "group": "cycle_control",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7878014182623906,
+          0.8379112721183479,
+          0.8619109948621634,
+          0.02639482194704465
+        ],
+        "delta_pp": 0.7152179699005501,
+        "ci95_pp": [
+          -0.2870087023721783,
+          1.66734369833067
+        ],
+        "changed": 18,
+        "improved": 12,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8159756994699515,
+          0.8640344459459204,
+          0.888199496480994,
+          0.0232543245510694
+        ],
+        "delta_pp": 0.36900802612459904,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.94367332640104
+        ],
+        "changed": 6,
+        "improved": 5,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_control_ridge100_t0.03",
+      "gate": "dominance",
+      "group": "cycle_control",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7820706198999186,
+          0.8316726211105895,
+          0.8562401738296415,
+          0.02846432128539675
+        ],
+        "delta_pp": 0.14213813365333605,
+        "ci95_pp": [
+          -0.7514990765630498,
+          0.9116965025297961
+        ],
+        "changed": 24,
+        "improved": 15,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.815562014276899,
+          0.8634064886032622,
+          0.885690328585693,
+          0.029088264177866766
+        ],
+        "delta_pp": 0.3276395068193475,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.8806790458038449
+        ],
+        "changed": 6,
+        "improved": 4,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_control_ridge100_t0.05",
+      "gate": "dominance",
+      "group": "cycle_control",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7819462641218204,
+          0.8315905074081185,
+          0.8563377250216155,
+          0.028433484717580365
+        ],
+        "delta_pp": 0.1297025558435254,
+        "ci95_pp": [
+          -0.7613309634956142,
+          0.8969292773528849
+        ],
+        "changed": 21,
+        "improved": 13,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8143817251965325,
+          0.8626760092343222,
+          0.884594515547958,
+          0.029176366330424454
+        ],
+        "delta_pp": 0.2096105987826983,
+        "ci95_pp": [
+          -0.10659657418727875,
+          0.7354283705353737
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_cycle_control_ridge100_t0.03",
+      "gate": "positive_lift",
+      "group": "cycle_control",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.787136628446802,
+          0.8377575048320204,
+          0.8613262999273607,
+          0.0260923892241111
+        ],
+        "delta_pp": 0.6487389883416957,
+        "ci95_pp": [
+          -0.4291688413993849,
+          1.654843147971961
+        ],
+        "changed": 171,
+        "improved": 59,
+        "harmed": 111,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150321939678785,
+          0.8643905093944341,
+          0.887905663223343,
+          0.024054495578905818
+        ],
+        "delta_pp": 0.27465747591728956,
+        "ci95_pp": [
+          -0.1750685987256778,
+          0.7852372124034444
+        ],
+        "changed": 56,
+        "improved": 14,
+        "harmed": 42,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_cycle_control_ridge100_t0.05",
+      "gate": "positive_lift",
+      "group": "cycle_control",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7878473406105111,
+          0.8384984607262123,
+          0.8628266679939226,
+          0.02559939122455299
+        ],
+        "delta_pp": 0.7198102047126063,
+        "ci95_pp": [
+          -0.36885538530259493,
+          1.7556633061614473
+        ],
+        "changed": 128,
+        "improved": 46,
+        "harmed": 81,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814934813453389,
+          0.8646881595072046,
+          0.8891150493747318,
+          0.02240068006340729
+        ],
+        "delta_pp": 0.26491942446834094,
+        "ci95_pp": [
+          -0.13989647506969052,
+          0.7647912176180396
+        ],
+        "changed": 39,
+        "improved": 11,
+        "harmed": 28,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_cycle_control_ridge100_t0.03",
+      "gate": "relative_lift",
+      "group": "cycle_control",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7866801295536691,
+          0.8368130118348778,
+          0.8612548920243612,
+          0.026399950169757668
+        ],
+        "delta_pp": 0.6030890990283904,
+        "ci95_pp": [
+          -0.3947717190062071,
+          1.536751677659696
+        ],
+        "changed": 17,
+        "improved": 11,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8159756994699515,
+          0.8640344459459204,
+          0.888199496480994,
+          0.0232543245510694
+        ],
+        "delta_pp": 0.36900802612459904,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.94367332640104
+        ],
+        "changed": 6,
+        "improved": 5,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_cycle_control_ridge100_t0.05",
+      "gate": "relative_lift",
+      "group": "cycle_control",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7866801295536691,
+          0.8368130118348778,
+          0.8612548920243612,
+          0.026399950169757668
+        ],
+        "delta_pp": 0.6030890990283904,
+        "ci95_pp": [
+          -0.3947717190062071,
+          1.536751677659696
+        ],
+        "changed": 17,
+        "improved": 11,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814673819708211,
+          0.8632391437318194,
+          0.887086061262808,
+          0.023340657727610806
+        ],
+        "delta_pp": 0.23882004995054254,
+        "ci95_pp": [
+          -0.07738712301943451,
+          0.7646378217032179
+        ],
+        "changed": 3,
+        "improved": 2,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_control_tree_t0.03",
+      "gate": "dominance",
+      "group": "cycle_control",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7815751117193236,
+          0.8311877727588511,
+          0.8565452847804682,
+          0.02780616450112039
+        ],
+        "delta_pp": 0.09258731559384614,
+        "ci95_pp": [
+          -0.20378540890912214,
+          0.43432318023405964
+        ],
+        "changed": 11,
+        "improved": 7,
+        "harmed": 4,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029997997698810962
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 1,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_control_tree_t0.05",
+      "gate": "dominance",
+      "group": "cycle_control",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7822417937844778,
+          0.8318669035800296,
+          0.85726299347469,
+          0.02779137428032738
+        ],
+        "delta_pp": 0.15925552210925767,
+        "ci95_pp": [
+          -0.026572154213984806,
+          0.4610019545846929
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029997997698810962
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 1,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_cycle_control_tree_t0.03",
+      "gate": "positive_lift",
+      "group": "cycle_control",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7852540832218745,
+          0.8352599320321569,
+          0.8594117404225458,
+          0.0260788504880044
+        ],
+        "delta_pp": 0.4604844658489229,
+        "ci95_pp": [
+          -0.1482381631228943,
+          1.1842320285835128
+        ],
+        "changed": 58,
+        "improved": 25,
+        "harmed": 33,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148406638288481,
+          0.863650740917122,
+          0.8880911450899123,
+          0.023105779602965906
+        ],
+        "delta_pp": 0.2555044620142629,
+        "ci95_pp": [
+          -0.013366764299765533,
+          0.6214953891321782
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_cycle_control_tree_t0.05",
+      "gate": "positive_lift",
+      "group": "cycle_control",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7858162436930701,
+          0.8359324113009413,
+          0.8602728002472896,
+          0.025756414095339773
+        ],
+        "delta_pp": 0.5167005129684792,
+        "ci95_pp": [
+          -0.026289812942397676,
+          1.1983182591598556
+        ],
+        "changed": 30,
+        "improved": 12,
+        "harmed": 18,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148406638288481,
+          0.863650740917122,
+          0.8880911450899123,
+          0.023105779602965906
+        ],
+        "delta_pp": 0.2555044620142629,
+        "ci95_pp": [
+          -0.013366764299765533,
+          0.6214953891321782
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_cycle_control_tree_t0.03",
+      "gate": "relative_lift",
+      "group": "cycle_control",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7857818398516837,
+          0.8358993043053823,
+          0.8605377111370408,
+          0.025945872574624437
+        ],
+        "delta_pp": 0.513260128829845,
+        "ci95_pp": [
+          -0.01035483521668033,
+          1.1707340138233726
+        ],
+        "changed": 9,
+        "improved": 4,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8124685183215963,
+          0.8608384064760077,
+          0.8849456131008382,
+          0.02416228909599731
+        ],
+        "delta_pp": 0.018289911289078493,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.08762835350353271
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_cycle_control_tree_t0.05",
+      "gate": "relative_lift",
+      "group": "cycle_control",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7857504739939136,
+          0.8358813490270255,
+          0.8605315193911273,
+          0.02594718416455626
+        ],
+        "delta_pp": 0.5101235430528402,
+        "ci95_pp": [
+          -0.013323164764895206,
+          1.1660540386057816
+        ],
+        "changed": 8,
+        "improved": 3,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8124685183215963,
+          0.8608384064760077,
+          0.8849456131008382,
+          0.02416228909599731
+        ],
+        "delta_pp": 0.018289911289078493,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.08762835350353271
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_ridge10_t0.03",
+      "gate": "dominance",
+      "group": "lift",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge10.joblib",
+      "sha256": "6211298c2bba8ee8c50f4db0d155554fea1998fbdcf01d8b629eac59c8771744",
+      "train_oof": {
+        "frame": [
+          0.7806254327599874,
+          0.8298355387633244,
+          0.8548728334457026,
+          0.030107630533843254
+        ],
+        "delta_pp": -0.002380580339781298,
+        "ci95_pp": [
+          -0.9402322225830881,
+          0.8042826602023623
+        ],
+        "changed": 24,
+        "improved": 16,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8149033045347702,
+          0.8633624163701218,
+          0.8854816451014869,
+          0.029154578278589735
+        ],
+        "delta_pp": 0.26176853260646266,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.8256019186228514
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_ridge10_t0.05",
+      "gate": "dominance",
+      "group": "lift",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge10.joblib",
+      "sha256": "6211298c2bba8ee8c50f4db0d155554fea1998fbdcf01d8b629eac59c8771744",
+      "train_oof": {
+        "frame": [
+          0.7805034612226541,
+          0.8297489040588951,
+          0.854908387851912,
+          0.030100497530782807
+        ],
+        "delta_pp": -0.014577734073100099,
+        "ci95_pp": [
+          -0.9524667025245638,
+          0.7910501367792271
+        ],
+        "changed": 21,
+        "improved": 13,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8140475105445754,
+          0.8624424854538422,
+          0.8845619563225633,
+          0.02917105786684922
+        ],
+        "delta_pp": 0.17618913358698288,
+        "ci95_pp": [
+          -0.1406847033649683,
+          0.7026735693216324
+        ],
+        "changed": 5,
+        "improved": 2,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_ridge10_t0.03",
+      "gate": "positive_lift",
+      "group": "lift",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge10.joblib",
+      "sha256": "6211298c2bba8ee8c50f4db0d155554fea1998fbdcf01d8b629eac59c8771744",
+      "train_oof": {
+        "frame": [
+          0.7850054029431055,
+          0.8356587833161879,
+          0.8597937347524233,
+          0.027656743180507124
+        ],
+        "delta_pp": 0.43561643797202676,
+        "ci95_pp": [
+          -0.6738754733121803,
+          1.505160508796236
+        ],
+        "changed": 172,
+        "improved": 55,
+        "harmed": 116,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8156069785016977,
+          0.8654602667600557,
+          0.8904718788342789,
+          0.022371749110483136
+        ],
+        "delta_pp": 0.332135929299208,
+        "ci95_pp": [
+          -0.13757458172525122,
+          0.9072480699978769
+        ],
+        "changed": 47,
+        "improved": 16,
+        "harmed": 31,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_ridge10_t0.05",
+      "gate": "positive_lift",
+      "group": "lift",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge10.joblib",
+      "sha256": "6211298c2bba8ee8c50f4db0d155554fea1998fbdcf01d8b629eac59c8771744",
+      "train_oof": {
+        "frame": [
+          0.7862240977057803,
+          0.8367247255264085,
+          0.861287750891289,
+          0.02723085106372079
+        ],
+        "delta_pp": 0.5574859142395115,
+        "ci95_pp": [
+          -0.5772798813489619,
+          1.6361458461235796
+        ],
+        "changed": 125,
+        "improved": 39,
+        "harmed": 85,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148478994039275,
+          0.8645874169473245,
+          0.8896006270273857,
+          0.022318314493250606
+        ],
+        "delta_pp": 0.25622801952219254,
+        "ci95_pp": [
+          -0.15680955722928047,
+          0.7668896752923803
+        ],
+        "changed": 35,
+        "improved": 10,
+        "harmed": 25,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_ridge10_t0.03",
+      "gate": "relative_lift",
+      "group": "lift",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge10.joblib",
+      "sha256": "6211298c2bba8ee8c50f4db0d155554fea1998fbdcf01d8b629eac59c8771744",
+      "train_oof": {
+        "frame": [
+          0.7852927399345798,
+          0.8351624662284475,
+          0.8602860934519936,
+          0.02698192929893521
+        ],
+        "delta_pp": 0.46435013711945633,
+        "ci95_pp": [
+          -0.5525363005297853,
+          1.4446621648029476
+        ],
+        "changed": 17,
+        "improved": 11,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8160514786732771,
+          0.8645077052421887,
+          0.8881112157369386,
+          0.023313052595139456
+        ],
+        "delta_pp": 0.3765859464571501,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9652565879514441
+        ],
+        "changed": 6,
+        "improved": 5,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_ridge10_t0.05",
+      "gate": "relative_lift",
+      "group": "lift",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge10.joblib",
+      "sha256": "6211298c2bba8ee8c50f4db0d155554fea1998fbdcf01d8b629eac59c8771744",
+      "train_oof": {
+        "frame": [
+          0.7852927399345798,
+          0.8351624662284475,
+          0.8602860934519936,
+          0.02698192929893521
+        ],
+        "delta_pp": 0.46435013711945633,
+        "ci95_pp": [
+          -0.5525363005297853,
+          1.4446621648029476
+        ],
+        "changed": 17,
+        "improved": 11,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150740940017082,
+          0.8635229514807481,
+          0.8871739047775642,
+          0.02332776320738266
+        ],
+        "delta_pp": 0.278847479300263,
+        "ci95_pp": [
+          -0.07106438279151917,
+          0.8046652510529384
+        ],
+        "changed": 4,
+        "improved": 3,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_ridge100_t0.03",
+      "gate": "dominance",
+      "group": "lift",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge100.joblib",
+      "sha256": "d9af96ce5b7ac912f46ca06555129a2b4973a2a11145d99bd3d415bec91399a8",
+      "train_oof": {
+        "frame": [
+          0.7819728186792522,
+          0.8316261697825243,
+          0.8567820258910225,
+          0.028456617066645765
+        ],
+        "delta_pp": 0.13235801158670152,
+        "ci95_pp": [
+          -0.7583066275556121,
+          0.8942362612731607
+        ],
+        "changed": 23,
+        "improved": 15,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814274775837354,
+          0.8625770569092612,
+          0.8849801284147121,
+          0.029162435792266937
+        ],
+        "delta_pp": 0.198915662864844,
+        "ci95_pp": [
+          -0.13924064114689827,
+          0.7354283705353737
+        ],
+        "changed": 7,
+        "improved": 3,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_ridge100_t0.05",
+      "gate": "dominance",
+      "group": "lift",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge100.joblib",
+      "sha256": "d9af96ce5b7ac912f46ca06555129a2b4973a2a11145d99bd3d415bec91399a8",
+      "train_oof": {
+        "frame": [
+          0.7819078852654054,
+          0.8315736622296885,
+          0.8567681523148414,
+          0.028457266289662792
+        ],
+        "delta_pp": 0.1258646702020391,
+        "ci95_pp": [
+          -0.7635328030883101,
+          0.8890065417150862
+        ],
+        "changed": 20,
+        "improved": 13,
+        "harmed": 7,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814402832458533,
+          0.8626350708550792,
+          0.8850256748272605,
+          0.029154949264269956
+        ],
+        "delta_pp": 0.21172132498274246,
+        "ci95_pp": [
+          -0.10159772355109453,
+          0.7360950345173478
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_ridge100_t0.03",
+      "gate": "positive_lift",
+      "group": "lift",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge100.joblib",
+      "sha256": "d9af96ce5b7ac912f46ca06555129a2b4973a2a11145d99bd3d415bec91399a8",
+      "train_oof": {
+        "frame": [
+          0.7861168395206387,
+          0.8371635943990383,
+          0.8611736662790003,
+          0.026053207217569107
+        ],
+        "delta_pp": 0.5467600957253484,
+        "ci95_pp": [
+          -0.5360584741010502,
+          1.570474455754968
+        ],
+        "changed": 166,
+        "improved": 53,
+        "harmed": 112,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8149083789564125,
+          0.86463958223394,
+          0.8897908866367967,
+          0.022391138254571667
+        ],
+        "delta_pp": 0.2622759747706974,
+        "ci95_pp": [
+          -0.16773268599839258,
+          0.7811143197468481
+        ],
+        "changed": 47,
+        "improved": 15,
+        "harmed": 32,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_ridge100_t0.05",
+      "gate": "positive_lift",
+      "group": "lift",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge100.joblib",
+      "sha256": "d9af96ce5b7ac912f46ca06555129a2b4973a2a11145d99bd3d415bec91399a8",
+      "train_oof": {
+        "frame": [
+          0.787158335233037,
+          0.8378955974033317,
+          0.8625349501831715,
+          0.02604210628393107
+        ],
+        "delta_pp": 0.6509096669651627,
+        "ci95_pp": [
+          -0.4263348025639161,
+          1.6681641956630904
+        ],
+        "changed": 116,
+        "improved": 41,
+        "harmed": 74,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8151482154275679,
+          0.8647535250805959,
+          0.8900177718101661,
+          0.02237600294048062
+        ],
+        "delta_pp": 0.286259621886226,
+        "ci95_pp": [
+          -0.11915125331142917,
+          0.7879815648290476
+        ],
+        "changed": 36,
+        "improved": 11,
+        "harmed": 25,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_ridge100_t0.03",
+      "gate": "relative_lift",
+      "group": "lift",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge100.joblib",
+      "sha256": "d9af96ce5b7ac912f46ca06555129a2b4973a2a11145d99bd3d415bec91399a8",
+      "train_oof": {
+        "frame": [
+          0.7864872999027792,
+          0.8367150892573018,
+          0.8617336791545299,
+          0.026425769828027607
+        ],
+        "delta_pp": 0.5838061339394092,
+        "ci95_pp": [
+          -0.4032510839313847,
+          1.523883664348331
+        ],
+        "changed": 17,
+        "improved": 11,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8154229499758608,
+          0.8637223457813281,
+          0.8876096990501641,
+          0.023320910108816657
+        ],
+        "delta_pp": 0.3137330767155314,
+        "ci95_pp": [
+          -0.07106438279151917,
+          0.9067754920882483
+        ],
+        "changed": 5,
+        "improved": 4,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_ridge100_t0.05",
+      "gate": "relative_lift",
+      "group": "lift",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge100.joblib",
+      "sha256": "d9af96ce5b7ac912f46ca06555129a2b4973a2a11145d99bd3d415bec91399a8",
+      "train_oof": {
+        "frame": [
+          0.7866971639773311,
+          0.836987224399241,
+          0.8621458579149229,
+          0.0263970626770122
+        ],
+        "delta_pp": 0.6047925413945956,
+        "ci95_pp": [
+          -0.3818099237173555,
+          1.5399344071614802
+        ],
+        "changed": 16,
+        "improved": 11,
+        "harmed": 4,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8154294159156658,
+          0.8637155368819851,
+          0.8876376232822611,
+          0.023311654604803392
+        ],
+        "delta_pp": 0.3143796706960226,
+        "ci95_pp": [
+          0.0,
+          0.8739021315705031
+        ],
+        "changed": 3,
+        "improved": 3,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_tree_t0.03",
+      "gate": "dominance",
+      "group": "lift",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_tree.joblib",
+      "sha256": "9a6cb739940e76cfdf734d179efe26e298548b14a498c81f40a617c8fd1d19de",
+      "train_oof": {
+        "frame": [
+          0.780202857120205,
+          0.829495490606489,
+          0.8550020547489522,
+          0.028256328471421482
+        ],
+        "delta_pp": -0.04463814431801439,
+        "ci95_pp": [
+          -0.4778931461429844,
+          0.36940576943258446
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 4,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029997997698810962
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 1,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_tree_t0.05",
+      "gate": "dominance",
+      "group": "lift",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_tree.joblib",
+      "sha256": "9a6cb739940e76cfdf734d179efe26e298548b14a498c81f40a617c8fd1d19de",
+      "train_oof": {
+        "frame": [
+          0.7811839518239041,
+          0.8303596776291601,
+          0.8557483421136246,
+          0.028205327064403013
+        ],
+        "delta_pp": 0.053471326051900775,
+        "ci95_pp": [
+          -0.34211084789906937,
+          0.4357639257796108
+        ],
+        "changed": 6,
+        "improved": 4,
+        "harmed": 2,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029997997698810962
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 1,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_tree_t0.03",
+      "gate": "positive_lift",
+      "group": "lift",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_tree.joblib",
+      "sha256": "9a6cb739940e76cfdf734d179efe26e298548b14a498c81f40a617c8fd1d19de",
+      "train_oof": {
+        "frame": [
+          0.7830229001202703,
+          0.8328710383007528,
+          0.8577340193780542,
+          0.02628857033956832
+        ],
+        "delta_pp": 0.23736615568850541,
+        "ci95_pp": [
+          -0.40401562732424484,
+          0.9761195503268835
+        ],
+        "changed": 49,
+        "improved": 15,
+        "harmed": 34,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148406638288481,
+          0.863650740917122,
+          0.8880911450899123,
+          0.023105779602965906
+        ],
+        "delta_pp": 0.2555044620142629,
+        "ci95_pp": [
+          -0.013366764299765533,
+          0.6214953891321782
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_tree_t0.05",
+      "gate": "positive_lift",
+      "group": "lift",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_tree.joblib",
+      "sha256": "9a6cb739940e76cfdf734d179efe26e298548b14a498c81f40a617c8fd1d19de",
+      "train_oof": {
+        "frame": [
+          0.7842211171472632,
+          0.8338565643536774,
+          0.8585887383524891,
+          0.02621509260790104
+        ],
+        "delta_pp": 0.35718785838778583,
+        "ci95_pp": [
+          -0.2566853466889067,
+          1.0764104430081207
+        ],
+        "changed": 33,
+        "improved": 13,
+        "harmed": 20,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148406638288481,
+          0.863650740917122,
+          0.8880911450899123,
+          0.023105779602965906
+        ],
+        "delta_pp": 0.2555044620142629,
+        "ci95_pp": [
+          -0.013366764299765533,
+          0.6214953891321782
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_tree_t0.03",
+      "gate": "relative_lift",
+      "group": "lift",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_tree.joblib",
+      "sha256": "9a6cb739940e76cfdf734d179efe26e298548b14a498c81f40a617c8fd1d19de",
+      "train_oof": {
+        "frame": [
+          0.7849630433570184,
+          0.8347155914115958,
+          0.8595263655358741,
+          0.026226469844284714
+        ],
+        "delta_pp": 0.4313804793633204,
+        "ci95_pp": [
+          -0.17337536994697678,
+          1.1545933865697098
+        ],
+        "changed": 11,
+        "improved": 5,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8124685183215963,
+          0.8608384064760077,
+          0.8849456131008382,
+          0.02416228909599731
+        ],
+        "delta_pp": 0.018289911289078493,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.08762835350353271
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_tree_t0.05",
+      "gate": "relative_lift",
+      "group": "lift",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_tree.joblib",
+      "sha256": "9a6cb739940e76cfdf734d179efe26e298548b14a498c81f40a617c8fd1d19de",
+      "train_oof": {
+        "frame": [
+          0.7849630433570184,
+          0.8347155914115958,
+          0.8595263655358741,
+          0.026226469844284714
+        ],
+        "delta_pp": 0.4313804793633204,
+        "ci95_pp": [
+          -0.17337536994697678,
+          1.1545933865697098
+        ],
+        "changed": 11,
+        "improved": 5,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8124685183215963,
+          0.8608384064760077,
+          0.8849456131008382,
+          0.02416228909599731
+        ],
+        "delta_pp": 0.018289911289078493,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.08762835350353271
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_context_ridge10_t0.03",
+      "gate": "dominance",
+      "group": "lift_context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge10.joblib",
+      "sha256": "96d649c04d27f011e693329b411139139a88d515b5832fde675696b0a5bd4548",
+      "train_oof": {
+        "frame": [
+          0.7821032935280026,
+          0.831329722847975,
+          0.8557513382362978,
+          0.030291704976347436
+        ],
+        "delta_pp": 0.14540549646173728,
+        "ci95_pp": [
+          -0.8073576123262883,
+          0.9892948433423747
+        ],
+        "changed": 27,
+        "improved": 18,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8147941091359825,
+          0.8632945838008406,
+          0.8854816451014869,
+          0.029150175206211364
+        ],
+        "delta_pp": 0.2508489927276969,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.7928432989865541
+        ],
+        "changed": 9,
+        "improved": 4,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_context_ridge10_t0.05",
+      "gate": "dominance",
+      "group": "lift_context",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge10.joblib",
+      "sha256": "96d649c04d27f011e693329b411139139a88d515b5832fde675696b0a5bd4548",
+      "train_oof": {
+        "frame": [
+          0.7819043637213228,
+          0.8311370196991076,
+          0.8561461642572699,
+          0.0302763959544269
+        ],
+        "delta_pp": 0.12551251579376796,
+        "ci95_pp": [
+          -0.8004949528387644,
+          0.9006150929835711
+        ],
+        "changed": 24,
+        "improved": 16,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8146760392419916,
+          0.8632278449147027,
+          0.8850634730093381,
+          0.029163200353172023
+        ],
+        "delta_pp": 0.23904200332860154,
+        "ci95_pp": [
+          -0.13568585272878408,
+          0.7989479042589666
+        ],
+        "changed": 6,
+        "improved": 3,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_context_ridge10_t0.03",
+      "gate": "positive_lift",
+      "group": "lift_context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge10.joblib",
+      "sha256": "96d649c04d27f011e693329b411139139a88d515b5832fde675696b0a5bd4548",
+      "train_oof": {
+        "frame": [
+          0.7861253446071984,
+          0.8362633703741227,
+          0.8591501453198385,
+          0.027688547382292195
+        ],
+        "delta_pp": 0.5476106043813225,
+        "ci95_pp": [
+          -0.6320265769704884,
+          1.6802314624704315
+        ],
+        "changed": 175,
+        "improved": 57,
+        "harmed": 117,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8155483483618202,
+          0.8654330509843324,
+          0.8904363689438302,
+          0.022391016208387474
+        ],
+        "delta_pp": 0.3262729153114682,
+        "ci95_pp": [
+          -0.16398491725946462,
+          0.9231386317939417
+        ],
+        "changed": 49,
+        "improved": 16,
+        "harmed": 33,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_context_ridge10_t0.05",
+      "gate": "positive_lift",
+      "group": "lift_context",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge10.joblib",
+      "sha256": "96d649c04d27f011e693329b411139139a88d515b5832fde675696b0a5bd4548",
+      "train_oof": {
+        "frame": [
+          0.785992733002958,
+          0.8360559838717191,
+          0.8597100916839456,
+          0.027730403638321275
+        ],
+        "delta_pp": 0.5343494439572776,
+        "ci95_pp": [
+          -0.6375268374584568,
+          1.6568958728393122
+        ],
+        "changed": 123,
+        "improved": 41,
+        "harmed": 81,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8156340571013668,
+          0.8654561351337179,
+          0.8901525469399667,
+          0.02230977135539145
+        ],
+        "delta_pp": 0.3348437892661119,
+        "ci95_pp": [
+          -0.12711811788904012,
+          0.9009635135832158
+        ],
+        "changed": 33,
+        "improved": 10,
+        "harmed": 23,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_context_ridge10_t0.03",
+      "gate": "relative_lift",
+      "group": "lift_context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge10.joblib",
+      "sha256": "96d649c04d27f011e693329b411139139a88d515b5832fde675696b0a5bd4548",
+      "train_oof": {
+        "frame": [
+          0.7850608442611806,
+          0.8345924082853983,
+          0.8585604315759222,
+          0.02749571069886307
+        ],
+        "delta_pp": 0.4411605697795393,
+        "ci95_pp": [
+          -0.6822687747219587,
+          1.5092721172636123
+        ],
+        "changed": 21,
+        "improved": 13,
+        "harmed": 7,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8159422832744894,
+          0.8644398726729075,
+          0.8881112157369386,
+          0.023308649522761085
+        ],
+        "delta_pp": 0.36566640657838434,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9286814881488682
+        ],
+        "changed": 7,
+        "improved": 5,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_context_ridge10_t0.05",
+      "gate": "relative_lift",
+      "group": "lift_context",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge10.joblib",
+      "sha256": "96d649c04d27f011e693329b411139139a88d515b5832fde675696b0a5bd4548",
+      "train_oof": {
+        "frame": [
+          0.783939555552459,
+          0.8334941480019281,
+          0.85790432873812,
+          0.02750083892157609
+        ],
+        "delta_pp": 0.32903169890737954,
+        "ci95_pp": [
+          -0.7633401215141727,
+          1.371729377996315
+        ],
+        "changed": 20,
+        "improved": 12,
+        "harmed": 7,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8157026226991244,
+          0.8643083109416086,
+          0.8876754214643388,
+          0.02331990569370546
+        ],
+        "delta_pp": 0.3417003490418817,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9012228099163623
+        ],
+        "changed": 5,
+        "improved": 4,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_context_ridge100_t0.03",
+      "gate": "dominance",
+      "group": "lift_context",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge100.joblib",
+      "sha256": "c2c816960894620f7268e52d8731b96780cff7a7ce56e21086989292a7bac4bb",
+      "train_oof": {
+        "frame": [
+          0.7810888822628944,
+          0.8304702320193864,
+          0.8554521099672888,
+          0.030042294758627963
+        ],
+        "delta_pp": 0.04396436995092595,
+        "ci95_pp": [
+          -0.9104759026207223,
+          0.8647375098130898
+        ],
+        "changed": 26,
+        "improved": 16,
+        "harmed": 10,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8151494310499401,
+          0.8634871692020776,
+          0.8859453636061838,
+          0.029134066603632096
+        ],
+        "delta_pp": 0.2863811841234565,
+        "ci95_pp": [
+          -0.04478306509554386,
+          0.8176805544644594
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_context_ridge100_t0.05",
+      "gate": "dominance",
+      "group": "lift_context",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge100.joblib",
+      "sha256": "c2c816960894620f7268e52d8731b96780cff7a7ce56e21086989292a7bac4bb",
+      "train_oof": {
+        "frame": [
+          0.7812302347814595,
+          0.830545331569367,
+          0.8555280895713624,
+          0.030008626817793232
+        ],
+        "delta_pp": 0.05809962180743852,
+        "ci95_pp": [
+          -0.8903392103012365,
+          0.8758404533084302
+        ],
+        "changed": 23,
+        "improved": 15,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814402832458533,
+          0.8626350708550792,
+          0.8850256748272605,
+          0.029154949264269956
+        ],
+        "delta_pp": 0.21172132498274246,
+        "ci95_pp": [
+          -0.10159772355109453,
+          0.7360950345173478
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_context_ridge100_t0.03",
+      "gate": "positive_lift",
+      "group": "lift_context",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge100.joblib",
+      "sha256": "c2c816960894620f7268e52d8731b96780cff7a7ce56e21086989292a7bac4bb",
+      "train_oof": {
+        "frame": [
+          0.7852034745452635,
+          0.835435052720189,
+          0.8589883607471179,
+          0.027493892969809117
+        ],
+        "delta_pp": 0.4554235981878366,
+        "ci95_pp": [
+          -0.7212859522008631,
+          1.5985812922073517
+        ],
+        "changed": 162,
+        "improved": 54,
+        "harmed": 107,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158781846024794,
+          0.8655990285461789,
+          0.8907561218282685,
+          0.022362861081313797
+        ],
+        "delta_pp": 0.3592565393773839,
+        "ci95_pp": [
+          -0.09256602633589259,
+          0.9058682052273069
+        ],
+        "changed": 44,
+        "improved": 15,
+        "harmed": 29,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_context_ridge100_t0.05",
+      "gate": "positive_lift",
+      "group": "lift_context",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge100.joblib",
+      "sha256": "c2c816960894620f7268e52d8731b96780cff7a7ce56e21086989292a7bac4bb",
+      "train_oof": {
+        "frame": [
+          0.7853936467797619,
+          0.8355035267637637,
+          0.8589518552093797,
+          0.027481670460407868
+        ],
+        "delta_pp": 0.4744408216376744,
+        "ci95_pp": [
+          -0.7142404237797058,
+          1.6245109921434648
+        ],
+        "changed": 120,
+        "improved": 43,
+        "harmed": 76,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8152312226952442,
+          0.8647957898960158,
+          0.8898852836086932,
+          0.02238338687575085
+        ],
+        "delta_pp": 0.2945603486538554,
+        "ci95_pp": [
+          -0.11167636700459602,
+          0.795471977777197
+        ],
+        "changed": 35,
+        "improved": 11,
+        "harmed": 24,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_context_ridge100_t0.03",
+      "gate": "relative_lift",
+      "group": "lift_context",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge100.joblib",
+      "sha256": "c2c816960894620f7268e52d8731b96780cff7a7ce56e21086989292a7bac4bb",
+      "train_oof": {
+        "frame": [
+          0.7856029235925339,
+          0.8356432740287075,
+          0.8601346047186643,
+          0.026635692208277145
+        ],
+        "delta_pp": 0.49536850291487,
+        "ci95_pp": [
+          -0.5654312279567522,
+          1.4960179670811142
+        ],
+        "changed": 18,
+        "improved": 12,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.816297605188447,
+          0.8646324580741445,
+          0.8885749342416356,
+          0.023292540920181817
+        ],
+        "delta_pp": 0.4011985979741439,
+        "ci95_pp": [
+          0.0,
+          0.9368930011987686
+        ],
+        "changed": 6,
+        "improved": 5,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_context_ridge100_t0.05",
+      "gate": "relative_lift",
+      "group": "lift_context",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge100.joblib",
+      "sha256": "c2c816960894620f7268e52d8731b96780cff7a7ce56e21086989292a7bac4bb",
+      "train_oof": {
+        "frame": [
+          0.7856029235925339,
+          0.8356432740287075,
+          0.8601346047186643,
+          0.026635692208277145
+        ],
+        "delta_pp": 0.49536850291487,
+        "ci95_pp": [
+          -0.5654312279567522,
+          1.4960179670811142
+        ],
+        "changed": 18,
+        "improved": 12,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8154294159156658,
+          0.8637155368819851,
+          0.8876376232822611,
+          0.023311654604803392
+        ],
+        "delta_pp": 0.3143796706960226,
+        "ci95_pp": [
+          0.0,
+          0.8739021315705031
+        ],
+        "changed": 3,
+        "improved": 3,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_context_tree_t0.03",
+      "gate": "dominance",
+      "group": "lift_context",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_tree.joblib",
+      "sha256": "508ba9b46d01b9783f669738c947058fd3ada00f64b59332d6125de65efac32f",
+      "train_oof": {
+        "frame": [
+          0.7821570122244141,
+          0.831678957911444,
+          0.8563455066650074,
+          0.027496399908528233
+        ],
+        "delta_pp": 0.15077736610288006,
+        "ci95_pp": [
+          -0.03656496293842792,
+          0.43755231266226857
+        ],
+        "changed": 17,
+        "improved": 10,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8125319464238903,
+          0.8604320361523907,
+          0.8828573024331936,
+          0.029980527354710386
+        ],
+        "delta_pp": 0.024632721518476803,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.10665678419172764
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_lift_context_tree_t0.05",
+      "gate": "dominance",
+      "group": "lift_context",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_tree.joblib",
+      "sha256": "508ba9b46d01b9783f669738c947058fd3ada00f64b59332d6125de65efac32f",
+      "train_oof": {
+        "frame": [
+          0.7821975491260172,
+          0.8317042128573355,
+          0.8568363900485068,
+          0.02749968074399015
+        ],
+        "delta_pp": 0.15483105626319432,
+        "ci95_pp": [
+          -0.024486562793350052,
+          0.43858352019742597
+        ],
+        "changed": 14,
+        "improved": 8,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8125319464238903,
+          0.8604320361523907,
+          0.8828573024331936,
+          0.029980527354710386
+        ],
+        "delta_pp": 0.024632721518476803,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.10665678419172764
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_context_tree_t0.03",
+      "gate": "positive_lift",
+      "group": "lift_context",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_tree.joblib",
+      "sha256": "508ba9b46d01b9783f669738c947058fd3ada00f64b59332d6125de65efac32f",
+      "train_oof": {
+        "frame": [
+          0.7862428068421555,
+          0.836139903283152,
+          0.8599739353306476,
+          0.02537793002824269
+        ],
+        "delta_pp": 0.559356827877006,
+        "ci95_pp": [
+          0.07166268937726275,
+          1.178857096797502
+        ],
+        "changed": 61,
+        "improved": 29,
+        "harmed": 31,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8115377983223879,
+          0.8592433630733769,
+          0.8843219155557664,
+          0.02500040337985778
+        ],
+        "delta_pp": -0.07478208863176405,
+        "ci95_pp": [
+          -0.4569405224174261,
+          0.19987325256806796
+        ],
+        "changed": 18,
+        "improved": 10,
+        "harmed": 8,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "positive_lift_lift_context_tree_t0.05",
+      "gate": "positive_lift",
+      "group": "lift_context",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_tree.joblib",
+      "sha256": "508ba9b46d01b9783f669738c947058fd3ada00f64b59332d6125de65efac32f",
+      "train_oof": {
+        "frame": [
+          0.7864516244559838,
+          0.8362578518335725,
+          0.8605473570941192,
+          0.02535755894868714
+        ],
+        "delta_pp": 0.5802385892598573,
+        "ci95_pp": [
+          0.07376073209161405,
+          1.2211461784485333
+        ],
+        "changed": 41,
+        "improved": 24,
+        "harmed": 16,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8114685578650096,
+          0.859192187712809,
+          0.8843980900746216,
+          0.024993258022627862
+        ],
+        "delta_pp": -0.08170613436959684,
+        "ci95_pp": [
+          -0.46505321079166606,
+          0.19301034924865224
+        ],
+        "changed": 16,
+        "improved": 8,
+        "harmed": 8,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_context_tree_t0.03",
+      "gate": "relative_lift",
+      "group": "lift_context",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_tree.joblib",
+      "sha256": "508ba9b46d01b9783f669738c947058fd3ada00f64b59332d6125de65efac32f",
+      "train_oof": {
+        "frame": [
+          0.785584030186763,
+          0.8358507533600895,
+          0.8605782649515942,
+          0.02547999260445563
+        ],
+        "delta_pp": 0.4934791623377856,
+        "ci95_pp": [
+          -0.021054005353815027,
+          1.1498481654249793
+        ],
+        "changed": 12,
+        "improved": 5,
+        "harmed": 7,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8134355582811015,
+          0.8614566459914688,
+          0.8855655135087943,
+          0.024142889284598644
+        ],
+        "delta_pp": 0.11499390723959854,
+        "ci95_pp": [
+          -0.021839079757531486,
+          0.3450298322907959
+        ],
+        "changed": 5,
+        "improved": 4,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_context_tree_t0.05",
+      "gate": "relative_lift",
+      "group": "lift_context",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_tree.joblib",
+      "sha256": "508ba9b46d01b9783f669738c947058fd3ada00f64b59332d6125de65efac32f",
+      "train_oof": {
+        "frame": [
+          0.7855977530438096,
+          0.835858742038174,
+          0.8605613231621914,
+          0.02548019772242328
+        ],
+        "delta_pp": 0.4948514480424314,
+        "ci95_pp": [
+          -0.019747020236940846,
+          1.1500262667436796
+        ],
+        "changed": 11,
+        "improved": 5,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8134355582811015,
+          0.8614566459914688,
+          0.8855655135087943,
+          0.024142889284598644
+        ],
+        "delta_pp": 0.11499390723959854,
+        "ci95_pp": [
+          -0.021839079757531486,
+          0.3450298322907959
+        ],
+        "changed": 5,
+        "improved": 4,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    }
+  ]
+}

@@ -22,6 +22,11 @@ __pycache__/
 !codex_remote_ops/pccs_candidate_union_20260916/*.log
 !codex_remote_ops/pccs_candidate_union_20260916/recovery_*/*.log
 !codex_remote_ops/pccs_native_context_20260916/*.log
+!codex_remote_ops/pccs_dense_context_20260917/*.log
+!codex_remote_ops/pccs_dense_context_20260917/gate_study/*.log
+!codex_remote_ops/pccs_dense_context_20260917/gate_study/attempt1/*.log
+!codex_remote_ops/pccs_dense_context_20260917/lift_study/*.log
+!codex_remote_ops/pccs_dense_context_20260917/recovery_r1/*.log
 *.pid
 *.status
 *.partial

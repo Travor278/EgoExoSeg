@@ -1,0 +1,221 @@
+{
+  "video_id": "32805896-b265-4445-8992-ab30e98415f8__obj_knife-_1__f_19080__ego_aria02_214-1__exo1_cam03__target_cam04__exo1gt_cam03_f_19080__same_frame",
+  "numpy": "1.26.4",
+  "torch": "2.3.1+cu121",
+  "matmul_tf32": true,
+  "cudnn_tf32": true,
+  "reference": {
+    "masks": {
+      "visual": "2c720a31e3bcf34871955bed71b6bcb4190c257b559c01bb35354af43fe4a105",
+      "anchor": "cdba6d0200a745bc04757ccbdb159a336130892fd87a7199e9eec9ab84d520b5",
+      "fusion": "ec3e0e1bc94f56a1919d4abdf0ead8cbc672b47f5d6542f25a2d9a446fa6fcfa"
+    },
+    "expert": "fusion",
+    "metrics": [
+      0.0,
+      0.0,
+      0.0,
+      0.057180987130971396
+    ]
+  },
+  "runs": {
+    "off1": {
+      "masks": {
+        "visual": "2c720a31e3bcf34871955bed71b6bcb4190c257b559c01bb35354af43fe4a105",
+        "anchor": "cdba6d0200a745bc04757ccbdb159a336130892fd87a7199e9eec9ab84d520b5",
+        "fusion": "ec3e0e1bc94f56a1919d4abdf0ead8cbc672b47f5d6542f25a2d9a446fa6fcfa"
+      },
+      "pixel_differences_from_reference": {
+        "visual": 0,
+        "anchor": 0,
+        "fusion": 0
+      },
+      "expert": "fusion",
+      "metrics": [
+        0.0,
+        0.0,
+        0.0,
+        0.057180987130971396
+      ],
+      "backward_points": {
+        "visual": [
+          [
+            388.125,
+            331.875
+          ]
+        ],
+        "anchor": [
+          [
+            196.875,
+            253.125
+          ]
+        ],
+        "fusion": [
+          [
+            196.875,
+            253.125
+          ]
+        ]
+      }
+    },
+    "off2": {
+      "masks": {
+        "visual": "2c720a31e3bcf34871955bed71b6bcb4190c257b559c01bb35354af43fe4a105",
+        "anchor": "cdba6d0200a745bc04757ccbdb159a336130892fd87a7199e9eec9ab84d520b5",
+        "fusion": "0d2aadf3c6381252baf902ba639bfe2da69f3828ab2e093df928153a860c2a4c"
+      },
+      "pixel_differences_from_reference": {
+        "visual": 0,
+        "anchor": 0,
+        "fusion": 25
+      },
+      "expert": "fusion",
+      "metrics": [
+        0.0,
+        0.0,
+        0.0,
+        0.057141506874015764
+      ],
+      "backward_points": {
+        "visual": [
+          [
+            388.125,
+            331.875
+          ]
+        ],
+        "anchor": [
+          [
+            196.875,
+            253.125
+          ]
+        ],
+        "fusion": [
+          [
+            196.875,
+            253.125
+          ]
+        ]
+      }
+    },
+    "on1": {
+      "masks": {
+        "visual": "2c720a31e3bcf34871955bed71b6bcb4190c257b559c01bb35354af43fe4a105",
+        "anchor": "cdba6d0200a745bc04757ccbdb159a336130892fd87a7199e9eec9ab84d520b5",
+        "fusion": "0d2aadf3c6381252baf902ba639bfe2da69f3828ab2e093df928153a860c2a4c"
+      },
+      "pixel_differences_from_reference": {
+        "visual": 0,
+        "anchor": 0,
+        "fusion": 25
+      },
+      "expert": "fusion",
+      "metrics": [
+        0.0,
+        0.0,
+        0.0,
+        0.057141506874015764
+      ],
+      "backward_points": {
+        "visual": [
+          [
+            388.125,
+            331.875
+          ]
+        ],
+        "anchor": [
+          [
+            196.875,
+            253.125
+          ]
+        ],
+        "fusion": [
+          [
+            196.875,
+            253.125
+          ]
+        ]
+      }
+    },
+    "on2": {
+      "masks": {
+        "visual": "2c720a31e3bcf34871955bed71b6bcb4190c257b559c01bb35354af43fe4a105",
+        "anchor": "cdba6d0200a745bc04757ccbdb159a336130892fd87a7199e9eec9ab84d520b5",
+        "fusion": "0d2aadf3c6381252baf902ba639bfe2da69f3828ab2e093df928153a860c2a4c"
+      },
+      "pixel_differences_from_reference": {
+        "visual": 0,
+        "anchor": 0,
+        "fusion": 25
+      },
+      "expert": "fusion",
+      "metrics": [
+        0.0,
+        0.0,
+        0.0,
+        0.057141506874015764
+      ],
+      "backward_points": {
+        "visual": [
+          [
+            388.125,
+            331.875
+          ]
+        ],
+        "anchor": [
+          [
+            196.875,
+            253.125
+          ]
+        ],
+        "fusion": [
+          [
+            196.875,
+            253.125
+          ]
+        ]
+      }
+    },
+    "off_after": {
+      "masks": {
+        "visual": "2c720a31e3bcf34871955bed71b6bcb4190c257b559c01bb35354af43fe4a105",
+        "anchor": "cdba6d0200a745bc04757ccbdb159a336130892fd87a7199e9eec9ab84d520b5",
+        "fusion": "0d2aadf3c6381252baf902ba639bfe2da69f3828ab2e093df928153a860c2a4c"
+      },
+      "pixel_differences_from_reference": {
+        "visual": 0,
+        "anchor": 0,
+        "fusion": 25
+      },
+      "expert": "fusion",
+      "metrics": [
+        0.0,
+        0.0,
+        0.0,
+        0.057141506874015764
+      ],
+      "backward_points": {
+        "visual": [
+          [
+            388.125,
+            331.875
+          ]
+        ],
+        "anchor": [
+          [
+            196.875,
+            253.125
+          ]
+        ],
+        "fusion": [
+          [
+            196.875,
+            253.125
+          ]
+        ]
+      }
+    }
+  },
+  "all_reference_masks_exact": false,
+  "all_reference_routes_exact": true,
+  "all_reference_metrics_exact": false
+}

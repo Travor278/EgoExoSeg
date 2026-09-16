@@ -1,0 +1,1514 @@
+{
+  "candidates": [
+    {
+      "name": "softcycle_m005",
+      "family": "hand",
+      "config": {
+        "name": "softcycle_m005",
+        "kind": "soft",
+        "margin": 0.005
+      },
+      "train_oof": {
+        "frame": [
+          0.7512390998677648,
+          0.7984609802809842,
+          0.8228375705202087,
+          0.03536226056931002
+        ],
+        "delta_pp": -2.941013869562026,
+        "ci95_pp": [
+          -4.653539464303281,
+          -1.3087718057999087
+        ],
+        "changed": 88,
+        "improved": 35,
+        "harmed": 52,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.778051327948439,
+          0.8256657285986876,
+          0.8469462626005669,
+          0.03681422341751903
+        ],
+        "delta_pp": -3.423429126026652,
+        "ci95_pp": [
+          -5.305864508682134,
+          -1.6676277094787413
+        ],
+        "changed": 30,
+        "improved": 7,
+        "harmed": 23,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "softcycle_m02",
+      "family": "hand",
+      "config": {
+        "name": "softcycle_m02",
+        "kind": "soft",
+        "margin": 0.02
+      },
+      "train_oof": {
+        "frame": [
+          0.7672445414643776,
+          0.8154614421552413,
+          0.8402289933977546,
+          0.03254917144594064
+        ],
+        "delta_pp": -1.34046970990076,
+        "ci95_pp": [
+          -2.681397269410337,
+          -0.10859367487009206
+        ],
+        "changed": 37,
+        "improved": 17,
+        "harmed": 19,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.7906304633511657,
+          0.8369185705497026,
+          0.860375772408569,
+          0.0334924483029205
+        ],
+        "delta_pp": -2.1655155857539894,
+        "ci95_pp": [
+          -4.223851030146761,
+          -0.41876886392249985
+        ],
+        "changed": 11,
+        "improved": 3,
+        "harmed": 8,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "contrast15",
+      "family": "hand",
+      "config": {
+        "name": "contrast15",
+        "kind": "contrast",
+        "scale": "15",
+        "margin": 0.03
+      },
+      "train_oof": {
+        "frame": [
+          0.7629976147739415,
+          0.8118006371472556,
+          0.8356457005697057,
+          0.03377233273042172
+        ],
+        "delta_pp": -1.765162378944372,
+        "ci95_pp": [
+          -3.139371253809733,
+          -0.4473150140323603
+        ],
+        "changed": 32,
+        "improved": 11,
+        "harmed": 21,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.7938116366067939,
+          0.8406789417128797,
+          0.8622966052743422,
+          0.03600507289914866
+        ],
+        "delta_pp": -1.8473982601911603,
+        "ci95_pp": [
+          -3.560052993804372,
+          -0.4544716631062329
+        ],
+        "changed": 8,
+        "improved": 1,
+        "harmed": 6,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "contrast20",
+      "family": "hand",
+      "config": {
+        "name": "contrast20",
+        "kind": "contrast",
+        "scale": "20",
+        "margin": 0.03
+      },
+      "train_oof": {
+        "frame": [
+          0.7619327996700441,
+          0.8106548961213124,
+          0.834763977133779,
+          0.03387038119215032
+        ],
+        "delta_pp": -1.871643889334109,
+        "ci95_pp": [
+          -3.351971149385592,
+          -0.4701173841587863
+        ],
+        "changed": 33,
+        "improved": 11,
+        "harmed": 22,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.7938116366067939,
+          0.8406789417128797,
+          0.8622966052743422,
+          0.03600507289914866
+        ],
+        "delta_pp": -1.8473982601911603,
+        "ci95_pp": [
+          -3.560052993804372,
+          -0.4544716631062329
+        ],
+        "changed": 8,
+        "improved": 1,
+        "harmed": 6,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "residual15",
+      "family": "hand",
+      "config": {
+        "name": "residual15",
+        "kind": "residual",
+        "scale": "15",
+        "margin": 0.03
+      },
+      "train_oof": {
+        "frame": [
+          0.7546755782332234,
+          0.8022927245371031,
+          0.8266107319276584,
+          0.035094415526553464
+        ],
+        "delta_pp": -2.597366033016181,
+        "ci95_pp": [
+          -4.107028920426338,
+          -1.1492120823588756
+        ],
+        "changed": 42,
+        "improved": 13,
+        "harmed": 28,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.7828539086995684,
+          0.8302355865232434,
+          0.852563874056611,
+          0.036918837392209906
+        ],
+        "delta_pp": -2.9431710509137092,
+        "ci95_pp": [
+          -4.871712422455554,
+          -1.2340244138613343
+        ],
+        "changed": 13,
+        "improved": 1,
+        "harmed": 11,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "residual20",
+      "family": "hand",
+      "config": {
+        "name": "residual20",
+        "kind": "residual",
+        "scale": "20",
+        "margin": 0.03
+      },
+      "train_oof": {
+        "frame": [
+          0.7580633219884828,
+          0.8062423511610874,
+          0.8305009205581126,
+          0.03408846410159388
+        ],
+        "delta_pp": -2.258591657490233,
+        "ci95_pp": [
+          -3.7533821645556333,
+          -0.8422596014603456
+        ],
+        "changed": 38,
+        "improved": 13,
+        "harmed": 25,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.7836540866201781,
+          0.8306941311090972,
+          0.8533004231463381,
+          0.03691320459466066
+        ],
+        "delta_pp": -2.863153258852738,
+        "ci95_pp": [
+          -4.8153759033108745,
+          -1.1405483057023957
+        ],
+        "changed": 12,
+        "improved": 1,
+        "harmed": 10,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "joint15",
+      "family": "hand",
+      "config": {
+        "name": "joint15",
+        "kind": "joint",
+        "scale": "15",
+        "margin": 0.02
+      },
+      "train_oof": {
+        "frame": [
+          0.7723218600723666,
+          0.8212484144093076,
+          0.8458516183189863,
+          0.03106879966856313
+        ],
+        "delta_pp": -0.8327378491018558,
+        "ci95_pp": [
+          -2.0146860744227726,
+          0.24049617869450726
+        ],
+        "changed": 24,
+        "improved": 13,
+        "harmed": 11,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8029439308481717,
+          0.8505578432059944,
+          0.8736104006650318,
+          0.030694880483173453
+        ],
+        "delta_pp": -0.9341688360533831,
+        "ci95_pp": [
+          -2.2729503330556327,
+          -0.047906719507106274
+        ],
+        "changed": 8,
+        "improved": 2,
+        "harmed": 6,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "joint20",
+      "family": "hand",
+      "config": {
+        "name": "joint20",
+        "kind": "joint",
+        "scale": "20",
+        "margin": 0.02
+      },
+      "train_oof": {
+        "frame": [
+          0.7722582963656253,
+          0.8211953019753948,
+          0.8458143564920445,
+          0.03106871229058883
+        ],
+        "delta_pp": -0.8390942197759916,
+        "ci95_pp": [
+          -2.0198608401243394,
+          0.2341398080203715
+        ],
+        "changed": 23,
+        "improved": 12,
+        "harmed": 11,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.7960851037675941,
+          0.843253175245142,
+          0.8663084374580026,
+          0.03267282027617284
+        ],
+        "delta_pp": -1.6200515441111445,
+        "ci95_pp": [
+          -3.4332721575447067,
+          -0.1929807609606845
+        ],
+        "changed": 9,
+        "improved": 2,
+        "harmed": 7,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "base_ridge10_t0.03",
+      "family": "calibrated",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/base_ridge10.joblib",
+      "sha256": "cdc963e290323769e9464f8124b97b5f20185a3d62702e2aa624d765f7ae36f8",
+      "train_oof": {
+        "frame": [
+          0.7846313126066589,
+          0.8343227381465447,
+          0.8589824978497945,
+          0.02812501869113811
+        ],
+        "delta_pp": 0.39820740432737184,
+        "ci95_pp": [
+          -0.31147938158634736,
+          1.0611861444938564
+        ],
+        "changed": 20,
+        "improved": 15,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150478050529879,
+          0.8633822081389856,
+          0.8855478047449605,
+          0.029102431557677284
+        ],
+        "delta_pp": 0.27621858442823094,
+        "ci95_pp": [
+          -0.11954073118977242,
+          0.853634227765723
+        ],
+        "changed": 6,
+        "improved": 3,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "base_ridge10_t0.05",
+      "family": "calibrated",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/base_ridge10.joblib",
+      "sha256": "cdc963e290323769e9464f8124b97b5f20185a3d62702e2aa624d765f7ae36f8",
+      "train_oof": {
+        "frame": [
+          0.7846776366950006,
+          0.8343463664470145,
+          0.8589954125226557,
+          0.0281248746273243
+        ],
+        "delta_pp": 0.4028398131615379,
+        "ci95_pp": [
+          -0.3088188546292561,
+          1.0648229541645076
+        ],
+        "changed": 18,
+        "improved": 14,
+        "harmed": 4,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8155630033880394,
+          0.863773468859775,
+          0.8856858296655625,
+          0.029101923258999993
+        ],
+        "delta_pp": 0.3277384179333846,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.8884547883644699
+        ],
+        "changed": 4,
+        "improved": 3,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "base_ridge100_t0.03",
+      "family": "calibrated",
+      "group": "base",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/base_ridge100.joblib",
+      "sha256": "269d27d10ff8cfd53a7a8c0c703e5457838aace1cc16182a1f551f3734f77a61",
+      "train_oof": {
+        "frame": [
+          0.7846313126066589,
+          0.8343227381465447,
+          0.8589824978497945,
+          0.02812501869113811
+        ],
+        "delta_pp": 0.39820740432737184,
+        "ci95_pp": [
+          -0.31147938158634736,
+          1.0611861444938564
+        ],
+        "changed": 20,
+        "improved": 15,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150478050529879,
+          0.8633822081389856,
+          0.8855478047449605,
+          0.029102431557677284
+        ],
+        "delta_pp": 0.27621858442823094,
+        "ci95_pp": [
+          -0.11954073118977242,
+          0.853634227765723
+        ],
+        "changed": 6,
+        "improved": 3,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "base_ridge100_t0.05",
+      "family": "calibrated",
+      "group": "base",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/base_ridge100.joblib",
+      "sha256": "269d27d10ff8cfd53a7a8c0c703e5457838aace1cc16182a1f551f3734f77a61",
+      "train_oof": {
+        "frame": [
+          0.7834450904840907,
+          0.8331719703102389,
+          0.8583125214358112,
+          0.028130796136868155
+        ],
+        "delta_pp": 0.2795851920705496,
+        "ci95_pp": [
+          -0.4055096821151285,
+          0.8986187339162116
+        ],
+        "changed": 16,
+        "improved": 12,
+        "harmed": 4,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8152897966045808,
+          0.8631806948001515,
+          0.8856480314834849,
+          0.029093672170097926
+        ],
+        "delta_pp": 0.3004177395875255,
+        "ci95_pp": [
+          0.0,
+          0.845978269353509
+        ],
+        "changed": 2,
+        "improved": 2,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "base_tree_t0.03",
+      "family": "calibrated",
+      "group": "base",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/base_tree.joblib",
+      "sha256": "4c2a432c65289f9d163c719f859e773c579ab3d658d502fb8e8eb85bda2c7a75",
+      "train_oof": {
+        "frame": [
+          0.7841195493301006,
+          0.8338401717006826,
+          0.8591713842405598,
+          0.0271356102447997
+        ],
+        "delta_pp": 0.34703107667155564,
+        "ci95_pp": [
+          0.04718639926674466,
+          0.7378988320609393
+        ],
+        "changed": 6,
+        "improved": 6,
+        "harmed": 0,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029778045068724376
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 2,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "base_tree_t0.05",
+      "family": "calibrated",
+      "group": "base",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/base_tree.joblib",
+      "sha256": "4c2a432c65289f9d163c719f859e773c579ab3d658d502fb8e8eb85bda2c7a75",
+      "train_oof": {
+        "frame": [
+          0.7835040332734836,
+          0.8331198800435162,
+          0.8585784707701517,
+          0.027226687670958427
+        ],
+        "delta_pp": 0.2854794710098455,
+        "ci95_pp": [
+          0.015991530381143093,
+          0.6601772775563102
+        ],
+        "changed": 5,
+        "improved": 5,
+        "harmed": 0,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029778045068724376
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 2,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "cycle_ridge10_t0.03",
+      "family": "calibrated",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_ridge10.joblib",
+      "sha256": "bf29e873ed7c5a6e6ebd157b2859b1f1a018564202bd6883e1964cae088cd06c",
+      "train_oof": {
+        "frame": [
+          0.7832195317623198,
+          0.832790926211028,
+          0.8568083294546404,
+          0.028465393389526496
+        ],
+        "delta_pp": 0.2570293198934653,
+        "ci95_pp": [
+          -0.652034959592533,
+          1.0612768960757721
+        ],
+        "changed": 27,
+        "improved": 18,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158496616825384,
+          0.8640009544103425,
+          0.8861918452724675,
+          0.029085715446148904
+        ],
+        "delta_pp": 0.35640424738327664,
+        "ci95_pp": [
+          -0.048433500342071056,
+          0.9336435021832576
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "cycle_ridge10_t0.05",
+      "family": "calibrated",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_ridge10.joblib",
+      "sha256": "bf29e873ed7c5a6e6ebd157b2859b1f1a018564202bd6883e1964cae088cd06c",
+      "train_oof": {
+        "frame": [
+          0.7831830220547498,
+          0.8327715006459616,
+          0.8569576480588975,
+          0.02843445131586735
+        ],
+        "delta_pp": 0.2533783491364577,
+        "ci95_pp": [
+          -0.6575390907366656,
+          1.0578262817968302
+        ],
+        "changed": 24,
+        "improved": 16,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8156836049582731,
+          0.8634713114484232,
+          0.8857079507661441,
+          0.02909003315388305
+        ],
+        "delta_pp": 0.3397985749567548,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9012532187625766
+        ],
+        "changed": 5,
+        "improved": 4,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "cycle_ridge100_t0.03",
+      "family": "calibrated",
+      "group": "cycle",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_ridge100.joblib",
+      "sha256": "531caf6a6cae727bf3065c5364dbd389b45ad5458ca05237c9670d187790f93a",
+      "train_oof": {
+        "frame": [
+          0.7820706198999186,
+          0.8316726211105895,
+          0.8562401738296415,
+          0.02846432128539675
+        ],
+        "delta_pp": 0.14213813365333605,
+        "ci95_pp": [
+          -0.7514990765630498,
+          0.9116965025297961
+        ],
+        "changed": 24,
+        "improved": 15,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.815562014276899,
+          0.8634064886032622,
+          0.885690328585693,
+          0.029088264177866766
+        ],
+        "delta_pp": 0.3276395068193475,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.8806790458038449
+        ],
+        "changed": 6,
+        "improved": 4,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "cycle_ridge100_t0.05",
+      "family": "calibrated",
+      "group": "cycle",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_ridge100.joblib",
+      "sha256": "531caf6a6cae727bf3065c5364dbd389b45ad5458ca05237c9670d187790f93a",
+      "train_oof": {
+        "frame": [
+          0.7819462641218204,
+          0.8315905074081185,
+          0.8563377250216155,
+          0.028433484717580365
+        ],
+        "delta_pp": 0.1297025558435254,
+        "ci95_pp": [
+          -0.7613309634956142,
+          0.8969292773528849
+        ],
+        "changed": 21,
+        "improved": 13,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8143817251965325,
+          0.8626760092343222,
+          0.884594515547958,
+          0.029176366330424454
+        ],
+        "delta_pp": 0.2096105987826983,
+        "ci95_pp": [
+          -0.10659657418727875,
+          0.7354283705353737
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "cycle_tree_t0.03",
+      "family": "calibrated",
+      "group": "cycle",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7815751117193236,
+          0.8311877727588511,
+          0.8565452847804682,
+          0.02780616450112039
+        ],
+        "delta_pp": 0.09258731559384614,
+        "ci95_pp": [
+          -0.20378540890912214,
+          0.43432318023405964
+        ],
+        "changed": 11,
+        "improved": 7,
+        "harmed": 4,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029997997698810962
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 1,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "cycle_tree_t0.05",
+      "family": "calibrated",
+      "group": "cycle",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7822417937844778,
+          0.8318669035800296,
+          0.85726299347469,
+          0.02779137428032738
+        ],
+        "delta_pp": 0.15925552210925767,
+        "ci95_pp": [
+          -0.026572154213984806,
+          0.4610019545846929
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029997997698810962
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 1,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_ridge10_t0.03",
+      "family": "calibrated",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/context_ridge10.joblib",
+      "sha256": "2fff1800f1396785b63a48ba7a69e02ddfdb9631fd7050ecd04191d802144206",
+      "train_oof": {
+        "frame": [
+          0.7810739859432441,
+          0.830736138025848,
+          0.8552194487625688,
+          0.029296086942131778
+        ],
+        "delta_pp": 0.042474737985887426,
+        "ci95_pp": [
+          -0.9831068459445506,
+          0.9120968658454428
+        ],
+        "changed": 27,
+        "improved": 18,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8149033045347702,
+          0.8633624163701218,
+          0.8854816451014869,
+          0.029154578278589735
+        ],
+        "delta_pp": 0.26176853260646266,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.8256019186228514
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_ridge10_t0.05",
+      "family": "calibrated",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/context_ridge10.joblib",
+      "sha256": "2fff1800f1396785b63a48ba7a69e02ddfdb9631fd7050ecd04191d802144206",
+      "train_oof": {
+        "frame": [
+          0.7809952742069176,
+          0.8306927712617967,
+          0.8553192425027856,
+          0.029299562863740195
+        ],
+        "delta_pp": 0.0346035643532458,
+        "ci95_pp": [
+          -0.9887976293523226,
+          0.9034989839823941
+        ],
+        "changed": 24,
+        "improved": 16,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814631086862452,
+          0.8631366225670111,
+          0.8854393479992788,
+          0.029159986270820896
+        ],
+        "delta_pp": 0.23454676537464064,
+        "ci95_pp": [
+          -0.12340568471699953,
+          0.7982812402769924
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_ridge100_t0.03",
+      "family": "calibrated",
+      "group": "context",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/context_ridge100.joblib",
+      "sha256": "d701901d23fb861a37c5022169fbfbdd6e671ce60e095314a907d8245e9bb102",
+      "train_oof": {
+        "frame": [
+          0.7838074246652572,
+          0.8334911730512261,
+          0.8574891901378519,
+          0.028368115636525
+        ],
+        "delta_pp": 0.315818610187206,
+        "ci95_pp": [
+          -0.5995894427469464,
+          1.122684358756588
+        ],
+        "changed": 26,
+        "improved": 17,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8152586264487278,
+          0.8635550017713588,
+          0.8859453636061838,
+          0.029138469676010467
+        ],
+        "delta_pp": 0.29730072400222224,
+        "ci95_pp": [
+          -0.04478306509554386,
+          0.8504391741007566
+        ],
+        "changed": 7,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_ridge100_t0.05",
+      "family": "calibrated",
+      "group": "context",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/context_ridge100.joblib",
+      "sha256": "d701901d23fb861a37c5022169fbfbdd6e671ce60e095314a907d8245e9bb102",
+      "train_oof": {
+        "frame": [
+          0.7835068704655698,
+          0.8332449225537384,
+          0.8579459160629385,
+          0.02835573881903861
+        ],
+        "delta_pp": 0.28576319021845437,
+        "ci95_pp": [
+          -0.6032302214169045,
+          1.0275656135313005
+        ],
+        "changed": 23,
+        "improved": 15,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150313611559492,
+          0.8634204303159397,
+          0.885527191514035,
+          0.02914709175059275
+        ],
+        "delta_pp": 0.2745741947243611,
+        "ci95_pp": [
+          -0.06750959437340498,
+          0.8270459808409214
+        ],
+        "changed": 5,
+        "improved": 3,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_tree_t0.03",
+      "family": "calibrated",
+      "group": "context",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/context_tree.joblib",
+      "sha256": "4228a1109209e5b4f161b94fce497908ccbe3a12369c381aab844ab931d95e9a",
+      "train_oof": {
+        "frame": [
+          0.7833049071601742,
+          0.8329773099396872,
+          0.8578006950564379,
+          0.027074169305011078
+        ],
+        "delta_pp": 0.2655668596788827,
+        "ci95_pp": [
+          -0.2150949507987308,
+          0.831754886268754
+        ],
+        "changed": 25,
+        "improved": 16,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8069514632884722,
+          0.8542365608050506,
+          0.8768592306953862,
+          0.030446718141291122
+        ],
+        "delta_pp": -0.5334155920233268,
+        "ci95_pp": [
+          -1.8031467766074154,
+          0.21381954041620094
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_tree_t0.05",
+      "family": "calibrated",
+      "group": "context",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/context_tree.joblib",
+      "sha256": "4228a1109209e5b4f161b94fce497908ccbe3a12369c381aab844ab931d95e9a",
+      "train_oof": {
+        "frame": [
+          0.7840269158915975,
+          0.8337201335624975,
+          0.8586979467042276,
+          0.027088610111829035
+        ],
+        "delta_pp": 0.33776773282119804,
+        "ci95_pp": [
+          -0.0859332566291818,
+          0.8701495979443683
+        ],
+        "changed": 19,
+        "improved": 12,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8129255540775677,
+          0.8607584740280192,
+          0.8829777051733445,
+          0.029978250080016814
+        ],
+        "delta_pp": 0.06399348688622317,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.2247390802949667
+        ],
+        "changed": 3,
+        "improved": 2,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "full_ridge10_t0.03",
+      "family": "calibrated",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/full_ridge10.joblib",
+      "sha256": "9c7e72d0bd2669caaf91940a609fd012fb81ea71570f68db957ee845b1c1c4b0",
+      "train_oof": {
+        "frame": [
+          0.7801709107994715,
+          0.8292845787774676,
+          0.8542711891801397,
+          0.03094918518495883
+        ],
+        "delta_pp": -0.047832776391361354,
+        "ci95_pp": [
+          -1.1441083593931074,
+          0.9269670189338888
+        ],
+        "changed": 30,
+        "improved": 19,
+        "harmed": 11,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8147941091359825,
+          0.8632945838008406,
+          0.8854816451014869,
+          0.029150175206211364
+        ],
+        "delta_pp": 0.2508489927276969,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.7928432989865541
+        ],
+        "changed": 9,
+        "improved": 4,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "full_ridge10_t0.05",
+      "family": "calibrated",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/full_ridge10.joblib",
+      "sha256": "9c7e72d0bd2669caaf91940a609fd012fb81ea71570f68db957ee845b1c1c4b0",
+      "train_oof": {
+        "frame": [
+          0.7812728253598938,
+          0.8305687738488644,
+          0.8550346942285741,
+          0.029991733353541647
+        ],
+        "delta_pp": 0.062358679650868776,
+        "ci95_pp": [
+          -0.8956707557178256,
+          0.8864161059997658
+        ],
+        "changed": 25,
+        "improved": 16,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150248952161443,
+          0.8634272392152827,
+          0.885499267281938,
+          0.02915634725460602
+        ],
+        "delta_pp": 0.27392760074386996,
+        "ci95_pp": [
+          -0.10370844975113869,
+          0.8352976338937877
+        ],
+        "changed": 7,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "full_ridge100_t0.03",
+      "family": "calibrated",
+      "group": "full",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/full_ridge100.joblib",
+      "sha256": "f4d8e9eefdf0130d1dab1b065f51aeec5eaf998912466cf5304b6bd5fad06f6e",
+      "train_oof": {
+        "frame": [
+          0.783699297959124,
+          0.8334337239525497,
+          0.8575504646476557,
+          0.0283700096588987
+        ],
+        "delta_pp": 0.3050059395738774,
+        "ci95_pp": [
+          -0.6075631990065125,
+          1.1157250397809544
+        ],
+        "changed": 25,
+        "improved": 16,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8149033045347702,
+          0.8633624163701218,
+          0.8854816451014869,
+          0.029154578278589735
+        ],
+        "delta_pp": 0.26176853260646266,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.8256019186228514
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "full_ridge100_t0.05",
+      "family": "calibrated",
+      "group": "full",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/full_ridge100.joblib",
+      "sha256": "f4d8e9eefdf0130d1dab1b065f51aeec5eaf998912466cf5304b6bd5fad06f6e",
+      "train_oof": {
+        "frame": [
+          0.7824667517482141,
+          0.832259327815774,
+          0.8568675735608112,
+          0.02837593116844256
+        ],
+        "delta_pp": 0.18175131848288906,
+        "ci95_pp": [
+          -0.7106093086412228,
+          0.9530394288885873
+        ],
+        "changed": 23,
+        "improved": 14,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150313611559492,
+          0.8634204303159397,
+          0.885527191514035,
+          0.02914709175059275
+        ],
+        "delta_pp": 0.2745741947243611,
+        "ci95_pp": [
+          -0.06750959437340498,
+          0.8270459808409214
+        ],
+        "changed": 5,
+        "improved": 3,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "full_tree_t0.03",
+      "family": "calibrated",
+      "group": "full",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/full_tree.joblib",
+      "sha256": "ba30713b86502d389e49814eb679d57000ed80c7f7ce6cd4e9f4d29ba458fcbf",
+      "train_oof": {
+        "frame": [
+          0.7831169052694555,
+          0.8326885926073911,
+          0.8578269728942614,
+          0.027298897199122582
+        ],
+        "delta_pp": 0.24676667060703036,
+        "ci95_pp": [
+          -0.15327105830591692,
+          0.7680884961801995
+        ],
+        "changed": 20,
+        "improved": 13,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8125319464238903,
+          0.8604320361523907,
+          0.8828573024331936,
+          0.029980527354710386
+        ],
+        "delta_pp": 0.024632721518476803,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.10665678419172764
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "full_tree_t0.05",
+      "family": "calibrated",
+      "group": "full",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/full_tree.joblib",
+      "sha256": "ba30713b86502d389e49814eb679d57000ed80c7f7ce6cd4e9f4d29ba458fcbf",
+      "train_oof": {
+        "frame": [
+          0.7837046145401579,
+          0.8333935149714845,
+          0.8586884333346095,
+          0.027304256247399364
+        ],
+        "delta_pp": 0.3055375976772565,
+        "ci95_pp": [
+          -0.018571911588272386,
+          0.7976823440743219
+        ],
+        "changed": 15,
+        "improved": 9,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8129255540775677,
+          0.8607584740280192,
+          0.8829777051733445,
+          0.029978250080016814
+        ],
+        "delta_pp": 0.06399348688622317,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.2247390802949667
+        ],
+        "changed": 3,
+        "improved": 2,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    }
+  ]
+}

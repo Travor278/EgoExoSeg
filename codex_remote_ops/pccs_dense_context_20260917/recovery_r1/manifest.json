@@ -1,0 +1,230 @@
+{
+  "created_at": 1789576277.225888,
+  "phases": {
+    "smoke": {
+      "pairs": 8,
+      "objects": 8,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/smoke_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/smoke_rank0.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/smoke_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/smoke_rank1.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/smoke_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/smoke_rank2.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/smoke_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/smoke_rank3.yaml",
+          "pairs": 2,
+          "objects": 2
+        }
+      ],
+      "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
+      "reference_phase": "smoke"
+    },
+    "train": {
+      "pairs": 384,
+      "objects": 676,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/train_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/train_rank0.yaml",
+          "pairs": 96,
+          "objects": 161
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/train_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/train_rank1.yaml",
+          "pairs": 96,
+          "objects": 185
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/train_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/train_rank2.yaml",
+          "pairs": 96,
+          "objects": 164
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/train_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/train_rank3.yaml",
+          "pairs": 96,
+          "objects": 166
+        }
+      ],
+      "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
+      "reference_phase": "screen"
+    },
+    "calibration": {
+      "pairs": 128,
+      "objects": 225,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/calibration_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/calibration_rank0.yaml",
+          "pairs": 32,
+          "objects": 61
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/calibration_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/calibration_rank1.yaml",
+          "pairs": 32,
+          "objects": 55
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/calibration_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/calibration_rank2.yaml",
+          "pairs": 32,
+          "objects": 56
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/calibration_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/calibration_rank3.yaml",
+          "pairs": 32,
+          "objects": 53
+        }
+      ],
+      "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
+      "reference_phase": "calibration"
+    },
+    "exo2exo": {
+      "pairs": 1094,
+      "objects": 1094,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/exo2exo_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/exo2exo_rank0.yaml",
+          "pairs": 274,
+          "objects": 274
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/exo2exo_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/exo2exo_rank1.yaml",
+          "pairs": 274,
+          "objects": 274
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/exo2exo_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/exo2exo_rank2.yaml",
+          "pairs": 273,
+          "objects": 273
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/exo2exo_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/exo2exo_rank3.yaml",
+          "pairs": 273,
+          "objects": 273
+        }
+      ],
+      "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916",
+      "reference_phase": "exo2exo"
+    }
+  },
+  "assets": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "pretrained_omama_used": false,
+  "new_encoder_passes": 0,
+  "candidate_change": false,
+  "training": "PCCS cycle-confidence calibration only; native features; four-fold take-held-out predictions",
+  "selection": "positive TRAIN take-OOF and held calibration delta, maximum calibration; freeze before target; report matched feature ablations",
+  "train_takes": [
+    "014e2850-9927-441a-8c3f-9e58012359e3",
+    "01c31ac7-3885-46ff-9af5-9e1d0910dce5",
+    "02417aaf-e818-4ec9-8731-abddcd9ac466",
+    "15a055d2-a5e1-4ba9-9e2b-5a6282fc7f32",
+    "17fc7017-4b64-4adb-b55f-10ca76476366",
+    "23d1dc00-55f7-454e-b388-264ee6240527",
+    "23ff1c48-01ea-4d34-a38b-bc96e767b9b9",
+    "2423c2ff-c85d-4998-afab-29de8d26d263",
+    "261f6455-c60e-4fe4-8eca-6bb8fbb18ff9",
+    "2a6617b5-ce8f-4234-a128-829b639df186",
+    "2d146c0f-88df-483d-8a26-efb052b9a8ac",
+    "30f03e63-10bf-4d6d-8d58-fc944469c66c",
+    "3467af8b-50c5-486e-8ff8-6a1401849bb9",
+    "35823fca-da54-49a2-8d4c-365046031e2c",
+    "410ccf87-4217-4d87-836b-4af20b355d87",
+    "42e4f58c-bdc8-4294-966a-240a6367428a",
+    "516e461f-d51a-459f-9cfa-8864bda4c06e",
+    "55c665d1-8310-40b2-92d3-0e6b7a47ce22",
+    "58004f8a-fd60-4db6-8145-5125a4cd346f",
+    "5d45ec21-c866-4f24-b037-9fa5d25c78ee",
+    "5e4d0439-eaea-463b-963b-e6ae2459f874",
+    "609123eb-8e83-41f9-9cd5-524fc01f3ea9",
+    "66fbbbae-c740-40d1-ab71-1f882453f2c5",
+    "6b90b173-de80-4a88-b52c-7eec42fd372b",
+    "71892035-0e6d-49a0-ae65-c30a76b0af79",
+    "7407b714-f7ec-4472-8e4d-e7eb0f037728",
+    "783505c4-4ca5-4bee-a572-9e214115e035",
+    "86771809-b5aa-49dd-8c94-16d145f4819e",
+    "8ee393cb-d4b3-47ae-a3d0-0e9f8bb912d1",
+    "96816348-c93b-4b46-b4e9-2f53d96f9f88",
+    "975b2d0f-fcf7-4521-b129-7c65a3268609",
+    "a261cc1d-7a45-479f-81a9-7c73eb379e6c",
+    "a8b81a1a-5ab7-41c0-9189-a808bfb97b6b",
+    "aaa7e120-2224-4a5b-96ef-4a4b054a6ccd",
+    "aceb9ba2-bcd0-4249-baaf-12cd03e14aaa",
+    "adb82b37-8e0c-423a-9016-4a17ae673b75",
+    "b2db39d4-cc06-4821-8545-e22c3ab67eab",
+    "b4b83178-90f5-4ca8-9862-224d5044b0c4",
+    "bf53c470-f60b-4f93-bb97-9b2a61a5ab89",
+    "c09185f6-a5d6-43ce-950f-be3cd7ba7d2f",
+    "c4dbfed6-f922-4213-a574-da37c7afd61c",
+    "c608817e-4a3e-4c3c-a87c-7d02e1e601da",
+    "cc5a6be4-d030-4057-9ed5-1f895c6c9274",
+    "ce509e21-ca1a-45a9-b150-3263640c9c47",
+    "d1563ead-9c4a-443d-8f28-515100c0b909",
+    "dcce3d79-a8b7-4a0d-8614-94dee726663f",
+    "ed83020f-c9cd-4d9d-8420-c69c74b1643e",
+    "fa1b7aec-f252-42c7-b362-443f11e87fdf"
+  ],
+  "calibration_takes": [
+    "03167c74-f240-488c-bc6c-39ea803ec943",
+    "0efd9fc1-0f49-403d-9252-93f119a3ea3c",
+    "1b755d8c-7351-4ad3-aff3-affe95fb1737",
+    "1b8601c0-ca65-4b4a-9ed4-0248d9539257",
+    "21e09276-debf-49dc-8e6b-da8660308766",
+    "6badc0af-4a97-4dd4-b89d-b540f6f34002",
+    "77cd56fc-6b68-4c7f-814b-81545484dd2d",
+    "783c918b-1473-4b72-b106-cb2718c46af8",
+    "7d33f6b7-46c0-4087-97e5-100c369ffe45",
+    "7ec264c5-0029-4b84-81ea-c3b24a059ae4",
+    "828f456b-54af-4a84-aea5-a8071fd1cae8",
+    "83783976-189a-460f-9068-7ad5b17dd815",
+    "8634c58a-95ee-4aed-aa80-9392073815cf",
+    "87a63705-c609-49cd-9605-0117ad0b0526",
+    "e257e982-fb75-4d98-9e15-228bd18c33f4",
+    "f01b21c4-8023-4800-b3b2-3326a3c164f2"
+  ],
+  "code_sha256": {
+    "dense_context.py": "dcc5aa9d38f8eec04ee4698411ade86707d461e328b4c211c1e35e7db6bed518",
+    "worker.py": "a24bcac2e530f2a99c4cfdf9828971b3373de0e0245d2c891ceed4cdc2d90049",
+    "randomness.py": "7559393732681ed5b3859878239e4b30e37fad4d8546626e3c9a4d3e329c6b1e",
+    "native_bridge.py": "5e3575b6f99b237e1375aa6b5c86146a89ac9779074ea331a0566cb0e7dcf8cf",
+    "policies.py": "a7151a093b82bbcbb5296e0a2287451711ad6dc314c3079c246577929bcca0ef",
+    "code/projects/v2sam_pccs/evaluation/pccs_metric.py": "b83884ec4660e1a5ddad1be11640b3cf8dabe454759fecac7e2b096dd35f4edd"
+  }
+}

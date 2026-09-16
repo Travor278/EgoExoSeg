@@ -1,0 +1,14 @@
+{
+  "train": {
+    "objects_with_better_quality_valid_alternative": 228,
+    "covered_by_softcycle_gate": 35,
+    "unweighted_object_oracle_delta_all_pp": 3.7216553674070867,
+    "unweighted_object_oracle_delta_gate_pp": 1.4645963082690696
+  },
+  "calibration": {
+    "objects_with_better_quality_valid_alternative": 82,
+    "covered_by_softcycle_gate": 7,
+    "unweighted_object_oracle_delta_all_pp": 2.2292068062557115,
+    "unweighted_object_oracle_delta_gate_pp": 0.9848652415805393
+  }
+}

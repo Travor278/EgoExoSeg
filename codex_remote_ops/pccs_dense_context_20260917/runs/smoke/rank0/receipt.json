@@ -1,0 +1,9 @@
+{
+  "state": "complete",
+  "coverage": "exact",
+  "pairs": 2,
+  "objects": 2,
+  "reference_objects_verified": 2,
+  "capture_on_off_pairs": 2,
+  "records_sha256": "913f0518a7556d8569b36927bbfd669576051d7a12152cf6f3e8520d7d790290"
+}

@@ -1,0 +1,3388 @@
+{
+  "candidates": [
+    {
+      "name": "dominance_base_ridge10_t0.03",
+      "gate": "dominance",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge10.joblib",
+      "sha256": "8196414f7483fed4550e2ff542a83daa3fd72db90673d3f50fa544ccd86b57d4",
+      "train_oof": {
+        "frame": [
+          0.7844652328496222,
+          0.8341363049716904,
+          0.8587191559568333,
+          0.02825147283584534
+        ],
+        "delta_pp": 0.3815994286237077,
+        "ci95_pp": [
+          -0.5279951058522178,
+          1.188366580502285
+        ],
+        "changed": 22,
+        "improved": 17,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150478050529879,
+          0.8633822081389856,
+          0.8855478047449605,
+          0.029102431557677284
+        ],
+        "delta_pp": 0.27621858442823094,
+        "ci95_pp": [
+          -0.11954073118977242,
+          0.853634227765723
+        ],
+        "changed": 6,
+        "improved": 3,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_base_ridge10_t0.05",
+      "gate": "dominance",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge10.joblib",
+      "sha256": "8196414f7483fed4550e2ff542a83daa3fd72db90673d3f50fa544ccd86b57d4",
+      "train_oof": {
+        "frame": [
+          0.7851737703363145,
+          0.8349034044616657,
+          0.8595559923533181,
+          0.027865133588138486
+        ],
+        "delta_pp": 0.45245317729293466,
+        "ci95_pp": [
+          -0.29680603759415036,
+          1.190518530206949
+        ],
+        "changed": 20,
+        "improved": 16,
+        "harmed": 4,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8155630033880394,
+          0.863773468859775,
+          0.8856858296655625,
+          0.029101923258999993
+        ],
+        "delta_pp": 0.3277384179333846,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.8884547883644699
+        ],
+        "changed": 4,
+        "improved": 3,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_base_ridge10_t0.03",
+      "gate": "present",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge10.joblib",
+      "sha256": "8196414f7483fed4550e2ff542a83daa3fd72db90673d3f50fa544ccd86b57d4",
+      "train_oof": {
+        "frame": [
+          0.7877563655058418,
+          0.8384151275971746,
+          0.8617721978900105,
+          0.02573114162779851
+        ],
+        "delta_pp": 0.710712694245659,
+        "ci95_pp": [
+          -0.47818231510195297,
+          1.8013175016000478
+        ],
+        "changed": 179,
+        "improved": 72,
+        "harmed": 107,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8144429019545593,
+          0.8643648880584806,
+          0.8862454063810971,
+          0.023030622804703377
+        ],
+        "delta_pp": 0.21572827458536872,
+        "ci95_pp": [
+          -0.29715448181377724,
+          0.8273613907028142
+        ],
+        "changed": 65,
+        "improved": 18,
+        "harmed": 47,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_base_ridge10_t0.05",
+      "gate": "present",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge10.joblib",
+      "sha256": "8196414f7483fed4550e2ff542a83daa3fd72db90673d3f50fa544ccd86b57d4",
+      "train_oof": {
+        "frame": [
+          0.7902226687246188,
+          0.8407246510424183,
+          0.8643379989243002,
+          0.025312875936306795
+        ],
+        "delta_pp": 0.957343016123357,
+        "ci95_pp": [
+          -0.05566236535231741,
+          1.9432655276656177
+        ],
+        "changed": 130,
+        "improved": 58,
+        "harmed": 72,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8157342358230381,
+          0.8651769098411023,
+          0.8878645865666381,
+          0.023033267917671758
+        ],
+        "delta_pp": 0.3448616614332422,
+        "ci95_pp": [
+          -0.1488880053026757,
+          0.9314690711568497
+        ],
+        "changed": 37,
+        "improved": 12,
+        "harmed": 25,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_base_ridge10_t0.03",
+      "gate": "context_override",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge10.joblib",
+      "sha256": "8196414f7483fed4550e2ff542a83daa3fd72db90673d3f50fa544ccd86b57d4",
+      "train_oof": {
+        "frame": [
+          0.786898646312946,
+          0.8368548889614059,
+          0.86093170111422,
+          0.02752808233315811
+        ],
+        "delta_pp": 0.624940774956081,
+        "ci95_pp": [
+          -0.34118833735783477,
+          1.4993617258795287
+        ],
+        "changed": 27,
+        "improved": 21,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8153398995646663,
+          0.8639453426364828,
+          0.8880393504598105,
+          0.023266722954863636
+        ],
+        "delta_pp": 0.3054280355960752,
+        "ci95_pp": [
+          -0.0686217111069709,
+          0.8717882947530597
+        ],
+        "changed": 7,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_base_ridge10_t0.05",
+      "gate": "context_override",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge10.joblib",
+      "sha256": "8196414f7483fed4550e2ff542a83daa3fd72db90673d3f50fa544ccd86b57d4",
+      "train_oof": {
+        "frame": [
+          0.7876071837996382,
+          0.8376219884513812,
+          0.8617685375107049,
+          0.027141743085451257
+        ],
+        "delta_pp": 0.695794523625308,
+        "ci95_pp": [
+          -0.11649728394200383,
+          1.5171710328270611
+        ],
+        "changed": 25,
+        "improved": 20,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158550978997179,
+          0.8643366033572722,
+          0.8881773753804125,
+          0.023266214656186345
+        ],
+        "delta_pp": 0.35694786910122883,
+        "ci95_pp": [
+          -0.014534253277815875,
+          0.9119750920217485
+        ],
+        "changed": 5,
+        "improved": 4,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_base_ridge100_t0.03",
+      "gate": "dominance",
+      "group": "base",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge100.joblib",
+      "sha256": "64aa80f16da4688e13a8b71fbfcf44fa89c0d04693024e689dfebccc8d91cc1f",
+      "train_oof": {
+        "frame": [
+          0.7843702044193988,
+          0.8340848337221796,
+          0.858656091025621,
+          0.028284996712866262
+        ],
+        "delta_pp": 0.3720965856013612,
+        "ci95_pp": [
+          -0.5418949702531486,
+          1.1766765040406932
+        ],
+        "changed": 23,
+        "improved": 17,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150478050529879,
+          0.8633822081389856,
+          0.8855478047449605,
+          0.029102431557677284
+        ],
+        "delta_pp": 0.27621858442823094,
+        "ci95_pp": [
+          -0.11954073118977242,
+          0.853634227765723
+        ],
+        "changed": 6,
+        "improved": 3,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_base_ridge100_t0.05",
+      "gate": "dominance",
+      "group": "base",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge100.joblib",
+      "sha256": "64aa80f16da4688e13a8b71fbfcf44fa89c0d04693024e689dfebccc8d91cc1f",
+      "train_oof": {
+        "frame": [
+          0.7843474730343085,
+          0.8340562673683287,
+          0.8586917423134802,
+          0.02825122794061573
+        ],
+        "delta_pp": 0.3698234470923328,
+        "ci95_pp": [
+          -0.5425898113753648,
+          1.1685811354012303
+        ],
+        "changed": 20,
+        "improved": 15,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8152897966045808,
+          0.8631806948001515,
+          0.8856480314834849,
+          0.029093672170097926
+        ],
+        "delta_pp": 0.3004177395875255,
+        "ci95_pp": [
+          0.0,
+          0.845978269353509
+        ],
+        "changed": 2,
+        "improved": 2,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_base_ridge100_t0.03",
+      "gate": "present",
+      "group": "base",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge100.joblib",
+      "sha256": "64aa80f16da4688e13a8b71fbfcf44fa89c0d04693024e689dfebccc8d91cc1f",
+      "train_oof": {
+        "frame": [
+          0.7894161873411883,
+          0.8399153046908528,
+          0.8632448048294288,
+          0.02569803237979956
+        ],
+        "delta_pp": 0.876694877780311,
+        "ci95_pp": [
+          -0.28307074598625254,
+          1.923129706789192
+        ],
+        "changed": 159,
+        "improved": 69,
+        "harmed": 90,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8129003532725619,
+          0.8620292615429207,
+          0.8829704082919875,
+          0.02575831282576831
+        ],
+        "delta_pp": 0.06147340638563033,
+        "ci95_pp": [
+          -0.3546572387567721,
+          0.5790106530330377
+        ],
+        "changed": 64,
+        "improved": 17,
+        "harmed": 47,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_base_ridge100_t0.05",
+      "gate": "present",
+      "group": "base",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge100.joblib",
+      "sha256": "64aa80f16da4688e13a8b71fbfcf44fa89c0d04693024e689dfebccc8d91cc1f",
+      "train_oof": {
+        "frame": [
+          0.7894999564333176,
+          0.8399651580235039,
+          0.8637977844114516,
+          0.025691790577518536
+        ],
+        "delta_pp": 0.8850717869932446,
+        "ci95_pp": [
+          -0.27024125262631865,
+          1.9216733999320845
+        ],
+        "changed": 116,
+        "improved": 53,
+        "harmed": 63,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148764738609316,
+          0.8631538390543331,
+          0.8873853373098892,
+          0.025046803466456897
+        ],
+        "delta_pp": 0.2590854652225971,
+        "ci95_pp": [
+          -0.03293195215519516,
+          0.6356088285974688
+        ],
+        "changed": 22,
+        "improved": 9,
+        "harmed": 13,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_base_ridge100_t0.03",
+      "gate": "context_override",
+      "group": "base",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge100.joblib",
+      "sha256": "64aa80f16da4688e13a8b71fbfcf44fa89c0d04693024e689dfebccc8d91cc1f",
+      "train_oof": {
+        "frame": [
+          0.7868036178827226,
+          0.836803417711895,
+          0.8608686361830077,
+          0.02756160621017903
+        ],
+        "delta_pp": 0.6154379319337345,
+        "ci95_pp": [
+          -0.34633708380730843,
+          1.4900551946493574
+        ],
+        "changed": 28,
+        "improved": 21,
+        "harmed": 7,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8153398995646663,
+          0.8639453426364828,
+          0.8880393504598105,
+          0.023266722954863636
+        ],
+        "delta_pp": 0.3054280355960752,
+        "ci95_pp": [
+          -0.0686217111069709,
+          0.8717882947530597
+        ],
+        "changed": 7,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_base_ridge100_t0.05",
+      "gate": "context_override",
+      "group": "base",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge100.joblib",
+      "sha256": "64aa80f16da4688e13a8b71fbfcf44fa89c0d04693024e689dfebccc8d91cc1f",
+      "train_oof": {
+        "frame": [
+          0.7867808864976323,
+          0.8367748513580441,
+          0.8609042874708669,
+          0.027527837437928502
+        ],
+        "delta_pp": 0.6131647934247061,
+        "ci95_pp": [
+          -0.3568346913940432,
+          1.4882368007149835
+        ],
+        "changed": 25,
+        "improved": 19,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8155818911162592,
+          0.8637438292976487,
+          0.8881395771983349,
+          0.023257963567284278
+        ],
+        "delta_pp": 0.3296271907553697,
+        "ci95_pp": [
+          0.0,
+          0.8491222222801298
+        ],
+        "changed": 3,
+        "improved": 3,
+        "harmed": 0,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_base_tree_t0.03",
+      "gate": "dominance",
+      "group": "base",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_tree.joblib",
+      "sha256": "4c2a432c65289f9d163c719f859e773c579ab3d658d502fb8e8eb85bda2c7a75",
+      "train_oof": {
+        "frame": [
+          0.7848004228226783,
+          0.8345404423568685,
+          0.8597258492845352,
+          0.02700219042872973
+        ],
+        "delta_pp": 0.415118425929298,
+        "ci95_pp": [
+          0.05909358345282575,
+          0.9143316731933735
+        ],
+        "changed": 11,
+        "improved": 10,
+        "harmed": 1,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029778045068724376
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 2,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_base_tree_t0.05",
+      "gate": "dominance",
+      "group": "base",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_tree.joblib",
+      "sha256": "4c2a432c65289f9d163c719f859e773c579ab3d658d502fb8e8eb85bda2c7a75",
+      "train_oof": {
+        "frame": [
+          0.783629817401612,
+          0.8332224821984641,
+          0.8585906320485243,
+          0.02722935654568501
+        ],
+        "delta_pp": 0.29805788382266957,
+        "ci95_pp": [
+          0.01641270258308699,
+          0.6819828135824839
+        ],
+        "changed": 8,
+        "improved": 8,
+        "harmed": 0,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029778045068724376
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 2,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_base_tree_t0.03",
+      "gate": "present",
+      "group": "base",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_tree.joblib",
+      "sha256": "4c2a432c65289f9d163c719f859e773c579ab3d658d502fb8e8eb85bda2c7a75",
+      "train_oof": {
+        "frame": [
+          0.7889315796699168,
+          0.8389752792742319,
+          0.8636128162831535,
+          0.024458702298439747
+        ],
+        "delta_pp": 0.8282341106531371,
+        "ci95_pp": [
+          0.23303060547752671,
+          1.549075808777942
+        ],
+        "changed": 120,
+        "improved": 57,
+        "harmed": 62,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8134274773988484,
+          0.8620108868706059,
+          0.8863170247207821,
+          0.023308565859317235
+        ],
+        "delta_pp": 0.114185819014286,
+        "ci95_pp": [
+          -0.030531255688401863,
+          0.34335155481433766
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_base_tree_t0.05",
+      "gate": "present",
+      "group": "base",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_tree.joblib",
+      "sha256": "4c2a432c65289f9d163c719f859e773c579ab3d658d502fb8e8eb85bda2c7a75",
+      "train_oof": {
+        "frame": [
+          0.7872620479968448,
+          0.8369963726585747,
+          0.8623393815216124,
+          0.024715605148367643
+        ],
+        "delta_pp": 0.6612809433459511,
+        "ci95_pp": [
+          0.16692687781162224,
+          1.2925946999287885
+        ],
+        "changed": 25,
+        "improved": 17,
+        "harmed": 7,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8134274773988484,
+          0.8620108868706059,
+          0.8863170247207821,
+          0.023308565859317235
+        ],
+        "delta_pp": 0.114185819014286,
+        "ci95_pp": [
+          -0.030531255688401863,
+          0.34335155481433766
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_base_tree_t0.03",
+      "gate": "context_override",
+      "group": "base",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_tree.joblib",
+      "sha256": "4c2a432c65289f9d163c719f859e773c579ab3d658d502fb8e8eb85bda2c7a75",
+      "train_oof": {
+        "frame": [
+          0.7856774387362044,
+          0.8354192701584636,
+          0.860600935143102,
+          0.02655075765355455
+        ],
+        "delta_pp": 0.5028200172819197,
+        "ci95_pp": [
+          0.12051964705460703,
+          1.0087589157871357
+        ],
+        "changed": 13,
+        "improved": 12,
+        "harmed": 1,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8124685183215963,
+          0.8608384064760077,
+          0.8849456131008382,
+          0.023942336465910725
+        ],
+        "delta_pp": 0.018289911289078493,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.08762835350353271
+        ],
+        "changed": 3,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_base_tree_t0.05",
+      "gate": "context_override",
+      "group": "base",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_tree.joblib",
+      "sha256": "4c2a432c65289f9d163c719f859e773c579ab3d658d502fb8e8eb85bda2c7a75",
+      "train_oof": {
+        "frame": [
+          0.7843944147641402,
+          0.8340355306866142,
+          0.8594169218847374,
+          0.026780192951199464
+        ],
+        "delta_pp": 0.37451762007549405,
+        "ci95_pp": [
+          0.059764812079568706,
+          0.7835526822454992
+        ],
+        "changed": 9,
+        "improved": 9,
+        "harmed": 0,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8124685183215963,
+          0.8608384064760077,
+          0.8849456131008382,
+          0.023942336465910725
+        ],
+        "delta_pp": 0.018289911289078493,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.08762835350353271
+        ],
+        "changed": 3,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_ridge10_t0.03",
+      "gate": "dominance",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7844062289682711,
+          0.8341208528900769,
+          0.8585879565696488,
+          0.02825813329564165
+        ],
+        "delta_pp": 0.3756990404885814,
+        "ci95_pp": [
+          -0.5447132863218603,
+          1.1852163153687594
+        ],
+        "changed": 27,
+        "improved": 19,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158496616825384,
+          0.8640009544103425,
+          0.8861918452724675,
+          0.029085715446148904
+        ],
+        "delta_pp": 0.35640424738327664,
+        "ci95_pp": [
+          -0.048433500342071056,
+          0.9336435021832576
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_ridge10_t0.05",
+      "gate": "dominance",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7842981022621377,
+          0.8340634037914004,
+          0.8586492310794527,
+          0.028260027318015354
+        ],
+        "delta_pp": 0.3648863698752528,
+        "ci95_pp": [
+          -0.5550972844724095,
+          1.1746715787357294
+        ],
+        "changed": 26,
+        "improved": 18,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8156836049582731,
+          0.8634713114484232,
+          0.8857079507661441,
+          0.02909003315388305
+        ],
+        "delta_pp": 0.3397985749567548,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9012532187625766
+        ],
+        "changed": 5,
+        "improved": 4,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_cycle_ridge10_t0.03",
+      "gate": "present",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7899517526411359,
+          0.8409140363063231,
+          0.8640634252288398,
+          0.025199652928500366
+        ],
+        "delta_pp": 0.9302514077750891,
+        "ci95_pp": [
+          -0.21960633693027348,
+          2.0169427148528114
+        ],
+        "changed": 193,
+        "improved": 70,
+        "harmed": 123,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8156013246286117,
+          0.8655975550696894,
+          0.8902202190303553,
+          0.022329071874892838
+        ],
+        "delta_pp": 0.3315705419906105,
+        "ci95_pp": [
+          -0.2018805655146328,
+          0.9509624882921344
+        ],
+        "changed": 61,
+        "improved": 17,
+        "harmed": 44,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_cycle_ridge10_t0.05",
+      "gate": "present",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7904148282613618,
+          0.8411952536539468,
+          0.8651693966788816,
+          0.02517397496027493
+        ],
+        "delta_pp": 0.9765589697976624,
+        "ci95_pp": [
+          -0.16633066973156896,
+          2.0595632013355667
+        ],
+        "changed": 161,
+        "improved": 59,
+        "harmed": 102,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8161372559038379,
+          0.8654323512040719,
+          0.890170822114911,
+          0.022316700202873862
+        ],
+        "delta_pp": 0.38516366951322795,
+        "ci95_pp": [
+          -0.0678334756133457,
+          0.9129345114342864
+        ],
+        "changed": 47,
+        "improved": 15,
+        "harmed": 32,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_cycle_ridge10_t0.03",
+      "gate": "context_override",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.786778799127795,
+          0.836801661349623,
+          0.8608005017270356,
+          0.02753390255998674
+        ],
+        "delta_pp": 0.6129560564409918,
+        "ci95_pp": [
+          -0.35335841107088417,
+          1.489876906496496
+        ],
+        "changed": 31,
+        "improved": 22,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8161417561942168,
+          0.8645640889078398,
+          0.8886833909873175,
+          0.023250006843335256
+        ],
+        "delta_pp": 0.3856136985511209,
+        "ci95_pp": [
+          -0.04229964222759008,
+          0.9667064197128638
+        ],
+        "changed": 9,
+        "improved": 6,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_cycle_ridge10_t0.05",
+      "gate": "context_override",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7866706724216618,
+          0.8367442122509465,
+          0.8608617762368396,
+          0.02753579658236044
+        ],
+        "delta_pp": 0.6021433858276632,
+        "ci95_pp": [
+          -0.3667768794055822,
+          1.4798464207099942
+        ],
+        "changed": 30,
+        "improved": 21,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8159756994699515,
+          0.8640344459459204,
+          0.888199496480994,
+          0.0232543245510694
+        ],
+        "delta_pp": 0.36900802612459904,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.94367332640104
+        ],
+        "changed": 6,
+        "improved": 5,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_ridge100_t0.03",
+      "gate": "dominance",
+      "group": "cycle",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.78439443373337,
+          0.8340981864043727,
+          0.858553860769574,
+          0.028283018347339012
+        ],
+        "delta_pp": 0.374519516998488,
+        "ci95_pp": [
+          -0.5463137492511628,
+          1.1840234145606194
+        ],
+        "changed": 26,
+        "improved": 18,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.815562014276899,
+          0.8634064886032622,
+          0.885690328585693,
+          0.029088264177866766
+        ],
+        "delta_pp": 0.3276395068193475,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.8806790458038449
+        ],
+        "changed": 6,
+        "improved": 4,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_ridge100_t0.05",
+      "gate": "dominance",
+      "group": "cycle",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7841750495250485,
+          0.8339646014523908,
+          0.8585883470303357,
+          0.02828570565654355
+        ],
+        "delta_pp": 0.3525810961663309,
+        "ci95_pp": [
+          -0.5652199528024842,
+          1.1576255719410253
+        ],
+        "changed": 24,
+        "improved": 16,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8143817251965325,
+          0.8626760092343222,
+          0.884594515547958,
+          0.029176366330424454
+        ],
+        "delta_pp": 0.2096105987826983,
+        "ci95_pp": [
+          -0.10659657418727875,
+          0.7354283705353737
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_cycle_ridge100_t0.03",
+      "gate": "present",
+      "group": "cycle",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.790531154845394,
+          0.8412350289630651,
+          0.8643633450104699,
+          0.02522904793564784
+        ],
+        "delta_pp": 0.9881916282008913,
+        "ci95_pp": [
+          -0.142334931476954,
+          2.057792782849952
+        ],
+        "changed": 186,
+        "improved": 67,
+        "harmed": 119,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150321939678785,
+          0.8643905093944341,
+          0.887905663223343,
+          0.024054495578905818
+        ],
+        "delta_pp": 0.27465747591728956,
+        "ci95_pp": [
+          -0.1750685987256778,
+          0.7852372124034444
+        ],
+        "changed": 56,
+        "improved": 14,
+        "harmed": 42,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_cycle_ridge100_t0.05",
+      "gate": "present",
+      "group": "cycle",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7914647637504766,
+          0.842277375974131,
+          0.8659432325686973,
+          0.025162655251981275
+        ],
+        "delta_pp": 1.0815525187091328,
+        "ci95_pp": [
+          -0.07863900583348968,
+          2.17311136565791
+        ],
+        "changed": 137,
+        "improved": 55,
+        "harmed": 82,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814934813453389,
+          0.8646881595072046,
+          0.8891150493747318,
+          0.02240068006340729
+        ],
+        "delta_pp": 0.26491942446834094,
+        "ci95_pp": [
+          -0.13989647506969052,
+          0.7647912176180396
+        ],
+        "changed": 39,
+        "improved": 11,
+        "harmed": 28,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_cycle_ridge100_t0.03",
+      "gate": "context_override",
+      "group": "cycle",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7867670038928942,
+          0.8367789948639187,
+          0.8607664059269609,
+          0.027558787611684094
+        ],
+        "delta_pp": 0.6117765329508984,
+        "ci95_pp": [
+          -0.35396235970458484,
+          1.488297551804155
+        ],
+        "changed": 30,
+        "improved": 21,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158541087885774,
+          0.8639696231007594,
+          0.888181874300543,
+          0.023252555575053117
+        ],
+        "delta_pp": 0.35684895798719174,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9193962097924663
+        ],
+        "changed": 7,
+        "improved": 5,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_cycle_ridge100_t0.05",
+      "gate": "context_override",
+      "group": "cycle",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge100.joblib",
+      "sha256": "99dde090cf6e3b8ed11c835d2da8b21ce0704c25c05cc8a81d90eb04f7c712b1",
+      "train_oof": {
+        "frame": [
+          0.7865476196845727,
+          0.8366454099119368,
+          0.8608008921877226,
+          0.027561474920888628
+        ],
+        "delta_pp": 0.5898381121187413,
+        "ci95_pp": [
+          -0.38013191923821266,
+          1.4677028751785755
+        ],
+        "changed": 28,
+        "improved": 19,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814673819708211,
+          0.8632391437318194,
+          0.887086061262808,
+          0.023340657727610806
+        ],
+        "delta_pp": 0.23882004995054254,
+        "ci95_pp": [
+          -0.07738712301943451,
+          0.7646378217032179
+        ],
+        "changed": 3,
+        "improved": 2,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_tree_t0.03",
+      "gate": "dominance",
+      "group": "cycle",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7818260379142518,
+          0.8312573401708166,
+          0.8565261307580232,
+          0.028091467777136447
+        ],
+        "delta_pp": 0.11767993508665649,
+        "ci95_pp": [
+          -0.13771745445275752,
+          0.4394116343556326
+        ],
+        "changed": 10,
+        "improved": 8,
+        "harmed": 2,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029997997698810962
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 1,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_cycle_tree_t0.05",
+      "gate": "dominance",
+      "group": "cycle",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7817263840704615,
+          0.8311971234918892,
+          0.856545185636072,
+          0.02809338205743132
+        ],
+        "delta_pp": 0.10771455070762721,
+        "ci95_pp": [
+          -0.14726166662984289,
+          0.4261612905808119
+        ],
+        "changed": 9,
+        "improved": 7,
+        "harmed": 2,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8121764238099178,
+          0.8602752719785105,
+          0.8824540673859884,
+          0.029997997698810962
+        ],
+        "delta_pp": -0.010919539878765743,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.0
+        ],
+        "changed": 1,
+        "improved": 0,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_cycle_tree_t0.03",
+      "gate": "present",
+      "group": "cycle",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7852401292168641,
+          0.8348908020009561,
+          0.8597463173352698,
+          0.025481316462924095
+        ],
+        "delta_pp": 0.4590890653478844,
+        "ci95_pp": [
+          -0.07247700752351968,
+          1.109012505193715
+        ],
+        "changed": 44,
+        "improved": 23,
+        "harmed": 21,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148406638288481,
+          0.863650740917122,
+          0.8880911450899123,
+          0.023105779602965906
+        ],
+        "delta_pp": 0.2555044620142629,
+        "ci95_pp": [
+          -0.013366764299765533,
+          0.6214953891321782
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_cycle_tree_t0.05",
+      "gate": "present",
+      "group": "cycle",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7852223977922361,
+          0.8348819953198335,
+          0.8599480043687819,
+          0.025488377289758345
+        ],
+        "delta_pp": 0.4573159228850811,
+        "ci95_pp": [
+          -0.07167774904600163,
+          1.1029636772469122
+        ],
+        "changed": 32,
+        "improved": 18,
+        "harmed": 14,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148406638288481,
+          0.863650740917122,
+          0.8880911450899123,
+          0.023105779602965906
+        ],
+        "delta_pp": 0.2555044620142629,
+        "ci95_pp": [
+          -0.013366764299765533,
+          0.6214953891321782
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_cycle_tree_t0.03",
+      "gate": "context_override",
+      "group": "cycle",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7825906352767801,
+          0.8320703886589667,
+          0.8573524205942364,
+          0.0276423041826509
+        ],
+        "delta_pp": 0.19413967133948093,
+        "ci95_pp": [
+          -0.10376756026892478,
+          0.5447987589205794
+        ],
+        "changed": 11,
+        "improved": 9,
+        "harmed": 2,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8124685183215963,
+          0.8608384064760077,
+          0.8849456131008382,
+          0.02416228909599731
+        ],
+        "delta_pp": 0.018289911289078493,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.08762835350353271
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_cycle_tree_t0.05",
+      "gate": "context_override",
+      "group": "cycle",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_tree.joblib",
+      "sha256": "a4f0ea1b44d9a0668a69f16772d1be94e476718ebaf8fa51e95157fc643208e1",
+      "train_oof": {
+        "frame": [
+          0.7824909814329898,
+          0.8320101719800393,
+          0.8573714754722852,
+          0.027644218462945774
+        ],
+        "delta_pp": 0.18417428696045166,
+        "ci95_pp": [
+          -0.10551025282539842,
+          0.5343306735632251
+        ],
+        "changed": 10,
+        "improved": 8,
+        "harmed": 2,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8124685183215963,
+          0.8608384064760077,
+          0.8849456131008382,
+          0.02416228909599731
+        ],
+        "delta_pp": 0.018289911289078493,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.08762835350353271
+        ],
+        "changed": 2,
+        "improved": 1,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_context_ridge10_t0.03",
+      "gate": "dominance",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge10.joblib",
+      "sha256": "fead4bddd3adebe35bd4a498e018f05a5bba38822f2c05d23cbb2616c814bf48",
+      "train_oof": {
+        "frame": [
+          0.7808507311356659,
+          0.8305703648453275,
+          0.8546249396903383,
+          0.029200984530898286
+        ],
+        "delta_pp": 0.020149257228088864,
+        "ci95_pp": [
+          -1.0418525157050071,
+          0.9562374701781661
+        ],
+        "changed": 31,
+        "improved": 20,
+        "harmed": 11,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8149033045347702,
+          0.8633624163701218,
+          0.8854816451014869,
+          0.029154578278589735
+        ],
+        "delta_pp": 0.26176853260646266,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.8256019186228514
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_context_ridge10_t0.05",
+      "gate": "dominance",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge10.joblib",
+      "sha256": "fead4bddd3adebe35bd4a498e018f05a5bba38822f2c05d23cbb2616c814bf48",
+      "train_oof": {
+        "frame": [
+          0.7814043274865479,
+          0.8312652916346684,
+          0.8555792489189386,
+          0.029149275824751197
+        ],
+        "delta_pp": 0.0755088923162677,
+        "ci95_pp": [
+          -1.0073669792618603,
+          1.0425760492216793
+        ],
+        "changed": 28,
+        "improved": 18,
+        "harmed": 10,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.814631086862452,
+          0.8631366225670111,
+          0.8854393479992788,
+          0.029159986270820896
+        ],
+        "delta_pp": 0.23454676537464064,
+        "ci95_pp": [
+          -0.12340568471699953,
+          0.7982812402769924
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_context_ridge10_t0.03",
+      "gate": "present",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge10.joblib",
+      "sha256": "fead4bddd3adebe35bd4a498e018f05a5bba38822f2c05d23cbb2616c814bf48",
+      "train_oof": {
+        "frame": [
+          0.7874709755728775,
+          0.8386301539986795,
+          0.8616644684026463,
+          0.025625494156881964
+        ],
+        "delta_pp": 0.6821737009492307,
+        "ci95_pp": [
+          -0.615873030202364,
+          1.8821200831223448
+        ],
+        "changed": 186,
+        "improved": 68,
+        "harmed": 118,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8154983609031963,
+          0.8654094407929127,
+          0.8903529954190543,
+          0.02237055167051879
+        ],
+        "delta_pp": 0.3212741694490736,
+        "ci95_pp": [
+          -0.1618847368081333,
+          0.9139395122862576
+        ],
+        "changed": 54,
+        "improved": 17,
+        "harmed": 37,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_context_ridge10_t0.05",
+      "gate": "present",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge10.joblib",
+      "sha256": "fead4bddd3adebe35bd4a498e018f05a5bba38822f2c05d23cbb2616c814bf48",
+      "train_oof": {
+        "frame": [
+          0.7882226491013881,
+          0.8394239795077062,
+          0.8628624344190515,
+          0.025557829444358835
+        ],
+        "delta_pp": 0.7573410538002968,
+        "ci95_pp": [
+          -0.550455091953356,
+          1.9523271189537659
+        ],
+        "changed": 141,
+        "improved": 54,
+        "harmed": 87,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8153611219847031,
+          0.8652468802225485,
+          0.8901886807475965,
+          0.022385267845609638
+        ],
+        "delta_pp": 0.30755027759975445,
+        "ci95_pp": [
+          -0.15214723964163568,
+          0.8587565410756117
+        ],
+        "changed": 38,
+        "improved": 11,
+        "harmed": 27,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_context_ridge10_t0.03",
+      "gate": "context_override",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge10.joblib",
+      "sha256": "fead4bddd3adebe35bd4a498e018f05a5bba38822f2c05d23cbb2616c814bf48",
+      "train_oof": {
+        "frame": [
+          0.7826212274837622,
+          0.8330092420567407,
+          0.8564711902428394,
+          0.028530562255616895
+        ],
+        "delta_pp": 0.19719889203770433,
+        "ci95_pp": [
+          -0.9401546291951995,
+          1.2163618294827958
+        ],
+        "changed": 37,
+        "improved": 24,
+        "harmed": 13,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8151953990464487,
+          0.863925550867619,
+          0.8879731908163366,
+          0.023318869675776087
+        ],
+        "delta_pp": 0.2909779837743069,
+        "ci95_pp": [
+          -0.08808205893728882,
+          0.861134110018611
+        ],
+        "changed": 9,
+        "improved": 5,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_context_ridge10_t0.05",
+      "gate": "context_override",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge10.joblib",
+      "sha256": "fead4bddd3adebe35bd4a498e018f05a5bba38822f2c05d23cbb2616c814bf48",
+      "train_oof": {
+        "frame": [
+          0.783174823834644,
+          0.8337041688460816,
+          0.8574254994714399,
+          0.02847885354946979
+        ],
+        "delta_pp": 0.25255852712588317,
+        "ci95_pp": [
+          -0.9025415244945582,
+          1.293888815044688
+        ],
+        "changed": 34,
+        "improved": 22,
+        "harmed": 12,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8149231813741304,
+          0.8636997570645083,
+          0.8879308937141286,
+          0.023324277668007248
+        ],
+        "delta_pp": 0.2637562165424849,
+        "ci95_pp": [
+          -0.07832757255528122,
+          0.8168946666410193
+        ],
+        "changed": 5,
+        "improved": 3,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_context_ridge100_t0.03",
+      "gate": "dominance",
+      "group": "context",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge100.joblib",
+      "sha256": "aef4d19c914aa4e5a84e7c8f5677f6d8d657b7ce9d111b8175ec797cb77caa42",
+      "train_oof": {
+        "frame": [
+          0.7840870926610886,
+          0.8339203584431472,
+          0.8582749240044819,
+          0.02819696389605862
+        ],
+        "delta_pp": 0.34378540977033684,
+        "ci95_pp": [
+          -0.5831201081212686,
+          1.1828203488839788
+        ],
+        "changed": 27,
+        "improved": 19,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8152586264487278,
+          0.8635550017713588,
+          0.8859453636061838,
+          0.029138469676010467
+        ],
+        "delta_pp": 0.29730072400222224,
+        "ci95_pp": [
+          -0.04478306509554386,
+          0.8504391741007566
+        ],
+        "changed": 7,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_context_ridge100_t0.05",
+      "gate": "dominance",
+      "group": "context",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge100.joblib",
+      "sha256": "aef4d19c914aa4e5a84e7c8f5677f6d8d657b7ce9d111b8175ec797cb77caa42",
+      "train_oof": {
+        "frame": [
+          0.7839789659549553,
+          0.8338629093444707,
+          0.8583361985142858,
+          0.028198857918432324
+        ],
+        "delta_pp": 0.33297273915700815,
+        "ci95_pp": [
+          -0.5981123646221629,
+          1.17686491630108
+        ],
+        "changed": 26,
+        "improved": 18,
+        "harmed": 8,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150313611559492,
+          0.8634204303159397,
+          0.885527191514035,
+          0.02914709175059275
+        ],
+        "delta_pp": 0.2745741947243611,
+        "ci95_pp": [
+          -0.06750959437340498,
+          0.8270459808409214
+        ],
+        "changed": 5,
+        "improved": 3,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_context_ridge100_t0.03",
+      "gate": "present",
+      "group": "context",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge100.joblib",
+      "sha256": "aef4d19c914aa4e5a84e7c8f5677f6d8d657b7ce9d111b8175ec797cb77caa42",
+      "train_oof": {
+        "frame": [
+          0.7928295192010109,
+          0.8437990967427172,
+          0.8670220659777564,
+          0.024293307631171577
+        ],
+        "delta_pp": 1.2180280637625807,
+        "ci95_pp": [
+          0.05202541642211152,
+          2.33563881198855
+        ],
+        "changed": 173,
+        "improved": 67,
+        "harmed": 106,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8157396128760107,
+          0.8655343969636305,
+          0.8908167139237513,
+          0.022354463848291952
+        ],
+        "delta_pp": 0.3453993667305137,
+        "ci95_pp": [
+          -0.11905032054831584,
+          0.9106237770465666
+        ],
+        "changed": 51,
+        "improved": 16,
+        "harmed": 35,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_context_ridge100_t0.05",
+      "gate": "present",
+      "group": "context",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge100.joblib",
+      "sha256": "aef4d19c914aa4e5a84e7c8f5677f6d8d657b7ce9d111b8175ec797cb77caa42",
+      "train_oof": {
+        "frame": [
+          0.7928754671216973,
+          0.8437781727934567,
+          0.867069391122869,
+          0.024319844571178712
+        ],
+        "delta_pp": 1.222622855831206,
+        "ci95_pp": [
+          0.0716231026261388,
+          2.3168079416081535
+        ],
+        "changed": 133,
+        "improved": 57,
+        "harmed": 76,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8159045722228863,
+          0.8656052722413733,
+          0.8903977079551182,
+          0.022366269100707246
+        ],
+        "delta_pp": 0.3618953014180685,
+        "ci95_pp": [
+          -0.09370664927700999,
+          0.9203767939713239
+        ],
+        "changed": 36,
+        "improved": 13,
+        "harmed": 23,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_context_ridge100_t0.03",
+      "gate": "context_override",
+      "group": "context",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge100.joblib",
+      "sha256": "aef4d19c914aa4e5a84e7c8f5677f6d8d657b7ce9d111b8175ec797cb77caa42",
+      "train_oof": {
+        "frame": [
+          0.7858575890091847,
+          0.8363592356545603,
+          0.860121174556983,
+          0.027526541620777223
+        ],
+        "delta_pp": 0.5208350445799523,
+        "ci95_pp": [
+          -0.4797245586736506,
+          1.4441091605873324
+        ],
+        "changed": 33,
+        "improved": 23,
+        "harmed": 10,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8155507209604063,
+          0.864118136268856,
+          0.8884369093210336,
+          0.023302761073196815
+        ],
+        "delta_pp": 0.3265101751700665,
+        "ci95_pp": [
+          -0.03408812917768955,
+          0.8796486252686009
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_context_ridge100_t0.05",
+      "gate": "context_override",
+      "group": "context",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge100.joblib",
+      "sha256": "aef4d19c914aa4e5a84e7c8f5677f6d8d657b7ce9d111b8175ec797cb77caa42",
+      "train_oof": {
+        "frame": [
+          0.7857494623030514,
+          0.8363017865558838,
+          0.860182449066787,
+          0.027528435643150922
+        ],
+        "delta_pp": 0.5100223739666236,
+        "ci95_pp": [
+          -0.49128440891233055,
+          1.43392678255178
+        ],
+        "changed": 32,
+        "improved": 22,
+        "harmed": 10,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8153234556676277,
+          0.863983564813437,
+          0.888018737228885,
+          0.023311383147779103
+        ],
+        "delta_pp": 0.30378364589220536,
+        "ci95_pp": [
+          -0.03941151779145002,
+          0.8580334705766292
+        ],
+        "changed": 6,
+        "improved": 4,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_context_tree_t0.03",
+      "gate": "dominance",
+      "group": "context",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_tree.joblib",
+      "sha256": "4228a1109209e5b4f161b94fce497908ccbe3a12369c381aab844ab931d95e9a",
+      "train_oof": {
+        "frame": [
+          0.7838430751291225,
+          0.8332278298223711,
+          0.8587423892739475,
+          0.027416982903062655
+        ],
+        "delta_pp": 0.31938365657374057,
+        "ci95_pp": [
+          -0.14737887413098688,
+          0.8721248502438861
+        ],
+        "changed": 22,
+        "improved": 15,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8069514632884722,
+          0.8542365608050506,
+          0.8768592306953862,
+          0.030446718141291122
+        ],
+        "delta_pp": -0.5334155920233268,
+        "ci95_pp": [
+          -1.8031467766074154,
+          0.21381954041620094
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_context_tree_t0.05",
+      "gate": "dominance",
+      "group": "context",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_tree.joblib",
+      "sha256": "4228a1109209e5b4f161b94fce497908ccbe3a12369c381aab844ab931d95e9a",
+      "train_oof": {
+        "frame": [
+          0.7834139039140006,
+          0.8329734125184215,
+          0.8576593243383624,
+          0.027389666808897217
+        ],
+        "delta_pp": 0.2764665350615461,
+        "ci95_pp": [
+          -0.1842355630853692,
+          0.8241210687022733
+        ],
+        "changed": 17,
+        "improved": 13,
+        "harmed": 3,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8129255540775677,
+          0.8607584740280192,
+          0.8829777051733445,
+          0.029978250080016814
+        ],
+        "delta_pp": 0.06399348688622317,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.2247390802949667
+        ],
+        "changed": 3,
+        "improved": 2,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_context_tree_t0.03",
+      "gate": "present",
+      "group": "context",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_tree.joblib",
+      "sha256": "4228a1109209e5b4f161b94fce497908ccbe3a12369c381aab844ab931d95e9a",
+      "train_oof": {
+        "frame": [
+          0.7898232565679898,
+          0.8398332465354675,
+          0.8639158875711909,
+          0.024499094944938824
+        ],
+        "delta_pp": 0.9174018004604375,
+        "ci95_pp": [
+          0.19304820783291785,
+          1.7297031882998348
+        ],
+        "changed": 68,
+        "improved": 37,
+        "harmed": 30,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8059536625398322,
+          0.8530460185616295,
+          0.8783238438179592,
+          0.02546348853219209
+        ],
+        "delta_pp": -0.6331956668873318,
+        "ci95_pp": [
+          -1.9607919290137943,
+          0.23674809635849656
+        ],
+        "changed": 19,
+        "improved": 10,
+        "harmed": 9,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_context_tree_t0.05",
+      "gate": "present",
+      "group": "context",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_tree.joblib",
+      "sha256": "4228a1109209e5b4f161b94fce497908ccbe3a12369c381aab844ab931d95e9a",
+      "train_oof": {
+        "frame": [
+          0.7893250769358833,
+          0.8395243535426573,
+          0.8627813727667147,
+          0.024473831169683796
+        ],
+        "delta_pp": 0.8675838372497915,
+        "ci95_pp": [
+          0.14894167903629651,
+          1.681063493031059
+        ],
+        "changed": 48,
+        "improved": 28,
+        "harmed": 19,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8117098436370724,
+          0.8594328943186458,
+          0.8843460556753173,
+          0.024994672663522306
+        ],
+        "delta_pp": -0.05757755716331303,
+        "ci95_pp": [
+          -0.470574691426009,
+          0.3007284009072464
+        ],
+        "changed": 17,
+        "improved": 9,
+        "harmed": 8,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_context_tree_t0.03",
+      "gate": "context_override",
+      "group": "context",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_tree.joblib",
+      "sha256": "4228a1109209e5b4f161b94fce497908ccbe3a12369c381aab844ab931d95e9a",
+      "train_oof": {
+        "frame": [
+          0.7865565140083772,
+          0.8362633464235772,
+          0.8612469073679888,
+          0.026658688372784473
+        ],
+        "delta_pp": 0.5907275444992087,
+        "ci95_pp": [
+          0.02924126075716534,
+          1.2482736049086673
+        ],
+        "changed": 28,
+        "improved": 20,
+        "harmed": 7,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8072435578001507,
+          0.8547996953025478,
+          0.8793507764102362,
+          0.024611009538477474
+        ],
+        "delta_pp": -0.5042061408554825,
+        "ci95_pp": [
+          -1.8031467766074154,
+          0.3014478939197337
+        ],
+        "changed": 5,
+        "improved": 3,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_context_tree_t0.05",
+      "gate": "context_override",
+      "group": "context",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_tree.joblib",
+      "sha256": "4228a1109209e5b4f161b94fce497908ccbe3a12369c381aab844ab931d95e9a",
+      "train_oof": {
+        "frame": [
+          0.7860624136221004,
+          0.8359676047847877,
+          0.8600184001844418,
+          0.02663029752676498
+        ],
+        "delta_pp": 0.5413175058715246,
+        "ci95_pp": [
+          -0.018000844062448246,
+          1.1996352849981422
+        ],
+        "changed": 21,
+        "improved": 16,
+        "harmed": 4,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8132176485892462,
+          0.8613216085255164,
+          0.8854692508881943,
+          0.024142541477203166
+        ],
+        "delta_pp": 0.0932029380540674,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.3123674337984994
+        ],
+        "changed": 4,
+        "improved": 3,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_full_ridge10_t0.03",
+      "gate": "dominance",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge10.joblib",
+      "sha256": "4bb76b8f139af724bede9cbf9e3aed9f1559eb907de0cc56a933be377b510d03",
+      "train_oof": {
+        "frame": [
+          0.7806359967622588,
+          0.8298085817843993,
+          0.8548932474313289,
+          0.030780297933390793
+        ],
+        "delta_pp": -0.001324180112634299,
+        "ci95_pp": [
+          -1.1115331530891126,
+          0.9978182496528863
+        ],
+        "changed": 33,
+        "improved": 22,
+        "harmed": 11,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8147941091359825,
+          0.8632945838008406,
+          0.8854816451014869,
+          0.029150175206211364
+        ],
+        "delta_pp": 0.2508489927276969,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.7928432989865541
+        ],
+        "changed": 9,
+        "improved": 4,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_full_ridge10_t0.05",
+      "gate": "dominance",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge10.joblib",
+      "sha256": "4bb76b8f139af724bede9cbf9e3aed9f1559eb907de0cc56a933be377b510d03",
+      "train_oof": {
+        "frame": [
+          0.7804169515553544,
+          0.8296823800861532,
+          0.8549651662419886,
+          0.030786209205344448
+        ],
+        "delta_pp": -0.02322870080307543,
+        "ci95_pp": [
+          -1.136191046151604,
+          0.9846691622305009
+        ],
+        "changed": 30,
+        "improved": 19,
+        "harmed": 11,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150248952161443,
+          0.8634272392152827,
+          0.885499267281938,
+          0.02915634725460602
+        ],
+        "delta_pp": 0.27392760074386996,
+        "ci95_pp": [
+          -0.10370844975113869,
+          0.8352976338937877
+        ],
+        "changed": 7,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_full_ridge10_t0.03",
+      "gate": "present",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge10.joblib",
+      "sha256": "4bb76b8f139af724bede9cbf9e3aed9f1559eb907de0cc56a933be377b510d03",
+      "train_oof": {
+        "frame": [
+          0.7881689810550295,
+          0.8384778821951165,
+          0.8626447647502445,
+          0.026953076239504655
+        ],
+        "delta_pp": 0.7519742491644543,
+        "ci95_pp": [
+          -0.5659075129275759,
+          1.977557450943196
+        ],
+        "changed": 200,
+        "improved": 76,
+        "harmed": 124,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8148293608537641,
+          0.8650380090938901,
+          0.8899235224513052,
+          0.022403410693115633
+        ],
+        "delta_pp": 0.2543741645058617,
+        "ci95_pp": [
+          -0.2291531952505466,
+          0.8396816312354834
+        ],
+        "changed": 56,
+        "improved": 15,
+        "harmed": 41,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_full_ridge10_t0.05",
+      "gate": "present",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge10.joblib",
+      "sha256": "4bb76b8f139af724bede9cbf9e3aed9f1559eb907de0cc56a933be377b510d03",
+      "train_oof": {
+        "frame": [
+          0.7878034989783375,
+          0.8382133910128818,
+          0.8626854009573138,
+          0.02694922703068443
+        ],
+        "delta_pp": 0.7154260414952457,
+        "ci95_pp": [
+          -0.6106416147417295,
+          1.9448264199692047
+        ],
+        "changed": 165,
+        "improved": 63,
+        "harmed": 102,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158019838747957,
+          0.8655589543101087,
+          0.8905557180113448,
+          0.02237811079030822
+        ],
+        "delta_pp": 0.3516364666090036,
+        "ci95_pp": [
+          -0.11304200750601012,
+          0.9265287955640812
+        ],
+        "changed": 43,
+        "improved": 12,
+        "harmed": 31,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_full_ridge10_t0.03",
+      "gate": "context_override",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge10.joblib",
+      "sha256": "4bb76b8f139af724bede9cbf9e3aed9f1559eb907de0cc56a933be377b510d03",
+      "train_oof": {
+        "frame": [
+          0.7832885923377139,
+          0.8328063228554362,
+          0.8573977655253704,
+          0.030021163170144943
+        ],
+        "delta_pp": 0.26393537743287093,
+        "ci95_pp": [
+          -0.9129585389067264,
+          1.329326058504445
+        ],
+        "changed": 38,
+        "improved": 26,
+        "harmed": 12,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150862036476609,
+          0.8638577182983378,
+          0.8879731908163366,
+          0.023314466603397716
+        ],
+        "delta_pp": 0.28005844389554113,
+        "ci95_pp": [
+          -0.08808205893728882,
+          0.8283754903823137
+        ],
+        "changed": 10,
+        "improved": 5,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_full_ridge10_t0.05",
+      "gate": "context_override",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge10.joblib",
+      "sha256": "4bb76b8f139af724bede9cbf9e3aed9f1559eb907de0cc56a933be377b510d03",
+      "train_oof": {
+        "frame": [
+          0.7830695471308095,
+          0.83268012115719,
+          0.85746968433603,
+          0.030027074442098598
+        ],
+        "delta_pp": 0.2420308567424298,
+        "ci95_pp": [
+          -0.9385608578544532,
+          1.312615361424428
+        ],
+        "changed": 35,
+        "improved": 23,
+        "harmed": 12,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8153169897278227,
+          0.86399037371278,
+          0.8879908129967877,
+          0.023320638651792368
+        ],
+        "delta_pp": 0.3031370519117142,
+        "ci95_pp": [
+          -0.0778333746420685,
+          0.8712682055241499
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_full_ridge100_t0.03",
+      "gate": "dominance",
+      "group": "full",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge100.joblib",
+      "sha256": "995d2ec42f622fef6ab57d6c7b5eb8054fdd552023ed600a239c18a1669c639c",
+      "train_oof": {
+        "frame": [
+          0.7824413154078486,
+          0.8322321996180038,
+          0.8565695286622197,
+          0.029127982739804385
+        ],
+        "delta_pp": 0.17920768444633317,
+        "ci95_pp": [
+          -0.8989869088885218,
+          1.1208899933796292
+        ],
+        "changed": 28,
+        "improved": 19,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8149033045347702,
+          0.8633624163701218,
+          0.8854816451014869,
+          0.029154578278589735
+        ],
+        "delta_pp": 0.26176853260646266,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.8256019186228514
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_full_ridge100_t0.05",
+      "gate": "dominance",
+      "group": "full",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge100.joblib",
+      "sha256": "995d2ec42f622fef6ab57d6c7b5eb8054fdd552023ed600a239c18a1669c639c",
+      "train_oof": {
+        "frame": [
+          0.7823331887017152,
+          0.8321747505193273,
+          0.8566308031720236,
+          0.029129876762178087
+        ],
+        "delta_pp": 0.16839501383300454,
+        "ci95_pp": [
+          -0.9078076945912065,
+          1.1083225941579755
+        ],
+        "changed": 27,
+        "improved": 18,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150313611559492,
+          0.8634204303159397,
+          0.885527191514035,
+          0.02914709175059275
+        ],
+        "delta_pp": 0.2745741947243611,
+        "ci95_pp": [
+          -0.06750959437340498,
+          0.8270459808409214
+        ],
+        "changed": 5,
+        "improved": 3,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_full_ridge100_t0.03",
+      "gate": "present",
+      "group": "full",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge100.joblib",
+      "sha256": "995d2ec42f622fef6ab57d6c7b5eb8054fdd552023ed600a239c18a1669c639c",
+      "train_oof": {
+        "frame": [
+          0.7901840139814746,
+          0.8410225054204229,
+          0.8644094244198697,
+          0.02527573222748505
+        ],
+        "delta_pp": 0.9534775418089543,
+        "ci95_pp": [
+          -0.3291065626621679,
+          2.1135225950982504
+        ],
+        "changed": 188,
+        "improved": 71,
+        "harmed": 117,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8152855002214588,
+          0.8652889711134776,
+          0.8901436684994152,
+          0.02238919730181986
+        ],
+        "delta_pp": 0.2999881012753273,
+        "ci95_pp": [
+          -0.17226862570290297,
+          0.8833750878839053
+        ],
+        "changed": 54,
+        "improved": 16,
+        "harmed": 38,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_full_ridge100_t0.05",
+      "gate": "present",
+      "group": "full",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge100.joblib",
+      "sha256": "995d2ec42f622fef6ab57d6c7b5eb8054fdd552023ed600a239c18a1669c639c",
+      "train_oof": {
+        "frame": [
+          0.7900133206134444,
+          0.8408808802675222,
+          0.8644052057689117,
+          0.02527621241190831
+        ],
+        "delta_pp": 0.936408205005945,
+        "ci95_pp": [
+          -0.33400523710628877,
+          2.0856206065657514
+        ],
+        "changed": 146,
+        "improved": 58,
+        "harmed": 88,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158480332591959,
+          0.8655736023843928,
+          0.8903977079551182,
+          0.022356125297878403
+        ],
+        "delta_pp": 0.3562414050490285,
+        "ci95_pp": [
+          -0.09580379177350547,
+          0.9094645532507759
+        ],
+        "changed": 38,
+        "improved": 13,
+        "harmed": 25,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_full_ridge100_t0.03",
+      "gate": "context_override",
+      "group": "full",
+      "kind": "ridge100",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge100.joblib",
+      "sha256": "995d2ec42f622fef6ab57d6c7b5eb8054fdd552023ed600a239c18a1669c639c",
+      "train_oof": {
+        "frame": [
+          0.7850939109833036,
+          0.8352299406890406,
+          0.8590740467562612,
+          0.028368847976558528
+        ],
+        "delta_pp": 0.4444672419918384,
+        "ci95_pp": [
+          -0.7026741843631801,
+          1.4558117806906614
+        ],
+        "changed": 33,
+        "improved": 23,
+        "harmed": 10,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8151953990464487,
+          0.863925550867619,
+          0.8879731908163366,
+          0.023318869675776087
+        ],
+        "delta_pp": 0.2909779837743069,
+        "ci95_pp": [
+          -0.08808205893728882,
+          0.861134110018611
+        ],
+        "changed": 9,
+        "improved": 5,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_full_ridge100_t0.05",
+      "gate": "context_override",
+      "group": "full",
+      "kind": "ridge100",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge100.joblib",
+      "sha256": "995d2ec42f622fef6ab57d6c7b5eb8054fdd552023ed600a239c18a1669c639c",
+      "train_oof": {
+        "frame": [
+          0.7849857842771703,
+          0.8351724915903641,
+          0.8591353212660651,
+          0.028370741998932223
+        ],
+        "delta_pp": 0.43365457137850977,
+        "ci95_pp": [
+          -0.7152325003470043,
+          1.4494903942331805
+        ],
+        "changed": 32,
+        "improved": 22,
+        "harmed": 10,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8153234556676277,
+          0.863983564813437,
+          0.888018737228885,
+          0.023311383147779103
+        ],
+        "delta_pp": 0.30378364589220536,
+        "ci95_pp": [
+          -0.03941151779145002,
+          0.8580334705766292
+        ],
+        "changed": 6,
+        "improved": 4,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_full_tree_t0.03",
+      "gate": "dominance",
+      "group": "full",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_tree.joblib",
+      "sha256": "ba30713b86502d389e49814eb679d57000ed80c7f7ce6cd4e9f4d29ba458fcbf",
+      "train_oof": {
+        "frame": [
+          0.7837070883738312,
+          0.8331546474904555,
+          0.8589741263840054,
+          0.027431586162492975
+        ],
+        "delta_pp": 0.30578498104457846,
+        "ci95_pp": [
+          -0.16203726781289637,
+          0.8546513128498591
+        ],
+        "changed": 21,
+        "improved": 14,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8125319464238903,
+          0.8604320361523907,
+          0.8828573024331936,
+          0.029980527354710386
+        ],
+        "delta_pp": 0.024632721518476803,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.10665678419172764
+        ],
+        "changed": 4,
+        "improved": 2,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "dominance_full_tree_t0.05",
+      "gate": "dominance",
+      "group": "full",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_tree.joblib",
+      "sha256": "ba30713b86502d389e49814eb679d57000ed80c7f7ce6cd4e9f4d29ba458fcbf",
+      "train_oof": {
+        "frame": [
+          0.7846756777145559,
+          0.834085658576475,
+          0.8601635601452785,
+          0.027381451363519282
+        ],
+        "delta_pp": 0.40264391511704567,
+        "ci95_pp": [
+          -0.011717659015428386,
+          0.920155860240306
+        ],
+        "changed": 17,
+        "improved": 13,
+        "harmed": 3,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8129255540775677,
+          0.8607584740280192,
+          0.8829777051733445,
+          0.029978250080016814
+        ],
+        "delta_pp": 0.06399348688622317,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.2247390802949667
+        ],
+        "changed": 3,
+        "improved": 2,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_full_tree_t0.03",
+      "gate": "present",
+      "group": "full",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_tree.joblib",
+      "sha256": "ba30713b86502d389e49814eb679d57000ed80c7f7ce6cd4e9f4d29ba458fcbf",
+      "train_oof": {
+        "frame": [
+          0.7882264772485851,
+          0.8382182253765306,
+          0.8629372686405414,
+          0.025084594471688485
+        ],
+        "delta_pp": 0.7577238685199619,
+        "ci95_pp": [
+          0.08167719409150072,
+          1.5296751239786772
+        ],
+        "changed": 64,
+        "improved": 32,
+        "harmed": 31,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8115511059906566,
+          0.8592503279692512,
+          0.8843219155557664,
+          0.024995209638681286
+        ],
+        "delta_pp": -0.073451321804896,
+        "ci95_pp": [
+          -0.4555293971498032,
+          0.20157108228886492
+        ],
+        "changed": 20,
+        "improved": 11,
+        "harmed": 9,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "present_full_tree_t0.05",
+      "gate": "present",
+      "group": "full",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_tree.joblib",
+      "sha256": "ba30713b86502d389e49814eb679d57000ed80c7f7ce6cd4e9f4d29ba458fcbf",
+      "train_oof": {
+        "frame": [
+          0.7893363144582616,
+          0.8392244170557036,
+          0.8643404657214976,
+          0.025048213885802723
+        ],
+        "delta_pp": 0.8687075894876115,
+        "ci95_pp": [
+          0.2165922641667698,
+          1.6117066749989892
+        ],
+        "changed": 50,
+        "improved": 28,
+        "harmed": 21,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8119200451212236,
+          0.8595484053262528,
+          0.8845184928147725,
+          0.024986912565101334
+        ],
+        "delta_pp": -0.036557408748194575,
+        "ci95_pp": [
+          -0.45534758377471,
+          0.31418718848726707
+        ],
+        "changed": 18,
+        "improved": 10,
+        "harmed": 8,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_full_tree_t0.03",
+      "gate": "context_override",
+      "group": "full",
+      "kind": "tree",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_tree.joblib",
+      "sha256": "ba30713b86502d389e49814eb679d57000ed80c7f7ce6cd4e9f4d29ba458fcbf",
+      "train_oof": {
+        "frame": [
+          0.7864681278483664,
+          0.8362183134717,
+          0.8614738453775873,
+          0.026671618306434292
+        ],
+        "delta_pp": 0.5818889284980995,
+        "ci95_pp": [
+          0.02374697404674306,
+          1.2439600859587598
+        ],
+        "changed": 25,
+        "improved": 18,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8128240409355687,
+          0.860995170649888,
+          0.8853488481480434,
+          0.024144818751896738
+        ],
+        "delta_pp": 0.05384217268632104,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.19428513769526035
+        ],
+        "changed": 5,
+        "improved": 3,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_full_tree_t0.05",
+      "gate": "context_override",
+      "group": "full",
+      "kind": "tree",
+      "threshold": 0.05,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_tree.joblib",
+      "sha256": "ba30713b86502d389e49814eb679d57000ed80c7f7ce6cd4e9f4d29ba458fcbf",
+      "train_oof": {
+        "frame": [
+          0.7874367171890911,
+          0.8371493245577194,
+          0.8626632791388608,
+          0.0266214835074606
+        ],
+        "delta_pp": 0.6787478625705666,
+        "ci95_pp": [
+          0.15001471383205475,
+          1.3046432321088504
+        ],
+        "changed": 21,
+        "improved": 17,
+        "harmed": 3,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8132176485892462,
+          0.8613216085255164,
+          0.8854692508881943,
+          0.024142541477203166
+        ],
+        "delta_pp": 0.0932029380540674,
+        "ci95_pp": [
+          -0.032758619636297226,
+          0.3123674337984994
+        ],
+        "changed": 4,
+        "improved": 3,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    }
+  ]
+}

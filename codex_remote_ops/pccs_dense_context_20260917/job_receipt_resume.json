@@ -1,0 +1,7 @@
+{
+  "job_id": "job-4aba57b4-9f98-48d1-bb97-2ae7d7f775de",
+  "name": "v2sam-dense-context-pccs-20260917-r3",
+  "gpus": 4,
+  "submitted_at": "2026-09-17 01:36:05 +08:00",
+  "purpose": "resume target and validate frozen native policies with current bank; completed and released"
+}

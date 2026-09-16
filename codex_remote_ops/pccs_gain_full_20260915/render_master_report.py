@@ -23,6 +23,9 @@ np_result=O/'pccs_native_context_20260916/calibration_results.json'
 if np_result.exists():
  n=load(np_result);parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- PCCS内部context首版已实现并完成训练内消融（§10），未使用O-MaMa网络。仅循环加权ΔIoU为0；仅Fusion复核/两项结合在校准分别为{n['methods']['review']['delta_pp']:+.4f}/{n['methods']['both']['delta_pp']:+.4f}点，均未晋级，未启动新目标测试。实现完整不等于已证明增益或创新性。")
 completed={}
+dr=O/'pccs_dense_context_20260917/exo2exo_results.json'
+if dr.exists():
+ d=load(dr);v=d['methods']['primary'];ci=v['ci95_pp'];parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 最新原生PCCS多方案已获得正增益（§11）：预选稠密循环置信度方案IoU {d['methods']['baseline']['frame'][0]*100:.4f}→{v['frame'][0]*100:.4f}，{v['delta_pp']:+.4f}点，95%区间[{ci[0]:.4f}, {ci[1]:.4f}]。同候选O-MaMa参考为{d['methods']['omama_reference']['frame'][0]*100:.4f}，尚未追平；显式邻域context没有显示额外优势，不能混写贡献归因。")
 for title,p in sources:
  parts+=['',f'#### {title}','']
  if not p.exists():
@@ -152,5 +155,7 @@ if native_plan.exists():
  parts+=['','## 10. 方法定位修正：PCCS内部上下文增强','','根据用户最新要求，后续主线回到PCCS本身。§3及此前使用公开O-MaMa头/权重的实现，明确作为**外接匹配器组合基线**保留，其借用部分不能写作我们的原创context机制。已有候选生成未被删除，但最终决策可被外部匹配结果覆盖，这与在PCCS循环验证内部增强context不同。', '', '新主方案复用现有DINOv3与前后向对应，在原循环支持票/置信度中加入可靠的邻域语义证据，并独立处理fusion-first早退出：只有可靠context冲突时转入原PCCS循环复核。上下文缺失或不可靠时回到原流程。先固定候选验证选择机制，再单独研究context改善前向点定位，避免混淆归因。', '', '**首版内部增强已实现，真实实验状态与结果见§10.1之后。** 方向有合理动机，但创新性与效果均需文献对照、组件消融和独立验证；既有O-MaMa组合增益不能代替这些证据。完整实现边界与消融计划：[PCCS内部context计划](../pccs_native_context_20260916/PLAN.md)。']
 from append_native_report import append_native
 append_native(parts,O)
+from append_dense_report import append_dense
+append_dense(parts,O)
 report.write_text('\n'.join(parts)+'\n',encoding='utf8');assert report.read_text(encoding='utf8').count('```')%2==0
 print(json.dumps({'report':str(report),'characters':len(report.read_text(encoding='utf8')),'completed_sections':list(completed),'sha256':hashlib.sha256(report.read_bytes()).hexdigest()},ensure_ascii=False))

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "worker.py": "a58b9674c24dbf7097a15462fc5c938a9934b27e255d7a69c912ebe1be04c735",
+    "native_bridge.py": "19fee16a7f0ce7a59352e8c4e2e7f6df52a5765632d6a7b2ab691c79f0353929",
+    "data_utils.py": "ebb538ea5dec87f26a8bb8c9347281478d86d7b4cbb049f746412b939f100466",
+    "evaluate.py": "05d8d965435188d1f6d9acf6314b70ddf34f59ad7d12b8802db349fa98cde1d4",
+    "repair_reference.py": "ba46ce2e4b1500da5600d7305c5a157d7b995cbce9207918a7abdcc0641770c4",
+    "resume_controller.py": "b0212267a397b1692c335313508897b7004dea0916f49f1b7b1b073399f1e0db",
+    "replay_gate.py": "4290ff2fc56381358b53cce541b3683444b6c99fe3a40ae48ee10ecfc3be7637",
+    "gate_policy.py": "93f1e72662ebb85d14a239771a4dbf7ee6cc5589f47388660acdb4cdfcd5ebd9",
+    "gate_selection_deployed.json": "9a16e20be784104428bcfb47a71af231d283ccad9e3f75e13ab102963b1f6327",
+    "PLAN.md": "bee4141dbc8e594adf93fb841b71541231581b1fc293eb064825fc67afc440d8"
+  },
+  "models": {
+    "cycle_ridge10.joblib": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+    "base_ridge10.joblib": "8196414f7483fed4550e2ff542a83daa3fd72db90673d3f50fa544ccd86b57d4",
+    "context_ridge10.joblib": "fead4bddd3adebe35bd4a498e018f05a5bba38822f2c05d23cbb2616c814bf48",
+    "full_ridge10.joblib": "4bb76b8f139af724bede9cbf9e3aed9f1559eb907de0cc56a933be377b510d03"
+  },
+  "protocol": "same current candidate bank; separately repair external reference only for documented historical drift",
+  "command_chars": 40167
+}

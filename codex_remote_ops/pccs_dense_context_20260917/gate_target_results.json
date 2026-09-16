@@ -1,0 +1,210 @@
+{
+  "selected": {
+    "name": "context_override_cycle_ridge10_t0.03",
+    "gate": "context_override",
+    "group": "cycle",
+    "kind": "ridge10",
+    "threshold": 0.03,
+    "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/gate_models/cycle_ridge10.joblib",
+    "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+    "train_oof": {
+      "frame": [
+        0.785592101921844,
+        0.8354717346705741,
+        0.859020874612027,
+        0.02774116265387157
+      ],
+      "delta_pp": 0.4942863358458756,
+      "ci95_pp": [
+        -0.4671808069459378,
+        1.3674405111735015
+      ],
+      "changed": 31,
+      "improved": 21,
+      "harmed": 10,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8161417561942168,
+        0.8645640889078398,
+        0.8886833909873175,
+        0.023250006843335256
+      ],
+      "delta_pp": 0.3856136985511209,
+      "ci95_pp": [
+        -0.04229964222759008,
+        0.9667064197128638
+      ],
+      "changed": 9,
+      "improved": 6,
+      "harmed": 3,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    },
+    "family": "calibrated"
+  },
+  "methods": {
+    "primary": {
+      "frame": [
+        0.4131096465437005,
+        0.46077594553273254,
+        0.5277946411516242,
+        0.09833168278164474
+      ],
+      "delta_pp": 2.2919526432828774,
+      "ci95_pp": [
+        0.40194454245998223,
+        4.113771040069728
+      ],
+      "changed": 82,
+      "improved": 51,
+      "harmed": 15,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "wrong_context": {
+      "frame": [
+        0.4134274577468778,
+        0.4609786450749961,
+        0.5283671353742021,
+        0.09786895537478774
+      ],
+      "delta_pp": 2.323733763600605,
+      "ci95_pp": [
+        0.4193668238758815,
+        4.148908645557733
+      ],
+      "changed": 81,
+      "improved": 51,
+      "harmed": 14,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "r1_dominance_same_model": {
+      "frame": [
+        0.4133540881323158,
+        0.4608380267157653,
+        0.5270893149644702,
+        0.0993653669036413
+      ],
+      "delta_pp": 2.3163968021444035,
+      "ci95_pp": [
+        0.41729616836609396,
+        4.141263850298276
+      ],
+      "changed": 75,
+      "improved": 49,
+      "harmed": 14,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "base_matched": {
+      "frame": [
+        0.4062358196219867,
+        0.45324010681576776,
+        0.520470940662455,
+        0.10107168612818548
+      ],
+      "delta_pp": 1.6045699511114948,
+      "ci95_pp": [
+        0.1740168072181958,
+        3.406724981956904
+      ],
+      "changed": 54,
+      "improved": 34,
+      "harmed": 8,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "cycle_matched": {
+      "frame": [
+        0.4131096465437005,
+        0.46077594553273254,
+        0.5277946411516242,
+        0.09833168278164474
+      ],
+      "delta_pp": 2.2919526432828774,
+      "ci95_pp": [
+        0.40194454245998223,
+        4.113771040069728
+      ],
+      "changed": 82,
+      "improved": 51,
+      "harmed": 15,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "context_matched": {
+      "frame": [
+        0.4105937400260785,
+        0.458470394757012,
+        0.5242378402892515,
+        0.09956587122867579
+      ],
+      "delta_pp": 2.040361991520674,
+      "ci95_pp": [
+        0.5149047559533432,
+        3.8071189461278436
+      ],
+      "changed": 63,
+      "improved": 39,
+      "harmed": 12,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "full_matched": {
+      "frame": [
+        0.4121730713776554,
+        0.45944834094186,
+        0.5263524690152847,
+        0.09993341711762695
+      ],
+      "delta_pp": 2.198295126678367,
+      "ci95_pp": [
+        0.4769325268030086,
+        3.9519761179167605
+      ],
+      "changed": 76,
+      "improved": 49,
+      "harmed": 13,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    }
+  },
+  "primary_vs_omama": {
+    "frame": [
+      0.4131096465437005,
+      0.46077594553273254,
+      0.5277946411516242,
+      0.09833168278164474
+    ],
+    "delta_pp": -1.0870750354772207,
+    "ci95_pp": [
+      -2.2536816926599075,
+      0.3086597779607005
+    ],
+    "changed": 248,
+    "improved": 43,
+    "harmed": 89,
+    "pairs": 1094,
+    "objects": 1094,
+    "takes": 20
+  },
+  "native_bridge_replay_exact": true,
+  "gt_label_counterfactual": true,
+  "strength_zero_parity": true,
+  "coverage": "exact",
+  "historical_drift_objects": 0,
+  "source_selection_frozen": true
+}

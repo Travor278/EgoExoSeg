@@ -1,0 +1,18 @@
+--- a/projects/v2sam_pccs/evaluation/pccs_metric.py
++++ b/projects/v2sam_pccs/evaluation/pccs_metric.py
+@@ -1,3 +1,4 @@
++from native_bridge import native_select
+ import json
+ import os
+ 
+@@ -1017,6 +1018,10 @@
+                                 best_expert = "fusion"  # 最后的回退选项
+ 
+                 # 根据选择策略获取最终指标和预测 mask。
++                native_expert = native_select(self, data_samples[i], raw_prompt_mask_j, j, best_expert)
++                if native_expert != best_expert:
++                    best_expert = native_expert
++                    selection_reason = 'native_dense_cycle_challenger'
+                 fallback_expert = best_expert
+                 fallback_selection_reason = selection_reason
+                 selector_model_scores = {}

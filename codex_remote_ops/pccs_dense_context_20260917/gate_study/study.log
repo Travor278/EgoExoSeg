@@ -1,0 +1,13 @@
+base ridge10
+base ridge100
+base tree
+cycle ridge10
+cycle ridge100
+cycle tree
+context ridge10
+context ridge100
+context tree
+full ridge10
+full ridge100
+full tree
+FROZEN context_override_cycle_ridge10_t0.03 0.4942863358458756 0.3856136985511209

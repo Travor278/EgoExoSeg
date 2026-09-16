@@ -1,0 +1,262 @@
+{
+  "selected": {
+    "name": "cycle_ridge10_t0.03",
+    "family": "calibrated",
+    "group": "cycle",
+    "kind": "ridge10",
+    "threshold": 0.03,
+    "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_ridge10.joblib",
+    "sha256": "bf29e873ed7c5a6e6ebd157b2859b1f1a018564202bd6883e1964cae088cd06c",
+    "train_oof": {
+      "frame": [
+        0.7832195317623198,
+        0.832790926211028,
+        0.8568083294546404,
+        0.028465393389526496
+      ],
+      "delta_pp": 0.2570293198934653,
+      "ci95_pp": [
+        -0.652034959592533,
+        1.0612768960757721
+      ],
+      "changed": 27,
+      "improved": 18,
+      "harmed": 9,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8158496616825384,
+        0.8640009544103425,
+        0.8861918452724675,
+        0.029085715446148904
+      ],
+      "delta_pp": 0.35640424738327664,
+      "ci95_pp": [
+        -0.048433500342071056,
+        0.9336435021832576
+      ],
+      "changed": 8,
+      "improved": 5,
+      "harmed": 3,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    }
+  },
+  "matched_controls": [
+    {
+      "name": "base_ridge10_t0.03",
+      "family": "calibrated",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/base_ridge10.joblib",
+      "sha256": "cdc963e290323769e9464f8124b97b5f20185a3d62702e2aa624d765f7ae36f8",
+      "train_oof": {
+        "frame": [
+          0.7846313126066589,
+          0.8343227381465447,
+          0.8589824978497945,
+          0.02812501869113811
+        ],
+        "delta_pp": 0.39820740432737184,
+        "ci95_pp": [
+          -0.31147938158634736,
+          1.0611861444938564
+        ],
+        "changed": 20,
+        "improved": 15,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150478050529879,
+          0.8633822081389856,
+          0.8855478047449605,
+          0.029102431557677284
+        ],
+        "delta_pp": 0.27621858442823094,
+        "ci95_pp": [
+          -0.11954073118977242,
+          0.853634227765723
+        ],
+        "changed": 6,
+        "improved": 3,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "cycle_ridge10_t0.03",
+      "family": "calibrated",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_ridge10.joblib",
+      "sha256": "bf29e873ed7c5a6e6ebd157b2859b1f1a018564202bd6883e1964cae088cd06c",
+      "train_oof": {
+        "frame": [
+          0.7832195317623198,
+          0.832790926211028,
+          0.8568083294546404,
+          0.028465393389526496
+        ],
+        "delta_pp": 0.2570293198934653,
+        "ci95_pp": [
+          -0.652034959592533,
+          1.0612768960757721
+        ],
+        "changed": 27,
+        "improved": 18,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8158496616825384,
+          0.8640009544103425,
+          0.8861918452724675,
+          0.029085715446148904
+        ],
+        "delta_pp": 0.35640424738327664,
+        "ci95_pp": [
+          -0.048433500342071056,
+          0.9336435021832576
+        ],
+        "changed": 8,
+        "improved": 5,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_ridge10_t0.03",
+      "family": "calibrated",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/context_ridge10.joblib",
+      "sha256": "2fff1800f1396785b63a48ba7a69e02ddfdb9631fd7050ecd04191d802144206",
+      "train_oof": {
+        "frame": [
+          0.7810739859432441,
+          0.830736138025848,
+          0.8552194487625688,
+          0.029296086942131778
+        ],
+        "delta_pp": 0.042474737985887426,
+        "ci95_pp": [
+          -0.9831068459445506,
+          0.9120968658454428
+        ],
+        "changed": 27,
+        "improved": 18,
+        "harmed": 9,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8149033045347702,
+          0.8633624163701218,
+          0.8854816451014869,
+          0.029154578278589735
+        ],
+        "delta_pp": 0.26176853260646266,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.8256019186228514
+        ],
+        "changed": 8,
+        "improved": 4,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "full_ridge10_t0.03",
+      "family": "calibrated",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/full_ridge10.joblib",
+      "sha256": "9c7e72d0bd2669caaf91940a609fd012fb81ea71570f68db957ee845b1c1c4b0",
+      "train_oof": {
+        "frame": [
+          0.7801709107994715,
+          0.8292845787774676,
+          0.8542711891801397,
+          0.03094918518495883
+        ],
+        "delta_pp": -0.047832776391361354,
+        "ci95_pp": [
+          -1.1441083593931074,
+          0.9269670189338888
+        ],
+        "changed": 30,
+        "improved": 19,
+        "harmed": 11,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8147941091359825,
+          0.8632945838008406,
+          0.8854816451014869,
+          0.029150175206211364
+        ],
+        "delta_pp": 0.2508489927276969,
+        "ci95_pp": [
+          -0.10515251196920872,
+          0.7928432989865541
+        ],
+        "changed": 9,
+        "improved": 4,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    }
+  ],
+  "eligible": [
+    "base_ridge10_t0.03",
+    "base_ridge10_t0.05",
+    "base_ridge100_t0.03",
+    "base_ridge100_t0.05",
+    "cycle_ridge10_t0.03",
+    "cycle_ridge10_t0.05",
+    "cycle_ridge100_t0.03",
+    "cycle_ridge100_t0.05",
+    "context_ridge10_t0.03",
+    "context_ridge10_t0.05",
+    "context_ridge100_t0.03",
+    "context_ridge100_t0.05",
+    "context_tree_t0.05",
+    "full_ridge10_t0.05",
+    "full_ridge100_t0.03",
+    "full_ridge100_t0.05",
+    "full_tree_t0.03",
+    "full_tree_t0.05"
+  ],
+  "rule": "positive take-OOF training and disjoint calibration mean gain; maximize calibration; no target fitting",
+  "target_reference": "Frozen O-MaMa consensus on identical original candidates, read only",
+  "pretrained_omama_used": false
+}

@@ -1,0 +1,17 @@
+base ridge10
+base ridge100
+base tree
+cycle ridge10
+cycle ridge100
+cycle tree
+context ridge10
+context ridge100
+context tree
+full ridge10
+full ridge100
+full tree
+Traceback (most recent call last):
+  File "C:\Users\34886\Documents\ChatGPT\V2SAM\codex_remote_ops\pccs_dense_context_20260917\gate_study\study.py", line 47, in <module>
+    assert maxerr<1e-6,('Original protocol did not reproduce',maxerr)
+           ^^^^^^^^^^^
+AssertionError: ('Original protocol did not reproduce', 0.23238138334515196)

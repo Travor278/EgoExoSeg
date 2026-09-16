@@ -1,0 +1,7 @@
+{
+  "job_id": "job-3659b2f3-4a7d-438e-a73e-3b84940679f3",
+  "name": "v2sam-dense-pccs-identity-probe-20260917-r2",
+  "gpus": 1,
+  "submitted_at": "2026-09-17 01:12:17 +08:00",
+  "purpose": "diagnostic; expected historical repeatability check failed; resources released"
+}

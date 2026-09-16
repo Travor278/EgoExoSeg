@@ -1,0 +1,12 @@
+{
+  "job_id": "job-8c44ffad-7259-481d-965a-2a5d3a347c31",
+  "name": "v2sam-dense-context-pccs-20260917-r1",
+  "submitted_at": "2026-09-17 00:29:42 +08:00",
+  "nodes": 1,
+  "gpus": 4,
+  "gpu": "H100 80GB",
+  "priority": 4,
+  "maximum_minutes": 120,
+  "success_failure_retention_minutes": 1,
+  "command_exact_verified": true
+}

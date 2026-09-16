@@ -1,0 +1,305 @@
+{
+  "selected": {
+    "name": "context_override_cycle_ridge10_t0.03",
+    "gate": "context_override",
+    "group": "cycle",
+    "kind": "ridge10",
+    "threshold": 0.03,
+    "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge10.joblib",
+    "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+    "train_oof": {
+      "frame": [
+        0.785592101921844,
+        0.8354717346705741,
+        0.859020874612027,
+        0.02774116265387157
+      ],
+      "delta_pp": 0.4942863358458756,
+      "ci95_pp": [
+        -0.4671808069459378,
+        1.3674405111735015
+      ],
+      "changed": 31,
+      "improved": 21,
+      "harmed": 10,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8161417561942168,
+        0.8645640889078398,
+        0.8886833909873175,
+        0.023250006843335256
+      ],
+      "delta_pp": 0.3856136985511209,
+      "ci95_pp": [
+        -0.04229964222759008,
+        0.9667064197128638
+      ],
+      "changed": 9,
+      "improved": 6,
+      "harmed": 3,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    }
+  },
+  "matched_controls": [
+    {
+      "name": "context_override_base_ridge10_t0.03",
+      "gate": "context_override",
+      "group": "base",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\base_ridge10.joblib",
+      "sha256": "8196414f7483fed4550e2ff542a83daa3fd72db90673d3f50fa544ccd86b57d4",
+      "train_oof": {
+        "frame": [
+          0.7870647260699827,
+          0.8370413221362604,
+          0.8611950430071813,
+          0.02740162818845089
+        ],
+        "delta_pp": 0.6415487506597451,
+        "ci95_pp": [
+          -0.1482427974379385,
+          1.3861961757155665
+        ],
+        "changed": 25,
+        "improved": 19,
+        "harmed": 6,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8153398995646663,
+          0.8639453426364828,
+          0.8880393504598105,
+          0.023266722954863636
+        ],
+        "delta_pp": 0.3054280355960752,
+        "ci95_pp": [
+          -0.0686217111069709,
+          0.8717882947530597
+        ],
+        "changed": 7,
+        "improved": 4,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_cycle_ridge10_t0.03",
+      "gate": "context_override",
+      "group": "cycle",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\cycle_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.785592101921844,
+          0.8354717346705741,
+          0.859020874612027,
+          0.02774116265387157
+        ],
+        "delta_pp": 0.4942863358458756,
+        "ci95_pp": [
+          -0.4671808069459378,
+          1.3674405111735015
+        ],
+        "changed": 31,
+        "improved": 21,
+        "harmed": 10,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8161417561942168,
+          0.8645640889078398,
+          0.8886833909873175,
+          0.023250006843335256
+        ],
+        "delta_pp": 0.3856136985511209,
+        "ci95_pp": [
+          -0.04229964222759008,
+          0.9667064197128638
+        ],
+        "changed": 9,
+        "improved": 6,
+        "harmed": 3,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_context_ridge10_t0.03",
+      "gate": "context_override",
+      "group": "context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\context_ridge10.joblib",
+      "sha256": "fead4bddd3adebe35bd4a498e018f05a5bba38822f2c05d23cbb2616c814bf48",
+      "train_oof": {
+        "frame": [
+          0.782896168753976,
+          0.83320671342197,
+          0.8572063424625728,
+          0.028624225859956234
+        ],
+        "delta_pp": 0.22469301905908243,
+        "ci95_pp": [
+          -0.8919486645619747,
+          1.1897190169588108
+        ],
+        "changed": 32,
+        "improved": 22,
+        "harmed": 10,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8151953990464487,
+          0.863925550867619,
+          0.8879731908163366,
+          0.023318869675776087
+        ],
+        "delta_pp": 0.2909779837743069,
+        "ci95_pp": [
+          -0.08808205893728882,
+          0.861134110018611
+        ],
+        "changed": 9,
+        "improved": 5,
+        "harmed": 4,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "context_override_full_ridge10_t0.03",
+      "gate": "context_override",
+      "group": "full",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\gate_study\\fitted\\full_ridge10.joblib",
+      "sha256": "4bb76b8f139af724bede9cbf9e3aed9f1559eb907de0cc56a933be377b510d03",
+      "train_oof": {
+        "frame": [
+          0.7827533450335475,
+          0.8322375223789531,
+          0.8568959130979196,
+          0.03019624729828851
+        ],
+        "delta_pp": 0.21041064701623527,
+        "ci95_pp": [
+          -0.9603125950383804,
+          1.268634107018291
+        ],
+        "changed": 33,
+        "improved": 22,
+        "harmed": 11,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8150862036476609,
+          0.8638577182983378,
+          0.8879731908163366,
+          0.023314466603397716
+        ],
+        "delta_pp": 0.28005844389554113,
+        "ci95_pp": [
+          -0.08808205893728882,
+          0.8283754903823137
+        ],
+        "changed": 10,
+        "improved": 5,
+        "harmed": 5,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    }
+  ],
+  "eligible": [
+    "dominance_base_ridge10_t0.03",
+    "dominance_base_ridge10_t0.05",
+    "present_base_ridge10_t0.03",
+    "present_base_ridge10_t0.05",
+    "context_override_base_ridge10_t0.03",
+    "context_override_base_ridge10_t0.05",
+    "dominance_base_ridge100_t0.03",
+    "dominance_base_ridge100_t0.05",
+    "present_base_ridge100_t0.03",
+    "present_base_ridge100_t0.05",
+    "context_override_base_ridge100_t0.03",
+    "context_override_base_ridge100_t0.05",
+    "present_base_tree_t0.03",
+    "present_base_tree_t0.05",
+    "context_override_base_tree_t0.03",
+    "context_override_base_tree_t0.05",
+    "dominance_cycle_ridge10_t0.03",
+    "dominance_cycle_ridge10_t0.05",
+    "present_cycle_ridge10_t0.03",
+    "present_cycle_ridge10_t0.05",
+    "context_override_cycle_ridge10_t0.03",
+    "context_override_cycle_ridge10_t0.05",
+    "dominance_cycle_ridge100_t0.03",
+    "dominance_cycle_ridge100_t0.05",
+    "present_cycle_ridge100_t0.03",
+    "present_cycle_ridge100_t0.05",
+    "context_override_cycle_ridge100_t0.03",
+    "context_override_cycle_ridge100_t0.05",
+    "present_cycle_tree_t0.03",
+    "present_cycle_tree_t0.05",
+    "context_override_cycle_tree_t0.03",
+    "context_override_cycle_tree_t0.05",
+    "dominance_context_ridge10_t0.03",
+    "dominance_context_ridge10_t0.05",
+    "present_context_ridge10_t0.03",
+    "present_context_ridge10_t0.05",
+    "context_override_context_ridge10_t0.03",
+    "context_override_context_ridge10_t0.05",
+    "dominance_context_ridge100_t0.03",
+    "dominance_context_ridge100_t0.05",
+    "present_context_ridge100_t0.03",
+    "present_context_ridge100_t0.05",
+    "context_override_context_ridge100_t0.03",
+    "context_override_context_ridge100_t0.05",
+    "dominance_context_tree_t0.05",
+    "context_override_context_tree_t0.05",
+    "dominance_full_ridge10_t0.05",
+    "present_full_ridge10_t0.03",
+    "present_full_ridge10_t0.05",
+    "context_override_full_ridge10_t0.03",
+    "context_override_full_ridge10_t0.05",
+    "dominance_full_ridge100_t0.03",
+    "dominance_full_ridge100_t0.05",
+    "present_full_ridge100_t0.03",
+    "present_full_ridge100_t0.05",
+    "context_override_full_ridge100_t0.03",
+    "context_override_full_ridge100_t0.05",
+    "dominance_full_tree_t0.03",
+    "dominance_full_tree_t0.05",
+    "context_override_full_tree_t0.03",
+    "context_override_full_tree_t0.05"
+  ],
+  "r1_reproduction_max_delta_error_pp": 0.0,
+  "frozen_at": 1789577561.7578578,
+  "target_loaded_before_selection": false
+}

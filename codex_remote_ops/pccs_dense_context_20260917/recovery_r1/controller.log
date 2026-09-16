@@ -1,0 +1,9 @@
+DENSE_PHASE_COMPLETE smoke
+DENSE_PHASE_COMPLETE train
+DENSE_PHASE_COMPLETE calibration
+Traceback (most recent call last):
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/controller.py", line 41, in <module>
+    source=R.parent/'pccs_corrected_exoexo_20260916';m=json.loads((R/'manifest.json').read_text());a=json.loads((source/'full_annotation.json').read_text());cfg=yaml.safe_load((source/'full_runtime.yaml').read_text());add_phase(m,'exo2exo',a,cfg,R.parent/'pccs_candidate_union_20260916','exo2exo');(R/'manifest.json').write_text(json.dumps(m,indent=2));phase_run('exo2exo');read('exo2exo');run('evaluate.py')
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/controller.py", line 18, in phase_run
+    if any(p.poll() not in (None,0) for p in children):raise RuntimeError(phase+' worker failed')
+RuntimeError: exo2exo worker failed

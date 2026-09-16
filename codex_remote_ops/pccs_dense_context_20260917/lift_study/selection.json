@@ -1,0 +1,243 @@
+{
+  "selected": {
+    "name": "relative_lift_cycle_control_ridge10_t0.03",
+    "gate": "relative_lift",
+    "group": "cycle_control",
+    "kind": "ridge10",
+    "threshold": 0.03,
+    "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+    "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+    "train_oof": {
+      "frame": [
+        0.7878014182623906,
+        0.8379112721183479,
+        0.8619109948621634,
+        0.02639482194704465
+      ],
+      "delta_pp": 0.7152179699005501,
+      "ci95_pp": [
+        -0.2870087023721783,
+        1.66734369833067
+      ],
+      "changed": 18,
+      "improved": 12,
+      "harmed": 5,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8166042281673678,
+        0.8648198054067809,
+        0.8887010131677686,
+        0.023246467037392197
+      ],
+      "delta_pp": 0.43186089586621773,
+      "ci95_pp": [
+        0.01712522633897619,
+        1.0065261961426586
+      ],
+      "changed": 7,
+      "improved": 6,
+      "harmed": 1,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    }
+  },
+  "matched_controls": [
+    {
+      "name": "relative_lift_cycle_control_ridge10_t0.03",
+      "gate": "relative_lift",
+      "group": "cycle_control",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+      "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+      "train_oof": {
+        "frame": [
+          0.7878014182623906,
+          0.8379112721183479,
+          0.8619109948621634,
+          0.02639482194704465
+        ],
+        "delta_pp": 0.7152179699005501,
+        "ci95_pp": [
+          -0.2870087023721783,
+          1.66734369833067
+        ],
+        "changed": 18,
+        "improved": 12,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8166042281673678,
+          0.8648198054067809,
+          0.8887010131677686,
+          0.023246467037392197
+        ],
+        "delta_pp": 0.43186089586621773,
+        "ci95_pp": [
+          0.01712522633897619,
+          1.0065261961426586
+        ],
+        "changed": 7,
+        "improved": 6,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_ridge10_t0.03",
+      "gate": "relative_lift",
+      "group": "lift",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_ridge10.joblib",
+      "sha256": "6211298c2bba8ee8c50f4db0d155554fea1998fbdcf01d8b629eac59c8771744",
+      "train_oof": {
+        "frame": [
+          0.7852927399345798,
+          0.8351624662284475,
+          0.8602860934519936,
+          0.02698192929893521
+        ],
+        "delta_pp": 0.46435013711945633,
+        "ci95_pp": [
+          -0.5525363005297853,
+          1.4446621648029476
+        ],
+        "changed": 17,
+        "improved": 11,
+        "harmed": 5,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8160514786732771,
+          0.8645077052421887,
+          0.8881112157369386,
+          0.023313052595139456
+        ],
+        "delta_pp": 0.3765859464571501,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9652565879514441
+        ],
+        "changed": 6,
+        "improved": 5,
+        "harmed": 1,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    },
+    {
+      "name": "relative_lift_lift_context_ridge10_t0.03",
+      "gate": "relative_lift",
+      "group": "lift_context",
+      "kind": "ridge10",
+      "threshold": 0.03,
+      "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\lift_context_ridge10.joblib",
+      "sha256": "96d649c04d27f011e693329b411139139a88d515b5832fde675696b0a5bd4548",
+      "train_oof": {
+        "frame": [
+          0.7850608442611806,
+          0.8345924082853983,
+          0.8585604315759222,
+          0.02749571069886307
+        ],
+        "delta_pp": 0.4411605697795393,
+        "ci95_pp": [
+          -0.6822687747219587,
+          1.5092721172636123
+        ],
+        "changed": 21,
+        "improved": 13,
+        "harmed": 7,
+        "pairs": 384,
+        "objects": 676,
+        "takes": 48
+      },
+      "calibration": {
+        "frame": [
+          0.8159422832744894,
+          0.8644398726729075,
+          0.8881112157369386,
+          0.023308649522761085
+        ],
+        "delta_pp": 0.36566640657838434,
+        "ci95_pp": [
+          -0.03553219139575958,
+          0.9286814881488682
+        ],
+        "changed": 7,
+        "improved": 5,
+        "harmed": 2,
+        "pairs": 128,
+        "objects": 225,
+        "takes": 16
+      }
+    }
+  ],
+  "eligible": [
+    "dominance_cycle_control_ridge10_t0.03",
+    "dominance_cycle_control_ridge10_t0.05",
+    "positive_lift_cycle_control_ridge10_t0.03",
+    "positive_lift_cycle_control_ridge10_t0.05",
+    "relative_lift_cycle_control_ridge10_t0.03",
+    "relative_lift_cycle_control_ridge10_t0.05",
+    "dominance_cycle_control_ridge100_t0.03",
+    "dominance_cycle_control_ridge100_t0.05",
+    "positive_lift_cycle_control_ridge100_t0.03",
+    "positive_lift_cycle_control_ridge100_t0.05",
+    "relative_lift_cycle_control_ridge100_t0.03",
+    "relative_lift_cycle_control_ridge100_t0.05",
+    "positive_lift_cycle_control_tree_t0.03",
+    "positive_lift_cycle_control_tree_t0.05",
+    "relative_lift_cycle_control_tree_t0.03",
+    "relative_lift_cycle_control_tree_t0.05",
+    "positive_lift_lift_ridge10_t0.03",
+    "positive_lift_lift_ridge10_t0.05",
+    "relative_lift_lift_ridge10_t0.03",
+    "relative_lift_lift_ridge10_t0.05",
+    "dominance_lift_ridge100_t0.03",
+    "dominance_lift_ridge100_t0.05",
+    "positive_lift_lift_ridge100_t0.03",
+    "positive_lift_lift_ridge100_t0.05",
+    "relative_lift_lift_ridge100_t0.03",
+    "relative_lift_lift_ridge100_t0.05",
+    "positive_lift_lift_tree_t0.03",
+    "positive_lift_lift_tree_t0.05",
+    "relative_lift_lift_tree_t0.03",
+    "relative_lift_lift_tree_t0.05",
+    "dominance_lift_context_ridge10_t0.03",
+    "dominance_lift_context_ridge10_t0.05",
+    "positive_lift_lift_context_ridge10_t0.03",
+    "positive_lift_lift_context_ridge10_t0.05",
+    "relative_lift_lift_context_ridge10_t0.03",
+    "relative_lift_lift_context_ridge10_t0.05",
+    "dominance_lift_context_ridge100_t0.03",
+    "dominance_lift_context_ridge100_t0.05",
+    "positive_lift_lift_context_ridge100_t0.03",
+    "positive_lift_lift_context_ridge100_t0.05",
+    "relative_lift_lift_context_ridge100_t0.03",
+    "relative_lift_lift_context_ridge100_t0.05",
+    "dominance_lift_context_tree_t0.03",
+    "dominance_lift_context_tree_t0.05",
+    "relative_lift_lift_context_tree_t0.03",
+    "relative_lift_lift_context_tree_t0.05"
+  ],
+  "r1_reproduction_max_delta_error_pp": 0.0,
+  "frozen_at": 1789580773.2553391,
+  "target_loaded_before_selection": false
+}

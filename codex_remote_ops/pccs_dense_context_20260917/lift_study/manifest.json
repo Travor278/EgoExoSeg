@@ -1,0 +1,19 @@
+{
+  "declared_at": 1789580769.2882767,
+  "source_only": true,
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "sklearn": "1.5.2",
+  "data_hashes": {
+    "runs\\train\\rank0\\records.jsonl": "bf1d22ef9c2a6c624b56e43be19417078fa51df80298d43b361a423a2be50391",
+    "runs\\train\\rank1\\records.jsonl": "c8c646a2f11422eaa280a4959cdeadec27a8221ae69d1de683bcb6a29bec8593",
+    "runs\\train\\rank2\\records.jsonl": "6fde79209a77ee46076af41cabc5afe04839a759ff88700855517ccd565aa794",
+    "runs\\train\\rank3\\records.jsonl": "8d39d0f3aab0e466eea880f2fbaa267b5756ba1db13d6a2c6c97cd90abc0e88f",
+    "runs\\calibration\\rank0\\records.jsonl": "20189dd707ec136221d02888d994574923ed537240d3a96a67c40b1029c3bbc7",
+    "runs\\calibration\\rank1\\records.jsonl": "75acd692c62c85c8934041bd12ecf3cd759d54d932c53672ea32b8e378168afc",
+    "runs\\calibration\\rank2\\records.jsonl": "e225b509c489f0cb958c6e512b885b5908665bff4d9bbd026d8405b34d83514d",
+    "runs\\calibration\\rank3\\records.jsonl": "514df391bf265726965d39a2c9c6bd6b9bfb044878a2ea43db5de0da57d0495d"
+  },
+  "target_loaded_before_selection": false,
+  "fold_source_sha256": "cc5076e7244a38104bff54ecb334a6107e76b37e0659389a619b5ccfbc46267d"
+}

@@ -1,0 +1,34 @@
+{
+  "coverage": "exact",
+  "pairs": 1094,
+  "objects": 1094,
+  "takes": 20,
+  "final_bank_historical_hashes_exact": true,
+  "original_pccs_zero_iou_objects": 440,
+  "reference_repairs_applied": 0,
+  "r1_native_bridge_exact": true,
+  "r1": {
+    "frame_iou": 0.4133540881323158,
+    "delta_pp": 2.3163968021444035,
+    "ci95_pp": [
+      0.41729616836609396,
+      4.141263850298276
+    ]
+  },
+  "gate": {
+    "frame_iou": 0.4131096465437005,
+    "delta_pp": 2.2919526432828774,
+    "ci95_pp": [
+      0.40194454245998223,
+      4.113771040069728
+    ]
+  },
+  "lift": {
+    "frame_iou": 0.4114037433958067,
+    "delta_pp": 2.121362328493497,
+    "ci95_pp": [
+      0.7990886359564674,
+      3.3461835885695375
+    ]
+  }
+}

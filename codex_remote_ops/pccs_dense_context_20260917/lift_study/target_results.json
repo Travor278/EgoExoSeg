@@ -1,0 +1,171 @@
+{
+  "selected": {
+    "name": "relative_lift_cycle_control_ridge10_t0.03",
+    "gate": "relative_lift",
+    "group": "cycle_control",
+    "kind": "ridge10",
+    "threshold": 0.03,
+    "checkpoint": "C:\\Users\\34886\\Documents\\ChatGPT\\V2SAM\\codex_remote_ops\\pccs_dense_context_20260917\\lift_study\\fitted\\cycle_control_ridge10.joblib",
+    "sha256": "45947e2c8b5545d0be7fa0e50f91a10ed1083f706a9b9a268e45c4d9140184c0",
+    "train_oof": {
+      "frame": [
+        0.7878014182623906,
+        0.8379112721183479,
+        0.8619109948621634,
+        0.02639482194704465
+      ],
+      "delta_pp": 0.7152179699005501,
+      "ci95_pp": [
+        -0.2870087023721783,
+        1.66734369833067
+      ],
+      "changed": 18,
+      "improved": 12,
+      "harmed": 5,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8166042281673678,
+        0.8648198054067809,
+        0.8887010131677686,
+        0.023246467037392197
+      ],
+      "delta_pp": 0.43186089586621773,
+      "ci95_pp": [
+        0.01712522633897619,
+        1.0065261961426586
+      ],
+      "changed": 7,
+      "improved": 6,
+      "harmed": 1,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    }
+  },
+  "methods": {
+    "primary": {
+      "frame": [
+        0.4114037433958067,
+        0.45914872841260423,
+        0.5264209805355721,
+        0.0978669318910179
+      ],
+      "delta_pp": 2.121362328493497,
+      "ci95_pp": [
+        0.7990886359564674,
+        3.3461835885695375
+      ],
+      "changed": 64,
+      "improved": 43,
+      "harmed": 7,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "wrong_context": {
+      "frame": [
+        0.4114037433958067,
+        0.45914872841260423,
+        0.5264209805355721,
+        0.0978669318910179
+      ],
+      "delta_pp": 2.121362328493497,
+      "ci95_pp": [
+        0.7990886359564674,
+        3.3461835885695375
+      ],
+      "changed": 64,
+      "improved": 43,
+      "harmed": 7,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "cycle_control_matched": {
+      "frame": [
+        0.4114037433958067,
+        0.45914872841260423,
+        0.5264209805355721,
+        0.0978669318910179
+      ],
+      "delta_pp": 2.121362328493497,
+      "ci95_pp": [
+        0.7990886359564674,
+        3.3461835885695375
+      ],
+      "changed": 64,
+      "improved": 43,
+      "harmed": 7,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "lift_matched": {
+      "frame": [
+        0.40719554227534216,
+        0.4546021269417584,
+        0.5214553731045816,
+        0.09887347798232317
+      ],
+      "delta_pp": 1.7005422164470434,
+      "ci95_pp": [
+        0.521092002447031,
+        2.856217959107093
+      ],
+      "changed": 55,
+      "improved": 36,
+      "harmed": 7,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    },
+    "lift_context_matched": {
+      "frame": [
+        0.4073616336967631,
+        0.4545180840291198,
+        0.5207190521861724,
+        0.09951433267200481
+      ],
+      "delta_pp": 1.717151358589135,
+      "ci95_pp": [
+        0.4706623090280854,
+        2.9417946248399804
+      ],
+      "changed": 51,
+      "improved": 36,
+      "harmed": 6,
+      "pairs": 1094,
+      "objects": 1094,
+      "takes": 20
+    }
+  },
+  "primary_vs_omama": {
+    "frame": [
+      0.4114037433958067,
+      0.45914872841260423,
+      0.5264209805355721,
+      0.0978669318910179
+    ],
+    "delta_pp": -1.2576653502666015,
+    "ci95_pp": [
+      -2.3024428634707053,
+      -0.08479132247372374
+    ],
+    "changed": 236,
+    "improved": 38,
+    "harmed": 84,
+    "pairs": 1094,
+    "objects": 1094,
+    "takes": 20
+  },
+  "coverage": "exact",
+  "r1_integrated_control_exact": true,
+  "gt_label_counterfactual": true,
+  "cached_policy_replay": true,
+  "selection_sha256": "781dd8675a4e978f3728559eb2fe581345f75380a4473fe78a5e2945d81fc490",
+  "evaluated_at": 1789581210.158926
+}
