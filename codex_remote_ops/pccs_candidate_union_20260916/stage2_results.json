@@ -1,0 +1,90 @@
+{
+  "threshold": 0.05,
+  "scope": "descriptive TRAIN screen/cal controls, no target fitting",
+  "phases": {
+    "screen": {
+      "residual005": {
+        "baseline_final": 78.52318053684422,
+        "union_final": 78.48332640916334,
+        "baseline_oracle": 81.14115360311996,
+        "union_oracle": 81.27125410959101,
+        "delta_final_pp": -0.03985412768088281,
+        "delta_oracle_pp": 0.1301005064710523,
+        "changed": 3,
+        "duplicate_score_max_error": 0.0
+      },
+      "residual010": {
+        "baseline_final": 78.52318053684422,
+        "union_final": 78.42097065496483,
+        "baseline_oracle": 81.14115360311996,
+        "union_oracle": 81.31748781207433,
+        "delta_final_pp": -0.10220988187938929,
+        "delta_oracle_pp": 0.17633420895437268,
+        "changed": 3,
+        "duplicate_score_max_error": 0.0
+      },
+      "residual025": {
+        "baseline_final": 78.52318053684422,
+        "union_final": 77.56066501788243,
+        "baseline_oracle": 81.14115360311996,
+        "union_oracle": 81.50528221282202,
+        "delta_final_pp": -0.9625155189617942,
+        "delta_oracle_pp": 0.36412860970206395,
+        "changed": 13,
+        "duplicate_score_max_error": 0.0
+      },
+      "all_union": {
+        "baseline_final": 78.52318053684422,
+        "union_final": 77.2125972776453,
+        "baseline_oracle": 81.14115360311996,
+        "union_oracle": 81.59806262663955,
+        "delta_final_pp": -1.3105832591989213,
+        "delta_oracle_pp": 0.45690902351958584,
+        "changed": 24,
+        "duplicate_score_max_error": 0.0
+      }
+    },
+    "calibration": {
+      "residual005": {
+        "baseline_final": 82.62839860573875,
+        "union_final": 82.62390425254124,
+        "baseline_oracle": 84.57399747587867,
+        "union_oracle": 84.67224496367938,
+        "delta_final_pp": -0.004494353197515011,
+        "delta_oracle_pp": 0.09824748780070536,
+        "changed": 1,
+        "duplicate_score_max_error": 0.0
+      },
+      "residual010": {
+        "baseline_final": 82.62839860573875,
+        "union_final": 82.4058445333503,
+        "baseline_oracle": 84.57399747587867,
+        "union_oracle": 84.75108863609422,
+        "delta_final_pp": -0.22255407238844782,
+        "delta_oracle_pp": 0.1770911602155536,
+        "changed": 2,
+        "duplicate_score_max_error": 0.0
+      },
+      "residual025": {
+        "baseline_final": 82.62839860573875,
+        "union_final": 82.39266297100886,
+        "baseline_oracle": 84.57399747587867,
+        "union_oracle": 84.97671617568508,
+        "delta_final_pp": -0.23573563472989179,
+        "delta_oracle_pp": 0.40271869980641384,
+        "changed": 11,
+        "duplicate_score_max_error": 0.0
+      },
+      "all_union": {
+        "baseline_final": 82.62839860573875,
+        "union_final": 82.02713693686138,
+        "baseline_oracle": 84.57399747587867,
+        "union_oracle": 85.10391101866843,
+        "delta_final_pp": -0.6012616688773704,
+        "delta_oracle_pp": 0.5299135427897568,
+        "changed": 18,
+        "duplicate_score_max_error": 0.0
+      }
+    }
+  }
+}

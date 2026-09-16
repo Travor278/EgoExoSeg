@@ -1,0 +1,11 @@
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/reference/dinov2/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/reference/dinov2/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/reference/dinov2/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+{"key": ["15a055d2-a5e1-4ba9-9e2b-5a6282fc7f32_1350", "0"], "threshold": 0.0001, "GEMM_TF32": false, "cases": {"False": {"canonical": 0.00030815601348876953, "native_interp": 0.00030815601348876953}, "True": {"canonical": 0.00030815601348876953, "native_interp": 0.00030815601348876953}}}
+Traceback (most recent call last):
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/probe_precision.py", line 25, in <module>
+    assert max(result['cases']['True'].values())<1e-4,'Matching worker cuDNN precision did not resolve parity; stop for diagnosis'
+AssertionError: Matching worker cuDNN precision did not resolve parity; stop for diagnosis

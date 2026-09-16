@@ -107,10 +107,11 @@
     "candidate_ops.py": "c9d6da4ee47c5f4e67c74d204bc9dace7162b2bda4d95e3db564249ffab7ad9d",
     "residual_pool.py": "3882c61daa97efac918a63bb815e7f2708416838d28cda32df6a97705a0c9e93",
     "union_core.py": "b2b6d792c8b613b80efcdfbd2ff07e7f1b579125127938e5520ea9e986f56206",
-    "build_dataset.py": "ea993641bcfc1724e8d4dd7cd19c576363215dc5d81b172be945aa50a1347ac6",
+    "build_dataset.py": "d02856d7313935a45aeb331a852ab9c293a906d9fc387af10e93b61c7ef7cadb",
     "fit_models.py": "245e4723a6f3937c0a02024dac775befbaaa819555d06259844be62f68632bc8",
     "metric_adapter.py": "7c8d884bd528460471575700dc44497622ecc91cf8e029d223a305a3aa112e6d",
     "evaluate_selected.py": "641d743ec4fecb88eafcb49ebbd086a79e3284513fded731413e8347dda8e299",
     "controller.py": "95949d7e6ce4a89fe6b75fe5769d676513ecbf5619269a487f0296d80b68da3e"
-  }
+  },
+  "recovery": "precision configuration measured against cached scores, unchanged tolerance; resume cached candidates"
 }

@@ -1,0 +1,12 @@
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/reference/dinov2/dinov2/layers/swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/reference/dinov2/dinov2/layers/attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/reference/dinov2/dinov2/layers/block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+Traceback (most recent call last):
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/build_dataset.py", line 74, in <module>
+    if __name__=='__main__':main()
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/build_dataset.py", line 64, in main
+    original=np.asarray([c['scores'][0 if mode=='canonical' else 1] for c in cs]);replay=float(np.max(np.abs(scores-original)));assert replay<1e-4,('union score parity',key,mode,replay);maxerr=max(maxerr,replay)
+AssertionError: ('union score parity', ('15a055d2-a5e1-4ba9-9e2b-5a6282fc7f32_2370', '1'), 'canonical', 0.00011550635099411011)

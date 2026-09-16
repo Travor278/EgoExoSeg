@@ -1,0 +1,50 @@
+{
+  "key": [
+    "15a055d2-a5e1-4ba9-9e2b-5a6282fc7f32_1350",
+    "0"
+  ],
+  "threshold": 0.0001,
+  "cases": {
+    "False,False": {
+      "canonical": {
+        "union": 0.00030815601348876953,
+        "original_group": 0.00028884410858154297
+      },
+      "native_interp": {
+        "union": 0.00030815601348876953,
+        "original_group": 0.00028884410858154297
+      }
+    },
+    "False,True": {
+      "canonical": {
+        "union": 0.00030815601348876953,
+        "original_group": 0.00028884410858154297
+      },
+      "native_interp": {
+        "union": 0.00030815601348876953,
+        "original_group": 0.00028884410858154297
+      }
+    },
+    "True,False": {
+      "canonical": {
+        "union": 2.849102020263672e-05,
+        "original_group": 0.0
+      },
+      "native_interp": {
+        "union": 2.849102020263672e-05,
+        "original_group": 0.0
+      }
+    },
+    "True,True": {
+      "canonical": {
+        "union": 2.849102020263672e-05,
+        "original_group": 0.0
+      },
+      "native_interp": {
+        "union": 2.849102020263672e-05,
+        "original_group": 0.0
+      }
+    }
+  },
+  "selected": "True,False"
+}

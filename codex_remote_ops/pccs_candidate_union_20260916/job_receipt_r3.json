@@ -1,0 +1,13 @@
+{
+  "job_id": "job-50937ae3-ed02-403f-a731-9014d8cc0ba7",
+  "name": "v2sam-candidate-union-adapt-20260916-r3",
+  "submitted_at": "2026-09-16 16:16:44 +08:00",
+  "gpus": 4,
+  "gpu": "H100 80GB",
+  "nodes": 1,
+  "priority": 4,
+  "max_minutes": 240,
+  "retention_success_failure_minutes": 1,
+  "command_exact_verified": true,
+  "initial_state": "queued"
+}

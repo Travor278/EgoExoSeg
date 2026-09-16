@@ -1,0 +1,14 @@
+{
+  "residual005": {
+    "anchor_mismatches": 0,
+    "objects": 225
+  },
+  "residual010": {
+    "anchor_mismatches": 0,
+    "objects": 225
+  },
+  "residual025": {
+    "anchor_mismatches": 0,
+    "objects": 225
+  }
+}

@@ -1,18 +1,15 @@
 {
   "state": "running",
-  "phase": "candidates_screen",
-  "arms": {
-    "residual005": {
-      "state": "initializing"
-    },
-    "residual010": {
-      "state": "initializing"
-    },
-    "residual025": {
-      "state": "initializing"
-    }
+  "phase": "dataset_calibration",
+  "eta_seconds": 60.37340559542645,
+  "detail": {
+    "state": "running",
+    "phase": "calibration",
+    "done": 40,
+    "total": 225,
+    "eta_seconds": 60.37340559542645
   },
-  "eta_seconds": null,
-  "updated_at": 1789545267.213206,
+  "log": "dataset_calibration.log",
+  "updated_at": 1789547056.2834475,
   "pid": 55
 }

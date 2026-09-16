@@ -1,0 +1,9 @@
+{
+  "state": "complete",
+  "pairs": 128,
+  "objects": 243,
+  "coverage": "exact",
+  "records_sha256": "273daf23127a5cb40c89f5b6803676d6aa544355faa37d8599fa5ccd03411925",
+  "arm": "residual005",
+  "phase": "screen"
+}

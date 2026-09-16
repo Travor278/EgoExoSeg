@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/controller_r2.py", line 49, in <module>
+    for phase in ('screen','calibration'):run('build_dataset.py','dataset_'+phase,['--phase',phase],gpu='0',progress='dataset_'+phase+'_status.json')
+  File "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/controller_r2.py", line 16, in run
+    if child.returncode:raise RuntimeError(phase+' failed: '+str(child.returncode))
+RuntimeError: dataset_screen failed: 1

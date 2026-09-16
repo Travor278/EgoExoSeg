@@ -1,0 +1,6 @@
+{
+  "state": "failed",
+  "error": "RuntimeError('precision_probe failed: 1')",
+  "updated_at": 1789546198.3474371,
+  "pid": 55
+}

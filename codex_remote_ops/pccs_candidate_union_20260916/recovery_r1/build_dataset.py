@@ -16,7 +16,7 @@ def geometry(mask,base,query):
         return area,float(len(xs)/((xs.max()-xs.min()+1)*(ys.max()-ys.min()+1))),float(xs.mean()/m.shape[1]),float(ys.mean()/m.shape[0])
     a,fill,x,y=single(mask);b,bfill,bx,by=single(base);inter=float(np.logical_and(mask,base).sum());union=float(np.logical_or(mask,base).sum())
     return [a,b,float(np.log((a+1e-6)/(b+1e-6))),fill,bfill,float(np.hypot(x-bx,y-by)),inter/max(union,1.),float(query.mean()),float(mask.any())]
-def embed(matcher,qp,tp,qm,masks,mode,groups=None):
+def embed(matcher,qp,tp,qm,masks,mode):
     import torch
     import torch.nn.functional as F
     from aligned_model import preprocess,bbox,position,learned_scores
@@ -26,19 +26,9 @@ def embed(matcher,qp,tp,qm,masks,mode,groups=None):
         batch={'SOURCE_img':qi,'SOURCE_mask':qms,'SOURCE_bbox':bbox(qms[0])[None],'SOURCE_img_size':qs,'GT_img':ti,'DEST_SAM_masks':tm[None],'DEST_SAM_bbox':torch.stack([bbox(m) for m in tm])[None],'DEST_img_size':ts}
         qd,qf=matcher.extractor.get_SOURCE_descriptors(batch);td,tf=matcher.extractor.get_DEST_descriptors(batch)
         qt=qf.flatten(2).transpose(1,2)+position(h.pos_embed_Q,g[0],qf.shape[-2:]);tt=tf.flatten(2).transpose(1,2)+position(h.pos_embed_T,g[1],tf.shape[-2:])
-        aq=h.CROSS_context_attn(qd[:,:,:768],tt,residual=False)
-        q=F.normalize(h.mlp(torch.cat((aq,qd),2)),dim=2)[0,0]
-        # Preserve the worker's exact candidate batch sizes/order for TF32 GEMMs.
-        # Dense image features are shared; each original head call is replayed.
-        groups=groups or [list(range(len(masks)))];vectors={}
-        for indices in groups:
-            desc=td[:,indices];at=h.CROSS_context_attn(desc[:,:,:768],qt,residual=False)
-            ts=F.normalize(h.mlp(torch.cat((at,desc),2)),dim=2)[0]
-            score=F.cosine_similarity(q[None],ts,dim=1);ref=learned_scores(h,qd,desc,qf,tf,g);torch.testing.assert_close(score,ref,atol=1e-6,rtol=1e-6)
-            for index,vector in zip(indices,ts):
-                if index not in vectors:vectors[index]=vector
-        assert len(vectors)==len(masks)
-        t=torch.stack([vectors[i] for i in range(len(masks))]);score=F.cosine_similarity(q[None],t,dim=1)
+        aq=h.CROSS_context_attn(qd[:,:,:768],tt,residual=False);at=h.CROSS_context_attn(td[:,:,:768],qt,residual=False)
+        q=F.normalize(h.mlp(torch.cat((aq,qd),2)),dim=2)[0,0];t=F.normalize(h.mlp(torch.cat((at,td),2)),dim=2)[0]
+        score=F.cosine_similarity(q[None],t,dim=1);ref=learned_scores(h,qd,td,qf,tf,g);torch.testing.assert_close(score,ref,atol=1e-6,rtol=1e-6)
         return q.cpu().numpy(),t.cpu().numpy(),score.cpu().numpy()
 def main():
     import torch,yaml
@@ -49,9 +39,7 @@ def main():
     manifest=json.loads((R/'manifest.json').read_text());spec=manifest['phases'][phase];ann=json.loads(Path(spec['annotation']).read_text());cfg=yaml.safe_load(Path(spec['config']).read_text());images=Path(cfg['data']['images'])
     target=R/'datasets'/phase;target.mkdir(parents=True,exist_ok=True);output=target/'records.jsonl'
     if output.exists():raise RuntimeError('Fresh union dataset required')
-    precision=json.loads((R/'precision_probe.json').read_text())['selected'];assert precision is not None
-    gemm,cudnn=[x=='True' for x in precision.split(',')]
-    torch.manual_seed(42);torch.backends.cuda.matmul.allow_tf32=gemm;torch.backends.cudnn.allow_tf32=cudnn;matcher=AlignedMatcher('cuda');maxerr=0.;start=time.monotonic()
+    torch.manual_seed(42);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False;matcher=AlignedMatcher('cuda');maxerr=0.;start=time.monotonic()
     with output.open('w') as handle:
         for index,key in enumerate(sorted(keys)):
             records=[(s,allrows[s][key]) for s in SOURCES];base=records[0][1]
@@ -66,12 +54,11 @@ def main():
                     if ident not in pool:
                         m=unpack(z,e);assert hashlib.sha256(m.tobytes()).hexdigest()==ident;pool[ident]=m
             masks=[pool[c['id']] for c in cs];fallback_index=next(i for i,c in enumerate(cs) if c['id']==fallback)
-            indices={c['id']:i for i,c in enumerate(cs)};groups=[[indices[row['mask_sha256'][row['pccs_expert'] if n=='baseline' else n]] for n in row['candidate_names']] for _,row in records]
             for c in cs:c['geometry']=geometry(pool[c['id']],pool[fallback],qm)
             rec=ann[key[0]];q=rec['prompt']['first_frame_image'];t=rec['video_path'];q=q[0] if isinstance(q,list) else q;t=t[0] if isinstance(t,list) else t
             data={};valid=bool(qm.any())
             for mode in ('canonical','native_interp'):
-                qz,tz,scores=embed(matcher,images/q,images/t,qm,masks,mode,groups) if valid else (np.zeros(768,np.float32),np.zeros((len(cs),768),np.float32),np.zeros(len(cs),np.float32))
+                qz,tz,scores=embed(matcher,images/q,images/t,qm,masks,mode) if valid else (np.zeros(768,np.float32),np.zeros((len(cs),768),np.float32),np.zeros(len(cs),np.float32))
                 original=np.asarray([c['scores'][0 if mode=='canonical' else 1] for c in cs]);replay=float(np.max(np.abs(scores-original)));assert replay<1e-4,('union score parity',key,mode,replay);maxerr=max(maxerr,replay)
                 data['q_'+mode]=qz;data['t_'+mode]=tz
             stem=hashlib.sha256((key[0]+'|'+key[1]).encode()).hexdigest()[:28];ep=target/(stem+'.npz');np.savez_compressed(ep,**data)

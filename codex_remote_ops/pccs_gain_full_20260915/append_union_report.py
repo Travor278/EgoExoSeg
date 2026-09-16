@@ -14,9 +14,18 @@ def append(parts,root):
     if p.exists():
         for phase,v in json.loads(p.read_text())['phases'].items():
             f=v['frame_iou_percent'];parts.append(f"| {phase} | {f['baseline']:.4f} | {f['union']:.4f} | {v['delta_final_pp']:.4f} | {v['delta_oracle_pp']:.4f} |")
-    parts += ['', '原候选保留保证该集合的oracle不降低，但不保证选择器最终涨点。本轮固定0.05阈值合并没有改善最终指标，新增可靠多点所提供的候选上限增量也很小。', '', '### 9.2 后续运行状态', '']
+    parts += ['', '原候选保留保证该集合的oracle不降低，但不保证选择器最终涨点。本轮固定0.05阈值合并没有改善最终指标，新增可靠多点所提供的候选上限增量也很小。', '', '### 9.2 小比例池化候选合并', '']
+    p=r/'stage2_results.json'
+    if p.exists():
+        a=json.loads(p.read_text());parts+=['| 增加候选 | 筛查Δ最终 | 校准Δ最终 | 校准ΔOracle |','|---|---:|---:|---:|']
+        for name,v in a['phases']['calibration'].items():parts.append(f"| {name} | {a['phases']['screen'][name]['delta_final_pp']:.4f} | {v['delta_final_pp']:.4f} | {v['delta_oracle_pp']:.4f} |")
+        parts+=['','以上都是固定余弦差0.05的描述性对照，单位为IoU百分点。5%接近不变，较大比例仍损害最终选择；全部合并在校准的候选上限增加0.5299点，但最终下降0.6013点。候选有所补充，如何选好仍待排序器／适配验证。']
+    parts+=['','### 9.3 后续运行状态','']
     p=r/'status.json';state=json.loads(p.read_text()) if p.exists() else {'state':'queued'}
-    parts.append(f"任务 `v2sam-candidate-union-adapt-20260916-r1`；最近已核验状态：`{state.get('state')}`，阶段：`{state.get('phase','awaiting startup')}`。提交于北京时间15:51，单任务最多4张H100，成功／失败均保留1分钟。尚无完整结果时不宣称涨点。")
+    jobs=sorted(r.glob('job_receipt*.json'));job=json.loads(jobs[-1].read_text()) if jobs else {}
+    parts.append(f"当前任务 `{job.get('name','unknown')}`；最近已核验状态：`{state.get('state')}`，阶段：`{state.get('phase','awaiting startup')}`。单任务最多4张H100，成功／失败均保留1分钟。尚无完整结果时不宣称涨点。")
+    if (r/'recovery_r2/precision_probe.json').exists():parts+=['','运行诊断：r1在O-MaMa embedding重放校验出现0.000308最大偏差，超过1e-4容差，停止于拟合前。r2单独切换cuDNN TF32未解决，故不能将原因归结于cuDNN。r3继续检查GEMM精度及原组／扩大候选组，保持原容差；历史失败证据归档，已完成候选缓存继续复用。r1／r2均已释放节点。']
+    if (r/'job_receipt_r4.json').exists():parts+=['','r3确认GEMM TF32开启时原候选组重放误差为0，但扩大候选批次仍可引入>1e-4的数值偏差。r4修复为：共享冻结DINO图像特征，按每个原候选组的大小与顺序调用匹配头，再合并候选embedding；不放宽校验。诊断对象最大误差降至5.96e-8，原始分数保留，随后继续逐对象重放检查。r3也已释放节点。此修复不改变任何已生成mask或原始评价结果。']
     p=r/'selection.json'
     if p.exists():
         a=json.loads(p.read_text());parts.append('训练内冻结选择：`'+a['selected']['name']+'`。')
