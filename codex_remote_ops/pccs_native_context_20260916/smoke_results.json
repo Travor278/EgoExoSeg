@@ -1,0 +1,116 @@
+{
+  "phase": "smoke",
+  "coverage": "exact",
+  "pairs": 8,
+  "objects": 8,
+  "takes": 1,
+  "methods": {
+    "baseline": {
+      "frame": [
+        0.6202186085283756,
+        0.7518055774271488,
+        0.940124746106573,
+        0.009468046150418777
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "zero": {
+      "frame": [
+        0.6202186085283756,
+        0.7518055774271488,
+        0.940124746106573,
+        0.009468046150418777
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "cycle": {
+      "frame": [
+        0.6202186085283756,
+        0.7518055774271488,
+        0.940124746106573,
+        0.009468046150418777
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "review": {
+      "frame": [
+        0.6202186085283756,
+        0.7518055774271488,
+        0.940124746106573,
+        0.009468046150418777
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "both": {
+      "frame": [
+        0.6202186085283756,
+        0.7518055774271488,
+        0.940124746106573,
+        0.009468046150418777
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    },
+    "wrong_context": {
+      "frame": [
+        0.6202186085283756,
+        0.7518055774271488,
+        0.940124746106573,
+        0.009468046150418777
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0
+    }
+  },
+  "capture_on_off_pairs": 8,
+  "all_prior_candidates_exact": true,
+  "lambda_zero_parity": true,
+  "fusion_accepted_objects": 6,
+  "fusion_recheck_objects": 0,
+  "reliable_objects_by_expert": {
+    "visual": 1,
+    "anchor": 1,
+    "fusion": 1
+  },
+  "pretrained_omama_used": false
+}

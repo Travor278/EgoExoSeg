@@ -1,0 +1,135 @@
+{
+  "files": [
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/native_context.py",
+      "sha256": "bcbdf563fd57005d6ac8568db63330be19c26d38491a9e15d9da9f4f40c10bab",
+      "bytes": 5619
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/patch_native.py",
+      "sha256": "10b56ab4a874340891ce75a0ff32e92716817c0ce0003ede17abcef085549380",
+      "bytes": 1422
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/native_metric.patch",
+      "sha256": "e7496bc33fd7ae8bfc9b9f4fb482f7f4052aef79199631f6fda2a2fa1409aede",
+      "bytes": 2244
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/test_native.py",
+      "sha256": "29e02154b278a10a8e7ddbbf8a398f32a020b3fc7f620dd6d623f6fca1099fc3",
+      "bytes": 1190
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/configs.py",
+      "sha256": "eb3e8267ad3b22e2d80f665f4d92fa2f95cd033fe1ef142bca3380a8101004b9",
+      "bytes": 372
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/randomness.py",
+      "sha256": "7559393732681ed5b3859878239e4b30e37fad4d8546626e3c9a4d3e329c6b1e",
+      "bytes": 245
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/prepare.py",
+      "sha256": "0b8c80b04469e2f8a350deb588872bd4fd786a097a08002f9d9e62e98329862a",
+      "bytes": 1938
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/worker.py",
+      "sha256": "258eeb493f69d0da16c44a3a9da4c4e41fe044eb69119db2c7ca35b512861817",
+      "bytes": 6363
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/summarize.py",
+      "sha256": "eea658792dfa321b641bb4a560b0ecad49ed07c443dc7414ac9c1f2405b99acd",
+      "bytes": 3327
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/controller.py",
+      "sha256": "3c897c66524222d8749a362dcc6e8a3a30466f4d85bbe774b6949085432fcd0e",
+      "bytes": 4092
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/PLAN.md",
+      "sha256": "7903ef7c46465e7560de7b3dce49e38e84eed8bcac62939a64f36c63c6e32009",
+      "bytes": 6793
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/job_receipt.json",
+      "sha256": "16ce80b4a8451436e27bb06385a3af252ab3085b5ebe1668c1cd760c4a6bc4fa",
+      "bytes": 366
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/capsule_manifest.json",
+      "sha256": "7b628f43005e42c6a5d3b94a58cdd0dbb6d30537c4f6bef70c34dfdc19c3167c",
+      "bytes": 1067
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/manifest.json",
+      "sha256": "85d6935f3d9bf6028f6e89183c8fc9acd5902dbebdfe11d9b643d2edc4800b44",
+      "bytes": 8082
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/status.json",
+      "sha256": "5bc56ccc9cf078b73a925917a360d3b83894924b0554550bd2b694a82c0fc46b",
+      "bytes": 628
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/smoke_results.json",
+      "sha256": "e2e34948265794d20ee551afd47c6299767ebc9e34b9e1b9105562125a35864f",
+      "bytes": 2171
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/controller.log",
+      "sha256": "8a8be50ad4f14d1a775f9b82e62e96b504b4a04592630f7e6f041382e75cd093",
+      "bytes": 28
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/prepare.py.log",
+      "sha256": "817a54d8929c8c8f27a5198cb306bf2dfa5403503435e5f10af7cf485f07fe13",
+      "bytes": 16
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/smoke_rank0.log",
+      "sha256": "daa6843f7e4db930b523a307ad65749c20323483824140ebfd3d65f88103e121",
+      "bytes": 25632
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/smoke_rank1.log",
+      "sha256": "27af33c45fbc96df40bc9abded8e6eb0ffb56b1c66d4e52eb8b6efd68601062e",
+      "bytes": 25632
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/smoke_rank2.log",
+      "sha256": "f902626e31ee9b176f13e2485d776db9112003283d2d4e3754aab284d32eed7c",
+      "bytes": 25632
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/smoke_rank3.log",
+      "sha256": "dcb6e0279b39ca0242eb54ebb7871f4a3fc4621d86b26378914c10aa0c78a7b3",
+      "bytes": 25632
+    },
+    {
+      "path": "codex_remote_ops/pccs_native_context_20260916/test_native.py.log",
+      "sha256": "96b693910d687055e56d3291f6b96bf086bf93b2c40c8fcfa2db17dc189d08f0",
+      "bytes": 25
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "sha256": "b18292a3d3813760e942aeb808eef4bc46bcea6fc7b6f9cc7cba514dcd6f9248",
+      "bytes": 33468
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
+      "sha256": "54df1f30c7569a92355f8e50b00dcf42212b05704f996fdfca61afe471943784",
+      "bytes": 27108
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/append_native_report.py",
+      "sha256": "3b8faaaaa11fbb424b16d057d0941c3be16a086bb5a02ef0803b7a5f09735a1d",
+      "bytes": 2991
+    }
+  ],
+  "excludes": "raw images, tensors, browser state, credentials and command transport"
+}

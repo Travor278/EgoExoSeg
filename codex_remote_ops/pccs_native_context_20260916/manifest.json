@@ -1,0 +1,188 @@
+{
+  "created_at": 1789573555.415966,
+  "phases": {
+    "smoke": {
+      "pairs": 8,
+      "objects": 8,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/smoke_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/smoke_rank0.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/smoke_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/smoke_rank1.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/smoke_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/smoke_rank2.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/smoke_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/smoke_rank3.yaml",
+          "pairs": 2,
+          "objects": 2
+        }
+      ],
+      "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
+      "reference_arm": "baseline"
+    },
+    "screen": {
+      "pairs": 128,
+      "objects": 243,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/screen_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/screen_rank0.yaml",
+          "pairs": 32,
+          "objects": 59
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/screen_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/screen_rank1.yaml",
+          "pairs": 32,
+          "objects": 69
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/screen_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/screen_rank2.yaml",
+          "pairs": 32,
+          "objects": 57
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/screen_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/screen_rank3.yaml",
+          "pairs": 32,
+          "objects": 58
+        }
+      ],
+      "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
+      "reference_arm": "baseline"
+    },
+    "calibration": {
+      "pairs": 128,
+      "objects": 225,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank0.yaml",
+          "pairs": 32,
+          "objects": 61
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank1.yaml",
+          "pairs": 32,
+          "objects": 55
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank2.yaml",
+          "pairs": 32,
+          "objects": 56
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916/calibration_rank3.yaml",
+          "pairs": 32,
+          "objects": 53
+        }
+      ],
+      "reference_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
+      "reference_arm": "baseline"
+    }
+  },
+  "configs": {
+    "baseline": {},
+    "zero": {
+      "scale": 1.75,
+      "min_similarity": 0.4,
+      "min_margin": 0.02,
+      "min_matches": 4,
+      "reliability_min": 0.2,
+      "conflict_max": 0.25,
+      "strength": 0.0,
+      "cycle": true,
+      "review": true
+    },
+    "cycle": {
+      "scale": 1.75,
+      "min_similarity": 0.4,
+      "min_margin": 0.02,
+      "min_matches": 4,
+      "reliability_min": 0.2,
+      "conflict_max": 0.25,
+      "strength": 0.5,
+      "cycle": true,
+      "review": false
+    },
+    "review": {
+      "scale": 1.75,
+      "min_similarity": 0.4,
+      "min_margin": 0.02,
+      "min_matches": 4,
+      "reliability_min": 0.2,
+      "conflict_max": 0.25,
+      "strength": 0.5,
+      "cycle": false,
+      "review": true
+    },
+    "both": {
+      "scale": 1.75,
+      "min_similarity": 0.4,
+      "min_margin": 0.02,
+      "min_matches": 4,
+      "reliability_min": 0.2,
+      "conflict_max": 0.25,
+      "strength": 0.5,
+      "cycle": true,
+      "review": true
+    },
+    "wrong_context": {
+      "scale": 1.75,
+      "min_similarity": 0.4,
+      "min_margin": 0.02,
+      "min_matches": 4,
+      "reliability_min": 0.2,
+      "conflict_max": 0.25,
+      "strength": 0.5,
+      "cycle": true,
+      "review": true
+    }
+  },
+  "assets": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "pretrained_omama_used": false,
+  "new_encoder_passes": 0,
+  "candidate_change": false,
+  "parameter_training": false,
+  "selection": "Positive native-PCCS final frame IoU delta on both screen and calibration; maximize calibration; exclude wrong-context and zero controls; otherwise retain baseline.",
+  "code_sha256": {
+    "native_context.py": "bcbdf563fd57005d6ac8568db63330be19c26d38491a9e15d9da9f4f40c10bab",
+    "worker.py": "258eeb493f69d0da16c44a3a9da4c4e41fe044eb69119db2c7ca35b512861817",
+    "configs.py": "eb3e8267ad3b22e2d80f665f4d92fa2f95cd033fe1ef142bca3380a8101004b9",
+    "patch_native.py": "10b56ab4a874340891ce75a0ff32e92716817c0ce0003ede17abcef085549380",
+    "code/projects/v2sam_pccs/evaluation/pccs_metric.py": "c0a385aef67eefd39810f564890404810cad0fe986e4c014934a35ef1686757e",
+    "code/projects/v2sam_pccs/native_context.py": "bcbdf563fd57005d6ac8568db63330be19c26d38491a9e15d9da9f4f40c10bab"
+  }
+}

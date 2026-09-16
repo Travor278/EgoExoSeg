@@ -1,0 +1,13 @@
+{
+  "job_id": "job-da364359-b0fd-4f8c-849e-b7ae4ccafe5e",
+  "name": "v2sam-native-context-pccs-20260916-r1",
+  "submitted_at": "2026-09-16 23:44:44 +08:00",
+  "nodes": 1,
+  "gpus": 4,
+  "gpu": "H100 80GB",
+  "priority": 4,
+  "maximum_minutes": 120,
+  "success_failure_retention_minutes": 1,
+  "command_exact_verified": true,
+  "initial_state": "queued"
+}

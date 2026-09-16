@@ -1,0 +1,16 @@
+{
+  "remote_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_native_context_20260916",
+  "command_characters": 23455,
+  "files": {
+    "native_context.py": "bcbdf563fd57005d6ac8568db63330be19c26d38491a9e15d9da9f4f40c10bab",
+    "patch_native.py": "10b56ab4a874340891ce75a0ff32e92716817c0ce0003ede17abcef085549380",
+    "test_native.py": "29e02154b278a10a8e7ddbbf8a398f32a020b3fc7f620dd6d623f6fca1099fc3",
+    "configs.py": "eb3e8267ad3b22e2d80f665f4d92fa2f95cd033fe1ef142bca3380a8101004b9",
+    "randomness.py": "7559393732681ed5b3859878239e4b30e37fad4d8546626e3c9a4d3e329c6b1e",
+    "prepare.py": "0b8c80b04469e2f8a350deb588872bd4fd786a097a08002f9d9e62e98329862a",
+    "worker.py": "258eeb493f69d0da16c44a3a9da4c4e41fe044eb69119db2c7ca35b512861817",
+    "summarize.py": "eea658792dfa321b641bb4a560b0ecad49ed07c443dc7414ac9c1f2405b99acd",
+    "controller.py": "3c897c66524222d8749a362dcc6e8a3a30466f4d85bbe774b6949085432fcd0e",
+    "PLAN.md": "7903ef7c46465e7560de7b3dce49e38e84eed8bcac62939a64f36c63c6e32009"
+  }
+}

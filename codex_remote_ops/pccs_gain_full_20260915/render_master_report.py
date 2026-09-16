@@ -146,6 +146,8 @@ from append_union_report import append
 append(parts,O)
 native_plan=O/'pccs_native_context_20260916/PLAN.md'
 if native_plan.exists():
- parts+=['','## 10. 方法定位修正：PCCS内部上下文增强','','根据用户最新要求，后续主线回到PCCS本身。§3及此前使用公开O-MaMa头/权重的实现，明确作为**外接匹配器组合基线**保留，其借用部分不能写作我们的原创context机制。已有候选生成未被删除，但最终决策可被外部匹配结果覆盖，这与在PCCS循环验证内部增强context不同。', '', '新主方案复用现有DINOv3与前后向对应，在原循环支持票/置信度中加入可靠的邻域语义证据，并独立处理fusion-first早退出：只有可靠context冲突时转入原PCCS循环复核。上下文缺失或不可靠时回到原流程。先固定候选验证选择机制，再单独研究context改善前向点定位，避免混淆归因。', '', '**该内部增强目前仅完成设计，尚未实现或评测。** 方向有合理动机，但创新性与效果均需文献对照、组件消融和独立验证；既有O-MaMa组合增益不能代替这些证据。完整实现边界与消融计划：[PCCS内部context计划](../pccs_native_context_20260916/PLAN.md)。']
+ parts+=['','## 10. 方法定位修正：PCCS内部上下文增强','','根据用户最新要求，后续主线回到PCCS本身。§3及此前使用公开O-MaMa头/权重的实现，明确作为**外接匹配器组合基线**保留，其借用部分不能写作我们的原创context机制。已有候选生成未被删除，但最终决策可被外部匹配结果覆盖，这与在PCCS循环验证内部增强context不同。', '', '新主方案复用现有DINOv3与前后向对应，在原循环支持票/置信度中加入可靠的邻域语义证据，并独立处理fusion-first早退出：只有可靠context冲突时转入原PCCS循环复核。上下文缺失或不可靠时回到原流程。先固定候选验证选择机制，再单独研究context改善前向点定位，避免混淆归因。', '', '**首版内部增强已实现，真实实验状态与结果见§10.1之后。** 方向有合理动机，但创新性与效果均需文献对照、组件消融和独立验证；既有O-MaMa组合增益不能代替这些证据。完整实现边界与消融计划：[PCCS内部context计划](../pccs_native_context_20260916/PLAN.md)。']
+from append_native_report import append_native
+append_native(parts,O)
 report.write_text('\n'.join(parts)+'\n',encoding='utf8');assert report.read_text(encoding='utf8').count('```')%2==0
 print(json.dumps({'report':str(report),'characters':len(report.read_text(encoding='utf8')),'completed_sections':list(completed),'sha256':hashlib.sha256(report.read_bytes()).hexdigest()},ensure_ascii=False))
