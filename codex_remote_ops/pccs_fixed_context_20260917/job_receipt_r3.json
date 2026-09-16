@@ -1,0 +1,16 @@
+{
+  "job_id": "job-3cd5ff86-117c-4946-853a-00d56ba5c04b",
+  "name": "v2sam-fixed100-pccs-20260917-r3",
+  "submitted_at_local": "2026-09-17 03:23:23",
+  "space_id": "ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+  "nodes": 1,
+  "gpus": 4,
+  "gpu_type": "H100 80GB",
+  "priority": 4,
+  "maximum_minutes": 120,
+  "success_retention_minutes": 1,
+  "failure_retention_minutes": 1,
+  "command_equality_verified": true,
+  "initial_state": "queued",
+  "recovery": "Resume incomplete Exo2Exo records only; frozen source selection; shared current bank and separately repaired external reference for any historical drift"
+}

@@ -31,5 +31,8 @@ def append_fixed(parts,root):
             parts += ['', '这些是描述性配对比较，不按目标数值重新选择模型。IoU点估计略高但区间跨零时，不能声称该区域定义已带来稳定额外收益。']
     if not (r/'exo2ego_results.json').exists():parts += ['当前状态：任务已提交，尚无本轮目标结果；100像素优于倍率环是待验证假设。']
     if (r/'resource_release_r1.json').exists():parts += ['', '运行记录：R1完成8对Capture开关/strength0回退检查、384对TRAIN及128对校准，原生特征/候选/路由一致性通过。Exo→Ego首次误用TRAIN-only图片根目录，四个分片均在第一条预测前发生空图像列表错误；该次没有目标指标。失败日志已保留，节点归零。R2仅修复测试图片根目录，采用此前全量成功配置并逐文件预检；不重拟合、不改选已冻结模型或阈值。']
+    if (r/'resource_release_r2.json').exists():parts += ['', 'R2完成Exo→Ego后，在Exo→Exo同一knife对象的历史候选一致性检查处停止。这是上一轮已验证原始推理本身可能重复变动的对象；本轮断言前未保存差异mask，不能推断本次差异也是25像素。R3保留已完成记录，改用已记录的同当前bank协议：所有方法共享当前候选，必要时在独立参考进程重算有差异对象的冻结O-MaMa外部比较，并用未变对象检查参考分数复现。模型与阈值不变，不能将不同候选bank指标混用。']
+    if (r/'reference_updates.json').exists():
+        updates=json.loads((r/'reference_updates.json').read_text());parts += [f"最终外部参考重算对象数：{updates['count']}。"]
     if (r/'resource_release.json').exists():parts += ['资源释放证据已存于本实验resource_release.json。']
     parts += ['', 'ROI裁图重编码属于另一机制，暂缓，优先完成用户明确要求的固定像素区域池化。']
