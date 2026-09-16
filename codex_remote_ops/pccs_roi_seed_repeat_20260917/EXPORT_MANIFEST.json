@@ -122,8 +122,23 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/status.json",
-      "sha256": "9efd4731d5f37abf9e329589b34d88b2d7dcac626e890a18bcb09e703cae1fd6",
-      "bytes": 639
+      "sha256": "14ffb9fd78a9e6231c085fad1109b92995e6e0ef78811c1fd6444e01841a4e30",
+      "bytes": 641
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/exo2exo_results.json",
+      "sha256": "da8a39c32f70ec8cebf74d7d266cca6708db13288c3f727f908759f15eb181aa",
+      "bytes": 8747
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/exo2exo_predictions.jsonl",
+      "sha256": "4da26ed514f77cdfc9ab84655c597624a0522cfb2675ecd68097a5183faa5e26",
+      "bytes": 532817
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/reference_updates.json",
+      "sha256": "4c1e37c0a0f0d54ac2b47880d9a8e43e2198cbc40764a38760ab25a468e6ac69",
+      "bytes": 1046074
     },
     {
       "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/secondary_contrasts.py",
@@ -131,9 +146,19 @@
       "bytes": 1390
     },
     {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/secondary_contrasts.json",
+      "sha256": "c140568302bfacb8777bad9c15c6ffd4bb64b72d773f7adf0ff92218aa434bb5",
+      "bytes": 2138
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/missing_view_audit.py",
       "sha256": "a4b5c0990d3ae5c36dd6d231be5b9dbd7e28d9f1289bea2f35293a752ef008e5",
       "bytes": 1398
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/verify_results.py",
+      "sha256": "e69437b0b92a69ed43aa64050d07eabd7b5edd8220248cc3ce9c2217290ca2d5",
+      "bytes": 5064
     },
     {
       "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/controller.log",
@@ -141,14 +166,104 @@
       "bytes": 0
     },
     {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/evaluate.py.log",
+      "sha256": "e07c8eac9937eb333d14aa7dfd1a62f62bdca8b4f0c2220b1d1ada77e6e35da3",
+      "bytes": 46
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/prepare.py.log",
       "sha256": "f6f4f2a7ccf627f183ef70a8da0c721fdc9203fe5dea60d29c66f88768e19ceb",
       "bytes": 23
     },
     {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/reference_collect.py.log",
+      "sha256": "0795ad62322f8f17abbf00eebef18b9bb81bd13421bdc5ffbca4ab8f3ed70aaa",
+      "bytes": 26
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/test_repeat.py.log",
       "sha256": "ab31882369fd9d43eee89ceee884868577cce36b62373e8925e7544946a783a3",
       "bytes": 47
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/exo2exo/rank0/records.jsonl",
+      "sha256": "21aacfbd00f91335800797764861c54ce366df05ce04615fe025634b4662a6a5",
+      "bytes": 2052277
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/exo2exo/rank1/records.jsonl",
+      "sha256": "6eea05d70a2f434a22532d985dbdbe0435f67bf4593c73477ec485d189fa3f06",
+      "bytes": 2061688
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/exo2exo/rank2/records.jsonl",
+      "sha256": "cf7733622f8a7a55d5a526b07a02bac125ebd5d248f28773a5e34b7fee8c6043",
+      "bytes": 2051495
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/exo2exo/rank3/records.jsonl",
+      "sha256": "3b08da47e8035aa489e04b23dd350e8fb1c47e585f7fb0203bcfcf5842c1ee0f",
+      "bytes": 2054985
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank0/references.jsonl",
+      "sha256": "68782962aa14d2dc558ef34b83f86198faeea16a306d43779227dd39b61e49ba",
+      "bytes": 198210
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank1/references.jsonl",
+      "sha256": "183bf924d079f0bffd9df6e348280c82ee76b9c3959eb79d6310e3b7f13a94d8",
+      "bytes": 199357
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank2/references.jsonl",
+      "sha256": "3fdaf0b98fc612aa79a9227959664367ab7e1845100940226bd262869db842d0",
+      "bytes": 197974
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank3/references.jsonl",
+      "sha256": "aecff20873f2f1c38619ff53ec5f2fe7f9021ee211a457d60827e2d91a4d8421",
+      "bytes": 198721
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/exo2exo/rank0/receipt.json",
+      "sha256": "afe8544fc0ad8cc673b738bfc9a4ceb55d5e0b393c80d487800f342ef2ed4746",
+      "bytes": 271
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/exo2exo/rank1/receipt.json",
+      "sha256": "f196bd55870492b89e0aa4ace4b905ac5d949ddea1da4b4ad959da619a417ede",
+      "bytes": 271
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/exo2exo/rank2/receipt.json",
+      "sha256": "667f6f03e44cc866bc0d7132b7cfdd2811b0c618a3b3b8430c507ac14ce90e99",
+      "bytes": 271
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/exo2exo/rank3/receipt.json",
+      "sha256": "57c6ad1946e0951b2cd2ce07fe6f875906160bd8545fbd482e691167bc4d4b7e",
+      "bytes": 271
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank0/receipt.json",
+      "sha256": "a012b226efa820a9682dc0ef4fe0c5ef37a006726e48c83d5dedc8e5a4284191",
+      "bytes": 443
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank1/receipt.json",
+      "sha256": "2dd04d2d275ec1d30a5dec5d0d07c1b9de0abd1f9ec45a8e5214dedf28b612c5",
+      "bytes": 448
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank2/receipt.json",
+      "sha256": "735072410481cbe0579949eacf3b17f9ae54c13e47ecd6956b0ce92c26552318",
+      "bytes": 443
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank3/receipt.json",
+      "sha256": "26f941818c16f8f20dfc30b457b1d6ce8b825e84297acb355d34f3346b25fa4b",
+      "bytes": 447
     },
     {
       "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/smoke/rank0/receipt.json",
@@ -171,6 +286,26 @@
       "bytes": 265
     },
     {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank0/witness.json",
+      "sha256": "315bd127641dd5e8aebfb18e54f61bd41838a98a50e5e38d51e2455e1e1c0cb8",
+      "bytes": 251
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank1/witness.json",
+      "sha256": "beab8f197f5c0911d9178a2e7230e424ac755cea3c62bdc2eb99204103fa435e",
+      "bytes": 256
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank2/witness.json",
+      "sha256": "f493d84a33cb77b74f33cb6e65d4a7b6375acdc51a5fa84fca6dceaa588fd7d0",
+      "bytes": 251
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference/rank3/witness.json",
+      "sha256": "93dcd1afde7d64cdaaf2dba9721c89fcc22bd0e4d3cad1b519ddbdaf377dc694",
+      "bytes": 255
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/runs/reference_probe/rank0/witness.json",
       "sha256": "315bd127641dd5e8aebfb18e54f61bd41838a98a50e5e38d51e2455e1e1c0cb8",
       "bytes": 251
@@ -191,9 +326,14 @@
       "bytes": 255
     },
     {
+      "path": "codex_remote_ops/pccs_roi_seed_repeat_20260917/partial_validation.json",
+      "sha256": "588cc547f86cfaad475eef15e37fe35dcc75a59f987bf2592af0a91c0e4d342f",
+      "bytes": 695
+    },
+    {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "4b7c4d0866837860dfbfbdfb56262d136f9da255869623733d6ede66b4906ef8",
-      "bytes": 70982
+      "sha256": "95e9beafd15b88e93bc62e159251554968ef4518f622d1cfb211b598eb82f54a",
+      "bytes": 72831
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
@@ -207,8 +347,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_repeat_report.py",
-      "sha256": "c3eee241104321c2b4a6087bfad812fd1c5a915684704904dd00428ff1759e46",
-      "bytes": 3711
+      "sha256": "df3ae2eb6a4c9f037e6d2f2c00604a8679ddde20718b6e396d49233b5ec8fb7b",
+      "bytes": 4665
     },
     {
       "path": "codex_remote_ops/pccs_roi_context_20260917/metadata_errata.json",

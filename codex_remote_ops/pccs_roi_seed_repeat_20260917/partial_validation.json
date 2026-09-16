@@ -1,0 +1,22 @@
+{
+  "frozen_selection_sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+  "seed_namespace": "candidate-quality-v2:",
+  "no_refit": true,
+  "phases": {
+    "exo2exo": {
+      "pairs": 1094,
+      "objects": 1094,
+      "baseline_zero_iou_objects": 434,
+      "changed_from_seed1_objects": 1094,
+      "expert_masks_changed": {
+        "visual": 1091,
+        "anchor": 0,
+        "fusion": 1083
+      },
+      "same_keys_and_seed_verified": true,
+      "actual_primary_local20_cycle_and_frame_aggregation": "passed",
+      "same_current_bank_external_reference": "passed",
+      "external_decisions_replayed_from_saved_scores": "passed"
+    }
+  }
+}

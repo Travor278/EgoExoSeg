@@ -1,0 +1,14 @@
+{
+  "state": "complete",
+  "objects": 273,
+  "computed": 273,
+  "reused": 0,
+  "records_sha256": "aecff20873f2f1c38619ff53ec5f2fe7f9021ee211a457d60827e2d91a4d8421",
+  "witness": {
+    "video_id": "0d26fb16-d4ba-4c47-9c32-5f8f052e7396__obj_cell-phone_0__f_27750__ego_aria01_214-1__exo1_gp01__target_gp04__exo1gt_gp01_f_3450__random_mismatch",
+    "obj_id": "0",
+    "max_score_error": 0.0,
+    "expert": "fusion",
+    "old_bank_witness": true
+  }
+}

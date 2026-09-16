@@ -22,5 +22,6 @@ def append_repeat(parts,root):
         errors=[json.loads((r/'runs/reference_probe'/f'rank{k}/witness.json').read_text())['max_score_error'] for k in range(4)];parts += ['',f"新seed的8对pipeline冒烟已通过；四张卡分别复现旧bank见证样本的O-MaMa专家选择，最大分数绝对误差{max(errors):.8g}（预设容差1e-4）。完整benchmark比较仍须使用新候选对应的参考输出。"]
     if (r/'reference_updates.json').exists():
         a=json.loads((r/'reference_updates.json').read_text());parts += ['',f"外部参考重新计算{a['count']}个对象，复用完全一致bank的{a['reused_identical_bank']}个对象；每rank均用旧bank见证样本校对分数。"]
+    if (r/'exo2exo_results.json').exists():parts += ['', 'Exo→Exo复验：预选1.5倍主方案在seed1/seed2分别提升2.7498/2.6975点；2倍次要对照分别提升3.3101/3.2772点。第二seed原PCCS39.0686，2倍42.3458，同bank O-MaMa42.5391。2倍相对此前cycle额外1.1718点，描述性区间[0.5506,1.7985]；与O-MaMa相差-0.1934点，区间[-1.6148,1.2403]，仍不是等效证明。', '', '1094对全部完成，Visual有1091个mask变化、Fusion1083个、Anchor0个；每对候选集合均有变化，所以O-MaMa参考1094个全部重算。独立核验包含新seed计算、同一数据键集合、三个实际metric路由（主方案/2倍/旧cycle）、frame聚合及参考专家由保存分数重放。原PCCS本轮434个零IoU对象保留。真实背景对前景-only的描述性差仍为正：local20差2.6951点，[1.6514,3.5674]；全图联合差2.1238点，[1.1205,3.0302]。灰背景分布变化的解释边界不变。']
     if (r/'resource_release.json').exists():
         a=json.loads((r/'resource_release.json').read_text(encoding='utf-8-sig'))['cells'];parts += ['',f"任务{a[5]}，占用节点{a[7]}，结束{a[9]}（北京时间）。"]
