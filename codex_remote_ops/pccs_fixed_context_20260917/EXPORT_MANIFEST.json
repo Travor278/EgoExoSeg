@@ -1,0 +1,115 @@
+{
+  "files": [
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fixed_context.py",
+      "sha256": "572bc8f154524935231a22d0654c1c355c7e870f629c31f0d63f4b1aed7f60af",
+      "bytes": 3020
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/dense_context.py",
+      "sha256": "dfc75ae9046628f220f5171aef9e83631395d28ea62aa9eac1335f53185710dc",
+      "bytes": 4773
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/policies.py",
+      "sha256": "3545f6d890fd8ce3947950c0362c47987c5cf083364d5c96b863c0883d1eba11",
+      "bytes": 3347
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/native_bridge.py",
+      "sha256": "b9d91464c59131924a2b7d1977fe0639713302e259ee45784cd12c5138a969d4",
+      "bytes": 1777
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/test_geometry.py",
+      "sha256": "6a69e8fd8b2ed28792dfa6b7e5c0d4e53afc8faf7dc5b81737fe4d156f934ccb",
+      "bytes": 788
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/randomness.py",
+      "sha256": "5a03320b0a0de30fff180ebf0a5ceb5ab5de49f0d57609e4fd5ac49686676367",
+      "bytes": 249
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/prepare.py",
+      "sha256": "e0045ac705a05a38730bb12ae113ac16b15de78a13d6ec9e595d086317881f04",
+      "bytes": 3333
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/worker.py",
+      "sha256": "c7369c7b2840b4d6aa92ef567ed2cb0a6418f1b73db7f0b6a1c6c386309c1d3b",
+      "bytes": 11544
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/data_utils.py",
+      "sha256": "a4c6cdb2986d6630a77337cedd401ddbd3953c963cca0f5646d72c0be0cbfcf4",
+      "bytes": 2188
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fit_and_select.py",
+      "sha256": "09e8db93945525423e7d6be9384e1a5c91adc78d52c921b07c91f9d690a92721",
+      "bytes": 4689
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/evaluate.py",
+      "sha256": "8f2b1133d1b70c1bbe3f0e0c3c7c49fb079a2d14f7558999289f2f0979e29142",
+      "bytes": 2892
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/evaluate_exoego.py",
+      "sha256": "56b7069ffe7df5534ed7f2563b0a0fa2533fd9b2228a92416bd0f1f0dd4623c4",
+      "bytes": 66
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/controller.py",
+      "sha256": "754a207f2ac090184fa615823b9fabf741ab33508680f9d11f94f0ff7462511d",
+      "bytes": 3716
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/build_local.py",
+      "sha256": "00d60306dc3fa33dce11ac819b9b4c638e11b30cfacccf5f11918f9276df35da",
+      "bytes": 6509
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/PLAN.md",
+      "sha256": "45dd347983894de579f044b12524d4f0996f385a2ed04457eae5f34c02176221",
+      "bytes": 3676
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/job_receipt.json",
+      "sha256": "627489d453b916cd798f4117f14e80c5f496c231514448b99c54f2e8b4a18c8b",
+      "bytes": 439
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/capsule_manifest.json",
+      "sha256": "581da0a91dcdcaa8eef9598900849e3e5911db7a95901e612a4e81c31f11fde5",
+      "bytes": 1440
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "sha256": "aa62714725fef98b58b9c0528d1f478dd45461121c1669c79f05d3067c32a2d8",
+      "bytes": 46497
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
+      "sha256": "63e31d2c310bc06e55b04b305ce093905eece68a1d46111ddb58ad317a3adf01",
+      "bytes": 28366
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/append_fixed_report.py",
+      "sha256": "b4be961ebc2da8c46fe60aafaeac91224a9a4b96bdd9ba7be48ceba6deea8b3d",
+      "bytes": 3507
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/roi_evidence.py",
+      "sha256": "2322ab47bbb0c13d359d327d800dae63bf26433fd10425799f43279253f0b829",
+      "bytes": 3194
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_context_20260917/roi_policy.py",
+      "sha256": "902146838666e8268f70de070c7dc7e09b2def842af64b7ee103f74ae7122b3c",
+      "bytes": 1627
+    }
+  ],
+  "excludes": "credentials, browser state, command transport, dependency directories, raw annotations/images/masks and large features"
+}

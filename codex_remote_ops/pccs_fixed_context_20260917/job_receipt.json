@@ -1,0 +1,15 @@
+{
+  "job_id": "job-681a295c-80f7-41dc-950d-3e4a92321fe2",
+  "name": "v2sam-fixed100-pccs-20260917-r1",
+  "submitted_at_local": "2026-09-17 02:44:56",
+  "space_id": "ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+  "nodes": 1,
+  "gpus": 4,
+  "gpu_type": "H100 80GB",
+  "priority": 4,
+  "maximum_minutes": 120,
+  "success_retention_minutes": 1,
+  "failure_retention_minutes": 1,
+  "command_equality_verified": true,
+  "initial_state": "queued"
+}

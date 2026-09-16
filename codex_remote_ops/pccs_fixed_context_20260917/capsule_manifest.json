@@ -1,0 +1,20 @@
+{
+  "remote_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_fixed_context_20260917",
+  "command_characters": 29779,
+  "files": {
+    "fixed_context.py": "572bc8f154524935231a22d0654c1c355c7e870f629c31f0d63f4b1aed7f60af",
+    "dense_context.py": "dfc75ae9046628f220f5171aef9e83631395d28ea62aa9eac1335f53185710dc",
+    "policies.py": "3545f6d890fd8ce3947950c0362c47987c5cf083364d5c96b863c0883d1eba11",
+    "native_bridge.py": "b9d91464c59131924a2b7d1977fe0639713302e259ee45784cd12c5138a969d4",
+    "test_geometry.py": "6a69e8fd8b2ed28792dfa6b7e5c0d4e53afc8faf7dc5b81737fe4d156f934ccb",
+    "randomness.py": "5a03320b0a0de30fff180ebf0a5ceb5ab5de49f0d57609e4fd5ac49686676367",
+    "prepare.py": "e0045ac705a05a38730bb12ae113ac16b15de78a13d6ec9e595d086317881f04",
+    "worker.py": "c7369c7b2840b4d6aa92ef567ed2cb0a6418f1b73db7f0b6a1c6c386309c1d3b",
+    "data_utils.py": "a4c6cdb2986d6630a77337cedd401ddbd3953c963cca0f5646d72c0be0cbfcf4",
+    "fit_and_select.py": "09e8db93945525423e7d6be9384e1a5c91adc78d52c921b07c91f9d690a92721",
+    "evaluate.py": "8f2b1133d1b70c1bbe3f0e0c3c7c49fb079a2d14f7558999289f2f0979e29142",
+    "evaluate_exoego.py": "56b7069ffe7df5534ed7f2563b0a0fa2533fd9b2228a92416bd0f1f0dd4623c4",
+    "controller.py": "754a207f2ac090184fa615823b9fabf741ab33508680f9d11f94f0ff7462511d",
+    "PLAN.md": "45dd347983894de579f044b12524d4f0996f385a2ed04457eae5f34c02176221"
+  }
+}
