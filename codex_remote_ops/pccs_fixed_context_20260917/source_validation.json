@@ -1,0 +1,11 @@
+{
+  "train": {
+    "objects": 676,
+    "native_feature_and_candidate_parity": true
+  },
+  "calibration": {
+    "objects": 225,
+    "native_feature_and_candidate_parity": true
+  },
+  "selection_sha256": "a75017d84388821a1b76c7e0f5c85202e1dd84b5c9d49ef170f948f2d92a3bc7"
+}

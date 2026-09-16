@@ -156,6 +156,46 @@
       "bytes": 30
     },
     {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/calibration/rank0/records.jsonl",
+      "sha256": "923ce526d0ced71e31815417fd07d9a26d8d1c2847b0e98e086507210557581b",
+      "bytes": 1496103
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/calibration/rank1/records.jsonl",
+      "sha256": "e98912ce8790d1a3d872b6cdde08cd9f643d20e4671da2b87e85d3771a751ea2",
+      "bytes": 1348889
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/calibration/rank2/records.jsonl",
+      "sha256": "5d21906b929934c11e3dbc4b5f72a4c3362573ffdd10a38c49715383b266c830",
+      "bytes": 1375861
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/calibration/rank3/records.jsonl",
+      "sha256": "6c1d2b19d7623af2173b16b0dddc4a45cda838612e858e3f2cf6efdd5671dcab",
+      "bytes": 1298647
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/train/rank0/records.jsonl",
+      "sha256": "05deca2611d16c029f65b982f9c853d947a699c5b1a028743b3a85273689d2e5",
+      "bytes": 3952608
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/train/rank1/records.jsonl",
+      "sha256": "0f1981946ec52d4d208740b506f4b7dc7402a6eda13b9dce459df97c16ca2ff8",
+      "bytes": 4550159
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/train/rank2/records.jsonl",
+      "sha256": "2ea1f09ab8e25822666d44cfe7e8a6d06bd251d01ea9c0f1da0b608e8ef979f2",
+      "bytes": 4027755
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/train/rank3/records.jsonl",
+      "sha256": "4877cda4d444998c0809d5799767291729e72b201cf5ed1c922983d5f794ed36",
+      "bytes": 4085405
+    },
+    {
       "path": "codex_remote_ops/pccs_fixed_context_20260917/runs/calibration/rank0/receipt.json",
       "sha256": "8848fa1dd67ffe48de96b851b148759bb3be9ccd89240c753ee86f984e2975f2",
       "bytes": 266
@@ -216,6 +256,81 @@
       "bytes": 267
     },
     {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/cycle_ridge10.joblib",
+      "sha256": "bf29e873ed7c5a6e6ebd157b2859b1f1a018564202bd6883e1964cae088cd06c",
+      "bytes": 2246
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/old_ring15_ridge10.joblib",
+      "sha256": "f18b40679dd08f74e6caf1d0ade640775192ec7f91d8483c847bfdf662116378",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/old_ring20_ridge10.joblib",
+      "sha256": "c4d3bb5968632c4358d64b22e62ea9cb3a7c0785c61e87f5708a34862bbc22b7",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/om100_box_ridge10.joblib",
+      "sha256": "3c1ebda75fac3bbc400e893df11e80398f6319e5a7ea57fa48623899cb3dd604",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/om100_ring_ridge10.joblib",
+      "sha256": "f8ef94382d214857d02b0e7fc40f3839d27001184b1da377a8a4dfbb4a4bc1ab",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/px100_box_ridge10.joblib",
+      "sha256": "c15a7e26761196c8d1e960e0e06b0a20630e671add401def2f9673a04f1560f5",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/px100_ring_ridge10.joblib",
+      "sha256": "be71e6939e34ec6b035637f74eb29ad1a7a4213418345b99320091e2d0ec4ed5",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/px150_box_ridge10.joblib",
+      "sha256": "7ebb71539c55a3e7af914c60e0798da2e6f529b6d9826ee7d445e4db08bb03f0",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/px150_ring_ridge10.joblib",
+      "sha256": "24058d76cdd9fd295df313490f3b025e10bd8a74d18e7c15df6bb95af1f37447",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/px50_box_ridge10.joblib",
+      "sha256": "946e1a38d4bc5aab6d0cf895c2716bb88a716b5e1a27654ac74b8ac476c39dd3",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/px50_ring_ridge10.joblib",
+      "sha256": "f05c03b7991459ddff2e4aac6b47cda1cb6cac603abbf35ce8f3890abd7929fc",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/scale15_box_ridge10.joblib",
+      "sha256": "14a2421224fb1a58c86b5996a33366748c28ee2e49aaaff4ff9fc878efef9606",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/scale15_ring_ridge10.joblib",
+      "sha256": "ac8d9adadbd3de8f0e65afd93d6c820251ea8fa7bcd6037c790f366ea1f56caf",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/scale20_box_ridge10.joblib",
+      "sha256": "2d19e83de26a74a309740a2521c339aaad5d52c52cfc5dc1a5746c4589024b4c",
+      "bytes": 2822
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/fitted/scale20_ring_ridge10.joblib",
+      "sha256": "659ea1c80150e6de4b8be04ef1f59ed1f09d8491e630d286ac8aa7fe9dd4b872",
+      "bytes": 2822
+    },
+    {
       "path": "codex_remote_ops/pccs_fixed_context_20260917/resume_controller.py",
       "sha256": "6262e8c7d76ce42b0cafd947532eca6b80184053f792956f9ba60851ffaab992",
       "bytes": 4297
@@ -234,6 +349,16 @@
       "path": "codex_remote_ops/pccs_fixed_context_20260917/resource_release_r1.json",
       "sha256": "3773ee41a602e747258c099e72a02a79d632d254d22385d5b60c99069599853d",
       "bytes": 271
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/verify_results.py",
+      "sha256": "88234ae82a887c74141e12d261637cdd48a1b210c7eac066b7db87fd750e40fc",
+      "bytes": 3097
+    },
+    {
+      "path": "codex_remote_ops/pccs_fixed_context_20260917/source_validation.json",
+      "sha256": "b00abd88dac6958f6f4cac1e4a2de37819181c3840a39cb9e4191a888fd9f084",
+      "bytes": 280
     },
     {
       "path": "codex_remote_ops/pccs_fixed_context_20260917/recovery_r1/controller.log",
