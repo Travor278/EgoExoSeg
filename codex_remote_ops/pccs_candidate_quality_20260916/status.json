@@ -1,0 +1,49 @@
+{
+  "state": "running",
+  "phase": "screen",
+  "arms": {
+    "baseline": {
+      "state": "running",
+      "pairs_done": 48,
+      "pairs_total": 128,
+      "objects_done": 79,
+      "eta_seconds": 134.19053039862774,
+      "updated_at": 1789541383.0770736,
+      "arm": "baseline",
+      "phase": "screen"
+    },
+    "weighted_pool": {
+      "state": "running",
+      "pairs_done": 48,
+      "pairs_total": 128,
+      "objects_done": 79,
+      "eta_seconds": 134.18719204336716,
+      "updated_at": 1789541383.0817401,
+      "arm": "weighted_pool",
+      "phase": "screen"
+    },
+    "reliable_points": {
+      "state": "running",
+      "pairs_done": 48,
+      "pairs_total": 128,
+      "objects_done": 79,
+      "eta_seconds": 147.42596474670185,
+      "updated_at": 1789541391.019834,
+      "arm": "reliable_points",
+      "phase": "screen"
+    },
+    "both": {
+      "state": "running",
+      "pairs_done": 48,
+      "pairs_total": 128,
+      "objects_done": 79,
+      "eta_seconds": 146.88769145480668,
+      "updated_at": 1789541391.9307356,
+      "arm": "both",
+      "phase": "screen"
+    }
+  },
+  "eta_seconds": 147.42596474670185,
+  "updated_at": 1789541405.6034842,
+  "pid": 55
+}

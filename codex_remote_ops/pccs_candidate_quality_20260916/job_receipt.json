@@ -1,0 +1,12 @@
+{
+ "job_id":"job-2c8bf72d-3b25-4c7b-8fc8-00263486e214",
+ "name":"v2sam-candidate-quality-2x2-20260916-r1",
+ "url":"https://qz.sii.edu.cn/jobs/distributedTrainingDetail/job-2c8bf72d-3b25-4c7b-8fc8-00263486e214?spaceId=ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+ "created_at":"2026-09-16T14:45:18+08:00",
+ "nodes":1,"gpus":4,"gpu_model":"H10080GB","cpu":80,"memory_gb":900,"shared_memory_gb":512,
+ "priority":4,"max_runtime_minutes":180,"success_retention_minutes":1,"failure_retention_minutes":1,
+ "image":"ngc-pytorch:25.02-cuda12.8.0-py3",
+ "state_at_submission":"queued",
+ "scope":"Four-arm frozen candidate-quality ablation; training screen/calibration, conditional preselected Exo2Exo test",
+ "transport":"Compressed source capsule in job command; no credentials and no networking needed on H100; refuses overwrite of existing experiment"
+}

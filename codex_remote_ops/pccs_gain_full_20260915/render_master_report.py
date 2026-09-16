@@ -98,7 +98,7 @@ parts+=['','独立确认：作者权重下的512对／965对象／64序列holdou
 '| 3 | 质量感知O-MaMa适配 | 在**修复权重候选**上重训小型IoU差排序／收益头，加入尺度和视角增强；主体冻结，独立校准后冻结测试 |',
 '| 4 | 多尺度物体／背景可靠性 | 区分前景、框内邻域与跨图注意力，根据源目标尺度和候选质量学习可靠性，而非继续手工扫描测试倍率；与完整原头公平消融 |',
 '| 5 | 更大独立Exo→Exo确认 | 当前只有20序列；增加未见外部相机组合／序列，固定单一主方案，并做组件归因。不能用重复测试替代独立证据 |',
-'','建议下一步是**区域池化的训练／校准小实验**：若候选oracle没有改善，再转可靠多点。当前O-MaMa门控只能选已有mask，改善候选本身更有机会突破上限。以上是有代码依据的假设，尚未作为新实验运行；不承诺必然涨点。',
+ '','优先做**区域池化与可靠多点的训练／校准小实验**。当前O-MaMa门控只能选已有mask，改善候选本身更有机会突破上限。以上是有代码依据的研究假设，不承诺必然涨点；实际启动和结果状态见§8。',
 '','## 7. 实现、运行与维护索引','','| 目录／文件 | 用途 |','|---|---|',
 '| 本目录`score.py`、`gain_features.py`、`aligned_model.py` | 作者权重全量时的原始学习门控实现 |',
 '| `../pccs_corrected_exoexo_20260916/` | 修复权重Exo→Exo；几何双路打分、完整日志和回执 |',
@@ -114,5 +114,20 @@ for folder in ('pccs_gain_full_20260915','pccs_exoexo_transfer_20260916','pccs_c
  if not p.exists():continue
  rr=load(p);cells=rr.get('cells',[])
  if len(cells)>9:parts.append(f"| {cells[0]} | {cells[9]} | {cells[7]} |")
+Q=O/'pccs_candidate_quality_20260916'
+if (Q/'PLAN.md').exists():
+ parts+=['','## 8. 新增候选质量 2×2 消融（2026-09-16）','','概率加权池化和可靠多点对应现已进入实际测试。四组为baseline、只改预测coarse-mask池化、只改可靠多点、两者结合；主体权重均冻结。源提示mask池化不改，加权分支保留原采样的RNG消耗；多点为严格双向最近邻、目标第一/第二匹配间隔≥0.01、双侧间隔≥2patch、最多3点，至少2点可靠时采用，否则退回原单点。',
+ '','先用8对进行运行预检，再用128对／16训练序列筛查、另128对／16不重叠训练序列校准。上游专家已看过官方训练数据，故这不是独立测试收益。方案须同时改善筛查与校准候选oracle，且校准的固定几何一致性最终IoU为正增益；满足条件者按校准最终IoU选择，之后才比较预选方案与baseline的Exo→Exo结果。无合格方案则报告负结果，不在目标测试集调参。',
+ '','分支隔离门要求：只改池化时Anchor不变；只改点时Visual不变；组合方案的对应分支与单项方案一致。不通过即停止。每个arm使用自己的新候选，并比较arm之间的同名最终选择方法；不能把某arm的新方法分数减去异次旧基线。']
+ armnames={'baseline':'原始候选','weighted_pool':'概率加权池化','reliable_points':'可靠多点','both':'两者结合'}
+ found=False
+ for phase,title in [('screen','训练内筛查'),('calibration','训练内校准'),('exo2exo','预选方案 Exo→Exo 确认')]:
+  p=Q/(phase+'_summary.json')
+  if not p.exists():continue
+  a=load(p);found=True;parts+=['',f'### 8.{phase} {title}','', '| 候选方案 | Oracle IoU | 原PCCS IoU | 几何一致性 IoU | 多点对象数 |','|---|---:|---:|---:|---:|']
+  for arm,v in a['arms'].items():parts.append(f"| {armnames[arm]} | {v['frame']['oracle'][0]*100:.4f} | {v['frame']['pccs'][0]*100:.4f} | {v['frame']['consensus'][0]*100:.4f} | {v['multipoint_objects']} |")
+ if not found:parts+=['','**当前结果待定，尚不宣称这两项改动产生收益。**']
+ if (Q/'selection.json').exists():parts+=['','训练内选择结果：`'+load(Q/'selection.json')['selected']+'`；规则按预注册计划执行。']
+ parts+=['','本节候选质量实验使用5000次序列bootstrap；前面的选择器实验使用10000次。实现与完整回执：[候选质量实验计划](../pccs_candidate_quality_20260916/PLAN.md)。早期选择器实验的涨点不能归因于本节新增候选改动。']
 report.write_text('\n'.join(parts)+'\n',encoding='utf8');assert report.read_text(encoding='utf8').count('```')%2==0
 print(json.dumps({'report':str(report),'characters':len(report.read_text(encoding='utf8')),'completed_sections':list(completed),'sha256':hashlib.sha256(report.read_bytes()).hexdigest()},ensure_ascii=False))

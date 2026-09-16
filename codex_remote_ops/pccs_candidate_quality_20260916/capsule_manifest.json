@@ -1,0 +1,13 @@
+{
+  "remote_root": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_quality_20260916",
+  "command_characters": 19323,
+  "files": {
+    "candidate_ops.py": "c9d6da4ee47c5f4e67c74d204bc9dace7162b2bda4d95e3db564249ffab7ad9d",
+    "test_candidate_ops.py": "a98364fe6767806edca85b166d83e87d54820db530feb82c8692947d4b3972a8",
+    "prepare.py": "d8c4e953b290bfdfbadcc51b4c90eaaf62a7f38e7eda630794ab58c11e79118b",
+    "worker.py": "9ef59c6aabf24df02dcb14d77b9e7a4df0ae234ecb9e936b4c612e40a5524814",
+    "summarize.py": "6520ae045386df7df7b1c296866a1c4300dd8f61616b73058b745f42295eaaa6",
+    "controller.py": "d2191bde8cbfd0b9cd5c6cd4af66c44624283fdd3b3588a3330a70faa2078843",
+    "PLAN.md": "515effa01a6f5414bf76294aa0a56eeb8d53d7c1276a51dff8baa2f6bb6b7ddc"
+  }
+}
