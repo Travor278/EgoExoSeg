@@ -137,8 +137,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/status.json",
-      "bytes": 378,
-      "sha256": "9513cc81750ecc9bcaefadb5f39ab23db93e39c90e783c0960d968cecb45ba2c"
+      "bytes": 148,
+      "sha256": "a68eca59dd909f0a6bee7416d406b2ff196f21c5e26c9f0ee7d4085fdfd283bd"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/stage1_results.json",
@@ -161,14 +161,29 @@
       "sha256": "86eec91599b4121b42a64f187603f8f2eb5df3bd3c9d5c2c14fa4324227ed963"
     },
     {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/exo2exo_results.json",
+      "bytes": 2060,
+      "sha256": "d41759d4aae7d45ff3caf90e9896d6200a083dd57312221294ee8f66227f6dcf"
+    },
+    {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/gpu_preflight.txt",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/gpu_after.txt",
+      "bytes": 41,
+      "sha256": "cae79969ce448872401f5d9bcd1d52bbefa1a5450cf3a5658f62f068ab59294b"
+    },
+    {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/controller.log",
       "bytes": 31,
       "sha256": "bda54eae2ca22c3e48e3c3e023ca4307960a5ef5c5e4951e1a82fc71f0d1decf"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/resource_release.json",
+      "bytes": 288,
+      "sha256": "814d287a53ac8cf11e76059cf75e1d7a00203329655fc93c187e6778df6aafbf"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/smoke_isolation.json",
@@ -186,6 +201,26 @@
       "sha256": "c0c71447012fc95327001223655f0ff5260151892422b19b2cbe1cfce6538f29"
     },
     {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/verify_final.py",
+      "bytes": 4074,
+      "sha256": "bef3a4b1afe10ac677b051daa5f6ee1464e9f5390ba163a04dbe0b07acfa0c3b"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/final_validation.json",
+      "bytes": 1053,
+      "sha256": "f8352f3229bacdedda8c67e28196dc4bf77a73f3fc23120dd5cb0f71228553a4"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/exo2exo_per_object.jsonl",
+      "bytes": 722954,
+      "sha256": "3f976ed023a2c29e3b7501e2493b5ba4c47cd3c285432bdce72867f8211ab723"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge10.joblib",
+      "bytes": 1926,
+      "sha256": "75519f829dc7f34e55f55a8942cf3907bca83cee79293f9e9abe2bba9c4a8b10"
+    },
+    {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/controller.log",
       "bytes": 31,
       "sha256": "bda54eae2ca22c3e48e3c3e023ca4307960a5ef5c5e4951e1a82fc71f0d1decf"
@@ -196,9 +231,44 @@
       "sha256": "743824c351953dcf7538b0ec2aeef2be1aef222c10117fc650ad119d7c7d8900"
     },
     {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/dataset_exo2exo.log",
+      "bytes": 791,
+      "sha256": "555578b08a76285e1308a3d9c2816f7b9385873a5f3e935bf6ef1ff63a8c48b5"
+    },
+    {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/dataset_screen.log",
       "bytes": 790,
       "sha256": "c69920ff67b45732c40188fa0e4878b94f2fbfe69b7f14d5bf9367293a7247ad"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/evaluate_selected.log",
+      "bytes": 30,
+      "sha256": "bb32657a9baccf4fde190e3a696db467c277854445ac5d0540523d3154d4789f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/exo2exo_baseline.log",
+      "bytes": 251723,
+      "sha256": "a031ff130156731a814e7fdbc32f05433b55347f1a192965979865fedd14607b"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/exo2exo_reliable_points.log",
+      "bytes": 251718,
+      "sha256": "95b30f5f79fa5c8c348fd43af92bef041fbaee5d30f050039d3705fd37d79d09"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/exo2exo_residual005.log",
+      "bytes": 251744,
+      "sha256": "d5dfd62ca11b0c2fe47967c132facc7a7c1b83d01a7956af8d6076b80ee67d95"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/exo2exo_residual010.log",
+      "bytes": 251746,
+      "sha256": "efb6ff1f46afbac54206f1a1e9e01a77e7ba0d99d21d2859d04e13c7e1dc2956"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/exo2exo_residual025.log",
+      "bytes": 250818,
+      "sha256": "8d4a2e74f4a0f3db485ffce50780b16bc6a1247221edcfe7a53565b8d637f048"
     },
     {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/fit_quality_and_omama.log",
@@ -306,6 +376,46 @@
       "sha256": "ea993641bcfc1724e8d4dd7cd19c576363215dc5d81b172be945aa50a1347ac6"
     },
     {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/calibration/residual005/receipt.json",
+      "bytes": 220,
+      "sha256": "7351bd14820fe4f4622d9917b584f37cba8b44bf12c23b998be76b8f7f1f8b72"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/calibration/residual010/receipt.json",
+      "bytes": 220,
+      "sha256": "32df3a12c02dd39de895a509b22f70bef60c68d3096395823408c7486ffc67ef"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/calibration/residual025/receipt.json",
+      "bytes": 220,
+      "sha256": "663d7ac051866b31a3c07d56aebf6d9f12c87910eb38219274f397a58b7312c0"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/baseline/receipt.json",
+      "bytes": 215,
+      "sha256": "3e938938546430a5a32221e960566113812d949243f3f37fc740a7ed75881a03"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/reliable_points/receipt.json",
+      "bytes": 222,
+      "sha256": "5f0e25e461295e76fcc1372fb5d7b9c5897066d1223832b4b1e1b7f47cd52241"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/residual005/receipt.json",
+      "bytes": 218,
+      "sha256": "fde032222b98444a8b58193107f93fb8b5d40d3b882ae81addc5bd952d0c5cb6"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/residual010/receipt.json",
+      "bytes": 218,
+      "sha256": "fefb9e585bd08c835428a9d67a27a72646baefe27e184535f1916b56ee44b957"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/residual025/receipt.json",
+      "bytes": 218,
+      "sha256": "607e8d5f0a6a13ad24dec54232ba8c11c1b6695cc3de343232c23037866df77c"
+    },
+    {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/screen/residual005/receipt.json",
       "bytes": 215,
       "sha256": "50ad0e32723ac79d72c1f7a6e811d494500b7e70a4315cd13f5443c347f07093"
@@ -326,24 +436,59 @@
       "sha256": "26f7d1ff8e67c8f69da3afde1c414cc9e053fdacc92a2c5136ca9be711641826"
     },
     {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/datasets/exo2exo/receipt.json",
+      "bytes": 200,
+      "sha256": "e71b68857c2844593bb4c3792435cc67702b2acd9b5b2356da2c8b81d171a230"
+    },
+    {
       "path": "codex_remote_ops/pccs_candidate_union_20260916/datasets/screen/receipt.json",
       "bytes": 199,
       "sha256": "61fec778a9b032d1fd77f38f9a35127e22e3cb3994b8025ca8f42956d84c00e1"
     },
     {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/datasets/exo2exo/records.jsonl",
+      "bytes": 5228885,
+      "sha256": "7c7f2626ec40cca7985152424c4296efaf1f7be2f09660b9f103f2a434a7c0a6"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/baseline/per_object.jsonl",
+      "bytes": 1578419,
+      "sha256": "3d1cd2bf6db6b8823163864d3a8f66baedb339d2ae5f6fa265b969f9d1fc0574"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/reliable_points/per_object.jsonl",
+      "bytes": 1726964,
+      "sha256": "cd517b9b9966a621e87ba94b9bc6f1f0d8065fcea5c22900e2ec65338448d711"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/residual005/per_object.jsonl",
+      "bytes": 1584448,
+      "sha256": "ffc1d5ce4457448048a0f2a1369aaa14c841d44a528ba5741d081e08fb197219"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/residual010/per_object.jsonl",
+      "bytes": 1584562,
+      "sha256": "c7ea28713031c08d27b5e6112d1e0f60f3a5b549bfb08ef93e1350036d4f09ca"
+    },
+    {
+      "path": "codex_remote_ops/pccs_candidate_union_20260916/runs/exo2exo/residual025/per_object.jsonl",
+      "bytes": 1583666,
+      "sha256": "a182af0682a0ce70f88768185541a504b472bf0e8aaf155b28fe977af33f9514"
+    },
+    {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "bytes": 28777,
-      "sha256": "b3878a5174da61ee6fe0da3acef66d22d32ae723c08080c4c4530b4ef7cd3384"
+      "bytes": 31039,
+      "sha256": "5afa500cc3749b99b2263e8a91faf84538da93038e8b79be4a6d350a87e1e99f"
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
-      "bytes": 25115,
-      "sha256": "708d77cbd5652790cc1d6ba935f5a09df933eed9208cc4e0534c45221104724d"
+      "bytes": 25816,
+      "sha256": "ca6e803759ec557cf4363e3fa84ad495abeb85a6e5c84e0935010fb3babec5fb"
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_union_report.py",
-      "bytes": 6719,
-      "sha256": "1de46111ae3e66a05b38bc75f12dd0f142ad226b4b3e99af2be0dc276407e966"
+      "bytes": 8886,
+      "sha256": "93bf367b81de6e75cee6a2e42820227bc5f02e1cb40b8c8bfc081f902078bc80"
     }
   ],
   "excludes": "raw masks/images, browser state, credentials, encoded bootstrap transport"

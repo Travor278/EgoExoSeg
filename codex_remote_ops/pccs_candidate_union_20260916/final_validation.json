@@ -1,0 +1,38 @@
+{
+  "coverage": "exact",
+  "pairs": 1094,
+  "objects": 1094,
+  "takes": 20,
+  "anchor_mismatches": {
+    "residual005": 0,
+    "residual010": 0,
+    "residual025": 0
+  },
+  "all_original_candidates_preserved": true,
+  "changed": 89,
+  "improved": 30,
+  "harmed": 27,
+  "selected_provenance_multilabel": {
+    "residual005/fusion": 21,
+    "residual025/visual": 5,
+    "residual010/fusion": 10,
+    "baseline/visual": 11,
+    "reliable_points/visual": 11,
+    "residual025/fusion": 11,
+    "baseline/fusion": 26,
+    "reliable_points/fusion": 8,
+    "residual005/visual": 2,
+    "baseline/anchor": 2,
+    "reliable_points/anchor": 2,
+    "residual005/anchor": 2,
+    "residual010/anchor": 2,
+    "residual025/anchor": 2
+  },
+  "baseline_oracle_iou": 47.069666936235585,
+  "union_oracle_iou": 48.53254869203888,
+  "max_metric_recompute_error": 0.0,
+  "bootstrap_recomputed": true,
+  "original_pccs_zero_iou_objects": 440,
+  "frozen_checkpoint_sha_verified": true,
+  "max_embedding_score_error": 2.384185791015625e-07
+}

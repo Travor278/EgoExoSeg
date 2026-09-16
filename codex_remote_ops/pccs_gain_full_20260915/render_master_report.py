@@ -9,13 +9,16 @@ names={'baseline':'PCCS 基线','learned_gate':'学习判断器（0.03）','omam
 sources=[('Exo→Ego／作者权重',R/'runs/full/results.json'),('Exo→Exo／作者权重',O/'pccs_exoexo_transfer_20260916/runs/full/results.json'),('Exo→Exo／修复版权重',O/'pccs_corrected_exoexo_20260916/runs/full/results.json'),('Exo→Ego／修复版权重',O/'pccs_corrected_exoego_20260916/runs/full/results.json')]
 parts=['# V2-SAM PCCS／O-MaMa 实验总报告','','> 唯一总报告；具体运行文件在各实验目录。更新到已取回并验证的机读结果，未完成项目保持待定。研究主目标为 **Exo→Exo 稳定增益**，Exo→Ego 用于验证源方向与比较迁移。',
 '','## 1. 当前结论与完整结果','','- 指标与pipeline已按实验日记和`v2sam-pccs@0e3bc33`复核：新frame-level口径正确，零IoU保留，未发现历史DINO二次初始化或目标GT内容影响推理的问题；证据与边界见§5。',
-'- 作者权重与用户修复版权重必须分列。每个delta只减**同一轮、同权重、同候选bank**的PCCS基线。',
+'- 作者权重与用户修复版权重必须分列。前四组delta均减**同一轮、同权重、同候选bank**的PCCS基线；§9新增候选实验的主delta减当轮原O-MaMa几何一致性输出。',
 '- 修复版权重Exo→Exo的预先指定主方案native-margin已获得正的95%序列bootstrap区间；几何一致方案点估计更高，但它是次要对照，未证明显著优于其他改进方法。',
 '- “稳定”在这里指当前基准上主比较的统计证据，不是保证每个对象、每个随机种子或所有新场景都涨点。',
 '','### 1.1 全量 frame-level 指标','','IoU／Dice／ContA 为百分数，LocE 为原始归一化距离（越低越好）。置信区间对应 **IoU 增益，单位百分点**。']
 if sources[-1][1].exists():
  latest=load(sources[-1][1]);primary=latest['paired_comparison']['geometry_consensus'];ci=primary['paired_take_bootstrap_95ci_pp']
  parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 修复版权重Exo→Ego全量已完成：预先指定的几何一致性主方案IoU {latest['methods']['baseline']['frame']['IoU']*100:.4f}→{latest['methods']['geometry_consensus']['frame']['IoU']*100:.4f}，+{primary['delta_frame_iou_pp']:.4f}点，95%区间[{ci[0]:.4f}, {ci[1]:.4f}]。这轮canonical/native的数值非常接近，不应当成两份独立重复证据。")
+up=O/'pccs_candidate_union_20260916/exo2exo_results.json'
+if up.exists():
+ u=load(up);ci=u['primary_95ci_pp'];parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 最新候选合并／质量适配探索已完成（§9）：Exo→Exo原一致性IoU {u['methods']['original_consensus']['frame'][0]*100:.4f}→{u['methods']['selected_union']['frame'][0]*100:.4f}，新增{u['primary_delta_vs_original_consensus_pp']:+.4f}点，95%区间[{ci[0]:.4f}, {ci[1]:.4f}]跨0；**未获得额外稳定增益**。小比例池化、可靠多点与rank-8 O-MaMa适配的负结果也完整记录。")
 completed={}
 for title,p in sources:
  parts+=['',f'#### {title}','']
@@ -137,7 +140,7 @@ if (Q/'PLAN.md').exists():
    c=load(Q/'calibration_summary.json')
    for arm,values in c['comparisons'].items():
     ci=values['consensus']['take_bootstrap_95ci_pp'];parts.append(f"| {armnames[arm]} | {values['oracle']['delta_iou_pp']:.4f} | {values['consensus']['delta_iou_pp']:.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
-   parts+=['','下一步如继续，应优先做较小的分布适配：保留原池化并加入小比例加权分量，在训练／校准上选择混合强度；或只微调prompt投影。多点可改成保留原单点、谨慎追加额外点并做质量检查。以上仅为基于负结果的新假设，**尚未测试**，不在本轮追加搜索或用目标测试标签选参数。']
+   parts+=['','下一步如继续，应优先做较小的分布适配：保留原池化并加入小比例加权分量，在训练／校准上选择混合强度；或只微调prompt投影。多点可改成保留原单点、谨慎追加额外点并做质量检查。这些在§8结束时仅为未测试假设；随后已在独立实验中按顺序测试，结果见§9。V2-SAM prompt投影微调仍未执行。']
  parts+=['','本节候选质量实验使用5000次序列bootstrap；前面的选择器实验使用10000次。实现与完整回执：[候选质量实验计划](../pccs_candidate_quality_20260916/PLAN.md)。早期选择器实验的涨点不能归因于本节新增候选改动。']
 from append_union_report import append
 append(parts,O)

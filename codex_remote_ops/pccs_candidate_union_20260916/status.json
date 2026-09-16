@@ -1,21 +1,8 @@
 {
-  "state": "running",
-  "phase": "candidates_exo2exo",
-  "arms": {
-    "baseline": {
-      "state": "initializing"
-    },
-    "reliable_points": {
-      "state": "initializing"
-    },
-    "residual005": {
-      "state": "initializing"
-    },
-    "residual010": {
-      "state": "initializing"
-    }
-  },
-  "eta_seconds": null,
-  "updated_at": 1789547211.5154366,
+  "state": "complete",
+  "phase": "complete",
+  "selected": "ridge10_t0.05",
+  "eta_seconds": 0,
+  "updated_at": 1789550665.6403806,
   "pid": 55
 }

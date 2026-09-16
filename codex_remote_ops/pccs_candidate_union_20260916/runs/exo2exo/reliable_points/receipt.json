@@ -1,0 +1,9 @@
+{
+  "state": "complete",
+  "pairs": 1094,
+  "objects": 1094,
+  "coverage": "exact",
+  "records_sha256": "cd517b9b9966a621e87ba94b9bc6f1f0d8065fcea5c22900e2ec65338448d711",
+  "arm": "reliable_points",
+  "phase": "exo2exo"
+}

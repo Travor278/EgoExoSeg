@@ -1,0 +1,88 @@
+{
+  "coverage": "exact",
+  "pairs": 1094,
+  "objects": 1094,
+  "takes": 20,
+  "frozen_choice": {
+    "name": "ridge10_t0.05",
+    "family": "quality_ranker",
+    "parameter": 0.05,
+    "screen": {
+      "frame_iou": 0.7875793996972877,
+      "changed": 28,
+      "improved": 22,
+      "harmed": 6,
+      "pairs": 128,
+      "objects": 243,
+      "delta_pp": 0.23475943288455703
+    },
+    "calibration": {
+      "frame_iou": 0.828362361205897,
+      "changed": 24,
+      "improved": 16,
+      "harmed": 8,
+      "pairs": 128,
+      "objects": 225,
+      "delta_pp": 0.20783751485093926
+    },
+    "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_candidate_union_20260916/fitted/ridge10.joblib",
+    "checkpoint_sha256": "75519f829dc7f34e55f55a8942cf3907bca83cee79293f9e9abe2bba9c4a8b10"
+  },
+  "methods": {
+    "original_pccs": {
+      "frame": [
+        0.39019012011087173,
+        0.43673164053428065,
+        0.5041963250483685,
+        0.10562149300208615
+      ],
+      "object": [
+        0.39019012011087173,
+        0.43673164053428065,
+        0.5041963250483685,
+        0.10562149300208615
+      ]
+    },
+    "original_consensus": {
+      "frame": [
+        0.4239803968984727,
+        0.4757380065957993,
+        0.5491200499333059,
+        0.09873756051453526
+      ],
+      "object": [
+        0.4239803968984727,
+        0.4757380065957993,
+        0.5491200499333059,
+        0.09873756051453526
+      ]
+    },
+    "selected_union": {
+      "frame": [
+        0.42440459360800586,
+        0.4758320260972063,
+        0.5465473947498392,
+        0.09916343768841988
+      ],
+      "object": [
+        0.42440459360800586,
+        0.4758320260972063,
+        0.5465473947498392,
+        0.09916343768841988
+      ]
+    }
+  },
+  "primary_delta_vs_original_consensus_pp": 0.04241967095331148,
+  "primary_95ci_pp": [
+    -0.20281586570314292,
+    0.3183432753371729
+  ],
+  "original_masks_preserved": true,
+  "test_fitting": false,
+  "metric_order": [
+    "IoU",
+    "Dice",
+    "ContA",
+    "LocE"
+  ]
+}

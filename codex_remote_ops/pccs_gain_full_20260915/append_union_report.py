@@ -40,7 +40,18 @@ def append(parts,root):
         parts+=['','完整配置均在[model_search.json](../pccs_candidate_union_20260916/model_search.json)记录，以上是紧凑摘录。O-MaMa残差投影共640个优化步，loss有限、零初始化恒等检查通过，但所有预设投影配置在校准集均下降；筛查上涨、校准下降呈现过拟合信号。因此本轮不将该投影送入目标测试。选中的ridge质量排序器也未经过目标集重新拟合。']
     p=r/'exo2exo_results.json'
     if p.exists():
-        a=json.loads(p.read_text());parts += ['', '| Exo→Exo方法 | Frame IoU |', '|---|---:|']
-        for name,v in a['methods'].items():parts.append(f"| {name} | {v['frame'][0]*100:.4f} |")
+        a=json.loads(p.read_text());parts += ['', '### 9.4 Exo→Exo全量最终结果', '', '| Exo→Exo方法 | Frame IoU | Dice | ContA | LocE ↓ |', '|---|---:|---:|---:|---:|']
+        for name,v in a['methods'].items():
+            f=v['frame'];parts.append(f"| {name} | {f[0]*100:.4f} | {f[1]*100:.4f} | {f[2]*100:.4f} | {f[3]:.6f} |")
         ci=a['primary_95ci_pp'];parts.append(f"\n相对当轮原一致性输出变化{a['primary_delta_vs_original_consensus_pp']:.4f}点，take配对bootstrap 95%区间[{ci[0]:.4f}, {ci[1]:.4f}]；覆盖{a['pairs']}对／{a['objects']}对象。")
+        parts+=['','**本轮未获得额外稳定增益，不升级替换现有主方案。** IoU微升，但区间跨0；ContA与LocE也未改善。新方法相对原PCCS的总体差值主要继承既有O-MaMa收益，不能全部归因于新增候选或新排序器。当前pair固定种子与§1历史全量不同，须以本表的当轮基线作配对比较。']
+    p=r/'final_validation.json'
+    if p.exists():
+        v=json.loads(p.read_text());parts.append(f"\n独立复算：全部{v['objects']}对象、{v['takes']}个take覆盖精确；原PCCS的{v['original_pccs_zero_iou_objects']}个零IoU对象保留；三池化分支Anchor mismatch均0，所有原候选保留，四指标复算最大误差{v['max_metric_recompute_error']:.1e}，bootstrap及冻结模型SHA一致。匹配分数重放最大误差{v['max_embedding_score_error']:.3e}。共替换{v['changed']}对象，改善{v['improved']}、变差{v['harmed']}，其余IoU不变。")
+        parts.append(f"\n候选Oracle IoU由{v['baseline_oracle_iou']:.4f}升至{v['union_oracle_iou']:.4f}（+{v['union_oracle_iou']-v['baseline_oracle_iou']:.4f}点），说明集合中有新增有效mask；最终选择未有效兑现这些增量。Oracle用GT仅作事后诊断，不能作为可部署结果。")
+        parts+=['','下一轮更值得验证的是：扩大且按take严格隔离的训练候选bank，训练成对的候选质量差并强化困难负例；或对前景、邻域与跨图注意力分别做可靠性校准。先在训练内观察泛化，再固定单一方案作新的独立确认。当前16个筛查take上的小投影已呈现过拟合，不宜仅继续加大投影或扫描目标集阈值。此处为后续假设，本轮没有执行这些新方案。']
+    p=r/'resource_release.json'
+    if p.exists():
+        cells=json.loads(p.read_text(encoding='utf-8-sig')).get('cells',[])
+        if len(cells)>9:parts.append(f"\n资源收尾：平台状态{cells[5]}，占用节点{cells[7]}，结束时间{cells[9]}（北京时间）。")
     parts += ['', '实现、冻结规则与完整运行证据见[本轮计划](../pccs_candidate_union_20260916/PLAN.md)。监督间隔按有效剩余ETA×4/5动态调整；初始化／切换阶段采用5分钟。']
