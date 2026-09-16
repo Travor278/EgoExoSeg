@@ -32,6 +32,9 @@ if fixed.exists():
 roi=O/'pccs_roi_context_20260917/exo2ego_results.json'
 if roi.exists():
  re=load(roi);rx=load(roi.parent/'exo2exo_results.json');parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 最新原生局部视图循环已完成（§13）：源域预选1.5倍方案Exo→Exo {rx['methods']['primary']['frame'][0]*100:.4f}（{rx['methods']['primary']['delta_pp']:+.4f}点），Exo→Ego512对{re['methods']['primary']['frame'][0]*100:.4f}（{re['methods']['primary']['delta_pp']:+.4f}点）。预设2倍次要对照分别为{rx['methods']['local20_matched']['frame'][0]*100:.4f}/{re['methods']['local20_matched']['frame'][0]*100:.4f}；Exo→Exo点估计接近O-MaMa42.3980，但不是事前主方案或统计等效证明。真实背景相对前景-only的优势在Exo→Exo更清晰，Exo→Ego区间跨零。原PCCS候选/权重与实际接口复核通过，四卡已释放。")
+repeat=O/'pccs_roi_seed_repeat_20260917/exo2ego_results.json'
+if repeat.exists():
+ rs=load(repeat);rt=load(repeat.parent/'exo2exo_results.json');parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 冻结随机种子复验已完成（§14）：2倍原生ROI在Exo→Exo的两轮增益为+3.3101/{rt['methods']['local20_matched']['delta_pp']:+.4f}点，在Exo→Ego512对为+1.1958/{rs['methods']['local20_matched']['delta_pp']:+.4f}点；两个方向两轮相对原PCCS的区间下界均为正。1.5倍预选主方案同样保持正增益。第二轮1094个Exo→Exo参考全部重算，2倍42.3458 vs O-MaMa42.5391；这是接近点估计与重复性证据，非统计等效。所有参数冻结、完整核验通过、四卡释放，本轮不再加seed挑结果。")
 for title,p in sources:
  parts+=['',f'#### {title}','']
  if not p.exists():

@@ -1,0 +1,337 @@
+{
+  "seed_namespace": "candidate-quality-v2:",
+  "seed1_bank_changed_objects": 965,
+  "selection_sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+  "phase": "exo2ego",
+  "coverage": "exact",
+  "selected": {
+    "name": "local15_ridge100_present_t0.05",
+    "family": "roi",
+    "group": "local15",
+    "kind": "ridge100",
+    "gate": "present",
+    "threshold": 0.05,
+    "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/fitted/local15_ridge100.joblib",
+    "sha256": "3680d76241ce11eeacc22b85ad60721413d09a92b786244ad70d51ee70fbadf5",
+    "train_oof": {
+      "frame": [
+        0.7900793088162569,
+        0.8401722227815714,
+        0.8637856573805971,
+        0.02663700624571999
+      ],
+      "delta_pp": 0.943007025287149,
+      "ci95_pp": [
+        -0.22501327329910542,
+        2.0303177685967224
+      ],
+      "changed": 108,
+      "improved": 50,
+      "harmed": 57,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8187015873273291,
+        0.8674245088722575,
+        0.8917155767373355,
+        0.022192941262285708
+      ],
+      "delta_pp": 0.641596811862352,
+      "ci95_pp": [
+        0.14561074203811586,
+        1.2675473193521607
+      ],
+      "changed": 17,
+      "improved": 11,
+      "harmed": 6,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    }
+  },
+  "methods": {
+    "baseline": {
+      "frame": [
+        0.7126703505000924,
+        0.7613216098062991,
+        0.7689588182534296,
+        0.04478330181981893
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "primary": {
+      "frame": [
+        0.7244941952192339,
+        0.7741523129934162,
+        0.7801092428433473,
+        0.041049719158128405
+      ],
+      "delta_pp": 1.182384471914146,
+      "ci95_pp": [
+        0.5496363843253675,
+        1.8663784772651484
+      ],
+      "changed": 102,
+      "improved": 50,
+      "harmed": 41,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "frozen_cycle": {
+      "frame": [
+        0.720903310893769,
+        0.7699662957298965,
+        0.7764290103666547,
+        0.04267902451058168
+      ],
+      "delta_pp": 0.8232960393676573,
+      "ci95_pp": [
+        0.32970277479307697,
+        1.415130897925034
+      ],
+      "changed": 32,
+      "improved": 22,
+      "harmed": 9,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_matched": {
+      "frame": [
+        0.7211118657360116,
+        0.7707739132597602,
+        0.7776497604804626,
+        0.04192769504871362
+      ],
+      "delta_pp": 0.844151523591906,
+      "ci95_pp": [
+        0.33372237956492457,
+        1.4401918703188525
+      ],
+      "changed": 159,
+      "improved": 55,
+      "harmed": 97,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "local15_matched": {
+      "frame": [
+        0.7244941952192339,
+        0.7741523129934162,
+        0.7801092428433473,
+        0.041049719158128405
+      ],
+      "delta_pp": 1.182384471914146,
+      "ci95_pp": [
+        0.5496363843253675,
+        1.8663784772651484
+      ],
+      "changed": 102,
+      "improved": 50,
+      "harmed": 41,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "local20_matched": {
+      "frame": [
+        0.7234183098988137,
+        0.7728423780719538,
+        0.7783932623247632,
+        0.041580634428562475
+      ],
+      "delta_pp": 1.0747959398721225,
+      "ci95_pp": [
+        0.2967870037949372,
+        1.8486476561707261
+      ],
+      "changed": 118,
+      "improved": 60,
+      "harmed": 46,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "object20_matched": {
+      "frame": [
+        0.7236567205344642,
+        0.7732199749589954,
+        0.7783680839845427,
+        0.041174656586529544
+      ],
+      "delta_pp": 1.0986370034371493,
+      "ci95_pp": [
+        0.52784794638114,
+        1.7316308252739387
+      ],
+      "changed": 165,
+      "improved": 67,
+      "harmed": 92,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_local20_matched": {
+      "frame": [
+        0.7250003800765289,
+        0.7746866826646226,
+        0.7797438126206863,
+        0.04089673602330936
+      ],
+      "delta_pp": 1.233002957643647,
+      "ci95_pp": [
+        0.5959584498850178,
+        1.9265592402368585
+      ],
+      "changed": 120,
+      "improved": 59,
+      "harmed": 52,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_object20_matched": {
+      "frame": [
+        0.724165637655603,
+        0.7739155548173128,
+        0.7789498448108739,
+        0.04132231570373818
+      ],
+      "delta_pp": 1.1495287155510538,
+      "ci95_pp": [
+        0.5673570290820775,
+        1.794889149267744
+      ],
+      "changed": 174,
+      "improved": 70,
+      "harmed": 98,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_multiscale_matched": {
+      "frame": [
+        0.7252533729504919,
+        0.7750409459146207,
+        0.7803248856386213,
+        0.04068896668906537
+      ],
+      "delta_pp": 1.2583022450399364,
+      "ci95_pp": [
+        0.5975796005212715,
+        1.9815375154029953
+      ],
+      "changed": 121,
+      "improved": 63,
+      "harmed": 50,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    }
+  },
+  "paired_comparisons": {
+    "primary minus frozen_cycle": {
+      "frame": [
+        0.7244941952192339,
+        0.7741523129934162,
+        0.7801092428433473,
+        0.041049719158128405
+      ],
+      "delta_pp": 0.35908843254648876,
+      "ci95_pp": [
+        -0.019357117272508922,
+        0.7654347930205366
+      ],
+      "changed": 93,
+      "improved": 40,
+      "harmed": 43,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "primary minus global_matched": {
+      "frame": [
+        0.7244941952192339,
+        0.7741523129934162,
+        0.7801092428433473,
+        0.041049719158128405
+      ],
+      "delta_pp": 0.3382329483222401,
+      "ci95_pp": [
+        0.013807004925984898,
+        0.6512038925124339
+      ],
+      "changed": 137,
+      "improved": 91,
+      "harmed": 40,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "global_local20_matched minus global_object20_matched": {
+      "frame": [
+        0.7250003800765289,
+        0.7746866826646226,
+        0.7797438126206863,
+        0.04089673602330936
+      ],
+      "delta_pp": 0.08347424209259337,
+      "ci95_pp": [
+        -0.2563587904482731,
+        0.4372511823863354
+      ],
+      "changed": 118,
+      "improved": 73,
+      "harmed": 38,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    },
+    "local20_matched minus object20_matched": {
+      "frame": [
+        0.7234183098988137,
+        0.7728423780719538,
+        0.7783932623247632,
+        0.041580634428562475
+      ],
+      "delta_pp": -0.023841063565026754,
+      "ci95_pp": [
+        -0.5771601964730311,
+        0.38256386735693443
+      ],
+      "changed": 115,
+      "improved": 73,
+      "harmed": 34,
+      "pairs": 512,
+      "objects": 965,
+      "takes": 64
+    }
+  },
+  "no_target_fitting": true,
+  "actual_bridge_replay_exact": true,
+  "pretrained_omama_used_in_method": false,
+  "fixed_context_reference_complete": false,
+  "cost": {
+    "roi_seconds_per_object_mean": 0.44336780927341835,
+    "roi_seconds_per_pair_mean": 0.8356444061500952,
+    "encoder_views_per_object_mean": 11.776165803108809,
+    "gpu_peak_bytes_max": 8710377472,
+    "cached_candidate_evaluation": false,
+    "note": "ROI collection cost includes all three ablation views, excludes model initialization; not single-selected-method end-to-end latency."
+  }
+}

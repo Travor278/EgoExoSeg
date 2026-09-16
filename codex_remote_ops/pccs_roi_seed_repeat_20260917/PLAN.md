@@ -1,6 +1,6 @@
 # Frozen native PCCS ROI robustness check — 2026-09-17
 
-Status: protocol written before new-seed outputs; job-3aa01e16-4967-4a6f-8e59-2a3215868277 submitted2026-09-17 05:00:37. New-seed smoke and four historical O-MaMa witness checks passed; full Exo2Exo inference is running. This is a randomness robustness study on previously observed benchmarks, not a fresh blind test and not a new source hyperparameter search.
+Status: completed2026-09-17 05:31:09; job-3aa01e16-4967-4a6f-8e59-2a3215868277 successful, zero occupied nodes. Exo2Exo1094 and Exo2Ego512/965 both complete and independently verified; all models/thresholds remained frozen. Local20 secondary gains were+3.2772/+1.0748 points for this seed, versus+3.3101/+1.1958 for seed1. The source-selected local15 primary also gained in both directions and both seeds. This is robustness evidence on previously observed benchmarks, not a fresh blind test, statistical equivalence claim or new source search. No third seed is planned by this protocol.
 
 Motivation: the source-selected local1.5 primary reached Exo2Exo41.7688; the declared local2 secondary reached42.3292, near frozen O-MaMa42.3980 on the same original candidate bank. The latter remains a secondary/exploratory finding in the first experiment. We must not relabel it as that experiment's original primary or optimize another threshold on those target labels.
 
