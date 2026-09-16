@@ -26,6 +26,9 @@ completed={}
 dr=O/'pccs_dense_context_20260917/exo2exo_results.json'
 if dr.exists():
  d=load(dr);v=d['methods']['primary'];ci=v['ci95_pp'];parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 最新原生PCCS多方案已获得正增益（§11）：预选稠密循环置信度方案IoU {d['methods']['baseline']['frame'][0]*100:.4f}→{v['frame'][0]*100:.4f}，{v['delta_pp']:+.4f}点，95%区间[{ci[0]:.4f}, {ci[1]:.4f}]。同候选O-MaMa参考为{d['methods']['omama_reference']['frame'][0]*100:.4f}，尚未追平；显式邻域context没有显示额外优势，不能混写贡献归因。")
+fixed=O/'pccs_fixed_context_20260917/exo2exo_results.json'
+if fixed.exists():
+ f=load(fixed);v=f['methods']['px100_box_matched'];s=f['methods']['primary'];e=load(fixed.parent/'exo2ego_results.json');parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 固定像素消融与原生Exo→Ego验证已完成（§12）：100px整框Exo→Exo IoU {v['frame'][0]*100:.4f}，优于此前倍率外环；源域预选150px为{s['frame'][0]*100:.4f}。但相对原生cycle的额外变化仅约0.04点且区间跨零，错位邻域对照没有变差，**尚未证明context自身的稳定贡献**。冻结原生cycle在Exo→Ego既有512对holdout增益{e['methods']['frozen_cycle']['delta_pp']:+.4f}点；此处不是Exo→Ego全量。候选/指标/实际路由复核通过，四卡已释放。")
 for title,p in sources:
  parts+=['',f'#### {title}','']
  if not p.exists():

@@ -622,13 +622,13 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "10679cb07cb0bcb75d5f6071d9e3017d843375345f023efb65005a516a90a34b",
-      "bytes": 55667
+      "sha256": "911487200ff2f24a223293ff726cc2d0921b285d825a499008c455d52a87dc05",
+      "bytes": 56129
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
-      "sha256": "63e31d2c310bc06e55b04b305ce093905eece68a1d46111ddb58ad317a3adf01",
-      "bytes": 28366
+      "sha256": "26d4b64c7f3a8e6588349e52920be531b3df6001a4d42ff75812c8cdf547f473",
+      "bytes": 29166
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_fixed_report.py",
