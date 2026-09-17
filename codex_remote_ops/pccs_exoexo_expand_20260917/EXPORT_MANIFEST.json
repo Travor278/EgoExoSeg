@@ -111,9 +111,24 @@
       "bytes": 1995
     },
     {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/manifest.json",
+      "sha256": "607f911788ab00905b88e14d81d4fdc675f13f0d0e0c3a0cad717e590c59ac1b",
+      "bytes": 9055
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/selection.json",
+      "sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+      "bytes": 13437
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/status.json",
+      "sha256": "bacfc7f8f74cbb84b83f8ad6be44e9526e3b3c990edbfd57e8256578e57dddf6",
+      "bytes": 214
+    },
+    {
       "path": "codex_remote_ops/pccs_exoexo_expand_20260917/temporal_expansion_manifest.json",
-      "sha256": "f34ab0c8e9563be3d28235a1067d6737660f3a3139d96adb96d45942a35c677a",
-      "bytes": 1883
+      "sha256": "754fd6df6986a0f8a19fe8c96b0a698faaa08796d157e88bab31dda4f2f6e61e",
+      "bytes": 1843
     },
     {
       "path": "codex_remote_ops/pccs_exoexo_expand_20260917/expansion_manifest.json",
@@ -126,9 +141,69 @@
       "bytes": 189
     },
     {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/verify_results.py",
+      "sha256": "cd3952842e5c274433ae640033d2e9687206b48c0da5a04fbf0209a8c22eb1fc",
+      "bytes": 3010
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/controller.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/prepare.py.log",
+      "sha256": "ec5b14857e0fe4aabed8b25f3e73303aafda0a43861d403e0c8689ef08f72e2b",
+      "bytes": 19
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/test_temporal.py.log",
+      "sha256": "9775b8d7c72ff7d2f95576a928b6642d96d4c46e32834058006b91ae16399a75",
+      "bytes": 63
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/runs/smoke/rank0/receipt.json",
+      "sha256": "28abe061415301f71701281a2e221ce5288ebfe58b22caa941e0974199a79347",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/runs/smoke/rank1/receipt.json",
+      "sha256": "26c318bd56e9bdd5a95e4e2715772d2a916b2f8a534dbbd51bc836701518136b",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/runs/smoke/rank2/receipt.json",
+      "sha256": "4b2a0b3d95f2e7b2cf91a8be3133c1e76207e954a98cce31dd3e556f307f8c24",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/runs/smoke/rank3/receipt.json",
+      "sha256": "9c71f8023e9a83e320f9abb882bf78e73cb98c37df6706db2ba7260f2bbd054b",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/runs/reference_probe/rank0/witness.json",
+      "sha256": "315bd127641dd5e8aebfb18e54f61bd41838a98a50e5e38d51e2455e1e1c0cb8",
+      "bytes": 251
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/runs/reference_probe/rank1/witness.json",
+      "sha256": "beab8f197f5c0911d9178a2e7230e424ac755cea3c62bdc2eb99204103fa435e",
+      "bytes": 256
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/runs/reference_probe/rank2/witness.json",
+      "sha256": "f493d84a33cb77b74f33cb6e65d4a7b6375acdc51a5fa84fca6dceaa588fd7d0",
+      "bytes": 251
+    },
+    {
+      "path": "codex_remote_ops/pccs_exoexo_expand_20260917/runs/reference_probe/rank3/witness.json",
+      "sha256": "93dcd1afde7d64cdaaf2dba9721c89fcc22bd0e4d3cad1b519ddbdaf377dc694",
+      "bytes": 255
+    },
+    {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "bef43c5a69fda7bbfc81c080590cc32d322477d8676471951a17ef196d94d928",
-      "bytes": 83964
+      "sha256": "55564312391b78cd8c96b0f1dba8138fd9509c5bd99b31d177748dd796f7cbe0",
+      "bytes": 84127
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
@@ -137,13 +212,18 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_expanded_report.py",
-      "sha256": "87c75d86e980097d9ca4b5773a43120956223e06603556ced65172824ddf0d28",
-      "bytes": 3195
+      "sha256": "65e5d5f229a82faa4e38f7d75fcf3e27a564753a832258522c2d4a1e391d481e",
+      "bytes": 3452
     },
     {
       "path": "codex_remote_ops/pccs_method_research_20260917/RESEARCH.md",
       "sha256": "b73405cdabffea6960468108728efe44b4cd1553264ca3052dcbf745c8c5bf83",
       "bytes": 10520
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/METHOD.md",
+      "sha256": "bd78d19b2ed6ab936e2d3a2e27edfa1377637cab73557dbc1dbec9b720660855",
+      "bytes": 23972
     }
   ],
   "excludes": "raw annotations/images/masks/private_inputs/inventory_response/UI state/credentials/transport/dependencies"

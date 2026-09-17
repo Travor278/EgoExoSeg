@@ -11,6 +11,7 @@ def append_expanded(parts,root):
       '另一条初步扩展尝试将540×960的现有Exo2Ego prompt标注充作更多目标GT，但发现实例匹配/分辨率一致性问题，只有722新配对通过预设核对，因此未把它作为本轮主评测。当前6534使用同原4K注释池，避免此口径变化；完整审计保留，不能降低核验门槛只为增加样本。', '',
       '更大独立场景覆盖仍待补更多take的可信源mask。来源及实现：[PLAN.md](../pccs_exoexo_expand_20260917/PLAN.md)、[后续调研](../pccs_method_research_20260917/RESEARCH.md)。']
     p=r/'exo2exo_results.json'
+    if all((r/'runs/smoke'/f'rank{k}/receipt.json').exists() for k in range(4)):parts += ['', '扩展任务的8对原pipeline冒烟及四卡旧bank O-MaMa见证分数已通过；6534完整推理进行中，仍需最终指标/参考同bank/覆盖核验。']
     if not p.exists():parts += ['', '扩展6534结果：待完成，不能使用旧1094增益代替。']
     else:
         a=json.loads(p.read_text());parts += ['', '| 方法 | 新6534 frame IoU | Δ本轮PCCS（点） | 95%take区间 |','|---|---:|---:|---|']

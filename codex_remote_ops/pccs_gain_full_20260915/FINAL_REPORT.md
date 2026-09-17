@@ -887,4 +887,6 @@ Exo→Ego复验（仍为512对/965对象）：第二seed原PCCS71.2670，原主�
 
 更大独立场景覆盖仍待补更多take的可信源mask。来源及实现：[PLAN.md](../pccs_exoexo_expand_20260917/PLAN.md)、[后续调研](../pccs_method_research_20260917/RESEARCH.md)。
 
+扩展任务的8对原pipeline冒烟及四卡旧bank O-MaMa见证分数已通过；6534完整推理进行中，仍需最终指标/参考同bank/覆盖核验。
+
 扩展6534结果：待完成，不能使用旧1094增益代替。

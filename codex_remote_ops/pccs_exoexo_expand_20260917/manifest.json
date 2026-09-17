@@ -1,0 +1,228 @@
+{
+  "created_at": 1789659061.6242824,
+  "phases": {
+    "smoke": {
+      "pairs": 8,
+      "objects": 8,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/smoke_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/smoke_rank0.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/smoke_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/smoke_rank1.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/smoke_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/smoke_rank2.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/smoke_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/smoke_rank3.yaml",
+          "pairs": 2,
+          "objects": 2
+        }
+      ]
+    },
+    "exo2exo": {
+      "pairs": 6534,
+      "objects": 6534,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/exo2exo_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/exo2exo_rank0.yaml",
+          "pairs": 1634,
+          "objects": 1634
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/exo2exo_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/exo2exo_rank1.yaml",
+          "pairs": 1634,
+          "objects": 1634
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/exo2exo_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/exo2exo_rank2.yaml",
+          "pairs": 1633,
+          "objects": 1633
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/exo2exo_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_exoexo_expand_20260917/exo2exo_rank3.yaml",
+          "pairs": 1633,
+          "objects": 1633
+        }
+      ]
+    }
+  },
+  "assets": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "frozen_cycle": {
+    "name": "cycle_ridge10_t0.03",
+    "family": "calibrated",
+    "group": "cycle",
+    "kind": "ridge10",
+    "threshold": 0.03,
+    "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_ridge10.joblib",
+    "sha256": "bf29e873ed7c5a6e6ebd157b2859b1f1a018564202bd6883e1964cae088cd06c",
+    "train_oof": {
+      "frame": [
+        0.7832195317623198,
+        0.832790926211028,
+        0.8568083294546404,
+        0.028465393389526496
+      ],
+      "delta_pp": 0.2570293198934653,
+      "ci95_pp": [
+        -0.652034959592533,
+        1.0612768960757721
+      ],
+      "changed": 27,
+      "improved": 18,
+      "harmed": 9,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8158496616825384,
+        0.8640009544103425,
+        0.8861918452724675,
+        0.029085715446148904
+      ],
+      "delta_pp": 0.35640424738327664,
+      "ci95_pp": [
+        -0.048433500342071056,
+        0.9336435021832576
+      ],
+      "changed": 8,
+      "improved": 5,
+      "harmed": 3,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    }
+  },
+  "encoder_contract": {
+    "state_sha256": "295b01d15aafd06f4c3978515652fff068acbbf025fb94936e1a763dbc7e39f4",
+    "parameter_dtype": "torch.float32",
+    "matmul_tf32": true,
+    "cudnn_tf32": true,
+    "autocast_enabled": false,
+    "autocast_dtype": "torch.float16",
+    "mean": [
+      [
+        [
+          0.48500001430511475
+        ]
+      ],
+      [
+        [
+          0.4560000002384186
+        ]
+      ],
+      [
+        [
+          0.4059999883174896
+        ]
+      ]
+    ],
+    "std": [
+      [
+        [
+          0.2290000021457672
+        ]
+      ],
+      [
+        [
+          0.2240000069141388
+        ]
+      ],
+      [
+        [
+          0.22499999403953552
+        ]
+      ]
+    ]
+  },
+  "frozen_selection_sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+  "training_performed": false,
+  "scope": {
+    "protocol": "time-quantile-max16-v1",
+    "original_pairs": 1094,
+    "additional_pairs": 6534,
+    "combined_old_and_new_pairs": 7628,
+    "takes": 19,
+    "take_scoped_object_instances": 80,
+    "original_take_scoped_object_instances": 96,
+    "original_unique_object_name_strings": 85,
+    "source_prompts": 531,
+    "target_images": 1000,
+    "new_independent_takes": 0,
+    "new_prompt_masks": 0,
+    "new_ground_truth_masks": 0,
+    "original_prompt_and_target_mask_bytes_preserved": true,
+    "overlap_with_old_pair_keys": 0,
+    "selection": "At most16 new target frames per approved source prompt, evenly spaced through existing annotated times; no method scores or outcomes consulted",
+    "scope": "Frozen-method temporal recombination stress test, NOT increased scene diversity, NOT official full Ego-Exo4D benchmark",
+    "take_counts": {
+      "0d26fb16-d4ba-4c47-9c32-5f8f052e7396": 454,
+      "247cde12-df65-4d59-ac01-449680e83871": 712,
+      "280ab94b-ebd0-4245-85a1-4cacd670588f": 476,
+      "2bb3f8db-a6b0-49b8-8c0f-686774acf00a": 16,
+      "2cba50be-6d39-4f53-b9cc-cb520a588443": 780,
+      "32805896-b265-4445-8992-ab30e98415f8": 251,
+      "3745bd24-ceb7-4760-98ea-68b54de2141c": 488,
+      "3940a14c-f0ae-4636-8f03-52daa071f084": 135,
+      "6a1dac0d-5945-4a81-9259-ce49de3ecf79": 480,
+      "70f729ca-b1a2-428f-875c-edbbd988a4b5": 180,
+      "7dafc952-ef17-4105-a2b4-e2da46b9d0a4": 24,
+      "7f534830-cde5-45ff-87fc-d2072a584cae": 668,
+      "abc64c60-1cc8-49c1-8489-79592aafdf8a": 4,
+      "ad8ef724-84cd-403a-934d-9690f7cb96b8": 28,
+      "c47b2e19-8a8f-4594-9144-8b7be780ab74": 160,
+      "decfd1c6-c12d-4b22-adcf-afe640485ec5": 176,
+      "e71c943b-75c0-4055-92fc-115d1c8f6d8a": 144,
+      "ef2d0ea2-a3aa-45ef-83e3-6d8b0d863dc5": 770,
+      "f4a17391-0f26-448d-831a-7f69e22d3414": 588
+    },
+    "annotation_sha256": "dd82c38fd5515c61a885476649015e66fe0b01d2db2ec4636d0079cf77aa7be5"
+  },
+  "external_reference": "Independent frozen O-MaMa same expanded candidate bank; no reused old outcomes",
+  "code_sha256": {
+    "worker.py": "bdb1a1cef1156ab3406f01ac290afcc71a0ef0664dd0c6c5d4e10a689028508a",
+    "roi_views.py": "8b04263f969b71187ded43c689b74dbb643021e803aaa64cd339385385f9cb8d",
+    "roi_evidence.py": "2322ab47bbb0c13d359d327d800dae63bf26433fd10425799f43279253f0b829",
+    "roi_policy.py": "53ce89220aff993e4e61790c332f89fa0ec2748488f753187fad1753198ae2d0",
+    "dense_context.py": "dcc5aa9d38f8eec04ee4698411ade86707d461e328b4c211c1e35e7db6bed518",
+    "policies.py": "a7151a093b82bbcbb5296e0a2287451711ad6dc314c3079c246577929bcca0ef",
+    "native_bridge.py": "bf86e52b0c00d7ec8c731d64080f76341df28391e793b6dbce322c4ec8255d9a",
+    "randomness.py": "7559393732681ed5b3859878239e4b30e37fad4d8546626e3c9a4d3e329c6b1e",
+    "reference_worker.py": "a454a8b7ac9b2e4eb596fd9c23451b9251835a87020c1f7f90b3716ad5317b2b",
+    "reference_collect.py": "167be796082f31629e097a2a1cadf017bf29f7ed672e658a777348c7a3895e01",
+    "evaluate.py": "d2df043c92dcff5fd0164c13b974f54dc2cdbedfd718c490c49adf1701a5021a",
+    "code/projects/v2sam_pccs/evaluation/pccs_metric.py": "b83884ec4660e1a5ddad1be11640b3cf8dabe454759fecac7e2b096dd35f4edd"
+  }
+}
