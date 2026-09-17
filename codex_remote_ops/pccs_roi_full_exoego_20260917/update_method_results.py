@@ -21,4 +21,4 @@ for seed in (1,2):
     for name in ('baseline','frozen_cycle','primary','local20_matched','global_matched','object20_matched'):
         v=a['methods'][name];ci=v['ci95_pp'];lines.append(f"| {name} | {100*v['frame'][0]:.4f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
     lines += ['']
-p.write_text(text+'\n'.join(lines)+'\n',encoding='utf8');print('METHOD_RESULTS_UPDATED')
+p.write_text((text+'\n'.join(lines)).rstrip()+'\n',encoding='utf8');print('METHOD_RESULTS_UPDATED')

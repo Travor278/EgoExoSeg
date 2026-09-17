@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "coverage": "exact",
+  "pairs": 2,
+  "objects": 2,
+  "reference_objects_verified": 0,
+  "seed1_bank_changed_objects": 0,
+  "capture_on_off_pairs": 2,
+  "records_sha256": "0e9e13f6cd8698a32c13c80f455d61e4fe031162df1097f1ef01980f213f4d1c"
+}

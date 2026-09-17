@@ -102,8 +102,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/METHOD.md",
-      "sha256": "f90776133bde87ec58ae8698ccac6a4fb8327f3e2618589017d40ee11fe970ae",
-      "bytes": 15048
+      "sha256": "03aee647000068eb0142b7f3417bc3cd4c48649b555004c07c181bc415a49bf0",
+      "bytes": 15046
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/job_receipt.json",
@@ -356,6 +356,26 @@
       "bytes": 285
     },
     {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/smoke1/rank0/receipt.json",
+      "sha256": "ead98d037ff5cf0eb60047b4810e2e42e2808655fd07d1a85fd0fe2305a06f2a",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/smoke1/rank1/receipt.json",
+      "sha256": "feab3df25f53c8b114dda6f87df64b5d38f80ce147692ed62de18c051796df64",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/smoke1/rank2/receipt.json",
+      "sha256": "060aa9c7ce44238ea6aadafa5365092e260457b354cbca78e37ab3adefd04d08",
+      "bytes": 265
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/smoke1/rank3/receipt.json",
+      "sha256": "69473053daf6121f9f8f3eb1c35565ee98e1ebb085dfdf1cc63f3118382fe760",
+      "bytes": 265
+    },
+    {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/science_exo2ego/rank0/encoder_receipt.json",
       "sha256": "e398b989222258e7395c18e3594ac752d72fbf0f6302d9c0c2c76ca9d7c4694e",
       "bytes": 388
@@ -432,8 +452,13 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/update_method_results.py",
-      "sha256": "1565bf5e5d6c13108c0e05619edb8f01dbfa73551006dc3c18712b273e8b71a3",
-      "bytes": 3016
+      "sha256": "f61677c9a54dd62b41f37b51ed4e7ef35f66cb28429e05addfa0d4159e98e07a",
+      "bytes": 3027
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/startup_validation.json",
+      "sha256": "3652b9ead02303ed41ad6dc2cdfa3535507f7e4dccc8528ff33dbfd8fff8e0b1",
+      "bytes": 1272
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
