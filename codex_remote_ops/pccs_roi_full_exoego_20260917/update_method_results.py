@@ -21,4 +21,7 @@ for seed in (1,2):
     for name in ('baseline','frozen_cycle','primary','local20_matched','global_matched','object20_matched'):
         v=a['methods'][name];ci=v['ci95_pp'];lines.append(f"| {name} | {100*v['frame'][0]:.4f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
     lines += ['']
+expanded=R.parent/'pccs_exoexo_expand_20260917/exo2exo_results.json'
+if expanded.exists():
+    e=json.loads(expanded.read_text());lines += ['扩展Exo→Exo时序压力测试已完成：新增6534个不重复配对，原PCCS41.3130，冻结1.5×主方案45.0837（+3.7706点），2×对照45.2391（+3.9260点），同候选O-MaMa43.9262（+2.6131点）。原主方案对O-MaMa区间跨零，2×对照的描述性差区间为[0.1774,2.6580]，不改变事前主次身份。', '', '该扩展只有19个旧take，不是新增场景泛化；它没有替代仍在运行的Exo→Ego46515对全量验证。完整结果见总报告§16及扩展目录的validation.json。','']
 p.write_text((text+'\n'.join(lines)).rstrip()+'\n',encoding='utf8');print('METHOD_RESULTS_UPDATED')

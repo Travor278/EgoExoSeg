@@ -21,5 +21,16 @@ def main():
     assert len(reference)==6534
     for r in rows:
         ref=reference[(r['video_id'],r['obj_id'])];assert ref['mask_sha256']==r['mask_sha256'] and ref['metrics']==r['frozen_omama_reference']==r['metrics'][ref['expert']]
+        assert ref['scores'] is not None and not ref['reused_identical_bank']
+        names=[r['baseline']];used={r['mask_sha256'][r['baseline']]}
+        for e in ('visual','anchor','fusion'):
+            if r['mask_sha256'][e] not in used:used.add(r['mask_sha256'][e]);names.append(e)
+        chosen=[]
+        for mode in ('canonical','native_interp'):
+            scores=ref['scores'][mode];assert len(scores)==len(names) and np.isfinite(scores).all();valid=[i for i,e in enumerate(names) if r['evidence'][e]['area']>0];best=max(valid,key=lambda i:scores[i]) if valid else 0
+            if not r['source_valid'] or (r['evidence'][r['baseline']]['area']>0 and scores[best]<=scores[0]+.05):best=0
+            chosen.append(names[best])
+        assert (chosen[0] if chosen[0]==chosen[1] else r['baseline'])==ref['expert']
+    refs=[{**r,'metrics':{**r['metrics'],'external':r['frozen_omama_reference']},'mask_sha256':{**r['mask_sha256'],'external':r['mask_sha256'][r['frozen_omama_expert']]}} for r in rows];external=score(refs,['external']*len(rows));assert np.allclose(external['frame'],result['methods']['omama_reference']['frame'],atol=1e-12,rtol=0) and np.allclose(external['ci95_pp'],result['methods']['omama_reference']['ci95_pp'],atol=1e-10,rtol=0)
     checks.update(coverage='exact',pair_disjointness_and_identity='passed',actual_routes_and_frame_bootstrap='passed',same_candidate_external_reference='passed',baseline_zero_iou_objects=sum(r['metrics'][r['baseline']][0]==0 for r in rows));(R/'validation.json').write_text(json.dumps(checks,indent=2));print(json.dumps(checks))
 if __name__=='__main__':main()

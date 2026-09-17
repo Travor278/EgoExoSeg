@@ -1,0 +1,11 @@
+{
+  "frozen_model_and_dataset_contract": "passed",
+  "new_pairs": 6534,
+  "independent_takes": 19,
+  "new_independent_takes": 0,
+  "coverage": "exact",
+  "pair_disjointness_and_identity": "passed",
+  "actual_routes_and_frame_bootstrap": "passed",
+  "same_candidate_external_reference": "passed",
+  "baseline_zero_iou_objects": 2606
+}

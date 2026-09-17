@@ -2,6 +2,8 @@
 
 User request: continue research and evaluate on more Exo2Exo samples. This experiment is an additional dataset test, not a change to the running full Exo2Ego job or its frozen parameters.
 
+Result update2026-09-18: all6534additionalpairs completed, originalPCCS41.3130, frozen1.5×primary45.0837(+3.7706),2×secondary45.2391(+3.9260), independently recomputed same-bankO-MaMa43.9262(+2.6131). Complete coverage,actual primary/2×/cycle routes,zero-preserving frame aggregation,old-pair disjointness andexternal reference were checked locally. Primary vsO-MaMa+1.1575CI[-0.0201,2.5478];secondary vsO-MaMa+1.3129CI[0.1774,2.6580]descriptive,not multiplicity-adjusted. Do not turn secondary into originalprimary orclaim newscene generalization. Final release evidence isresource_release.json; pending broader-scene expansion still needs additionaltrusted prompts.
+
 ## What1094 actually means
 
 Downloaded original dataset Jenk9/exo2exo-selected-EgoExo4D-pair-same-random@23b8f17b76aacbc15e269e03accc6a797bece202 contains547 human-approved pseudo-source masks, each paired with one synchronous and one random annotated target frame, hence1094. It covers20takes. README's79objects corresponds to79 distinct label strings; direct annotation audit finds96 take-scoped instance tracks and85 distinct source_object_id strings. Report these units separately. Source masks were generated with V2-SAM and SAM2 refinement then manually selected; target masks are annotated4K GT. Prior use of “full Exo2Exo” means this constructed1094-pair file, never the whole Ego-Exo4D corpus.

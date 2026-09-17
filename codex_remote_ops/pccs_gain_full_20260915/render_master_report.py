@@ -35,6 +35,9 @@ if roi.exists():
 repeat=O/'pccs_roi_seed_repeat_20260917/exo2ego_results.json'
 if repeat.exists():
  rs=load(repeat);rt=load(repeat.parent/'exo2exo_results.json');parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 冻结随机种子复验已完成（§14）：2倍原生ROI在Exo→Exo的两轮增益为+3.3101/{rt['methods']['local20_matched']['delta_pp']:+.4f}点，在Exo→Ego512对为+1.1958/{rs['methods']['local20_matched']['delta_pp']:+.4f}点；两个方向两轮相对原PCCS的区间下界均为正。1.5倍预选主方案同样保持正增益。第二轮1094个Exo→Exo参考全部重算，2倍42.3458 vs O-MaMa42.5391；这是接近点估计与重复性证据，非统计等效。所有参数冻结、完整核验通过、四卡释放，本轮不再加seed挑结果。")
+expanded=O/'pccs_exoexo_expand_20260917/exo2exo_results.json'
+if expanded.exists():
+ ex=load(expanded);parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 新增6,534个Exo→Exo时序配对验证已完成（§16）：原PCCS{ex['methods']['baseline']['frame'][0]*100:.4f}，1.5×预选主方案{ex['methods']['primary']['frame'][0]*100:.4f}（{ex['methods']['primary']['delta_pp']:+.4f}点），2×对照{ex['methods']['local20_matched']['frame'][0]*100:.4f}（{ex['methods']['local20_matched']['delta_pp']:+.4f}点），同bank O-MaMa{ex['methods']['omama_reference']['frame'][0]*100:.4f}。2×对O-MaMa描述性差+1.3129点，主方案差区间仍跨零；模型未重拟合。**仍来自19个旧take，0新增场景**，不把配对数量当独立场景数。旧1,094始终指人工构建集而非整个官方数据。")
 for title,p in sources:
  parts+=['',f'#### {title}','']
  if not p.exists():

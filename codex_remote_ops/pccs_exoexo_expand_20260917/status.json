@@ -1,1 +1,1 @@
-{"state": "running", "phase": "exo2exo", "ranks": [{"state": "initializing"}, {"state": "initializing"}, {"state": "initializing"}, {"state": "initializing"}], "eta_seconds": null, "updated_at": 1789659199.9970245}
+{"state": "complete", "phase": "complete", "eta_seconds": 0, "updated_at": 1789664211.6656983}

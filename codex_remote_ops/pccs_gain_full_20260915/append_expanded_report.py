@@ -11,9 +11,18 @@ def append_expanded(parts,root):
       '另一条初步扩展尝试将540×960的现有Exo2Ego prompt标注充作更多目标GT，但发现实例匹配/分辨率一致性问题，只有722新配对通过预设核对，因此未把它作为本轮主评测。当前6534使用同原4K注释池，避免此口径变化；完整审计保留，不能降低核验门槛只为增加样本。', '',
       '更大独立场景覆盖仍待补更多take的可信源mask。来源及实现：[PLAN.md](../pccs_exoexo_expand_20260917/PLAN.md)、[后续调研](../pccs_method_research_20260917/RESEARCH.md)。']
     p=r/'exo2exo_results.json'
-    if all((r/'runs/smoke'/f'rank{k}/receipt.json').exists() for k in range(4)):parts += ['', '扩展任务的8对原pipeline冒烟及四卡旧bank O-MaMa见证分数已通过；6534完整推理进行中，仍需最终指标/参考同bank/覆盖核验。']
+    if all((r/'runs/smoke'/f'rank{k}/receipt.json').exists() for k in range(4)):parts += ['', '扩展任务的8对原pipeline冒烟及四卡旧bank O-MaMa见证分数已通过；最终完成状态以下方完整结果及验证回执为准。']
     if not p.exists():parts += ['', '扩展6534结果：待完成，不能使用旧1094增益代替。']
     else:
         a=json.loads(p.read_text());parts += ['', '| 方法 | 新6534 frame IoU | Δ本轮PCCS（点） | 95%take区间 |','|---|---:|---:|---|']
         for name,v in a['methods'].items():
             ci=v['ci95_pp'];parts.append(f"| {name} | {100*v['frame'][0]:.4f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
+        parts += ['', '完整6,534对结果支持原生ROI在更多异步时序组合中继续获益：1.5倍预选主方案+3.7706点，[2.2539,5.5732]；2倍关键次要对照+3.9260点，[2.4658,5.5719]。此前cycle为+2.2914点，同当前候选重算的O-MaMa为+2.6131点。不能把这组绝对IoU与旧1,094直接相减来算方法增益，数据组成已变。', '',
+          '相对O-MaMa：1.5倍+1.1575点，区间[-0.0201,2.5478]仍跨零；2倍+1.3129点，描述性区间[0.1774,2.6580]为正，但它仍是事前声明的次要对照，未作多重检验校正，不能改写成旧实验主方案或普遍优于O-MaMa。2倍相对1.5倍仅+0.1554点，区间[-0.0764,0.3936]跨零。', '',
+          '原生增强相对旧cycle：1.5倍额外+1.4792点，[1.0345,1.9902]；2倍额外+1.6346点，[1.1364,2.2036]。2倍真实背景匹配组相对同配置前景-only组+2.5361点，[1.6863,3.3218]，但灰背景分布偏移的解释限制仍在。', '',
+          '验证：6,534个新增pair全部覆盖，与旧源提示/目标图配对不重合，19takes；完整PCCSMetric的1.5/2/cycle选择与离线回放一致，保留2,606个零IoU对象。O-MaMa参考6,534条全部同bank计算，4卡历史见证校验通过，并从保存相似度分数独立重放其最终选择。原三候选、源/目标标注与数据构造hash核对通过；见validation.json及reference回执。', '',
+          '**这仍只是19个旧take中的新组合，不是新增场景测试。** 新mask/场景扩充仍待更多可信源mask；不能用6,534pair把19个take伪装成6,534个独立样本。较好的配对结果不能消除这一局限。']
+    p=r/'resource_release.json'
+    if p.exists():
+        cells=json.loads(p.read_text(encoding='utf-8-sig'))['cells']
+        if str(cells[7])=='0':parts += ['',f"扩展任务已释放：{cells[5]}，占用节点0，结束{cells[9]}（北京时间）。"]
