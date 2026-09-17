@@ -1,0 +1,15 @@
+{
+  "weights_and_frozen_selection": "passed",
+  "phases": {
+    "science_exo2exo": {
+      "objects": 1094,
+      "paired_frame_metrics_and_bootstrap": "passed",
+      "same_frozen_candidates": "passed"
+    },
+    "science_exo2ego": {
+      "objects": 965,
+      "paired_frame_metrics_and_bootstrap": "passed",
+      "same_frozen_candidates": "passed"
+    }
+  }
+}

@@ -18,6 +18,7 @@ def append_full_roi(parts,root):
             for name,c in v['real_minus_intervention'].items():
                 ci=c['ci95_pp'];parts.append(f"| {phase}/{name} | {c['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
         parts += ['', '上述为描述性机制对照，不能根据结果重选模型、删掉干预较弱样本或重新拟合阈值；新方法是否普遍获益与背景干预效应须分开。']
+        parts += ['', '机制验证的当前结论：Exo→Exo真实背景优于同图远处背景，1.5倍+0.2859点（[0.0573,0.5548]），2倍+0.6654点（[0.3186,0.9870]）；说明在保留源前景像素/目标候选不变的前提下，远背景兼容性仍影响当前局部循环判断。2倍错位对照的区间跨零，Exo→Ego1.5倍错位差为+0.1453点（[0.0188,0.2982]），其他Exo→Ego比较跨零。不可只保留显著行，也不可称两方向所有尺度都显著。', '', '真实路径的逐项局部特征误差均为0；同bank/冻结模型/GT-free接口、frame与bootstrap本地独立复算通过。2倍干预平均修改源crop的73.68%（Exo→Exo）/71.79%（Exo→Ego）像素，保护前景及其8像素halo不变。少数远处供体仍与源mask重叠（2倍分别30/130对象），无法构成完美纯背景干预；全部保留并计入结果。缺失源ROI的4/17对象也未剔除。科学解释和供体统计详见science_audit.json。']
     for seed in (1,2):
         p=r/f'full{seed}_results.json'
         if not p.exists():parts += ['',f'全量seed{seed}：待完成。'];continue

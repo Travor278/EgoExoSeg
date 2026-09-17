@@ -2,6 +2,8 @@
 
 User request2026-09-17: full Exo2Ego validation with the best weights; a standalone method explanation; scientific ablations; confirmation of historical O-MaMa weight usage.
 
+Progress: job-2f1e215e-2fb3-4a85-bc1a-f8182e488add submitted18:31:34; natural-background scientific controls completed on both cohorts and independently validated. Best-weight SHA and historical O-MaMa identical-weight evidence verified in weight_audit.json. Full seed1/seed2 are not yet complete; do not mark the request finished until both and final reports are verified.
+
 Full scope:46515 pairs,109253 objects,295 takes, two already-declared candidate seeds v1/v2. Run one four-H100 job per seed sequentially. The first job performs scientific controls, smoke1 and full1; the second runs smoke2/full2 after full1 coverage and release have been checked. Allow up to1440minutes per job; update supervision from actual remaining ETA×0.8, nearest minute,min1, no arbitrary upper bound. Unknown/stage change5minutes. No new training, model/threshold/selection changes, extra seeds or target tuning.
 
 Freeze `pccs_roi_context_20260917/selection.json` SHA a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3, including source-selected local15_ridge100_present_t0.05 and declared local20 secondary control; keep all seven matched feature controls and old cycle. The original source selection remains the primary historical experiment. For this requested validation, report both1.5/2x and all relevant matched controls without choosing a new winner from full-test scores.

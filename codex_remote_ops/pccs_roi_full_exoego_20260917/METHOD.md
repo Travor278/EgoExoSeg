@@ -22,6 +22,25 @@
 
 实际集成点是PCCSMetric中原选择之后的 `native_select`。实验将其完整metric选择与离线策略逐对象核对；清空测试GT指标字段不改变策略输出。注意原实现 `_count_points_in_mask` 实际检查mask的bbox内点数，本研究沿用并如实命名为原hard-vote信息，没有偷偷换成像素级判定。
 
+```mermaid
+flowchart TD
+    I[源图与源提示mask、目标图] --> V[原V2-SAM三专家]
+    V --> M[Visual / Anchor / Fusion候选mask]
+    M --> P[原PCCS反向对应与质量判断]
+    P --> E[原选择 e0]
+    I --> C[源物体局部crop]
+    M --> T[每个目标候选局部crop]
+    C --> D[原生DINOv3局部重编码]
+    T --> D
+    D --> L[局部软对应、循环与面积校正证据]
+    P --> R[冻结的小型置信校准器]
+    L --> R
+    E --> R
+    R --> G{合格挑战者且预测改善超过阈值?}
+    G -->|是| A[输出挑战者原候选mask]
+    G -->|否| B[输出原选择 e0 的mask]
+```
+
 ## 3. 局部视图怎么构造
 
 对源提示mask和每个目标候选分别取bbox，令长边为 `L`。
@@ -131,4 +150,41 @@ O-MaMa提供的启发是：跨视角匹配不能只看孤立物体，周围区�
 - 全量冻结指标：`summarize.py`，输出 `full1_results.json` / `full2_results.json` 与可独立复算的compact对象记录。
 - 总报告：`../pccs_gain_full_20260915/FINAL_REPORT.md`；本说明不替代所有数值日志。
 
-当前全量与自然背景控制尚未完成；结果将明确追加，所有正负结果均记录。1.5×历史主方案身份、2×关键对照身份、模型文件与阈值保持冻结。
+本次全量与自然背景控制的实际进度见下节；所有正负结果均记录。1.5×历史主方案身份、2×关键对照身份、模型文件与阈值保持冻结。
+
+<!-- CURRENT_VALIDATION_RESULTS -->
+
+## 10. 本次验证进度与结果
+
+本次平台启动已再次完整核验Visual e19/Fusion e20的字节数及SHA，并确认历史O-MaMa全量使用同组权重；机器可读证据：`weight_audit.json`。
+
+自然背景控制已完成，以下均为同一候选、同一冻结模型的描述性配对比较。真实图重放需保持原始特征/选择一致。
+
+| 方向/尺度 | 真实背景 IoU | 远背景 IoU | 错位背景 IoU |
+|---|---:|---:|---:|
+| science_exo2exo/local15 | 41.7688 | 41.4829 | 41.2802 |
+| science_exo2exo/local20 | 42.3292 | 41.6638 | 41.8963 |
+| science_exo2ego/local15 | 72.0801 | 72.0162 | 71.9349 |
+| science_exo2ego/local20 | 72.1706 | 72.0892 | 71.8289 |
+
+| 配对比较 | 真实−干预（点） | 95%区间 |
+|---|---:|---|
+| science_exo2exo/real minus far local15 | +0.2859 | [0.0573, 0.5548] |
+| science_exo2exo/real minus rolled local15 | +0.4886 | [0.0089, 0.9218] |
+| science_exo2exo/real minus far local20 | +0.6654 | [0.3186, 0.9870] |
+| science_exo2exo/real minus rolled local20 | +0.4329 | [-0.3130, 1.0509] |
+| science_exo2ego/real minus far local15 | +0.0640 | [-0.0423, 0.1976] |
+| science_exo2ego/real minus rolled local15 | +0.1453 | [0.0188, 0.2982] |
+| science_exo2ego/real minus far local20 | +0.0814 | [-0.0041, 0.1869] |
+| science_exo2ego/real minus rolled local20 | +0.3417 | [-0.0187, 0.7604] |
+
+本对照仍受自然patch拼接、空间错位和模型分布变化限制，不能单独证明具体邻居语义的因果作用。
+
+自然背景控制的解读：Exo→Exo2×真实背景比远处供体高0.6654点，区间[0.3186,0.9870]；支持局部背景兼容性影响当前模型。1.5×远处供体差也为正，2×错位对照跨零。Exo→Ego效果更弱，多数区间跨零，不能推广为所有方向/尺度均显著。
+
+真实图重放逐项特征误差为0。远供体不是完美纯背景：2×时Exo→Exo30个、Exo→Ego130个供体patch与源mask有重叠，全部保留；缺失ROI的4/17个对象也保留。源前景与8像素halo严格保持，平均实际改动比例及供体信息详见science_audit.json。
+
+全量seed1：待完成，尚无46515对完整结果。
+
+全量seed2：待完成，尚无46515对完整结果。
+

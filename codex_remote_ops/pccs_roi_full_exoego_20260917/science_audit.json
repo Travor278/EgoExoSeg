@@ -1,0 +1,75 @@
+{
+  "scope": "Intervention strength and real-view reproduction; all objects kept including ineffective edits",
+  "phases": {
+    "science_exo2exo": {
+      "real_max_feature_error": 0.0,
+      "arms": {
+        "local15/far": {
+          "objects": 1094,
+          "source_crop_missing": 4,
+          "zero_pixel_edit_objects": 0,
+          "mean_changed_pixel_fraction": 0.5636681586549674,
+          "mean_editable_fraction": 0.5637085732605,
+          "donor_overlaps_source_mask_objects": 8
+        },
+        "local15/rolled": {
+          "objects": 1094,
+          "source_crop_missing": 4,
+          "zero_pixel_edit_objects": 0,
+          "mean_changed_pixel_fraction": 0.56366053183441,
+          "mean_editable_fraction": 0.5637085732605
+        },
+        "local20/far": {
+          "objects": 1094,
+          "source_crop_missing": 4,
+          "zero_pixel_edit_objects": 0,
+          "mean_changed_pixel_fraction": 0.7367663784221007,
+          "mean_editable_fraction": 0.7368366240927997,
+          "donor_overlaps_source_mask_objects": 30
+        },
+        "local20/rolled": {
+          "objects": 1094,
+          "source_crop_missing": 4,
+          "zero_pixel_edit_objects": 0,
+          "mean_changed_pixel_fraction": 0.7367573153728134,
+          "mean_editable_fraction": 0.7368366240927997
+        }
+      }
+    },
+    "science_exo2ego": {
+      "real_max_feature_error": 0.0,
+      "arms": {
+        "local15/far": {
+          "objects": 965,
+          "source_crop_missing": 17,
+          "zero_pixel_edit_objects": 0,
+          "mean_changed_pixel_fraction": 0.5667686304944574,
+          "mean_editable_fraction": 0.5668005628691631,
+          "donor_overlaps_source_mask_objects": 77
+        },
+        "local15/rolled": {
+          "objects": 965,
+          "source_crop_missing": 17,
+          "zero_pixel_edit_objects": 0,
+          "mean_changed_pixel_fraction": 0.5666820918968314,
+          "mean_editable_fraction": 0.5668005628691631
+        },
+        "local20/far": {
+          "objects": 965,
+          "source_crop_missing": 17,
+          "zero_pixel_edit_objects": 0,
+          "mean_changed_pixel_fraction": 0.7178976424704205,
+          "mean_editable_fraction": 0.717947470500087,
+          "donor_overlaps_source_mask_objects": 130
+        },
+        "local20/rolled": {
+          "objects": 965,
+          "source_crop_missing": 17,
+          "zero_pixel_edit_objects": 0,
+          "mean_changed_pixel_fraction": 0.7177905198815039,
+          "mean_editable_fraction": 0.717947470500087
+        }
+      }
+    }
+  }
+}
