@@ -1,0 +1,40 @@
+{
+  "expert_assets_verified_by_bytes_and_sha256": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "previous_omama_full_used_identical_assets": true,
+  "previous_full_result_sha256": "3044551d52bc67075e541c0817390ca0723c1a23f7338a86a4c9bf77c0096554",
+  "previous_full_scope": {
+    "pairs": 46515,
+    "objects": 109253,
+    "takes": 295,
+    "coverage": "exact"
+  },
+  "previous_full_pccs": {
+    "IoU": 0.5389967936663921,
+    "Dice": 0.5866482157665489,
+    "ContA": 0.6149133404095299,
+    "LocE": 0.0779488152282281
+  },
+  "previous_full_omama_consensus": {
+    "IoU": 0.5663847102419988,
+    "Dice": 0.6227860702794141,
+    "ContA": 0.6500753516490381,
+    "LocE": 0.062325692229982896
+  },
+  "historical_reference_is_not_same_candidate_seed_as_new_full": true,
+  "hf_revision": "8b8310e9ee13023cb8711c2417e18cc7361dc3aa"
+}

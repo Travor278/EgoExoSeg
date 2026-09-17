@@ -1,0 +1,379 @@
+{
+  "created_at": 1789641206.6426582,
+  "phases": {
+    "smoke1": {
+      "pairs": 8,
+      "objects": 8,
+      "shards": [
+        {
+          "seed": 1,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke1_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke1_rank0.yaml",
+          "pairs": 2,
+          "objects": 2,
+          "annotation_sha256": "42e0214d3d6c037c47402daeee342c60d12b97e10082e3a1b55ca1e498eca1e7"
+        },
+        {
+          "seed": 1,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke1_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke1_rank1.yaml",
+          "pairs": 2,
+          "objects": 2,
+          "annotation_sha256": "6572a86a0b8537c6de84b892d7fbaa7e3373836419b7b5d173cd5f72d0cf05eb"
+        },
+        {
+          "seed": 1,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke1_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke1_rank2.yaml",
+          "pairs": 2,
+          "objects": 2,
+          "annotation_sha256": "293bdc965981a71caeebccdb771a10a8fa8fec8cc0c8ea58c352c4e72690cf1c"
+        },
+        {
+          "seed": 1,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke1_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke1_rank3.yaml",
+          "pairs": 2,
+          "objects": 2,
+          "annotation_sha256": "e50f9be958a0dc90ca72876efa594b71f7d018091bb23ec2f1912acefb223e86"
+        }
+      ]
+    },
+    "full1": {
+      "pairs": 46515,
+      "objects": 109253,
+      "shards": [
+        {
+          "seed": 1,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full1_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full1_rank0.yaml",
+          "pairs": 11629,
+          "objects": 27381,
+          "annotation_sha256": "ad642f0d5f4afd569c0aa0732b4810ae132de0a7a1c21cd08a403acbd991302b"
+        },
+        {
+          "seed": 1,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full1_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full1_rank1.yaml",
+          "pairs": 11629,
+          "objects": 27378,
+          "annotation_sha256": "4f68a86a7b501fbb08bec65baf3c55e0fbec38b725bad96a072be1b7673ded02"
+        },
+        {
+          "seed": 1,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full1_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full1_rank2.yaml",
+          "pairs": 11629,
+          "objects": 27293,
+          "annotation_sha256": "510b8e2cd8ed1645f622698ba2d14960dfbdc40780ea077861badb8ce35191dd"
+        },
+        {
+          "seed": 1,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full1_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full1_rank3.yaml",
+          "pairs": 11628,
+          "objects": 27201,
+          "annotation_sha256": "b1bfc8ca1e28f9d793f33247f3b32997b9d5b8539911c3e2496ff07278038a97"
+        }
+      ]
+    },
+    "smoke2": {
+      "pairs": 8,
+      "objects": 8,
+      "shards": [
+        {
+          "seed": 2,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke2_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke2_rank0.yaml",
+          "pairs": 2,
+          "objects": 2,
+          "annotation_sha256": "42e0214d3d6c037c47402daeee342c60d12b97e10082e3a1b55ca1e498eca1e7"
+        },
+        {
+          "seed": 2,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke2_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke2_rank1.yaml",
+          "pairs": 2,
+          "objects": 2,
+          "annotation_sha256": "6572a86a0b8537c6de84b892d7fbaa7e3373836419b7b5d173cd5f72d0cf05eb"
+        },
+        {
+          "seed": 2,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke2_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke2_rank2.yaml",
+          "pairs": 2,
+          "objects": 2,
+          "annotation_sha256": "293bdc965981a71caeebccdb771a10a8fa8fec8cc0c8ea58c352c4e72690cf1c"
+        },
+        {
+          "seed": 2,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke2_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/smoke2_rank3.yaml",
+          "pairs": 2,
+          "objects": 2,
+          "annotation_sha256": "e50f9be958a0dc90ca72876efa594b71f7d018091bb23ec2f1912acefb223e86"
+        }
+      ]
+    },
+    "full2": {
+      "pairs": 46515,
+      "objects": 109253,
+      "shards": [
+        {
+          "seed": 2,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full2_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full2_rank0.yaml",
+          "pairs": 11629,
+          "objects": 27381,
+          "annotation_sha256": "ad642f0d5f4afd569c0aa0732b4810ae132de0a7a1c21cd08a403acbd991302b"
+        },
+        {
+          "seed": 2,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full2_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full2_rank1.yaml",
+          "pairs": 11629,
+          "objects": 27378,
+          "annotation_sha256": "4f68a86a7b501fbb08bec65baf3c55e0fbec38b725bad96a072be1b7673ded02"
+        },
+        {
+          "seed": 2,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full2_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full2_rank2.yaml",
+          "pairs": 11629,
+          "objects": 27293,
+          "annotation_sha256": "510b8e2cd8ed1645f622698ba2d14960dfbdc40780ea077861badb8ce35191dd"
+        },
+        {
+          "seed": 2,
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full2_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_full_exoego_20260917/full2_rank3.yaml",
+          "pairs": 11628,
+          "objects": 27201,
+          "annotation_sha256": "b1bfc8ca1e28f9d793f33247f3b32997b9d5b8539911c3e2496ff07278038a97"
+        }
+      ]
+    },
+    "science_smoke": {
+      "source_phase": "smoke",
+      "pairs": 8,
+      "objects": 8,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/smoke_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/smoke_rank0.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/smoke_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/smoke_rank1.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/smoke_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/smoke_rank2.yaml",
+          "pairs": 2,
+          "objects": 2
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/smoke_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/smoke_rank3.yaml",
+          "pairs": 2,
+          "objects": 2
+        }
+      ]
+    },
+    "science_exo2exo": {
+      "source_phase": "exo2exo",
+      "pairs": 1094,
+      "objects": 1094,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank0.yaml",
+          "pairs": 274,
+          "objects": 274
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank1.yaml",
+          "pairs": 274,
+          "objects": 274
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank2.yaml",
+          "pairs": 273,
+          "objects": 273
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2exo_rank3.yaml",
+          "pairs": 273,
+          "objects": 273
+        }
+      ]
+    },
+    "science_exo2ego": {
+      "source_phase": "exo2ego",
+      "pairs": 512,
+      "objects": 965,
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank0.yaml",
+          "pairs": 128,
+          "objects": 238
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank1.yaml",
+          "pairs": 128,
+          "objects": 250
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank2.yaml",
+          "pairs": 128,
+          "objects": 238
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_roi_context_20260917/exo2ego_rank3.yaml",
+          "pairs": 128,
+          "objects": 239
+        }
+      ]
+    }
+  },
+  "assets": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "encoder_contract": {
+    "state_sha256": "295b01d15aafd06f4c3978515652fff068acbbf025fb94936e1a763dbc7e39f4",
+    "parameter_dtype": "torch.float32",
+    "matmul_tf32": true,
+    "cudnn_tf32": true,
+    "autocast_enabled": false,
+    "autocast_dtype": "torch.float16",
+    "mean": [
+      [
+        [
+          0.48500001430511475
+        ]
+      ],
+      [
+        [
+          0.4560000002384186
+        ]
+      ],
+      [
+        [
+          0.4059999883174896
+        ]
+      ]
+    ],
+    "std": [
+      [
+        [
+          0.2290000021457672
+        ]
+      ],
+      [
+        [
+          0.2240000069141388
+        ]
+      ],
+      [
+        [
+          0.22499999403953552
+        ]
+      ]
+    ]
+  },
+  "frozen_cycle": {
+    "name": "cycle_ridge10_t0.03",
+    "family": "calibrated",
+    "group": "cycle",
+    "kind": "ridge10",
+    "threshold": 0.03,
+    "checkpoint": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_dense_context_20260917/fitted/cycle_ridge10.joblib",
+    "sha256": "bf29e873ed7c5a6e6ebd157b2859b1f1a018564202bd6883e1964cae088cd06c",
+    "train_oof": {
+      "frame": [
+        0.7832195317623198,
+        0.832790926211028,
+        0.8568083294546404,
+        0.028465393389526496
+      ],
+      "delta_pp": 0.2570293198934653,
+      "ci95_pp": [
+        -0.652034959592533,
+        1.0612768960757721
+      ],
+      "changed": 27,
+      "improved": 18,
+      "harmed": 9,
+      "pairs": 384,
+      "objects": 676,
+      "takes": 48
+    },
+    "calibration": {
+      "frame": [
+        0.8158496616825384,
+        0.8640009544103425,
+        0.8861918452724675,
+        0.029085715446148904
+      ],
+      "delta_pp": 0.35640424738327664,
+      "ci95_pp": [
+        -0.048433500342071056,
+        0.9336435021832576
+      ],
+      "changed": 8,
+      "improved": 5,
+      "harmed": 3,
+      "pairs": 128,
+      "objects": 225,
+      "takes": 16
+    }
+  },
+  "frozen_selection_sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+  "training_performed": false,
+  "full_annotation_sha256": "b05faed68c0bea40df02d3fd81b0b25af9e3fbb6e4eb8e7e2b8cb9349de34b96",
+  "checked_images": 93030,
+  "source_code_commit": "v2sam-pccs@0e3bc33dec3e202ffbb86cec01038e60b18c162a",
+  "max_gpu_jobs_concurrent": 1,
+  "scope": "Full46515pair109253object Exo2Ego, candidate-quality-v1/v2. Parameters frozen; previously observed benchmark, not fresh blind test. Scientific controls separate from full selection.",
+  "code_sha256": {
+    "encoder_contract.py": "b40f18aa0f0d7391da6628003329bc3cf1436172817fdfd0b8cfcd45599facf8",
+    "roi_views.py": "8b04263f969b71187ded43c689b74dbb643021e803aaa64cd339385385f9cb8d",
+    "roi_evidence.py": "2322ab47bbb0c13d359d327d800dae63bf26433fd10425799f43279253f0b829",
+    "roi_policy.py": "53ce89220aff993e4e61790c332f89fa0ec2748488f753187fad1753198ae2d0",
+    "dense_context.py": "dcc5aa9d38f8eec04ee4698411ade86707d461e328b4c211c1e35e7db6bed518",
+    "policies.py": "a7151a093b82bbcbb5296e0a2287451711ad6dc314c3079c246577929bcca0ef",
+    "native_bridge.py": "bf86e52b0c00d7ec8c731d64080f76341df28391e793b6dbce322c4ec8255d9a",
+    "randomness.py": "32379d29df12c52ea263d6638b35ba2a9d965002c97cd9f6a67fc4ddedc88e00",
+    "worker.py": "8b477d476f83501d9202a15b97301b5fd556915622fb4cb25f2cc33ce3d4e599",
+    "science_views.py": "4d5befa82af4568e4f751cb64c01f346eda9d8b051a3c09f11eca539ce55ef10",
+    "science_worker.py": "9a10e5a9c1c4ef56cd16e350dea01a00321692ecee9276b4c1379eab413a3677",
+    "science_evaluate.py": "470836b0b77809ffb898c7d321a48a649db5039ca92644abe26e1174a92211b2",
+    "summarize.py": "5475f15fd27810dfce904a7599f62453d08d8ccb2fc9b69a173fe57dce917409",
+    "controller.py": "d4cfc885cdda862661f1f56d3911cc4f5fc09ee1b60dd181af77af9da39824ff",
+    "code/projects/v2sam_pccs/evaluation/pccs_metric.py": "b83884ec4660e1a5ddad1be11640b3cf8dabe454759fecac7e2b096dd35f4edd"
+  }
+}

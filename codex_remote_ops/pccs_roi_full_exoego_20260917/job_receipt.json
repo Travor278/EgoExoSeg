@@ -1,0 +1,17 @@
+{
+  "job_id": "job-2f1e215e-2fb3-4a85-bc1a-f8182e488add",
+  "name": "v2sam-roi-full-exoego-seed1-20260917",
+  "submitted_at_local": "2026-09-17 18:31:34",
+  "space_id": "ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+  "nodes": 1,
+  "gpus": 4,
+  "gpu_type": "H100 80GB",
+  "priority": 4,
+  "maximum_minutes": 1440,
+  "success_retention_minutes": 1,
+  "failure_retention_minutes": 1,
+  "command_equality_verified": true,
+  "initial_state": "queued",
+  "stages": ["science_smoke", "science_exo2exo", "science_exo2ego", "smoke1", "full1", "summarize"],
+  "second_seed": "Controller supports argument2; submit only after full1 verified complete and first-job nodes released"
+}

@@ -1,0 +1,185 @@
+{
+  "files": [
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/encoder_contract.py",
+      "sha256": "b40f18aa0f0d7391da6628003329bc3cf1436172817fdfd0b8cfcd45599facf8",
+      "bytes": 730
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/roi_views.py",
+      "sha256": "8b04263f969b71187ded43c689b74dbb643021e803aaa64cd339385385f9cb8d",
+      "bytes": 1851
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/roi_evidence.py",
+      "sha256": "2322ab47bbb0c13d359d327d800dae63bf26433fd10425799f43279253f0b829",
+      "bytes": 3194
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/roi_policy.py",
+      "sha256": "53ce89220aff993e4e61790c332f89fa0ec2748488f753187fad1753198ae2d0",
+      "bytes": 1518
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/test_roi.py",
+      "sha256": "9177a1e263c71145f0534633c32fbee10f0fe8efd4e74047a823023fa7cdf1be",
+      "bytes": 698
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/test_roi_policy.py",
+      "sha256": "2a9d31d13a1dd48426da11749b7d372b245b637a0342608a2b770849fdd236fc",
+      "bytes": 948
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/dense_context.py",
+      "sha256": "5100a00155d9d2ca78693447a7f68d2dfe85fd2fbd7f837d0120e255eaf7492d",
+      "bytes": 4635
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/policies.py",
+      "sha256": "7c79f2bd3f97c92d0028d2c80af0b463943628629218c98735b30f9b02abf6c0",
+      "bytes": 3007
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/native_bridge.py",
+      "sha256": "7f868c7ddf3f2a7c1379a37de1534be89f2539230988a1c98e6cea1d0e9e771a",
+      "bytes": 1945
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/randomness.py",
+      "sha256": "e4b3b7c1810e7256467916834fb8b4886e6e588c3ccfa5a810cfbeae13e47026",
+      "bytes": 219
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/prepare.py",
+      "sha256": "81c593648490ddc3ca5594861bcb4c8e66f57cddd7ee7dcbd0cdc6e09448ab28",
+      "bytes": 5093
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/worker.py",
+      "sha256": "90b94891f501c901395be5ed2e49ffff5079f3fd37aecd01a3561d49974f2c21",
+      "bytes": 12377
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/data_utils.py",
+      "sha256": "a4c6cdb2986d6630a77337cedd401ddbd3953c963cca0f5646d72c0be0cbfcf4",
+      "bytes": 2188
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/science_views.py",
+      "sha256": "4d5befa82af4568e4f751cb64c01f346eda9d8b051a3c09f11eca539ce55ef10",
+      "bytes": 3355
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/test_science.py",
+      "sha256": "69224634c9a3ca92f50e88de05670c1bdc9826f6732958d69c59e6d3da8ec529",
+      "bytes": 786
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/science_worker.py",
+      "sha256": "9a10e5a9c1c4ef56cd16e350dea01a00321692ecee9276b4c1379eab413a3677",
+      "bytes": 5641
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/science_evaluate.py",
+      "sha256": "470836b0b77809ffb898c7d321a48a649db5039ca92644abe26e1174a92211b2",
+      "bytes": 1093
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/summarize.py",
+      "sha256": "5475f15fd27810dfce904a7599f62453d08d8ccb2fc9b69a173fe57dce917409",
+      "bytes": 3051
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/controller.py",
+      "sha256": "f08db6f0e5d2411c31fc9d03cf195ed7cfc703be44bb7ce49379106049e2ca0a",
+      "bytes": 3756
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/PLAN.md",
+      "sha256": "80f8a7f8154dacacc9fbbc1b9d114359b4646961177b449b3e5dca4ebe23331c",
+      "bytes": 5108
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/METHOD.md",
+      "sha256": "b7db785bde59bd6db8a8679ffffc468a58d32de68612a712f65e5ab964f97ccc",
+      "bytes": 11999
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/job_receipt.json",
+      "sha256": "c68a3b7ba1a75adf84c4726fb07dc9e69475e74aaa96cec64763117b3242b3f4",
+      "bytes": 668
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/capsule_manifest.json",
+      "sha256": "0ff7f0e1216025176ed22bc0e328bc80b023b53ae2e884eec20ed014aec9c928",
+      "bytes": 1993
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/manifest.json",
+      "sha256": "74506a37b0adc25c82bd43dff982d702a3239c4abee3d9e1725d2a31e71dae81",
+      "bytes": 17369
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/selection.json",
+      "sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+      "bytes": 13437
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/weight_audit.json",
+      "sha256": "59eb3a63b2d6a0414e54fda52d6509ce0b4ea3f4d104ab1376b7d19e7900b35f",
+      "bytes": 1507
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/status.json",
+      "sha256": "be541cc8c7a16a29476dde9bc717ea561ddf06d93ba5087f5177fcca508e4b65",
+      "bytes": 594
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/controller.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/science_smoke/rank0/receipt.json",
+      "sha256": "3915eeed93c421f8f41f5e34b91e47df9d15e3dc61335b199c9e890cbd72635b",
+      "bytes": 285
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/science_smoke/rank1/receipt.json",
+      "sha256": "271c02fd7e56c23469df5183acf77257a4db83d0dc8985467901b0d0e7cad707",
+      "bytes": 285
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/science_smoke/rank2/receipt.json",
+      "sha256": "401c7c00c5a12fe97fe213c0aab765aad40323a2d9119e97e88ead80a9499b45",
+      "bytes": 285
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/runs/science_smoke/rank3/receipt.json",
+      "sha256": "b6f8bb42531b8e9ca7cf55dc6988b468be4857706ca2345968dd0aadc15c1e81",
+      "bytes": 285
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/verify_results.py",
+      "sha256": "f71f3d303738f24686d38aa45f2f4af0eedcf3806205f435df37c28d78613ab6",
+      "bytes": 4259
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "sha256": "dd25424dc65ee11f739620400bfcc245aa3fe0137eb6a02c26bb3cf02415bd72",
+      "bytes": 77970
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
+      "sha256": "00495ab0ce68cf255b70900b15d753199aeafd5fb476af047d8867250b40f12c",
+      "bytes": 31045
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/append_full_roi_report.py",
+      "sha256": "5f11b3be427e1d715d63b99f28496d7c76f058da11fd899145103fc9e051bf0f",
+      "bytes": 4002
+    }
+  ],
+  "excludes": "raw images/masks/large feature tensors/dependencies/credentials/browser state/command transport; full compact records handled as size-reviewed data artifact separately"
+}

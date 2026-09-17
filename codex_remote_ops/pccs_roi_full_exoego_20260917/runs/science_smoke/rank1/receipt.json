@@ -1,0 +1,10 @@
+{
+  "state": "complete",
+  "coverage": "exact",
+  "pairs": 2,
+  "objects": 2,
+  "records_sha256": "e1e9998bebbfe6553b4ea5d268e0f88da3f936bf3b856eb97ede56d47625a37c",
+  "foreground_preserved": true,
+  "real_control_feature_replay": true,
+  "actual_bridge_matches_gt_free_policy": true
+}
