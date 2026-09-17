@@ -97,8 +97,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/PLAN.md",
-      "sha256": "9ceab9fb9d4b39d9fa059aadf937ba71da1bc2dab0163423c3100dd4f7097e72",
-      "bytes": 5483
+      "sha256": "31e8fec1632d666d9ba346719c2680e2ee366f47b214c9a397dee79a8973b3be",
+      "bytes": 6247
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/METHOD.md",
@@ -461,9 +461,19 @@
       "bytes": 1272
     },
     {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/resume_full.py",
+      "sha256": "b37ed5743508978343ec44657d29309a944cb7d073fa1cf5d598c04e34d90b38",
+      "bytes": 4757
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/test_resume.py",
+      "sha256": "a75fd8329cbd15f92a221dc36da2bb6edd4307f76d494c11d1968386ed5182bf",
+      "bytes": 861
+    },
+    {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "60953ff6faac62f337200ca67d0483154bf06d192bb12590ca234f2b9f83cca6",
-      "bytes": 80157
+      "sha256": "0b6229a3ade965d87c0ba7e5ed45f902b65bcf14e75e4efa7c4583caceb591d0",
+      "bytes": 80507
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
@@ -472,8 +482,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_full_roi_report.py",
-      "sha256": "5fa206ee503046d0b963e258db6831eba46bab5d325fee4c863f10b3733de5ae",
-      "bytes": 4987
+      "sha256": "749f3752abf780d820cf9c4701c330e84d82a571255bf8fd839202ce0387f843",
+      "bytes": 5388
     }
   ],
   "excludes": "raw images/masks/large feature tensors/dependencies/credentials/browser state/command transport; full compact records handled as size-reviewed data artifact separately"

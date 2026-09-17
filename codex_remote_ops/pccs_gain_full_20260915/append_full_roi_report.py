@@ -26,3 +26,4 @@ def append_full_roi(parts,root):
         for name,v in a['methods'].items():
             f=v['frame'];ci=v['ci95_pp'];parts.append(f"| {name} | {100*f[0]:.4f} | {100*f[1]:.4f} | {100*f[2]:.4f} | {f[3]:.6f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
     parts += ['', '一次只运行一项四H100任务。第一任务先科学消融后full1；确认完成与节点释放后再启动full2。每次监督按当前阶段剩余ETA的4/5调整。完整协议见[PLAN.md](../pccs_roi_full_exoego_20260917/PLAN.md)。']
+    if (r/'resume_full.py').exists():parts += ['', '全量首段ETA曾略超过24小时任务上限，已准备并测试尾部恢复工具resume_full.py；仅在原任务节点释放后使用，先归档、保留完整pair，只修复末尾不完整记录，拒绝中段损坏，不改动冻结方法/seed。是否实际发生续跑以恢复回执为准，不能把备用代码写成已经执行。']
