@@ -1,0 +1,16 @@
+{
+  "job_id": "job-d2475986-0cb6-41f3-8ff6-ca25e6a76100",
+  "name": "v2sam-roi-exoexo-expanded6534-20260917",
+  "submitted_at_local": "2026-09-17 23:29:14",
+  "space_id": "ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+  "nodes": 1,
+  "gpus": 4,
+  "gpu_type": "H100 80GB",
+  "priority": 4,
+  "maximum_minutes": 360,
+  "success_retention_minutes": 1,
+  "failure_retention_minutes": 1,
+  "command_equality_verified": true,
+  "initial_state": "queued",
+  "scope": "6534 additional temporal pairs from19 existing takes; not new independent scenes; frozen ROI models and same-bank O-MaMa reference"
+}

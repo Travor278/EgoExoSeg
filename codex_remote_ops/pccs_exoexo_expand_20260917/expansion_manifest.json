@@ -1,0 +1,42 @@
+{
+  "original_pairs": 1094,
+  "original_unique_prompts": 547,
+  "original_takes": 20,
+  "original_objects": 96,
+  "available_official_exoego_full_pairs": 46515,
+  "available_existing20take_frame_records": 6158,
+  "expanded_new_pairs": 722,
+  "resolution_control_pairs": 164,
+  "expanded_takes": 14,
+  "expanded_objects": 20,
+  "new_takes": 0,
+  "new_annotated_frames": 245,
+  "unique_prompts_retained": 91,
+  "skipped_prompts": {
+    "annotation_identity_witness_below_095": 201,
+    "no_exact_object_identity_witness": 255
+  },
+  "ambiguous_input_annotations": {},
+  "identical_duplicate_annotations": 0,
+  "selection": "At most8 time-spread additional annotated target frames for each frozen approved exo prompt; no model scores inspected",
+  "protocol_change": "Targets use existing540x960 annotation source; old target masks were4K. Run resolution controls separately; do not pool scores with old benchmark.",
+  "evidence_scope": "Additional temporal pairing stress test on existing takes/objects, not new scene generalization. Larger diversity requires additional trusted exo prompts.",
+  "expanded_sha256": "cab795240099d395ed67307572347a71cb81d6b1e7d24ce408bc9d91e44f7544",
+  "control_sha256": "396abeaf2222bc6af500bf1beeceb81753f6846f244812aa87967498525cc56b",
+  "take_counts": {
+    "0d26fb16-d4ba-4c47-9c32-5f8f052e7396": 58,
+    "247cde12-df65-4d59-ac01-449680e83871": 8,
+    "280ab94b-ebd0-4245-85a1-4cacd670588f": 64,
+    "3940a14c-f0ae-4636-8f03-52daa071f084": 72,
+    "534f433c-14c2-4eb7-851a-a23a8b2ee340": 8,
+    "6a1dac0d-5945-4a81-9259-ce49de3ecf79": 56,
+    "70f729ca-b1a2-428f-875c-edbbd988a4b5": 96,
+    "7f534830-cde5-45ff-87fc-d2072a584cae": 120,
+    "abc64c60-1cc8-49c1-8489-79592aafdf8a": 16,
+    "ad8ef724-84cd-403a-934d-9690f7cb96b8": 32,
+    "c47b2e19-8a8f-4594-9144-8b7be780ab74": 80,
+    "e71c943b-75c0-4055-92fc-115d1c8f6d8a": 72,
+    "ef2d0ea2-a3aa-45ef-83e3-6d8b0d863dc5": 16,
+    "f4a17391-0f26-448d-831a-7f69e22d3414": 24
+  }
+}
