@@ -9,6 +9,7 @@ def append_full_roi(parts,root):
       '历史O-MaMa好权重核对：pccs_corrected_exoego_20260916的manifest/完整结果/执行预检记录确认使用相同专家SHA，完整46515对原PCCS53.8997、几何一致性O-MaMa56.6385（+2.7388点）。本次启动再次hash专家文件，并生成weight_audit.json。旧O-MaMa与当前全量候选运行不同，所以这是历史结果，不能冒充当前种子的同bank配对对照。', '',
       '新增自然背景干预使用既有seed1固定候选：保持源前景RGB、mask、crop与8原图像素边界带不变，目标图与目标mask全部不变，仅改变源crop的较远背景。比较真实重放、同源图远处天然背景供体、crop半边长错位背景，均使用冻结校准器，不重训干预模型。真实重放必须复现旧局部特征及选择。远背景供体按源mask重叠最低/距离最远确定，记录替换比例及供体重叠；无可编辑背景的样本保留。干预仍可能有拼接/分布偏移，错位背景可能携带移位物体纹理，不能称完美语义因果证明。', '']
     p=r/'science_results.json'
+    if (r/'figures/example_evidence.json').exists():parts += ['', '方法说明已加入贯穿各章的真实白碗样例：gp01→gp04、frame3570；六幅图展示输入、三候选、ROI坐标、循环统计、冻结校准选择及自然背景干预。候选与数值来自真实seed1记录，示意箭头不当作实测注意力图；明确注明这是查看结果后选取的成功案例，旧cycle也选对且背景干预未改变本例最终选择，因此不以单例替代总体统计或证明context因果。图文在上述METHOD.md中，标量依据见figures/example_evidence.json。']
     if p.exists():
         data=json.loads(p.read_text());parts += ['### 15.1 冻结自然背景消融', '', '| 方向与方法 | 真实背景IoU | 远处背景IoU | 错位背景IoU |', '|---|---:|---:|---:|']
         for phase,v in data['phases'].items():

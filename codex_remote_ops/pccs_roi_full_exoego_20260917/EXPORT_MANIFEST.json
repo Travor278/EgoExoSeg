@@ -102,8 +102,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/METHOD.md",
-      "sha256": "03aee647000068eb0142b7f3417bc3cd4c48649b555004c07c181bc415a49bf0",
-      "bytes": 15046
+      "sha256": "3adf363682bf93d2057362e8547ada98f753626ede0bdd543e6efae43e230080",
+      "bytes": 22909
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/job_receipt.json",
@@ -472,8 +472,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "0b6229a3ade965d87c0ba7e5ed45f902b65bcf14e75e4efa7c4583caceb591d0",
-      "bytes": 80507
+      "sha256": "295e398e8a27b59c5c83f289016915c3fc709aec9817d60c6b531aff5e9153b8",
+      "bytes": 81039
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
@@ -482,8 +482,53 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_full_roi_report.py",
-      "sha256": "749f3752abf780d820cf9c4701c330e84d82a571255bf8fd839202ce0387f843",
-      "bytes": 5388
+      "sha256": "49adf399982cc493331d8405e2d934de567a96db6240aabe4ff7b860df244aea",
+      "bytes": 5986
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/render_walkthrough.py",
+      "sha256": "3c0c143a30aebc6141e27628ccdce0ad2b5f4b34a2a04810c5748abdd8a88f43",
+      "bytes": 10655
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/embed_walkthrough.py",
+      "sha256": "7166021a6f46fd2916a70a63447e1fc3670dfdcf12a3c688eb8d3d122c8791e3",
+      "bytes": 8671
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/figures/01_case.png",
+      "sha256": "ef4bbf78879f4204ced601b0089b11607bcb5dec0c00838bfc2a452c06d4d1c5",
+      "bytes": 861054
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/figures/02_candidates.png",
+      "sha256": "7e967b1a2441a56976cbd22f09c44aafa1596483f3b23c9708f41a6bbe88ca70",
+      "bytes": 630605
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/figures/03_roi.png",
+      "sha256": "103163c821d26626fc404764939b8ed92dd8e2082d323405656c8d5b898981a3",
+      "bytes": 704402
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/figures/04_cycle.png",
+      "sha256": "b38ea17e68d2b54d1b6b83202be653d012e7ccda8e0ae300b31222a85598da30",
+      "bytes": 181576
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/figures/05_decision.png",
+      "sha256": "2c2ac8631a6c7683cc6afafc21f707594e464c6357ccfdd7ae874eb4c2e0b60e",
+      "bytes": 127113
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/figures/06_context.png",
+      "sha256": "65322760c1c352f634f1a55725ecd02f94fef454f395717e7b543ab6ebf7b533",
+      "bytes": 165226
+    },
+    {
+      "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/figures/example_evidence.json",
+      "sha256": "4161adb1dfef2c704a06437f83dc6eea2e365e3fd5a443cf642cc03b5294fad0",
+      "bytes": 11644
     }
   ],
   "excludes": "raw images/masks/large feature tensors/dependencies/credentials/browser state/command transport; full compact records handled as size-reviewed data artifact separately"
