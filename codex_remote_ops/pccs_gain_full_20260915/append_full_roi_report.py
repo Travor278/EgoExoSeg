@@ -28,3 +28,5 @@ def append_full_roi(parts,root):
             f=v['frame'];ci=v['ci95_pp'];parts.append(f"| {name} | {100*f[0]:.4f} | {100*f[1]:.4f} | {100*f[2]:.4f} | {f[3]:.6f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
     parts += ['', '一次只运行一项四H100任务。第一任务先科学消融后full1；确认完成与节点释放后再启动full2。每次监督按当前阶段剩余ETA的4/5调整。完整协议见[PLAN.md](../pccs_roi_full_exoego_20260917/PLAN.md)。']
     if (r/'resume_full.py').exists():parts += ['', '全量首段ETA曾略超过24小时任务上限，已准备并测试尾部恢复工具resume_full.py；仅在原任务节点释放后使用，先归档、保留完整pair，只修复末尾不完整记录，拒绝中段损坏，不改动冻结方法/seed。是否实际发生续跑以恢复回执为准，不能把备用代码写成已经执行。']
+    research=root/'pccs_method_research_20260917/RESEARCH.md'
+    if research.exists():parts += ['', '补充范围澄清与下一步调研：[RESEARCH.md](../pccs_method_research_20260917/RESEARCH.md)。Exo→Ego约71是512对子集自身的原PCCS基线，不是旧全量57进一步涨到70。现有同候选oracle诊断显示Exo→Exo可选差距8.0507点、ROI恢复约41.1%；Exo→Ego子集差距6.6726点、恢复约17.9%，故不能只用“高基线空间小”解释。优先调研RoMa v2可靠对应/不确定性、OmniGlue语义与位置解耦等对原PCCS证据层的启发；均未部署或证明增益，不修改当前全量冻结方案。']

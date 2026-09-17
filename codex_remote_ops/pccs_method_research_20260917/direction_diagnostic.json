@@ -1,0 +1,30 @@
+{
+  "exo2exo": {
+    "pairs": 1094,
+    "objects": 1094,
+    "baseline": 39.01901201108717,
+    "roi2": 42.32916040597593,
+    "oracle": 47.069666936235585,
+    "headroom": 8.050654925148415,
+    "positive_contribution": 3.7292786450873887,
+    "negative_contribution": -0.4191302501986406,
+    "switches": 145,
+    "improved": 85,
+    "harmed": 22,
+    "objects_with_better_candidate": 439
+  },
+  "exo2ego": {
+    "pairs": 512,
+    "objects": 965,
+    "baseline": 70.97475930270953,
+    "roi2": 72.1706040072556,
+    "oracle": 77.64740515011833,
+    "headroom": 6.672645847408802,
+    "positive_contribution": 1.3862300987226814,
+    "negative_contribution": -0.19038539417659686,
+    "switches": 112,
+    "improved": 59,
+    "harmed": 41,
+    "objects_with_better_candidate": 481
+  }
+}

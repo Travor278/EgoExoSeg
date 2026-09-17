@@ -102,8 +102,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/METHOD.md",
-      "sha256": "3adf363682bf93d2057362e8547ada98f753626ede0bdd543e6efae43e230080",
-      "bytes": 22909
+      "sha256": "2cb10178bced49badcc64d71efb8f0b1d2d82cbb65251b867636659a37d5e357",
+      "bytes": 23470
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/job_receipt.json",
@@ -472,8 +472,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "295e398e8a27b59c5c83f289016915c3fc709aec9817d60c6b531aff5e9153b8",
-      "bytes": 81039
+      "sha256": "1cec54b55ffa03284fc156857235bbfb3b13de36877140b3ffff80b80eaf1125",
+      "bytes": 81595
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
@@ -482,8 +482,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_full_roi_report.py",
-      "sha256": "49adf399982cc493331d8405e2d934de567a96db6240aabe4ff7b860df244aea",
-      "bytes": 5986
+      "sha256": "c3ed92f962436c019da02de7220ea8ffd9e32c9639ecfa9b838617ba5c85e287",
+      "bytes": 6643
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/render_walkthrough.py",
@@ -529,6 +529,21 @@
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/figures/example_evidence.json",
       "sha256": "4161adb1dfef2c704a06437f83dc6eea2e365e3fd5a443cf642cc03b5294fad0",
       "bytes": 11644
+    },
+    {
+      "path": "codex_remote_ops/pccs_method_research_20260917/RESEARCH.md",
+      "sha256": "5e8362d453124e462c1825e176af5bb4a187b9eb81031064c89a525d32ed6b43",
+      "bytes": 8434
+    },
+    {
+      "path": "codex_remote_ops/pccs_method_research_20260917/direction_diagnostic.py",
+      "sha256": "fe2a3b29fa24d6521eba334f4cd1353234a035bc1cd47c2124bc4225f5b2e5e1",
+      "bytes": 1355
+    },
+    {
+      "path": "codex_remote_ops/pccs_method_research_20260917/direction_diagnostic.json",
+      "sha256": "ec09aa3cce34711f5c0be9f3999f1cde19c8a875cc34f759215d8f009aaeab5d",
+      "bytes": 816
     }
   ],
   "excludes": "raw images/masks/large feature tensors/dependencies/credentials/browser state/command transport; full compact records handled as size-reviewed data artifact separately"
