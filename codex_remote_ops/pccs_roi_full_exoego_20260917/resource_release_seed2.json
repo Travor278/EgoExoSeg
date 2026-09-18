@@ -1,0 +1,9 @@
+{
+  "job_id": "job-dd1fd0a8-9a04-4995-89a4-9aa756755646",
+  "state": "success",
+  "occupied_nodes": 0,
+  "ended_at_beijing": "2026-09-19 06:52:22",
+  "runtime": "18小时6分30秒",
+  "gpu_compute_processes_after": 0,
+  "evidence": "Platform task row plus gpu_after_seed2.txt"
+}

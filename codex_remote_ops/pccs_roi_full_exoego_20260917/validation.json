@@ -19,6 +19,15 @@
       "paired_frame_metrics_and_bootstrap": "passed",
       "compact_file_sha256": "415a6f258e7f7faaffd1d31142c1b453ac5ed2a52dba560c4b81072cfa65eac0",
       "baseline_zero_iou_objects": 32085
+    },
+    "full2": {
+      "objects": 109253,
+      "pairs": 46515,
+      "takes": 295,
+      "candidate_seeds": "passed",
+      "paired_frame_metrics_and_bootstrap": "passed",
+      "compact_file_sha256": "56455bc85ae177160cc9f32714b0c707ba6cb07568b8a647477614606a44a39e",
+      "baseline_zero_iou_objects": 32054
     }
   }
 }

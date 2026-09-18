@@ -1,0 +1,298 @@
+{
+  "coverage": "exact",
+  "phase": "full2",
+  "pairs": 46515,
+  "objects": 109253,
+  "takes": 295,
+  "methods": {
+    "baseline": {
+      "frame": [
+        0.538506806841535,
+        0.5861163854830127,
+        0.6142701075362652,
+        0.0783021308962789
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "primary": {
+      "frame": [
+        0.5634911372283016,
+        0.6122813053253446,
+        0.6396010403262098,
+        0.07174435681456533
+      ],
+      "delta_pp": 2.4984330386766542,
+      "ci95_pp": [
+        2.0834149659380516,
+        2.9555824879756862
+      ],
+      "changed": 14058,
+      "improved": 7457,
+      "harmed": 4082,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "frozen_cycle": {
+      "frame": [
+        0.5501813679333255,
+        0.5981257949436027,
+        0.6256035426566823,
+        0.07535506771268861
+      ],
+      "delta_pp": 1.167456109179067,
+      "ci95_pp": [
+        0.942733276745584,
+        1.400566838089347
+      ],
+      "changed": 5634,
+      "improved": 3457,
+      "harmed": 1394,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_matched": {
+      "frame": [
+        0.553258063014975,
+        0.6020011850606751,
+        0.629981740798967,
+        0.07363496522937318
+      ],
+      "delta_pp": 1.4751256173440563,
+      "ci95_pp": [
+        1.0861666342111562,
+        1.9303112680386092
+      ],
+      "changed": 15853,
+      "improved": 6831,
+      "harmed": 7047,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "local15_matched": {
+      "frame": [
+        0.5634911372283016,
+        0.6122813053253446,
+        0.6396010403262098,
+        0.07174435681456533
+      ],
+      "delta_pp": 2.4984330386766542,
+      "ci95_pp": [
+        2.0834149659380516,
+        2.9555824879756862
+      ],
+      "changed": 14058,
+      "improved": 7457,
+      "harmed": 4082,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "local20_matched": {
+      "frame": [
+        0.5638409996433834,
+        0.6128424954435584,
+        0.6404155900923871,
+        0.07146042114240658
+      ],
+      "delta_pp": 2.5334192801848054,
+      "ci95_pp": [
+        2.1106218151579945,
+        2.9996767872750287
+      ],
+      "changed": 14472,
+      "improved": 7683,
+      "harmed": 4301,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "object20_matched": {
+      "frame": [
+        0.5539456292257251,
+        0.602389568613029,
+        0.6303553574332743,
+        0.07363899667046042
+      ],
+      "delta_pp": 1.5438822384191155,
+      "ci95_pp": [
+        1.1672577107664763,
+        1.976899057308646
+      ],
+      "changed": 16789,
+      "improved": 7484,
+      "harmed": 7084,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_local20_matched": {
+      "frame": [
+        0.5639970880137583,
+        0.6129146966529669,
+        0.6403815058211925,
+        0.07159311877925689
+      ],
+      "delta_pp": 2.549028117222387,
+      "ci95_pp": [
+        2.1305588348010738,
+        3.016111211964635
+      ],
+      "changed": 13998,
+      "improved": 7588,
+      "harmed": 4057,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_object20_matched": {
+      "frame": [
+        0.5549163049675672,
+        0.6032976353498225,
+        0.6310626239878102,
+        0.07356901557237355
+      ],
+      "delta_pp": 1.640949812603288,
+      "ci95_pp": [
+        1.250342376923718,
+        2.0790729970633786
+      ],
+      "changed": 17345,
+      "improved": 7730,
+      "harmed": 7513,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_multiscale_matched": {
+      "frame": [
+        0.5646934106988032,
+        0.613557911736104,
+        0.6411513409649247,
+        0.07137231087923601
+      ],
+      "delta_pp": 2.6186603857269146,
+      "ci95_pp": [
+        2.1920305858467946,
+        3.0877614165529246
+      ],
+      "changed": 14395,
+      "improved": 7873,
+      "harmed": 4146,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    }
+  },
+  "paired_comparisons": {
+    "primary minus frozen_cycle": {
+      "frame": [
+        0.5634911372283016,
+        0.6122813053253446,
+        0.6396010403262098,
+        0.07174435681456533
+      ],
+      "delta_pp": 1.3309769294975868,
+      "ci95_pp": [
+        0.9970609529733199,
+        1.764962548917218
+      ],
+      "changed": 11999,
+      "improved": 5616,
+      "harmed": 4309,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "local20_matched minus frozen_cycle": {
+      "frame": [
+        0.5638409996433834,
+        0.6128424954435584,
+        0.6404155900923871,
+        0.07146042114240658
+      ],
+      "delta_pp": 1.3659631710057383,
+      "ci95_pp": [
+        1.0232822925466751,
+        1.8110231616155232
+      ],
+      "changed": 12481,
+      "improved": 5881,
+      "harmed": 4571,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "local20_matched minus object20_matched": {
+      "frame": [
+        0.5638409996433834,
+        0.6128424954435584,
+        0.6404155900923871,
+        0.07146042114240658
+      ],
+      "delta_pp": 0.9895370417656896,
+      "ci95_pp": [
+        0.8283180493879108,
+        1.1509061893745178
+      ],
+      "changed": 11005,
+      "improved": 6389,
+      "harmed": 3400,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_local20_matched minus global_object20_matched": {
+      "frame": [
+        0.5639970880137583,
+        0.6129146966529669,
+        0.6403815058211925,
+        0.07159311877925689
+      ],
+      "delta_pp": 0.908078304619099,
+      "ci95_pp": [
+        0.7442640375755477,
+        1.07740706935642
+      ],
+      "changed": 11752,
+      "improved": 6971,
+      "harmed": 3659,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    }
+  },
+  "selection_sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+  "expert_assets": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "no_target_fitting": true,
+  "full_actual_primary_local20_cycle_equals_replay": true,
+  "baseline_zero_iou_objects": 32054,
+  "historical_omama_comparison_note": "Prior corrected-weight full O-MaMa benchmark used the same experts but a different candidate run; do not interpret cross-run subtraction as paired comparison."
+}
