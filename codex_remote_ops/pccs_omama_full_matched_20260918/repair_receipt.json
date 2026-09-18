@@ -1,0 +1,14 @@
+{
+  "reason": "evaluate.py imported local-only verify_results; inline identical aggregate and preserve completed pilot",
+  "changed": {
+    "evaluate.py": {
+      "before": "069a6ef2c3587fa577f293facfce9c69c222c36eeb29438865ece68092a9dbd2",
+      "after": "395d9ece7e00c222d018302109d794766ecb7dbd8e525fc31a2d66add091b85d"
+    },
+    "controller.py": {
+      "before": "375c5f11c501d400311086cbfbb8b03f06dc6d933ca99ef6f43c962ac9e1a1d2",
+      "after": "170bfd165bcc3c6d9b660db11de75245bbcff538347be57a0c9da9cd963d7813"
+    }
+  },
+  "created_at": 1789709039.5802543
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "pilot",
+  "pairs": 64,
+  "objects": 147,
+  "exact_key_coverage": true,
+  "current_full1_mask_hash_identity": true,
+  "frame_metrics_and_take_bootstrap": "passed",
+  "historical_score_and_selection_witnesses": "passed"
+}

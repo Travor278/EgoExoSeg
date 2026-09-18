@@ -1,0 +1,10 @@
+{
+  "job_id": "job-f1dfa980-055a-4a42-894c-053310a32699",
+  "state": "failed",
+  "occupied_nodes": 0,
+  "ended_at_beijing": "2026-09-18 13:20:22",
+  "cause": "evaluate.py imports local-only verify_results",
+  "pilot_mask_identity_passed": true,
+  "pilot_objects": 147,
+  "historical_witness_all_choices_reproduced": true
+}

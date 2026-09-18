@@ -1,0 +1,255 @@
+{
+  "files": [
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/common.py",
+      "bytes": 778,
+      "sha256": "cf54a3fd891a0cb3e010aaf52c4c813e3d6811ac7b6a0540b38b660884c5a2ae"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/prepare.py",
+      "bytes": 2521,
+      "sha256": "d534754c9d637f6afe5b7ba8b6028359acb7a6cbeae6ff2af5270ec700a3bc8e"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/rebuild.py",
+      "bytes": 5900,
+      "sha256": "9bd420efe127436fc0a4af8b14b460afebcf59bc2236203270cc7b0775898c7f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/reference.py",
+      "bytes": 5707,
+      "sha256": "8a308731a4212fba587f9dd2dfda46691592980598aa82c5e2fe6ab59eec508b"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/evaluate.py",
+      "bytes": 2950,
+      "sha256": "395d9ece7e00c222d018302109d794766ecb7dbd8e525fc31a2d66add091b85d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/controller.py",
+      "bytes": 3197,
+      "sha256": "170bfd165bcc3c6d9b660db11de75245bbcff538347be57a0c9da9cd963d7813"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/PLAN.md",
+      "bytes": 2419,
+      "sha256": "b3a296cd4c9c5b6637ca37432c7c15a87465b2de942350ad6d570e3921e3a20a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/manifest.json",
+      "bytes": 7923,
+      "sha256": "3b89da0a794097cac7e25a5c7e4c84760a832f48bed994e63dcd348d440ff4a7"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/job_receipt.json",
+      "bytes": 671,
+      "sha256": "e1769268e94344211ace0ea8d1a16bb4be5bd8c631db0e7b1c9079c7acf88672"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/job_receipt_rebuild_r2.json",
+      "bytes": 757,
+      "sha256": "1e83e55056dff785992f49ae51ba3894c12629c2205ed9497ac1970f27d7f943"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/pilot_results.json",
+      "bytes": 2811,
+      "sha256": "61fddfd3671afeb7af66e313ce3245d1a871701ebc71a238194405591485d789"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/status.json",
+      "bytes": 858,
+      "sha256": "40ed4d3f56516e8059cc683bb831bfc53f7d268a05be76ba30be96b605fabf25"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/repair_receipt.json",
+      "bytes": 566,
+      "sha256": "a6b4061b90cfd083cb92f03de133e560bc00b8d1a44958c2596c2e03e802ed50"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/resource_release_failed_pilot.json",
+      "bytes": 331,
+      "sha256": "d1495ef0c8af87b688423290493ac273edec8fc184f683844a643e5380cbb5dc"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_full/rank0/startup.json",
+      "bytes": 218,
+      "sha256": "64e6ae890cddcfec40bc01d02ed7a4a600853fafab2f7ed138cd259f221d9e40"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_full/rank1/startup.json",
+      "bytes": 218,
+      "sha256": "3d6dee085a304fcc95d2b78f81d1cd8f0fd18ca846551fd2637c4ee6fe52357f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_full/rank2/startup.json",
+      "bytes": 218,
+      "sha256": "e2b63d1c9c1e23536f6984d7263f709b64dc9a243f62d822bec4d1849c182a64"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_full/rank3/startup.json",
+      "bytes": 218,
+      "sha256": "bfec460718565ecd741a890be14dfe3e640a8f54b15f5c3bff655ca6719db0d4"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_pilot/rank0/startup.json",
+      "bytes": 220,
+      "sha256": "6e7653c00cb6618c04f0db9246042105722b31935f86003728f7c5f98eaa7353"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_pilot/rank1/startup.json",
+      "bytes": 219,
+      "sha256": "becb4a1192a0174526726b5534a696f9296a0a8606348dd38cbdf4ba065a2934"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_pilot/rank2/startup.json",
+      "bytes": 219,
+      "sha256": "2e1339b2f0e21e74a4fecc6f46df991c95a832404ee996d40c671b165d789b27"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_pilot/rank3/startup.json",
+      "bytes": 219,
+      "sha256": "5c8cc690b37db00719392003c1f0c7b2854ca3ca34a9709539ee04ed6cf9f702"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank0/startup.json",
+      "bytes": 122,
+      "sha256": "f7573c0cc580681e100bcdd0fb982b6376ee01435ca6298a85ee585505ab5026"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank1/startup.json",
+      "bytes": 122,
+      "sha256": "f7573c0cc580681e100bcdd0fb982b6376ee01435ca6298a85ee585505ab5026"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank2/startup.json",
+      "bytes": 122,
+      "sha256": "f7573c0cc580681e100bcdd0fb982b6376ee01435ca6298a85ee585505ab5026"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank3/startup.json",
+      "bytes": 122,
+      "sha256": "f7573c0cc580681e100bcdd0fb982b6376ee01435ca6298a85ee585505ab5026"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_pilot/rank0/receipt.json",
+      "bytes": 216,
+      "sha256": "9d9d8948fe5e9ad9f35ef94cb2f1ed1e879d6a4672f0a83e46bd648bc735ef11"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_pilot/rank1/receipt.json",
+      "bytes": 216,
+      "sha256": "20b6a513b2188df300fc10248b82a6cc359754385f7ad670a49112ef9ffd00ca"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_pilot/rank2/receipt.json",
+      "bytes": 216,
+      "sha256": "13493df243d397c1e28592c9a844a9b8eb871e0b57b9e4b704c3504c1e05c4eb"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_pilot/rank3/receipt.json",
+      "bytes": 216,
+      "sha256": "36d7bba88ec272d0ab95fb917415cc8a6878df0553900959411a73576b21bd6f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank0/receipt.json",
+      "bytes": 194,
+      "sha256": "865e3a673b699e02452d75fbcd227c0ed0dea1f2c77304ef9b3a9ee312d55e49"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank1/receipt.json",
+      "bytes": 194,
+      "sha256": "32b9006953bb5229a5a981f8925b4206d7fd2a2daab6c587a6e424054c813037"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank2/receipt.json",
+      "bytes": 194,
+      "sha256": "8f5c0f84e350e507f2adfbfed1e73c403d92ab9d15878bfe28d655fb125462e0"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank3/receipt.json",
+      "bytes": 194,
+      "sha256": "c63dd653fd75acbf7cc33cd3192f6f91ddd0d8884d37be81893ec2f94f9970d4"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank0/witness.json",
+      "bytes": 448,
+      "sha256": "1764fbbdb14966da52cae01f07b79ce09825b4824ebfcd58897ec5e13f5d9ba8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank1/witness.json",
+      "bytes": 450,
+      "sha256": "0bf3c25cf3267ca903af9135400b83bb3389bc66120f38bbff65e05025e40171"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank2/witness.json",
+      "bytes": 450,
+      "sha256": "53630bdfb1da59473bd727bc46bad5ddbfe1549aa52c67f049e76792d5f79b3f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/reference_pilot/rank3/witness.json",
+      "bytes": 450,
+      "sha256": "b912a59cc1afd1e782f0612e1be9ecdc6964bfe5870b55bc2eb19a1d098c708d"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/evaluate.py.log",
+      "bytes": 2440,
+      "sha256": "b606d6fec86dcbb9c54cbc12dd0f04a17d56b8e7384bb88ef0af78a6a406e9f1"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/prepare.py.log",
+      "bytes": 30,
+      "sha256": "138518a7e1d35098ede27162540c14a76279a5399e6e489f55ed4772ef6b4b14"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/rebuild_pilot_rank0.log",
+      "bytes": 26187,
+      "sha256": "c524251e0090c7e6302fecbb19a2978688b7becc1699d6b107de72c589aca6e8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/rebuild_pilot_rank1.log",
+      "bytes": 25989,
+      "sha256": "89698e8062dc9d42881f76b5d1e6702096a21e31230ab496b8a8fad66498a119"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/rebuild_pilot_rank2.log",
+      "bytes": 25979,
+      "sha256": "4f53fda0351f8bffce37648210bca76d59d8a4d38841430cdabfbd8d45ef8a38"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/rebuild_pilot_rank3.log",
+      "bytes": 25979,
+      "sha256": "f5bcd31d0ce257258c4490aad663dcfcc459e1997c5ef743ef7cd2b489621067"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/gpu_preflight_rebuild.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/verify_results.py",
+      "bytes": 2888,
+      "sha256": "52d90f20ec2faa35ea162f6c01085b40413388a0302711d56a210afd86249df8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/pilot_validation.json",
+      "bytes": 241,
+      "sha256": "371d1c7e41833bd47ff5c097bc0a34c3b404497e8ccde7029568f9738829c1ea"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
+      "bytes": 91455,
+      "sha256": "41cc849dfa58bb86cdedab77a72b6c1e7571cde4884adc582798a5fe0b9b2ef9"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
+      "bytes": 32779,
+      "sha256": "b4fbf3c9ce3c84ab08e8ca1e02e2f3cffce79ba1106f04985227ac0650db3f4f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_gain_full_20260915/append_matched_omama_report.py",
+      "bytes": 2784,
+      "sha256": "1e1859032a68be9918c2e2e5101b9551bbfdfc95be76d759f88886d437170992"
+    }
+  ],
+  "excluded": "raw images, masks, annotation JSON, prior per-object records, dependencies, browser state, authentication, deployment capsule"
+}

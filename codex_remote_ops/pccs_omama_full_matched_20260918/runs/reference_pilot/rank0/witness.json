@@ -1,0 +1,21 @@
+{
+  "video_id": "b5d293bf-2d0a-43be-8a7b-4b66ba9b6835_0",
+  "obj_id": "0",
+  "max_score_error": 0.0,
+  "all_choices_reproduced": true,
+  "tf32": false,
+  "model_load_receipts": {
+    "exo2ego": {
+      "missing": [],
+      "unexpected": [],
+      "loaded_keys": 32,
+      "position_tables_swapped": false
+    },
+    "ego2exo": {
+      "missing": [],
+      "unexpected": [],
+      "loaded_keys": 32,
+      "position_tables_swapped": true
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "state": "running",
+  "phase": "rebuild_full",
+  "ranks": [
+    {
+      "state": "running",
+      "done": 16,
+      "total": 11629,
+      "objects": 44,
+      "eta_seconds": 25800.380325098522,
+      "updated_at": 1789709138.5761666
+    },
+    {
+      "state": "running",
+      "done": 16,
+      "total": 11629,
+      "objects": 48,
+      "eta_seconds": 27191.87046778336,
+      "updated_at": 1789709140.3829308
+    },
+    {
+      "state": "running",
+      "done": 16,
+      "total": 11629,
+      "objects": 48,
+      "eta_seconds": 27154.911544153816,
+      "updated_at": 1789709140.3672657
+    },
+    {
+      "state": "running",
+      "done": 16,
+      "total": 11628,
+      "objects": 47,
+      "eta_seconds": 26927.56123685965,
+      "updated_at": 1789709140.1763732
+    }
+  ],
+  "eta_seconds": 27191.87046778336,
+  "updated_at": 1789709160.7985718
+}

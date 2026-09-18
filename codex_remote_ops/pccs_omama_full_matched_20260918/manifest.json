@@ -1,0 +1,124 @@
+{
+  "source_manifest_sha256": "74506a37b0adc25c82bd43dff982d702a3239c4abee3d9e1725d2a31e71dae81",
+  "source_compact_sha256": "415a6f258e7f7faaffd1d31142c1b453ac5ed2a52dba560c4b81072cfa65eac0",
+  "selection_sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+  "assets": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "phases": {
+    "pilot": {
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank0.yaml",
+          "prior": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank0_prior.jsonl",
+          "prior_sha256": "251f04c0b50750464d9366b0408e45e15963d6c0c7e1698d06863f1545f3885a",
+          "pairs": 16,
+          "objects": 36,
+          "annotation_sha256": "5f23731612e4faffd13a8202580ee9eb54b5fcd2781a1b3fab470778e0ed55d5"
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank1.yaml",
+          "prior": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank1_prior.jsonl",
+          "prior_sha256": "ee32028bd1c5d58373c8fe3e9a9b3131bd4daf052a73d728ebe5de799cc3456f",
+          "pairs": 16,
+          "objects": 35,
+          "annotation_sha256": "b1a093ce22d074b97e4853d9d1121308ec06c54e768945036015a676d8bd60d8"
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank2.yaml",
+          "prior": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank2_prior.jsonl",
+          "prior_sha256": "dd2b724b4fb85b24ce3781436269bf7774dc0b61e0f4e06e5fa883d64b064e07",
+          "pairs": 16,
+          "objects": 37,
+          "annotation_sha256": "40b077ab917253b0e396ed8e73299e5c1529893be298e9c950cf82272d36f114"
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank3.yaml",
+          "prior": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/pilot_rank3_prior.jsonl",
+          "prior_sha256": "c25c530d5bc51066bfc39f48a9d024e3afb037839593f08eb0c1ab49430bae05",
+          "pairs": 16,
+          "objects": 39,
+          "annotation_sha256": "ac3231381189165b935c6dce691f11c2d667360eb8af2cbf8b97473fe0551aa6"
+        }
+      ],
+      "pairs": 64,
+      "objects": 147
+    },
+    "full": {
+      "shards": [
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank0.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank0.yaml",
+          "prior": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank0_prior.jsonl",
+          "prior_sha256": "12d1e81dea9e09bfeacb419765b4fb728ccea5d33fd485585c0b82bbcb542485",
+          "pairs": 11629,
+          "objects": 27381,
+          "annotation_sha256": "7ea3a506f2aa33bf901a66139fc630bc885dcf14cd1077f9924d8ff8ce55dffc"
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank1.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank1.yaml",
+          "prior": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank1_prior.jsonl",
+          "prior_sha256": "96920f4e528a335e83b14242a386134ff458272457cfe6ebd14bbb850a8bc7ec",
+          "pairs": 11629,
+          "objects": 27378,
+          "annotation_sha256": "308c84478b4ff747e2bc2c1c152bb839c501aae22d7345da85b082ae725bf5c1"
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank2.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank2.yaml",
+          "prior": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank2_prior.jsonl",
+          "prior_sha256": "52ec4b4085154f982e15cdf541165cc86a823aea81884841c63a3305f599ef87",
+          "pairs": 11629,
+          "objects": 27293,
+          "annotation_sha256": "8a3303113f0385d7fd0e50b8d90fce318ee9d32f9879f09cc954c20438d667e6"
+        },
+        {
+          "annotation": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank3.json",
+          "config": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank3.yaml",
+          "prior": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/pccs_omama_full_matched_20260918/full_rank3_prior.jsonl",
+          "prior_sha256": "a39b50691b1f2ad82e47857bfb12f9b6b44f07c6438bc01d4ea7a6aea397bde9",
+          "pairs": 11628,
+          "objects": 27201,
+          "annotation_sha256": "f54169c425bc7ebebd07f2d51aa19869b42c962a9fbcc3d498ef5a1dc9390398"
+        }
+      ],
+      "pairs": 46515,
+      "objects": 109253
+    }
+  },
+  "reference_code_sha256": {
+    "aligned_model.py": "68da9a643cc8cafa975044da75c1196e677ff582a1b7ace1b245644e33c3e1e3",
+    "cache.py": "879a51531cba3663d90a8818368b8b12fbf1a37824fcc484ef5a074f279f6130"
+  },
+  "strict_current_seed1_masks": true,
+  "reference_weights": {
+    "omama_exo2ego.pt": "d66ffcb350c8154aa7ab9c7265ce38453a88b74908ac94db8c5740422c9f8b42",
+    "dinov2_vitb14_reg4_pretrain.pth": "73182a088cf94833c94b1666d1c99e02fe87e2007bff57b564fb6206e25dba71"
+  },
+  "files_sha256": {
+    "controller.py": "375c5f11c501d400311086cbfbb8b03f06dc6d933ca99ef6f43c962ac9e1a1d2",
+    "rebuild.py": "9bd420efe127436fc0a4af8b14b460afebcf59bc2236203270cc7b0775898c7f",
+    "prepare.py": "d534754c9d637f6afe5b7ba8b6028359acb7a6cbeae6ff2af5270ec700a3bc8e",
+    "common.py": "cf54a3fd891a0cb3e010aaf52c4c813e3d6811ac7b6a0540b38b660884c5a2ae",
+    "evaluate.py": "069a6ef2c3587fa577f293facfce9c69c222c36eeb29438865ece68092a9dbd2",
+    "reference.py": "8a308731a4212fba587f9dd2dfda46691592980598aa82c5e2fe6ab59eec508b"
+  }
+}

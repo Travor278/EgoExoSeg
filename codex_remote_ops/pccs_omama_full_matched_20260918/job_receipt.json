@@ -1,0 +1,22 @@
+{
+  "job_id": "job-f1dfa980-055a-4a42-894c-053310a32699",
+  "name": "v2sam-omama-full-matched-rebuild-20260918",
+  "submitted_at_local": "2026-09-18 13:15:47",
+  "space_id": "ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+  "gpus": 4,
+  "nodes": 1,
+  "gpu_type": "H100 80GB",
+  "priority": 4,
+  "maximum_minutes": 1440,
+  "success_retention_minutes": 1,
+  "failure_retention_minutes": 1,
+  "stages": [
+    "prepare",
+    "rebuild_pilot",
+    "reference_pilot",
+    "evaluate_pilot",
+    "rebuild_full"
+  ],
+  "next_stage": "reference full in separately submitted task after exact reconstruction and resource release",
+  "command_equality_verified": true
+}

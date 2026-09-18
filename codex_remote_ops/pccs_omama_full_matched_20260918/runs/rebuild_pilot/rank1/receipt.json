@@ -1,0 +1,8 @@
+{
+  "state": "complete",
+  "coverage": "exact",
+  "pairs": 16,
+  "objects": 35,
+  "all_masks_identical_to_current_full1": true,
+  "records_sha256": "495693ccfd3d361c176193bfc1b8bc40e75d75a91a9020cd7b5f9387fb0ce8f1"
+}

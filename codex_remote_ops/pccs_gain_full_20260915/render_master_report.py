@@ -183,5 +183,7 @@ from append_full_roi_report import append_full_roi
 append_full_roi(parts,O)
 from append_expanded_report import append_expanded
 append_expanded(parts,O)
+from append_matched_omama_report import append_matched
+append_matched(parts,O)
 report.write_text('\n'.join(parts)+'\n',encoding='utf8');assert report.read_text(encoding='utf8').count('```')%2==0
 print(json.dumps({'report':str(report),'characters':len(report.read_text(encoding='utf8')),'completed_sections':list(completed),'sha256':hashlib.sha256(report.read_bytes()).hexdigest()},ensure_ascii=False))
