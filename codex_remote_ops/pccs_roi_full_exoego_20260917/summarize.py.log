@@ -1,0 +1,10 @@
+FULL_POLICY_SCORED primary
+FULL_POLICY_SCORED frozen_cycle
+FULL_POLICY_SCORED global_matched
+FULL_POLICY_SCORED local15_matched
+FULL_POLICY_SCORED local20_matched
+FULL_POLICY_SCORED object20_matched
+FULL_POLICY_SCORED global_local20_matched
+FULL_POLICY_SCORED global_object20_matched
+FULL_POLICY_SCORED global_multiscale_matched
+FULL_COMPLETE {"pairs": 46515, "objects": 109253, "takes": 295}

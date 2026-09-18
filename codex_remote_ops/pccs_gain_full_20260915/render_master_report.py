@@ -23,6 +23,10 @@ np_result=O/'pccs_native_context_20260916/calibration_results.json'
 if np_result.exists():
  n=load(np_result);parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- PCCS内部context首版已实现并完成训练内消融（§10），未使用O-MaMa网络。仅循环加权ΔIoU为0；仅Fusion复核/两项结合在校准分别为{n['methods']['review']['delta_pp']:+.4f}/{n['methods']['both']['delta_pp']:+.4f}点，均未晋级，未启动新目标测试。实现完整不等于已证明增益或创新性。")
 completed={}
+for seed in (1,2):
+ p=O/'pccs_roi_full_exoego_20260917'/f'full{seed}_results.json'
+ if p.exists():
+  d=load(p);v=d['methods']['primary'];s=d['methods']['local20_matched'];ci=v['ci95_pp'];parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 当前原生ROI的Exo→Ego全量seed{seed}已完成并核验（§15，46515对/109253对象/295takes）：原PCCS {d['methods']['baseline']['frame'][0]*100:.4f}，1.5×主方案{v['frame'][0]*100:.4f}（{v['delta_pp']:+.4f}点，95%区间[{ci[0]:.4f},{ci[1]:.4f}]），2×次要对照{s['frame'][0]*100:.4f}（{s['delta_pp']:+.4f}点）。这才是全量，先前约71分为512对子集基线；旧全量O-MaMa56.6385属于不同候选运行，不作当前同bank优劣结论。")
 dr=O/'pccs_dense_context_20260917/exo2exo_results.json'
 if dr.exists():
  d=load(dr);v=d['methods']['primary'];ci=v['ci95_pp'];parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- 最新原生PCCS多方案已获得正增益（§11）：预选稠密循环置信度方案IoU {d['methods']['baseline']['frame'][0]*100:.4f}→{v['frame'][0]*100:.4f}，{v['delta_pp']:+.4f}点，95%区间[{ci[0]:.4f}, {ci[1]:.4f}]。同候选O-MaMa参考为{d['methods']['omama_reference']['frame'][0]*100:.4f}，尚未追平；显式邻域context没有显示额外优势，不能混写贡献归因。")

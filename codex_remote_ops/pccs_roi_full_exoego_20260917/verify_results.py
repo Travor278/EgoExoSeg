@@ -38,6 +38,9 @@ def main():
             expected=int.from_bytes(hashlib.sha256(('candidate-quality-v'+str(seed)+':'+r['video_id']).encode()).digest()[:4],'little')%(2**31-1);assert r['candidate_seed']==expected
         for name,summary in result['methods'].items():
             frame,delta,ci=aggregate(rows,[r['choices'][name] for r in rows]);assert np.allclose(frame,summary['frame'],atol=1e-12,rtol=0) and abs(delta-summary['delta_pp'])<1e-9 and np.allclose(ci,summary['ci95_pp'],atol=1e-9,rtol=0)
+        for name,summary in result['paired_comparisons'].items():
+            a,b=name.split(' minus ');refs=[{**r,'baseline':r['choices'][b]} for r in rows]
+            frame,delta,ci=aggregate(refs,[r['choices'][a] for r in rows]);assert np.allclose(frame,summary['frame'],atol=1e-12,rtol=0) and abs(delta-summary['delta_pp'])<1e-9 and np.allclose(ci,summary['ci95_pp'],atol=1e-9,rtol=0)
         checks['phases'][phase]={'objects':len(rows),'pairs':46515,'takes':295,'candidate_seeds':'passed','paired_frame_metrics_and_bootstrap':'passed','compact_file_sha256':hashlib.sha256(data.read_bytes()).hexdigest(),'baseline_zero_iou_objects':sum(r['metrics'][r['baseline']][0]==0 for r in rows)}
     (R/'validation.json').write_text(json.dumps(checks,indent=2));print(json.dumps(checks))
 if __name__=='__main__':main()

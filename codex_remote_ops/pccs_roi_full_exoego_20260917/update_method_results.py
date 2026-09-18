@@ -21,6 +21,15 @@ for seed in (1,2):
     for name in ('baseline','frozen_cycle','primary','local20_matched','global_matched','object20_matched'):
         v=a['methods'][name];ci=v['ci95_pp'];lines.append(f"| {name} | {100*v['frame'][0]:.4f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
     lines += ['']
+    lines += ['同候选的机制/方法对照（描述性比较，未按测试结果重新选型）：','','| 比较 | IoU差（点） | 95% take区间 |','|---|---:|---|']
+    for name,v in a['paired_comparisons'].items():
+        ci=v['ci95_pp'];lines.append(f"| {name} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
+    d=R/f'full{seed}_diagnostic.json'
+    if d.exists():
+        diag=json.loads(d.read_text());lines += ['','在同一次全量运行中重新按既有512配对成员分组；不是重新挑选高分样本。','','| 范围 | 配对数 | 原PCCS | 1.5× | 2× | 三候选GT oracle |','|---|---:|---:|---:|---:|---:|']
+        for label,key in [('全量','all'),('此前512对子集成员','prior512_membership'),('其余配对','remaining')]:
+            v=diag[key];lines.append(f"| {label} | {v['pairs']} | {v['baseline']:.4f} | {v['primary']:.4f} | {v['roi2']:.4f} | {v['oracle']:.4f} |")
+        lines += ['','GT oracle只用于事后诊断，不进入推理/拟合/阈值选择。全量和子集的基线差异来自样本范围；不能据此证明具体难度因素。前景-only对照同时改变输入背景和表征分布，与自然背景干预合看，不能将全部差值归于邻居语义。','']
 expanded=R.parent/'pccs_exoexo_expand_20260917/exo2exo_results.json'
 if expanded.exists():
     e=json.loads(expanded.read_text());lines += ['扩展Exo→Exo时序压力测试已完成：新增6534个不重复配对，原PCCS41.3130，冻结1.5×主方案45.0837（+3.7706点），2×对照45.2391（+3.9260点），同候选O-MaMa43.9262（+2.6131点）。原主方案对O-MaMa区间跨零，2×对照的描述性差区间为[0.1774,2.6580]，不改变事前主次身份。', '', '该扩展只有19个旧take，不是新增场景泛化；它没有替代仍在运行的Exo→Ego46515对全量验证。完整结果见总报告§16及扩展目录的validation.json。','']

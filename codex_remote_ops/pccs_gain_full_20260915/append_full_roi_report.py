@@ -26,6 +26,18 @@ def append_full_roi(parts,root):
         a=json.loads(p.read_text());parts += ['',f'### 全量 Exo→Ego seed{seed}（46515对）', '', '| 方法 | IoU | Dice | ContA | LocE ↓ | ΔPCCS（点） | 95%区间 |','|---|---:|---:|---:|---:|---:|---|']
         for name,v in a['methods'].items():
             f=v['frame'];ci=v['ci95_pp'];parts.append(f"| {name} | {100*f[0]:.4f} | {100*f[1]:.4f} | {100*f[2]:.4f} | {f[3]:.6f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
+        parts += ['', '| 同候选比较 | IoU差（点） | 95% take区间 |','|---|---:|---|']
+        for name,v in a['paired_comparisons'].items():
+            ci=v['ci95_pp'];parts.append(f"| {name} | {v['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
+        q=r/f'full{seed}_diagnostic.json'
+        if q.exists():
+            diag=json.loads(q.read_text());parts += ['', '同次全量运行的固定成员分层（事后描述性诊断，无调参）：','','| 范围 | 配对数 | 原PCCS | 1.5× | 2× | 三候选GT oracle |','|---|---:|---:|---:|---:|---:|']
+            for label,key in [('全量','all'),('既有512成员','prior512_membership'),('其余配对','remaining')]:
+                v=diag[key];parts.append(f"| {label} | {v['pairs']} | {v['baseline']:.4f} | {v['primary']:.4f} | {v['roi2']:.4f} | {v['oracle']:.4f} |")
+            v=diag['all'];parts += ['',f"2×恢复同候选可改善差距的{v['roi2_recovery_fraction']*100:.2f}%；换候选正贡献{v['roi2_positive_pp']:+.4f}、负贡献{v['roi2_negative_pp']:+.4f}点。GT oracle只作诊断，不能用于推理/选型。原512较高分不代表全量，不能直接据分层证明遮挡/尺度等难度的因果机制。前景-only与真实背景比较有输入分布变化，不能将全部增益归因于邻居语义。"]
+    receipt=r/'job_receipt_seed2.json'
+    if receipt.exists():
+        info=json.loads(receipt.read_text());parts += ['',f"第二seed已提交：`{info['job_id']}`，{info['submitted_at_local']}北京，4 H100，最大1440分钟。首seed已核验完整覆盖且节点释放；第二seed完成情况以结果文件为准。"]
     parts += ['', '一次只运行一项四H100任务。第一任务先科学消融后full1；确认完成与节点释放后再启动full2。每次监督按当前阶段剩余ETA的4/5调整。完整协议见[PLAN.md](../pccs_roi_full_exoego_20260917/PLAN.md)。']
     if (r/'resume_full.py').exists():parts += ['', '全量首段ETA曾略超过24小时任务上限，已准备并测试尾部恢复工具resume_full.py；仅在原任务节点释放后使用，先归档、保留完整pair，只修复末尾不完整记录，拒绝中段损坏，不改动冻结方法/seed。是否实际发生续跑以恢复回执为准，不能把备用代码写成已经执行。']
     research=root/'pccs_method_research_20260917/RESEARCH.md'

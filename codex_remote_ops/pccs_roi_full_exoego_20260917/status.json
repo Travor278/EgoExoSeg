@@ -1,1 +1,1 @@
-{"state": "running", "phase": "smoke1", "ranks": [{"state": "initializing"}, {"state": "initializing"}, {"state": "initializing"}, {"state": "initializing"}], "eta_seconds": null, "updated_at": 1789641643.061128}
+{"state": "complete", "phase": "seed1_complete", "eta_seconds": 0, "remaining_seed": 2, "updated_at": 1789706453.735809}

@@ -1,0 +1,50 @@
+{
+  "seed": 1,
+  "scope": "Same full-run candidates, pair-equal aggregation; fixed prior 512 pair membership, not prior-run scores.",
+  "limitation": "Post hoc descriptive oracle and subgroup analysis; no fitting/threshold selection; subgroup difference does not identify causal hardness.",
+  "all": {
+    "pairs": 46515,
+    "objects": 109253,
+    "takes": 295,
+    "baseline": 53.91947658124426,
+    "primary": 56.37937340277289,
+    "roi2": 56.43367725850147,
+    "oracle": 63.060935136833294,
+    "primary_gain_pp": 2.4598968215286305,
+    "roi2_gain_pp": 2.5142006772572074,
+    "headroom_pp": 9.141458555589033,
+    "roi2_recovery_fraction": 0.27503277097067186,
+    "roi2_positive_pp": 3.0481344663211325,
+    "roi2_negative_pp": -0.5339337890640014
+  },
+  "prior512_membership": {
+    "pairs": 512,
+    "objects": 965,
+    "takes": 64,
+    "baseline": 70.97475930270953,
+    "primary": 72.0801133411757,
+    "roi2": 72.1706040072556,
+    "oracle": 77.6474051501183,
+    "primary_gain_pp": 1.1053540384661744,
+    "roi2_gain_pp": 1.1958447045460758,
+    "headroom_pp": 6.6726458474087735,
+    "roi2_recovery_fraction": 0.17921597097955752,
+    "roi2_positive_pp": 1.3862300987226819,
+    "roi2_negative_pp": -0.19038539417659686
+  },
+  "remaining": {
+    "pairs": 46003,
+    "objects": 108288,
+    "takes": 295,
+    "baseline": 53.729656248800964,
+    "primary": 56.204628737241045,
+    "roi2": 56.25852984430322,
+    "oracle": 62.89859197123965,
+    "primary_gain_pp": 2.4749724884400806,
+    "roi2_gain_pp": 2.5288735955022545,
+    "headroom_pp": 9.168935722438682,
+    "roi2_recovery_fraction": 0.2758088476194099,
+    "roi2_positive_pp": 3.0666309782053656,
+    "roi2_negative_pp": -0.537757382703163
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "job_id": "job-2f1e215e-2fb3-4a85-bc1a-f8182e488add",
+  "name": "v2sam-roi-full-exoego-seed1-20260917",
+  "state": "success",
+  "occupied_nodes": 0,
+  "ended_at_beijing": "2026-09-18 12:42:01",
+  "runtime": "18h9m35s",
+  "evidence": "UI task row and saved seed2_list_snapshot.txt"
+}

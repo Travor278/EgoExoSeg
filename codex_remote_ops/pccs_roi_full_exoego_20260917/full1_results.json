@@ -1,0 +1,298 @@
+{
+  "coverage": "exact",
+  "phase": "full1",
+  "pairs": 46515,
+  "objects": 109253,
+  "takes": 295,
+  "methods": {
+    "baseline": {
+      "frame": [
+        0.5391947658124426,
+        0.5867776055989504,
+        0.6148887084427115,
+        0.07823487664736868
+      ],
+      "delta_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "changed": 0,
+      "improved": 0,
+      "harmed": 0,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "primary": {
+      "frame": [
+        0.5637937340277289,
+        0.6125566534793739,
+        0.6398382420040085,
+        0.07175964862040206
+      ],
+      "delta_pp": 2.4598968215285346,
+      "ci95_pp": [
+        2.0762207212929606,
+        2.8777276982549926
+      ],
+      "changed": 13977,
+      "improved": 7375,
+      "harmed": 4077,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "frozen_cycle": {
+      "frame": [
+        0.5505866754917361,
+        0.5985047360835122,
+        0.6259383891217465,
+        0.07535426691385855
+      ],
+      "delta_pp": 1.1391909679293535,
+      "ci95_pp": [
+        0.9051478014971005,
+        1.3848873857772466
+      ],
+      "changed": 5573,
+      "improved": 3392,
+      "harmed": 1358,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_matched": {
+      "frame": [
+        0.5534692796755102,
+        0.6021302410101013,
+        0.6298856927635429,
+        0.07366944476108726
+      ],
+      "delta_pp": 1.4274513863067102,
+      "ci95_pp": [
+        1.0601372776472446,
+        1.8496692978177873
+      ],
+      "changed": 15746,
+      "improved": 6708,
+      "harmed": 7040,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "local15_matched": {
+      "frame": [
+        0.5637937340277289,
+        0.6125566534793739,
+        0.6398382420040085,
+        0.07175964862040206
+      ],
+      "delta_pp": 2.4598968215285346,
+      "ci95_pp": [
+        2.0762207212929606,
+        2.8777276982549926
+      ],
+      "changed": 13977,
+      "improved": 7375,
+      "harmed": 4077,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "local20_matched": {
+      "frame": [
+        0.5643367725850147,
+        0.6132947177969703,
+        0.6406700510915536,
+        0.07141735661964008
+      ],
+      "delta_pp": 2.514200677257122,
+      "ci95_pp": [
+        2.117286505216998,
+        2.9450734450962335
+      ],
+      "changed": 14307,
+      "improved": 7577,
+      "harmed": 4270,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "object20_matched": {
+      "frame": [
+        0.554578409643728,
+        0.6029699428565779,
+        0.6308466534663172,
+        0.07360720400138729
+      ],
+      "delta_pp": 1.5383643831285814,
+      "ci95_pp": [
+        1.190068932867861,
+        1.9384388473305183
+      ],
+      "changed": 16687,
+      "improved": 7397,
+      "harmed": 7066,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_local20_matched": {
+      "frame": [
+        0.5645077671491515,
+        0.6133383509260802,
+        0.6406766721463126,
+        0.07162225955894172
+      ],
+      "delta_pp": 2.531300133670904,
+      "ci95_pp": [
+        2.136976114034882,
+        2.9602864877182005
+      ],
+      "changed": 13910,
+      "improved": 7499,
+      "harmed": 4052,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_object20_matched": {
+      "frame": [
+        0.5552401118656112,
+        0.6035582170173519,
+        0.6311385326228339,
+        0.07367143455661591
+      ],
+      "delta_pp": 1.6045346053169165,
+      "ci95_pp": [
+        1.2425892993765146,
+        2.0132640585519233
+      ],
+      "changed": 17231,
+      "improved": 7611,
+      "harmed": 7511,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_multiscale_matched": {
+      "frame": [
+        0.5651770180424123,
+        0.6139638044110004,
+        0.6413335122203719,
+        0.07148988399512655
+      ],
+      "delta_pp": 2.5982252229970437,
+      "ci95_pp": [
+        2.198135272459421,
+        3.0253727096657554
+      ],
+      "changed": 14299,
+      "improved": 7773,
+      "harmed": 4143,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    }
+  },
+  "paired_comparisons": {
+    "primary minus frozen_cycle": {
+      "frame": [
+        0.5637937340277289,
+        0.6125566534793739,
+        0.6398382420040085,
+        0.07175964862040206
+      ],
+      "delta_pp": 1.3207058535991816,
+      "ci95_pp": [
+        1.0065699453957182,
+        1.7158189894002502
+      ],
+      "changed": 11964,
+      "improved": 5575,
+      "harmed": 4310,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "local20_matched minus frozen_cycle": {
+      "frame": [
+        0.5643367725850147,
+        0.6132947177969703,
+        0.6406700510915536,
+        0.07141735661964008
+      ],
+      "delta_pp": 1.3750097093277684,
+      "ci95_pp": [
+        1.0536826736915064,
+        1.790008889391303
+      ],
+      "changed": 12354,
+      "improved": 5821,
+      "harmed": 4541,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "local20_matched minus object20_matched": {
+      "frame": [
+        0.5643367725850147,
+        0.6132947177969703,
+        0.6406700510915536,
+        0.07141735661964008
+      ],
+      "delta_pp": 0.9758362941285401,
+      "ci95_pp": [
+        0.8094367894249024,
+        1.141989141711596
+      ],
+      "changed": 11007,
+      "improved": 6353,
+      "harmed": 3375,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    },
+    "global_local20_matched minus global_object20_matched": {
+      "frame": [
+        0.5645077671491515,
+        0.6133383509260802,
+        0.6406766721463126,
+        0.07162225955894172
+      ],
+      "delta_pp": 0.9267655283539875,
+      "ci95_pp": [
+        0.7630881795901502,
+        1.0948072493542471
+      ],
+      "changed": 11691,
+      "improved": 6918,
+      "harmed": 3570,
+      "pairs": 46515,
+      "objects": 109253,
+      "takes": 295
+    }
+  },
+  "selection_sha256": "a913b51b9aa068706870adc070f8ec32e437776cb070c05150853ae896f043c3",
+  "expert_assets": {
+    "vp_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/vp_exo2ego_full.pth",
+      "name": "vp_exo2ego_full.pth",
+      "bytes": 926619220,
+      "sha256": "fd2e1b8f342c4468b45c962c61d4c914b9f6d71b6c6085014fb9a3ed2924b65f",
+      "matches_diary": true
+    },
+    "fusion_exo2ego_full.pth": {
+      "path": "/inspire/hdd/project/luojianlan/zhubingwen-253108120125/codex_remote_ops/hf_publish_exo2ego_20260903/tmp/fusion_exo2ego_full.pth",
+      "name": "fusion_exo2ego_full.pth",
+      "bytes": 2136421714,
+      "sha256": "8373b17180c198898fe9f9e39d09fe72991150ce3053b207b19e81986c60cab1",
+      "matches_diary": true
+    }
+  },
+  "no_target_fitting": true,
+  "full_actual_primary_local20_cycle_equals_replay": true,
+  "baseline_zero_iou_objects": 32085,
+  "historical_omama_comparison_note": "Prior corrected-weight full O-MaMa benchmark used the same experts but a different candidate run; do not interpret cross-run subtraction as paired comparison."
+}
