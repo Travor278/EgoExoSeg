@@ -1,0 +1,20 @@
+{
+  "job_id": "job-11fedfbd-5351-4d97-a6c5-93dabefbb8be",
+  "name": "v2sam-omama-shared-full-20260918",
+  "submitted_at_local": "2026-09-18 13:49:39",
+  "space_id": "ws-9dcc0e1f-80a4-4af2-bc2f-0e352e7b17e6",
+  "compute_group": "H100 CUDA12.8 183core",
+  "compute_group_id": "lcg-79b2ad0e-a375-43f3-a0b1-b4ce79710fd7",
+  "resource_spec_id": "8a53ac21-299a-4dee-85e9-9c04a544cf8d",
+  "image": "ngc-pytorch:25.02-cuda12.8.0-py3",
+  "gpus": 4,
+  "nodes": 1,
+  "priority": 4,
+  "maximum_minutes": 1440,
+  "success_retention_minutes": 1,
+  "failure_retention_minutes": 1,
+  "shm_gb": 512,
+  "command_exact": true,
+  "scope": "New shared generation; original full1 exact reconstruction abandoned after drift",
+  "next_stage": "controller.py reference after generation complete and nodes released"
+}

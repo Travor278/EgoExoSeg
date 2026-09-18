@@ -32,8 +32,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/PLAN.md",
-      "bytes": 2419,
-      "sha256": "b3a296cd4c9c5b6637ca37432c7c15a87465b2de942350ad6d570e3921e3a20a"
+      "bytes": 3131,
+      "sha256": "9a3ce1ccb3618e398890bb505d8d278c232e80f17dc11feb9fc250109a9e4907"
     },
     {
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/manifest.json",
@@ -57,8 +57,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/status.json",
-      "bytes": 858,
-      "sha256": "40ed4d3f56516e8059cc683bb831bfc53f7d268a05be76ba30be96b605fabf25"
+      "bytes": 135,
+      "sha256": "e446aa7293fc4d61da995660069e0699038d4407bacaa736122c9736ee28e4c4"
     },
     {
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/repair_receipt.json",
@@ -69,6 +69,11 @@
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/resource_release_failed_pilot.json",
       "bytes": 331,
       "sha256": "d1495ef0c8af87b688423290493ac273edec8fc184f683844a643e5380cbb5dc"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/resource_release_rebuild.json",
+      "bytes": 414,
+      "sha256": "2d494ca7632a8b003cdbe4f5fd56f496246701af01a6b3e8a52ee7cb2aaccf12"
     },
     {
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_full/rank0/startup.json",
@@ -191,6 +196,11 @@
       "sha256": "b912a59cc1afd1e782f0612e1be9ecdc6964bfe5870b55bc2eb19a1d098c708d"
     },
     {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/runs/rebuild_full/rank3/drift.json",
+      "bytes": 1074,
+      "sha256": "65461a75d0469b8342719e1cfe9914766c04ebdf84412352e1e790c8d4d3215f"
+    },
+    {
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/evaluate.py.log",
       "bytes": 2440,
       "sha256": "b606d6fec86dcbb9c54cbc12dd0f04a17d56b8e7384bb88ef0af78a6a406e9f1"
@@ -199,6 +209,11 @@
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/prepare.py.log",
       "bytes": 30,
       "sha256": "138518a7e1d35098ede27162540c14a76279a5399e6e489f55ed4772ef6b4b14"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_full_matched_20260918/rebuild_full_rank3.log",
+      "bytes": 35091,
+      "sha256": "ee36601e3c1304318acd4610731a6dd1e587842429c4107868bfeed93a58292e"
     },
     {
       "path": "codex_remote_ops/pccs_omama_full_matched_20260918/rebuild_pilot_rank0.log",
@@ -237,8 +252,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "bytes": 91455,
-      "sha256": "41cc849dfa58bb86cdedab77a72b6c1e7571cde4884adc582798a5fe0b9b2ef9"
+      "bytes": 93387,
+      "sha256": "f9ce1f5483a9e1ed1c86f8dea969216d0ff62fc5310719d11f5e6d8aaa9d0d05"
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
@@ -247,8 +262,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_matched_omama_report.py",
-      "bytes": 2784,
-      "sha256": "1e1859032a68be9918c2e2e5101b9551bbfdfc95be76d759f88886d437170992"
+      "bytes": 5099,
+      "sha256": "35d36623a2c8dbe40f72fa93b506375f0b3ce8a68f6c3a048b335f36c7c75a2d"
     }
   ],
   "excluded": "raw images, masks, annotation JSON, prior per-object records, dependencies, browser state, authentication, deployment capsule"

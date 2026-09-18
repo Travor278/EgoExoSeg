@@ -1,0 +1,20 @@
+{
+  "state": "running",
+  "phase": "full1",
+  "ranks": [
+    {
+      "state": "initializing"
+    },
+    {
+      "state": "initializing"
+    },
+    {
+      "state": "initializing"
+    },
+    {
+      "state": "initializing"
+    }
+  ],
+  "eta_seconds": null,
+  "updated_at": 1789710983.046894
+}

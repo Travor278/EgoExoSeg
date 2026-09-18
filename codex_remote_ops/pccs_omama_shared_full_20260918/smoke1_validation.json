@@ -1,0 +1,9 @@
+{
+  "phase": "smoke1",
+  "pairs": 8,
+  "objects": 8,
+  "frame_and_take_bootstrap": "passed",
+  "same_run_paired_comparison": true,
+  "raw_masks_remain_remote": true,
+  "compact_sha256": "4559226fb22db1f61e5738a7c1e77a0a8ea3d6dbd4bf24be9d200967ad7ab224"
+}

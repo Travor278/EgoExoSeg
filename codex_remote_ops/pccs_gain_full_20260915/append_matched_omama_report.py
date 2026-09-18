@@ -11,6 +11,16 @@ def append_matched(parts,root):
     if (r/'job_receipt_rebuild_r2.json').exists():
         j=json.loads((r/'job_receipt_rebuild_r2.json').read_text());parts += [f"修复续跑任务：`{j['job_id']}`，{j['submitted_at_local']}北京。",'']
     q=r/'full_results.json'
+    shared=root/'pccs_omama_shared_full_20260918'
+    if (r/'resource_release_rebuild.json').exists():
+        parts += ['严格重建随后在一个Fusion候选上遇到SHA不一致并按协议停止：take849aaee0-866d-4b85-9775-39360e27fa90/frame6120/obj0，Fusion IoU从0.76996195变成0.73738414，Visual/Anchor及基线路由相同。已保存791个匹配对象，不能据此前缀估计全量漂移率。失败任务节点已释放。底层非确定性原因未定位，不将其武断称为仅几个像素的舍入误差，也不放宽hash检查。','']
+    if (shared/'PLAN.md').exists():
+        parts += ['### 17.1 改为一次生成并持久化的共同候选全量复验','','新目录[pccs_omama_shared_full_20260918](../pccs_omama_shared_full_20260918/PLAN.md)：保持模型、权重、阈值与46515对数据不变，沿用完整原生ROI worker，仅增加同次三专家mask和source mask的存储；原PCCS/ROI1.5/ROI2/旧cycle由同次预测计算，O-MaMa另进程读取同一份不可变bank。因此所有方法同候选，但这是新生成的复验，不声称逐bit复现原full1。原full1的同轮ROI增益仍有效。','','本轮使用H100 CUDA12.8/183核组，仍为4 H10080GB、80CPU、900GB内存、同ngc-pytorch25.02-cuda12.8镜像与既有Python环境。此前将下拉列表可见部分误认为全部选项，错误声称原组不再提供；经搜索确认原H100 CUDA13.2/183核组（lcg-71b971a7-5bdd-4798-b5ba-08f1eabde49e）仍存在。用户明确同意已启动的12.8任务保持运行。记录资源组变化，不将跨运行数值差异混入成对增益。','']
+        j=shared/'job_receipt.json'
+        if j.exists():
+            info=json.loads(j.read_text());parts += [f"新共同候选任务：`{info['job_id']}`，{info['submitted_at_local']}北京。",'']
+        q=shared/'full1_results.json'
+        if (shared/'PERFORMANCE.md').exists():parts += ['GPU利用率问题单列[PERFORMANCE.md](../pccs_omama_shared_full_20260918/PERFORMANCE.md)：7.9GiB峰值分配量不代表充分利用。41秒/9次实测四卡平均约46.3%/26.4%/17.1%/27.3%，四worker各接近满1个CPU核。用户随后要求先不再优化、恢复0.8×ETA监督，临时函数profiler已停止，主实验方法未改；不宣称具体函数瓶颈或优化提速已验证。','']
     if not q.exists():parts += ['同候选全量O-MaMa结果待完成；提交、pilot或重建完成均不等于最终对照完成。'];return
     d=json.loads(q.read_text());parts += ['| 方法 | IoU | ΔPCCS（点） | 95% take区间 |','|---|---:|---:|---|']
     for name,v in d['methods'].items():

@@ -1,0 +1,36 @@
+{
+  "video_id": "849aaee0-866d-4b85-9775-39360e27fa90_6120",
+  "obj_id": "0",
+  "old_hash": {
+    "visual": "79aef86d308b3058c4a926c195a00a654828094e4ccd3ac6e397d87302428671",
+    "anchor": "ca4dcb1d4a5da30d5881d63eaf0c8f00f84ecf10c758e9849e2ff6b89cdbc6de",
+    "fusion": "09c35fbb9b22aa4af2aca1c6a49b0a57b15bdedfaf3986029ac6e2badb99b369"
+  },
+  "new_hash": {
+    "visual": "79aef86d308b3058c4a926c195a00a654828094e4ccd3ac6e397d87302428671",
+    "anchor": "ca4dcb1d4a5da30d5881d63eaf0c8f00f84ecf10c758e9849e2ff6b89cdbc6de",
+    "fusion": "8b46846aeadd948fb2ecc68c9b91d4164cb17829d941376c3e61a36787b0bf4b"
+  },
+  "old_baseline": "anchor",
+  "new_baseline": "anchor",
+  "new_metrics": {
+    "visual": [
+      0.1264002025127411,
+      0.22443214058876038,
+      0.31263412017167386,
+      0.04043296085632994
+    ],
+    "anchor": [
+      0.8702252507209778,
+      0.9306101202964783,
+      0.9913043478260869,
+      0.004029003103618909
+    ],
+    "fusion": [
+      0.7373841404914856,
+      0.8488441109657288,
+      0.7508931092478239,
+      0.010769714772644186
+    ]
+  }
+}

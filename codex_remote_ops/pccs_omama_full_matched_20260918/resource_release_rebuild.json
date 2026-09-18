@@ -1,0 +1,9 @@
+{
+  "job_id": "job-fbc0d2a8-44dd-4209-a445-43af7c4cd3c8",
+  "state": "failed",
+  "occupied_nodes": 0,
+  "ended_at_beijing": "2026-09-18 13:28:26",
+  "cause": "Exact candidate reconstruction failed on fusion mask; guard correctly stopped",
+  "saved_matching_prefix_objects": 791,
+  "replacement": "New shared-generation comparison in pccs_omama_shared_full_20260918; do not resume or weaken identity gate"
+}
