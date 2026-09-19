@@ -2,6 +2,11 @@
 from pathlib import Path
 import re,json
 R=Path(__file__).parent;p=R/'METHOD.md';s=p.read_text(encoding='utf8')
+if '<!-- COMMON_METHOD_START -->' in s:
+    import subprocess,sys
+    subprocess.run([sys.executable,str(R/'reorganize_method.py')],check=True)
+    print('Preserved the two-direction document layout')
+    raise SystemExit(0)
 s=re.sub(r'\n<!-- EXOEGO_EXAMPLE:[^>]+ -->.*?<!-- /EXOEGO_EXAMPLE -->\n','\n',s,flags=re.S)
 e=json.loads((R/'figures/exo2ego/example_evidence.json').read_text());assert e['video_id']=='02def476-33eb-4895-a448-a4398d44e16b_990' and e['baseline']=='anchor'
 def before(anchor,key,body):

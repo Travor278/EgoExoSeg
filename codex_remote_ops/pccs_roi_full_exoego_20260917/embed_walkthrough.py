@@ -2,6 +2,11 @@
 from pathlib import Path
 import re,json
 R=Path(__file__).parent;p=R/'METHOD.md';s=p.read_text(encoding='utf8')
+if '<!-- COMMON_METHOD_START -->' in s:
+    import subprocess,sys
+    subprocess.run([sys.executable,str(R/'reorganize_method.py')],check=True)
+    print('Preserved the two-direction document layout')
+    raise SystemExit(0)
 s=re.sub(r'\n<!-- EXAMPLE:[^>]+ -->.*?<!-- /EXAMPLE -->\n','\n',s,flags=re.S)
 def insert_before(anchor,key,body):
     global s

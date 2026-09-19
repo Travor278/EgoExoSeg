@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 R=Path(__file__).parent;p=R/'METHOD.md';marker='\n<!-- CURRENT_VALIDATION_RESULTS -->'
-text=p.read_text(encoding='utf8').split(marker)[0];lines=[marker,'','## 10. 本次验证进度与结果','']
+text=p.read_text(encoding='utf8').split(marker)[0];directional='<!-- COMMON_METHOD_START -->' in text;result_title='## 附录B：完整验证结果与统计边界' if directional else '## 10. 本次验证进度与结果';lines=[marker,'',result_title,'']
 if (R/'weight_audit.json').exists():lines += ['本次平台启动已再次完整核验Visual e19/Fusion e20的字节数及SHA，并确认历史O-MaMa全量使用同组权重；机器可读证据：`weight_audit.json`。','']
 if (R/'science_results.json').exists():
     data=json.loads((R/'science_results.json').read_text());lines += ['自然背景控制已完成，以下均为同一候选、同一冻结模型的描述性配对比较。真实图重放需保持原始特征/选择一致。','','| 方向/尺度 | 真实背景 IoU | 远背景 IoU | 错位背景 IoU |','|---|---:|---:|---:|']
@@ -44,4 +44,6 @@ if (shared/'full1_validation.json').exists():
 expanded=R.parent/'pccs_exoexo_expand_20260917/exo2exo_results.json'
 if expanded.exists():
     e=json.loads(expanded.read_text());lines += ['扩展Exo→Exo时序压力测试已完成：新增6534个不重复配对，原PCCS41.3130，冻结1.5×主方案45.0837（+3.7706点），2×对照45.2391（+3.9260点），同候选O-MaMa43.9262（+2.6131点）。原主方案对O-MaMa区间跨零，2×对照的描述性差区间为[0.1774,2.6580]，不改变事前主次身份。', '', '该扩展只有19个旧take，不是新增场景泛化；它与Exo→Ego46515对全量验证分别报告。完整结果见总报告§16及扩展目录的validation.json。','']
-p.write_text((text+'\n'.join(lines)).rstrip()+'\n',encoding='utf8');print('METHOD_RESULTS_UPDATED')
+tail='\n'.join(lines)
+if directional:tail=tail.replace('### 10.1 Exo→Ego同候选O-MaMa全量对照','### B.1 Exo→Ego同候选O-MaMa全量对照')
+p.write_text((text+tail).rstrip()+'\n',encoding='utf8');print('METHOD_RESULTS_UPDATED')
