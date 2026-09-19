@@ -1,6 +1,6 @@
 {
   "state": "running",
-  "phase": "full1",
+  "phase": "reference_full1",
   "ranks": [
     {
       "state": "initializing"
@@ -16,5 +16,5 @@
     }
   ],
   "eta_seconds": null,
-  "updated_at": 1789710983.046894
+  "updated_at": 1789782550.4096925
 }

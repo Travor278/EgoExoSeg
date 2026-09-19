@@ -1,0 +1,11 @@
+{
+  "job_id": "job-11fedfbd-5351-4d97-a6c5-93dabefbb8be",
+  "state": "success",
+  "occupied_nodes": 0,
+  "ended_at_beijing": "2026-09-19 09:27:35",
+  "runtime": "19小时34分32秒",
+  "pairs": 46515,
+  "objects": 109253,
+  "encoder_contract": "passed",
+  "gpu_compute_processes_after": 0
+}

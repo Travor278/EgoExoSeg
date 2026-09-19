@@ -37,8 +37,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/verify_results.py",
-      "bytes": 2572,
-      "sha256": "4896e3fcda0b1eb6b2b3262199cf0c5bdfd95667d38d3fb3f8de8f2ee8b9c359"
+      "bytes": 3908,
+      "sha256": "25bbf18f6ce26a6b156f830ae2a6670c5feb669ad403ed251d432bbfeb37f7f7"
     },
     {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/PLAN.md",
@@ -56,19 +56,29 @@
       "sha256": "c554f9a646762e5d72d2df41ccb093a450077487db66699d703575864ac7735e"
     },
     {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/job_receipt_reference.json",
+      "bytes": 830,
+      "sha256": "7aa762205f5c863337ff83768da37cf6168447b94da1c3ab744100f573a6c48a"
+    },
+    {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/smoke1_results.json",
       "bytes": 2520,
       "sha256": "1f67508161daf8555d8ec5a4d5cb31a8c1a91ed953f5e4e55e253f7c8604c5a4"
     },
     {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/status.json",
-      "bytes": 291,
-      "sha256": "727224cc5a0e91ca5c9ad48e0a1c511eb4c05290fe513c114a8a3731e7de43ef"
+      "bytes": 302,
+      "sha256": "8f30fc005395f9197f147491b938cbdac8655dd5335015b5a2e577559a14b5d7"
     },
     {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/smoke1_validation.json",
-      "bytes": 262,
-      "sha256": "34dd70d633c696e7053d9445c1b47138c3c168e869e86c163a2a30c0c2f18d74"
+      "bytes": 319,
+      "sha256": "bf1d8251414f1e874453f2475fcfa116f31d8739bf8ccc174d9322fc9f43624a"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/resource_release_generation.json",
+      "bytes": 300,
+      "sha256": "268d42d82ff407154144025e1f051e3d90de0e381cbbbeefbd1f5a5684366873"
     },
     {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank0/startup.json",
@@ -89,6 +99,46 @@
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank3/startup.json",
       "bytes": 116,
       "sha256": "0cee322544ffe39e24091b02e261f47b2f86cf424ea7be79e7b9e21eceb755e7"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_full1/rank0/startup.json",
+      "bytes": 122,
+      "sha256": "f7573c0cc580681e100bcdd0fb982b6376ee01435ca6298a85ee585505ab5026"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_full1/rank1/startup.json",
+      "bytes": 122,
+      "sha256": "f7573c0cc580681e100bcdd0fb982b6376ee01435ca6298a85ee585505ab5026"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_full1/rank2/startup.json",
+      "bytes": 122,
+      "sha256": "f7573c0cc580681e100bcdd0fb982b6376ee01435ca6298a85ee585505ab5026"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_full1/rank3/startup.json",
+      "bytes": 122,
+      "sha256": "f7573c0cc580681e100bcdd0fb982b6376ee01435ca6298a85ee585505ab5026"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank0/receipt.json",
+      "bytes": 273,
+      "sha256": "ce048aa5656cfa1b68c8a83eb5f857cddb4a18fbbee70dbe66f3b986372e6bc5"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank1/receipt.json",
+      "bytes": 273,
+      "sha256": "d22ccc94c7858cd90b3284507c57d6ef448abb71ba197d470ad4324554fd95ca"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank2/receipt.json",
+      "bytes": 273,
+      "sha256": "e5a8b26bccc113b0fdf637c2d9733d0a43f0630e1e9a645c4a5432c872d48a90"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank3/receipt.json",
+      "bytes": 273,
+      "sha256": "49fd5ea2c653d36ab6820a50a1ee0df43bc6e3b29ad2bd4b4964b98a881318de"
     },
     {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_smoke1/rank0/receipt.json",
@@ -131,6 +181,26 @@
       "sha256": "094f24f6f4180ef223170bb28db761c61a164f218b34b8e329652997619a8922"
     },
     {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank0/encoder_receipt.json",
+      "bytes": 606,
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank1/encoder_receipt.json",
+      "bytes": 606,
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank2/encoder_receipt.json",
+      "bytes": 606,
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/full1/rank3/encoder_receipt.json",
+      "bytes": 606,
+      "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143"
+    },
+    {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/smoke1/rank0/encoder_receipt.json",
       "bytes": 606,
       "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143"
@@ -149,6 +219,26 @@
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/smoke1/rank3/encoder_receipt.json",
       "bytes": 606,
       "sha256": "a7e36fcf13d4284b96749b8e2cecf44c88a87073712a48600deb9dd825d05143"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_full1/rank0/witness.json",
+      "bytes": 448,
+      "sha256": "1764fbbdb14966da52cae01f07b79ce09825b4824ebfcd58897ec5e13f5d9ba8"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_full1/rank1/witness.json",
+      "bytes": 450,
+      "sha256": "0bf3c25cf3267ca903af9135400b83bb3389bc66120f38bbff65e05025e40171"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_full1/rank2/witness.json",
+      "bytes": 450,
+      "sha256": "53630bdfb1da59473bd727bc46bad5ddbfe1549aa52c67f049e76792d5f79b3f"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_full1/rank3/witness.json",
+      "bytes": 450,
+      "sha256": "b912a59cc1afd1e782f0612e1be9ecdc6964bfe5870b55bc2eb19a1d098c708d"
     },
     {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/runs/reference_smoke1/rank0/witness.json",
@@ -176,6 +266,26 @@
       "sha256": "2f38c0454bdea351775157c713727d29c35467462f00f064b3e7aa769d2cd741"
     },
     {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/full1_rank0.log",
+      "bytes": 9697706,
+      "sha256": "9b5780fcbc0705a8015ddbd5875711b964f849a581db2b3342a60b0840d59df5"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/full1_rank1.log",
+      "bytes": 9697706,
+      "sha256": "414245da8b30ecd5067d9340d9e072b2d1c1028b4fdc19b36c161ccb1ad05752"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/full1_rank2.log",
+      "bytes": 9697706,
+      "sha256": "3de55b651875b9fd7d0c200f042cfb0e717d248ad42d162667c6affcad6a9886"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/full1_rank3.log",
+      "bytes": 9696874,
+      "sha256": "985c19b2e70c46c8ddc162f2f19081a8e92553010e0326a84f7d5c0d5f6c486f"
+    },
+    {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/prepare.py.log",
       "bytes": 25,
       "sha256": "794a2cf9678bc4ba2cea0f0c63710b487928341b7338e24ce856d6265f94251f"
@@ -186,7 +296,17 @@
       "sha256": "52b1fc79048164cd050c7ba53a2658241be62aad170d024c473f9e5a18119ca9"
     },
     {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/gpu_after_generation.txt",
+      "bytes": 41,
+      "sha256": "cae79969ce448872401f5d9bcd1d52bbefa1a5450cf3a5658f62f068ab59294b"
+    },
+    {
       "path": "codex_remote_ops/pccs_omama_shared_full_20260918/gpu_preflight_generation.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "codex_remote_ops/pccs_omama_shared_full_20260918/gpu_preflight_reference.txt",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
@@ -217,8 +337,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "bytes": 93387,
-      "sha256": "f9ce1f5483a9e1ed1c86f8dea969216d0ff62fc5310719d11f5e6d8aaa9d0d05"
+      "bytes": 96707,
+      "sha256": "bdb724753412b05a0bb8da6073a6c78bb711a3daa16b39f310f60aa86147b530"
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
@@ -227,8 +347,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_matched_omama_report.py",
-      "bytes": 5099,
-      "sha256": "35d36623a2c8dbe40f72fa93b506375f0b3ce8a68f6c3a048b335f36c7c75a2d"
+      "bytes": 5682,
+      "sha256": "850e96ce66058cba038b60ae515b95f781d12f7fd43fd962a8f9548236acd7b2"
     }
   ],
   "excluded": "raw images/masks/annotation/prior evidence/dependencies/browser/auth/capsule; scalar compact gzip after explicit size/schema review"

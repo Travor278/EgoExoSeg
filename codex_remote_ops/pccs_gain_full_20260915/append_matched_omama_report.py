@@ -19,6 +19,9 @@ def append_matched(parts,root):
         j=shared/'job_receipt.json'
         if j.exists():
             info=json.loads(j.read_text());parts += [f"新共同候选任务：`{info['job_id']}`，{info['submitted_at_local']}北京。",'']
+        if (shared/'resource_release_generation.json').exists():parts += ['共同候选生成已于2026-09-19 09:27:35完成，4rank回执共46515对/109253对象，冻结编码器配置核验通过，节点0。mask已保存在远端，生成完成不等于O-MaMa全量打分完成。','']
+        if (shared/'job_receipt_reference.json').exists():
+            info=json.loads((shared/'job_receipt_reference.json').read_text());parts += [f"独立O-MaMa打分任务：`{info['job_id']}`，{info['submitted_at_local']}北京提交；读取已保存bank，不重新生成候选。",'']
         q=shared/'full1_results.json'
         if (shared/'PERFORMANCE.md').exists():parts += ['GPU利用率问题单列[PERFORMANCE.md](../pccs_omama_shared_full_20260918/PERFORMANCE.md)：7.9GiB峰值分配量不代表充分利用。41秒/9次实测四卡平均约46.3%/26.4%/17.1%/27.3%，四worker各接近满1个CPU核。用户随后要求先不再优化、恢复0.8×ETA监督，临时函数profiler已停止，主实验方法未改；不宣称具体函数瓶颈或优化提速已验证。','']
     if not q.exists():parts += ['同候选全量O-MaMa结果待完成；提交、pilot或重建完成均不等于最终对照完成。'];return
