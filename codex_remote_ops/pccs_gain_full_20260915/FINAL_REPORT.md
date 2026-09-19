@@ -841,6 +841,8 @@ Exo→Ego复验（仍为512对/965对象）：第二seed原PCCS71.2670，原主�
 
 
 方法说明已加入贯穿各章的真实白碗样例：gp01→gp04、frame3570；六幅图展示输入、三候选、ROI坐标、循环统计、冻结校准选择及自然背景干预。候选与数值来自真实seed1记录，示意箭头不当作实测注意力图；明确注明这是查看结果后选取的成功案例，旧cycle也选对且背景干预未改变本例最终选择，因此不以单例替代总体统计或证明context因果。图文在上述METHOD.md中，标量依据见figures/example_evidence.json。
+
+METHOD.md另补并列Exo→Ego毛巾案例：take02def476-33eb-4895-a448-a4398d44e16b、frame990、cam01→aria01_214-1、obj0。六幅真实图贯穿各章，seed1原PCCS选Anchor（IoU0），两ROI尺度改为Visual（87.24%）；三mask与全量seed1及共同候选参考hash一致，冻结校准预测已重放核验。完整保留反例：seed2未纠正、前景-only/全图匹配校准也能选对、背景干预不改seed1选择；本例的O-MaMa选Fusion（1.45%）不能用来宣称整体优于O-MaMa。只发布派生图和标量证据，不发布原图片/mask/标注。
 ### 15.1 冻结自然背景消融
 
 | 方向与方法 | 真实背景IoU | 远处背景IoU | 错位背景IoU |

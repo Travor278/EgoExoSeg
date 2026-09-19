@@ -10,6 +10,7 @@ def append_full_roi(parts,root):
       '新增自然背景干预使用既有seed1固定候选：保持源前景RGB、mask、crop与8原图像素边界带不变，目标图与目标mask全部不变，仅改变源crop的较远背景。比较真实重放、同源图远处天然背景供体、crop半边长错位背景，均使用冻结校准器，不重训干预模型。真实重放必须复现旧局部特征及选择。远背景供体按源mask重叠最低/距离最远确定，记录替换比例及供体重叠；无可编辑背景的样本保留。干预仍可能有拼接/分布偏移，错位背景可能携带移位物体纹理，不能称完美语义因果证明。', '']
     p=r/'science_results.json'
     if (r/'figures/example_evidence.json').exists():parts += ['', '方法说明已加入贯穿各章的真实白碗样例：gp01→gp04、frame3570；六幅图展示输入、三候选、ROI坐标、循环统计、冻结校准选择及自然背景干预。候选与数值来自真实seed1记录，示意箭头不当作实测注意力图；明确注明这是查看结果后选取的成功案例，旧cycle也选对且背景干预未改变本例最终选择，因此不以单例替代总体统计或证明context因果。图文在上述METHOD.md中，标量依据见figures/example_evidence.json。']
+    if (r/'figures/exo2ego/example_evidence.json').exists():parts += ['', 'METHOD.md另补并列Exo→Ego毛巾案例：take02def476-33eb-4895-a448-a4398d44e16b、frame990、cam01→aria01_214-1、obj0。六幅真实图贯穿各章，seed1原PCCS选Anchor（IoU0），两ROI尺度改为Visual（87.24%）；三mask与全量seed1及共同候选参考hash一致，冻结校准预测已重放核验。完整保留反例：seed2未纠正、前景-only/全图匹配校准也能选对、背景干预不改seed1选择；本例的O-MaMa选Fusion（1.45%）不能用来宣称整体优于O-MaMa。只发布派生图和标量证据，不发布原图片/mask/标注。']
     if p.exists():
         data=json.loads(p.read_text());parts += ['### 15.1 冻结自然背景消融', '', '| 方向与方法 | 真实背景IoU | 远处背景IoU | 错位背景IoU |', '|---|---:|---:|---:|']
         for phase,v in data['phases'].items():
