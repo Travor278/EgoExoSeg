@@ -1,20 +1,7 @@
 {
-  "state": "running",
-  "phase": "reference_full1",
-  "ranks": [
-    {
-      "state": "initializing"
-    },
-    {
-      "state": "initializing"
-    },
-    {
-      "state": "initializing"
-    },
-    {
-      "state": "initializing"
-    }
-  ],
-  "eta_seconds": null,
-  "updated_at": 1789782550.4096925
+  "state": "complete",
+  "phase": "reference_complete",
+  "remaining_stage": null,
+  "eta_seconds": 0,
+  "updated_at": 1789786243.828717
 }

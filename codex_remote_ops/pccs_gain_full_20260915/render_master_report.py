@@ -23,6 +23,9 @@ np_result=O/'pccs_native_context_20260916/calibration_results.json'
 if np_result.exists():
  n=load(np_result);parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,f"- PCCS内部context首版已实现并完成训练内消融（§10），未使用O-MaMa网络。仅循环加权ΔIoU为0；仅Fusion复核/两项结合在校准分别为{n['methods']['review']['delta_pp']:+.4f}/{n['methods']['both']['delta_pp']:+.4f}点，均未晋级，未启动新目标测试。实现完整不等于已证明增益或创新性。")
 completed={}
+shared=O/'pccs_omama_shared_full_20260918'
+if (shared/'full1_validation.json').exists():
+ d=load(shared/'full1_results.json');parts.insert(parts.index('### 1.1 全量 frame-level 指标')-1,'- **Exo→Ego同候选O-MaMa全量对照已完成（§17）**：原PCCS53.9195，原生1.5×56.3794（+2.4599）、2×56.4334（+2.5140），O-MaMa一致性56.6261（+2.7066）。ROI主/次分别比O-MaMa低0.2467/0.1926点，两项成对95%区间均跨零；点估计接近，但不构成等效、非劣或优越性证明。全部46515对/109253对象/295takes、候选hash与指标复算核验通过。')
 for seed in (1,2):
  p=O/'pccs_roi_full_exoego_20260917'/f'full{seed}_results.json'
  if p.exists():

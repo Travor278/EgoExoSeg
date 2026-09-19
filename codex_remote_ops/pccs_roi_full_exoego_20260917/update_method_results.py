@@ -31,7 +31,16 @@ for seed in (1,2):
             v=diag[key];lines.append(f"| {label} | {v['pairs']} | {v['baseline']:.4f} | {v['primary']:.4f} | {v['roi2']:.4f} | {v['oracle']:.4f} |")
         lines += ['','GT oracle只用于事后诊断，不进入推理/拟合/阈值选择。全量和子集的基线差异来自样本范围；不能据此证明具体难度因素。前景-only对照同时改变输入背景和表征分布，与自然背景干预合看，不能将全部差值归于邻居语义。','']
 if all((R/f'full{s}_results.json').exists() for s in (1,2)):
-    lines += ['双seed全量结论：每轮46515对/109253对象/295takes、同轮同候选；1.5×主方案两轮增益+2.4599/+2.4984点，2×次对照+2.5142/+2.5334点，四项95% take区间均高于零。支持既有测试集上对候选随机种子的重复性；两个seed不是两份独立场景数据，不保证每个对象都涨点。完整覆盖/指标复算与资源释放见validation.json和resource_release_seed1/2.json。当前同候选O-MaMa的新共同候选复验尚在运行，不能将历史56.6385作本轮成对参考。','']
+    lines += ['双seed全量结论：每轮46515对/109253对象/295takes、同轮同候选；1.5×主方案两轮增益+2.4599/+2.4984点，2×次对照+2.5142/+2.5334点，四项95% take区间均高于零。支持既有测试集上对候选随机种子的重复性；两个seed不是两份独立场景数据，不保证每个对象都涨点。完整覆盖/指标复算与资源释放见validation.json和resource_release_seed1/2.json。与O-MaMa的公平对照使用另外共同生成并保存的候选，不能将历史56.6385作本轮成对参考。','']
+shared=R.parent/'pccs_omama_shared_full_20260918'
+if (shared/'full1_validation.json').exists():
+    d=json.loads((shared/'full1_results.json').read_text());v=json.loads((shared/'full1_validation.json').read_text())
+    lines += ['### 10.1 Exo→Ego同候选O-MaMa全量对照（已核验）','','本轮同一次生成并保存46515对/109253对象/295takes的候选，原PCCS、冻结ROI及外部O-MaMa均在同一bank上评估，无目标集调参。它是新的共同候选复验，不是旧seed1的逐bit恢复。','','| 方法 | Frame IoU | Δ原PCCS（点） | 95% take区间 |','|---|---:|---:|---|']
+    for name in ('baseline','primary','local20_matched','omama_consensus'):
+        s=d['methods'][name];ci=s['ci95_pp'];lines.append(f"| {name} | {100*s['frame'][0]:.4f} | {s['delta_pp']:+.4f} | [{ci[0]:.4f}, {ci[1]:.4f}] |")
+    for name,s in d['paired_comparisons'].items():
+        ci=s['ci95_pp'];lines += ['',f"{name}：{s['delta_pp']:+.4f}点，95%区间[{ci[0]:.4f}, {ci[1]:.4f}]。"]
+    lines += ['', '两项相对O-MaMa的差值区间均跨零，支持点估计接近，但不证明统计等效、非劣或优越性。未事前设等效/非劣界限，不应事后用“无显著差异”宣称方法一样好。原生ROI方法本体不加载O-MaMa模型；这里它仅作为外部参考。', '', f"与旧seed1比较有{v['cross_run_diagnostic_only']['objects_with_any_mask_drift']}个对象至少一份候选mask发生漂移、{v['cross_run_diagnostic_only']['objects_with_baseline_route_drift']}个基线路由变化。比例很小但不能忽略逐bit协议；现在完整保存候选，所有方法已逐对象同bank核验。该计数不能定位GPU/随机算子的具体原因。",'']
 expanded=R.parent/'pccs_exoexo_expand_20260917/exo2exo_results.json'
 if expanded.exists():
     e=json.loads(expanded.read_text());lines += ['扩展Exo→Exo时序压力测试已完成：新增6534个不重复配对，原PCCS41.3130，冻结1.5×主方案45.0837（+3.7706点），2×对照45.2391（+3.9260点），同候选O-MaMa43.9262（+2.6131点）。原主方案对O-MaMa区间跨零，2×对照的描述性差区间为[0.1774,2.6580]，不改变事前主次身份。', '', '该扩展只有19个旧take，不是新增场景泛化；它与Exo→Ego46515对全量验证分别报告。完整结果见总报告§16及扩展目录的validation.json。','']

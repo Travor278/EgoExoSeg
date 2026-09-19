@@ -30,3 +30,7 @@ def append_matched(parts,root):
         ci=v['ci95_pp'];parts.append(f"| {name} | {100*v['frame'][0]:.4f} | {v['delta_pp']:+.4f} | [{ci[0]:.4f},{ci[1]:.4f}] |")
     for name,v in d['paired_comparisons'].items():
         ci=v['ci95_pp'];parts += ['',f"{name}: {v['delta_pp']:+.4f}点，95%区间[{ci[0]:.4f},{ci[1]:.4f}]。"]
+    if (shared/'full1_validation.json').exists():
+        v=json.loads((shared/'full1_validation.json').read_text());drift=v['cross_run_diagnostic_only'];parts += ['', '**结论：已完成同候选公平比较。** 原生ROI在原PCCS上保持约2.46～2.51点增益；O-MaMa一致性参考约+2.71点，主1.5×/次2×的IoU点估计分别低0.2467/0.1926点，两项成对差区间均跨零。可以说点估计接近；不能据“无显著差异”宣称等效、非劣或优于O-MaMa，尤其未事前指定等效界限。', '', f"本地验证完整46515对/109253对象/295takes，4rank全部reference记录文件SHA、逐对象三mask SHA与选择对齐、历史分数/选择见证、逐帧均值和10000次take bootstrap均通过。相对旧seed1有{drift['objects_with_any_mask_drift']}个对象候选发生漂移、{drift['objects_with_baseline_route_drift']}个基线路由改变；这是跨运行诊断，不能确定底层原因，也不能代替本轮逐对象同bank核验。", '', '本轮报告全部canonical/native/consensus参考，不选最高值重新定义主对照；零IoU和不利样本完整保留，主方案身份仍为源域预选1.5×。两seed原生ROI与本轮共同候选使用同一已观察场景集，不能当三份新独立测试集。']
+    if (shared/'resource_release_reference.json').exists():
+        info=json.loads((shared/'resource_release_reference.json').read_text());parts += ['',f"参考打分任务已于{info['ended_at_beijing']}完成，节点0且GPU计算进程为空；生成和参考两阶段资源均已释放。完整可复算标量见full1_paired_compact.jsonl.gz、runs/reference_full1/rank*/records.jsonl.gz及full1_validation.json；verify_results.py兼容未压缩及压缩参考记录。"]

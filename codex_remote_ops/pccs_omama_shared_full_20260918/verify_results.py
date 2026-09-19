@@ -23,10 +23,11 @@ def main():
     if a.phase=='full1':
         lookup={(r['video_id'],r['obj_id']):r for r in rows};seen=set()
         for rank in range(4):
-            d=R/'runs/reference_full1'/f'rank{rank}';path=d/'records.jsonl';receipt=json.loads((d/'receipt.json').read_text());assert hashlib.sha256(path.read_bytes()).hexdigest()==receipt['records_sha256']
+            d=R/'runs/reference_full1'/f'rank{rank}';path=d/'records.jsonl';receipt=json.loads((d/'receipt.json').read_text());raw=path.read_bytes() if path.exists() else gzip.decompress(path.with_suffix('.jsonl.gz').read_bytes());assert hashlib.sha256(raw).hexdigest()==receipt['records_sha256']
             witness=json.loads((d/'witness.json').read_text());assert witness['all_choices_reproduced'] and witness['max_score_error']<1e-4
             count=0
-            with path.open() as f:
+            import io
+            with io.StringIO(raw.decode('utf8')) as f:
                 for x in map(json.loads,f):
                     key=(x['video_id'],x['obj_id']);assert key not in seen;seen.add(key);count+=1;r=lookup[key]
                     assert x['mask_sha256']==r['mask_sha256'] and len(x['bank_sha256'])==64

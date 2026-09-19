@@ -1,0 +1,10 @@
+{
+  "job_id": "job-2e71cf32-387c-4c7c-8621-bd1dd61c5687",
+  "state": "success",
+  "occupied_nodes": 0,
+  "ended_at_beijing": "2026-09-19 10:51:49",
+  "runtime": "1小时3分9秒",
+  "gpu_compute_processes_after": 0,
+  "objects": 109253,
+  "pairs": 46515
+}

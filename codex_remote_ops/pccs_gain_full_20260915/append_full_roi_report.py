@@ -36,7 +36,7 @@ def append_full_roi(parts,root):
                 v=diag[key];parts.append(f"| {label} | {v['pairs']} | {v['baseline']:.4f} | {v['primary']:.4f} | {v['roi2']:.4f} | {v['oracle']:.4f} |")
             v=diag['all'];parts += ['',f"2×恢复同候选可改善差距的{v['roi2_recovery_fraction']*100:.2f}%；换候选正贡献{v['roi2_positive_pp']:+.4f}、负贡献{v['roi2_negative_pp']:+.4f}点。GT oracle只作诊断，不能用于推理/选型。原512较高分不代表全量，不能直接据分层证明遮挡/尺度等难度的因果机制。前景-only与真实背景比较有输入分布变化，不能将全部增益归因于邻居语义。"]
     if all((r/f'full{s}_results.json').exists() for s in (1,2)):
-        parts += ['', '**双seed全量复验已完成并核验通过。** 1.5×主方案两轮分别+2.4599/+2.4984点，2×对照分别+2.5142/+2.5334点，四项95% take区间下界为正。两轮均完整46515对/109253对象/295takes；seed2于2026-09-19 06:52:22结束，节点0。该重复性针对相同场景集合的候选随机性，不能把两个seed作为新增独立场景证据；当前同候选O-MaMa共同候选复验仍待完成，见§17。']
+        parts += ['', '**双seed全量复验已完成并核验通过。** 1.5×主方案两轮分别+2.4599/+2.4984点，2×对照分别+2.5142/+2.5334点，四项95% take区间下界为正。两轮均完整46515对/109253对象/295takes；seed2于2026-09-19 06:52:22结束，节点0。该重复性针对相同场景集合的候选随机性，不能把两个seed作为新增独立场景证据；另行同候选O-MaMa共同候选复验见§17。']
     receipt=r/'job_receipt_seed2.json'
     if receipt.exists():
         info=json.loads(receipt.read_text());parts += ['',f"第二seed已提交：`{info['job_id']}`，{info['submitted_at_local']}北京，4 H100，最大1440分钟。首seed已核验完整覆盖且节点释放；第二seed完成情况以结果文件为准。"]

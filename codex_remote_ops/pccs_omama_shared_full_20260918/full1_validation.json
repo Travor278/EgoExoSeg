@@ -1,0 +1,14 @@
+{
+  "phase": "full1",
+  "pairs": 46515,
+  "objects": 109253,
+  "frame_and_take_bootstrap": "passed",
+  "reference_records_audit": "all_record_hashes_masks_choices_and_historical_witnesses_passed",
+  "same_run_paired_comparison": true,
+  "raw_masks_remain_remote": true,
+  "compact_sha256": "9644b112af6db368092302728860ae55a0209ead22fcbc60a1bacd31dfb99777",
+  "cross_run_diagnostic_only": {
+    "objects_with_any_mask_drift": 66,
+    "objects_with_baseline_route_drift": 4
+  }
+}

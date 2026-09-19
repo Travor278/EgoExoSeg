@@ -102,8 +102,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/METHOD.md",
-      "sha256": "95d31cf5789139f0d95cfc2ae4aea9737cac84c2832bb36fd03efb3e7934bfdf",
-      "bytes": 28179
+      "sha256": "ebdcd99c21a6a99a67d652015325832b6af0d1ea8f5fbb7d73e9d51f08298449",
+      "bytes": 29504
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/job_receipt.json",
@@ -637,8 +637,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/update_method_results.py",
-      "sha256": "2607267a9688ae4ae32e8c64573b619213ba7af7fab66d4117bdc27e48c90c7b",
-      "bytes": 5537
+      "sha256": "4383a447db4f27c9487e89389c2eb1450395249fd89872c43dcafb81c7a1c76d",
+      "bytes": 7255
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/startup_validation.json",
@@ -692,18 +692,18 @@
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/FINAL_REPORT.md",
-      "sha256": "f580765a262101cbabc4260af9a380a71c0382db8b104458f15dca4b7b9203aa",
-      "bytes": 96338
+      "sha256": "2479fc5c9882d339517a2906bf3ea73c5d25fb9fa5d4d5047efd780d8830016d",
+      "bytes": 98966
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/render_master_report.py",
-      "sha256": "b4fbf3c9ce3c84ab08e8ca1e02e2f3cffce79ba1106f04985227ac0650db3f4f",
-      "bytes": 32779
+      "sha256": "f5d52def4a68f92236fe127d16f60b91a17dbb6ea1932fae3866915abce9371f",
+      "bytes": 33377
     },
     {
       "path": "codex_remote_ops/pccs_gain_full_20260915/append_full_roi_report.py",
-      "sha256": "346c44bdefd7a52c2743f0aac60baef0c0cf3033f9fa3fcfab42de03aebd4fc3",
-      "bytes": 8809
+      "sha256": "7bfc3294b528ab837e91831f11c32a55dc35dfb237152316e2b68da55738a5b0",
+      "bytes": 8794
     },
     {
       "path": "codex_remote_ops/pccs_roi_full_exoego_20260917/render_walkthrough.py",
@@ -752,8 +752,8 @@
     },
     {
       "path": "codex_remote_ops/pccs_method_research_20260917/RESEARCH.md",
-      "sha256": "88ed93c874496f579f6754b04b11601e735dd1555caef34fdb87f789cf9d5311",
-      "bytes": 12132
+      "sha256": "011f6606a4f84b3a28fa055dc171e374d2e27c8b09b74626327c9d8cd87fdf4b",
+      "bytes": 13272
     },
     {
       "path": "codex_remote_ops/pccs_method_research_20260917/direction_diagnostic.py",
